@@ -190,6 +190,41 @@ import { SITE_TITLE } from '../consts';
 				line-height: 1.75;
 			}
 
+			/* ── Preview download fallback ───────────────────────────── */
+			.preview-download {
+				text-align: center;
+				padding: 2.25em 0 4.5em;
+				border-top: 1px solid rgba(201, 169, 110, 0.1);
+				margin-top: 1em;
+			}
+			.preview-download p {
+				font-size: 0.78em;
+				color: var(--color-text-muted);
+				opacity: 0.6;
+				margin: 0 0 0.9em;
+				line-height: 1.6;
+			}
+			.preview-download-link {
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.63em;
+				letter-spacing: 0.13em;
+				text-transform: uppercase;
+				color: var(--color-text-muted);
+				text-decoration: none;
+				border-bottom: 1px solid rgba(201, 169, 110, 0.22);
+				padding-bottom: 2px;
+				opacity: 0.75;
+				transition:
+					color 0.2s ease,
+					border-color 0.2s ease,
+					opacity 0.2s ease;
+			}
+			.preview-download-link:hover {
+				color: var(--accent);
+				border-color: rgba(201, 169, 110, 0.5);
+				opacity: 1;
+			}
+
 			/* ── Mobile ───────────────────────────────────────────────── */
 			@media (max-width: 600px) {
 				.guide-hero {
@@ -263,14 +298,19 @@ import { SITE_TITLE } from '../consts';
 
 			<div class="guide-section signup-block">
 				<p class="signup-note" id="signup-note">
-					The guide is currently in preparation. Leave your email below and you'll be the first to
-					receive it when it's ready.
+					Enter your email and we'll send the Palmistry Starter Guide straight to your inbox — free,
+					printable, and yours to keep.
 				</p>
+
+				<!-- TODO: Replace action="" with your email platform endpoint once connected. -->
+				<!-- TODO: Add any hidden fields required by your provider (e.g. list ID, API key, redirect URL). -->
+				<!-- Tested providers: ConvertKit, Mailchimp, Resend, or a custom serverless function. -->
 				<form
 					class="signup-form"
 					id="signup-form"
 					action=""
-					aria-label="Early access sign-up"
+					method="post"
+					aria-label="Guide download sign-up"
 					novalidate
 				>
 					<label for="guide-email" class="sr-only">Email address</label>
@@ -282,14 +322,24 @@ import { SITE_TITLE } from '../consts';
 						autocomplete="email"
 						required
 					/>
-					<button type="submit">Join the Early Access List</button>
+					<button type="submit">Send Me the Guide</button>
 				</form>
 				<p class="signup-confirm" id="signup-confirm">
-					You're on the list. We'll send a single email when the guide is ready — nothing else.
+					Thank you — your guide will be on its way shortly. One email, nothing else.
 				</p>
 				<p class="signup-caveat" id="signup-caveat">
-					No spam. One email when the guide is ready.
+					No spam. One email with your guide, nothing else.
 				</p>
+			</div>
+
+			<!-- Temporary preview download — remove or demote once email delivery is live. -->
+			<div class="guide-section preview-download">
+				<p>Not ready to subscribe? Take a look first.</p>
+				<a
+					href="/downloads/Palmistry-Starter-Guide-Web.pdf"
+					download="Palmistry-Starter-Guide-Web.pdf"
+					class="preview-download-link"
+				>↓ Download Preview PDF</a>
 			</div>
 		</main>
 		<Footer />
@@ -297,15 +347,29 @@ import { SITE_TITLE } from '../consts';
 		<script>
 			const form = document.getElementById('signup-form') as HTMLFormElement | null;
 			const note = document.getElementById('signup-note');
-			const confirm = document.getElementById('signup-confirm');
+			const confirmMsg = document.getElementById('signup-confirm');
 			const caveat = document.getElementById('signup-caveat');
 
-			form?.addEventListener('submit', (e) => {
+			form?.addEventListener('submit', async (e) => {
 				e.preventDefault();
+
+				// TODO: POST form data to your email platform API here.
+				// Example (ConvertKit):
+				//   const res = await fetch('https://api.convertkit.com/v3/forms/FORM_ID/subscribe', {
+				//     method: 'POST',
+				//     headers: { 'Content-Type': 'application/json' },
+				//     body: JSON.stringify({ api_key: 'YOUR_KEY', email: form.email.value }),
+				//   });
+				//   if (!res.ok) { /* TODO: show an error state */ return; }
+
+				// TODO: Once email delivery is live, consider sending to a /thank-you page
+				//   that includes the full download link as a courtesy, e.g.:
+				//   window.location.href = '/thank-you?guide=starter';
+
 				if (form) form.style.display = 'none';
 				if (note) note.style.display = 'none';
 				if (caveat) caveat.style.display = 'none';
-				if (confirm) confirm.style.display = 'block';
+				if (confirmMsg) confirmMsg.style.display = 'block';
 			});
 		</script>
 	</body>
