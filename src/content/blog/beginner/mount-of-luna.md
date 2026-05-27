@@ -2,6 +2,7 @@
 title: "The Mount of Luna"
 description: "What the lower outer mount governs — imagination, intuition, and receptivity — and why a prominent Luna indicates imaginative depth, not psychic ability."
 pubDate: 2026-05-03
+relatedLesson: "/learn/mounts/07-mount-of-luna"
 ---
 
 The Mount of Luna occupies the lower outer palm — the broad, padded rise on the percussion side of the hand, below the Mount of Mercury and the upper mounts, running down toward the wrist. Its position at the outermost base, as far from the thumb as the hand allows, is part of its meaning: the thumb side represents will, active impulse, and outward engagement with the world; the opposite extreme represents the interior life. Luna's territory is imagination, intuition, the dream faculty, and the unconscious current that runs beneath the observable personality — of all the classical mounts, the one most closely associated with what cannot be directly seen or measured.

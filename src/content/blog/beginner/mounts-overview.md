@@ -2,6 +2,7 @@
 title: "The Mounts of the Palm: A Reader's Map"
 description: "An orientation to the seven traditional mounts — Venus, Jupiter, Saturn, Apollo, Mercury, Luna, and Mars — what each is traditionally associated with, where each sits on the palm, and why they function as the interpretive foundation beneath the lines."
 pubDate: 2026-05-02
+relatedLesson: "/learn/mounts/01-mounts-overview"
 ---
 
 The reading sequence described in the earlier articles of this series places mounts in a specific position: they come after hand shape and before the lines. If that ordering felt slightly abstract when you first encountered it — why would raised areas of the palm merit attention before the lines themselves? — the answer becomes clearer once you understand what the mounts represent.

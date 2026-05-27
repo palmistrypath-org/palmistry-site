@@ -2,6 +2,7 @@
 title: "What Palmistry Is (and Isn't)"
 description: "A grounded introduction to palmistry as a centuries-old interpretive tradition — what it is, what it isn't, and how to approach it honestly as a learner."
 pubDate: 2026-04-27
+relatedLesson: "/learn/foundations/01-what-palmistry-is"
 ---
 
 Look at your hand for a moment. The lines crossing your palm — the deep crease running below your fingers, the smaller ones branching toward your wrist — formed before you were born, in the womb, shaped by a combination of genetics, fetal movement, and the pressure of fingers folding against a developing palm. They have been there your entire life. Cultures on every inhabited continent, working independently of one another, noticed these patterns and found them worth interpreting.

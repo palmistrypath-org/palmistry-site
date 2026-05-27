@@ -2,6 +2,7 @@
 title: "Marriage and Relationship Lines"
 description: "Located on the percussion edge of the hand beneath the little finger, these small horizontal lines are among the most asked-about features in palmistry — and among the most misunderstood."
 pubDate: 2025-05-04
+relatedLesson: "/learn/advanced/02-marriage-relationship-lines"
 ---
 
 On the outer edge of your hand — the percussion side, just below the little finger — you may notice one or more small horizontal lines running inward toward the palm. They are typically short, shallow, and easy to overlook. They are also, by a wide margin, the feature people ask about most.

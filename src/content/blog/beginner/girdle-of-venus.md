@@ -2,6 +2,7 @@
 title: "The Girdle of Venus"
 description: "A curved line arcing above the heart line, the Girdle of Venus is an intermittent feature associated in the palmistry tradition with heightened emotional sensitivity and perceptual depth."
 pubDate: 2025-05-04
+relatedLesson: "/learn/advanced/03-girdle-of-venus"
 ---
 
 Look at your palm just above the heart line. In that band of space between the heart line and the base of the fingers, you may notice a curved line — or a broken series of short lines — arcing from somewhere near the gap between your index and middle fingers across toward the gap between your ring and little fingers. It follows roughly the same curve as the base of the finger mounts: Jupiter, Saturn, Apollo, Mercury.

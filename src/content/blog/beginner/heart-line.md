@@ -2,6 +2,7 @@
 title: "The Heart Line"
 description: "The first deep-dive in the major lines series — what the heart line is traditionally associated with, how to read its variations, where traditions agree and where they diverge, and why it requires more context than most beginners expect."
 pubDate: 2026-04-28
+relatedLesson: "/learn/lines/02-heart-line"
 ---
 
 The heart line is usually the first thing beginners want to read. It sits near the top of the palm, clearly visible, and its subject matter — emotional life, love, the capacity for connection — is personal in a way that makes it feel urgent. Before you have learned much else, you want to know what your heart line says.

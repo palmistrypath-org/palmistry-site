@@ -2,6 +2,7 @@
 title: "The Mount of Saturn"
 description: "What Saturn's domain of prudence, solitude, and depth actually means — and why the tradition reads a prominent mount as studious and disciplined, not morbid."
 pubDate: 2026-05-02
+relatedLesson: "/learn/mounts/04-mount-of-saturn"
 ---
 
 The Mount of Saturn occupies the centre of the palm's upper region. It sits beneath the middle finger — the longest, positioned at the hand's apex — which places Saturn at the highest midpoint of the palm itself. Unlike Jupiter, whose domain is social aspiration and the desire for public standing, or Venus, whose territory is warmth, vitality, and affection, Saturn's qualities are by nature inward-facing. The tradition consistently describes this mount as governing the serious, reflective dimensions of character: prudence, discipline, the capacity for sustained solitude, and the kind of wisdom that accumulates through experience rather than through inspiration.

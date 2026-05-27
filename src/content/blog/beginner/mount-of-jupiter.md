@@ -2,6 +2,7 @@
 title: "The Mount of Jupiter"
 description: "What Jupiter's domain of leadership and ambition actually entails, how development is read, and why the tradition distinguishes natural authority from arrogance."
 pubDate: 2026-05-02
+relatedLesson: "/learn/mounts/03-mount-of-jupiter"
 ---
 
 The Mount of Jupiter occupies a specific position in the reading that goes beyond its own territory. It appears as the destination of one of the most commonly discussed heart line trajectories; it receives branches from the fate line in readings that concern social ambition and public achievement; and it anchors a cluster of qualities — confidence, leadership, the desire for recognition, spiritual and philosophical aspiration — that recur throughout palmistry's interpretive vocabulary. A reader who understands Jupiter well has better purchase on a wide range of readings that would otherwise seem unrelated.

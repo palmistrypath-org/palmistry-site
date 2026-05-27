@@ -2,6 +2,7 @@
 title: "The Sun Line"
 description: "What the Sun Line is traditionally associated with — recognition, fulfilment, and clarity of purpose — and why its absence carries less weight than most beginners assume."
 pubDate: 2026-05-03
+relatedLesson: "/learn/advanced/01-minor-lines-overview"
 ---
 
 The Sun Line — also called the Apollo Line or the Line of Apollo — is a vertical line that rises up the palm toward the base of the ring finger, where the Mount of Apollo sits. It is among the minor lines rather than the four principal ones, and it carries a particular status in the Western tradition: of all the lines that may or may not appear on a given hand, the Sun Line is the one most consistently described by the classical authors in terms of genuine good fortune.

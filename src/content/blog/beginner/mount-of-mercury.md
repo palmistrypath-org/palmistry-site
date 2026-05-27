@@ -2,6 +2,7 @@
 title: "The Mount of Mercury"
 description: "What Mercury's communication domain actually covers — from medicine to science to writing — and why the tradition reads far more than commercial salesmanship."
 pubDate: 2026-05-02
+relatedLesson: "/learn/mounts/06-mount-of-mercury"
 ---
 
 The Mount of Mercury sits at the base of the little finger on the percussion side of the palm — the outer edge, the side that faces the world when the hand is held naturally at rest. Of the four upper mounts, it is the farthest from the thumb, positioned at the hand's outer boundary. The classical tradition understood Mercury, the swift messenger of the gods, as the fitting patron of this territory: a region of the hand governing communication, quick intelligence, adaptability, and the practical capacity to move effectively between different people, contexts, and kinds of knowledge.

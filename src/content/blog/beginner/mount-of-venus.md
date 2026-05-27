@@ -2,6 +2,7 @@
 title: "The Mount of Venus"
 description: "What Venus's domain of vitality, warmth, and affection actually covers — and why the persistent myth about this mount gets the tradition exactly backwards."
 pubDate: 2026-05-02
+relatedLesson: "/learn/mounts/02-mount-of-venus"
 ---
 
 The Mount of Venus is usually the first mount a beginner finds. It is the most anatomically obvious — a broad, rounded pad at the base of the thumb, filling the inner lower quadrant of the palm. On most hands it is immediately apparent without pressing or turning the hand toward light, and its size relative to the other mounts makes it difficult to overlook. Beginners tend to notice it before they know what to call it.

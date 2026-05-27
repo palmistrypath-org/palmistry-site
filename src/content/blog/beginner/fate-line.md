@@ -2,6 +2,7 @@
 title: "The Fate Line"
 description: "What the fate line is traditionally associated with, how to read its variations — starting points, ending points, absent and faint lines, breaks — and why 'direction' is a more accurate frame than 'fate' for what this line actually shows."
 pubDate: 2026-04-28
+relatedLesson: "/learn/lines/05-fate-line"
 ---
 
 The word in the line's name is worth addressing before anything else. "Fate" carries a weight no other palmistry term does — an implication of inevitability, a course fixed in advance, a self that exists to be read rather than lived. The classical Western tradition built that word into the name deliberately, and it is not possible to discuss this line without dealing with what it implies.

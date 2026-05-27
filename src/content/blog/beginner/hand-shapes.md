@@ -2,6 +2,7 @@
 title: "Hand Shapes: Earth, Air, Fire, and Water"
 description: "How the four-element framework classifies hand shapes — what each type is traditionally associated with, how to identify them by proportion and finger length, and why hand shape changes every line reading that follows."
 pubDate: 2026-05-01
+relatedLesson: "/learn/foundations/03-hand-shapes"
 ---
 
 Every line on the hand is read relative to the hand it appears on.

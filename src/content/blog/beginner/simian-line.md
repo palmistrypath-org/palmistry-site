@@ -2,6 +2,7 @@
 title: "The Simian Line"
 description: "A deep-dive on the simian line — the single transverse crease that forms when the heart and head lines are fused. What the fusion means interpretively, how to read its variations, and what the tradition actually says about intensity, single-mindedness, and this unusual configuration."
 pubDate: 2026-05-04
+relatedLesson: "/learn/lines/06-simian-line"
 ---
 
 The simian line is the name given to a single horizontal crease that crosses the full width of the palm where two lines would ordinarily be separate. On most hands, the heart line runs across the upper palm and the head line runs beneath it, with a clear zone of palm between them. When those two lines are fused — sharing one channel rather than running as distinct features — the result is a single transverse crease: the simian line.

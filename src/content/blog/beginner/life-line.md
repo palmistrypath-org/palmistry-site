@@ -2,6 +2,7 @@
 title: "The Life Line: Why It Doesn't Predict Your Lifespan"
 description: "The most persistent myth in palmistry, corrected. A short or broken life line is not a prediction of early death — here's what the life line actually signifies, what its variations mean, and what every serious palmistry writer has said about this for over a century."
 pubDate: 2026-04-28
+relatedLesson: "/learn/lines/04-life-line"
 ---
 
 Many people who look at their palm come with one specific worry: their life line is short, or broken, or faint, or seems to end too soon. It produces something — not quite fear, but close to it. The anxiety is real, and it is worth addressing directly rather than brushing past.

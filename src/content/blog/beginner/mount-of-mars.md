@@ -2,6 +2,7 @@
 title: "The Mount of Mars"
 description: "Mars is the only classical mount with two distinct zones. How Inner and Outer Mars read differently, and why a prominent mount signals courage rather than aggression."
 pubDate: 2026-05-03
+relatedLesson: "/learn/mounts/08-mount-of-mars"
 ---
 
 Mars is unique among the classical mounts in that it is not a single elevation but two distinct zones occupying different areas of the palm, connected by a third region between them. The two zones are called Inner Mars (also Mars Positive, or Active Mars) and Outer Mars (also Mars Negative, or Passive Mars), and they carry related but meaningfully different associations. The Plain of Mars — the somewhat hollow centre of the palm — lies between them. Understanding Mars as a three-part structure, not a single mount, is essential to reading it accurately.

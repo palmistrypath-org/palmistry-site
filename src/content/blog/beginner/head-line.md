@@ -2,6 +2,7 @@
 title: "The Head Line"
 description: "What the head line is traditionally associated with, how to read its variations — the joined or separated starting point, slope and endpoint, the writer's fork, and what depth and clarity reveal — and why it says less about intelligence than most readers expect."
 pubDate: 2026-04-28
+relatedLesson: "/learn/lines/03-head-line"
 ---
 
 Of the four major lines, the heart line gets the most anxious attention, the life line gets the most persistent misreading, and the head line gets neither — which is worth noticing, because Cheiro considered it *the* most important line on the hand.

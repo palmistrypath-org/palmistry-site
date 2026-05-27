@@ -2,6 +2,7 @@
 title: "The Mount of Apollo"
 description: "What Apollo's domain of beauty and creative warmth actually means — and why a prominent mount indicates aesthetic sensibility, not artistic ability."
 pubDate: 2026-05-02
+relatedLesson: "/learn/mounts/05-mount-of-apollo"
 ---
 
 The Mount of Apollo sits below the ring finger at the palm's upper reaches, flanked by Saturn toward the centre and Mercury at the outer edge. Of all the mounts, it is the one the classical tradition most consistently describes in terms of light: warmth, brightness, the desire to bring beauty and harmony into whatever it touches. The tradition drew the connection between this mount and the sun's symbolic register — luminosity, creative vitality, the capacity to draw people and attention — and used it to characterise a type of personality that is, when the mount is well-developed and proportionate, among the most immediately engaging in the system.

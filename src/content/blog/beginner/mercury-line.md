@@ -2,6 +2,7 @@
 title: "The Mercury Line"
 description: "The one line whose absence is traditionally a positive sign. What the Mercury Line is associated with, why its presence doesn't indicate illness, and how to read its variations."
 pubDate: 2026-05-03
+relatedLesson: "/learn/advanced/01-minor-lines-overview"
 ---
 
 The Mercury Line — also called the Health Line, the Hepatica, or the Line of Liver — runs diagonally across the lower and middle palm, rising from the base of the hand toward the Mount of Mercury below the little finger. It crosses the palm at an angle, often intersecting with or beginning near the life line as it travels upward, and it is among the less structurally consistent lines in Western palmistry: it appears clearly on some hands, faintly on others, and not at all on many.

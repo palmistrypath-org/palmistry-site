@@ -92,6 +92,42 @@ const difficultyLabel: Record<string, string> = {
 	intermediate: 'Intermediate',
 	advanced: 'Advanced',
 };
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
+const moduleUrl = `${Astro.site}learn/${lesson.data.module}/`;
+const learnUrl = `${Astro.site}learn/`;
+
+const iso8601Duration = `PT${lesson.data.duration}M`;
+
+const learningResourceSchema = JSON.stringify({
+	'@context': 'https://schema.org',
+	'@type': 'LearningResource',
+	name: lesson.data.title,
+	description: lesson.data.description,
+	url: canonicalUrl,
+	educationalLevel: difficultyLabel[lesson.data.difficulty],
+	timeRequired: iso8601Duration,
+	isPartOf: {
+		'@type': 'Course',
+		name: moduleTitle,
+		url: moduleUrl,
+		provider: {
+			'@type': 'Organization',
+			name: 'Palmistry Path',
+			url: 'https://palmistrypath.com',
+		},
+	},
+});
+
+const breadcrumbSchema = JSON.stringify({
+	'@context': 'https://schema.org',
+	'@type': 'BreadcrumbList',
+	itemListElement: [
+		{ '@type': 'ListItem', position: 1, name: 'Learn', item: learnUrl },
+		{ '@type': 'ListItem', position: 2, name: moduleTitle, item: moduleUrl },
+		{ '@type': 'ListItem', position: 3, name: lesson.data.title, item: canonicalUrl },
+	],
+});
 ---
 
 <!doctype html>
@@ -101,6 +137,8 @@ const difficultyLabel: Record<string, string> = {
 			title={`${lesson.data.title} — ${SITE_TITLE}`}
 			description={lesson.data.description}
 		/>
+		<script type="application/ld+json" set:html={learningResourceSchema} />
+		<script type="application/ld+json" set:html={breadcrumbSchema} />
 		<style>
 			main {
 				width: calc(100% - 2em);

@@ -2,6 +2,7 @@
 title: "How to Read a Palm: The Beginner's Approach"
 description: "Before the lines, before the meanings — the method. A practical guide to how experienced palmists actually approach a hand: which hand to read, what order to observe features, and why synthesis matters more than memorisation."
 pubDate: 2026-04-27
+relatedLesson: "/learn/foundations/02-how-to-read-a-palm"
 ---
 
 Hold your hand up, palm facing you. Somewhere between that gesture and knowing what you are actually looking at lies the discipline of palmistry — and for most beginners, the distance is larger than expected.
