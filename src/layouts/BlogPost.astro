@@ -83,7 +83,7 @@ const breadcrumbSchema = JSON.stringify({
 			}
 			.learn-cta {
 				margin-top: 3em;
-				padding: 1.5em 1.75em;
+				padding: 1.35em 1.6em;
 				border: 1px solid rgba(201, 169, 110, 0.25);
 				border-radius: 8px;
 				background: rgba(255, 255, 255, 0.02);
@@ -97,25 +97,25 @@ const breadcrumbSchema = JSON.stringify({
 				margin: 0 0 0.5em;
 			}
 			.learn-cta-body {
-				font-size: 0.86em;
+				font-size: 0.85em;
 				color: var(--color-text-muted);
-				margin: 0 0 1.1em;
+				margin: 0 0 1em;
 				line-height: 1.7;
 			}
 			.learn-cta-links {
 				display: flex;
-				flex-wrap: wrap;
-				align-items: center;
-				gap: 1em;
+				flex-direction: column;
+				align-items: flex-start;
+				gap: 0.7em;
 			}
 			.btn-lesson {
 				display: inline-block;
-				padding: 0.6em 1.4em;
+				padding: 0.55em 1.25em;
 				background: var(--accent);
 				color: var(--color-bg);
 				font-family: var(--font-cinzel), serif;
-				font-size: 0.68em;
-				letter-spacing: 0.08em;
+				font-size: 0.66em;
+				letter-spacing: 0.06em;
 				text-transform: uppercase;
 				text-decoration: none;
 				border-radius: 4px;
@@ -125,7 +125,7 @@ const breadcrumbSchema = JSON.stringify({
 				background: var(--accent-light);
 			}
 			.btn-guide-sm {
-				font-size: 0.78em;
+				font-size: 0.76em;
 				color: var(--color-text-muted);
 				text-decoration: none;
 				border-bottom: 1px solid rgba(201, 169, 110, 0.3);
@@ -134,6 +134,13 @@ const breadcrumbSchema = JSON.stringify({
 			.btn-guide-sm:hover {
 				color: var(--accent);
 				border-color: var(--accent);
+			}
+			@media (max-width: 480px) {
+				.btn-lesson {
+					width: 100%;
+					text-align: center;
+					box-sizing: border-box;
+				}
 			}
 		</style>
 	</head>
@@ -173,7 +180,7 @@ const breadcrumbSchema = JSON.stringify({
 										Continue with the structured lesson →
 									</a>
 									<a href="/guide/" class="btn-guide-sm">
-										Or get the free starter guide
+										Download the free starter guide
 									</a>
 								</div>
 							</aside>
