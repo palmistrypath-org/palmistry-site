@@ -201,16 +201,6 @@ import { SITE_TITLE } from '../consts';
 				color: var(--accent);
 				text-decoration-color: rgba(201, 169, 110, 0.6);
 			}
-			/* Confirmation state (shown by JS after submit) */
-			.signup-confirm {
-				display: none;
-				font-size: 0.87em;
-				color: var(--color-text-muted);
-				max-width: 440px;
-				margin: 0 auto;
-				line-height: 1.75;
-			}
-
 			/* ── Guide mockup ─────────────────────────────────────────── */
 			.guide-mockup-wrap {
 				text-align: center;
@@ -336,6 +326,49 @@ import { SITE_TITLE } from '../consts';
 				opacity: 1;
 			}
 
+			/* ── How it works ─────────────────────────────────────────── */
+			.how-it-works {
+				margin-bottom: 2.5em;
+			}
+			.steps-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				gap: 1em;
+			}
+			.steps-list li {
+				display: flex;
+				align-items: flex-start;
+				gap: 1em;
+			}
+			.step-num {
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.72em;
+				color: var(--accent);
+				opacity: 0.75;
+				min-width: 1.4em;
+				padding-top: 0.1em;
+				letter-spacing: 0.05em;
+			}
+			.step-text {
+				font-size: 0.87em;
+				color: var(--color-text-muted);
+				line-height: 1.7;
+			}
+			.step-text a {
+				color: var(--accent);
+				text-decoration: underline;
+				text-underline-offset: 2px;
+				text-decoration-color: rgba(201, 169, 110, 0.4);
+				transition: color 0.2s ease, text-decoration-color 0.2s ease;
+			}
+			.step-text a:hover {
+				color: var(--accent-light);
+				text-decoration-color: rgba(201, 169, 110, 0.7);
+			}
+
 			/* ── Mobile ───────────────────────────────────────────────── */
 			@media (max-width: 600px) {
 				.guide-hero {
@@ -367,8 +400,8 @@ import { SITE_TITLE } from '../consts';
 				<p class="guide-eyebrow">Free Download</p>
 				<h1>The Palmistry Starter Guide</h1>
 				<p class="subline">
-					A structured reference and observation guide for anyone beginning their study of palmistry
-					— covering the major lines, mounts, and hand shapes.
+					Your printable companion to the Palmistry Path lessons — a structured overview of the major
+					lines, mounts, and hand shapes to keep beside you while you study.
 				</p>
 			</section>
 
@@ -440,6 +473,24 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</div>
 
+			<div class="guide-section how-it-works">
+				<h2 class="section-heading">What happens next</h2>
+				<ol class="steps-list">
+					<li>
+						<span class="step-num">1</span>
+						<span class="step-text">Enter your email address below.</span>
+					</li>
+					<li>
+						<span class="step-num">2</span>
+						<span class="step-text">Receive the Starter Guide in your inbox — a printable PDF you can use alongside the lessons.</span>
+					</li>
+					<li>
+						<span class="step-num">3</span>
+						<span class="step-text">Open <a href="/learn/foundations/01-what-palmistry-is">Lesson 1</a> — the guide is designed to sit beside it.</span>
+					</li>
+				</ol>
+			</div>
+
 			<div class="guide-section signup-block">
 				<p class="signup-note" id="signup-note">
 					Enter your email and we'll send the Palmistry Starter Guide straight to your inbox — free,
@@ -462,16 +513,11 @@ import { SITE_TITLE } from '../consts';
 						autocomplete="email"
 						required
 					/>
-					<button type="submit" id="signup-btn">Send Me the Guide</button>
+					<button type="submit" id="signup-btn" data-track="guide-submit">Send Me the Guide</button>
 				</form>
 				<p class="signup-error" id="signup-error">Something went wrong — please try again.</p>
-				<p class="signup-confirm" id="signup-confirm">
-					Thank you — your guide will be on its way shortly. While it arrives, you can <a
-						href="/learn/foundations/01-what-palmistry-is">start Lesson 1 →</a
-					>
-				</p>
 				<p class="signup-caveat" id="signup-caveat">
-					You'll receive the guide and occasional Palmistry Path learning notes. <a href="/privacy/" class="caveat-link">Unsubscribe anytime.</a>
+					You'll receive the guide and occasional Palmistry Path learning notes. <a href="/privacy/" class="caveat-link">Privacy policy.</a>
 				</p>
 			</div>
 
@@ -481,6 +527,7 @@ import { SITE_TITLE } from '../consts';
 					href="/downloads/Palmistry-Starter-Guide-Web.pdf"
 					download="Palmistry-Starter-Guide-Web.pdf"
 					class="preview-download-link"
+					data-track="pdf-download"
 				>↓ Download full guide (PDF, 25 MB)</a>
 			</div>
 		</main>
@@ -488,9 +535,6 @@ import { SITE_TITLE } from '../consts';
 
 		<script>
 			const form = document.getElementById('signup-form') as HTMLFormElement | null;
-			const note = document.getElementById('signup-note');
-			const confirmMsg = document.getElementById('signup-confirm');
-			const caveat = document.getElementById('signup-caveat');
 			const btn = document.getElementById('signup-btn') as HTMLButtonElement | null;
 			const errorMsg = document.getElementById('signup-error');
 
@@ -515,10 +559,7 @@ import { SITE_TITLE } from '../consts';
 					});
 
 					if (res.ok) {
-						if (form) form.style.display = 'none';
-						if (note) note.style.display = 'none';
-						if (caveat) caveat.style.display = 'none';
-						if (confirmMsg) confirmMsg.style.display = 'block';
+						window.location.href = '/guide/thank-you/';
 					} else {
 						throw new Error('non-ok');
 					}

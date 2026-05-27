@@ -1,0 +1,234 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`Your Guide Is on Its Way — ${SITE_TITLE}`}
+			description="Your Palmistry Starter Guide is on its way. Here's what to do while you wait — start with Lesson 1 or explore key beginner articles."
+		/>
+		<style>
+			/* ── Hero ─────────────────────────────────────────────────── */
+			.thankyou-hero {
+				text-align: center;
+				padding: 4.5em 1em 2.5em;
+				background: radial-gradient(
+					ellipse 65% 50% at 50% 40%,
+					rgba(201, 169, 110, 0.07) 0%,
+					transparent 70%
+				);
+			}
+			.thankyou-eyebrow {
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.58em;
+				letter-spacing: 0.22em;
+				text-transform: uppercase;
+				color: var(--color-text-muted);
+				margin: 0 0 1.1em;
+				opacity: 0.7;
+			}
+			.thankyou-hero h1 {
+				font-size: clamp(1.6rem, 6vw, 3em);
+				letter-spacing: 0.08em;
+				color: var(--accent);
+				text-shadow:
+					0 0 80px rgba(201, 169, 110, 0.18),
+					0 2px 8px rgba(0, 0, 0, 0.7);
+				margin: 0 0 0.5em;
+			}
+			.thankyou-hero .subline {
+				font-size: 0.9em;
+				color: var(--color-text-muted);
+				max-width: 480px;
+				margin: 0 auto;
+				line-height: 1.75;
+			}
+
+			/* ── Divider ──────────────────────────────────────────────── */
+			.divider {
+				text-align: center;
+				color: var(--accent);
+				letter-spacing: 0.5em;
+				font-size: 0.6em;
+				opacity: 0.45;
+				padding: 2.5em 0 0;
+				margin-bottom: 2.5em;
+			}
+
+			/* ── Shared section wrapper ───────────────────────────────── */
+			.guide-section {
+				width: 640px;
+				max-width: calc(100% - 2em);
+				margin: 0 auto;
+				padding: 0 1em;
+			}
+
+			/* ── Section heading ──────────────────────────────────────── */
+			.section-heading {
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.62em;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				color: var(--color-text-muted);
+				opacity: 0.6;
+				text-align: center;
+				margin: 0 0 1.75em;
+			}
+
+			/* ── Next steps grid ──────────────────────────────────────── */
+			.next-steps-grid {
+				list-style: none;
+				margin: 0 0 3.5em;
+				padding: 0;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1.25em 2em;
+			}
+			.next-steps-grid li {
+				border-top: 1px solid rgba(201, 169, 110, 0.25);
+				padding-top: 0.9em;
+			}
+			.step-link {
+				display: block;
+				text-decoration: none;
+				transition: opacity 0.2s ease;
+			}
+			.step-link:hover {
+				opacity: 0.85;
+			}
+			.step-link:hover .step-title {
+				color: var(--accent-light, var(--accent));
+			}
+			.step-title {
+				display: block;
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.78em;
+				letter-spacing: 0.06em;
+				color: var(--accent);
+				margin-bottom: 0.35em;
+				line-height: 1.3;
+				transition: color 0.2s ease;
+			}
+			.step-desc {
+				display: block;
+				font-size: 0.76em;
+				color: var(--color-text-muted);
+				line-height: 1.65;
+				opacity: 0.8;
+			}
+
+			/* ── Footer note ──────────────────────────────────────────── */
+			.footer-note {
+				text-align: center;
+				padding: 0 0 5em;
+				border-top: 1px solid rgba(201, 169, 110, 0.1);
+				margin-top: 1em;
+				padding-top: 2.25em;
+			}
+			.footer-note p {
+				font-size: 0.78em;
+				color: var(--color-text-muted);
+				opacity: 0.65;
+				margin: 0;
+				line-height: 1.7;
+			}
+			.footer-note a {
+				color: var(--color-text-muted);
+				text-decoration: underline;
+				text-underline-offset: 2px;
+				text-decoration-color: rgba(201, 169, 110, 0.3);
+				transition: color 0.2s ease, text-decoration-color 0.2s ease;
+			}
+			.footer-note a:hover {
+				color: var(--accent);
+				text-decoration-color: rgba(201, 169, 110, 0.6);
+			}
+
+			/* ── Mobile ───────────────────────────────────────────────── */
+			@media (max-width: 600px) {
+				.thankyou-hero {
+					padding: 3em 1em 2em;
+				}
+				.divider {
+					padding-top: 1.75em;
+					margin-bottom: 1.75em;
+				}
+				.next-steps-grid {
+					grid-template-columns: 1fr;
+					gap: 1.1em;
+					margin-bottom: 2.5em;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<section class="thankyou-hero">
+				<p class="thankyou-eyebrow">Palmistry Starter Guide</p>
+				<h1>Your guide is on its way.</h1>
+				<p class="subline">
+					Check your inbox shortly — the Palmistry Starter Guide should arrive in the next few
+					minutes. While you wait:
+				</p>
+			</section>
+
+			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
+
+			<div class="guide-section">
+				<h2 class="section-heading">Where to begin</h2>
+				<ul class="next-steps-grid">
+					<li>
+						<a
+							href="/learn/foundations/01-what-palmistry-is"
+							class="step-link"
+							data-track="thankyou-lesson1"
+						>
+							<span class="step-title">Start with Lesson 1</span>
+							<span class="step-desc"
+								>Begin at the foundations — where palmistry starts and how to hold a reading.</span
+							>
+						</a>
+					</li>
+					<li>
+						<a
+							href="/blog/beginner/what-do-palm-lines-mean"
+							class="step-link"
+							data-track="thankyou-lines"
+						>
+							<span class="step-title">What do palm lines mean?</span>
+							<span class="step-desc"
+								>An introduction to the four major lines and what each tradition says about them.</span
+							>
+						</a>
+					</li>
+					<li style="grid-column: 1 / -1;">
+						<a
+							href="/blog/beginner/which-hand-to-read-palmistry"
+							class="step-link"
+							data-track="thankyou-hand"
+						>
+							<span class="step-title">Which hand should you read?</span>
+							<span class="step-desc"
+								>Active vs. passive hand — a practical guide for starting any reading.</span
+							>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="guide-section footer-note">
+				<p>
+					The PDF download link is also available at <a href="/guide/">the guide page</a> if you'd
+					prefer to download directly.
+				</p>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
