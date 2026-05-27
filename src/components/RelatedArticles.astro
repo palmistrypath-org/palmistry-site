@@ -1,0 +1,116 @@
+---
+import { getCollection } from 'astro:content';
+
+interface Props {
+	cluster: string | undefined;
+	currentId: string;
+}
+
+const { cluster, currentId } = Astro.props;
+
+const CLUSTER_LABELS: Record<string, string> = {
+	'getting-started': 'Getting Started',
+	'hand-shape': 'Hand Shape',
+	'line-variations': 'Line Variations',
+	'major-lines': 'Major Lines',
+	markings: 'Markings',
+	'minor-lines': 'Minor Lines',
+	mounts: 'Mounts',
+	'relationship-lines': 'Relationship Lines',
+	resources: 'Resources',
+	traditions: 'Traditions',
+};
+
+let related: { id: string; title: string; description: string }[] = [];
+
+if (cluster) {
+	const all = await getCollection('blog');
+	const inCluster = all.filter(
+		(p) => p.data.cluster === cluster && p.id !== currentId
+	);
+	// Sort by pubDate descending, then take up to 3
+	inCluster.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+	related = inCluster.slice(0, 3).map((p) => ({
+		id: p.id,
+		title: p.data.title,
+		description: p.data.description,
+	}));
+}
+---
+
+{related.length > 0 && (
+	<aside class="related-articles">
+		<p class="related-eyebrow">
+			{cluster && CLUSTER_LABELS[cluster] ? `More on ${CLUSTER_LABELS[cluster]}` : 'Related Articles'}
+		</p>
+		<ul class="related-list">
+			{related.map((post) => (
+				<li class="related-item">
+					<a href={`/blog/${post.id}/`} class="related-link">
+						<span class="related-title">{post.title}</span>
+						<span class="related-desc">{post.description}</span>
+					</a>
+				</li>
+			))}
+		</ul>
+	</aside>
+)}
+
+<style>
+	.related-articles {
+		margin-top: 2.5em;
+		padding: 1.25em 1.5em;
+		border-top: 1px solid rgba(201, 169, 110, 0.18);
+	}
+	.related-eyebrow {
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.6em;
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
+		color: var(--accent);
+		margin: 0 0 1em;
+	}
+	.related-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.6em;
+	}
+	.related-item {
+		border-bottom: 1px solid rgba(201, 169, 110, 0.08);
+		padding-bottom: 0.6em;
+	}
+	.related-item:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+	.related-link {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2em;
+		text-decoration: none;
+		color: inherit;
+		transition: color 0.15s ease;
+	}
+	.related-link:hover .related-title {
+		color: var(--accent-light);
+	}
+	.related-title {
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.82em;
+		color: var(--color-heading);
+		line-height: 1.4;
+		transition: color 0.15s ease;
+	}
+	.related-desc {
+		font-size: 0.75em;
+		color: var(--color-text-muted);
+		line-height: 1.55;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+	}
+</style>
