@@ -126,7 +126,7 @@ for (const post of allPosts) {
 			}
 			.cluster-nav a {
 				display: inline-block;
-				padding: 0.3em 0.75em;
+				padding: 0.45em 0.75em;
 				border: 1px solid rgba(201, 169, 110, 0.3);
 				border-radius: 20px;
 				font-size: 0.78em;
@@ -244,6 +244,13 @@ for (const post of allPosts) {
 				.article-grid li a {
 					padding: 0.85rem 1rem;
 				}
+				/* Raise small text floors on mobile */
+				.article-desc {
+					font-size: 0.8em;
+				}
+				.cluster-count {
+					font-size: 0.85em;
+				}
 			}
 		</style>
 	</head>
@@ -294,7 +301,7 @@ for (const post of allPosts) {
 								{posts.map((post) => (
 									<li>
 										<a href={`/blog/${post.id}/`}>
-											<p class="article-title">{post.data.title}</p>
+											<h3 class="article-title">{post.data.title}</h3>
 											<p class="article-desc">
 												{post.data.description.length > 110
 													? post.data.description.slice(0, 110) + '…'
@@ -321,7 +328,7 @@ for (const post of allPosts) {
 							{(grouped.get('other') ?? []).map((post) => (
 								<li>
 									<a href={`/blog/${post.id}/`}>
-										<p class="article-title">{post.data.title}</p>
+										<h3 class="article-title">{post.data.title}</h3>
 										<p class="article-desc">
 											{post.data.description.length > 110
 												? post.data.description.slice(0, 110) + '…'
