@@ -173,6 +173,16 @@ import { SITE_TITLE } from '../consts';
 				background: var(--accent);
 				box-shadow: none;
 			}
+			.signup-form button:disabled {
+				opacity: 0.55;
+				cursor: not-allowed;
+			}
+			.signup-error {
+				display: none;
+				font-size: 0.78em;
+				color: #c07870;
+				margin: 0.5em 0 0;
+			}
 			.signup-caveat {
 				font-size: 0.72em;
 				color: var(--color-text-muted);
@@ -302,13 +312,10 @@ import { SITE_TITLE } from '../consts';
 					printable, and yours to keep.
 				</p>
 
-				<!-- TODO: Replace action="" with your email platform endpoint once connected. -->
-				<!-- TODO: Add any hidden fields required by your provider (e.g. list ID, API key, redirect URL). -->
-				<!-- Tested providers: ConvertKit, Mailchimp, Resend, or a custom serverless function. -->
 				<form
 					class="signup-form"
 					id="signup-form"
-					action=""
+					action="https://app.kit.com/forms/9489555/subscriptions"
 					method="post"
 					aria-label="Guide download sign-up"
 					novalidate
@@ -317,13 +324,14 @@ import { SITE_TITLE } from '../consts';
 					<input
 						type="email"
 						id="guide-email"
-						name="email"
+						name="email_address"
 						placeholder="Your email address"
 						autocomplete="email"
 						required
 					/>
-					<button type="submit">Send Me the Guide</button>
+					<button type="submit" id="signup-btn">Send Me the Guide</button>
 				</form>
+				<p class="signup-error" id="signup-error">Something went wrong — please try again.</p>
 				<p class="signup-confirm" id="signup-confirm">
 					Thank you — your guide will be on its way shortly. One email, nothing else.
 				</p>
@@ -349,27 +357,37 @@ import { SITE_TITLE } from '../consts';
 			const note = document.getElementById('signup-note');
 			const confirmMsg = document.getElementById('signup-confirm');
 			const caveat = document.getElementById('signup-caveat');
+			const btn = document.getElementById('signup-btn') as HTMLButtonElement | null;
+			const errorMsg = document.getElementById('signup-error');
 
 			form?.addEventListener('submit', async (e) => {
 				e.preventDefault();
 
-				// TODO: POST form data to your email platform API here.
-				// Example (ConvertKit):
-				//   const res = await fetch('https://api.convertkit.com/v3/forms/FORM_ID/subscribe', {
-				//     method: 'POST',
-				//     headers: { 'Content-Type': 'application/json' },
-				//     body: JSON.stringify({ api_key: 'YOUR_KEY', email: form.email.value }),
-				//   });
-				//   if (!res.ok) { /* TODO: show an error state */ return; }
+				const emailInput = form.querySelector<HTMLInputElement>('input[name="email_address"]');
+				if (!emailInput?.value) return;
 
-				// TODO: Once email delivery is live, consider sending to a /thank-you page
-				//   that includes the full download link as a courtesy, e.g.:
-				//   window.location.href = '/thank-you?guide=starter';
+				if (errorMsg) errorMsg.style.display = 'none';
+				if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
 
-				if (form) form.style.display = 'none';
-				if (note) note.style.display = 'none';
-				if (caveat) caveat.style.display = 'none';
-				if (confirmMsg) confirmMsg.style.display = 'block';
+				try {
+					const res = await fetch('https://app.kit.com/forms/9489555/subscriptions', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+						body: new URLSearchParams({ email_address: emailInput.value }),
+					});
+
+					if (res.ok) {
+						if (form) form.style.display = 'none';
+						if (note) note.style.display = 'none';
+						if (caveat) caveat.style.display = 'none';
+						if (confirmMsg) confirmMsg.style.display = 'block';
+					} else {
+						throw new Error('non-ok');
+					}
+				} catch {
+					if (btn) { btn.textContent = 'Send Me the Guide'; btn.disabled = false; }
+					if (errorMsg) errorMsg.style.display = 'block';
+				}
 			});
 		</script>
 	</body>
