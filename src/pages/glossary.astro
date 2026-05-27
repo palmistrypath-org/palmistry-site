@@ -10,20 +10,308 @@ import { SITE_TITLE } from '../consts';
 	<head>
 		<BaseHead
 			title={`Glossary — ${SITE_TITLE}`}
-			description="A reference glossary of palmistry terms drawn from Indian, Chinese, and Western traditions."
+			description="A reference glossary of palmistry terms drawn from Indian, Chinese, and Western traditions, with links to relevant lessons."
 		/>
+		<style>
+			.glossary-intro {
+				color: var(--color-text-muted);
+				font-size: 0.9em;
+				line-height: 1.85;
+				margin-bottom: 2.5em;
+			}
+			.letter-group {
+				margin-bottom: 2.5em;
+			}
+			.letter-heading {
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.65em;
+				letter-spacing: 0.25em;
+				text-transform: uppercase;
+				color: var(--accent);
+				opacity: 0.7;
+				border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+				padding-bottom: 0.4em;
+				margin-bottom: 1.25em;
+			}
+			dl {
+				margin: 0;
+			}
+			dt {
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.88em;
+				letter-spacing: 0.04em;
+				color: var(--color-heading);
+				margin-top: 1.25em;
+				margin-bottom: 0.3em;
+			}
+			dt:first-child {
+				margin-top: 0;
+			}
+			dd {
+				margin-left: 0;
+				color: var(--color-text-muted);
+				font-size: 0.84em;
+				line-height: 1.8;
+				padding-left: 1.1em;
+				border-left: 2px solid rgba(201, 169, 110, 0.15);
+			}
+			dd a {
+				font-size: 0.88em;
+				color: var(--accent);
+				text-decoration: none;
+				border-bottom: 1px solid rgba(201, 169, 110, 0.3);
+				transition: border-color 0.2s ease, color 0.2s ease;
+			}
+			dd a:hover {
+				color: var(--accent-light);
+				border-color: var(--accent-light);
+			}
+			.see-lesson {
+				display: inline-block;
+				margin-top: 0.4em;
+				font-size: 0.82em;
+				font-family: var(--font-cinzel), serif;
+				letter-spacing: 0.05em;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
 			<h1>Glossary</h1>
-			<p>
-				This glossary is a reference guide to the terminology used in palmistry across Indian,
-				Chinese, and Western traditions. Each entry identifies the source tradition where relevant,
-				and notes where different traditions use different names or meanings for the same feature.
-				Terms are arranged alphabetically.
+			<p class="glossary-intro">
+				A reference guide to the terminology used in palmistry across Indian, Chinese, and Western
+				traditions. Where traditions use different names or meanings for the same feature, that is
+				noted. Terms are arranged alphabetically.
 			</p>
-			<p><em>Terms will be added progressively as content develops across the site.</em></p>
+
+			<div class="letter-group">
+				<h2 class="letter-heading">A</h2>
+				<dl>
+					<dt>Active hand</dt>
+					<dd>
+						The dominant hand — the hand used most frequently for writing and daily tasks. In
+						contemporary practice, many palmists read the active hand as reflecting developed
+						personality, current circumstances, and conscious choices.
+						<br /><a href="/learn/foundations/04-active-and-passive-hand" class="see-lesson"
+							>→ Lesson: Active and Passive Hand</a
+						>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="letter-group">
+				<h2 class="letter-heading">C</h2>
+				<dl>
+					<dt>Cheiro (1866–1936)</dt>
+					<dd>
+						William John Warner, the Irish palmist who wrote under the name Cheiro. Author of
+						<em>Language of the Hand</em> (1894) and several other works, he systematised Western
+						palmistry for a popular audience and remains a primary reference for the Western
+						tradition. His historical framings — particularly around gender and prediction — are
+						acknowledged but not carried forward uncritically in contemporary practice.
+						<br /><a href="/learn/foundations/01-what-palmistry-is" class="see-lesson"
+							>→ Lesson: What Palmistry Is</a
+						>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="letter-group">
+				<h2 class="letter-heading">F</h2>
+				<dl>
+					<dt>Fate line</dt>
+					<dd>
+						A vertical or near-vertical line running from the base of the palm toward the middle
+						finger (Saturn finger). Traditionally associated with the broad direction of a person's
+						life, particularly career and sense of purpose. Not present on all hands; its absence is
+						not itself a significant negative sign.
+						<br /><a href="/learn/lines/05-fate-line" class="see-lesson">→ Lesson: The Fate Line</a>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="letter-group">
+				<h2 class="letter-heading">G</h2>
+				<dl>
+					<dt>Girdle of Venus</dt>
+					<dd>
+						A curved or broken line arching between the index and ring fingers, above the heart
+						line. Traditionally associated with emotional sensitivity and heightened responsiveness.
+						It may appear as a complete arc or as a series of shorter fragments.
+						<br /><a href="/learn/advanced/03-girdle-of-venus" class="see-lesson"
+							>→ Lesson: The Girdle of Venus</a
+						>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="letter-group">
+				<h2 class="letter-heading">H</h2>
+				<dl>
+					<dt>Hasta Samudrika Shastra</dt>
+					<dd>
+						The classical Indian system of hand analysis, part of the broader field of
+						<em>Samudrika Shastra</em> (the study of bodily features as a guide to character and
+						destiny). One of the oldest codified traditions of palmistry, with roots in ancient
+						Sanskrit texts. It examines the fingers, nails, skin texture, and overall hand
+						structure alongside the palm lines.
+						<br /><a href="/learn/foundations/01-what-palmistry-is" class="see-lesson"
+							>→ Lesson: What Palmistry Is</a
+						>
+					</dd>
+
+					<dt>Head line</dt>
+					<dd>
+						A major horizontal line running across the middle of the palm, typically beginning at or
+						near the index finger and extending toward the outer edge. Traditionally associated with
+						mental disposition, reasoning style, and approach to problem-solving. Its length, curve,
+						and depth are all considered in interpretation.
+						<br /><a href="/learn/lines/03-head-line" class="see-lesson">→ Lesson: The Head Line</a>
+					</dd>
+
+					<dt>Heart line</dt>
+					<dd>
+						A major horizontal line running across the upper palm, generally beginning at or near
+						the little finger and extending toward the index or middle finger. Traditionally
+						associated with emotional life, relational patterns, and affective temperament. In
+						Chinese palmistry it is known as the <em>Tian</em> (Heaven) line.
+						<br /><a href="/learn/lines/02-heart-line" class="see-lesson"
+							>→ Lesson: The Heart Line</a
+						>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="letter-group">
+				<h2 class="letter-heading">L</h2>
+				<dl>
+					<dt>Life line</dt>
+					<dd>
+						A major line curving around the base of the thumb and descending toward the wrist.
+						Often misunderstood as predicting lifespan; in established practice it is traditionally
+						associated with vitality, life energy, and major life changes rather than longevity
+						directly. In Chinese palmistry it is the <em>Ren</em> (Human) line.
+						<br /><a href="/learn/lines/04-life-line" class="see-lesson">→ Lesson: The Life Line</a>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="letter-group">
+				<h2 class="letter-heading">M</h2>
+				<dl>
+					<dt>Mount</dt>
+					<dd>
+						A padded area of raised flesh on the palm. Each mount corresponds to a planetary or
+						elemental association in Western palmistry, and to different qualities in Indian and
+						Chinese traditions. The relative prominence or flatness of a mount is read in relation
+						to its associated qualities.
+						<br /><a href="/learn/mounts/01-mounts-overview" class="see-lesson"
+							>→ Lesson: Mounts Overview</a
+						>
+					</dd>
+
+					<dt>Mount of Apollo</dt>
+					<dd>
+						Located beneath the ring finger (the Apollo finger). Traditionally associated with
+						creativity, aesthetic sensibility, and the desire for self-expression or recognition.
+						<br /><a href="/learn/mounts/05-mount-of-apollo" class="see-lesson"
+							>→ Lesson: Mount of Apollo</a
+						>
+					</dd>
+
+					<dt>Mount of Jupiter</dt>
+					<dd>
+						Located beneath the index finger (the Jupiter finger). Traditionally associated with
+						ambition, leadership, and the individual's relationship to authority and social
+						standing.
+						<br /><a href="/learn/mounts/03-mount-of-jupiter" class="see-lesson"
+							>→ Lesson: Mount of Jupiter</a
+						>
+					</dd>
+
+					<dt>Mount of Luna</dt>
+					<dd>
+						Located on the outer lower palm, opposite the Mount of Venus. Traditionally associated
+						with imagination, intuition, and the receptive aspects of mind. Sometimes called the
+						Mount of the Moon.
+						<br /><a href="/learn/mounts/07-mount-of-luna" class="see-lesson"
+							>→ Lesson: Mount of Luna</a
+						>
+					</dd>
+
+					<dt>Mount of Mars</dt>
+					<dd>
+						Mars occupies two positions on the palm. The Inner Mount of Mars sits between the thumb
+						and the Mount of Jupiter; it is traditionally associated with active courage and
+						aggression. The Outer Mount of Mars (also called Plain of Mars) occupies the mid-outer
+						palm above the Mount of Luna, and is associated with endurance and passive resistance.
+						<br /><a href="/learn/mounts/08-mount-of-mars" class="see-lesson"
+							>→ Lesson: Mount of Mars</a
+						>
+					</dd>
+
+					<dt>Mount of Mercury</dt>
+					<dd>
+						Located beneath the little finger (the Mercury finger). Traditionally associated with
+						communication, commerce, adaptability, and quick thinking.
+						<br /><a href="/learn/mounts/06-mount-of-mercury" class="see-lesson"
+							>→ Lesson: Mount of Mercury</a
+						>
+					</dd>
+
+					<dt>Mount of Saturn</dt>
+					<dd>
+						Located beneath the middle finger (the Saturn finger). Traditionally associated with
+						discipline, introspection, a sense of responsibility, and the relationship to time and
+						structure.
+						<br /><a href="/learn/mounts/04-mount-of-saturn" class="see-lesson"
+							>→ Lesson: Mount of Saturn</a
+						>
+					</dd>
+
+					<dt>Mount of Venus</dt>
+					<dd>
+						Located at the base of the thumb, enclosed within the arc of the life line.
+						Traditionally associated with vitality, warmth, affection, and physical energy.
+						<br /><a href="/learn/mounts/02-mount-of-venus" class="see-lesson"
+							>→ Lesson: Mount of Venus</a
+						>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="letter-group">
+				<h2 class="letter-heading">P</h2>
+				<dl>
+					<dt>Passive hand</dt>
+					<dd>
+						The non-dominant hand. In contemporary practice, often read as reflecting innate
+						tendencies, inherited patterns, or the baseline from which the active hand diverges.
+						Different schools weight the passive hand differently; some traditions read it as the
+						more significant hand.
+						<br /><a href="/learn/foundations/04-active-and-passive-hand" class="see-lesson"
+							>→ Lesson: Active and Passive Hand</a
+						>
+					</dd>
+				</dl>
+			</div>
+
+			<div class="letter-group">
+				<h2 class="letter-heading">S</h2>
+				<dl>
+					<dt>Simian line</dt>
+					<dd>
+						A single horizontal crease formed when the heart line and head line are fused into one
+						line running across the palm. Present in a minority of hands. Interpretations vary
+						considerably across traditions and individual practitioners; it is often associated with
+						intensity of focus and an all-or-nothing quality in the person.
+						<br /><a href="/learn/lines/06-simian-line" class="see-lesson"
+							>→ Lesson: The Simian Line</a
+						>
+					</dd>
+				</dl>
+			</div>
 		</main>
 		<Footer />
 	</body>

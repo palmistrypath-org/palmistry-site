@@ -10,24 +10,119 @@ import { SITE_TITLE } from '../consts';
 	<head>
 		<BaseHead
 			title={`About — ${SITE_TITLE}`}
-			description="About Palmistry Path — an educational resource on palm reading across Indian, Chinese, and Western traditions."
+			description="About Palmistry Path — an independent educational resource on palm reading across Indian, Chinese, and Western traditions."
 		/>
+		<style>
+			main section {
+				margin-bottom: 2.5em;
+			}
+			main h2 {
+				font-size: clamp(1.1rem, 3.5vw, 1.5em);
+				margin-top: 2em;
+				margin-bottom: 0.5em;
+				padding-bottom: 0.35em;
+				border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+			}
+			main ul {
+				padding-left: 1.4em;
+				line-height: 1.85;
+			}
+			main ul li {
+				margin-bottom: 0.35em;
+				color: var(--color-text-muted);
+			}
+			.disclaimer {
+				margin-top: 3em;
+				padding: 1.25em 1.5em;
+				border: 1px solid rgba(201, 169, 110, 0.18);
+				border-radius: 6px;
+				background: rgba(255, 255, 255, 0.02);
+				font-size: 0.84em;
+				color: var(--color-text-muted);
+				line-height: 1.75;
+			}
+		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
 			<h1>About</h1>
-			<p>
-				Palmistry Path is an independent educational resource dedicated to palm reading as a serious
-				area of study. The goal is a structured, honest guide to the subject — one grounded in the
-				primary traditions (Indian, Chinese, and Western) rather than in pop-culture summaries or
-				unfounded claims. Content is written to be accessible at every level, from a first encounter
-				with the subject through to more nuanced interpretation.
-			</p>
-			<p>
-				More about the author and the project's sources will be added as the site develops. If you
-				have questions or corrections, that information will appear here in due course.
-			</p>
+
+			<section>
+				<h2>What Palmistry Path Is</h2>
+				<p>
+					Palmistry Path is an independent educational resource dedicated to palmistry as a structured
+					practice and area of study. The goal is a well-organised, honest guide to the subject — one
+					grounded in the primary traditions (Indian, Chinese, and Western palmistry) rather than in
+					pop-culture summaries or unfounded claims.
+				</p>
+				<p>
+					Content is organised as a progressive learning path: from foundational concepts through
+					individual lines, mounts, and advanced interpretation. No prior knowledge is assumed.
+				</p>
+			</section>
+
+			<section>
+				<h2>Editorial Philosophy</h2>
+				<p>Every article on this site aims to:</p>
+				<ul>
+					<li>
+						Attribute meanings to specific traditions rather than presenting any single view as
+						universal
+					</li>
+					<li>
+						Note clearly when traditions disagree, rather than synthesising a false consensus
+					</li>
+					<li>
+						Use language that reflects the interpretive, observational nature of palmistry:
+						"traditionally associated with…", "often interpreted as…", "may suggest…"
+					</li>
+					<li>Acknowledge the cultural and historical context of each tradition</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Sources</h2>
+				<p>Content draws primarily from established works in the field:</p>
+				<ul>
+					<li>Cheiro, <em>Language of the Hand</em> (1894)</li>
+					<li>William G. Benham, <em>The Laws of Scientific Hand Reading</em> (1900)</li>
+					<li>Fred Gettings, <em>The Book of the Hand</em> (1965)</li>
+					<li>Nathaniel Altman, <em>The Art of Hand Reading</em> (1995)</li>
+					<li>Robin Gile &amp; Lisa Lenard, <em>The Complete Idiot's Guide to Palmistry</em> (1999)</li>
+				</ul>
+				<p>
+					Where these sources disagree, both views are presented. Where a claim cannot be traced to a
+					tradition or source, it is not included.
+				</p>
+			</section>
+
+			<section>
+				<h2>What This Site Does Not Claim</h2>
+				<p>
+					Palmistry Path is not a fortune-telling service. No content here claims to predict future
+					events, and palmistry is not presented as a science with verified predictive accuracy.
+				</p>
+				<p>
+					Nothing here should be taken as medical, psychological, legal, or financial advice.
+					Palmistry is treated as a centuries-old interpretive tradition — one worth studying
+					carefully, honestly, and with intellectual curiosity.
+				</p>
+			</section>
+
+			<section>
+				<h2>Corrections</h2>
+				<p>
+					If you find an error, a misattribution, or a claim that doesn't hold up to scrutiny,
+					corrections are welcome. This site is built to improve over time.
+				</p>
+			</section>
+
+			<aside class="disclaimer">
+				<em>Palmistry Path is for education, personal reflection, and exploration of a
+				centuries-old interpretive tradition. It is not a substitute for professional medical,
+				legal, or financial advice.</em>
+			</aside>
 		</main>
 		<Footer />
 	</body>

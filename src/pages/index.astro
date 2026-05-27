@@ -2,50 +2,125 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { MODULES, SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead
+			title={`Learn Palmistry — ${SITE_TITLE}`}
+			description="A structured, grounded guide to palm reading across Indian, Chinese, and Western traditions. Learn the lines, mounts, and hand shapes without fortune-telling claims."
+		/>
 	</head>
 	<body>
 		<Header />
 		<main>
+			<!-- ── Hero ──────────────────────────────────────────────── -->
 			<section class="hero">
-				<h1>Palmistry Path</h1>
-				<p class="tagline">Read the lines. Discover the path.</p>
+				<h1>Learn palmistry as a structured practice</h1>
+				<p class="hero-sub">
+					A grounded guide to the lines, mounts, hand shapes, and traditions of palm reading —
+					without fortune-telling claims.
+				</p>
+				<div class="hero-ctas">
+					<a href="/learn/foundations/01-what-palmistry-is" class="btn-primary"
+						>Start the Beginner Path</a
+					>
+					<a href="/guide" class="btn-secondary">Get the Free Starter Guide</a>
+				</div>
 			</section>
+
 			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
+
+			<!-- ── Intro ──────────────────────────────────────────────── -->
 			<section class="intro">
 				<p>
 					The human hand carries a map — a record of structure, temperament, and tendency etched
 					into the palm and fingers. Palmistry is the study of that map: its lines, mounts, and
-					shapes, and what they have meant to practitioners across centuries and cultures. This site
-					is a structured guide to understanding it.
+					shapes, and what they have meant to practitioners across centuries and cultures.
 				</p>
 				<p>
 					Content here draws from three major traditions: Indian (Hasta Samudrika Shastra), Chinese
-					palmistry, and Western palmistry as systematised by Cheiro and his contemporaries. Where
-					those traditions agree, the consensus is noted. Where they diverge, both views are
-					presented honestly rather than one being quietly discarded.
+					palmistry, and Western palmistry as systematised by Cheiro. Where traditions agree, the
+					consensus is noted. Where they diverge, both views are presented honestly rather than one
+					being quietly discarded. No prior knowledge is assumed, and no claims are made about
+					predicting the future.
 				</p>
-				<p>
-					Articles are organised by skill level — Beginner, Intermediate, and Advanced — so you can
-					start with foundational concepts and build toward more nuanced interpretation at your own
-					pace. No prior knowledge is assumed, and no claims are made about predicting the future.
-					Palmistry, practised well, is a tool for reflection and self-understanding.
+			</section>
+
+			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
+
+			<!-- ── How the path works ─────────────────────────────────── -->
+			<section class="path-section">
+				<h2 class="section-eyebrow">How the path works</h2>
+				<ol class="path-steps" role="list">
+					{
+						MODULES.map((mod, i) => (
+							<li>
+								<a href={`/learn/${mod.slug}`} class="path-step">
+									<span class="step-num">{i + 1}</span>
+									<span class="step-title">{mod.title}</span>
+									<span class="step-difficulty">{mod.difficulty}</span>
+									<span class="step-desc">{mod.description}</span>
+								</a>
+							</li>
+						))
+					}
+				</ol>
+			</section>
+
+			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
+
+			<!-- ── Trust pillars ──────────────────────────────────────── -->
+			<section class="trust-section" aria-label="Site principles">
+				<ul class="trust-pillars" role="list">
+					<li>
+						<span class="pillar-mark" aria-hidden="true">✦</span>
+						<span>No prediction claims</span>
+					</li>
+					<li>
+						<span class="pillar-mark" aria-hidden="true">✦</span>
+						<span>Tradition-aware</span>
+					</li>
+					<li>
+						<span class="pillar-mark" aria-hidden="true">✦</span>
+						<span>Beginner-friendly</span>
+					</li>
+					<li>
+						<span class="pillar-mark" aria-hidden="true">✦</span>
+						<span>Built for careful observation</span>
+					</li>
+				</ul>
+			</section>
+
+			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
+
+			<!-- ── Guide CTA ───────────────────────────────────────────── -->
+			<section class="guide-cta">
+				<h2 class="guide-cta-heading">Start with the free guide</h2>
+				<p class="guide-cta-sub">
+					The Palmistry Starter Guide covers the major lines, mounts, hand shapes, and includes a
+					printable observation sheet. A useful reference from your first lesson.
 				</p>
+				<a href="/guide" class="btn-primary">Get the Starter Guide</a>
 			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
 <style>
+	main {
+		width: 100%;
+		max-width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	/* ── Hero ─────────────────────────────────────────────────── */
 	.hero {
 		text-align: center;
-		padding: 5em 1em 2.5em;
+		padding: 5em 1.5em 3em;
 		background: radial-gradient(
 			ellipse 70% 55% at 50% 42%,
 			rgba(201, 169, 110, 0.07) 0%,
@@ -53,53 +128,250 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 		);
 	}
 	.hero h1 {
-		/* clamp: 24px floor → scales with viewport → 76px ceiling */
-		font-size: clamp(1.5rem, 7vw, 3.8em);
-		letter-spacing: 0.12em;
+		font-size: clamp(1.5rem, 5vw, 3em);
+		letter-spacing: 0.06em;
 		color: var(--accent);
 		text-shadow:
 			0 0 80px rgba(201, 169, 110, 0.2),
 			0 2px 8px rgba(0, 0, 0, 0.7);
-		margin-bottom: 0.45em;
+		margin: 0 auto 0.5em;
+		max-width: 760px;
 	}
-	.tagline {
+	.hero-sub {
+		font-size: 0.9em;
+		color: var(--color-text-muted);
+		max-width: 540px;
+		margin: 0 auto 2em;
+		line-height: 1.75;
+	}
+	.hero-ctas {
+		display: flex;
+		gap: 1em;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	/* ── Buttons ──────────────────────────────────────────────── */
+	.btn-primary {
+		display: inline-block;
+		background: var(--accent);
+		color: var(--color-bg);
 		font-family: var(--font-cinzel), serif;
 		font-size: 0.68em;
-		letter-spacing: 0.3em;
+		letter-spacing: 0.1em;
 		text-transform: uppercase;
-		color: #a09abf;
-		margin: 0;
+		text-decoration: none;
+		padding: 0.9em 1.8em;
+		border-radius: 4px;
+		transition:
+			background 0.2s ease,
+			box-shadow 0.2s ease;
 	}
+	.btn-primary:hover {
+		background: var(--accent-light);
+		color: var(--color-bg);
+		box-shadow: 0 2px 14px rgba(201, 169, 110, 0.2);
+		text-decoration: none;
+	}
+	.btn-secondary {
+		display: inline-block;
+		background: transparent;
+		color: var(--accent);
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.68em;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 0.9em 1.8em;
+		border-radius: 4px;
+		border: 1px solid rgba(201, 169, 110, 0.4);
+		transition:
+			border-color 0.2s ease,
+			background 0.2s ease,
+			color 0.2s ease;
+	}
+	.btn-secondary:hover {
+		border-color: var(--accent);
+		background: rgba(201, 169, 110, 0.06);
+		color: var(--accent-light);
+		text-decoration: none;
+	}
+
+	/* ── Divider ──────────────────────────────────────────────── */
 	.divider {
 		text-align: center;
 		color: var(--accent);
 		letter-spacing: 0.5em;
 		font-size: 0.6em;
 		opacity: 0.5;
-		padding: 2.5em 0 0;
-		margin-bottom: 2.5em;
+		padding: 2.5em 0;
+	}
+
+	/* ── Intro ────────────────────────────────────────────────── */
+	.intro {
+		width: 720px;
+		max-width: calc(100% - 3em);
+		margin: 0 auto;
+		padding: 0 1em;
 	}
 	.intro p {
 		line-height: 1.9;
 	}
 
-	@media (max-width: 600px) {
+	/* ── Path section ─────────────────────────────────────────── */
+	.path-section {
+		width: 960px;
+		max-width: calc(100% - 3em);
+		margin: 0 auto;
+		padding: 0 1em;
+	}
+	.section-eyebrow {
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.62em;
+		letter-spacing: 0.22em;
+		text-transform: uppercase;
+		color: var(--color-text-muted);
+		opacity: 0.6;
+		text-align: center;
+		margin: 0 0 2em;
+	}
+	.path-steps {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.25rem;
+	}
+	.path-step {
+		display: flex;
+		flex-direction: column;
+		padding: 1.5rem;
+		border: 1px solid rgba(201, 169, 110, 0.2);
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.02);
+		text-decoration: none;
+		transition:
+			border-color 0.2s ease,
+			background 0.2s ease;
+		box-sizing: border-box;
+		height: 100%;
+	}
+	.path-step:hover {
+		border-color: rgba(201, 169, 110, 0.5);
+		background: rgba(201, 169, 110, 0.04);
+		text-decoration: none;
+	}
+	.step-num {
+		display: block;
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.62em;
+		letter-spacing: 0.18em;
+		color: var(--accent);
+		opacity: 0.65;
+		margin-bottom: 0.5em;
+	}
+	.step-title {
+		display: block;
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.9em;
+		color: var(--color-heading);
+		margin-bottom: 0.3em;
+		line-height: 1.3;
+	}
+	.step-difficulty {
+		display: block;
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.58em;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--accent);
+		opacity: 0.55;
+		margin-bottom: 0.8em;
+	}
+	.step-desc {
+		display: block;
+		font-size: 0.75em;
+		color: var(--color-text-muted);
+		line-height: 1.65;
+		opacity: 0.85;
+	}
+
+	/* ── Trust pillars ────────────────────────────────────────── */
+	.trust-section {
+		width: 720px;
+		max-width: calc(100% - 3em);
+		margin: 0 auto;
+		padding: 0 1em;
+	}
+	.trust-pillars {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		gap: 0.75em 2.5em;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.trust-pillars li {
+		display: flex;
+		align-items: center;
+		gap: 0.6em;
+		font-size: 0.82em;
+		color: var(--color-text-muted);
+		letter-spacing: 0.03em;
+	}
+	.pillar-mark {
+		color: var(--accent);
+		font-size: 0.6em;
+		opacity: 0.65;
+	}
+
+	/* ── Guide CTA ────────────────────────────────────────────── */
+	.guide-cta {
+		width: 720px;
+		max-width: calc(100% - 3em);
+		margin: 0 auto;
+		padding: 0 1em 5em;
+		text-align: center;
+	}
+	.guide-cta-heading {
+		font-size: clamp(1.2rem, 3.5vw, 1.8em);
+		color: var(--color-heading);
+		letter-spacing: 0.06em;
+		margin-bottom: 0.5em;
+	}
+	.guide-cta-sub {
+		font-size: 0.87em;
+		color: var(--color-text-muted);
+		max-width: 480px;
+		margin: 0 auto 1.75em;
+		line-height: 1.75;
+	}
+
+	/* ── Responsive ──────────────────────────────────────────── */
+	@media (max-width: 720px) {
+		.hero {
+			padding: 3.5em 1.25em 2.5em;
+		}
+		.path-steps {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 500px) {
 		.hero {
 			padding: 3em 1em 2em;
 		}
 		.hero h1 {
-			/* Cinzel is wide; tighten letter-spacing on small screens */
-			letter-spacing: 0.05em;
-			margin-bottom: 0.5em;
+			letter-spacing: 0.04em;
 		}
-		.tagline {
-			font-size: 0.62em;
-			letter-spacing: 0.12em;
+		.path-steps {
+			grid-template-columns: 1fr;
 		}
-		.divider {
-			padding-top: 1.5em;
-			margin-bottom: 1.5em;
-			letter-spacing: 0.3em;
+		.trust-pillars {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 0.9em;
 		}
 	}
 </style>
