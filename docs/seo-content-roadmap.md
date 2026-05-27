@@ -610,4 +610,14 @@ Use this checklist for every new article before committing.
 
 ---
 
+## Visual Assets — Current Status
+
+> **See `docs/visual-assets-roadmap.md` for the full visual asset plan.**
+
+**Lines lessons** — final designed `.webp` diagrams exist and are committed under `public/images/lessons/lines/`.
+
+**Mounts lessons** — currently use temporary schematic SVGs generated programmatically. These provide basic instructional support but are not final artwork. Designed replacements are needed before the mounts module is considered complete.
+
+---
+
 *End of document. Update the keyword map table as new articles are published.*
