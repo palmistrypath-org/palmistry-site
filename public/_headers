@@ -1,12 +1,23 @@
 # Cloudflare Pages cache headers
-# Astro outputs hashed filenames under /_astro/ — safe to cache forever
-/_astro/*
-  Cache-Control: public, max-age=31536000, immutable
+# Rules are applied in order; last matching rule wins for conflicting headers.
+# Put the broad wildcard first so specific rules below can override it.
+
+# Default: no stale cache for HTML pages and anything not matched below
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Unversioned public images — cache for a week, then revalidate
+/images/*
+  Cache-Control: public, max-age=604800, must-revalidate
+
+# OG image — same as other public images
+/og/*
+  Cache-Control: public, max-age=604800, must-revalidate
 
 # Static downloads — cache for a week, then revalidate
 /downloads/*
   Cache-Control: public, max-age=604800, must-revalidate
 
-# Everything else (HTML, pages) — no stale cache
-/*
-  Cache-Control: public, max-age=0, must-revalidate
+# Astro outputs hashed filenames under /_astro/ — safe to cache forever
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
