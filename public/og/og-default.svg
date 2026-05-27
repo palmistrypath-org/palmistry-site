@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#c9a96e" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#0d0a1a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rule" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c9a96e" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#c9a96e" stop-opacity="0.55"/>
+      <stop offset="75%" stop-color="#c9a96e" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0d0a1a"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <!-- Top rule -->
+  <rect x="360" y="208" width="480" height="1" fill="url(#rule)"/>
+
+  <!-- Eyebrow -->
+  <text x="600" y="255"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="13"
+        fill="#c9a96e"
+        text-anchor="middle"
+        letter-spacing="6"
+        opacity="0.65">PALMISTRY PATH</text>
+
+  <!-- Main title -->
+  <text x="600" y="345"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="68"
+        font-weight="normal"
+        fill="#e8e0d0"
+        text-anchor="middle"
+        letter-spacing="5">The Palmistry</text>
+  <text x="600" y="420"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="68"
+        font-weight="normal"
+        fill="#e8e0d0"
+        text-anchor="middle"
+        letter-spacing="5">Learning Path</text>
+
+  <!-- Ornament -->
+  <text x="600" y="460"
+        font-family="serif"
+        font-size="13"
+        fill="#c9a96e"
+        text-anchor="middle"
+        letter-spacing="14"
+        opacity="0.5">✦  ·  ✦  ·  ✦</text>
+
+  <!-- Subtitle -->
+  <text x="600" y="498"
+        font-family="Georgia, 'Times New Roman', serif"
+        font-size="22"
+        fill="#8c84a8"
+        text-anchor="middle"
+        letter-spacing="2">Structured lessons in Indian, Chinese, and Western palmistry</text>
+
+  <!-- Bottom rule -->
+  <rect x="360" y="522" width="480" height="1" fill="url(#rule)"/>
+</svg>

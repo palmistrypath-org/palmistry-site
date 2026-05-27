@@ -441,7 +441,6 @@ import { SITE_TITLE } from '../consts';
 					action="https://app.kit.com/forms/9489555/subscriptions"
 					method="post"
 					aria-label="Guide download sign-up"
-					novalidate
 				>
 					<label for="guide-email" class="sr-only">Email address</label>
 					<input
@@ -466,12 +465,12 @@ import { SITE_TITLE } from '../consts';
 			</div>
 
 			<div class="guide-section preview-download">
-				<p>Want to preview a sample before subscribing?</p>
+				<p>Prefer to download and read offline?</p>
 				<a
 					href="/downloads/Palmistry-Starter-Guide-Web.pdf"
 					download="Palmistry-Starter-Guide-Web.pdf"
 					class="preview-download-link"
-				>↓ View sample pages (PDF)</a>
+				>↓ Download full guide (PDF, 25 MB)</a>
 			</div>
 		</main>
 		<Footer />
@@ -487,8 +486,12 @@ import { SITE_TITLE } from '../consts';
 			form?.addEventListener('submit', async (e) => {
 				e.preventDefault();
 
+				if (!form.checkValidity()) {
+					form.reportValidity();
+					return;
+				}
+
 				const emailInput = form.querySelector<HTMLInputElement>('input[name="email_address"]');
-				if (!emailInput?.value) return;
 
 				if (errorMsg) errorMsg.style.display = 'none';
 				if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }
