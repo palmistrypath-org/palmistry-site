@@ -96,6 +96,21 @@ import { MODULES, SITE_TITLE } from '../consts';
 
 			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
 
+			<!-- ── Starter articles ───────────────────────────────────── -->
+			<section class="starter-section" aria-labelledby="starter-heading">
+				<h2 class="section-eyebrow" id="starter-heading">A place to start</h2>
+				<ul class="starter-links" role="list">
+					<li><a href="/blog/beginner/what-do-palm-lines-mean" class="starter-link">What do palm lines mean?</a></li>
+					<li><a href="/blog/beginner/which-hand-to-read-palmistry" class="starter-link">Which hand to read</a></li>
+					<li><a href="/blog/beginner/how-to-read-a-palm" class="starter-link">How to read a palm</a></li>
+					<li><a href="/blog/beginner/palmistry-chart-for-beginners" class="starter-link">Palmistry chart for beginners</a></li>
+					<li><a href="/blog/beginner/hand-shapes" class="starter-link">Hand shapes in palmistry</a></li>
+					<li><a href="/blog/beginner/major-lines-overview" class="starter-link">The major palm lines</a></li>
+				</ul>
+			</section>
+
+			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
+
 			<!-- ── Guide CTA ───────────────────────────────────────────── -->
 			<section class="guide-cta">
 				<h2 class="guide-cta-heading">Start with the free guide</h2>
@@ -327,6 +342,43 @@ import { MODULES, SITE_TITLE } from '../consts';
 		opacity: 0.65;
 	}
 
+	/* ── Starter articles ─────────────────────────────────────── */
+	.starter-section {
+		width: 720px;
+		max-width: calc(100% - 3em);
+		margin: 0 auto;
+		padding: 0 1em;
+	}
+	.starter-links {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 0.6rem 2rem;
+	}
+	.starter-link {
+		display: block;
+		font-family: var(--font-lora), serif;
+		font-size: 0.85em;
+		color: var(--accent);
+		text-decoration: none;
+		padding: 0.45em 0;
+		border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+		transition: color 0.2s ease, border-color 0.2s ease;
+		line-height: 1.45;
+	}
+	.starter-link::before {
+		content: '→ ';
+		opacity: 0.55;
+		font-size: 0.9em;
+	}
+	.starter-link:hover {
+		color: var(--accent-light);
+		border-color: rgba(201, 169, 110, 0.4);
+		text-decoration: none;
+	}
+
 	/* ── Guide CTA ────────────────────────────────────────────── */
 	.guide-cta {
 		width: 720px;
@@ -347,6 +399,17 @@ import { MODULES, SITE_TITLE } from '../consts';
 		max-width: 480px;
 		margin: 0 auto 1.75em;
 		line-height: 1.75;
+	}
+
+	@media (max-width: 600px) {
+		.starter-links {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 380px) {
+		.starter-links {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	/* ── Responsive ──────────────────────────────────────────── */
