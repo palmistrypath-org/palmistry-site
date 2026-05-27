@@ -2,6 +2,7 @@
 title: "Mount of Venus Meaning in Palmistry"
 description: "What the Mount of Venus means in palmistry: its traditional associations with warmth, vitality, and affection — and why the most common myth gets the tradition backwards."
 pubDate: 2026-05-02
+cluster: "mounts"
 relatedLesson: "/learn/mounts/02-mount-of-venus"
 ---
 

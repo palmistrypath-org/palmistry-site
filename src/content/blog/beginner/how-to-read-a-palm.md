@@ -2,6 +2,7 @@
 title: "How to Read a Palm: A Beginner's Step-by-Step Guide"
 description: "A practical guide to how experienced palmists approach a hand: observation sequence, which hand to read, and why synthesis matters more than memorising meanings."
 pubDate: 2026-04-27
+cluster: "getting-started"
 relatedLesson: "/learn/foundations/02-how-to-read-a-palm"
 ---
 

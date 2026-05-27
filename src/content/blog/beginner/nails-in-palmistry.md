@@ -2,6 +2,7 @@
 title: "Nails in Palmistry: What Beginners Should Notice"
 description: "Nail observation in palmistry — shape, texture, and traditional associations — with guidance on what belongs to a palmist and what belongs to a doctor."
 pubDate: 2026-05-27
+cluster: "hand-shape"
 relatedLesson: "/learn/foundations/03-hand-shapes"
 ---
 

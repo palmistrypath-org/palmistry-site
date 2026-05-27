@@ -2,6 +2,7 @@
 title: "Fate Line Meaning in Palmistry: A Beginner Guide"
 description: "Learn what the fate line is, where to find it, and how palmistry traditions read its starting points, breaks, and absent line."
 pubDate: 2026-04-28
+cluster: "major-lines"
 relatedLesson: "/learn/lines/05-fate-line"
 ---
 

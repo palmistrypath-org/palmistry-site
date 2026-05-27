@@ -1,199 +1,339 @@
 ---
-import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
-const posts = (await getCollection('blog')).sort(
+const allPosts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 
-const featuredIds = [
-	'beginner/what-palmistry-is',
-	'beginner/how-to-read-a-palm',
-	'beginner/major-lines-overview',
+type ClusterKey =
+	| 'getting-started'
+	| 'major-lines'
+	| 'line-variations'
+	| 'minor-lines'
+	| 'mounts'
+	| 'hand-shape'
+	| 'traditions'
+	| 'relationship-lines'
+	| 'markings'
+	| 'resources';
+
+const clusterMeta: Record<ClusterKey, { label: string; intro: string }> = {
+	'getting-started': {
+		label: 'Getting Started',
+		intro: 'New to palmistry? These articles cover the foundations.',
+	},
+	'major-lines': {
+		label: 'Major Lines',
+		intro: 'The heart, head, life, and fate lines — the core of every reading.',
+	},
+	'line-variations': {
+		label: 'Line Variations',
+		intro: 'Breaks, chains, forks, islands, and other variations on the main lines.',
+	},
+	'minor-lines': {
+		label: 'Minor Lines',
+		intro: 'Secondary lines that provide additional layers of interpretation.',
+	},
+	mounts: {
+		label: 'Mounts',
+		intro: 'The seven mounts of the palm and what each is traditionally associated with.',
+	},
+	'hand-shape': {
+		label: 'Hand Shape & Features',
+		intro: 'Hand types, finger shapes, thumbs, and nails as context for line reading.',
+	},
+	traditions: {
+		label: 'Traditions',
+		intro: 'Indian, Chinese, and Western palmistry — how the major traditions compare.',
+	},
+	'relationship-lines': {
+		label: 'Relationship & Love Lines',
+		intro: 'Marriage lines, love lines, and what palmistry can and cannot say about relationships.',
+	},
+	markings: {
+		label: 'Markings',
+		intro: 'Crosses, stars, islands, and other symbols found on the palm.',
+	},
+	resources: {
+		label: 'Resources',
+		intro: 'Books, charts, and reference materials for further study.',
+	},
+};
+
+const clusterOrder: ClusterKey[] = [
+	'getting-started',
+	'major-lines',
+	'line-variations',
+	'minor-lines',
+	'mounts',
+	'hand-shape',
+	'traditions',
+	'relationship-lines',
+	'markings',
+	'resources',
 ];
-const featuredPosts = featuredIds
-	.map((id) => posts.find((p) => p.id === id))
-	.filter((p) => p !== undefined);
+
+// Group posts by cluster, ungrouped posts fall into a catch-all
+const grouped = new Map<string, typeof allPosts>();
+for (const key of clusterOrder) {
+	grouped.set(key, []);
+}
+grouped.set('other', []);
+
+for (const post of allPosts) {
+	const key = post.data.cluster ?? 'other';
+	const bucket = grouped.get(key) ?? grouped.get('other')!;
+	bucket.push(post);
+}
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={`Articles — ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
 		<style>
 			main {
 				width: calc(100% - 3rem);
-				max-width: 1400px;
+				max-width: 1300px;
 			}
 
-			/* ---- Start Here section ---- */
-			.start-here {
-				margin-bottom: 3rem;
+			.page-header {
+				margin-bottom: 2rem;
 			}
-			.start-here > .intro {
-				margin-top: 0.5rem;
-				margin-bottom: 1.5rem;
+			.page-header h1 {
+				margin-bottom: 0.25rem;
+			}
+			.page-header p {
+				margin: 0;
 				color: var(--color-text-muted);
 				font-size: 0.9em;
 			}
-			.featured-list {
+
+			/* Cluster navigation bar */
+			.cluster-nav {
 				display: flex;
 				flex-wrap: wrap;
-				gap: 1.5rem;
-				list-style-type: none;
+				gap: 0.5rem;
+				margin-bottom: 3rem;
+				padding-bottom: 1.5rem;
+				border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+				list-style: none;
+				padding-left: 0;
+			}
+			.cluster-nav a {
+				display: inline-block;
+				padding: 0.3em 0.75em;
+				border: 1px solid rgba(201, 169, 110, 0.3);
+				border-radius: 20px;
+				font-size: 0.78em;
+				font-family: var(--font-cinzel), serif;
+				color: var(--color-nav-text);
+				text-decoration: none;
+				transition: 0.2s ease;
+				white-space: nowrap;
+			}
+			.cluster-nav a:hover {
+				border-color: var(--accent);
+				color: var(--accent);
+				background: rgba(201, 169, 110, 0.06);
+			}
+
+			/* Cluster sections */
+			.cluster-section {
+				margin-bottom: 3.5rem;
+			}
+			.cluster-section:last-child {
+				margin-bottom: 0;
+			}
+			.cluster-heading {
+				display: flex;
+				align-items: baseline;
+				gap: 0.75rem;
+				margin-bottom: 0.4rem;
+			}
+			.cluster-heading h2 {
+				margin: 0;
+				font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+			}
+			.cluster-count {
+				font-size: 0.75em;
+				color: var(--color-text-muted);
+				font-family: var(--font-lora), serif;
+			}
+			.cluster-intro {
+				margin: 0 0 1.25rem;
+				color: var(--color-text-muted);
+				font-size: 0.85em;
+			}
+
+			/* Article grid */
+			.article-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1rem;
+				list-style: none;
 				margin: 0;
 				padding: 0;
 			}
-			/* Override the general ul li:first-child rules for featured cards */
-			.featured-list li,
-			.featured-list li:first-child {
-				width: calc(33.33% - 1rem);
-				margin-bottom: 0;
-				text-align: left;
-			}
-			.featured-list li:first-child .title {
-				font-size: 1.563em;
-			}
-			.featured-list li a {
+			.article-grid li a {
 				display: block;
 				height: 100%;
-				padding: 1.25rem;
-				border: 1px solid rgba(201, 169, 110, 0.3);
-				border-radius: 12px;
-				background: rgba(255, 255, 255, 0.03);
+				padding: 1rem 1.1rem;
+				border: 1px solid rgba(201, 169, 110, 0.2);
+				border-radius: 10px;
+				background: rgba(255, 255, 255, 0.02);
 				text-decoration: none;
 				transition: 0.2s ease;
 				box-sizing: border-box;
 			}
-			.featured-list li a:hover {
+			.article-grid li a:hover {
 				border-color: var(--accent);
-				background: rgba(201, 169, 110, 0.06);
+				background: rgba(201, 169, 110, 0.05);
 				box-shadow: var(--box-shadow);
 			}
-			.featured-list .title {
-				margin: 0 0 0.5rem;
+			.article-title {
+				margin: 0 0 0.35rem;
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.82em;
 				color: var(--color-heading);
-				line-height: 1.3;
+				line-height: 1.4;
 			}
-			.featured-list .description {
+			.article-desc {
 				margin: 0;
+				font-size: 0.75em;
 				color: var(--color-text-muted);
-				font-size: 0.8em;
 				line-height: 1.5;
 			}
 
-			/* ---- Section headings ---- */
-			.section-label {
-				margin: 0 0 1.5rem;
+			/* Getting Started: slightly more prominent cards */
+			.cluster-section.is-featured .article-grid {
+				grid-template-columns: repeat(2, 1fr);
 			}
-
-			/* ---- All Articles list (existing patterns) ---- */
-			ul {
-				display: flex;
-				flex-wrap: wrap;
-				gap: 2rem;
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
+			.cluster-section.is-featured .article-title {
+				font-size: 0.9em;
 			}
-			ul li {
-				width: calc(50% - 1rem);
-			}
-			ul li * {
-				text-decoration: none;
-				transition: 0.2s ease;
-			}
-			ul li img {
-				margin-bottom: 0.5rem;
-				border-radius: 12px;
-			}
-			ul li a {
-				display: block;
-			}
-			.title {
-				margin: 0;
-				color: var(--color-text);
-				line-height: 1;
-			}
-			.description {
-				margin: 0.25rem 0 0;
-				color: var(--color-text-muted);
+			.cluster-section.is-featured .article-desc {
 				font-size: 0.8em;
-				line-height: 1.5;
 			}
-			.date {
-				margin: 0;
-				color: var(--color-text-muted);
-			}
-			ul li a:hover h4,
-			ul li a:hover .date {
-				color: var(--accent);
-			}
-			ul a:hover img {
-				box-shadow: var(--box-shadow);
+			.cluster-section.is-featured li a {
+				border-color: rgba(201, 169, 110, 0.3);
+				background: rgba(255, 255, 255, 0.03);
 			}
 
-			@media (max-width: 720px) {
-				.featured-list li,
-				.featured-list li:first-child {
-					width: 100%;
+			@media (max-width: 900px) {
+				.article-grid {
+					grid-template-columns: repeat(2, 1fr);
 				}
-				ul {
-					gap: 0.5em;
+			}
+			@media (max-width: 600px) {
+				main {
+					width: calc(100% - 2rem);
 				}
-				ul li {
-					width: 100%;
-					text-align: center;
+				.cluster-nav {
+					gap: 0.4rem;
 				}
-
+				.article-grid,
+				.cluster-section.is-featured .article-grid {
+					grid-template-columns: 1fr;
+					gap: 0.75rem;
+				}
+				.article-grid li a {
+					padding: 0.85rem 1rem;
+				}
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<section class="start-here">
-				<h2 class="section-label">New to Palmistry Path? Start here</h2>
-				<p class="intro">These three articles give you the foundation for everything else on this site.</p>
-				<ul class="featured-list">
+			<header class="page-header">
+				<h1>Articles</h1>
+				<p>{allPosts.length} articles across {clusterOrder.length} topics</p>
+			</header>
+
+			<!-- Cluster navigation -->
+			<nav aria-label="Browse by topic">
+				<ul class="cluster-nav">
 					{
-						featuredPosts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									<h4 class="title">{post.data.title}</h4>
-									<p class="description">{post.data.description}</p>
-								</a>
-							</li>
-						))
+						clusterOrder.map((key) => {
+							const meta = clusterMeta[key];
+							const count = grouped.get(key)?.length ?? 0;
+							if (count === 0) return null;
+							return (
+								<li>
+									<a href={`#${key}`}>{meta.label}</a>
+								</li>
+							);
+						})
 					}
 				</ul>
-			</section>
-			<section>
-				<h2 class="section-label">All Articles</h2>
-				<ul>
-					{
-						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<Image width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h4 class="title">{post.data.title}</h4>
-									<p class="description">{post.data.description.length > 120 ? post.data.description.slice(0, 120) + '…' : post.data.description}</p>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-								</a>
-							</li>
-						))
-					}
-				</ul>
-			</section>
+			</nav>
+
+			<!-- Cluster sections -->
+			{
+				clusterOrder.map((key) => {
+					const posts = grouped.get(key) ?? [];
+					if (posts.length === 0) return null;
+					const meta = clusterMeta[key];
+					const isFeatured = key === 'getting-started';
+					return (
+						<section
+							id={key}
+							class={`cluster-section${isFeatured ? ' is-featured' : ''}`}
+						>
+							<div class="cluster-heading">
+								<h2>{meta.label}</h2>
+								<span class="cluster-count">{posts.length} articles</span>
+							</div>
+							<p class="cluster-intro">{meta.intro}</p>
+							<ul class="article-grid">
+								{posts.map((post) => (
+									<li>
+										<a href={`/blog/${post.id}/`}>
+											<p class="article-title">{post.data.title}</p>
+											<p class="article-desc">
+												{post.data.description.length > 110
+													? post.data.description.slice(0, 110) + '…'
+													: post.data.description}
+											</p>
+										</a>
+									</li>
+								))}
+							</ul>
+						</section>
+					);
+				})
+			}
+
+			<!-- Catch-all for any post without a cluster -->
+			{
+				(grouped.get('other') ?? []).length > 0 && (
+					<section id="other" class="cluster-section">
+						<div class="cluster-heading">
+							<h2>Other Articles</h2>
+							<span class="cluster-count">{grouped.get('other')!.length} articles</span>
+						</div>
+						<ul class="article-grid">
+							{(grouped.get('other') ?? []).map((post) => (
+								<li>
+									<a href={`/blog/${post.id}/`}>
+										<p class="article-title">{post.data.title}</p>
+										<p class="article-desc">
+											{post.data.description.length > 110
+												? post.data.description.slice(0, 110) + '…'
+												: post.data.description}
+										</p>
+									</a>
+								</li>
+							))}
+						</ul>
+					</section>
+				)
+			}
 		</main>
 		<Footer />
 	</body>

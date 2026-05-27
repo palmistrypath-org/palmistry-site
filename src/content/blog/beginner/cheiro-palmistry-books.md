@@ -2,6 +2,7 @@
 title: "Cheiro and Palmistry: How to Read the Classic Sources Critically"
 description: "Cheiro remains the most widely read palmist in English. Here is what beginners should know about his books, his historical context, and how to read him critically."
 pubDate: 2026-05-27
+cluster: "resources"
 relatedLesson: "/learn/foundations/01-what-palmistry-is"
 ---
 

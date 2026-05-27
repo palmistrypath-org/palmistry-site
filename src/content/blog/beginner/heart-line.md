@@ -2,6 +2,7 @@
 title: "Heart Line Meaning in Palmistry: A Beginner Guide"
 description: "Learn what the heart line is, where to find it, and how palmistry traditions interpret its length, curve, depth, and endpoints."
 pubDate: 2026-04-28
+cluster: "major-lines"
 relatedLesson: "/learn/lines/02-heart-line"
 ---
 

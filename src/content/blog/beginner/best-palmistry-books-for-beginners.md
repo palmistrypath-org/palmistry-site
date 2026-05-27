@@ -2,6 +2,7 @@
 title: "Best Palmistry Books for Beginners: A Grounded Reading List"
 description: "A critical reading list for beginners: what the major palmistry books offer, where they fall short, and how to use them as sources rather than authorities."
 pubDate: 2026-05-27
+cluster: "resources"
 relatedLesson: "/learn/foundations/01-what-palmistry-is"
 ---
 

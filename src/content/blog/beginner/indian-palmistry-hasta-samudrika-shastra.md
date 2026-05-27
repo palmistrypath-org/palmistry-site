@@ -2,6 +2,7 @@
 title: "Indian Palmistry: A Beginner Guide to Hasta Samudrika Shastra"
 description: "Hasta Samudrika Shastra is India's classical system of hand reading, rooted in Vedic knowledge. Here is what beginners should know."
 pubDate: 2026-05-27
+cluster: "traditions"
 relatedLesson: "/learn/foundations/01-what-palmistry-is"
 ---
 

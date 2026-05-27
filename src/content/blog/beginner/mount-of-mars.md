@@ -2,6 +2,7 @@
 title: "Mount of Mars Meaning in Palmistry"
 description: "What the Mount of Mars means in palmistry: how Inner and Outer Mars read differently, and why a prominent mount traditionally signals courage rather than aggression."
 pubDate: 2026-05-03
+cluster: "mounts"
 relatedLesson: "/learn/mounts/08-mount-of-mars"
 ---
 

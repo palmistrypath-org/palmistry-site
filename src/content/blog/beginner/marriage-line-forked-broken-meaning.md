@@ -2,6 +2,7 @@
 title: "Marriage Line Variations in Palmistry: Forks, Breaks, and Faint Lines"
 description: "What a forked, broken, or faint marriage line traditionally suggests — and why none of these variations predict divorce or relationship failure."
 pubDate: 2026-05-27
+cluster: "relationship-lines"
 relatedLesson: "/learn/advanced/02-marriage-relationship-lines"
 ---
 

@@ -2,6 +2,7 @@
 title: "Chinese Palmistry Basics: Heaven, Human, and Earth Lines"
 description: "Chinese palmistry names its three major lines Heaven, Human, and Earth — a Taoist cosmological framework. Here is what beginners should know."
 pubDate: 2026-05-27
+cluster: "traditions"
 relatedLesson: "/learn/lines/01-major-lines-overview"
 ---
 

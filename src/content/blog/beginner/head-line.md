@@ -2,6 +2,7 @@
 title: "Head Line Meaning in Palmistry: A Beginner Guide"
 description: "Learn what the head line is, where to find it, and how palmistry traditions read thinking style, slope, length, and the writer's fork. Includes common myths corrected."
 pubDate: 2026-04-28
+cluster: "major-lines"
 relatedLesson: "/learn/lines/03-head-line"
 ---
 

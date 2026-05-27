@@ -2,6 +2,7 @@
 title: "Broken Heart Line Meaning in Palmistry: What to Check First"
 description: "A broken heart line is traditionally associated with emotional disruption or transition, not relationship failure. Learn what to observe before drawing any conclusion."
 pubDate: 2026-05-27
+cluster: "line-variations"
 relatedLesson: "/learn/lines/02-heart-line"
 ---
 

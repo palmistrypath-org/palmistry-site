@@ -2,6 +2,7 @@
 title: "What Do Palm Lines Mean? A Beginner Guide to the Major Lines"
 description: "Palm lines are read as part of an interpretive tradition — not fixed predictions. An introduction to the four major lines and what each is traditionally associated with."
 pubDate: 2026-05-26
+cluster: "getting-started"
 relatedLesson: "/learn/lines/01-major-lines-overview"
 ---
 

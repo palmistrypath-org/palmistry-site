@@ -2,6 +2,7 @@
 title: "Palmistry Chart for Beginners: Lines, Mounts, and Hand Shapes"
 description: "A palmistry chart shows you where to look — but reading a hand requires knowing what you are looking at. This guide explains what every useful chart covers."
 pubDate: 2026-05-27
+cluster: "resources"
 relatedLesson: "/learn/lines/01-major-lines-overview"
 ---
 

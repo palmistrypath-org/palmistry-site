@@ -2,6 +2,7 @@
 title: "Palmistry Hand Shapes: Earth, Air, Fire, and Water Hands"
 description: "How to identify Earth, Air, Fire, and Water hand types using palm proportion and finger length — and why hand shape is the first context every line reading needs."
 pubDate: 2026-05-01
+cluster: "hand-shape"
 relatedLesson: "/learn/foundations/03-hand-shapes"
 ---
 

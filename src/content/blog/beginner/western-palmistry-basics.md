@@ -2,6 +2,7 @@
 title: "Western Palmistry Basics: Lines, Mounts, and Hand Shape"
 description: "Western palmistry is built around the major lines, the mounts, hand shape, and a planetary vocabulary inherited from astrology. Here is how it works."
 pubDate: 2026-05-27
+cluster: "traditions"
 relatedLesson: "/learn/foundations/01-what-palmistry-is"
 ---
 

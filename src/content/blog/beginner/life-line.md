@@ -2,6 +2,7 @@
 title: "Life Line Meaning in Palmistry: What It Does and Does Not Mean"
 description: "A beginner guide to the life line: where it sits, what it traditionally reflects, and why it does not predict lifespan. Covers every major variation."
 pubDate: 2026-04-28
+cluster: "major-lines"
 relatedLesson: "/learn/lines/04-life-line"
 ---
 

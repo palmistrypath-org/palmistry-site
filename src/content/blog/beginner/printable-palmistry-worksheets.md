@@ -2,6 +2,7 @@
 title: "Printable Palmistry Worksheets: How to Practice Reading Hands"
 description: "A guide to building a palmistry observation worksheet — what to record, how to compare both hands, and why structured practice develops skill faster."
 pubDate: 2026-05-27
+cluster: "resources"
 relatedLesson: "/learn/foundations/02-how-to-read-a-palm"
 ---
 

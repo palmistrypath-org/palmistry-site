@@ -2,6 +2,7 @@
 title: "What Palmistry Is (and Isn't): A Grounded Introduction"
 description: "A grounded introduction to palmistry: what the practice is, where it comes from, how it developed across Indian, Chinese, and Western traditions."
 pubDate: 2026-04-27
+cluster: "getting-started"
 relatedLesson: "/learn/foundations/01-what-palmistry-is"
 ---
 

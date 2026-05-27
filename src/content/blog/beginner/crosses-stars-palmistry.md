@@ -2,6 +2,7 @@
 title: "Crosses and Stars in Palmistry: A Beginner Guide to Markings"
 description: "Crosses and stars are among the most noticed markings on the palm. What the tradition says about each — and why location changes the reading entirely."
 pubDate: 2026-05-27
+cluster: "markings"
 relatedLesson: "/learn/advanced/01-minor-lines-overview"
 ---
 

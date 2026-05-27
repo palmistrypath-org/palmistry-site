@@ -2,6 +2,7 @@
 title: "Mount of Jupiter Meaning in Palmistry"
 description: "What the Mount of Jupiter means in palmistry: its traditional associations with ambition, leadership, and aspiration — and how to read its development and variations."
 pubDate: 2026-05-02
+cluster: "mounts"
 relatedLesson: "/learn/mounts/03-mount-of-jupiter"
 ---
 

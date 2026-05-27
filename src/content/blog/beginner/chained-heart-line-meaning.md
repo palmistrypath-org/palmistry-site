@@ -2,6 +2,7 @@
 title: "Chained Heart Line Meaning in Palmistry: What the Texture Suggests"
 description: "A chained heart line has specific traditional associations with emotional sensitivity and complexity. Here is what the texture means, and what to check alongside it."
 pubDate: 2026-05-27
+cluster: "line-variations"
 relatedLesson: "/learn/lines/02-heart-line"
 ---
 

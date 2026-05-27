@@ -2,6 +2,7 @@
 title: "Love Lines in Palmistry: Myths, Limits, and Better Questions"
 description: "What palmistry actually says about love and relationships — and why the most common questions people bring to the palm are also the ones it answers least reliably."
 pubDate: 2026-05-27
+cluster: "relationship-lines"
 relatedLesson: "/learn/lines/02-heart-line"
 ---
 

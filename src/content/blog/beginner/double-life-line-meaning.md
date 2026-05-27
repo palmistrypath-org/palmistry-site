@@ -2,6 +2,7 @@
 title: "Double Life Line Meaning in Palmistry: Sister Lines and Support Lines"
 description: "A double life line — a second line inside the life line's arc — is traditionally associated with augmented vitality, not a second life. Here is what it means."
 pubDate: 2026-05-27
+cluster: "line-variations"
 relatedLesson: "/learn/lines/04-life-line"
 ---
 

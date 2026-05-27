@@ -2,6 +2,7 @@
 title: "Short Life Line Meaning in Palmistry: What It Does and Does Not Mean"
 description: "A short life line does not predict a short life. Learn what a shorter life line is traditionally associated with and how to read it carefully."
 pubDate: 2026-05-26
+cluster: "line-variations"
 relatedLesson: "/learn/lines/04-life-line"
 ---
 

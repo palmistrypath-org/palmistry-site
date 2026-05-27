@@ -2,6 +2,7 @@
 title: "Mercury Line Meaning in Palmistry"
 description: "What the Mercury Line is traditionally associated with in palmistry — the one line whose absence is a positive sign — and how to read its presence."
 pubDate: 2026-05-03
+cluster: "minor-lines"
 relatedLesson: "/learn/advanced/01-minor-lines-overview"
 ---
 

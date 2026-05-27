@@ -2,6 +2,7 @@
 title: "Islands on Palm Lines: What Beginners Should Notice"
 description: "An island on a palm line is a small oval loop within the line itself. Here is what the tradition says about what it may suggest — and what it doesn't."
 pubDate: 2026-05-27
+cluster: "markings"
 relatedLesson: "/learn/lines/01-major-lines-overview"
 ---
 

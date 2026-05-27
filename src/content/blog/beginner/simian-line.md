@@ -2,6 +2,7 @@
 title: "Simian Line Meaning in Palmistry"
 description: "What the simian line is, how it forms when heart and head lines fuse, and what palmistry traditions say about intensity and single-mindedness."
 pubDate: 2026-05-04
+cluster: "minor-lines"
 relatedLesson: "/learn/lines/06-simian-line"
 ---
 

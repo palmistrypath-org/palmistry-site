@@ -2,6 +2,7 @@
 title: "Forked Heart Line Meaning in Palmistry: How to Read the Split"
 description: "A forked heart line is not a lucky sign or warning — it is a variation with specific traditional associations depending on where the fork appears."
 pubDate: 2026-05-26
+cluster: "line-variations"
 relatedLesson: "/learn/lines/02-heart-line"
 ---
 
