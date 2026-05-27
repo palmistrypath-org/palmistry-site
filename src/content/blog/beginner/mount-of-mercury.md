@@ -1,6 +1,6 @@
 ---
 title: "Mount of Mercury Meaning in Palmistry"
-description: "What the Mount of Mercury means in palmistry: its traditional associations with communication, intelligence, and adaptability — from medicine to writing, far beyond salesmanship."
+description: "What the Mount of Mercury means in palmistry: its traditional associations with communication, intelligence, and adaptability."
 pubDate: 2026-05-02
 relatedLesson: "/learn/mounts/06-mount-of-mercury"
 ---

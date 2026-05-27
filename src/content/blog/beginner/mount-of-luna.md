@@ -1,6 +1,6 @@
 ---
 title: "Mount of Luna Meaning in Palmistry"
-description: "What the Mount of Luna means in palmistry: its traditional associations with imagination, intuition, and inner life — and why a prominent mount indicates depth, not psychic ability."
+description: "What the Mount of Luna means in palmistry: its traditional associations with imagination, intuition, and inner life."
 pubDate: 2026-05-03
 relatedLesson: "/learn/mounts/07-mount-of-luna"
 ---

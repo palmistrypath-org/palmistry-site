@@ -1,6 +1,6 @@
 ---
 title: "Broken Life Line Meaning in Palmistry: What to Check First"
-description: "A broken life line does not predict death or illness — the tradition has never said that. This beginner guide explains what a break in the life line is traditionally associated with, how to observe it carefully, and what to check before drawing any conclusion."
+description: "A broken life line does not predict death or illness. Learn what a break is traditionally associated with and how to read it carefully before drawing conclusions."
 pubDate: 2026-05-26
 relatedLesson: "/learn/lines/04-life-line"
 ---

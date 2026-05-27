@@ -1,6 +1,6 @@
 ---
 title: "Palmistry Mounts: A Beginner Guide to the Mounts of the Hand"
-description: "An introduction to all seven palmistry mounts — Venus, Jupiter, Saturn, Apollo, Mercury, Luna, and Mars — what each is traditionally associated with, and how to read their development."
+description: "An introduction to all seven palmistry mounts — Venus, Jupiter, Saturn, Apollo, Mercury, Luna, and Mars — what each is traditionally associated with."
 pubDate: 2026-05-02
 relatedLesson: "/learn/mounts/01-mounts-overview"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "The Major Lines of the Palm: A Beginner Guide"
-description: "An orientation to the four major lines — Heart, Head, Life, and Fate — where each sits, what each is traditionally associated with, and why they're better understood together than one at a time."
+description: "An orientation to the four major lines — Heart, Head, Life, and Fate — where each sits, what each is traditionally associated with."
 pubDate: 2026-04-28
 relatedLesson: "/learn/lines/01-major-lines-overview"
 ---

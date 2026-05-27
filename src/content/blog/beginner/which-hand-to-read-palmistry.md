@@ -1,6 +1,6 @@
 ---
 title: "Which Hand Do You Read in Palmistry? Active vs Passive Hands Explained"
-description: "Most palmists read the dominant hand as the active, developed hand and the non-dominant hand as the passive, baseline hand — but traditions differ. A beginner's guide to reading both hands and why the comparison between them matters."
+description: "Most palmists read the dominant hand as the active hand and the non-dominant as the passive baseline — but traditions differ. A guide to reading both and comparing them."
 pubDate: 2026-05-26
 relatedLesson: "/learn/foundations/04-active-and-passive-hand"
 ---

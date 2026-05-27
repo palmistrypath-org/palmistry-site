@@ -1,6 +1,6 @@
 ---
 title: "Girdle of Venus Meaning in Palmistry"
-description: "What the Girdle of Venus is, where to find it, and how palmistry traditions interpret this arc above the heart line — associated with heightened emotional sensitivity and perceptual depth."
+description: "What the Girdle of Venus is, where to find it, and how palmistry traditions interpret this arc above the heart line."
 pubDate: 2025-05-04
 relatedLesson: "/learn/advanced/03-girdle-of-venus"
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Marriage Lines in Palmistry: What They Mean and Don't Mean"
-description: "What the marriage and relationship lines on your palm actually reflect — and why they can't count relationships or predict marriage. A guide to reading them with accurate traditional context."
+description: "What the marriage and relationship lines on your palm actually reflect — and why they can't count relationships or predict marriage."
 pubDate: 2025-05-04
 relatedLesson: "/learn/advanced/02-marriage-relationship-lines"
 ---

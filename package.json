@@ -10,7 +10,11 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "audit": "node scripts/audit-links.mjs"
+    "audit": "node scripts/audit-links.mjs",
+    "audit:images": "node scripts/audit-images.mjs",
+    "audit:schema": "node scripts/audit-schema.mjs",
+    "audit:all": "npm run audit && npm run audit:images && npm run audit:schema",
+    "content-audit": "node scripts/audit-content.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^5.0.4",
