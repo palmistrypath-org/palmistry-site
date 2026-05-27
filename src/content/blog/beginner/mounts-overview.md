@@ -9,7 +9,7 @@ The reading sequence described in the earlier articles of this series places mou
 
 The lines of the palm run through a landscape. That landscape is the mounts: the raised, padded areas distributed across the palm's surface, named after the seven classical planets and interpreted as zones of emphasis or deficiency in a person's character. A line that crosses a well-developed mount is read differently from the same line crossing a flat one. A line that terminates on a mount takes part of its meaning from that association. The mounts are not decoration. They are the terrain through which the lines travel.
 
-If you arrived here directly, [How to Read a Palm](/blog/how-to-read-a-palm) and the [hand shapes article](/blog/hand-shapes) explain the observation sequence and baseline context that make the mounts meaningful.
+If you arrived here directly, [How to Read a Palm](/blog/beginner/how-to-read-a-palm) and the [hand shapes article](/blog/beginner/hand-shapes) explain the observation sequence and baseline context that make the mounts meaningful.
 
 ## What a mount is — and how it is read
 

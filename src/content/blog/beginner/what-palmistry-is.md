@@ -83,7 +83,7 @@ No article on this site will claim that a line on your hand determines your futu
 
 The lines on your hand have been there since before you could read. People have been noticing them, arguing about them, and building interpretive systems around them for thousands of years. Whether you approach that history with scepticism, with curiosity, or — most usefully — with both, there is a great deal worth understanding.
 
-The next step is learning to look. [How to Read a Palm](/blog/how-to-read-a-palm) covers the method: which hand to examine, the correct sequence of observation, and the principle of synthesis that makes any individual feature meaningful.
+The next step is learning to look. [How to Read a Palm](/blog/beginner/how-to-read-a-palm) covers the method: which hand to examine, the correct sequence of observation, and the principle of synthesis that makes any individual feature meaningful.
 
 ---
 

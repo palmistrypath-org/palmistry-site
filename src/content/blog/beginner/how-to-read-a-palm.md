@@ -7,7 +7,7 @@ relatedLesson: "/learn/foundations/02-how-to-read-a-palm"
 
 Hold your hand up, palm facing you. Somewhere between that gesture and knowing what you are actually looking at lies the discipline of palmistry — and for most beginners, the distance is larger than expected.
 
-The previous article in this series, [What Palmistry Is (and Isn't)](/blog/what-palmistry-is), addressed the foundational questions: what the practice is, where it comes from, what it honestly offers, and what it doesn't. This article begins the practical work. Not the meaning of individual lines — that comes later — but the method: how experienced palmists approach a hand before they interpret anything on it.
+The previous article in this series, [What Palmistry Is (and Isn't)](/blog/beginner/what-palmistry-is), addressed the foundational questions: what the practice is, where it comes from, what it honestly offers, and what it doesn't. This article begins the practical work. Not the meaning of individual lines — that comes later — but the method: how experienced palmists approach a hand before they interpret anything on it.
 
 The sequence matters more than most beginners expect.
 

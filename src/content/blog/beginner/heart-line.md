@@ -9,7 +9,7 @@ The heart line is usually the first thing beginners want to read. It sits near t
 
 That urgency is worth noticing, because it produces the most common mistake in beginner palmistry: reading a single line in isolation, without the context the rest of the hand provides. The heart line can only tell you what it means once you know something about the hand it belongs to.
 
-If you arrived here directly — through a search, or through general curiosity — the [overview of the major lines](/blog/major-lines-overview) provides useful orientation, and [How to Read a Palm](/blog/how-to-read-a-palm) explains why the sequence of observation matters. Neither is required reading, but both will make this article more useful. The interpretive material below assumes a reader who understands that no feature of the hand is read alone.
+If you arrived here directly — through a search, or through general curiosity — the [overview of the major lines](/blog/beginner/major-lines-overview) provides useful orientation, and [How to Read a Palm](/blog/beginner/how-to-read-a-palm) explains why the sequence of observation matters. Neither is required reading, but both will make this article more useful. The interpretive material below assumes a reader who understands that no feature of the hand is read alone.
 
 ## Where to find it
 

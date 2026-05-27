@@ -7,7 +7,7 @@ relatedLesson: "/learn/foundations/03-hand-shapes"
 
 Every line on the hand is read relative to the hand it appears on.
 
-This principle appears in [How to Read a Palm](/blog/how-to-read-a-palm): the sequence of observation matters, and hand shape comes before lines. A long heart line on a hand traditionally associated with emotional sensitivity reads differently than the same line on a hand associated with practicality and physical groundedness. The line hasn't changed. The context has. And context changes everything.
+This principle appears in [How to Read a Palm](/blog/beginner/how-to-read-a-palm): the sequence of observation matters, and hand shape comes before lines. A long heart line on a hand traditionally associated with emotional sensitivity reads differently than the same line on a hand associated with practicality and physical groundedness. The line hasn't changed. The context has. And context changes everything.
 
 Hand shape is that context. Before the lines, before the mounts, the proportions of the hand itself — the relationship between the length of the palm and the length of the fingers — establish a baseline that modifies every interpretation that follows. Experienced palmists do not read lines first and then note the hand shape as an afterthought. The shape comes first because without it, the lines float free of the framework that gives them weight.
 
@@ -116,7 +116,7 @@ No. It is a mid-20th-century synthesis, developed primarily by Fred Gettings in 
 
 Hand shape is the first layer of structural context for reading a palm. The second — and the layer that connects shape to the line readings in the earlier articles in this series — is the mounts: the raised pads of flesh at the base of each finger and along the edges of the palm, each associated with a planetary influence and each capable of amplifying or qualifying what the shape and lines suggest.
 
-The mounts are where the vocabulary of palmistry becomes most fine-grained. Understanding them bridges the structural observation this article covers and the line readings you have encountered earlier in the series — the [heart line](/blog/heart-line), the [head line](/blog/head-line), the [life line](/blog/life-line), and the [fate line](/blog/fate-line) all read differently once the mount context is in place. The hand's shape gives you the terrain. The mounts give you its character in a more specific register.
+The mounts are where the vocabulary of palmistry becomes most fine-grained. Understanding them bridges the structural observation this article covers and the line readings you have encountered earlier in the series — the [heart line](/blog/beginner/heart-line), the [head line](/blog/beginner/head-line), the [life line](/blog/beginner/life-line), and the [fate line](/blog/beginner/fate-line) all read differently once the mount context is in place. The hand's shape gives you the terrain. The mounts give you its character in a more specific register.
 
 ---
 

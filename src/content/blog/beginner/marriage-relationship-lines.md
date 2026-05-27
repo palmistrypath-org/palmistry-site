@@ -9,7 +9,7 @@ On the outer edge of your hand — the percussion side, just below the little fi
 
 These are the marriage and relationship lines, sometimes called affection lines or lines of union. They sit on the mount of Mercury, nestled between the base of the little finger above and the heart line below. Most hands carry one to three of them. Some hands have none visible at all.
 
-Before going further: if you came here hoping to count your marriages, the honest answer is that these lines won't give you that. What they may offer is something more interesting — a reflection of the significant emotional bonds in a life, read through the lens of a centuries-old observational tradition. The [heart line](/blog/heart-line) — which runs below this zone — is the major line most closely associated with the emotional register of relationships, and reading these two features together gives a fuller picture than either alone.
+Before going further: if you came here hoping to count your marriages, the honest answer is that these lines won't give you that. What they may offer is something more interesting — a reflection of the significant emotional bonds in a life, read through the lens of a centuries-old observational tradition. The [heart line](/blog/beginner/heart-line) — which runs below this zone — is the major line most closely associated with the emotional register of relationships, and reading these two features together gives a fuller picture than either alone.
 
 ---
 

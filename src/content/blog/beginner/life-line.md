@@ -9,7 +9,7 @@ Many people who look at their palm come with one specific worry: their life line
 
 The worry is based on a misconception. It is not a recent misunderstanding: palmistry's most authoritative writers have been correcting it for well over a century. This article explains where the idea came from, what the serious tradition actually says, and what the life line is genuinely associated with — which turns out to be considerably more interesting, and considerably less threatening, than popular palmistry suggests.
 
-If you arrived here directly, the [overview of the major lines](/blog/major-lines-overview) and [How to Read a Palm](/blog/how-to-read-a-palm) provide useful orientation for the interpretive framework underlying this series.
+If you arrived here directly, the [overview of the major lines](/blog/beginner/major-lines-overview) and [How to Read a Palm](/blog/beginner/how-to-read-a-palm) provide useful orientation for the interpretive framework underlying this series.
 
 ## Where the myth comes from
 

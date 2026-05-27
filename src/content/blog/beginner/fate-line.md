@@ -9,7 +9,7 @@ The word in the line's name is worth addressing before anything else. "Fate" car
 
 The tradition itself, at its most careful, resists that determinism. Benham, in *The Laws of Scientific Hand Reading*, was explicit: "I do not believe in blind fate or chance." He described the fate line as showing "the course of the subject through life from the standpoint of material success" — direction taken and circumstances navigated, not a script running regardless of choice. That framing — direction rather than destiny — holds up most consistently across serious practitioners, and it is the one this article uses.
 
-If you arrived here directly, the [major lines overview](/blog/major-lines-overview) describes how this line fits within the four-line framework, and [How to Read a Palm](/blog/how-to-read-a-palm) explains the context that makes any individual feature meaningful.
+If you arrived here directly, the [major lines overview](/blog/beginner/major-lines-overview) describes how this line fits within the four-line framework, and [How to Read a Palm](/blog/beginner/how-to-read-a-palm) explains the context that makes any individual feature meaningful.
 
 ## Where to find it
 
@@ -99,7 +99,7 @@ Direction that crystallises later in life. The classical writers did not treat a
 
 ## What comes next
 
-The fate line completes the deep-dive pass through the four major lines. The [heart line](/blog/heart-line), the [head line](/blog/head-line), and the [life line](/blog/life-line) together with this article give you the core vocabulary of what the lines are traditionally read to reveal — and why none of them is read in isolation. Hand shapes and mounts are ahead.
+The fate line completes the deep-dive pass through the four major lines. The [heart line](/blog/beginner/heart-line), the [head line](/blog/beginner/head-line), and the [life line](/blog/beginner/life-line) together with this article give you the core vocabulary of what the lines are traditionally read to reveal — and why none of them is read in isolation. Hand shapes and mounts are ahead.
 
 ---
 

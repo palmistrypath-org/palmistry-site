@@ -9,7 +9,7 @@ Of the four major lines, the heart line gets the most anxious attention, the lif
 
 He was not being casual. In *Palmistry for All* (1916), Cheiro called the line of head "the most important sign that can be found in the hand" and compared it to "the needle in the compass, without a true knowledge of which it is impossible to grasp the direction of the subject." The other lines tell you about vitality, emotional life, path — but the head line, in his framework, tells you the direction everything moves in.
 
-If you arrived here directly, the [overview of the major lines](/blog/major-lines-overview) provides useful orientation, and [How to Read a Palm](/blog/how-to-read-a-palm) explains the approach underlying this series.
+If you arrived here directly, the [overview of the major lines](/blog/beginner/major-lines-overview) provides useful orientation, and [How to Read a Palm](/blog/beginner/how-to-read-a-palm) explains the approach underlying this series.
 
 ## Where to find it
 
@@ -23,7 +23,7 @@ Benham, in *The Laws of Scientific Hand Reading*, frames the head line as indica
 
 The distinction matters. The head line is not a measure of intelligence. It is traditionally associated with thinking style — whether the mind tends toward the practical or the imaginative, whether concentration is sustained or scattered, whether decisions are made deliberately or impulsively — and with how mental energy moves and is used. Two people with very different head lines may be equally intelligent in any measurable sense; what the line reflects is how that intelligence tends to operate.
 
-The Indian tradition calls this line the *Mastishka Rekha* or *Buddhi Rekha* — the line of intellect — and reads it along similar lines: the quality of mental engagement, the character of reasoning, the relationship between thought and temperament. Chinese palmistry calls it the Wisdom Line, and reads it within the cosmological three-line framework noted in the [major lines overview](/blog/major-lines-overview) as the Human Line between Heaven and Earth.
+The Indian tradition calls this line the *Mastishka Rekha* or *Buddhi Rekha* — the line of intellect — and reads it along similar lines: the quality of mental engagement, the character of reasoning, the relationship between thought and temperament. Chinese palmistry calls it the Wisdom Line, and reads it within the cosmological three-line framework noted in the [major lines overview](/blog/beginner/major-lines-overview) as the Human Line between Heaven and Earth.
 
 ## Reading the head line
 
@@ -79,7 +79,7 @@ A double head line — a second line running parallel to or closely alongside th
 
 ### The simian line: a brief reference
 
-On hands where the head line and heart line merge into a single crease, the [heart line article](/blog/heart-line) covers this in full. The simian line's significance is best understood in relation to both the lines it replaces.
+On hands where the head line and heart line merge into a single crease, the [heart line article](/blog/beginner/heart-line) covers this in full. The simian line's significance is best understood in relation to both the lines it replaces.
 
 ## The head line in context
 
@@ -118,7 +118,7 @@ A head line that descends toward the lower Mount of Luna is associated with imag
 
 ## What comes next
 
-The head line completes the deep-dive pass through the major lines. The [heart line](/blog/heart-line), the [life line](/blog/life-line), and this article together give you the core vocabulary of what the lines are traditionally read to reveal — and, just as importantly, why none of them is read in isolation. The fate line, hand shapes, and mounts are ahead.
+The head line completes the deep-dive pass through the major lines. The [heart line](/blog/beginner/heart-line), the [life line](/blog/beginner/life-line), and this article together give you the core vocabulary of what the lines are traditionally read to reveal — and, just as importantly, why none of them is read in isolation. The fate line, hand shapes, and mounts are ahead.
 
 ---
 
