@@ -1,6 +1,6 @@
 ---
 title: "Thumb Meaning in Palmistry: Will, Logic, and Balance"
-description: "An in-depth look at what palmistry says about the thumb — its two phalanges, length, set, and flexibility — and why many classical practitioners considered it the most revealing digit on the hand."
+description: "What palmistry says about the thumb — its two phalanges, length, set, and flexibility — and why many classical practitioners considered it the most revealing digit."
 pubDate: 2026-05-27
 relatedLesson: "/learn/foundations/03-hand-shapes"
 ---

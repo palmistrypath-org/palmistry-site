@@ -1,6 +1,6 @@
 ---
 title: "Palmistry vs Astrology: How the Two Traditions Differ"
-description: "Palmistry and astrology share vocabulary and a long history of overlapping practice, but they work in fundamentally different ways. Here is how they compare — and what beginners should know before studying either."
+description: "Palmistry and astrology share vocabulary and history, but work in fundamentally different ways. Here is how they compare and what beginners should know."
 pubDate: 2026-05-27
 relatedLesson: "/learn/foundations/01-what-palmistry-is"
 ---

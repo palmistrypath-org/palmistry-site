@@ -1,6 +1,6 @@
 ---
 title: "Finger Shapes in Palmistry: A Beginner Guide"
-description: "An introduction to how finger length, shape, phalange zones, and planetary associations are read in palmistry — covering the index through little finger, with notes on both Western and Indian traditions."
+description: "How finger length, shape, phalange zones, and planetary associations are read in palmistry — covering each finger with notes on Western and Indian traditions."
 pubDate: 2026-05-27
 relatedLesson: "/learn/foundations/03-hand-shapes"
 ---

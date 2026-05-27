@@ -1,6 +1,6 @@
 ---
 title: "Palmistry Chart for Beginners: Lines, Mounts, and Hand Shapes"
-description: "A palmistry chart shows you where to look — but reading a hand requires knowing what you are looking at and why. This guide explains the three layers every useful chart covers and how to use them while you learn."
+description: "A palmistry chart shows you where to look — but reading a hand requires knowing what you are looking at. This guide explains what every useful chart covers."
 pubDate: 2026-05-27
 relatedLesson: "/learn/lines/01-major-lines-overview"
 ---

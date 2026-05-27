@@ -1,6 +1,6 @@
 ---
 title: "M Line in Palmistry: What the Marking Does and Does Not Mean"
-description: "The M line is a popular term for the shape formed when the heart, head, life, and fate lines align on the palm. This article explains what the classical tradition actually says — and what it does not."
+description: "The M line is the shape formed when heart, head, life, and fate lines align. This article explains what the classical tradition actually says — and what it does not."
 pubDate: 2026-05-27
 relatedLesson: "/learn/lines/01-major-lines-overview"
 ---
