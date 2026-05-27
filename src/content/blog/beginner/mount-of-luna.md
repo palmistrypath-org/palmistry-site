@@ -1,6 +1,6 @@
 ---
-title: "The Mount of Luna"
-description: "What the lower outer mount governs — imagination, intuition, and receptivity — and why a prominent Luna indicates imaginative depth, not psychic ability."
+title: "Mount of Luna Meaning in Palmistry"
+description: "What the Mount of Luna means in palmistry: its traditional associations with imagination, intuition, and inner life — and why a prominent mount indicates depth, not psychic ability."
 pubDate: 2026-05-03
 relatedLesson: "/learn/mounts/07-mount-of-luna"
 ---

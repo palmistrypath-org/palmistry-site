@@ -1,6 +1,6 @@
 ---
-title: "The Simian Line"
-description: "A deep-dive on the simian line — the single transverse crease that forms when the heart and head lines are fused. What the fusion means interpretively, how to read its variations, and what the tradition actually says about intensity, single-mindedness, and this unusual configuration."
+title: "Simian Line Meaning in Palmistry"
+description: "What the simian line is, how it forms when the heart and head lines fuse, and what palmistry traditions say about intensity, single-mindedness, and this unusual configuration."
 pubDate: 2026-05-04
 relatedLesson: "/learn/lines/06-simian-line"
 ---

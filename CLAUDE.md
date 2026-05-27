@@ -1,3 +1,7 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 # Claude Code Behavior — Palmistry Path
 
 ## Session startup
@@ -40,3 +44,50 @@ Opening → Location → Traditional associations → Presence/absence if releva
 
 ## Voice
 Educational, grounded, curious, mystical in atmosphere but not woo-woo. Match the tone of existing articles. Read one existing article if unsure.
+
+---
+
+## Development commands
+
+```bash
+npm run dev        # local dev server at localhost:4321
+npm run build      # static build to dist/ (also runs pagefind indexing)
+npm run preview    # serve dist/ locally after a build
+```
+
+No test runner or linter is configured. TypeScript is checked implicitly by Astro's build step — type errors surface as build failures.
+
+---
+
+## Architecture
+
+**Static site generator:** Astro 6 with static output. No server-side rendering.
+
+**Two content collections** defined in `src/content.config.ts`:
+
+| Collection | Source | URL pattern | Layout |
+|---|---|---|---|
+| `blog` | `src/content/blog/**/*.md` | `/blog/<id>/` | `src/layouts/BlogPost.astro` |
+| `lessons` | `src/content/lessons/**/*.md` | `/learn/<module>/<lesson>/` | `src/pages/learn/[module]/[lesson].astro` |
+
+Blog posts are routed via `src/pages/blog/[...slug].astro`, which uses `post.id` as the slug (the file path relative to `src/content/blog/`, without the extension). Lesson routing uses explicit `[module]` and `[lesson]` segments.
+
+**Frontmatter fields:**
+
+*Blog posts (`blog` collection):*
+- `title` — becomes both the `<h1>` on the page and the `<title>` tag (formatted as `"${title} — Palmistry Path"`)
+- `description` — populates `<meta name="description">`, OG/Twitter tags, the Article schema, and the blog listing excerpt
+- `pubDate`, `updatedDate` — rendered by `FormattedDate` component
+- `relatedLesson` — optional path string (e.g. `/learn/lines/02-heart-line`); when present, renders the "Go deeper" CTA block at the bottom of the article
+
+*Lessons (`lessons` collection):* `title`, `description`, `module`, `moduleTitle`, `order`, `pubDate`, `difficulty`, `duration`, `prerequisites`, `relatedArticle`, `heroImage`.
+
+**No separate SEO title vs display title field.** `title` is used for both. Changing `title` changes the H1, the `<title>` tag, breadcrumb schema, and Article schema headline simultaneously.
+
+**Key layout:** `src/layouts/BlogPost.astro` — renders the full blog post page. Injects Article and BreadcrumbList structured data as inline JSON-LD. The "Go deeper" CTA renders only when `relatedLesson` is set.
+
+**Fonts:** Cinzel (headings, Cinzel Decorative feel) and Lora (body), loaded via Astro's Google Font provider at build time. CSS variables: `--font-cinzel`, `--font-lora`.
+
+**Search:** Pagefind (`astro-pagefind`) — runs as part of `astro build`, indexes all static pages, outputs to `dist/pagefind/`. Search UI is at `/search/`.
+
+**Modules registry:** `src/consts.ts` — the `MODULES` array defines the four curriculum modules (foundations, lines, mounts, advanced) used by the Learn index page and navigation.

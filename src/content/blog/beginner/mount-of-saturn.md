@@ -1,6 +1,6 @@
 ---
-title: "The Mount of Saturn"
-description: "What Saturn's domain of prudence, solitude, and depth actually means — and why the tradition reads a prominent mount as studious and disciplined, not morbid."
+title: "Mount of Saturn Meaning in Palmistry"
+description: "What the Mount of Saturn means in palmistry: its traditional associations with prudence, discipline, and depth — and why a prominent mount reads as studious, not morbid."
 pubDate: 2026-05-02
 relatedLesson: "/learn/mounts/04-mount-of-saturn"
 ---

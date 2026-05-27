@@ -1,6 +1,6 @@
 ---
-title: "What Palmistry Is (and Isn't)"
-description: "A grounded introduction to palmistry as a centuries-old interpretive tradition — what it is, what it isn't, and how to approach it honestly as a learner."
+title: "What Palmistry Is (and Isn't): A Grounded Introduction"
+description: "A grounded introduction to palmistry: what the practice is, where it comes from, how it developed across Indian, Chinese, and Western traditions, and how to approach it honestly."
 pubDate: 2026-04-27
 relatedLesson: "/learn/foundations/01-what-palmistry-is"
 ---
@@ -83,7 +83,7 @@ No article on this site will claim that a line on your hand determines your futu
 
 The lines on your hand have been there since before you could read. People have been noticing them, arguing about them, and building interpretive systems around them for thousands of years. Whether you approach that history with scepticism, with curiosity, or — most usefully — with both, there is a great deal worth understanding.
 
-The next step is learning to look.
+The next step is learning to look. [How to Read a Palm](/blog/how-to-read-a-palm) covers the method: which hand to examine, the correct sequence of observation, and the principle of synthesis that makes any individual feature meaningful.
 
 ---
 

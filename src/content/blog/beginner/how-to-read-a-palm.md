@@ -1,6 +1,6 @@
 ---
-title: "How to Read a Palm: The Beginner's Approach"
-description: "Before the lines, before the meanings — the method. A practical guide to how experienced palmists actually approach a hand: which hand to read, what order to observe features, and why synthesis matters more than memorisation."
+title: "How to Read a Palm: A Beginner's Step-by-Step Guide"
+description: "A practical guide to how experienced palmists approach a hand: which hand to read, the correct observation sequence — shape, mounts, then lines — and why synthesis matters more than memorising meanings."
 pubDate: 2026-04-27
 relatedLesson: "/learn/foundations/02-how-to-read-a-palm"
 ---
@@ -76,6 +76,20 @@ The physical conditions for examining a hand matter more than most introductory 
 Good, even light is essential — natural daylight is preferable to warm artificial light, which can obscure finer lines and alter the apparent colour of the skin. The hand should be relaxed, not clenched into a curve or artificially flattened by pressing it against a hard surface. A naturally opened palm held comfortably shows its lines more accurately than one strained into position.
 
 With your own hands, you have the advantage of being able to examine them at any time, in any light, from any angle. With another person's hand, the moment asks for a quality of attention and steadiness — you ask permission, you handle the hand with care, and you take enough time to actually see what is there rather than what you expect to find. Classical writers note the use of magnification — a loupe or strong reading glass — for observing finer lines and ridge patterns, particularly in detailed work. This remains useful.
+
+## Frequently asked questions
+
+**Which hand should I read for palmistry?**
+Look at both. The active (dominant) hand provides the primary reading; the passive (non-dominant) hand provides context and comparison. The difference between them is often as informative as either hand alone.
+
+**Why do palmists look at hand shape before the lines?**
+Hand shape establishes the interpretive baseline for every feature that follows. The same line can carry different traditional associations depending on the hand type it appears on. Looking at lines before shape means reading them without their essential context.
+
+**How do I find the major lines?**
+The heart line runs near the top of the palm, below the fingers. The head line runs across the middle. The life line arcs around the base of the thumb. The fate line runs vertically from the wrist toward the middle finger, and is absent on many hands.
+
+**Can I read palmistry from photographs or my own hand?**
+Photographs miss texture, flexibility, and colouring, which are part of the full observation. Reading your own hands is a useful starting point, though working with other hands builds the comparative awareness that makes readings more reliable.
 
 ## Holding what you find loosely
 

@@ -1,6 +1,6 @@
 ---
-title: "The Mount of Mercury"
-description: "What Mercury's communication domain actually covers — from medicine to science to writing — and why the tradition reads far more than commercial salesmanship."
+title: "Mount of Mercury Meaning in Palmistry"
+description: "What the Mount of Mercury means in palmistry: its traditional associations with communication, intelligence, and adaptability — from medicine to writing, far beyond salesmanship."
 pubDate: 2026-05-02
 relatedLesson: "/learn/mounts/06-mount-of-mercury"
 ---

@@ -1,6 +1,6 @@
 ---
-title: "The Sun Line"
-description: "What the Sun Line is traditionally associated with — recognition, fulfilment, and clarity of purpose — and why its absence carries less weight than most beginners assume."
+title: "Sun Line Meaning in Palmistry"
+description: "What the Sun Line is traditionally associated with in palmistry — recognition, fulfilment, and clarity of purpose — and why its absence carries less weight than most beginners expect."
 pubDate: 2026-05-03
 relatedLesson: "/learn/advanced/01-minor-lines-overview"
 ---

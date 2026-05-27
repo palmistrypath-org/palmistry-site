@@ -1,6 +1,6 @@
 ---
-title: "Marriage and Relationship Lines"
-description: "Located on the percussion edge of the hand beneath the little finger, these small horizontal lines are among the most asked-about features in palmistry — and among the most misunderstood."
+title: "Marriage Lines in Palmistry: What They Mean and Don't Mean"
+description: "What the marriage and relationship lines on your palm actually reflect — and why they can't count relationships or predict marriage. A guide to reading them with accurate traditional context."
 pubDate: 2025-05-04
 relatedLesson: "/learn/advanced/02-marriage-relationship-lines"
 ---
@@ -9,7 +9,7 @@ On the outer edge of your hand — the percussion side, just below the little fi
 
 These are the marriage and relationship lines, sometimes called affection lines or lines of union. They sit on the mount of Mercury, nestled between the base of the little finger above and the heart line below. Most hands carry one to three of them. Some hands have none visible at all.
 
-Before going further: if you came here hoping to count your marriages, the honest answer is that these lines won't give you that. What they may offer is something more interesting — a reflection of the significant emotional bonds in a life, read through the lens of a centuries-old observational tradition.
+Before going further: if you came here hoping to count your marriages, the honest answer is that these lines won't give you that. What they may offer is something more interesting — a reflection of the significant emotional bonds in a life, read through the lens of a centuries-old observational tradition. The [heart line](/blog/heart-line) — which runs below this zone — is the major line most closely associated with the emotional register of relationships, and reading these two features together gives a fuller picture than either alone.
 
 ---
 
@@ -102,6 +102,23 @@ They are not a verdict on love, compatibility, or relationship success. A hand w
 They are, at most, one set of features in a complex, whole-hand reading — traditionally associated with the emotional register of significant partnerships, read with care, held lightly, and considered alongside everything else the hand offers.
 
 ---
+
+## Frequently asked questions
+
+**Where are the marriage lines on the palm?**
+On the percussion edge of the hand — the little-finger side — just below the base of the little finger. The lines run horizontally inward from the outer edge, in the zone of the Mount of Mercury.
+
+**How many marriage lines should I have?**
+There is no correct number. Most hands show one to three. Depth and clarity matter more than count — a single strong, clear line is traditionally considered more significant than several faint ones. The number does not reliably correspond to the number of marriages or relationships.
+
+**What does a forked marriage line mean?**
+A fork at the inner end — where the line splits as it moves toward the palm's centre — is traditionally associated with diverging paths: separation, estrangement, or a relationship pulling in two directions.
+
+**What if I have no visible marriage lines?**
+The absence of clearly visible lines in this zone does not indicate a life without significant relationships. Some hands simply do not show them prominently.
+
+**Can these lines tell me when I'll get married?**
+No reliable timing system exists for these lines. The positional association — lower in the zone for earlier in life, higher for later — is a rough traditional framework, not a biographical clock.
 
 ## How to Look at Your Own Hand
 

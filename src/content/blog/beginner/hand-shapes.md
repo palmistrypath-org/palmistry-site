@@ -1,6 +1,6 @@
 ---
-title: "Hand Shapes: Earth, Air, Fire, and Water"
-description: "How the four-element framework classifies hand shapes — what each type is traditionally associated with, how to identify them by proportion and finger length, and why hand shape changes every line reading that follows."
+title: "Palmistry Hand Shapes: Earth, Air, Fire, and Water Hands"
+description: "How to identify Earth, Air, Fire, and Water hand types using palm proportion and finger length — and why hand shape is the first context every line reading needs."
 pubDate: 2026-05-01
 relatedLesson: "/learn/foundations/03-hand-shapes"
 ---
@@ -97,6 +97,20 @@ The synthesis principle that runs through this series applies here from the firs
 **"Earth hands are practical and nothing more."** The tradition's associations for earth hands include reliability, directness, and a genuine depth of physical engagement with the world. Reading these qualities as limitations — as if the earth hand represents a less developed or less interesting temperament — inverts what the tradition actually says. Practicality is a quality, not a deficit, and the steadiness associated with earth hands is a feature the other types often cannot match.
 
 **"Hand shape determines your temperament."** Shape is one layer of context among several. An earth hand with a strongly developed Mount of Mercury and a long, clearly-drawn head line suggests a different range than an earth hand with a sparse surface and modest mounts. The shape tells you what terrain you are reading; the mounts and lines tell you what that terrain is actually doing. No single feature of the hand, including its shape, produces a reading on its own.
+
+## Frequently asked questions
+
+**How do I identify my hand shape?**
+Compare palm length (wrist crease to base of fingers) with palm width at its widest point — this tells you whether the palm is square or rectangular. Then compare middle finger length with palm length — this tells you whether fingers are short or long relative to the palm. Four combinations produce the four element types.
+
+**Can a hand belong to more than one element?**
+Most hands show a dominant tendency with mixed characteristics. Gettings himself acknowledged that pure types may be less common than mixed ones. Identify the dominant element and note where it is qualified — that combination is the reading.
+
+**Does hand shape determine personality?**
+Shape sets a baseline that the mounts and lines modify. It is one context layer among several, not a complete reading on its own. An earth hand with a strongly developed Mount of Mercury and a long head line suggests a wider range than shape alone would indicate.
+
+**Is the four-element framework ancient?**
+No. It is a mid-20th-century synthesis, developed primarily by Fred Gettings in *The Book of the Hand* (1965), building on an older typological tradition that goes back to D'Arpentigny (1843). It is not from any single ancient source.
 
 ## What comes next
 

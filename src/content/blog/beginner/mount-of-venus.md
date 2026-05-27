@@ -1,6 +1,6 @@
 ---
-title: "The Mount of Venus"
-description: "What Venus's domain of vitality, warmth, and affection actually covers — and why the persistent myth about this mount gets the tradition exactly backwards."
+title: "Mount of Venus Meaning in Palmistry"
+description: "What the Mount of Venus means in palmistry: its traditional associations with warmth, vitality, and affection — and why the most common myth about it gets the tradition backwards."
 pubDate: 2026-05-02
 relatedLesson: "/learn/mounts/02-mount-of-venus"
 ---

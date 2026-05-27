@@ -1,6 +1,6 @@
 ---
-title: "The Mercury Line"
-description: "The one line whose absence is traditionally a positive sign. What the Mercury Line is associated with, why its presence doesn't indicate illness, and how to read its variations."
+title: "Mercury Line Meaning in Palmistry"
+description: "What the Mercury Line is traditionally associated with in palmistry — and why it is the one line whose absence is a positive sign. How to read its presence and variations."
 pubDate: 2026-05-03
 relatedLesson: "/learn/advanced/01-minor-lines-overview"
 ---

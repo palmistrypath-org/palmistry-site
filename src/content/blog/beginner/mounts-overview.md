@@ -1,6 +1,6 @@
 ---
-title: "The Mounts of the Palm: A Reader's Map"
-description: "An orientation to the seven traditional mounts — Venus, Jupiter, Saturn, Apollo, Mercury, Luna, and Mars — what each is traditionally associated with, where each sits on the palm, and why they function as the interpretive foundation beneath the lines."
+title: "Palmistry Mounts: A Beginner Guide to the Mounts of the Hand"
+description: "An introduction to all seven palmistry mounts — Venus, Jupiter, Saturn, Apollo, Mercury, Luna, and Mars — what each is traditionally associated with, and how to read their development."
 pubDate: 2026-05-02
 relatedLesson: "/learn/mounts/01-mounts-overview"
 ---
@@ -8,6 +8,8 @@ relatedLesson: "/learn/mounts/01-mounts-overview"
 The reading sequence described in the earlier articles of this series places mounts in a specific position: they come after hand shape and before the lines. If that ordering felt slightly abstract when you first encountered it — why would raised areas of the palm merit attention before the lines themselves? — the answer becomes clearer once you understand what the mounts represent.
 
 The lines of the palm run through a landscape. That landscape is the mounts: the raised, padded areas distributed across the palm's surface, named after the seven classical planets and interpreted as zones of emphasis or deficiency in a person's character. A line that crosses a well-developed mount is read differently from the same line crossing a flat one. A line that terminates on a mount takes part of its meaning from that association. The mounts are not decoration. They are the terrain through which the lines travel.
+
+If you arrived here directly, [How to Read a Palm](/blog/how-to-read-a-palm) and the [hand shapes article](/blog/hand-shapes) explain the observation sequence and baseline context that make the mounts meaningful.
 
 ## What a mount is — and how it is read
 
@@ -76,6 +78,20 @@ A broad, relatively flat zone in the centre of the palm — the Plain of Mars �
 A hand showing a large, firm Mount of Venus alongside a well-developed Mount of Luna presents a character in which warmth and imagination are both active. Whether that combination finds practical expression depends on what the lines suggest — whether Jupiter adds directional ambition, Mercury channels it into communication, or Saturn lends it grounding. These are the questions the full hand reading addresses.
 
 The hand shape provides another layer. The same mount prominent on an Earth hand — traditionally associated with practicality — reads differently than on an Air hand, associated with mental activity and social observation, because the same quality of character operates in different temperamental terrain. Mounts are one register of a conversation that includes shape, texture, lines, and the relationships between all of these. No feature stands alone.
+
+## Frequently asked questions
+
+**What are the mounts of the hand in palmistry?**
+Raised, fleshy pads distributed across the palm's surface, each named for one of the seven classical planets. Their development — prominent, moderate, or flat — is traditionally associated with the presence, balance, or relative absence of that planet's associated qualities in a person's character.
+
+**How do I tell if a mount is well-developed?**
+Press lightly on the mount zone. A well-developed mount feels full and slightly resilient; a flat one offers little resistance. Assessment is by feel as much as by sight.
+
+**Which mount is most important?**
+There is no single most important mount. Readings come from the pattern across all seven, and from how that pattern relates to the lines and hand shape. A single prominent mount is informative; a single flat one rarely defines a character.
+
+**Do I need prominent mounts for a good reading?**
+No. Most hands show moderate development across most zones. What matters is the relative pattern — which mounts are fuller, which are flatter — and how that pattern converses with the rest of the hand.
 
 ## What comes next
 
