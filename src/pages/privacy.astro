@@ -1,0 +1,115 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`Privacy Policy — ${SITE_TITLE}`}
+			description="How Palmistry Path collects and uses your information — email sign-ups, third-party services, and your rights."
+		/>
+		<style>
+			main section {
+				margin-bottom: 2.5em;
+			}
+			main h2 {
+				font-size: clamp(1.1rem, 3.5vw, 1.5em);
+				margin-top: 2em;
+				margin-bottom: 0.5em;
+				padding-bottom: 0.35em;
+				border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+			}
+			.updated {
+				font-size: 0.8em;
+				color: var(--color-text-muted);
+				opacity: 0.65;
+				margin-bottom: 2em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Privacy Policy</h1>
+			<p class="updated">Last updated: May 2026</p>
+
+			<section>
+				<h2>What We Collect</h2>
+				<p>
+					The only personal information Palmistry Path collects is your <strong>email address</strong>,
+					and only when you voluntarily submit it through the guide sign-up form on this site. We do
+					not collect your name, location, or any other identifying information.
+				</p>
+				<p>
+					We do not use analytics services, advertising networks, or tracking pixels. No data about
+					your browsing behaviour on this site is collected by us.
+				</p>
+			</section>
+
+			<section>
+				<h2>How We Use Your Email</h2>
+				<p>
+					When you sign up for the free Palmistry Starter Guide, your email address is used to:
+				</p>
+				<ul>
+					<li>Deliver the guide to your inbox</li>
+					<li>Send occasional Palmistry Path learning notes and updates</li>
+				</ul>
+				<p>We will not sell, rent, or share your email address with third parties for their own marketing.</p>
+			</section>
+
+			<section>
+				<h2>Email Service Provider</h2>
+				<p>
+					Email delivery is handled by <strong>Kit</strong> (formerly ConvertKit), a third-party
+					email marketing service. When you submit your email through our sign-up form, it is
+					transmitted to and stored by Kit. Kit's own privacy policy applies to how they handle
+					your data. You can review it at <a href="https://kit.com/privacy" rel="nofollow noopener" target="_blank">kit.com/privacy</a>.
+				</p>
+			</section>
+
+			<section>
+				<h2>Cookies</h2>
+				<p>
+					Palmistry Path does not set tracking or analytics cookies. When you interact with the
+					email sign-up form, Kit may set cookies on their own domain as part of processing your
+					subscription. These are governed by Kit's privacy policy, not ours.
+				</p>
+			</section>
+
+			<section>
+				<h2>Your Rights</h2>
+				<p>You can unsubscribe from Palmistry Path emails at any time:</p>
+				<ul>
+					<li>Use the unsubscribe link at the bottom of any email we send</li>
+					<li>Or contact us via the <a href="/contact/">contact page</a> to request removal</li>
+				</ul>
+				<p>
+					On unsubscribing, your email address will be removed from our mailing list. Kit may retain
+					anonymised or suppressed records as required by their own policies.
+				</p>
+			</section>
+
+			<section>
+				<h2>Changes to This Policy</h2>
+				<p>
+					If we make material changes to how we handle personal information, this page will be
+					updated. The date at the top of this page reflects when it was last revised.
+				</p>
+			</section>
+
+			<section>
+				<h2>Contact</h2>
+				<p>
+					Questions or requests relating to this privacy policy can be sent via the
+					<a href="/contact/">contact page</a>.
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

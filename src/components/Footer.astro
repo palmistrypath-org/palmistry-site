@@ -5,6 +5,15 @@ const today = new Date();
 <footer>
 	<p class="tagline">✦ · ✦ · ✦</p>
 	<p>&copy; {today.getFullYear()} Palmistry Path. All rights reserved.</p>
+	<nav class="footer-nav" aria-label="Legal and policy links">
+		<a href="/privacy/">Privacy</a>
+		<span aria-hidden="true">·</span>
+		<a href="/terms/">Terms</a>
+		<span aria-hidden="true">·</span>
+		<a href="/disclaimer/">Disclaimer</a>
+		<span aria-hidden="true">·</span>
+		<a href="/contact/">Contact</a>
+	</nav>
 	<p class="sub">Read the lines. Discover the path.</p>
 </footer>
 <style>
@@ -26,6 +35,30 @@ const today = new Date();
 		font-size: 0.65em !important;
 		opacity: 0.45 !important;
 		margin-bottom: 1em !important;
+	}
+	.footer-nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.6em;
+		margin: 0.75em 0 0.5em;
+		flex-wrap: wrap;
+	}
+	.footer-nav a {
+		font-size: 0.75em;
+		color: var(--color-text-muted);
+		text-decoration: none;
+		opacity: 0.65;
+		transition: color 0.2s ease, opacity 0.2s ease;
+	}
+	.footer-nav a:hover {
+		color: var(--accent);
+		opacity: 1;
+	}
+	.footer-nav span {
+		font-size: 0.65em;
+		color: var(--color-text-muted);
+		opacity: 0.35;
 	}
 	.sub {
 		font-family: var(--font-cinzel), serif;

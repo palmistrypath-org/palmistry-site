@@ -1,0 +1,82 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`Contact — ${SITE_TITLE}`}
+			description="Contact Palmistry Path — corrections, questions, and feedback welcome."
+		/>
+		<style>
+			main section {
+				margin-bottom: 2.5em;
+			}
+			main h2 {
+				font-size: clamp(1.1rem, 3.5vw, 1.5em);
+				margin-top: 2em;
+				margin-bottom: 0.5em;
+				padding-bottom: 0.35em;
+				border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+			}
+			.placeholder-notice {
+				padding: 1.25em 1.5em;
+				border: 1px solid rgba(201, 169, 110, 0.18);
+				border-radius: 6px;
+				background: rgba(255, 255, 255, 0.02);
+				font-size: 0.85em;
+				color: var(--color-text-muted);
+				line-height: 1.75;
+				font-style: italic;
+				margin-top: 1.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Contact</h1>
+
+			<section>
+				<h2>Corrections and Feedback</h2>
+				<p>
+					If you find an error, a misattribution, or a claim on this site that doesn't hold up to
+					scrutiny, corrections are welcome. Palmistry Path is built to improve over time, and
+					careful readers pointing out mistakes are a genuine help.
+				</p>
+				<p>Types of feedback that are especially useful:</p>
+				<ul>
+					<li>Factual errors or misattributions in articles</li>
+					<li>Claims that conflict with the cited source material</li>
+					<li>Missing cross-tradition perspectives that meaningfully change an interpretation</li>
+					<li>Broken links or technical issues</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Privacy and Unsubscribe Requests</h2>
+				<p>
+					If you have questions about email data, or would like to be removed from the mailing list
+					and the unsubscribe link in an email hasn't worked, contact us using the address below.
+					See also the <a href="/privacy/">Privacy Policy</a>.
+				</p>
+			</section>
+
+			<section>
+				<h2>Get in Touch</h2>
+				<p>
+					A dedicated contact address is being set up. In the meantime, this page will be updated
+					shortly with the correct address.
+				</p>
+				<div class="placeholder-notice">
+					Contact details coming soon. Check back shortly.
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

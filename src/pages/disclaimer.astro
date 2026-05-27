@@ -1,0 +1,115 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`Disclaimer — ${SITE_TITLE}`}
+			description="Palmistry Path is an educational resource. Content about palmistry is for personal reflection and study — not diagnosis, prediction, or professional advice."
+		/>
+		<style>
+			main section {
+				margin-bottom: 2.5em;
+			}
+			main h2 {
+				font-size: clamp(1.1rem, 3.5vw, 1.5em);
+				margin-top: 2em;
+				margin-bottom: 0.5em;
+				padding-bottom: 0.35em;
+				border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+			}
+			.updated {
+				font-size: 0.8em;
+				color: var(--color-text-muted);
+				opacity: 0.65;
+				margin-bottom: 2em;
+			}
+			.notice {
+				padding: 1.25em 1.5em;
+				border: 1px solid rgba(201, 169, 110, 0.22);
+				border-radius: 6px;
+				background: rgba(255, 255, 255, 0.02);
+				font-size: 0.9em;
+				color: var(--color-text-muted);
+				line-height: 1.75;
+				margin-bottom: 2.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Disclaimer</h1>
+			<p class="updated">Last updated: May 2026</p>
+
+			<div class="notice">
+				<em>
+					Palmistry Path is for education, personal reflection, and exploration of a centuries-old
+					interpretive tradition. It is not a substitute for professional medical, legal, financial,
+					or psychological advice.
+				</em>
+			</div>
+
+			<section>
+				<h2>Palmistry as Education and Reflection</h2>
+				<p>
+					The content on this site presents palmistry as a structured interpretive tradition with
+					deep cultural roots in Indian, Chinese, and Western practice. It is offered for personal
+					study, self-reflection, and an appreciation of how different cultures have observed and
+					interpreted the human hand.
+				</p>
+				<p>
+					Palmistry is not a science. The interpretations described on this site are drawn from
+					traditional sources and are presented as cultural and historical knowledge — not as
+					verified facts about any individual's life, health, or future.
+				</p>
+			</section>
+
+			<section>
+				<h2>No Diagnosis or Medical Claims</h2>
+				<p>
+					Nothing on Palmistry Path should be interpreted as medical advice or diagnosis. Certain
+					palmistry traditions have historically associated hand features with states of health —
+					these are recorded here as part of those traditions, not as medical guidance.
+				</p>
+				<p>
+					If you have health concerns, speak with a qualified medical professional.
+				</p>
+			</section>
+
+			<section>
+				<h2>No Predictive Guarantee</h2>
+				<p>
+					Palmistry Path makes no claim that palmistry predicts future events. Content that describes
+					traditional interpretations of specific hand features — such as "the fate line is
+					traditionally associated with career trajectory" — reflects what those traditions teach,
+					not a guarantee of any outcome for any individual.
+				</p>
+			</section>
+
+			<section>
+				<h2>No Legal or Financial Advice</h2>
+				<p>
+					Nothing on this site should be taken as legal, financial, or investment advice. For
+					decisions in those areas, consult a qualified professional.
+				</p>
+			</section>
+
+			<section>
+				<h2>Accuracy of Traditional Sources</h2>
+				<p>
+					We aim to represent source traditions accurately and to attribute interpretations to their
+					correct origins. Where traditions disagree, we note the disagreement rather than presenting
+					one view as universal. If you believe something here is misattributed or inaccurate, please
+					let us know via the <a href="/contact/">contact page</a>.
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

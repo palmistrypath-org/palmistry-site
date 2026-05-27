@@ -190,6 +190,17 @@ import { SITE_TITLE } from '../consts';
 				margin: 0;
 				letter-spacing: 0.02em;
 			}
+			.caveat-link {
+				color: inherit;
+				text-decoration: underline;
+				text-underline-offset: 2px;
+				text-decoration-color: rgba(201, 169, 110, 0.3);
+				transition: color 0.2s ease, text-decoration-color 0.2s ease;
+			}
+			.caveat-link:hover {
+				color: var(--accent);
+				text-decoration-color: rgba(201, 169, 110, 0.6);
+			}
 			/* Confirmation state (shown by JS after submit) */
 			.signup-confirm {
 				display: none;
@@ -460,7 +471,7 @@ import { SITE_TITLE } from '../consts';
 					>
 				</p>
 				<p class="signup-caveat" id="signup-caveat">
-					You'll receive the guide and occasional Palmistry Path learning notes. Unsubscribe anytime.
+					You'll receive the guide and occasional Palmistry Path learning notes. <a href="/privacy/" class="caveat-link">Unsubscribe anytime.</a>
 				</p>
 			</div>
 
