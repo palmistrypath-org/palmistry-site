@@ -64,7 +64,9 @@ No palmistry tradition has been validated as reliably predictive in controlled c
 
 Palmistry is also not medical diagnosis. Nothing in these articles should be treated as health guidance. When a tradition notes that a particular feature of the hand is traditionally associated with vitality or constitution, that is a cultural and interpretive observation — not a medical claim.
 
-None of this makes palmistry worthless. It makes it something specific: a structured interpretive tradition with a long cultural history, not a science. The distinction matters, and holding it clearly is what allows you to engage with the subject honestly.
+None of this makes palmistry worthless. It makes it something specific: a structured interpretive tradition with a long cultural history, not a science. The distinction matters, and holding it clearly is what allows you to engage with the subject honestly. The [common palmistry myths](/blog/beginner/palmistry-myths/) article works through the most persistent popular misconceptions — including several that the tradition itself explicitly rejects.
+
+A related question beginners often raise: whether the lines are permanently fixed or whether they change over time. The answer is more nuanced than it first appears, and [can palm lines change?](/blog/beginner/can-palm-lines-change/) covers both the scientific and traditional positions.
 
 ## How to approach it as a learner
 
@@ -84,7 +86,7 @@ No article on this site will claim that a line on your hand determines your futu
 
 The lines on your hand have been there since before you could read. People have been noticing them, arguing about them, and building interpretive systems around them for thousands of years. Whether you approach that history with scepticism, with curiosity, or — most usefully — with both, there is a great deal worth understanding.
 
-The next step is learning to look. [How to Read a Palm](/blog/beginner/how-to-read-a-palm) covers the method: which hand to examine, the correct sequence of observation, and the principle of synthesis that makes any individual feature meaningful.
+The next step is learning to look. [How to Read a Palm](/blog/beginner/how-to-read-a-palm) covers the method: which hand to examine, the correct sequence of observation, and the principle of synthesis that makes any individual feature meaningful. After that, the [major lines overview](/blog/beginner/major-lines-overview/) introduces the heart line, head line, life line, and fate line in context.
 
 ---
 

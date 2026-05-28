@@ -38,7 +38,7 @@ The language of palmistry matters. "This line means you will struggle in love" i
 
 ## 7. Treating one feature as a final verdict
 
-The single most harmful version of this mistake: "short life line means short life." It does not. The length of the life line in Western palmistry is traditionally associated with the quality and vitality of life energy — not its duration. Cheiro himself, often blamed for popularising this myth, was more nuanced in his actual writing than in how he has been summarised. Peter West (*The Complete Illustrated Guide to Palmistry*, 1998) is explicit: no single line feature predicts lifespan. The [life line article](/blog/beginner/life-line) addresses this myth directly. The same principle applies to every other line: the [heart line](/blog/beginner/heart-line), the head line, the fate line. No single feature settles the question on its own.
+The single most harmful version of this mistake: "short life line means short life." It does not. The length of the life line in Western palmistry is traditionally associated with the quality and vitality of life energy — not its duration. Cheiro himself, often blamed for popularising this myth, was more nuanced in his actual writing than in how he has been summarised. Peter West (*The Complete Illustrated Guide to Palmistry*, 1998) is explicit: no single line feature predicts lifespan. The [life line article](/blog/beginner/life-line) addresses this myth directly. The same principle applies to every other line: the [heart line](/blog/beginner/heart-line), the [head line](/blog/beginner/head-line/), the [fate line](/blog/beginner/fate-line/). No single feature settles the question on its own.
 
 ## 8. Ignoring the comparison between both hands
 

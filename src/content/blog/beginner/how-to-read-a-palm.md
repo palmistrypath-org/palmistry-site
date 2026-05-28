@@ -40,7 +40,7 @@ Comte de Saint-Germain, in his 1897 *Practice of Palmistry*, separates what he c
 
 **The mounts.** The raised pads of flesh at the base of each finger and at the edges of the palm are examined before the lines. Each mount is named — in Western and Indian traditions — for a planet, and its development (prominent, moderate, or flat) has traditionally been associated with certain qualities of temperament. A well-developed mount may suggest more of that quality in the person's makeup; a flat mount, less. Where a mount is exceptionally prominent, tradition notes that its associated qualities may become exaggerated.
 
-**The major lines.** Only once this foundation is established do the lines receive close attention. The major lines — typically the heart line, the head line, and the life line, with the fate line treated as major in some traditions — are examined for their length, depth, clarity, and path across the palm.
+**The major lines.** Only once this foundation is established do the lines receive close attention. The major lines — typically the [heart line](/blog/beginner/heart-line/), the [head line](/blog/beginner/head-line/), and the [life line](/blog/beginner/life-line/), with the [fate line](/blog/beginner/fate-line/) treated as major in some traditions — are examined for their length, depth, clarity, and path across the palm.
 
 **Minor lines and markings.** Finer lines, crosses, stars, islands, chains, and other markings are read last. Their significance is interpreted in the context of everything already observed — not as independent data points.
 
@@ -62,13 +62,13 @@ A handful of mistakes appear so frequently in palmistry writing that they are wo
 
 **Reading only the active hand.** Both hands contain information. The comparison between them is often where the most interesting observations live. Experienced practitioners examine both as a matter of course, and they note what the difference between the hands may suggest.
 
-**Treating one line as decisive.** No single line determines a reading. The life line is perhaps the most consistently misunderstood: Cheiro was explicit that it does not measure the length of a life. What it traditionally reflects is vitality, constitution, and the character of major life transitions — not longevity. Fred Gettings and other serious writers make the same point. This is a case where popular understanding of palmistry diverges sharply from what the classical texts actually say.
+**Treating one line as decisive.** No single line determines a reading. The life line is perhaps the most consistently misunderstood: Cheiro was explicit that it does not measure the length of a life. What it traditionally reflects is vitality, constitution, and the character of major life transitions — not longevity. Fred Gettings and other serious writers make the same point. This is a case where popular understanding of palmistry diverges sharply from what the classical texts actually say. The most widespread misconceptions are covered in [Common palmistry myths](/blog/beginner/palmistry-myths/).
 
 **Memorising meanings without understanding context.** A reference guide to line meanings is useful only once you understand the framework that gives those meanings their weight. Without hand shape as context, without the mounts as modifiers, without the relationship between lines, even accurate definitions produce superficial readings.
 
 **Skipping the overall impression.** The first impression of a hand — its quality, its proportions, what it suggests before analysis begins — is information. Moving past it to examine the lines faster discards data that experienced palmists consider worth noting.
 
-**Forcing resolution where none exists.** Not every hand tells a clear or coherent story. Some features will contradict others; some hands are genuinely ambiguous. The skilled response is to note the ambiguity honestly, not to resolve it artificially. Palmistry works best as careful observation. It functions poorly as performance.
+**Forcing resolution where none exists.** Not every hand tells a clear or coherent story. Some features will contradict others; some hands are genuinely ambiguous. The skilled response is to note the ambiguity honestly, not to resolve it artificially. Palmistry works best as careful observation. It functions poorly as performance. For a full catalogue of pitfalls specific to this stage of learning, see [Palmistry beginner mistakes](/blog/beginner/palmistry-beginner-mistakes/).
 
 ## How to actually examine a hand
 

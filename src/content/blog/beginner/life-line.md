@@ -64,6 +64,8 @@ One refinement the tradition preserves is worth knowing: when a break overlaps �
 
 **Branches.** Fine lines rising upward from the life line are traditionally associated with periods of upward movement, achievement, or positive development. Lines falling downward from the main course are associated with periods of depleted energy or circumstances that draw on reserves.
 
+**Explore further:** [Short life line meaning](/blog/beginner/short-life-line-meaning/) · [Broken life line meaning](/blog/beginner/broken-life-line-meaning/) · [Forked life line meaning](/blog/beginner/forked-life-line-meaning/) · [Double life line meaning](/blog/beginner/double-life-line-meaning/)
+
 ## Reading the life line in context
 
 The synthesis principle applies here as it does to every feature. A life line with notable markings on a hand otherwise suggesting strong constitution and resilience reads differently from the same markings on a hand that already presents as physically strained. The Mount of Venus — which the life line directly frames — either amplifies or qualifies what the line suggests: a well-developed mount adds warmth and vitality to the reading; a flat one moderates it.

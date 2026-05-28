@@ -68,7 +68,7 @@ The [beginner's guide to palmistry](/guide/) situates the practice within this m
 
 ## Common myths at a glance
 
-**"Your lines are fixed at birth and never change."** Lines do shift over time — decades bring measurable changes to many people's palms. The tradition acknowledges this, and it is one reason practitioners often recommend revisiting a reading over time rather than treating any single reading as permanent.
+**"Your lines are fixed at birth and never change."** Lines do shift over time — decades bring measurable changes to many people's palms. The tradition acknowledges this, and it is one reason practitioners often recommend revisiting a reading over time rather than treating any single reading as permanent. The question is examined in detail in [can palm lines change?](/blog/beginner/can-palm-lines-change/)
 
 **"Which hand you read doesn't matter."** The question of which hand to read — [covered thoroughly here](/blog/beginner/which-hand-to-read-palmistry) — is a substantive one. Traditions differ, but most make a meaningful distinction between the active and passive hand.
 

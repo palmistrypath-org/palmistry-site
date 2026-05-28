@@ -68,6 +68,8 @@ A heart line that curves upward toward the fingers — developing a visible arc 
 
 On some hands, the heart and head lines merge entirely into a single horizontal crease running across the palm. This is called the simian line, or simian crease. Cheiro described it as indicating "tremendous intensity of character," and noted that it was "not a very happy mark to possess" — those who carry it, he observed, often feel isolated by the force of their own focus. Indian palmistry describes the quality similarly: *ekaagra dhyan*, single-pointed concentration, with an unusual capacity to pursue a single aim, and corresponding difficulty in separating thought from feeling. The simian line is its own subject and merits a dedicated article; it is mentioned here because understanding what the heart line means includes knowing what happens when it and the head line can no longer be distinguished from one another.
 
+**Explore further:** [Broken heart line meaning](/blog/beginner/broken-heart-line-meaning/) · [Forked heart line meaning](/blog/beginner/forked-heart-line-meaning/) · [Chained heart line meaning](/blog/beginner/chained-heart-line-meaning/) · [Heart line endings](/blog/beginner/heart-line-ending-meaning/)
+
 ## The heart line in context
 
 Nothing in the sections above is a reading. Each variation is a tendency from the tradition — a starting point for observation, not a label to apply and move past.

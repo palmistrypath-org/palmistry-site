@@ -46,11 +46,11 @@ Most fate lines travel toward the Mount of Saturn. Where the line terminates bef
 
 **Ending at the heart line** — where the fate line stops at the upper crease — Cheiro similarly associated with direction lost through emotional cause. The contemporary understanding is of a significant relational or emotional circumstance that redirects the course: a transition marker, read for what changed and when, not for what failed.
 
-**Branches toward Jupiter** — rising from the fate line toward the index finger mount — are traditionally associated with ambition fulfilled, leadership, and public responsibility. **Branches toward Apollo** carry associations of artistic recognition and renown. **Branches toward Mercury** are associated with commercial success, communication, and analytical or scientific achievement.
+**Branches toward Jupiter** — rising from the fate line toward the index finger mount — are traditionally associated with ambition fulfilled, leadership, and public responsibility. **Branches toward Apollo** carry associations of artistic recognition and renown. **Branches toward Mercury** are associated with commercial success, communication, and analytical or scientific achievement. The full treatment of [what branches on the fate line mean](/blog/beginner/fate-line-branches-meaning/) — including upward, downward, and terminal fork formations — is covered in its own article.
 
 ### Absent or faint
 
-An absent or faint fate line is common enough that framing it as an exception would misrepresent how often it actually appears. It requires direct treatment.
+An absent or faint fate line is common enough that framing it as an exception would misrepresent how often it actually appears. It requires direct treatment. The dedicated article on [what it means to have no fate line](/blog/beginner/no-fate-line-meaning/) covers this configuration in full, including how to distinguish an absent line from a faint or late-starting one.
 
 The passage most often attributed to Cheiro describes an absent fate line as suggesting a life "so much under the control of the individual" that external fate plays no structuring role — but this does not appear in the 1916 text in a form that can be quoted with confidence, and it should be understood as representing the tradition's general position rather than a verified Cheiro formulation. Benham acknowledged the absent line without negative evaluation. Neither writer treated it as a marker of deficiency.
 
