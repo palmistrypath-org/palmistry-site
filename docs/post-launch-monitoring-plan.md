@@ -405,3 +405,248 @@ Higher CTR often comes from rich results (schema-enhanced listings). The site ha
 
 - [ ] **CTR improves with brand familiarity.** Until "Palmistry Path" is a recognised brand, focus on title specificity over brand signalling. Lead with the topic, not the site name.
 - [ ] **Consider adding Schema.org/Organization** to the homepage to reinforce brand identity to Google.
+
+---
+
+## 11. Search Console Workflow
+
+### Sitemap submission (one-time at launch)
+
+1. Open GSC → Sitemaps → Add a new sitemap
+2. Submit `https://palmistrypath.com/sitemap-index.xml`
+3. Confirm status shows "Success" and the correct page count (~84 pages at launch)
+4. Also submit to Bing Webmaster Tools at the same URL
+
+### URL inspection for priority pages
+
+After submitting the sitemap, manually inspect these high-priority URLs via GSC → URL Inspection:
+
+- `https://palmistrypath.com/`
+- `https://palmistrypath.com/guide/`
+- `https://palmistrypath.com/learn/`
+- `https://palmistrypath.com/blog/`
+- `https://palmistrypath.com/blog/how-to-read-a-palm`
+- `https://palmistrypath.com/blog/which-hand-to-read-palmistry`
+- `https://palmistrypath.com/blog/what-do-palm-lines-mean`
+
+For each: confirm "URL is on Google" or click "Request Indexing" if status is "URL is not on Google."
+
+### Pages to manually request indexing after launch
+
+In order of priority — do these within the first 48 hours:
+
+1. Homepage (`/`)
+2. `/guide/`
+3. `/learn/`
+4. `/blog/`
+5. `/blog/how-to-read-a-palm`
+6. `/blog/which-hand-to-read-palmistry`
+7. `/blog/what-do-palm-lines-mean`
+8. `/blog/palmistry-chart-for-beginners`
+9. `/blog/short-life-line-meaning`
+10. `/blog/no-fate-line-meaning`
+
+Do not spam all 84 pages at once. Submit 5–10 per day. GSC has a daily limit of ~10 manual submissions.
+
+### How to identify "discovered but not indexed"
+
+GSC → Pages → filter for "Discovered — currently not indexed." Pages stuck in this state were found by Googlebot but not yet crawled. Common causes: low perceived authority, low internal link count, slow crawl budget.
+
+Response: Add internal links to stuck pages from high-traffic pages. If a page has been "Discovered" for more than 3 weeks, use URL Inspection to request indexing manually.
+
+### How to respond to indexing delays
+
+- **1–2 weeks post-submit:** normal. No action.
+- **2–4 weeks:** submit via URL Inspection. Check that the page isn't blocked by robots.txt or noindex meta.
+- **4+ weeks stuck at "Discovered":** strengthen internal links to the page. Check the page's canonical tag is self-referential. Confirm the page has at least 300 words of unique content.
+- **Never indexed after 8 weeks:** investigate whether the content is thin, duplicate, or excluded by a setting. Run `npm run audit:schema` — missing schema can reduce crawl priority.
+
+### How to use query data to update content
+
+Monthly process after the first 60 days:
+
+1. GSC → Performance → filter for queries with 100+ impressions and CTR below 3%
+2. For each flagged query: check whether the page's H1 and first 100 words directly address that query
+3. If not: rewrite the intro to front-load the query answer. Add the query phrase naturally to the H1 or first H2
+4. Check GSC for related queries (Queries tab → filter by page): if a page ranks for 5 related queries, consider adding a dedicated H2 for the most-impressioned variant
+5. Use "People Also Ask" results in incognito search to identify FAQ questions to add to the article
+6. After rewriting: update `updatedDate` in frontmatter. Google treats fresh `updatedDate` as a recency signal.
+
+---
+
+## 12. Priority URL Watchlist
+
+Review these URLs weekly in GSC. Track position, impressions, and CTR for each.
+
+| URL | Target query | Goal position |
+|---|---|---|
+| `https://palmistrypath.com/` | palmistry path / palmistry guide | Top 20 branded |
+| `https://palmistrypath.com/guide/` | free palmistry guide / palmistry starter guide | Track conversions |
+| `https://palmistrypath.com/learn/` | learn palmistry / palmistry lessons | Top 20 |
+| `https://palmistrypath.com/blog/` | palmistry blog / palmistry articles | Brand/navigation |
+| `https://palmistrypath.com/blog/how-to-read-a-palm` | how to read a palm | Top 10 |
+| `https://palmistrypath.com/blog/which-hand-to-read-palmistry` | which hand to read palmistry | Top 10 |
+| `https://palmistrypath.com/blog/what-do-palm-lines-mean` | what do palm lines mean | Top 10 |
+| `https://palmistrypath.com/blog/palmistry-chart-for-beginners` | palmistry chart for beginners | Top 15 |
+| `https://palmistrypath.com/blog/short-life-line-meaning` | short life line meaning | Top 10 |
+| `https://palmistrypath.com/blog/no-fate-line-meaning` | no fate line meaning / no fate line palmistry | Top 10 |
+| `https://palmistrypath.com/blog/broken-life-line-meaning` | broken life line meaning | Top 10 |
+| `https://palmistrypath.com/blog/palmistry-vs-astrology` | palmistry vs astrology | Top 15 |
+| `https://palmistrypath.com/blog/best-palmistry-books-for-beginners` | best palmistry books | Top 10 |
+| `https://palmistrypath.com/blog/printable-palmistry-worksheets` | printable palmistry worksheets / palmistry worksheets pdf | Top 10 |
+
+**Cannibalization watch:** `/blog/what-do-palm-lines-mean` and `/blog/palmistry-chart-for-beginners` target overlapping beginner queries. If GSC shows both ranking for "palm reading lines chart" — consolidate with internal links favouring the stronger page.
+
+---
+
+## 13. Response Playbooks
+
+Quick-reference responses to specific situations. Each playbook assumes you have checked the obvious (site is live, form is working, no recent bad deploy).
+
+### Impressions rising, CTR low (below 3%)
+
+1. Identify the 5 pages with most impressions and CTR below 3%
+2. Search each target query in incognito — note what the top 3 results look like and how their titles are written
+3. Rewrite the title tag: make it more specific to the exact query, add a clarifying phrase if helpful
+4. Rewrite the meta description: open with the answer hook, not the site name
+5. Add `updatedDate` to frontmatter; rebuild and deploy
+6. Wait 2 weeks and check CTR again — one rewrite cycle takes time to reflect
+
+### Clicks rising, signups flat
+
+1. Check Kit form submission logs — confirm the form is actually processing
+2. Calculate conversion rate: Kit new subscribers ÷ Cloudflare `/guide/` page views that week
+3. If rate is below 4%: work through Section 9 (Traffic Grows but Signups Do Not) in order
+4. If rate is normal but subscriber count is flat: the traffic may not be reaching `/guide/` — add CTA to blog index and header nav
+5. Check whether the direct PDF download link on `/guide/` is bypassing the form — move it to `/guide/thank-you/` per the pre-launch audit recommendation
+
+### High bounce / low engagement on guide page
+
+1. Test the page in mobile view (most palmistry traffic skews mobile)
+2. Confirm the form appears above the fold on a 375px screen
+3. Check that the page headline answers the reader's question in the first sentence
+4. Review the guide description: does it clearly state what they get and why it's worth an email?
+5. Remove friction: verify the form asks only for email (no name, no phone)
+6. Add a one-line "what you get" bullet list near the form if it doesn't have one
+
+### Pages indexed slowly (stuck in "Discovered — currently not indexed")
+
+1. GSC → URL Inspection → Request Indexing for each stuck page
+2. Add 2–3 internal links from already-indexed, higher-traffic pages to the stuck page
+3. Confirm the page has a self-referential canonical tag: `<link rel="canonical" href="https://palmistrypath.com/blog/[slug]/">`
+4. Confirm the page is not in robots.txt Disallow
+5. Confirm there is no `<meta name="robots" content="noindex">` in page source
+6. Run `npm run audit:schema` — missing schema can delay crawl priority
+7. If still not indexed after 6 weeks: review content length and uniqueness. Add a new section to strengthen the page.
+
+### A page ranks for the wrong query
+
+Symptom: GSC shows a page appearing for a query it was not written for, pulling clicks away from a more relevant page.
+
+1. Search the wrong query in incognito — what is Google seeing that matches this page?
+2. Remove or soften the phrase triggering the wrong match (often in the intro or H1)
+3. Add a clear H2 or intro sentence that names the page's actual topic
+4. Add internal links from this page to the page that *should* rank for the wrong query
+5. If the wrong-query page gets significant impressions anyway, consider whether the article should cover that angle — it may be a gap worth addressing
+
+### A page cannibalizes another page
+
+Symptom: two pages from the site appear in GSC for the same query; they split clicks and dilute authority.
+
+1. Identify the stronger page (higher position, more clicks, more content)
+2. Add a canonical tag on the weaker page pointing to the stronger page — OR
+3. Merge the weaker page's unique content into the stronger page and 301-redirect the weaker URL
+4. Add internal links from all other articles to the stronger page using the target query as anchor text
+5. Update `relatedLesson` or `relatedArticle` fields to point to the stronger page
+
+Known at-risk pairs:
+- `what-do-palm-lines-mean` vs `palmistry-chart-for-beginners` (broad beginner queries)
+- `heart-line.md` vs `broken-heart-line-meaning.md` (heart line queries)
+
+### Audit failure before deploy
+
+1. Do not push to Cloudflare Pages
+2. Run the failing audit script individually to isolate the error:
+   - `npm run audit` — broken internal links
+   - `npm run audit:images` — missing images or bad OG image paths
+   - `npm run audit:schema` — malformed or missing JSON-LD
+3. Read the error output line by line — each script reports the specific file and issue
+4. Fix the issue, rebuild (`npm run build`), and re-run `npm run audit:all`
+5. Deploy only after a clean pass
+
+### Broken images or missing assets
+
+1. Run `npm run audit:images` to get a list of all broken image references
+2. For each broken reference: either restore the missing file to `public/images/` or update the `src` attribute in the content file
+3. For OG image errors: check the `heroImage` frontmatter field points to a file that exists in `public/images/`
+4. After fixing: rebuild and re-run `npm run audit:images` — confirm clean before deploying
+5. For mount lesson images specifically: see Section 7 (When images are replaced)
+
+### Email form failures
+
+Symptom: form on `/guide/` does not submit, does not redirect, or subscribers are not receiving the welcome email.
+
+1. **Test the form in incognito** — submit a real email you control. Note what happens.
+2. If form submits but no redirect: check Kit form settings — the redirect URL should be `https://palmistrypath.com/guide/thank-you/`
+3. If form does not submit at all: inspect browser console for JavaScript errors. Check that Kit embed code is present in the `/guide/` page source.
+4. If form submits and redirects but no welcome email arrives:
+   - Check Kit automation → confirm the welcome sequence is set to active
+   - Check Kit spam/quarantine — Kit sometimes holds automations for review on new accounts
+   - Check the subscriber's spam folder
+5. If emails deliver but open rate drops suddenly: check subject line for spam trigger words. Check Kit's deliverability status page.
+
+---
+
+## 14. Reporting Template
+
+Copy this template into a note, doc, or spreadsheet at the end of each Monday monitoring session.
+
+```
+# Weekly Report — Palmistry Path
+## Week of: [date]
+
+### Wins
+- [What improved this week]
+
+### Concerns
+- [Anything declining, broken, or unclear]
+
+### Search Performance (GSC last 7 days)
+- Total impressions: [X] ([+/-]% vs prior week)
+- Total clicks: [X] ([+/-]% vs prior week)
+- Average CTR: [X]%
+- Average position: [X]
+
+### Top Queries This Week
+1. [query] — [position], [clicks]
+2. [query] — [position], [clicks]
+3. [query] — [position], [clicks]
+
+### Top Pages This Week
+1. [/blog/slug] — [clicks]
+2. [/blog/slug] — [clicks]
+3. [/blog/slug] — [clicks]
+
+### Indexed Pages
+- Total indexed in GSC: [X] of 84
+- New "Discovered not indexed" pages: [X]
+
+### Email Metrics (Kit)
+- New subscribers this week: [X]
+- Total subscribers to date: [X]
+- Guide page views (Cloudflare): [X]
+- Estimated conversion rate: [X]%
+
+### Technical
+- npm run audit:all: PASS / FAIL (fix: [description])
+- Build/deploy status: Clean / Issues
+- Any schema or coverage errors in GSC: Yes/No
+
+### Fixes Shipped This Week
+- [What was changed and why]
+
+### Next Actions
+- [ ] [Action 1]
+- [ ] [Action 2]
+- [ ] [Action 3]
+```
