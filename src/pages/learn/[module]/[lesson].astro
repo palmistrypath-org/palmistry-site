@@ -230,9 +230,9 @@ const breadcrumbSchema = JSON.stringify({
 		<Header />
 		<main>
 			<nav class="breadcrumb" aria-label="Breadcrumb">
-				<a href="/learn">Learn</a>
+				<a href="/learn" data-track="nav" data-track-location="lesson-breadcrumb" data-track-target="learn">Learn</a>
 				{' › '}
-				<a href={`/learn/${lesson.data.module}`}>{moduleTitle}</a>
+				<a href={`/learn/${lesson.data.module}`} data-track="nav" data-track-location="lesson-breadcrumb" data-track-target="module">{moduleTitle}</a>
 				{' › '}
 				<span>{lesson.data.title}</span>
 			</nav>
@@ -266,7 +266,8 @@ const breadcrumbSchema = JSON.stringify({
 						<aside class="related-article">
 							<p>
 								Want more depth?{' '}
-								<a href={`${lesson.data.relatedArticle}/`}>Read the full article →</a>
+								<a href={`${lesson.data.relatedArticle}/`}
+									data-track="link" data-track-location="lesson-body" data-track-target="blog">Read the full article →</a>
 							</p>
 						</aside>
 					)

@@ -7,12 +7,12 @@ import HeaderLink from './HeaderLink.astro';
 	<nav aria-label="Site navigation">
 		<p class="site-title"><a href="/">{SITE_TITLE}</a></p>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">Blog</HeaderLink>
-			<HeaderLink href="/learn">Learn</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
-			<HeaderLink href="/glossary">Glossary</HeaderLink>
-			<HeaderLink href="/search" aria-label="Search">
+			<HeaderLink href="/" data-track="nav" data-track-location="header" data-track-target="home">Home</HeaderLink>
+			<HeaderLink href="/blog" data-track="nav" data-track-location="header" data-track-target="blog">Blog</HeaderLink>
+			<HeaderLink href="/learn" data-track="nav" data-track-location="header" data-track-target="learn">Learn</HeaderLink>
+			<HeaderLink href="/about" data-track="nav" data-track-location="header" data-track-target="about">About</HeaderLink>
+			<HeaderLink href="/glossary" data-track="nav" data-track-location="header" data-track-target="glossary">Glossary</HeaderLink>
+			<HeaderLink href="/search" aria-label="Search" data-track="nav" data-track-location="header" data-track-target="search">
 				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
 			</HeaderLink>
 		</div>

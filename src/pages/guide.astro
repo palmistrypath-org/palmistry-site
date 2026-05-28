@@ -486,7 +486,7 @@ import { SITE_TITLE } from '../consts';
 					</li>
 					<li>
 						<span class="step-num">3</span>
-						<span class="step-text">Open <a href="/learn/foundations/01-what-palmistry-is">Lesson 1</a> — the guide is designed to sit beside it.</span>
+						<span class="step-text">Open <a href="/learn/foundations/01-what-palmistry-is" data-track="link" data-track-location="guide-steps" data-track-target="lesson">Lesson 1</a> — the guide is designed to sit beside it.</span>
 					</li>
 				</ol>
 			</div>
@@ -513,11 +513,11 @@ import { SITE_TITLE } from '../consts';
 						autocomplete="email"
 						required
 					/>
-					<button type="submit" id="signup-btn" data-track="guide-submit">Send Me the Guide</button>
+					<button type="submit" id="signup-btn" data-track="cta" data-track-location="guide-form" data-track-target="guide-submit">Send Me the Guide</button>
 				</form>
 				<p class="signup-error" id="signup-error">Something went wrong — please try again.</p>
 				<p class="signup-caveat" id="signup-caveat">
-					You'll receive the guide and occasional Palmistry Path learning notes. <a href="/privacy/" class="caveat-link">Privacy policy.</a>
+					You'll receive the guide and occasional Palmistry Path learning notes. <a href="/privacy/" class="caveat-link" data-track="nav" data-track-location="guide-caveat" data-track-target="privacy">Privacy policy.</a>
 				</p>
 			</div>
 
@@ -527,7 +527,7 @@ import { SITE_TITLE } from '../consts';
 					href="/downloads/Palmistry-Starter-Guide-Web.pdf"
 					download="Palmistry-Starter-Guide-Web.pdf"
 					class="preview-download-link"
-					data-track="pdf-download"
+					data-track="link" data-track-location="guide-download" data-track-target="pdf-download"
 				>↓ Download full guide (PDF, 25 MB)</a>
 			</div>
 		</main>

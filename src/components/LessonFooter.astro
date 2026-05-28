@@ -26,7 +26,8 @@ const { prevLesson, nextLesson } = Astro.props;
 				<p class="next-eyebrow">Next</p>
 				<p class="next-title">{nextLesson.title}</p>
 				{nextLesson.description && <p class="next-desc">{nextLesson.description}</p>}
-				<a href={nextLesson.href} class="btn-continue">
+				<a href={nextLesson.href} class="btn-continue"
+					data-track="cta" data-track-location="lesson-footer" data-track-target="next-lesson">
 					Continue to {nextLesson.title} →
 				</a>
 			</div>
@@ -34,7 +35,8 @@ const { prevLesson, nextLesson } = Astro.props;
 			<div class="next-block">
 				<p class="next-eyebrow">Module complete</p>
 				<p class="next-title">You've finished this module.</p>
-				<a href="/learn" class="btn-continue">
+				<a href="/learn" class="btn-continue"
+					data-track="cta" data-track-location="lesson-footer" data-track-target="learn">
 					Explore what's next →
 				</a>
 			</div>
@@ -44,7 +46,8 @@ const { prevLesson, nextLesson } = Astro.props;
 	{
 		prevLesson && (
 			<p class="prev-row">
-				<a href={prevLesson.href} class="prev-link">
+				<a href={prevLesson.href} class="prev-link"
+					data-track="nav" data-track-location="lesson-footer" data-track-target="prev-lesson">
 					← {prevLesson.title}
 				</a>
 			</p>
@@ -67,7 +70,8 @@ const { prevLesson, nextLesson } = Astro.props;
 					<li>Printable study sheet</li>
 				</ul>
 			</div>
-			<a href="/guide/" class="btn-guide" data-cta="guide">Get the Free Guide</a>
+			<a href="/guide/" class="btn-guide"
+				data-track="cta" data-track-location="lesson-footer" data-track-target="guide">Get the Free Guide</a>
 		</div>
 	</aside>
 </div>

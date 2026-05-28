@@ -185,10 +185,12 @@ const breadcrumbSchema = JSON.stringify({
 									This article is paired with a structured lesson in the Palmistry Path curriculum.
 								</p>
 								<div class="learn-cta-links">
-									<a href={`${relatedLesson}/`} class="btn-lesson">
+									<a href={`${relatedLesson}/`} class="btn-lesson"
+										data-track="cta" data-track-location="blog-lesson-cta" data-track-target="lesson">
 										Continue with the structured lesson →
 									</a>
-									<a href="/guide/" class="btn-guide-sm" data-cta="guide">
+									<a href="/guide/" class="btn-guide-sm"
+										data-track="cta" data-track-location="blog-lesson-cta" data-track-target="guide">
 										Download the free starter guide
 									</a>
 								</div>

@@ -25,9 +25,12 @@ import { MODULES, SITE_TITLE } from '../consts';
 				</p>
 				<div class="hero-ctas">
 					<a href="/learn/foundations/01-what-palmistry-is" class="btn-primary"
+						data-track="cta" data-track-location="homepage-hero" data-track-target="learn"
 						>Start the Beginner Path</a
 					>
-					<a href="/guide" class="btn-secondary">Get the Free Starter Guide</a>
+					<a href="/guide" class="btn-secondary"
+						data-track="cta" data-track-location="homepage-hero" data-track-target="guide"
+						>Get the Free Starter Guide</a>
 				</div>
 			</section>
 
@@ -58,7 +61,8 @@ import { MODULES, SITE_TITLE } from '../consts';
 					{
 						MODULES.map((mod, i) => (
 							<li>
-								<a href={`/learn/${mod.slug}`} class="path-step">
+								<a href={`/learn/${mod.slug}`} class="path-step"
+									data-track="nav" data-track-location="homepage-path" data-track-target={mod.slug}>
 									<span class="step-num">{i + 1}</span>
 									<span class="step-title">{mod.title}</span>
 									<span class="step-difficulty">{mod.difficulty}</span>
@@ -100,12 +104,12 @@ import { MODULES, SITE_TITLE } from '../consts';
 			<section class="starter-section" aria-labelledby="starter-heading">
 				<h2 class="section-eyebrow" id="starter-heading">A place to start</h2>
 				<ul class="starter-links" role="list">
-					<li><a href="/blog/beginner/what-do-palm-lines-mean" class="starter-link">What do palm lines mean?</a></li>
-					<li><a href="/blog/beginner/which-hand-to-read-palmistry" class="starter-link">Which hand to read</a></li>
-					<li><a href="/blog/beginner/how-to-read-a-palm" class="starter-link">How to read a palm</a></li>
-					<li><a href="/blog/beginner/palmistry-chart-for-beginners" class="starter-link">Palmistry chart for beginners</a></li>
-					<li><a href="/blog/beginner/hand-shapes" class="starter-link">Hand shapes in palmistry</a></li>
-					<li><a href="/blog/beginner/palmistry-vs-astrology" class="starter-link">Palmistry vs. astrology</a></li>
+					<li><a href="/blog/beginner/what-do-palm-lines-mean" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">What do palm lines mean?</a></li>
+					<li><a href="/blog/beginner/which-hand-to-read-palmistry" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">Which hand to read</a></li>
+					<li><a href="/blog/beginner/how-to-read-a-palm" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">How to read a palm</a></li>
+					<li><a href="/blog/beginner/palmistry-chart-for-beginners" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">Palmistry chart for beginners</a></li>
+					<li><a href="/blog/beginner/hand-shapes" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">Hand shapes in palmistry</a></li>
+					<li><a href="/blog/beginner/palmistry-vs-astrology" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">Palmistry vs. astrology</a></li>
 				</ul>
 			</section>
 
@@ -115,12 +119,12 @@ import { MODULES, SITE_TITLE } from '../consts';
 			<section class="hubs-section" aria-labelledby="hubs-heading">
 				<h2 class="section-eyebrow" id="hubs-heading">Browse by topic</h2>
 				<ul class="hub-list" role="list">
-					<li><a href="/blog/beginner/major-lines-overview/" class="hub-link">Lines</a></li>
-					<li><a href="/blog/beginner/hand-shapes/" class="hub-link">Hand Shape</a></li>
-					<li><a href="/blog/beginner/mounts-overview/" class="hub-link">Mounts</a></li>
-					<li><a href="/blog/beginner/western-palmistry-basics/" class="hub-link">Traditions</a></li>
-					<li><a href="/blog/beginner/crosses-stars-palmistry/" class="hub-link">Markings</a></li>
-					<li><a href="/blog/beginner/marriage-relationship-lines/" class="hub-link">Relationships</a></li>
+					<li><a href="/blog/beginner/major-lines-overview/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Lines</a></li>
+					<li><a href="/blog/beginner/hand-shapes/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Hand Shape</a></li>
+					<li><a href="/blog/beginner/mounts-overview/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Mounts</a></li>
+					<li><a href="/blog/beginner/western-palmistry-basics/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Traditions</a></li>
+					<li><a href="/blog/beginner/crosses-stars-palmistry/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Markings</a></li>
+					<li><a href="/blog/beginner/marriage-relationship-lines/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Relationships</a></li>
 				</ul>
 			</section>
 
@@ -133,7 +137,7 @@ import { MODULES, SITE_TITLE } from '../consts';
 					The Palmistry Starter Guide covers the major lines, mounts, hand shapes, and includes a
 					printable observation sheet. A useful reference from your first lesson.
 				</p>
-				<a href="/guide" class="btn-primary">Get the Starter Guide</a>
+				<a href="/guide" class="btn-primary" data-track="cta" data-track-location="homepage-guide-cta" data-track-target="guide">Get the Starter Guide</a>
 			</section>
 		</main>
 		<Footer />

@@ -46,7 +46,8 @@ if (cluster) {
 		<ul class="related-list">
 			{related.map((post) => (
 				<li class="related-item">
-					<a href={`/blog/${post.id}/`} class="related-link">
+					<a href={`/blog/${post.id}/`} class="related-link"
+						data-track="link" data-track-location="blog-related" data-track-target="blog">
 						<span class="related-title">{post.title}</span>
 						<span class="related-desc">{post.description}</span>
 					</a>
