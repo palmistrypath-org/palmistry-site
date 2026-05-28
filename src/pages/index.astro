@@ -105,7 +105,22 @@ import { MODULES, SITE_TITLE } from '../consts';
 					<li><a href="/blog/beginner/how-to-read-a-palm" class="starter-link">How to read a palm</a></li>
 					<li><a href="/blog/beginner/palmistry-chart-for-beginners" class="starter-link">Palmistry chart for beginners</a></li>
 					<li><a href="/blog/beginner/hand-shapes" class="starter-link">Hand shapes in palmistry</a></li>
-					<li><a href="/blog/beginner/major-lines-overview" class="starter-link">The major palm lines</a></li>
+					<li><a href="/blog/beginner/palmistry-vs-astrology" class="starter-link">Palmistry vs. astrology</a></li>
+				</ul>
+			</section>
+
+			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
+
+			<!-- ── Topic hubs ─────────────────────────────────────────── -->
+			<section class="hubs-section" aria-labelledby="hubs-heading">
+				<h2 class="section-eyebrow" id="hubs-heading">Browse by topic</h2>
+				<ul class="hub-list" role="list">
+					<li><a href="/blog/beginner/major-lines-overview/" class="hub-link">Lines</a></li>
+					<li><a href="/blog/beginner/hand-shapes/" class="hub-link">Hand Shape</a></li>
+					<li><a href="/blog/beginner/mounts-overview/" class="hub-link">Mounts</a></li>
+					<li><a href="/blog/beginner/western-palmistry-basics/" class="hub-link">Traditions</a></li>
+					<li><a href="/blog/beginner/crosses-stars-palmistry/" class="hub-link">Markings</a></li>
+					<li><a href="/blog/beginner/marriage-relationship-lines/" class="hub-link">Relationships</a></li>
 				</ul>
 			</section>
 
@@ -376,6 +391,45 @@ import { MODULES, SITE_TITLE } from '../consts';
 	.starter-link:hover {
 		color: var(--accent-light);
 		border-color: rgba(201, 169, 110, 0.4);
+		text-decoration: none;
+	}
+
+	/* ── Topic hubs ──────────────────────────────────────────── */
+	.hubs-section {
+		width: 720px;
+		max-width: calc(100% - 3em);
+		margin: 0 auto;
+		padding: 0 1em;
+	}
+	.hub-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.6rem;
+		justify-content: center;
+	}
+	.hub-link {
+		display: inline-block;
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.65em;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+		color: var(--color-text-muted);
+		text-decoration: none;
+		padding: 0.55em 1.1em;
+		border: 1px solid rgba(201, 169, 110, 0.2);
+		border-radius: 4px;
+		transition:
+			color 0.2s ease,
+			border-color 0.2s ease,
+			background 0.2s ease;
+	}
+	.hub-link:hover {
+		color: var(--accent);
+		border-color: rgba(201, 169, 110, 0.5);
+		background: rgba(201, 169, 110, 0.04);
 		text-decoration: none;
 	}
 
