@@ -33,6 +33,8 @@ Palmistry Path competes on **structured education**, not on fortune-telling prom
 | Guide page | `/guide/` | Email conversion | "palmistry guide", "palm reading for beginners" |
 | Future paid resources | TBD | Monetisation | Transactional and mid-funnel queries |
 
+*First planned paid resource: the Palmistry Path Worksheet Pack — see `docs/worksheet-pack-spec.md` for the full product spec.*
+
 **Role rules:**
 - **Blog = search entry points.** Blog articles serve informational intent ("how to read a heart line", "what is the simian line"). They are front doors from search engines.
 - **Learn = curriculum and progression.** Lessons go deeper than blog posts, assume the reader is working through a sequence, and link forward and backward within the module. They are not optimised for cold search traffic in isolation.

@@ -60,7 +60,7 @@ The vocabulary you are building is observational rather than interpretive. After
 
 On the medium used for worksheets: hand tracings, photographs, and written notes are all legitimate. A tracing gives you the shape and relative scale of the hand directly. A photograph gives you colour and texture that a tracing loses. Written notes are the slowest but they require you to articulate each observation in language, which builds precision. Any of these formats will work; the discipline is in the looking, not in the method of capture.
 
-The [beginner's guide at /guide/](/guide/) offers a structured path through the foundational material if you want a broader framework to hang individual worksheet sessions on.
+A fuller printable worksheet pack is planned; for now, start with the free guide. The [beginner's guide at /guide/](/guide/) offers a structured path through the foundational material if you want a broader framework to hang individual worksheet sessions on.
 
 ## FAQ
 
