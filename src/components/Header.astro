@@ -84,7 +84,7 @@ import HeaderLink from './HeaderLink.astro';
 		}
 	}
 
-	/* Phone: stack site name above nav links */
+	/* Phone: compact brand row + three-column link grid */
 	@media (max-width: 600px) {
 		header {
 			padding: 0;
@@ -93,31 +93,32 @@ import HeaderLink from './HeaderLink.astro';
 			flex-direction: column;
 			align-items: center;
 			gap: 0;
-			padding: 0.8em 1em 0;
+			padding: 0.5em 1em 0;
 		}
 		.site-title {
 			font-size: 0.95em;
 		}
-		/* Title link keeps its own tight padding — it's not a tap target */
 		.site-title a {
-			padding: 0 0 0.6em;
+			padding: 0 0 0.4em;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 		}
+		/* 3-column grid: Home/Blog/Learn row 1, About/Glossary/Search row 2.
+		   No orphaned icon; every cell has an equal share of the row width. */
 		.internal-links {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
 			width: 100%;
 			border-top: 1px solid rgba(201, 169, 110, 0.08);
 		}
-		/* Override nav a padding for the internal links only at mobile.
-		   1em top + 1em bottom + ~15px font ≈ 45px tap target. */
 		.internal-links a {
-			padding: 1em 0.65em;
-			font-size: 0.78em;
-			letter-spacing: 0.05em;
+			padding: 0.9em 0.4em;
+			font-size: 0.76em;
+			letter-spacing: 0.04em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 	}
 </style>
