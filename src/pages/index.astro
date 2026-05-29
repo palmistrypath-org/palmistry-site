@@ -4,11 +4,11 @@ import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import { MODULES, SITE_TITLE } from '../consts';
 
-const MODULE_ICONS: Record<string, string> = {
-	foundations: `<svg viewBox="0 0 22 18" width="22" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 5 C8 4 14 4 19 5"/><path d="M3 9 C8 8 14 8 19 9"/><path d="M3 13 C8 12 14 12 19 13"/></svg>`,
-	lines: `<svg viewBox="0 0 22 18" width="22" height="18" fill="none" stroke="currentColor" stroke-linecap="round" aria-hidden="true"><path d="M3 15 C7 7 14 5 20 6" stroke-width="2"/><path d="M3 10 C8 13 14 14 20 11" stroke-width="1.3" opacity="0.5"/></svg>`,
-	mounts: `<svg viewBox="0 0 24 18" width="24" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M1 14 C2 14 3.5 10 5.5 10 C7.5 10 9 14 9 14"/><path d="M9 14 C10 14 11.5 6 13.5 6 C15.5 6 17 14 17 14"/><path d="M17 14 C18 14 19.5 10 20.5 10 C21.5 10 23 14 23 14"/><line x1="1" y1="14" x2="23" y2="14" stroke-width="1" opacity="0.35"/></svg>`,
-	advanced: `<svg viewBox="0 0 22 22" width="22" height="22" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 2 L20 11 L11 20 L2 11 Z" stroke-width="1.5"/><path d="M11 6 L16 11 L11 16 L6 11 Z" stroke-width="1.1" opacity="0.45"/></svg>`,
+const MODULE_ART: Record<string, string> = {
+	foundations: '/images/home/path-foundations.png',
+	lines: '/images/home/path-lines.png',
+	mounts: '/images/home/path-mounts.png',
+	advanced: '/images/home/path-advanced.png',
 };
 ---
 
@@ -81,13 +81,20 @@ const MODULE_ICONS: Record<string, string> = {
 							<li>
 								<a href={`/learn/${mod.slug}`} class="path-step"
 									data-track="nav" data-track-location="homepage-path" data-track-target={mod.slug}>
-									<span class="step-icon">
-										<Fragment set:html={MODULE_ICONS[mod.slug] ?? ''} />
+									{MODULE_ART[mod.slug] && (
+										<img
+											src={MODULE_ART[mod.slug]}
+											alt=""
+											aria-hidden="true"
+											class="path-card-art"
+										/>
+									)}
+									<span class="step-content">
+										<span class="step-num">{i + 1}</span>
+										<span class="step-title">{mod.title}</span>
+										<span class="step-difficulty">{mod.difficulty}</span>
+										<span class="step-desc">{mod.description}</span>
 									</span>
-									<span class="step-num">{i + 1}</span>
-									<span class="step-title">{mod.title}</span>
-									<span class="step-difficulty">{mod.difficulty}</span>
-									<span class="step-desc">{mod.description}</span>
 								</a>
 							</li>
 						))
@@ -337,6 +344,8 @@ const MODULE_ICONS: Record<string, string> = {
 		gap: 1.25rem;
 	}
 	.path-step {
+		position: relative;
+		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 		padding: 1.5rem;
@@ -355,12 +364,27 @@ const MODULE_ICONS: Record<string, string> = {
 		background: rgba(201, 169, 110, 0.04);
 		text-decoration: none;
 	}
-	.step-icon {
-		display: block;
-		color: var(--accent);
-		opacity: 0.72;
-		margin-bottom: 1em;
-		line-height: 1;
+	.path-step:hover .path-card-art {
+		opacity: 0.22;
+	}
+	.path-card-art {
+		position: absolute;
+		right: -10%;
+		top: 50%;
+		transform: translateY(-50%);
+		height: 115%;
+		width: auto;
+		opacity: 0.16;
+		filter: saturate(0.85) brightness(0.75);
+		pointer-events: none;
+		z-index: 0;
+		transition: opacity 0.2s ease;
+	}
+	.step-content {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
 	}
 	.step-num {
 		display: block;
@@ -543,6 +567,14 @@ const MODULE_ICONS: Record<string, string> = {
 		}
 		.path-steps {
 			grid-template-columns: repeat(2, 1fr);
+		}
+		.path-card-art {
+			right: -5%;
+			top: auto;
+			bottom: -10%;
+			transform: none;
+			height: 85%;
+			opacity: 0.12;
 		}
 	}
 	@media (max-width: 600px) {
