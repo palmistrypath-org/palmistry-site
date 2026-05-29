@@ -365,7 +365,21 @@ const MODULE_ART: Record<string, string> = {
 		text-decoration: none;
 	}
 	.path-step:hover .path-card-art {
-		opacity: 0.22;
+		opacity: 0.44;
+	}
+	/* Dark gradient overlay — sits above the artwork, below the text */
+	.path-step::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			to right,
+			rgba(13, 10, 26, 0.78) 0%,
+			rgba(13, 10, 26, 0.48) 52%,
+			rgba(13, 10, 26, 0.12) 100%
+		);
+		z-index: 1;
+		pointer-events: none;
 	}
 	.path-card-art {
 		position: absolute;
@@ -374,15 +388,16 @@ const MODULE_ART: Record<string, string> = {
 		transform: translateY(-50%);
 		height: 115%;
 		width: auto;
-		opacity: 0.16;
-		filter: saturate(0.85) brightness(0.75);
+		max-width: none; /* prevent browser clamping width and squishing aspect ratio */
+		opacity: 0.34;
+		filter: saturate(0.95) brightness(0.95);
 		pointer-events: none;
 		z-index: 0;
 		transition: opacity 0.2s ease;
 	}
 	.step-content {
 		position: relative;
-		z-index: 1;
+		z-index: 2;
 		display: flex;
 		flex-direction: column;
 	}
@@ -570,12 +585,14 @@ const MODULE_ART: Record<string, string> = {
 		}
 		.path-card-art {
 			right: -5%;
-			top: auto;
-			bottom: -10%;
-			transform: none;
-			height: 85%;
-			opacity: 0.12;
+			top: 50%;
+			bottom: auto;
+			transform: translateY(-50%);
+			height: 90%;
+			max-width: none;
+			opacity: 0.38;
 		}
+		/* On mobile the gradient overlay stays the same — text is left-anchored */
 	}
 	@media (max-width: 600px) {
 		/* Portrait mobile: match desktop crop position so the palm stays in frame,
