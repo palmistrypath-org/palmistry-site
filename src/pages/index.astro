@@ -546,9 +546,19 @@ const MODULE_ICONS: Record<string, string> = {
 		}
 	}
 	@media (max-width: 600px) {
-		/* Hide the background image on small screens — text legibility comes first */
-		.hero-image-wrap {
-			display: none;
+		/* Portrait mobile: keep image but dim it heavily — atmospheric only, text takes priority */
+		.hero-image {
+			object-position: right center;
+			filter: brightness(0.3) saturate(0.65);
+		}
+		.hero-image-wrap::after {
+			/* Stronger, more uniform overlay — centered text needs protection across full width */
+			background: linear-gradient(
+				to right,
+				rgba(13, 10, 26, 0.94) 0%,
+				rgba(13, 10, 26, 0.82) 50%,
+				rgba(13, 10, 26, 0.68) 100%
+			);
 		}
 	}
 	@media (max-width: 500px) {
