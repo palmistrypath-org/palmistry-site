@@ -5,7 +5,17 @@ import HeaderLink from './HeaderLink.astro';
 
 <header>
 	<nav aria-label="Site navigation">
-		<p class="site-title"><a href="/">{SITE_TITLE}</a></p>
+		<p class="site-title">
+		<a href="/">
+			<svg class="brand-mark" width="13" height="16" viewBox="0 0 13 16" aria-hidden="true" fill="none">
+				<ellipse cx="6.5" cy="9" rx="5" ry="6.5" stroke="currentColor" stroke-width="0.7" opacity="0.38"/>
+				<path d="M 10 6 C 7.5 5 4 5 2.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
+				<path d="M 2.5 9 C 5 8 8.5 8 10.5 9.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.72"/>
+				<path d="M 7 2.5 C 6.5 4 6 6 6 9 C 6 11.5 6.5 13.5 7 15.5" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" opacity="0.6"/>
+			</svg>
+			{SITE_TITLE}
+		</a>
+	</p>
 		<div class="internal-links">
 			<HeaderLink href="/" data-track="nav" data-track-location="header" data-track-target="home">Home</HeaderLink>
 			<HeaderLink href="/blog" data-track="nav" data-track-location="header" data-track-target="blog">Blog</HeaderLink>
@@ -35,6 +45,13 @@ import HeaderLink from './HeaderLink.astro';
 		color: var(--color-nav-text);
 		font-family: var(--font-cinzel), serif;
 		letter-spacing: 0.08em;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.38em;
+	}
+	.brand-mark {
+		flex-shrink: 0;
+		color: var(--color-nav-text);
 	}
 	nav {
 		display: flex;
@@ -84,7 +101,9 @@ import HeaderLink from './HeaderLink.astro';
 		/* Title link keeps its own tight padding — it's not a tap target */
 		.site-title a {
 			padding: 0 0 0.6em;
-			display: block;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 		.internal-links {
 			display: flex;
