@@ -1,4 +1,21 @@
 export const SITE_TITLE = 'Palmistry Path';
+
+// Amazon Associates affiliate tag.
+// Replace 'palmpath-20' with your real tag once you're enrolled at
+// affiliate-program.amazon.com — then also find-and-replace 'palmpath-20'
+// in any Markdown files that contain affiliate links directly.
+export const AMAZON_TAG = 'palmpath-20';
+
+// Google AdSense publisher ID.
+// Format: 'ca-pub-XXXXXXXXXXXXXXXX'
+// Leave empty ('') to disable AdSense (no script loads). Set it to your
+// real ID from adsense.google.com to enable auto-ads sitewide.
+export const ADSENSE_PUB_ID = '';
+
+// Gumroad product URL for the premium guide.
+// After creating your product at gumroad.com, paste the product URL here.
+// Example: 'https://palmistrypath.gumroad.com/l/complete-reference'
+export const PREMIUM_GUIDE_URL = 'https://palmistrypath.gumroad.com/l/complete-reference';
 export const SITE_DESCRIPTION =
 	'An educational resource on palm reading grounded in Indian, Chinese, and Western traditions.';
 

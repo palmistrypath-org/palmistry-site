@@ -1,0 +1,107 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`Affiliate Disclosure — ${SITE_TITLE}`}
+			description="Palmistry Path participates in the Amazon Associates program. Some links on this site are affiliate links — here is how that works."
+		/>
+		<style>
+			main section {
+				margin-bottom: 2.5em;
+			}
+			main h2 {
+				font-size: clamp(1.1rem, 3.5vw, 1.5em);
+				margin-top: 2em;
+				margin-bottom: 0.5em;
+				padding-bottom: 0.35em;
+				border-bottom: 1px solid rgba(201, 169, 110, 0.15);
+			}
+			.updated {
+				font-size: 0.8em;
+				color: var(--color-text-muted);
+				opacity: 0.65;
+				margin-bottom: 2em;
+			}
+			.notice {
+				padding: 1.25em 1.5em;
+				border: 1px solid rgba(201, 169, 110, 0.22);
+				border-radius: 6px;
+				background: rgba(255, 255, 255, 0.02);
+				font-size: 0.9em;
+				color: var(--color-text-muted);
+				line-height: 1.75;
+				margin-bottom: 2.5em;
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Affiliate Disclosure</h1>
+			<p class="updated">Last updated: June 2026</p>
+
+			<div class="notice">
+				<em>
+					Palmistry Path is a participant in the Amazon Services LLC Associates Program, an affiliate
+					advertising program designed to provide a means for sites to earn advertising fees by
+					advertising and linking to Amazon.com.
+				</em>
+			</div>
+
+			<section>
+				<h2>How Affiliate Links Work</h2>
+				<p>
+					Some links on this site — primarily in articles that recommend books — are affiliate links.
+					This means that if you click through to Amazon and make a purchase, we may earn a small
+					commission. The price you pay is the same as it would be without the link. There is no
+					extra cost to you.
+				</p>
+				<p>
+					Affiliate links are marked on pages where they appear with a notice at the top of the
+					article.
+				</p>
+			</section>
+
+			<section>
+				<h2>Editorial Independence</h2>
+				<p>
+					Affiliate relationships do not influence which books or resources are recommended here.
+					Every book listed in the <a href="/blog/beginner/best-palmistry-books-for-beginners/">reading list</a>
+					was selected on editorial grounds — historical significance, practical usefulness, or
+					intellectual credibility as a source on the tradition. The article was written to the same
+					standard as the rest of the site; affiliate links were added to existing recommendations,
+					not the other way around.
+				</p>
+				<p>
+					If a book is recommended here, it is because it has genuine value for the reader, not
+					because it earns a commission.
+				</p>
+			</section>
+
+			<section>
+				<h2>Amazon Associates Disclaimer</h2>
+				<p>
+					As an Amazon Associate, Palmistry Path earns from qualifying purchases made through links
+					on this site. Amazon and the Amazon logo are trademarks of Amazon.com, Inc., or its
+					affiliates.
+				</p>
+			</section>
+
+			<section>
+				<h2>Questions</h2>
+				<p>
+					If you have questions about this disclosure or about any specific link on the site, please
+					use the <a href="/contact/">contact page</a>.
+				</p>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

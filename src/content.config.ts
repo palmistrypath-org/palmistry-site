@@ -13,6 +13,7 @@ const blog = defineCollection({
 			heroImage: z.optional(image()),
 			relatedLesson: z.string().optional(),
 			cluster: z.string().optional(),
+			affiliate: z.boolean().optional(),
 		}),
 });
 

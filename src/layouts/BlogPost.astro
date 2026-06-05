@@ -8,9 +8,9 @@ import Header from '../components/Header.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import { SITE_TITLE } from '../consts';
 
-type Props = CollectionEntry<'blog'>['data'] & { postId: string };
+type Props = CollectionEntry<'blog'>['data'] & { postId: string; affiliate?: boolean };
 
-const { title, description, pubDate, updatedDate, heroImage, relatedLesson, cluster, postId } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, relatedLesson, cluster, affiliate, postId } = Astro.props;
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 
@@ -151,6 +151,46 @@ const breadcrumbSchema = JSON.stringify({
 				opacity: 0.75;
 				line-height: 1.65;
 			}
+			/* Affiliate notice */
+			.affiliate-notice {
+				font-size: 0.78em;
+				color: var(--color-text-muted);
+				opacity: 0.7;
+				border-left: 2px solid rgba(201, 169, 110, 0.22);
+				padding: 0.55em 1em;
+				margin-bottom: 2em;
+				line-height: 1.65;
+			}
+			.affiliate-notice a {
+				color: var(--color-text-muted);
+				text-decoration: underline;
+				text-underline-offset: 2px;
+				text-decoration-color: rgba(201, 169, 110, 0.3);
+				transition: color 0.2s ease, text-decoration-color 0.2s ease;
+			}
+			.affiliate-notice a:hover {
+				color: var(--accent);
+				text-decoration-color: rgba(201, 169, 110, 0.6);
+			}
+			/* Affiliate buy links inside article content */
+			:global(.book-buy-link) {
+				display: inline-block;
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.67em;
+				letter-spacing: 0.09em;
+				text-transform: uppercase;
+				color: var(--color-bg);
+				background: var(--accent);
+				text-decoration: none;
+				padding: 0.42em 1.1em;
+				border-radius: 3px;
+				margin: 0.5em 0 0.25em;
+				transition: background 0.2s ease;
+			}
+			:global(.book-buy-link:hover) {
+				background: var(--accent-light);
+				text-decoration: none;
+			}
 		</style>
 	</head>
 
@@ -176,6 +216,11 @@ const breadcrumbSchema = JSON.stringify({
 						<h1>{title}</h1>
 						<hr />
 					</div>
+					{affiliate && (
+						<p class="affiliate-notice">
+							This article contains affiliate links. If you buy through them, we earn a small commission at no extra cost to you. <a href="/affiliate-disclosure/">Affiliate disclosure.</a>
+						</p>
+					)}
 					<slot />
 					{
 						relatedLesson && (

@@ -3,6 +3,7 @@ title: "Cheiro and Palmistry: How to Read the Classic Sources Critically"
 description: "Cheiro remains the most widely read palmist in English. Here is what beginners should know about his books, his historical context, and how to read him critically."
 pubDate: 2026-05-27
 cluster: "resources"
+affiliate: true
 relatedLesson: "/learn/foundations/01-what-palmistry-is"
 ---
 
@@ -21,6 +22,8 @@ He also claimed to have studied palmistry in India, receiving training from Brah
 ## His main books
 
 Cheiro's two principal palmistry works are *The Language of the Hand* (1894) and *Palmistry for All* (1916). Both remain in print. *Palmistry for All* is the more accessible of the two — shorter, structured for a general readership, and for practical purposes the most usable form of his system. Both books cover the same core material: the major and minor lines, the mounts and their planetary associations, the shapes of the hand and fingers, and the interpretation of marks and signs. The planetary vocabulary — mount of Jupiter, mount of Saturn, mount of Apollo, and so on — runs throughout both texts and is the most durable element of his work. It is the foundation on which much of the [Western palmistry system](/blog/beginner/western-palmistry-basics/) that followed him was built.
+
+<a href="https://www.amazon.com/s?k=cheiro+palmistry+for+all&tag=palmpath-20" rel="nofollow sponsored" target="_blank" class="book-buy-link">Palmistry for All on Amazon →</a> <a href="https://www.amazon.com/s?k=cheiro+language+of+the+hand&tag=palmpath-20" rel="nofollow sponsored" target="_blank" class="book-buy-link">The Language of the Hand on Amazon →</a>
 
 ## What makes his work genuinely valuable
 

@@ -2,7 +2,7 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
-import { SITE_TITLE } from '../../consts';
+import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../../consts';
 ---
 
 <!doctype html>
@@ -149,6 +149,63 @@ import { SITE_TITLE } from '../../consts';
 				text-decoration-color: rgba(201, 169, 110, 0.6);
 			}
 
+			/* ── Upsell block ─────────────────────────────────────────── */
+			.upsell-block {
+				text-align: center;
+				border: 1px solid rgba(201, 169, 110, 0.22);
+				border-radius: 8px;
+				background: rgba(255, 255, 255, 0.02);
+				padding: 2em 1.5em 2.25em;
+				margin-bottom: 3em;
+			}
+			.upsell-eyebrow {
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.58em;
+				letter-spacing: 0.22em;
+				text-transform: uppercase;
+				color: var(--accent);
+				opacity: 0.75;
+				margin: 0 0 0.75em;
+			}
+			.upsell-block h2 {
+				font-size: clamp(1rem, 4vw, 1.4em);
+				color: var(--color-heading);
+				letter-spacing: 0.06em;
+				margin: 0 0 0.5em;
+			}
+			.upsell-desc {
+				font-size: 0.82em;
+				color: var(--color-text-muted);
+				max-width: 420px;
+				margin: 0 auto 1.4em;
+				line-height: 1.75;
+			}
+			.btn-upsell {
+				display: inline-block;
+				background: var(--accent);
+				color: var(--color-bg);
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.68em;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 0.85em 1.8em;
+				border-radius: 4px;
+				transition: background 0.2s ease, box-shadow 0.2s ease;
+			}
+			.btn-upsell:hover {
+				background: var(--accent-light);
+				box-shadow: 0 2px 14px rgba(201, 169, 110, 0.2);
+				text-decoration: none;
+			}
+			.upsell-price {
+				display: block;
+				margin-top: 0.75em;
+				font-size: 0.72em;
+				color: var(--color-text-muted);
+				opacity: 0.6;
+			}
+
 			/* ── Mobile ───────────────────────────────────────────────── */
 			@media (max-width: 600px) {
 				.thankyou-hero {
@@ -220,6 +277,30 @@ import { SITE_TITLE } from '../../consts';
 						</a>
 					</li>
 				</ul>
+			</div>
+
+			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
+
+			<div class="guide-section">
+				<div class="upsell-block">
+					<p class="upsell-eyebrow">For serious students</p>
+					<h2>The Complete Palmistry Reference</h2>
+					<p class="upsell-desc">
+						The Starter Guide covers the basics. The Complete Reference adds every significant line
+						variation, all eight mounts in full detail, minor lines, markings, fingers, and
+						cross-tradition comparison tables — in one printable PDF.
+					</p>
+					<a
+						href={PREMIUM_GUIDE_URL}
+						class="btn-upsell"
+						target="_blank"
+						rel="noopener"
+						data-track="cta"
+						data-track-location="thankyou-upsell"
+						data-track-target="premium-guide"
+					>Get the Complete Reference →</a>
+					<span class="upsell-price">$14 — one-time purchase, instant download</span>
+				</div>
 			</div>
 
 			<div class="guide-section footer-note">
