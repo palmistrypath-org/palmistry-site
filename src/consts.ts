@@ -10,7 +10,7 @@ export const AMAZON_TAG = 'palmpath-20';
 // Format: 'ca-pub-XXXXXXXXXXXXXXXX'
 // Leave empty ('') to disable AdSense (no script loads). Set it to your
 // real ID from adsense.google.com to enable auto-ads sitewide.
-export const ADSENSE_PUB_ID = '';
+export const ADSENSE_PUB_ID = 'ca-pub-1942922884645361';
 
 // Gumroad product URL for the premium guide.
 // After creating your product at gumroad.com, paste the product URL here.

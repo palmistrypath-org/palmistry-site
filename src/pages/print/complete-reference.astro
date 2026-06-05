@@ -1,0 +1,865 @@
+---
+// This page is designed to be printed to PDF via browser Print → Save as PDF.
+// The result is the "Complete Palmistry Reference" sold at /premium-guide/.
+// Access: palmistrypath.com/print/complete-reference/
+// After printing to PDF, upload the file to Kit Commerce or Gumroad.
+import { SITE_TITLE } from '../../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>The Complete Palmistry Reference — {SITE_TITLE}</title>
+		<meta name="robots" content="noindex" />
+		<style>
+			/* ── Base ─────────────────────────────────────────────────── */
+			* { box-sizing: border-box; margin: 0; padding: 0; }
+
+			:root {
+				--gold: #b8913c;
+				--gold-light: #d4a84e;
+				--ink: #1a1410;
+				--ink-mid: #3d3020;
+				--ink-muted: #6b5a40;
+				--bg: #fdf8f0;
+				--rule: rgba(184, 145, 60, 0.28);
+				--font-head: 'Georgia', 'Times New Roman', serif;
+				--font-body: 'Georgia', 'Times New Roman', serif;
+			}
+
+			body {
+				background: var(--bg);
+				color: var(--ink);
+				font-family: var(--font-body);
+				font-size: 9.5pt;
+				line-height: 1.55;
+			}
+
+			/* ── Page layout ──────────────────────────────────────────── */
+			.page {
+				width: 8.5in;
+				min-height: 11in;
+				margin: 0 auto;
+				padding: 0.65in 0.7in 0.75in;
+				background: var(--bg);
+			}
+
+			/* ── Cover ────────────────────────────────────────────────── */
+			.cover {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				min-height: 10in;
+				text-align: center;
+				border: 1px solid var(--rule);
+				border-radius: 4px;
+				padding: 2in 1in;
+				background: linear-gradient(
+					165deg,
+					rgba(184, 145, 60, 0.05) 0%,
+					rgba(253, 248, 240, 0) 60%
+				);
+			}
+			.cover-eyebrow {
+				font-size: 7pt;
+				letter-spacing: 0.28em;
+				text-transform: uppercase;
+				color: var(--gold);
+				margin-bottom: 1.2em;
+			}
+			.cover h1 {
+				font-size: 28pt;
+				letter-spacing: 0.06em;
+				color: var(--ink);
+				line-height: 1.2;
+				margin-bottom: 0.35em;
+			}
+			.cover-sub {
+				font-size: 11pt;
+				color: var(--ink-muted);
+				max-width: 4in;
+				line-height: 1.6;
+				margin-bottom: 2em;
+			}
+			.cover-rule {
+				width: 2.5in;
+				height: 1px;
+				background: var(--gold);
+				opacity: 0.35;
+				margin: 1.5em auto;
+			}
+			.cover-contents {
+				font-size: 8.5pt;
+				color: var(--ink-muted);
+				line-height: 2;
+				list-style: none;
+				text-align: left;
+			}
+			.cover-contents li::before {
+				content: '✦  ';
+				color: var(--gold);
+				opacity: 0.65;
+			}
+			.cover-footer {
+				margin-top: 3em;
+				font-size: 7.5pt;
+				color: var(--ink-muted);
+				opacity: 0.6;
+				letter-spacing: 0.1em;
+			}
+
+			/* ── Page header (all non-cover pages) ────────────────────── */
+			.page-header {
+				display: flex;
+				align-items: baseline;
+				justify-content: space-between;
+				border-bottom: 1px solid var(--rule);
+				padding-bottom: 0.3em;
+				margin-bottom: 1.4em;
+			}
+			.page-header-brand {
+				font-size: 7pt;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: var(--gold);
+				opacity: 0.7;
+			}
+			.page-header-title {
+				font-size: 7pt;
+				letter-spacing: 0.1em;
+				color: var(--ink-muted);
+				opacity: 0.7;
+				text-transform: uppercase;
+			}
+
+			/* ── Section headings ─────────────────────────────────────── */
+			h2 {
+				font-size: 13pt;
+				letter-spacing: 0.05em;
+				color: var(--ink);
+				border-bottom: 1px solid var(--rule);
+				padding-bottom: 0.25em;
+				margin: 1.4em 0 0.7em;
+			}
+			h2:first-of-type {
+				margin-top: 0;
+			}
+			h3 {
+				font-size: 9.5pt;
+				font-weight: bold;
+				color: var(--ink);
+				margin: 1em 0 0.3em;
+				letter-spacing: 0.02em;
+			}
+			h4 {
+				font-size: 8.5pt;
+				font-weight: bold;
+				color: var(--gold);
+				text-transform: uppercase;
+				letter-spacing: 0.12em;
+				margin: 0.75em 0 0.2em;
+			}
+
+			/* ── Body text ────────────────────────────────────────────── */
+			p {
+				margin-bottom: 0.55em;
+				color: var(--ink);
+			}
+			.muted {
+				color: var(--ink-muted);
+				font-size: 8.5pt;
+			}
+
+			/* ── Two-column grid ──────────────────────────────────────── */
+			.two-col {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 0 0.4in;
+			}
+			.two-col .col { }
+
+			/* ── Three-column grid ────────────────────────────────────── */
+			.three-col {
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				gap: 0 0.25in;
+			}
+
+			/* ── Reference card block ─────────────────────────────────── */
+			.ref-block {
+				border: 1px solid var(--rule);
+				border-radius: 3px;
+				padding: 0.55em 0.65em;
+				margin-bottom: 0.55em;
+				break-inside: avoid;
+			}
+			.ref-block-title {
+				font-size: 8.5pt;
+				font-weight: bold;
+				color: var(--ink);
+				margin-bottom: 0.2em;
+			}
+			.ref-block-body {
+				font-size: 8pt;
+				color: var(--ink-muted);
+				line-height: 1.5;
+			}
+
+			/* ── Table ────────────────────────────────────────────────── */
+			table {
+				width: 100%;
+				border-collapse: collapse;
+				font-size: 8.5pt;
+				margin-bottom: 1em;
+			}
+			thead th {
+				font-size: 7.5pt;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: var(--gold);
+				border-bottom: 1px solid var(--rule);
+				padding: 0.3em 0.4em;
+				text-align: left;
+				font-weight: normal;
+			}
+			tbody td {
+				padding: 0.3em 0.4em;
+				color: var(--ink);
+				border-bottom: 1px solid rgba(184,145,60,0.1);
+				vertical-align: top;
+				line-height: 1.45;
+			}
+			tbody td:first-child {
+				font-weight: bold;
+				color: var(--ink);
+				white-space: nowrap;
+			}
+
+			/* ── Observation sheet ────────────────────────────────────── */
+			.obs-field {
+				border-bottom: 1px solid var(--rule);
+				margin-bottom: 0.6em;
+				padding-bottom: 0.15em;
+			}
+			.obs-label {
+				font-size: 7.5pt;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: var(--ink-muted);
+				margin-bottom: 0.6em;
+			}
+			.obs-lines {
+				display: flex;
+				flex-direction: column;
+				gap: 0.38em;
+			}
+			.obs-line {
+				border-bottom: 1px solid rgba(184,145,60,0.18);
+				height: 0.25in;
+			}
+
+			/* ── Divider ornament ─────────────────────────────────────── */
+			.ornament {
+				text-align: center;
+				color: var(--gold);
+				opacity: 0.45;
+				letter-spacing: 0.4em;
+				font-size: 8pt;
+				margin: 1em 0;
+			}
+
+			/* ── Print-specific ───────────────────────────────────────── */
+			@media print {
+				body { background: white; }
+				.page { margin: 0; padding: 0.65in 0.7in 0.75in; }
+				.page-break { page-break-before: always; break-before: page; }
+				.avoid-break { page-break-inside: avoid; break-inside: avoid; }
+				h2 { page-break-after: avoid; break-after: avoid; }
+				h3 { page-break-after: avoid; break-after: avoid; }
+			}
+
+			/* ── Screen preview ───────────────────────────────────────── */
+			@media screen {
+				body { background: #ddd; }
+				.page {
+					margin: 0.5in auto;
+					box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+					page-break-after: always;
+				}
+				.print-hint {
+					text-align: center;
+					padding: 1em;
+					font-family: sans-serif;
+					font-size: 13px;
+					color: #555;
+					background: #f0f0f0;
+					border-bottom: 1px solid #ccc;
+				}
+			}
+		</style>
+	</head>
+	<body>
+
+		<div class="print-hint">
+			To create the PDF: <strong>File → Print → Save as PDF</strong> — use Letter/A4, no margins override.
+		</div>
+
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<!-- PAGE 1: COVER                                               -->
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<div class="page">
+			<div class="cover">
+				<p class="cover-eyebrow">Palmistry Path</p>
+				<h1>The Complete<br />Palmistry Reference</h1>
+				<p class="cover-sub">A thorough reference for the serious student — major lines, mounts, minor lines, markings, fingers, and cross-tradition notes in one printable guide.</p>
+				<div class="cover-rule"></div>
+				<ul class="cover-contents">
+					<li>The Four Major Lines — variations, branches, markings</li>
+					<li>All Eight Mounts — dominant, deficient, combined readings</li>
+					<li>Minor Lines and Markings</li>
+					<li>Hand Shapes and Finger Types</li>
+					<li>Cross-Tradition Comparison Tables</li>
+					<li>Practice Reading Sequence and Observation Sheet</li>
+				</ul>
+				<div class="cover-rule"></div>
+				<p class="cover-footer">palmistrypath.com · Educational reference · Not a predictive guide</p>
+			</div>
+		</div>
+
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<!-- PAGE 2: MAJOR LINES — PART 1                               -->
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<div class="page page-break">
+			<div class="page-header">
+				<span class="page-header-brand">Palmistry Path</span>
+				<span class="page-header-title">The Major Lines</span>
+			</div>
+
+			<h2>The Heart Line</h2>
+			<p class="muted">Runs across the upper palm, typically from below the little finger toward the index or middle finger. Traditionally associated with emotional character, relational tendencies, and, in some traditions, aspects of physical health.</p>
+
+			<div class="two-col">
+				<div class="col">
+					<h4>Endings</h4>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Ends below index finger</div>
+						<div class="ref-block-body">Often interpreted as idealism in relationships; high expectations of partners. Common in Western tradition.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Ends between index and middle finger</div>
+						<div class="ref-block-body">Associated with a balanced approach to emotion — idealistic but practical. Widely considered a favourable position.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Ends below middle finger</div>
+						<div class="ref-block-body">Sometimes associated with a more self-directed emotional life; may suggest placing high value on personal needs in relationships.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Forked ending</div>
+						<div class="ref-block-body">A fork at the terminus is traditionally associated with emotional adaptability. A pronounced fork reaching both the index and middle fingers is sometimes called the "writer's fork" in Cheiro's system.</div>
+					</div>
+
+					<h4>Qualities</h4>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Long and clear</div>
+						<div class="ref-block-body">Associated with emotional openness and a sustained capacity for connection.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Short</div>
+						<div class="ref-block-body">May suggest a more reserved or pragmatic emotional temperament; not a negative sign on its own.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Straight vs. curved</div>
+						<div class="ref-block-body">A straighter heart line is sometimes associated with a more rational emotional style; a more curved line with expressiveness and warmth.</div>
+					</div>
+				</div>
+				<div class="col">
+					<h4>Markings</h4>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Chained heart line</div>
+						<div class="ref-block-body">A chain-like texture throughout is traditionally associated with emotional inconsistency or sensitivity; in some Indian sources with variable health of the circulatory system.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Islands</div>
+						<div class="ref-block-body">Oval formations on the line; traditionally associated with periods of emotional difficulty or preoccupation. Position on the line is considered relevant — early, mid, or late.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Breaks</div>
+						<div class="ref-block-body">A clean break is traditionally associated with a significant emotional change or disruption. Overlapping breaks are generally read less dramatically than clean separations.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Branches rising</div>
+						<div class="ref-block-body">Fine lines rising from the heart line are often interpreted as periods of positive emotional experience or connection.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Branches falling</div>
+						<div class="ref-block-body">Lines falling from the heart line are traditionally associated with disappointment or emotional loss in some Western texts.</div>
+					</div>
+
+					<h4>Cross-tradition note</h4>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-body">In Hasta Samudrika Shastra, the equivalent line is read primarily in relation to the mount of Venus and considers broader constitutional factors. Chinese palmistry's Three Principal Lines use a different mapping framework (Tian, Di, Ren) and do not correspond directly to the Western heart/head/life structure.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<!-- PAGE 3: MAJOR LINES — HEAD AND LIFE                        -->
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<div class="page page-break">
+			<div class="page-header">
+				<span class="page-header-brand">Palmistry Path</span>
+				<span class="page-header-title">The Major Lines</span>
+			</div>
+
+			<div class="two-col">
+				<div class="col">
+					<h2>The Head Line</h2>
+					<p class="muted">Runs across the middle of the palm, usually from near the life line toward the percussion (outer edge). Traditionally associated with thinking style, mental approach, and intellectual character.</p>
+
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Long, reaching percussion</div>
+						<div class="ref-block-body">Associated with breadth of interests and imaginative thinking. May suggest difficulty narrowing focus.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Short, ending mid-palm</div>
+						<div class="ref-block-body">Associated with a direct, concrete thinking style; practical and decisive. Not a mark of lesser intelligence.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Straight</div>
+						<div class="ref-block-body">Typically associated with logical, methodical, or materially-focused thinking.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Curved downward (toward Luna)</div>
+						<div class="ref-block-body">Associated with imagination, creativity, and intuitive or narrative thinking. Strongly curved lines toward the lower palm are sometimes called "writer's head lines" in Western texts.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Forked ending</div>
+						<div class="ref-block-body">A fork is associated with versatility — the ability to think both practically and imaginatively. Called the "writer's fork" in some classical sources when one branch goes straight and one curves toward Luna.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Joined to life line at start</div>
+						<div class="ref-block-body">A common formation; traditionally associated with caution, sensitivity, and a family-influenced start to life. A long tie is sometimes read as dependence on others' approval; a short tie as normal caution.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Separated from life line at start</div>
+						<div class="ref-block-body">Associated with independence, confidence, and sometimes impulsiveness. The wider the separation, the more pronounced the interpretation tends to be in classical sources.</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<h2>The Life Line</h2>
+					<p class="muted">Curves around the mount of Venus (the fleshy base of the thumb). Traditionally associated with vitality, life path, and quality of experience — not length of life.</p>
+
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Wide arc around Venus</div>
+						<div class="ref-block-body">A wide, sweeping arc is traditionally associated with physical vitality, warmth, and generosity of spirit. The mount of Venus is correspondingly large.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Narrow arc, close to thumb</div>
+						<div class="ref-block-body">Associated with a more reserved or cautious temperament; reduced Venus mount. Some classical sources link this to limited vitality, though this should not be overstated.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Double life line</div>
+						<div class="ref-block-body">A second line running parallel inside the life line (toward Venus) is sometimes called the "inner life line" or "Mars line." Traditionally associated with additional vitality or a protective influence.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Broken life line</div>
+						<div class="ref-block-body">A break is traditionally associated with a significant change in life circumstances. An overlapping break (the new line begins before the old one ends) is generally read more positively — as a managed transition — than a clean gap.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Branches rising from life line</div>
+						<div class="ref-block-body">Lines rising toward the fingers are often associated with periods of ambition, effort, or new direction. Rising branches toward Jupiter are sometimes linked to professional ambition; toward Saturn, to responsibility and duty.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Short life line</div>
+						<div class="ref-block-body">Does not predict early death. A life line that ends mid-palm simply means the line terminates there. Its interpretation depends on quality, not length alone.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Important note on all lines</div>
+						<div class="ref-block-body">Palm lines change over time. Palmistry is better understood as a system of pattern recognition and self-reflection than as predictive. No feature should be read as deterministic.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<!-- PAGE 4: FATE LINE + MINOR LINES                            -->
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<div class="page page-break">
+			<div class="page-header">
+				<span class="page-header-brand">Palmistry Path</span>
+				<span class="page-header-title">Fate Line &amp; Minor Lines</span>
+			</div>
+
+			<div class="two-col">
+				<div class="col">
+					<h2>The Fate Line</h2>
+					<p class="muted">Runs vertically up the palm toward Saturn (middle finger). Traditionally associated with career path, life direction, and the degree to which external circumstances shape experience. Not present in all hands.</p>
+
+					<table>
+						<thead><tr><th>Formation</th><th>Traditional association</th></tr></thead>
+						<tbody>
+							<tr><td>From wrist to Saturn</td><td>Strong, unbroken career path; clear sense of direction from early life</td></tr>
+							<tr><td>Starting mid-palm</td><td>Direction clarified in mid-life; earlier years more open-ended</td></tr>
+							<tr><td>From Luna mount</td><td>Career influenced by the public, creative work, or others' support; associated with visibility in some texts</td></tr>
+							<tr><td>From life line</td><td>Self-made; career built through personal effort, sometimes under family influence early on</td></tr>
+							<tr><td>No fate line</td><td>Not negative — associated with self-directedness and flexible life path rather than a conventional career arc</td></tr>
+							<tr><td>Broken or deflected</td><td>Change in career or life direction; the new line's direction suggests where energy moved next</td></tr>
+							<tr><td>Double fate line</td><td>Two concurrent paths; sometimes associated with parallel careers or a major secondary commitment</td></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="col">
+					<h2>Key Minor Lines</h2>
+
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Sun Line (Apollo Line)</div>
+						<div class="ref-block-body">Runs toward the Apollo (ring) finger. Associated with success, recognition, and creative fulfilment. Strengthens when present, but absence does not indicate lack of talent. Can appear at any stage of the palm.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Mercury Line (Health Line)</div>
+						<div class="ref-block-body">Runs from the lower palm toward Mercury (little finger). Traditional associations include communication ability, commercial acumen, and — in some classical sources — aspects of health. Its absence is not considered negative; its presence as a strong, clear line is generally read positively.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Girdle of Venus</div>
+						<div class="ref-block-body">An arc above the heart line, sometimes running between Jupiter and Mercury. Associated with heightened emotional sensitivity and intensity. May appear as a complete arc or a series of fragments. In Benham's system, linked to nervous sensitivity.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Marriage / Relationship Lines</div>
+						<div class="ref-block-body">Short horizontal lines on the percussion beneath the little finger. Associated with significant relationships. Number of lines does not correspond directly to number of relationships; depth and clarity are considered more significant than quantity.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Via Lasciva / Allergy Line</div>
+						<div class="ref-block-body">A line on the lower Luna mount. Associated in different traditions with travel, sensitivity to substances, or restless temperament.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Simian Line</div>
+						<div class="ref-block-body">When the heart and head lines merge into a single line crossing the palm. Associated with intensity and single-mindedness — the capacity to focus completely on one thing. Neither positive nor negative on its own.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<!-- PAGE 5: THE MOUNTS                                         -->
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<div class="page page-break">
+			<div class="page-header">
+				<span class="page-header-brand">Palmistry Path</span>
+				<span class="page-header-title">The Eight Mounts</span>
+			</div>
+
+			<p class="muted" style="margin-bottom:1em">The mounts are fleshy pads across the palm, named for classical planets. <strong>Dominant:</strong> high, firm, well-developed — energies expressed strongly. <strong>Deficient:</strong> flat or hollow — qualities present but less pronounced. Neither extreme is inherently better. The dominant mount often indicates a primary temperamental quality.</p>
+
+			<div class="two-col">
+				<div class="col">
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Jupiter (below index finger)</div>
+						<div class="ref-block-body"><strong>Dominant:</strong> ambition, leadership, authority, confidence, expansiveness. <strong>Deficient:</strong> lack of ambition, self-effacement, difficulty asserting. <strong>Overdeveloped:</strong> arrogance, domineering tendency.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Saturn (below middle finger)</div>
+						<div class="ref-block-body"><strong>Dominant:</strong> seriousness, discipline, responsibility, patience, solitude. <strong>Deficient:</strong> irresponsibility, inconsistency. <strong>Overdeveloped:</strong> pessimism, withdrawal, fatalism.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Apollo (below ring finger)</div>
+						<div class="ref-block-body"><strong>Dominant:</strong> creativity, aesthetic sensibility, warmth, desire for recognition, appreciation of beauty. <strong>Deficient:</strong> creative block, indifference to aesthetics. <strong>Overdeveloped:</strong> vanity, extravagance.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Mercury (below little finger)</div>
+						<div class="ref-block-body"><strong>Dominant:</strong> communication skill, wit, commercial ability, adaptability, quick thinking. <strong>Deficient:</strong> difficulty communicating, poor commercial instinct. <strong>Overdeveloped:</strong> cunning, deceptiveness.</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Venus (base of thumb)</div>
+						<div class="ref-block-body"><strong>Dominant:</strong> warmth, vitality, generosity, affection, love of beauty and pleasure. <strong>Deficient:</strong> coldness, low physical vitality, difficulty connecting. <strong>Overdeveloped:</strong> sensuality without restraint, excess.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Luna / Moon (lower percussion)</div>
+						<div class="ref-block-body"><strong>Dominant:</strong> imagination, intuition, love of travel and change, dreaminess, creative vision. <strong>Deficient:</strong> lack of imagination, poor intuitive connection. <strong>Overdeveloped:</strong> fantasy, impracticality, restlessness.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Upper Mars (between Mercury and Luna)</div>
+						<div class="ref-block-body"><strong>Dominant:</strong> moral courage, persistence, resistance under pressure, endurance. Associated with the defensive qualities of Mars as distinct from aggressive initiative.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Lower Mars (between Jupiter and Venus)</div>
+						<div class="ref-block-body"><strong>Dominant:</strong> physical courage, aggression, initiative, combativeness. <strong>Deficient:</strong> timidity, avoidance of confrontation. <strong>Overdeveloped:</strong> violence, ruthlessness.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Reading mount combinations</div>
+						<div class="ref-block-body">A hand rarely has one dramatically dominant mount. Look at relative development: which two or three mounts stand out compared to the others? The combination shapes character more than any single mount in isolation. Jupiter + Venus suggests warmth with ambition; Saturn + Luna suggests creative solitude; Mercury + Apollo suggests communicative creativity.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<!-- PAGE 6: HAND SHAPES + FINGERS                              -->
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<div class="page page-break">
+			<div class="page-header">
+				<span class="page-header-brand">Palmistry Path</span>
+				<span class="page-header-title">Hand Shapes &amp; Fingers</span>
+			</div>
+
+			<h2>Elemental Hand Shapes</h2>
+			<p class="muted" style="margin-bottom:0.8em">The four-element typology was developed by Fred Gettings (1965) and is now widely used in Western palmistry. Most hands are a blend — identify the dominant type by overall proportion.</p>
+
+			<div class="two-col">
+				<div class="col">
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Earth Hand</div>
+						<div class="ref-block-body"><strong>Form:</strong> Square palm, short fingers (roughly palm-width or less in length). Skin often firm or rough. Lines relatively few and clearly marked.<br/><strong>Associations:</strong> Practicality, groundedness, reliability, physical competence, patience. Connection to material and natural world. Possible difficulty with abstraction or change.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Air Hand</div>
+						<div class="ref-block-body"><strong>Form:</strong> Square or slightly rectangular palm, long fingers (longer than palm width). Skin fine. Lines often numerous and finely marked.<br/><strong>Associations:</strong> Intellectual curiosity, communication, sociability, versatility, analysis. May be prone to overthinking or inconsistency.</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Fire Hand</div>
+						<div class="ref-block-body"><strong>Form:</strong> Rectangular or oblong palm, short fingers. Often energetic appearance. Lines numerous, sometimes irregular.<br/><strong>Associations:</strong> Enthusiasm, initiative, charisma, impulsiveness, creativity and risk-taking. May lack follow-through.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Water Hand</div>
+						<div class="ref-block-body"><strong>Form:</strong> Long, oval palm, long fingers. Skin fine, sometimes soft. Lines numerous and often fine.<br/><strong>Associations:</strong> Emotional sensitivity, empathy, intuition, artistic receptivity. Can be easily influenced or overwhelmed.</div>
+					</div>
+				</div>
+			</div>
+
+			<h2>Fingers and Thumb</h2>
+			<div class="two-col">
+				<div class="col">
+					<h3>Finger length and set</h3>
+					<table>
+						<thead><tr><th>Feature</th><th>Association</th></tr></thead>
+						<tbody>
+							<tr><td>Long Jupiter (index)</td><td>Leadership, ambition, need for recognition</td></tr>
+							<tr><td>Short Jupiter</td><td>Self-deprecation, avoidance of authority</td></tr>
+							<tr><td>Long Saturn (middle)</td><td>Seriousness, responsibility, caution</td></tr>
+							<tr><td>Long Apollo (ring)</td><td>Creative confidence, desire for visibility</td></tr>
+							<tr><td>Long Mercury (little)</td><td>Communication skill, persuasiveness</td></tr>
+							<tr><td>Low-set Mercury</td><td>Common variant; sometimes associated with adaptability</td></tr>
+							<tr><td>Fingers wide apart at rest</td><td>Independence of thought, openness</td></tr>
+							<tr><td>Fingers held close together</td><td>Caution, self-containment</td></tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="col">
+					<h3>The thumb</h3>
+					<p class="muted" style="margin-bottom:0.6em">The thumb receives detailed treatment in most Western sources, particularly Cheiro and Benham. Three key features:</p>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Angle from hand</div>
+						<div class="ref-block-body">A wide angle (90° or more) is associated with generosity, openness, independence. A narrow angle (close to the palm) with caution, control, possible guardedness.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Flexibility</div>
+						<div class="ref-block-body">A flexible thumb that bends back easily: adaptability, generosity, responsiveness to others. A firm, unbending thumb: determination, stubbornness, fixed principles.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">Phalanges</div>
+						<div class="ref-block-body">Top phalange (will): long = strong determination; short = weak follow-through. Middle phalange (logic): long = reasoning before action; waist-shaped = diplomatic tact.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<!-- PAGE 7: MARKINGS + CROSS-TRADITION TABLE                   -->
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<div class="page page-break">
+			<div class="page-header">
+				<span class="page-header-brand">Palmistry Path</span>
+				<span class="page-header-title">Markings &amp; Traditions</span>
+			</div>
+
+			<div class="two-col">
+				<div class="col">
+					<h2>Palm Markings</h2>
+					<p class="muted" style="margin-bottom:0.7em">Markings appear on lines and on the mounts. Their significance depends on location and context. No single marking should be read in isolation.</p>
+
+					<table>
+						<thead><tr><th>Marking</th><th>Traditional association</th></tr></thead>
+						<tbody>
+							<tr><td>Island</td><td>Oval formation on a line; associated with a period of difficulty, division of energy, or reduced clarity. Position matters: early, mid, or late in the line.</td></tr>
+							<tr><td>Break</td><td>Gap in a line; associated with change or interruption. Overlapping breaks are less dramatic than clean separations.</td></tr>
+							<tr><td>Cross</td><td>Two lines crossing; on a mount, associated with obstacles or significant events. On the Jupiter mount, sometimes called a "union cross" in classical texts and associated with important partnerships.</td></tr>
+							<tr><td>Star</td><td>Multiple lines radiating from one point; on a mount, traditionally a mark of intensity — positive on Apollo and Jupiter, less so on Saturn. Rare.</td></tr>
+							<tr><td>Square</td><td>Four lines forming a box; traditionally a protective sign, associated with resilience or recovery near breaks or difficult areas.</td></tr>
+							<tr><td>Triangle</td><td>Three lines forming a triangle; traditionally positive — associated with mental ability when found on or near the head line.</td></tr>
+							<tr><td>Grille</td><td>Grid-like texture on a mount; associated with dissipated or frustrated energy in that mount's domain. On Venus, sometimes linked to excess.</td></tr>
+							<tr><td>Chain</td><td>Chain-like texture on a line; associated with variability, sensitivity, or divided energy throughout the period represented.</td></tr>
+							<tr><td>Dot</td><td>A marked point on a line; associated with a specific event or moment of intensity. Less common to identify reliably.</td></tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div class="col">
+					<h2>Cross-Tradition Overview</h2>
+					<p class="muted" style="margin-bottom:0.7em">Western, Indian, and Chinese palmistry are distinct systems. Where they appear to describe the same feature, the underlying framework may differ significantly.</p>
+
+					<table>
+						<thead><tr><th>Topic</th><th>Western</th><th>Indian (Hasta Samudrika Shastra)</th><th>Chinese</th></tr></thead>
+						<tbody>
+							<tr>
+								<td>Primary framework</td>
+								<td>Planetary mounts; four major lines; element hand types</td>
+								<td>Hasta Samudrika Shastra; constitutional types; Sanskrit terminology</td>
+								<td>Five Elements; Tian Di Ren (Heaven, Earth, Person) line mapping</td>
+							</tr>
+							<tr>
+								<td>Active/passive hand</td>
+								<td>Dominant = active (current life); non-dominant = passive (potential/inheritance)</td>
+								<td>Right hand traditionally primary for men, left for women in classical sources; contemporary practice varies</td>
+								<td>Varies by school; left/right distinction present but not universal</td>
+							</tr>
+							<tr>
+								<td>Heart line</td>
+								<td>Emotional character and relationship tendencies</td>
+								<td>Related to cardiac constitution and broader vital force</td>
+								<td>Maps to "Tian" (heaven) line in some schools; different conceptual basis</td>
+							</tr>
+							<tr>
+								<td>Mounts</td>
+								<td>Seven classical planetary mounts plus Mars regions</td>
+								<td>Mount equivalents present but named differently; not identical system</td>
+								<td>Five-element zones replace planetary system</td>
+							</tr>
+							<tr>
+								<td>Prediction</td>
+								<td>Classical sources often predictive in tone; contemporary practice more reflective</td>
+								<td>Traditional Indian sources more explicitly predictive in orientation</td>
+								<td>Varied; fate-reading orientation present in classical schools</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<div class="ref-block avoid-break" style="margin-top:0.8em">
+						<div class="ref-block-title">When traditions disagree</div>
+						<div class="ref-block-body">Note the disagreement rather than resolving it artificially. A feature with conflicting traditional readings in different systems is genuinely ambiguous — honest interpretation acknowledges this rather than selecting one tradition's answer as correct.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<!-- PAGE 8: PRACTICE READING GUIDE + OBSERVATION SHEET        -->
+		<!-- ═══════════════════════════════════════════════════════════ -->
+		<div class="page page-break">
+			<div class="page-header">
+				<span class="page-header-brand">Palmistry Path</span>
+				<span class="page-header-title">Practice Reading Sequence</span>
+			</div>
+
+			<div class="two-col">
+				<div class="col">
+					<h2>Reading Sequence</h2>
+					<p class="muted" style="margin-bottom:0.8em">Work through a reading in this order. Earlier observations provide context for later ones. Avoid jumping to lines before you've assessed the hand as a whole.</p>
+
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">1. Initial impression</div>
+						<div class="ref-block-body">Before examining any specific feature, note your overall impression of the hand. Size relative to body; firmness or softness; skin texture; colour. These give a baseline sense of constitution and vitality.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">2. Hand shape</div>
+						<div class="ref-block-body">Identify the elemental type (Earth, Air, Fire, Water). If mixed, note which two types dominate. Record on the observation sheet before moving on.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">3. Thumb</div>
+						<div class="ref-block-body">Assess angle, flexibility, and phalange proportions. The thumb is often described as the most reliable single indicator of will and logic.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">4. Fingers</div>
+						<div class="ref-block-body">Note relative length of each finger, their set (high/low), and whether they're held closely together or spread apart. Identify which finger is most prominent.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">5. Mounts</div>
+						<div class="ref-block-body">Assess all eight mounts for relative development. Which two or three stand out? Note dominant, secondary, and any notably flat mounts. This shapes your interpretation of the lines.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">6. Major lines</div>
+						<div class="ref-block-body">Heart → Head → Life → Fate. For each: note length, depth/clarity, path, endings, and any significant markings (islands, breaks, branches, chains). Refer to this guide for specific formations.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">7. Minor lines and markings</div>
+						<div class="ref-block-body">Sun line, Mercury line, Girdle of Venus, relationship lines. Note presence or absence. On the mounts, look for crosses, stars, or grilles.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">8. Synthesis</div>
+						<div class="ref-block-body">Read the hand as a whole, not as a list of features. Where do the hand shape, dominant mounts, and major lines point consistently? Where do they seem to contradict? Contradictions are often the most interesting part of a reading.</div>
+					</div>
+					<div class="ref-block avoid-break">
+						<div class="ref-block-title">9. Compare both hands</div>
+						<div class="ref-block-body">The passive hand shows baseline or inherited patterns; the dominant hand shows how they've developed. Significant differences between the two are worth noting and discussing.</div>
+					</div>
+				</div>
+
+				<div class="col">
+					<h2>Observation Sheet</h2>
+					<p class="muted" style="margin-bottom:0.8em">Use for your own hand or when practising with others. Fill in as you work through the sequence above.</p>
+
+					<div class="obs-field">
+						<div class="obs-label">Date / Subject</div>
+						<div class="obs-lines"><div class="obs-line"></div></div>
+					</div>
+					<div class="obs-field">
+						<div class="obs-label">Hand shape (dominant type)</div>
+						<div class="obs-lines"><div class="obs-line"></div></div>
+					</div>
+					<div class="obs-field">
+						<div class="obs-label">Thumb (angle / flexibility / phalanges)</div>
+						<div class="obs-lines"><div class="obs-line"></div><div class="obs-line"></div></div>
+					</div>
+					<div class="obs-field">
+						<div class="obs-label">Dominant mount(s)</div>
+						<div class="obs-lines"><div class="obs-line"></div></div>
+					</div>
+					<div class="obs-field">
+						<div class="obs-label">Heart line (length / path / markings)</div>
+						<div class="obs-lines"><div class="obs-line"></div><div class="obs-line"></div></div>
+					</div>
+					<div class="obs-field">
+						<div class="obs-label">Head line (length / curve / start)</div>
+						<div class="obs-lines"><div class="obs-line"></div><div class="obs-line"></div></div>
+					</div>
+					<div class="obs-field">
+						<div class="obs-label">Life line (arc / markings / branches)</div>
+						<div class="obs-lines"><div class="obs-line"></div><div class="obs-line"></div></div>
+					</div>
+					<div class="obs-field">
+						<div class="obs-label">Fate line (present? origin / path)</div>
+						<div class="obs-lines"><div class="obs-line"></div></div>
+					</div>
+					<div class="obs-field">
+						<div class="obs-label">Minor lines noted</div>
+						<div class="obs-lines"><div class="obs-line"></div></div>
+					</div>
+					<div class="obs-field">
+						<div class="obs-label">Key markings (islands, breaks, stars, crosses)</div>
+						<div class="obs-lines"><div class="obs-line"></div><div class="obs-line"></div></div>
+					</div>
+					<div class="obs-field">
+						<div class="obs-label">Overall synthesis / main themes</div>
+						<div class="obs-lines"><div class="obs-line"></div><div class="obs-line"></div><div class="obs-line"></div><div class="obs-line"></div></div>
+					</div>
+					<div class="obs-field">
+						<div class="obs-label">Questions / areas to revisit</div>
+						<div class="obs-lines"><div class="obs-line"></div><div class="obs-line"></div></div>
+					</div>
+
+					<div class="ornament" style="margin-top:1.2em">✦ · ✦ · ✦</div>
+					<p class="muted" style="text-align:center;font-size:7.5pt;margin-top:0.5em">palmistrypath.com · For educational use · Not a predictive guide</p>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
