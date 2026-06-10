@@ -230,11 +230,76 @@ import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../consts';
 				text-underline-offset: 2px;
 			}
 
+			/* ── Notify section ───────────────────────────────────────── */
+			.notify-section {
+				text-align: center;
+				padding: 3em 1em 2em;
+				border-top: 1px solid rgba(201, 169, 110, 0.15);
+			}
+			.notify-note {
+				font-size: 0.88em;
+				color: var(--color-text-muted);
+				max-width: 480px;
+				margin: 0 auto 1.75em;
+				line-height: 1.75;
+			}
+			.notify-form-wrap {
+				max-width: 420px;
+				margin: 0 auto;
+			}
+			#notify-form {
+				display: flex;
+				gap: 0.5em;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			#notify-form input[type="email"] {
+				flex: 1 1 220px;
+				padding: 0.65em 1em;
+				border: 1px solid rgba(201, 169, 110, 0.35);
+				border-radius: 4px;
+				background: rgba(255, 255, 255, 0.05);
+				color: var(--color-text);
+				font-family: var(--font-lora);
+				font-size: 0.9em;
+			}
+			#notify-form input[type="email"]::placeholder { opacity: 0.5; }
+			#notify-form button {
+				padding: 0.65em 1.25em;
+				background: var(--color-gold, #c9a96e);
+				color: #1a1208;
+				border: none;
+				border-radius: 4px;
+				font-family: var(--font-cinzel);
+				font-size: 0.8em;
+				letter-spacing: 0.04em;
+				cursor: pointer;
+				transition: opacity 0.2s ease;
+				white-space: nowrap;
+			}
+			#notify-form button:hover { opacity: 0.85; }
+			.notify-caveat {
+				font-size: 0.72em;
+				color: var(--color-text-muted);
+				opacity: 0.6;
+				margin-top: 0.9em;
+				line-height: 1.6;
+			}
+			.notify-caveat a { color: inherit; }
+			.notify-error, .notify-success {
+				font-size: 0.82em;
+				margin-top: 0.75em;
+			}
+			.notify-success { color: var(--color-gold, #c9a96e); }
+			.notify-error { color: #e07070; }
+
 			/* ── Mobile ───────────────────────────────────────────────── */
 			@media (max-width: 600px) {
 				.hero { padding: 3em 1em 2em; }
 				.contents-grid { grid-template-columns: 1fr; gap: 1.1em; margin-bottom: 2.5em; }
 				.comparison-table th, .comparison-table td { padding: 0.55em 0.6em; }
+				#notify-form { flex-direction: column; align-items: stretch; }
+				#notify-form input[type="email"], #notify-form button { flex: none; width: 100%; }
 			}
 		</style>
 	</head>
@@ -370,6 +435,35 @@ import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../consts';
 				</p>
 			</div>
 
+			<div class="section notify-section">
+				<h2 class="section-heading">Get notified when it's available</h2>
+				<p class="notify-note">
+					The Complete Reference is in final preparation. Leave your email and we'll send you a link the moment it's ready — plus an early-access discount.
+				</p>
+				<div class="notify-form-wrap">
+					<form
+						id="notify-form"
+						action="https://app.kit.com/forms/9489555/subscriptions"
+						method="post"
+						aria-label="Notify me when available"
+					>
+						<label for="notify-email" class="sr-only">Email address</label>
+						<input
+							type="email"
+							id="notify-email"
+							name="email_address"
+							placeholder="Your email address"
+							autocomplete="email"
+							required
+						/>
+						<button type="submit" id="notify-btn" data-track="cta" data-track-location="premium-guide-notify" data-track-target="notify-submit">Notify Me →</button>
+					</form>
+					<p class="notify-error" id="notify-error" style="display:none;">Something went wrong — please try again.</p>
+					<p class="notify-success" id="notify-success" style="display:none;">You're on the list. We'll email you when it's ready.</p>
+					<p class="notify-caveat">No spam. Just the launch email and occasional Palmistry Path notes. <a href="/privacy/" class="caveat-link">Privacy policy.</a></p>
+				</div>
+			</div>
+
 			<div class="section bottom-cta">
 				<p class="bottom-cta-note">
 					One-time purchase. Instant download as a printable PDF. No subscription, no account required.
@@ -389,5 +483,35 @@ import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../consts';
 			</div>
 		</main>
 		<Footer />
+		<script>
+			const form = document.getElementById('notify-form') as HTMLFormElement | null;
+			const btn = document.getElementById('notify-btn') as HTMLButtonElement | null;
+			const errorMsg = document.getElementById('notify-error');
+			const successMsg = document.getElementById('notify-success');
+			const emailInput = document.getElementById('notify-email') as HTMLInputElement | null;
+
+			form?.addEventListener('submit', async (e) => {
+				e.preventDefault();
+				if (!emailInput?.value || !btn) return;
+				btn.textContent = 'Submitting…';
+				btn.disabled = true;
+				try {
+					const res = await fetch('https://app.kit.com/forms/9489555/subscriptions', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+						body: new URLSearchParams({ email_address: emailInput.value }),
+					});
+					if (res.ok) {
+						form.style.display = 'none';
+						if (successMsg) successMsg.style.display = 'block';
+					} else {
+						throw new Error('non-ok');
+					}
+				} catch {
+					if (btn) { btn.textContent = 'Notify Me →'; btn.disabled = false; }
+					if (errorMsg) errorMsg.style.display = 'block';
+				}
+			});
+		</script>
 	</body>
 </html>
