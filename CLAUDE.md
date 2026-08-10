@@ -1,93 +1,57 @@
-# CLAUDE.md
+# Claude Code — Palmistry Path
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+`AGENTS.md` is the shared operating policy. Follow it first. Do not reread the entire repo or wiki at session start.
 
-# Claude Code Behavior — Palmistry Path
+## Small-studio model
+Use the least expensive model that can reliably handle the task.
 
-## Session startup
-Always read PROJECT.md first. Do not ask what the project is.
+- **Opus — Director:** product/editorial judgment, architecture, difficult debugging, high-risk SEO/content-model changes, delegation, synthesis, final quality review.
+- **Sonnet — Lead engineer/editor:** normal implementation planning, routine debugging, focused code/content work, standard code review.
+- **Haiku — Scout/verifier:** bounded searches, inventories, locating files/slugs/assets, docs audits, checklists, mechanical verification.
+- **Codex — Independent technical reviewer:** prefer as an external second set of eyes for meaningful code/architecture changes when independent review is useful. Do not duplicate the same exploratory work in both systems without a reason.
 
-## Article writing workflow
-1. Give pre-draft report only (sources, flags, word count, preview URL)
-2. Write directly to file — never print article content to chat
-3. Wait for approval before committing
-4. Commit and push only after explicit approval
-5. /clear between articles
+Escalate when uncertainty or downstream risk justifies it. Do not push product judgment or high-risk decisions to a cheaper worker just to save tokens.
 
-## Research rules
-- Use established sources: Cheiro (1916), Benham (1900), Gettings (1965), West (1998), Fincham (2005)
-- No broad web research — single targeted search only if needed to verify one specific claim
-- Never invent palmistry meanings or attribute claims without a source
+## Token discipline
+- Search/grep first; targeted ranges second; whole large files only when necessary.
+- Do not bulk-read `docs/`, content collections, or source directories.
+- Do not reread unchanged docs during the same bounded task.
+- For review, inspect the Git diff first, then relevant surrounding code/content.
+- Read only recent/relevant decisions and roadmap sections.
+- Old debugging attempts, superseded plans, logs, worker reasoning, and exploration are disposable once conclusions are captured in repo docs/Git.
+- Keep worker prompts minimal and worker reports concise.
 
-## Editorial standards
-- "Traditionally associated with..." not "means..."
-- "Often interpreted as..." not "indicates..."
-- "May suggest..." not "shows that..."
-- Note genuine cross-tradition disagreement — never synthesize false consensus
-- Acknowledge Cheiro's historical framings briefly where relevant, then present contemporary practice
-- Never claim palmistry predicts the future or has medical validity
-- No medical claims, relationship advice, or legal claims
+## `/clear` and `/compact`
+- After a meaningful task reaches a stable boundary—validated, canonical docs/handoff updated, and committed/pushed when permitted—recommend `/clear` before the next substantial task.
+- A fresh session should reconstruct from Git + repo docs, not chat history.
+- Use `/compact` only when continuing the **same unfinished substantial task** and losing live context would be wasteful.
+- Before compacting, ensure `docs/ACTIVE_TASK.md` contains the objective, authorized scope, approved decisions, involved files/systems, current state, unresolved risks/test gaps, and exact next action.
+- Compaction should preserve facts, not historical exploration.
 
-## Tradition handling
-- Indian palmistry: name Sanskrit terms accurately, include where they add something the Western tradition doesn't cover
-- Chinese palmistry: note where it classifies things differently without forcing comparison
-- Gender conventions: acknowledge in historical articles, default to active/passive hand framing in practical articles
-- Brevity principle: two well-placed sentences about a tradition are better than a paragraph
+## Editorial workflow
+For new or materially rewritten articles, preserve the approval gate in `AGENTS.md`: concise pre-draft report → write to file → user approval → validation/commit/push. Never print the entire article to chat unless the user explicitly asks.
 
-## Article structure (minor lines and mounts)
-Opening → Location → Traditional associations → Presence/absence if relevant → Variations → Cross-tradition → Synthesis → Common myths → Sources note
+Primary established Western references include Cheiro (1916), Benham (1900), Gettings (1965), West (1998), and Fincham (2005). Use targeted research only when needed; never invent meanings or attributions. For detailed voice, structure, tradition handling, and content rules, read only the relevant sections of `docs/editorial-style-guide.md` and `docs/article-template.md`.
 
-## Token efficiency
-- Never print full article content to chat
-- Keep pre-draft reports concise
-- Flag only genuine editorial decisions — don't ask about things that follow established patterns
-
-## Voice
-Educational, grounded, curious, mystical in atmosphere but not woo-woo. Match the tone of existing articles. Read one existing article if unsure.
-
----
+Voice: educational, grounded, curious, respectful, and atmospheric without becoming woo-woo.
 
 ## Development commands
-
 ```bash
-npm run dev        # local dev server at localhost:4321
-npm run build      # static build to dist/ (also runs pagefind indexing)
-npm run preview    # serve dist/ locally after a build
+npm run dev
+npm run build
+npm run preview
+npm run audit
+npm run audit:images
+npm run audit:schema
+npm run audit:all
+npm run content-audit
 ```
 
-No test runner or linter is configured. TypeScript is checked implicitly by Astro's build step — type errors surface as build failures.
+Use the risk-based validation matrix in `AGENTS.md`; do not run every command for every tiny documentation edit.
 
----
-
-## Architecture
-
-**Static site generator:** Astro 6 with static output. No server-side rendering.
-
-**Two content collections** defined in `src/content.config.ts`:
-
-| Collection | Source | URL pattern | Layout |
-|---|---|---|---|
-| `blog` | `src/content/blog/**/*.md` | `/blog/<id>/` | `src/layouts/BlogPost.astro` |
-| `lessons` | `src/content/lessons/**/*.md` | `/learn/<module>/<lesson>/` | `src/pages/learn/[module]/[lesson].astro` |
-
-Blog posts are routed via `src/pages/blog/[...slug].astro`, which uses `post.id` as the slug (the file path relative to `src/content/blog/`, without the extension). Lesson routing uses explicit `[module]` and `[lesson]` segments.
-
-**Frontmatter fields:**
-
-*Blog posts (`blog` collection):*
-- `title` — becomes both the `<h1>` on the page and the `<title>` tag (formatted as `"${title} — Palmistry Path"`)
-- `description` — populates `<meta name="description">`, OG/Twitter tags, the Article schema, and the blog listing excerpt
-- `pubDate`, `updatedDate` — rendered by `FormattedDate` component
-- `relatedLesson` — optional path string (e.g. `/learn/lines/02-heart-line`); when present, renders the "Go deeper" CTA block at the bottom of the article
-
-*Lessons (`lessons` collection):* `title`, `description`, `module`, `moduleTitle`, `order`, `pubDate`, `difficulty`, `duration`, `prerequisites`, `relatedArticle`, `heroImage`.
-
-**No separate SEO title vs display title field.** `title` is used for both. Changing `title` changes the H1, the `<title>` tag, breadcrumb schema, and Article schema headline simultaneously.
-
-**Key layout:** `src/layouts/BlogPost.astro` — renders the full blog post page. Injects Article and BreadcrumbList structured data as inline JSON-LD. The "Go deeper" CTA renders only when `relatedLesson` is set.
-
-**Fonts:** Cinzel (headings, Cinzel Decorative feel) and Lora (body), loaded via Astro's Google Font provider at build time. CSS variables: `--font-cinzel`, `--font-lora`.
-
-**Search:** Pagefind (`astro-pagefind`) — runs as part of `astro build`, indexes all static pages, outputs to `dist/pagefind/`. Search UI is at `/search/`.
-
-**Modules registry:** `src/consts.ts` — the `MODULES` array defines the four curriculum modules (foundations, lines, mounts, advanced) used by the Learn index page and navigation.
+## Project-specific rules
+- Inspect implementation before proposing changes.
+- Preserve established systems unless the task explicitly changes them.
+- Treat `docs/IDEAS_AND_EXPERIMENTS.md` as non-authoritative brainstorming.
+- Keep the repo understandable to a fresh Claude/Codex session without chat history.
+- `PROJECT.md` is a compatibility pointer only; canonical project context lives under `docs/`.
