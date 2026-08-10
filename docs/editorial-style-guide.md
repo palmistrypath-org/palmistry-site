@@ -83,28 +83,54 @@ Palmistry Path draws on three primary traditions: Western palmistry (especially 
 
 ## 5. Sources
 
-**Approved primary sources:**
+### 5.1 Source tiers
+
+Every citation on this site must sit in one of four tiers. Tier decides what a source is allowed to carry, not merely whether it may be mentioned.
+
+**Tier 1 — Primary and historical source texts.** The tradition speaking in its own voice. Cite by work and edition.
+
+| Author | Work | Year | Tradition |
+|---|---|---|---|
+| Cheiro (William John Warner) | *Palmistry for All* | 1916 | Western |
+| Cheiro | *Cheiro's Language of the Hand* | 1894/1897 | Western |
+| William G. Benham | *The Laws of Scientific Hand Reading* | 1900 | Western |
+| Comte de Saint-Germain | *The Practice of Palmistry* | 1897 | Western |
+| Stanislas d'Arpentigny | *La Chirognomonie* | 1843 | Western |
+| Varāhamihira | *Bṛhat Saṃhitā*, chs. 68–70 (*puruṣa-lakṣaṇa*) | 6th c. CE | Indian |
+| — | *Shenxiang quanbian* and the Chinese physiognomy compendia | Ming, from earlier material | Chinese |
+
+**Tier 2 — Serious secondary and reference works.** Modern practitioner-scholars and academic treatments of the traditions.
 
 | Author | Work | Year |
 |---|---|---|
-| Cheiro (Count Louis Hamon) | *Palmistry for All* | 1916 |
-| William G. Benham | *The Laws of Scientific Hand Reading* | 1900 |
 | Fred Gettings | *The Book of the Hand* | 1965 |
-| Peter West | *The Complete Illustrated Guide to Palmistry* | 1998 |
-| Lori Reid | *The Art of Hand Reading* | 1996 |
 | Andrew Fitzherbert | *Hand Psychology* | 1986 |
+| Peter West | *The Complete Illustrated Guide to Palmistry* | 1998 |
+| Johnny Fincham | *The Spellbinding Power of Palmistry* | 2005 |
+| Ellen Goldberg & Doris Dobkins | *The Art and Science of Hand Reading* | 2016 |
+| Kenneth G. Zysk | *The Indian System of Human Marks* (Brill) | 2016 |
+| Livia Kohn | "A Textbook of Physiognomy: The Tradition of the *Shenxiang quanbian*", *Asian Folklore Studies* 45:2 | 1986 |
+| Richard J. Smith | *Fortune-tellers and Philosophers: Divination in Traditional Chinese Society* | 1991 |
 
-Secondary sources (for specific Indian tradition content): traditional Hasta Samudrika Shastra texts; where citing secondary commentary, name the commentator.
+**Tier 3 — Targeted reputable factual references.** Used where palmistry literature is not the right authority: anatomy, embryology, general history, etymology, cultural background. Peer-reviewed papers, university and museum publications, government and medical reference bodies, and academic encyclopaedias (e.g. the *Stanford Encyclopedia of Philosophy*). Cite the specific work, not the genre.
 
-**Rules for sourcing:**
+**Tier 4 — Discovery only.** Commercial astrology and palmistry sites, SEO content farms, unsourced palmistry blogs, listicles, scraped or aggregated sites, AI-generated summaries, social posts. These may help you locate terminology, spot a claim worth chasing, or find a lead to a real source. **They are never cited, never named in body prose as an authority, and never appear in a source footer.** If a claim rests only on Tier 4 material, the claim does not run.
 
-- Do not invent palmistry meanings. If a claim cannot be attributed to a named tradition or source, do not include it.
-- Attribute specific claims to specific authors where possible: "Benham described…", "Cheiro, writing in *Palmistry for All*, noted…"
-- Note genuine disagreement between sources. Do not synthesise a false consensus.
-- Do not cite undated web content as an authority on traditional palmistry. You may reference a specific practitioner (e.g., Sarah Yip of Destiny Palmistry, AstroSight for Vedic perspectives) when they are reading from classical texts closely — but name them explicitly, not as an unnamed source.
-- Sources appear at the foot of every article in the standard italic format (see article template).
+**Wikipedia and general encyclopaedias** sit outside the tiers as discovery aids. Use them to find the underlying source, then cite that source. Do not name an encyclopaedia in body prose as the authority for a meaningful or disputed claim.
 
-**No broad web research.** A single targeted lookup to verify one specific claim is acceptable. Do not scrape the internet for palmistry content to synthesise into an article.
+### 5.2 Rules for sourcing
+
+- Do not invent palmistry meanings, and do not invent source support. If a claim cannot be traced to a named tradition or source at Tier 1–3, cut it or qualify it explicitly as popular modern practice.
+- Attribute specific claims to specific authors and works: "Benham described…", "Cheiro, writing in *Palmistry for All* (1916), noted…"
+- **Quotation integrity.** Quotation marks mean verbatim wording that has been checked in the cited edition. If the wording has not been verified, paraphrase without quotation marks. Do not invent page or chapter precision. Where a much-repeated maxim cannot be located in the text it is usually attributed to, present it as a traditional formulation rather than as an author's words.
+- **Tradition-specific sourcing is required.** Claims presented as Chinese tradition need a Chinese-tradition source; claims presented as Indian tradition need an Indian-tradition source. A Western author is not an authority on Chinese or Sanskrit material, and a Western bibliography does not support a tradition-internal claim. Where no tradition-appropriate source can be reached, say the claim reflects contemporary popular practice, or drop it.
+- Distinguish historical and textual claims from modern popular practice. Do not present modern web folklore as ancient doctrine.
+- Note genuine disagreement between sources and between traditions. Do not synthesise a false consensus, and do not reconcile traditions on the site's own authority.
+- Phrase traditional associations as traditional: "traditionally associated with", "often interpreted as", "read in the tradition as". Never as fact about the reader.
+- Transliteration and name variants (Sanskrit, Chinese, romanisation systems) should be given once with a note that forms vary, rather than presented as a single fixed spelling.
+- Sources appear at the foot of every article in the standard italic format (see article template), most authoritative first, semicolon-separated, with author, italicised title, and year.
+
+**No broad web research.** Targeted lookups to verify specific claims are expected and encouraged, especially for Tier 3 factual material and for tradition-specific sourcing. Do not scrape the internet for palmistry content to synthesise into an article.
 
 ---
 

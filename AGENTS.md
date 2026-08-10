@@ -2,9 +2,22 @@
 
 This repository is the source of truth. Conversation history and brainstorming are secondary.
 
+## Task startup and local sync
+At the start of a new implementation task, before reading or changing project files:
+1. Inspect `git status`.
+2. If the working tree is not clean, stop and report exactly what is modified/untracked. Do not reset, stash, discard, overwrite, or switch branches without explicit approval.
+3. `git fetch origin`.
+4. `git switch main`.
+5. `git pull --ff-only`.
+6. Verify `main` is clean, current with `origin/main`, and that `origin` is the expected Palmistry Path repository.
+7. Create or switch to the designated task branch.
+8. Never begin new work from a stale, previously completed feature branch.
+
+Perform this synchronization automatically. Only ask the user to intervene when Git reports a state that cannot be resolved safely without their decision.
+
 ## Progressive disclosure
 At the start of meaningful work:
-1. Check Git status, branch/worktree, and upstream state.
+1. Complete the startup/sync steps above.
 2. Read this file.
 3. If `docs/ACTIVE_TASK.md` says `Status: ACTIVE`, read it, then `docs/AI_HANDOFF.md`.
 4. On a fresh session, read only the relevant section(s) of `docs/PRODUCT_VISION.md` when the task may affect user experience, content direction, visual direction, learning structure, monetization, or product scope.
@@ -25,7 +38,8 @@ Do not recursively read `docs/` or reread unchanged context “just in case.” 
 
 ## Palmistry editorial guardrails
 - Palmistry Path is educational, not a fortune-telling or predictive-science service.
-- Never invent palmistry meanings or source attributions.
+- Never invent palmistry meanings or source attributions. Citations follow the four-tier source policy in `docs/editorial-style-guide.md` §5; commercial astrology sites, SEO content farms, and unsourced blogs are discovery aids only and are never cited.
+- Quotation marks mean verified verbatim wording from the cited edition. Otherwise paraphrase.
 - Prefer grounded phrasing such as “traditionally associated with,” “often interpreted as,” and “may suggest.”
 - Note real disagreements between traditions; do not manufacture consensus.
 - Do not make medical, legal, financial, or relationship-advice claims from palmistry.
