@@ -21,6 +21,14 @@
 **Confidence:** Confirmed · Likely · Needs Verification
 **Type:** code · content · UX/layout · visual assets · research · documentation
 
+### Second-pass addendum (2026-08-09, later session)
+
+A second independent Claude pass was run over the same commit. It reproduced this report's findings on the duplicate 25.9 MB PDFs, the shared Kit form ID, the bypassable email gate, the ~11 MB of homepage PNGs, the orphaned mounts SVGs, the alt-text-as-prompt problem, the module/lesson difficulty mismatch, and the unrendered `prerequisites` — independently, before reading this document. It also **independently re-verified the P0 at 3.1**: `curl -L https://palmistrypath.gumroad.com/l/complete-reference` returns **HTTP 404** with no redirect.
+
+That pass surfaced findings this report did not contain. They are added in place, using new numbers at the end of the relevant sections so that no existing cross-reference is renumbered: **8.11–8.13** (source provenance — the most significant addition), **5.9–5.11** (curriculum topic gaps), **4.14**, and **13.6–13.7**.
+
+One correction to a claim *not* made here but worth recording, because it was tested and is false: **there is no thin content in the blog.** Measured on body text with frontmatter stripped, the shortest of the 53 posts is `girdle-of-venus.md` at 1,310 words; the next three are 1,320 / 1,391 / 1,431. An automated word count that reported ~269 words for `palmistry-beginner-mistakes.md` was counting frontmatter only and is wrong. No post needs expanding on length grounds.
+
 ---
 
 ## 1. Executive summary
@@ -34,6 +42,8 @@ What has decayed is everything wrapped around that core. The single paid CTA —
 The visual system is three incompatible systems pretending to be one: the Lines module has elaborate AI-generated poster art with instructional text baked into raster pixels and unhedged claims printed on the image; the Mounts module has eight orphaned placeholder SVGs that no page references; Foundations and Advanced have no imagery at all; and 53 blog posts have zero images. Meanwhile the homepage ships ~10.5 MB of PNGs that render at 38% opacity or are invisible behind an overlay.
 
 **Overall health: strong content, weak product surface.** Nothing here requires rewriting the curriculum. Most of the highest-severity findings are small, bounded fixes to trust-critical surfaces — a broken link, a false privacy claim, a contradictory sales page, a missing contact address. The larger structural questions (lesson/article duplication, visual asset strategy) are real but are judgment calls, not emergencies.
+
+**One qualification added by the second pass**, because it cuts against the paragraph above. The editorial *writing* is as disciplined as this summary claims. The *sourcing* is not, and the two were initially assessed as one thing. Nine articles cite commercial astrology blogs and SEO content farms in the same undifferentiated list as Cheiro and Benham; the Chinese and Indian tradition articles carry a Western-only bibliography identical to the Western article's; and `heart-line.md:57` vouches in body prose for a commercial palmistry blogger as someone "who reads the classical texts closely." Combined with the About page naming two books the content never cites (3.4), the site's central differentiator — that its claims are traceable — is the thing least able to survive a reader actually checking. That reframes §8 from "strongest dimension, minor caveats" to "strongest writing, weakest evidence chain," and it belongs in the first tier of work alongside the trust fixes, not in a research backlog. See 8.11–8.13.
 
 ---
 
@@ -130,6 +140,7 @@ Zero occurrences of author/byline/credential language across `about.astro` and `
 | 4.11 | **`prerequisites` frontmatter is populated on all 22 lessons, validated by the schema, and never rendered.** Zero references in `src/pages/learn/` or `src/components/`. A returning learner cannot see what a lesson assumes. | `content.config.ts:32`; `grep prerequisites src/pages/learn/ src/components/` → no matches | P2 | Confirmed | code |
 | 4.12 | **No progress or resume mechanism of any kind.** The lesson "progress rail" is a static position indicator, not visited-state. A returning learner has no way to answer "where was I?" other than memory. | `LessonPath.astro`; no storage APIs in `src/` | P2 | Confirmed | UX/layout |
 | 4.13 | **"✦ Lesson complete ✦" renders unconditionally**, with `aria-label="Lesson complete"` on the region, on every lesson regardless of whether the reader did anything. It states a status that is not true. | `LessonFooter.astro:17-21` | P3 | Confirmed | UX/layout |
+| 4.14 | **Internal links mix trailing-slash and non-trailing-slash forms, sometimes for the same route on the same page.** The homepage links to both `/guide` (twice) and `/guide/`. Legal and product routes carry a slash (`/privacy/`, `/terms/`, `/disclaimer/`, `/contact/`, `/premium-guide/`); learn, blog, glossary and search routes do not (`/learn`, `/glossary`, `/search`, `/blog/beginner/…`). `astro.config.mjs` sets no `trailingSlash` policy, so the dev server tolerates both. On a host that canonicalises one form, every link in the other form becomes a redirect hop — including the `/guide` conversion CTA, and the post-signup `window.location.href = '/guide/thank-you/'` at `guide.astro:562`. | `curl -s localhost:4321/ \| grep -oE 'href="/[^"]*"' \| sort \| uniq -c`; `astro.config.mjs` has no `trailingSlash` key | P3 | Confirmed | code |
 
 **Mobile / desktop / touch.** Measured at a true 375px viewport: no horizontal overflow, body 18px, nav links 113×51px, headings fluid via `clamp()`. Mobile nav is a plain reflowed grid with no JS and no focus trap — a good, robust choice. Prose measure at 375px is ~34 characters, narrower than ideal but within normal phone behaviour (P3). The mobile breakpoint set (720 / 600 / 480 / 380) is coherent. **Desktop is the better-served experience**, largely because of 6.2 below.
 
@@ -148,6 +159,9 @@ The curriculum is the site's strongest asset and is structurally sound. Sequenci
 | 5.5 | **"Seven mounts" vs "eight mounts."** The *curriculum* consistently says seven (`lessons/mounts/01-mounts-overview.mdx:3,38,108`; `blog/beginner/mounts-overview.md:99`; `blog/index.astro:43`). Every *product and marketing* surface says eight (`consts.ts:48` → homepage + `/learn` + `/learn/mounts`; `guide.astro:441`; `guide/thank-you.astro:290`; `premium-guide.astro:13`; `print/complete-reference.astro:785`; `blog/printable-palmistry-worksheets.md:69`). This is exactly the number a learner would use to check whether the paid guide matches the free lessons. | As cited | P2 | Confirmed | content |
 | 5.6 | **The curriculum has no practice layer.** Lessons instruct observation but there is no worksheet, no self-check, no "compare your two hands" artefact in the product — the only such asset is a 25 MB PDF behind (or beside) an email form. | `docs/worksheet-pack-spec.md` describes one; nothing is implemented | P2 | Confirmed | UX/layout |
 | 5.7 | Advanced module lessons `01-minor-lines-overview` and `04-how-to-give-a-reading` have no `relatedArticle` — the only two lessons with no article partner. Not a defect, but it makes the 1:1 pairing rule inconsistent. | Lesson inventory | P3 | Confirmed | content |
+| 5.9 | **Line markings are never taught, yet the final lesson assumes them.** `advanced/04-how-to-give-a-reading.mdx:40` instructs the reader to weigh "a well-formed, **island-free** head line." "Island" appears in **no other lesson** — a full-corpus grep of `src/content/lessons/` returns exactly this one hit. Stars, grilles, triangles, and crosses as line markings are never introduced either (the only `star`/`square` hits in lessons are unrelated: square *palm shape*, and one incidental use). A learner reaching the capstone meets undefined vocabulary in the middle of the site's synthesis instruction. Dedicated articles exist (`islands-on-palm-lines.md`, `crosses-stars-palmistry.md`) but no lesson links to them. | `grep -rn '\bisland' src/content/lessons/` → 1 hit, at `advanced/04:40` | P2 | Confirmed | content |
+| 5.10 | **The thumb, fingers, and nails are absent from the curriculum entirely.** No lesson covers them; the 22 lessons are 4 foundations + 6 lines + 8 mounts + 4 advanced, with no hand-structure module beyond hand *shape*. The thumb is mentioned only in passing (mostly as a landmark for locating the life line) and never taught as a subject. This is a substantive omission rather than a sequencing gap: the thumb is weighted heavily in Benham and Cheiro — the site's two most-cited sources — and d'Arpentigny's finger classification underpins the hand-shape system the Foundations module *does* teach. Full articles exist for all three (`thumb-meaning-palmistry.md`, `finger-shapes-palmistry.md`, `nails-in-palmistry.md`) and are orphaned from `/learn`: no lesson's `relatedArticle` points at any of them. A learner who completes all 22 lessons never encounters them. | Lesson directory listing; `grep -rc '\bthumb\b' src/content/lessons/`; `relatedArticle` values across 22 lessons | P1 | Confirmed | content |
+| 5.11 | **The Mounts module is the largest and the least differentiated.** 8 of 22 lessons (36%) and ~15,500 of ~44,200 curriculum words (~35%), for the most structurally repetitive material on the site. Mounts 03–07 share a near-mechanical section template — "Finding it precisely" → [related line] → "The core quality" → "How development is read" → "Displacement toward X" → "What other traditions say" — reskinned per mount. The Lines module uses a comparable skeleton but each lesson carries genuinely distinct content (the life-line myth correction, fate-line absence, the writer's fork), so it reads as reinforcement rather than repetition. The result is that the middle of the curriculum drifts from taught method toward mount-by-mount lookup — the same reference-entry feel §5.8 identifies between layers, occurring *within* the curriculum. | `grep '^## '` across all 8 mounts lessons; word counts per module | P2 | Confirmed | content |
 
 ### 5.8 — The structural question: curriculum, or article farm with a curriculum attached? (P1, judgment call)
 
@@ -211,7 +225,11 @@ Writing quality is high — clear, calm, beginner-appropriate, and free of fille
 
 ## 8. Accuracy and source integrity
 
-**This is the site's strongest dimension and it largely holds up under scrutiny.** All 22 lessons plus 12 high-risk blog posts were read against the project's editorial guardrails. No invented meanings, no predictive claims, no medical claims, and no scientific-validity overreach were found. The corpus actively corrects the field's two most harmful myths.
+**The site's editorial discipline is its strongest dimension and it holds up under scrutiny. Its sourcing layer does not.** These are separable, and the distinction matters for what to fix.
+
+*What holds:* all 22 lessons plus 12 high-risk blog posts were read against the project's editorial guardrails. No invented meanings, no predictive claims, no medical claims, and no scientific-validity overreach were found. The corpus actively corrects the field's two most harmful myths. Hedging is consistent to a degree that is genuinely rare in this subject area.
+
+*What does not:* the second pass examined not whether quotes are accurate (8.2) but **whether the cited sources are sources**, and found that in at least nine articles they are not — commercial astrology blogs and SEO content farms listed as peers to Cheiro and Benham (8.11), tertiary reference works carrying factual claims in body prose (8.12), and two tradition articles whose entire bibliography is Western (8.13). None of this makes a single interpretive claim on the site *wrong*. All of it undermines the specific thing the site sells, which is that its claims can be traced. Findings 8.11–8.13 should be read as one problem with three surfaces.
 
 ### 8.1 — The empirical-studies passage checks out (downgraded from a suspected P1)
 **Area:** Accuracy · **Confidence:** Confirmed genuine · **Type:** research
@@ -232,6 +250,56 @@ This finding materially raises confidence in the corpus's sourcing generally.
 | 8.8 | **Vocational-aptitude claim.** `mounts/06-mount-of-mercury.mdx:43-49` attributes to Benham that a developed Mercury mount suits "the skilled diagnostician" — a step past "traditionally associated with a quality of mind," and adjacent to medical framing. | As cited | P3 | Confirmed | content |
 | 8.9 | **Unhedged historical scope claim.** `foundations/01-what-palmistry-is.mdx:21`: palmistry practised "on every inhabited continent, often with no documented contact between traditions." | As cited | P3 | **Needs Verification** | research |
 | 8.10 | Gendered left/right hand conventions (Western at `foundations/04:44`, Chinese yin/yang at `chinese-palmistry-basics.md:51` and `foundations/04:80`) and the simian-line population figure ("roughly one to four percent," `lines/06-simian-line.mdx:24,34`) are plausible and internally consistent but uncited. | As cited | P3 | **Needs Verification** | research |
+
+### 8.11 — Commercial astrology blogs and SEO content farms are cited as peers to the canonical five (P1)
+**Area:** Accuracy / trust · **Confidence:** Confirmed · **Type:** content
+
+§8.2 above asks whether the site's quotations are *verifiable*. It does not ask a prior question: **whether the cited sources are sources at all.** They are not, in at least nine articles. The "Sources consulted" footers place uncredentialed commercial websites in the same undifferentiated list as Cheiro, Benham, Gettings, West, and Fincham, separated only by semicolons:
+
+| File | Non-canonical sources presented as peers |
+|---|---|
+| `blog/beginner/fate-line.md:107` | Destiny Palmistry (Sarah Yip); AstroSight, "Fate Line in Palmistry — Vedic Interpretation" |
+| `blog/beginner/head-line.md:126` | God Given Glyphs, "Lines — Writer's Fork"; Destiny Palmistry (Sarah Yip) |
+| `blog/beginner/heart-line.md:116` | AstroSight, "Heart Line Reading: Complete Vedic Palmistry Guide"; Destiny Palmistry (Sarah Yip) |
+| `blog/beginner/major-lines-overview.md:73` | yourchineseastrology.com, "Hand Lines in Palmistry"; Destiny Palmistry |
+| `blog/beginner/mounts-overview.md:105` | yourchineseastrology.com, "Palmistry Mounts"; Destiny Palmistry, "The Inner Mars Mount" |
+| `blog/beginner/life-line.md:102`, `broken-life-line-meaning.md:99` | Robin Lown / College of Psychic Studies |
+| `blog/beginner/what-palmistry-is.md:93` | Wikipedia (Palmistry; Samudrika Shastra; Cheiro; Bagua); The Conversation (2024) |
+| `blog/beginner/simian-line.md:69` | Andrew Fitzherbert, *Hand Psychology* (1986); "Hasta Samudrika Shastra (traditional Indian palmistry framework)" — a genre, not a text |
+| `blog/beginner/how-to-read-a-palm.md:111` | Wikipedia (Palmistry; Samudrika Shastra) |
+
+Two of these are defensible as *palmistry literature* outside the stated canon — Fitzherbert (1986) and, at `how-to-read-a-palm.md:111`, Comte de Saint-Germain (1897) and Goldberg & Dobkins (2016). Those should simply be added to the declared source list. The rest are not literature.
+
+**It is worse in body prose than in the footers,** because there the site actively confers authority:
+- `blog/beginner/heart-line.md:57` — *"Destiny Palmistry's Sarah Yip, **who reads the classical texts closely**, notes that…"* The site vouches for a commercial astrology blogger's scholarship, then uses that vouching to carry an interpretive claim about chained lines.
+- `blog/beginner/life-line.md:57` and `broken-life-line-meaning.md:39` — Robin Lown of the College of Psychic Studies is quoted verbatim, in quotation marks, as the authority establishing that breaks mean transition rather than death. This is the site's single most important myth-correction, and its named support is a psychic-studies practitioner rather than any of the five.
+
+This matters more than an ordinary citation-hygiene issue because of what the site claims about itself. `about.astro` closes its source list with *"Where a claim cannot be traced to a tradition or source, it is not included"* (see 3.4). AGENTS.md requires that the site never invent source attributions. Neither is literally violated — the sources exist and are named. But a reader who follows the bibliography to check the site's work lands on the exact SEO-astrology content the site positions itself against, and the differentiator collapses at the point where it is being tested.
+
+**Direction:** Split the footer into declared tiers — established literature vs. contemporary practitioners vs. reference works — rather than one flat semicolon list. Remove the content-farm citations (AstroSight, God Given Glyphs, yourchineseastrology.com, Destiny Palmistry) and re-source those claims to the canon, or drop the claims. Delete the editorial vouching at `heart-line.md:57`. Add Fitzherbert, Saint-Germain, and Goldberg & Dobkins to the declared canon on About. Note this compounds 3.4: the public bibliography is wrong in both directions — it lists books the content never cites, and the content cites sources the bibliography never admits to.
+
+### 8.12 — Wikipedia and Britannica are used as inline factual authorities in body prose (P2)
+**Area:** Accuracy · **Confidence:** Confirmed · **Type:** content
+
+Distinct from 8.11 because these are tertiary reference works being load-bearing in the text itself, not just listed in a footer:
+- `blog/beginner/what-palmistry-is.md:29` — *"Wikipedia's entry on Samudrika Shastra notes approximately 600 surviving manuscripts attributed to the field."* A specific quantitative historical claim, attributed to Wikipedia by name, in the site's foundational explainer.
+- `blog/beginner/what-palmistry-is.md:63` and `lessons/foundations/01-what-palmistry-is.mdx:49` — Britannica is quoted to establish that palmistry has no scientific support. The *claim* is correct and well-framed; citing an encyclopaedia by name for it in the flagship lesson is weaker than citing the underlying position.
+- `blog/beginner/can-palm-lines-change.md:17,83` — Britannica's dermatoglyphics entry carries the article's factual (non-palmistry) content about fingerprint formation.
+
+**Direction:** Keep the claims; replace the visible attribution with the primary source each encyclopaedia entry is summarising, or state the fact without name-checking a tertiary work. Naming Wikipedia in body copy on a site selling sourcing rigour is a self-inflicted credibility cost.
+
+### 8.13 — The Chinese and Indian tradition articles carry a Western-only bibliography (P1)
+**Area:** Accuracy / tradition integrity · **Confidence:** Confirmed · **Type:** content + research
+
+`blog/beginner/chinese-palmistry-basics.md:99` and `blog/beginner/indian-palmistry-hasta-samudrika-shastra.md:101` both end with a "Sources consulted" line naming **only** Cheiro, Benham, Gettings, West, and Fincham — **byte-identical to the footer on `blog/beginner/western-palmistry-basics.md:103`.** Three articles about three different traditions carry the same Western bibliography.
+
+None of those five is an authority on Chinese or Sanskrit classical material. Yet these articles make extensive, specific, tradition-internal claims: the Tian Di Ren (Heaven/Human/Earth) framework, Taoist yin/yang hand conventions (`chinese-palmistry-basics.md:51,93`), and Sanskrit terminology including *rekha*, *bhagya*, and *karma phala*. No Chinese-tradition or Sanskrit-tradition source — primary, secondary, or translated — is named anywhere in either article. `indian-palmistry-hasta-samudrika-shastra.md:23` goes further and uses **Cheiro**, a Western author, to characterise the Indian tradition's relationship to Jyotish.
+
+This is the sharpest version of a risk the site is otherwise unusually careful about. §2/S2 correctly credits the site for keeping traditions distinct in its *prose*; the sourcing layer does not keep them distinct at all. It is also the specific failure mode AGENTS.md names — terminology attributed to a tradition without basis — arriving through the bibliography rather than through the writing.
+
+Note the interaction with 8.11: `chinese-palmistry-basics.md` cites no Chinese source, while `major-lines-overview.md` and `mounts-overview.md` cite `yourchineseastrology.com` for Chinese material. Where a Chinese-tradition source *is* reached for, it is a commercial astrology site.
+
+**Direction:** Mark both articles **NEEDS SOURCE VERIFICATION** and do not treat their tradition-internal claims as sourced until a real source exists for each. This is the one finding in this report that most warrants targeted external research before any content change.
 
 **Where the discipline is weakest:** not in tone, which is careful throughout, but in *citation specificity outrunning verifiability* — and specifically in general-history claims embedded in palmistry content (Romani dating, Cheiro biography, the caduceus), which is exactly where self-auditing is hardest. The mount lessons quote Benham and Cheiro more heavily and more specifically than the major-lines lessons do.
 
@@ -315,6 +383,8 @@ Docs were checked against the verified implementation. **The core operating docs
 | 13.3 | `public/images/lessons/mounts/README.md` correctly flags its SVGs as temporary and points to `docs/visual-assets-roadmap.md` — but the assets it describes are **orphaned**: no lesson references them. The replacement plan is tracking files that are not in use. | Verified by grep | P2 | Confirmed | documentation |
 | 13.4 | `docs/worksheet-pack-spec.md` specifies a practice artefact that does not exist in the product — see 5.6. Reads as a plan, not as done, so this is a gap rather than a contradiction. | | P3 | Confirmed | documentation |
 | 13.5 | The "no 404 page" gap flagged in `pre-launch-audit.md` remains open — see 4.2. | | P2 | Confirmed | documentation |
+| 13.6 | **`docs/editorial-backlog.md:9` states "Published: 46 blog posts."** There are 53. Same undercount as `pre-launch-audit.md` (13.2), but this one matters more operationally: the backlog is the document a future session would read to decide *what to write next*, and it is planning against a corpus seven articles out of date. Its parenthetical — "all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live" — may also no longer describe the current set. | `docs/editorial-backlog.md:9`; `ls src/content/blog/beginner \| wc -l` → 53 | P2 | Confirmed | documentation |
+| 13.7 | **`docs/seo-content-roadmap.md`'s dated plan has expired.** Its "30-Day Editorial Plan" (§7, from line 454) runs Week 1 from 2026-05-26 to 2026-06-22 — closed seven weeks before this audit — and the 90-day roadmap (§8) sets a Week-12 decision gate ("if 500+ monthly organic sessions, begin workbook planning") that cannot be evaluated, because the site has no analytics at all (see 11.6). A dated plan whose success criteria are unmeasurable should not be read as live guidance. | `docs/seo-content-roadmap.md:454,460,504,531` | P3 | Confirmed | documentation |
 
 **Direction for all of the above: do not edit these during this audit.** 13.1 should be fixed as a production change; 13.2–13.5 need a dated "superseded" marker, not deletion.
 
@@ -385,6 +455,9 @@ Small, bounded, low-risk, high-value. Roughly in value order.
 15. **Add a Kit tag or hidden source field to distinguish the two forms** (11.4).
 16. **Word-boundary truncation on blog cards** (4.8).
 17. **`noindex` `/contact` while it is a placeholder** (10.7).
+18. **Delete the editorial vouching at `heart-line.md:57`** (8.11) — one clause ("who reads the classical texts closely") that hands scholarly authority to a commercial blog. The surrounding claim can stand on the canon.
+19. **Correct `docs/editorial-backlog.md:9` from "46 blog posts" to 53** (13.6) — one number, but it is the figure the next content session will plan against.
+20. **Set an explicit `trailingSlash` policy in `astro.config.mjs` and normalise internal links** (4.14) — the homepage currently links to both `/guide` and `/guide/`.
 
 ---
 
@@ -397,8 +470,9 @@ Real work, needing a decision first.
 3. **Make the curriculum visible and resumable** (4.4, 4.11, 4.12) — surface the 22 lessons and total duration on `/learn`, render prerequisites, and add lightweight local progress.
 4. **Instrument the funnel** (11.6). 53 `data-track` attributes exist; a small listener plus one privacy-respecting analytics tool would make every other conversion question answerable. Note this requires the privacy policy fix (3.3) first.
 5. **Decide the blog URL taxonomy** (7.4, 10.4). Either populate `intermediate/` and `advanced/`, or flatten to `/blog/<slug>` and stop asserting a level in every URL.
-6. **Establish a citation-verification pass** (8.2). 156 quoted passages, 6 bibliographies. A one-time spot-check of the most-repeated quotes against the named editions would convert the site's biggest latent risk into its strongest credential.
+6. **Establish a citation-verification pass** (8.2). 156 quoted passages, 6 bibliographies. A one-time spot-check of the most-repeated quotes against the named editions would convert the site's biggest latent risk into its strongest credential. **Widened by the second pass:** this must also cover *source provenance*, not only quote accuracy — purge the content-farm citations (8.11), replace the Wikipedia/Britannica inline attributions (8.12), and find real sources for the Chinese and Indian articles or mark their claims unsourced (8.13). Sequence it after 3.4, since About's bibliography and the article footers have to end up describing the same set of sources.
 7. **Extract a shared layout for `/guide` and `/premium-guide`** (6.13).
+8. **Decide whether the curriculum covers the hand or only the palm** (5.10, 5.9). Thumb, fingers, nails, and line markings are absent from `/learn` while existing as finished articles. Either adopt them into the curriculum, or state explicitly that it is scoped to lines and mounts — the current state reads as an unfinished syllabus rather than a deliberate scope, and the capstone lesson already leaks the gap by using "island" without ever defining it.
 
 ---
 
@@ -413,6 +487,9 @@ These are genuine forks. I have a recommendation on each, but the call is yours.
 5. **Keep AdSense?** Auto-ads on a $14-product site with no analytics and a contradicting privacy policy is the worst configuration of the three options (ads, product, neither). *Recommendation: if the product is real, drop auto-ads; if not, keep ads and fix the policy.*
 6. **How rigorous should the sourcing bar be?** Reconstructing 156 quotes against primary editions is significant work. *Recommendation: verify the top ~20 most-repeated quotes; convert the rest to unquoted paraphrase, which the site already models well at `lines/05-fate-line.mdx:55`.*
 7. **Regenerate the Lines diagrams, or remove them?** Removal is free and immediately fixes 6.2, 6.3, 6.4, and 9.3. *Recommendation: remove the baked-in-claim figures now; replace with SVG diagrams when there is a system for all four modules.*
+8. **What counts as a source for Palmistry Path?** (8.11–8.13) The canon is five Western authors, but the content in practice reaches for contemporary practitioners, encyclopaedias, academic papers, and astrology websites — with no declared tier separating them. This needs a stated policy before anyone edits a footer, or the cleanup will be arbitrary. *Recommendation: three declared tiers — established literature (the five, plus Saint-Germain, Fitzherbert, Goldberg & Dobkins where already used); contemporary practitioners, named as such and never used to carry a claim the canon does not also support; and reference works for non-palmistry facts only. Content farms in none of them.*
+9. **Does the curriculum cover the hand, or the palm?** (5.10) *Recommendation: adopt thumb, fingers, and nails as a fifth module — the articles already exist, and Benham and Cheiro both weight the thumb heavily, so the current scope is hard to defend on tradition grounds.*
+10. **Do the Chinese and Indian articles stay up in their current state?** (8.13) They make tradition-internal claims with no tradition-internal source. *Recommendation: keep them published — they are well written and the framing is careful — but treat sourcing them as blocking work, not backlog, since they are the two pages where a knowledgeable reader is most likely to test the site.*
 
 ---
 
@@ -427,6 +504,10 @@ These are genuine forks. I have a recommendation on each, but the call is yours.
 **Then decide** §17.1, §17.3, and §17.4 before committing to §16.1 or §16.2 — the visual and content strategies both hang on them.
 
 **Suggested sequencing note:** fix the privacy policy (3.3) before adding any analytics (16.4), and settle the product state (17.1) before touching any funnel copy.
+
+**Amended by the second pass.** The sourcing-provenance cluster (8.11–8.13) belongs in the *first* group, not in the research backlog, and it changes the shape of the About fix. Doing 3.4 alone — regenerating About's bibliography from what the content actually cites — would pull the content farms *onto* the About page and make the problem worse. So: settle the source-tier policy (17.8) first, then clean the article footers (8.11) and the two tradition articles (8.13), then regenerate About from the cleaned set (3.4). Three ordered steps, one outcome — the public bibliography and the article footers finally describing the same set of sources.
+
+The two single-line items — deleting the vouching clause at `heart-line.md:57` and correcting the article count in `docs/editorial-backlog.md:9` — need no decision and can go with the first batch.
 
 ---
 
@@ -444,6 +525,9 @@ These are genuine forks. I have a recommendation on each, but the call is yours.
 | 8 | Lesson↔article twins duplicate 35–70% of substantive content, reusing the same source quotes with near-identical framing prose | P1 | Confirmed | 5.8 / 7.1 |
 | 9 | Systemic contrast failures from stacking `opacity` on muted text — measured as low as **2.1:1** on the footer tagline | P1 | Confirmed | 9.1 |
 | 10 | The funnel is completely unmeasured: 53 `data-track` attributes, zero listeners, zero analytics — and the free guide's email gate is bypassable from the same page | P1 | Confirmed | 11.6 / 11.3 |
+| 11 | Nine articles cite commercial astrology blogs and SEO content farms (Destiny Palmistry, AstroSight, God Given Glyphs, yourchineseastrology.com) as peers to Cheiro and Benham — and `heart-line.md:57` vouches for one in body prose as someone "who reads the classical texts closely" | P1 | Confirmed | 8.11 |
+| 12 | The Chinese and Indian tradition articles carry a **Western-only bibliography, byte-identical to the Western article's** — no Chinese or Sanskrit source is named anywhere, despite extensive tradition-internal claims | P1 | Confirmed | 8.13 |
+| 13 | The thumb, fingers, and nails are absent from the curriculum entirely, though all three are core classical topics, heavily weighted in the site's two most-cited sources, and already written as orphaned articles | P1 | Confirmed | 5.10 |
 
 ---
 
@@ -455,3 +539,10 @@ These are genuine forks. I have a recommendation on each, but the call is yours.
 - **No email was submitted to either form**, so the actual delivery sequence, double opt-in behaviour, and thank-you redirect were not exercised end to end.
 - **Source quotations were not checked against primary editions** (8.2) — the single largest remaining verification task, deliberately left as `NEEDS SOURCE VERIFICATION` rather than guessed at.
 - **Historical claims at 8.4, 8.5, 8.6, 8.9, 8.10 remain unverified** by design; only 8.1 received targeted external checking.
+
+**Added by the second pass:**
+
+- **The tradition-internal claims in `chinese-palmistry-basics.md` and `indian-palmistry-hasta-samudrika-shastra.md` are `NEEDS SOURCE VERIFICATION` in the strict sense** (8.13): not "the citation might be inaccurate," but "no source of the right kind is cited at all." Specifically unverified: the Tian Di Ren mapping onto Heart/Head/Life, the Taoist left-yang/right-yin convention (`chinese-palmistry-basics.md:93`), the Sanskrit glosses (*rekha*, *bhagya*, *karma phala*), and the "shared Indo-European planetary symbolism" claim (`indian-palmistry-hasta-samudrika-shastra.md:37`). Verifying these requires sources outside the declared canon and was deliberately not attempted here.
+- **The content-farm sources at 8.11 were identified but not evaluated.** Whether Destiny Palmistry, AstroSight, God Given Glyphs, or yourchineseastrology.com happen to be *correct* on the specific points cited is unknown and, for the finding, beside the point — the objection is to their standing as citable authority on a site that sells traceability.
+- **The second pass took no screenshots.** Browser-pane compositing was unavailable for most of that session, so its rendered checks were done through the live DOM (accessibility tree, computed styles, measured geometry) and server-rendered HTML across 15 routes, all returning HTTP 200. Every second-pass finding added here is a code/content/structure fact verifiable from source or DOM; **none rests on a visual judgment.** The visual findings in §6 remain those of the first pass, at the pixel-verification level stated above.
+- **Two subagent-reported figures were checked and found false**, and are recorded here as a caution for future audits that delegate measurement: a reported "269-word `palmistry-beginner-mistakes.md`" (actually 1,431 body words) and a claim that `docs/DECISIONS.md` and `docs/CHANGELOG.md` do not exist (both do). Delegated counts were re-derived directly before use.
