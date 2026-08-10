@@ -44,7 +44,7 @@ The [head line article](/blog/beginner/head-line/) goes into the variations in d
 
 The Life Line curves around the base of the thumb, arcing from the region between the thumb and index finger down toward the wrist. It is the most widely recognised line on the palm — and the most widely misunderstood.
 
-The Life Line does not predict how long you will live. This is not a modern revision. Cheiro wrote explicitly: "The line of life does not necessarily indicate the length of life, but rather the quality of vitality." Fred Gettings and Peter West make the same point. What the Life Line is traditionally associated with is physical constitution and energy — the quality of vitality rather than its duration — and with major transitions or shifts in a life's course. Its depth, the presence of chains or breaks, and its relationship to the surrounding mounts are what practitioners observe.
+The Life Line does not predict how long you will live. The classical texts read it as a line about constitution and vitality rather than duration, and the modern practitioner literature — Gettings, West, Fincham — rejects the lifespan mapping outright. What the Life Line is traditionally associated with is physical constitution and energy — the quality of vitality rather than its duration — and with major transitions or shifts in a life's course. Its depth, the presence of chains or breaks, and its relationship to the surrounding mounts are what practitioners observe.
 
 The [life line article](/blog/beginner/life-line/) addresses the variations and the lifespan myth in full.
 

@@ -18,13 +18,15 @@ The idea that the life line predicts lifespan has its roots in the medieval peri
 
 This is a tradition of popular entertainment and performance, and it is not what serious palmistry writing has ever taught.
 
-Cheiro — whose work remains the most widely cited in the Western tradition — was explicit in *Palmistry for All* (1916): *"The Line of Life does not necessarily indicate the duration of a person's existence; it rather indicates the degree of vitality, the robustness of the constitution."* William Benham, in *The Laws of Scientific Hand Reading* (1900), devoted multiple pages to the same argument, explicitly warning against "absolute statements that death will come at a given time." The contemporary palmist Johnny Fincham, writing in *The Spellbinding Power of Palmistry* (2005), states it plainly: "A short life line does not mean a short life."
+The classical texts are not as unanimous here as the modern tradition sometimes suggests, and it is worth being accurate about that. Cheiro, in *Palmistry for All* (1916), does connect a long and clearly marked life line to "length of life, vitality, freedom from illness, and strength of constitution" — an association the modern tradition has largely abandoned. Benham, in *The Laws of Scientific Hand Reading* (1900), reads breaks and defects in the line as pointing to illness or accident rather than to a fixed term of years. What the classical writers describe is a line about constitution and vitality, read alongside the rest of the hand — not a scale on which years are measured.
+
+The modern practitioner literature is unambiguous. Johnny Fincham, writing in *The Spellbinding Power of Palmistry* (2005), states it plainly: a short life line does not mean a short life. Gettings and West take the same position.
 
 These are not modern concessions to squeamish readers. The serious tradition has held this position since systematic palmistry writing began.
 
 ## A note on the empirical question
 
-A small number of researchers have directly tested whether life line length predicts longevity. The results have been mixed: a 1990 study by Newrick and colleagues reported a significant correlation based on 100 cadavers; but Wilson and Mather found no correlation in 1974, and the most recent peer-reviewed study — Lucas and colleagues (2019), published in *Anthropological Review*, examining 60 cadavers at the University of Adelaide — found no significant relationship between life line length and lifespan, on either hand or between sexes. The empirical evidence, on balance, does not support a predictive relationship.
+A small number of researchers have directly tested whether life line length predicts longevity. The results have been mixed: a 1990 study by Newrick and colleagues reported a significant correlation based on 100 cadavers; but Wilson and Mather found no correlation in 1974, and the most recent peer-reviewed study — Lucas and colleagues (2019), published in *Anthropological Review*, examining 60 cadavers donated to the University of Adelaide — found no significant relationship between life line length and lifespan, on either hand or between sexes. The empirical evidence, on balance, does not support a predictive relationship.
 
 This is worth knowing, but it is not the article's main argument. The authority here comes from the tradition itself — from the practitioners who developed this system over centuries and rejected the lifespan reading on the basis of their own extensive observation.
 
@@ -54,7 +56,7 @@ What none of these frameworks ask the life line to do is count out years.
 
 **Broken.** This is the variation that produces the most alarm, and the one most worth addressing carefully.
 
-A break in the life line — a gap where the line stops and restarts — is traditionally associated with a significant transition: a major relocation, a fundamental change in life's direction or organisation, a point where the shape of a life alters substantially. Robin Lown of the College of Psychic Studies describes breaks as showing "a change in lifestyle or quality of life." The classical tradition is consistent on this: a break is a transition marker, not a death marker.
+A break in the life line — a gap where the line stops and restarts — is read in the modern tradition as a significant transition: a major relocation, a fundamental change in life's direction or organisation, a point where the shape of a life alters substantially. The classical writers framed breaks differently. Benham read them as interruptions to health, and specifically as illness or accident, to be diagnosed against the rest of the hand rather than in isolation. What no serious writer in either period does is read a break as a death marker.
 
 One refinement the tradition preserves is worth knowing: when a break overlaps — when the new section begins before the old one ends, creating a short parallel — the transition is traditionally read as smoother, one phase beginning before the previous has fully closed. When the break is clean, without overlap, the shift is read as sharper. Neither reading involves bodily harm.
 
@@ -99,4 +101,4 @@ The life line is a window into how palmistry thinks about vitality and life forc
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Johnny Fincham, The Spellbinding Power of Palmistry (2005); Lucas et al., "Predicting longevity from the line of life: is it accurate?", Anthropological Review (2019); Robin Lown / College of Psychic Studies, "Palmistry: The Life Line Explained."*
+*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Johnny Fincham, The Spellbinding Power of Palmistry (2005); Lucas et al., "Predicting longevity from the line of life: is it accurate?", Anthropological Review (2019).*

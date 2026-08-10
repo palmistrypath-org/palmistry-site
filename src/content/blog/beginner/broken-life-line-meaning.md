@@ -36,7 +36,9 @@ Identifying which of these you are actually looking at changes the reading consi
 
 This point is central enough to establish plainly before any interpretation.
 
-Cheiro, whose *Palmistry for All* (1916) is one of the most cited texts in the Western tradition, addressed breaks in the life line explicitly as transition markers. William Benham, in *The Laws of Scientific Hand Reading* (1900), was equally clear: he described breaks as showing a significant change in the life's course, warning against reading them as physical crisis in isolation. Robin Lown of the College of Psychic Studies describes breaks as showing "a change in lifestyle or quality of life" — language that consistently points toward life transition, not termination.
+It is worth being precise about what the classical literature actually says, because the popular version and the textual version differ. William Benham, in *The Laws of Scientific Hand Reading* (1900), treats a break as an interruption to be diagnosed — most often illness, sometimes accident — and insists it be read against the mounts, the chance lines, and the condition of the hand as a whole rather than on its own. Cheiro, in *Palmistry for All* (1916), likewise reads breaks alongside supporting features rather than as a standalone sign. The modern practitioner literature has moved further, reading a break primarily as a marker of transition and change in the shape of a life.
+
+What none of them does is read a break as a prediction of death. The classical writers treat it as something to interpret carefully within a whole hand; the modern tradition treats it as a marker of change. Neither treats it as a date.
 
 The fear response to a broken life line comes from the popular fortune-telling tradition — dramatic fair-booth palmistry that leaned into the life line's emotive weight to produce striking readings. It is not what systematic palmistry writing teaches. The tradition, in its serious literature, has never read a break as predicting death.
 
@@ -96,4 +98,4 @@ Yes — always. The non-dominant hand reflects constitutional baseline; the domi
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); Johnny Fincham, The Spellbinding Power of Palmistry (2005); Robin Lown / College of Psychic Studies, "Palmistry: The Life Line Explained."*
+*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); Johnny Fincham, The Spellbinding Power of Palmistry (2005).*

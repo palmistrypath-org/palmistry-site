@@ -18,7 +18,7 @@ Before you examine anything, the question of which hand to look at needs settlin
 
 Palmistry distinguishes between the **active hand** (usually the dominant hand, the one you write with) and the **passive hand** (the non-dominant hand). What each represents depends on the tradition.
 
-In Western palmistry, Cheiro put it plainly: "The left hand shows what nature gives, the right hand what man makes of it." The passive hand, on this reading, traditionally represents inherited tendencies — what you were born with. The active hand represents developed character: what you have done with those tendencies over the course of a life. Where the two hands diverge significantly, something has shifted — the person has moved, deliberately or through circumstance, away from the baseline they started with.
+In Western palmistry, Cheiro reported the convention in *Cheiro's Language of the Hand*: "the left hand is what you are, constitutionally; the right hand, what you make yourself or acquire." The passive hand, on this reading, traditionally represents inherited tendencies — what you were born with. The active hand represents developed character: what you have done with those tendencies over the course of a life. Where the two hands diverge significantly, something has shifted — the person has moved, deliberately or through circumstance, away from the baseline they started with.
 
 Indian palmistry frames the same distinction through different language. The passive hand is often associated with karmic inheritance — tendencies brought into this life — while the active hand shows how circumstances and choices have shaped the actual path. The comparison between hands may suggest, within this framework, whether someone has moved with or against their innate nature.
 
@@ -108,4 +108,4 @@ For now, the most productive next step is simply to look. At your own hands, at 
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); Comte de Saint-Germain, The Practice of Palmistry (1897); Peter West, The Complete Illustrated Guide to Palmistry (1998); Ellen Goldberg and Doris Dobkins, The Art and Science of Hand Reading (2016); Wikipedia (Palmistry; Samudrika Shastra).*
+*Sources consulted: Cheiro, Palmistry for All (1916); Comte de Saint-Germain, The Practice of Palmistry (1897); Peter West, The Complete Illustrated Guide to Palmistry (1998); Ellen Goldberg and Doris Dobkins, The Art and Science of Hand Reading (2016); Cheiro's Language of the Hand (1897).*

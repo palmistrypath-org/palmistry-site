@@ -104,4 +104,4 @@ The fate line completes the deep-dive pass through the four major lines. The [he
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); Destiny Palmistry (Sarah Yip), "Fate Line Missing on the Palm?"; AstroSight, "Fate Line in Palmistry — Vedic Interpretation."*
+*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); Johnny Fincham, The Spellbinding Power of Palmistry (2005).*

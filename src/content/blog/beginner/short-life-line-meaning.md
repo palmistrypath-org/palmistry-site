@@ -30,7 +30,7 @@ Two practical notes before interpreting anything: lines that appear short someti
 
 This point is central enough to state plainly before anything else.
 
-Cheiro, whose *Palmistry for All* (1916) remains one of the most cited Western palmistry texts, was explicit: *"The Line of Life does not necessarily indicate the duration of a person's existence; it rather indicates the degree of vitality, the robustness of the constitution."* William Benham, in *The Laws of Scientific Hand Reading* (1900), devoted considerable space to the same argument, explicitly warning against absolute statements about when death would occur. Johnny Fincham, in *The Spellbinding Power of Palmistry* (2005), states it plainly: "A short life line does not mean a short life."
+The classical texts read the life line as a line about constitution and vitality, interpreted against the whole hand. Cheiro, in *Palmistry for All* (1916), associates a long and clear line with vitality and strength of constitution; Benham, in *The Laws of Scientific Hand Reading* (1900), reads defects in the line as pointing to illness or accident, to be diagnosed against the mounts and the rest of the hand. Neither offers a method for converting line length into years, and the modern practitioner literature rejects the idea outright — Johnny Fincham, in *The Spellbinding Power of Palmistry* (2005), states plainly that a short life line does not mean a short life.
 
 The idea that line length maps to years lived comes from popular fortune-telling — the fair and market tradition of dramatic predictive readings — rather than systematic palmistry writing. The serious tradition has consistently rejected this mapping, and practitioners who read carefully have done so for as long as the literature exists.
 

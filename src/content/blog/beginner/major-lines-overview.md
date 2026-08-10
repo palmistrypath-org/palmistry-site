@@ -40,7 +40,7 @@ Where the Head Line and Life Line share a common starting point — joined at th
 
 The Life Line curves around the base of the thumb, arcing from the region between the thumb and index finger down toward the wrist. Of the four lines, it is the most persistently misunderstood in popular culture — and the misunderstanding is worth naming here, before it can take root.
 
-The Life Line does not predict how long you will live. This is not a modern revision of the tradition. Cheiro was explicit: "The line of life does not necessarily indicate the length of life, but rather the quality of vitality." Fred Gettings and Peter West, two of the more rigorous writers in the Western tradition, make the same point. The Life Line is traditionally associated with the character of physical energy — constitution, vitality, the rhythm of a person's physical life — and with major transitions and periods of change across a life history. Its length, depth, the presence of chains or breaks, and how it relates to the surrounding mounts of Venus and Mars are what practitioners observe. Longevity is not among its traditional functions.
+The Life Line does not predict how long you will live. The classical texts treat it as a line about constitution and vitality, read against the whole hand rather than measured in years, and the modern practitioner literature — Gettings, West, Fincham — rejects the lifespan mapping outright. The Life Line is traditionally associated with the character of physical energy — constitution, vitality, the rhythm of a person's physical life — and with major transitions and periods of change across a life history. Its length, depth, the presence of chains or breaks, and how it relates to the surrounding mounts of Venus and Mars are what practitioners observe. Longevity is not among its traditional functions.
 
 This is a case where the popular version of palmistry diverges sharply from what the classical texts actually say — and the divergence is significant enough to flag at the outset. The deep-dive article will address it fully.
 
@@ -70,4 +70,4 @@ For now, the most useful next step is simply to locate each line on your own han
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); yourchineseastrology.com, "Hand Lines in Palmistry"; Destiny Palmistry, "Fate Line Missing on the Palm?"*
+*Sources consulted: Cheiro, Palmistry for All (1916); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); Johnny Fincham, The Spellbinding Power of Palmistry (2005).*

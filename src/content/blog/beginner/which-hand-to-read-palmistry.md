@@ -18,7 +18,7 @@ Your **active hand** is your dominant hand: the one you write with, reach with, 
 
 The active hand is traditionally associated with developed character — the hand that shows what life has shaped. William Benham, in *The Laws of Scientific Hand Reading* (1900), describes it as the hand on which experience has left its mark. The passive hand is traditionally associated with innate tendencies — what you began with, before circumstance and choice began to work on the raw material.
 
-Cheiro put it memorably in *Palmistry for All* (1916): "The left hand shows what nature gives, the right hand what man makes of it." He was writing from the right-hand-dominant majority, but the principle applies symmetrically: whichever hand is passive holds what was given, whichever is active holds what has been made.
+Cheiro recorded the convention in *Cheiro's Language of the Hand*: "the left hand is what you are, constitutionally; the right hand, what you make yourself or acquire." He was writing from the right-hand-dominant majority, but the principle applies symmetrically: whichever hand is passive holds what was given, whichever is active holds what has been made.
 
 The practical implication is that neither hand alone tells the full story. The passive hand establishes a baseline. The active hand shows the direction of travel from that baseline. The gap between them — where features have strengthened, faded, or appeared where they weren't before — is often where the most informative observations live.
 
@@ -76,4 +76,4 @@ The active/passive framework is the most consistent across contemporary traditio
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998).*
+*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); Cheiro's Language of the Hand (1897).*

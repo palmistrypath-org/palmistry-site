@@ -102,4 +102,4 @@ For now, the most productive next step is to observe your own hands. Locate the 
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); yourchineseastrology.com, "Palmistry Mounts"; Destiny Palmistry, "The Inner Mars Mount."*
+*Sources consulted: Cheiro, Palmistry for All (1916); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); William G. Benham, The Laws of Scientific Hand Reading (1900).*
