@@ -225,3 +225,51 @@ recorded in Pass 2.
 ### Method note
 
 A bounded search worker swept `src/content`, `src/pages`, and the style guide for leftover phrasing and returned nine candidates; four were already fixed by the time it reported, four were confirmed and corrected, and one (`m-line-palmistry.md` on the M-shape luck claim) was inspected and kept, since that reading genuinely is modern. A second sweep after the edits surfaced three further contradictions the worker had not flagged, also corrected. The 78 quotation attributions from Pass 1 remain open and untouched.
+
+---
+
+## Pass 4 — Final surgical correction (2026-08-10)
+
+**Pass 3 was wrong to mark these two articles resolved.** It corrected the
+passages it looked at and did not read either file end to end, so both still
+carried mid-article prose that contradicted their own corrected openings. Cross-
+agent review caught this. Recording it because the value of this log depends on
+it showing where the review process failed as well as where the content did.
+
+Both files were then read complete, top to bottom, classifying every paragraph
+as classical / modern practice / site policy / cross-tradition claim.
+
+### `short-life-line-meaning.md`
+
+| Leftover | Fix |
+|---|---|
+| "Benham, Cheiro, and Gettings all describe a shorter or curtailed life line as suggesting that a life pivots substantially" | Removed. No primary-text support, and it contradicts the verified fact that both read the line for duration. Section retitled "What contemporary practice reads into a short line" and opens by stating Cheiro and Benham are not among its sources |
+| "A break in the life line reads as a significant transition, not a termination" | Qualified as modern versus classical |
+| "A broken life line (associated with a major transition)" in Common mistakes | Both readings now named |
+| "A note on other traditions" — claimed Indian and Chinese traditions share the Western rejection of lifespan reading, cited a classical *Jeevan Rekha*/*prana* interpretation and Chinese vitality readings | Replaced. Now records that the classical Indian marks literature is openly predictive and reads palm lines for longevity, that *Jeevan Rekha* is modern Hindi terminology, that no Chinese line readings have been established, and that the rejection of lifespan reading is a modern development this site does not know to be cross-cultural |
+| FAQ "It is traditionally associated with a fundamental change of direction" | Changed to contemporary practice, with the classical position named |
+| "Cheiro and Benham both treat depth as the primary quality indicator" (two places) | Found during the full read, not flagged by review. Contradicted the article's own point that both read length for duration. Now: depth and clarity carry weight in every framework, but treating depth as *primary over length* is a modern reordering |
+
+### `broken-life-line-meaning.md`
+
+| Leftover | Fix |
+|---|---|
+| Opening paragraph 2 presented transition as the unqualified answer | Marked as the contemporary reading and the one this site uses |
+| "What counts as a break" — "the tradition reads an overlapping break as a transition" | Section now distinguishes the forms; interpretation deferred to the readings section |
+| "This is the central, consistent reading across the Western tradition. Benham, Cheiro, and Gettings all describe a break… as marking a major change in life's direction"; "what the tradition reads is a change in life's course, not a physical catastrophe" | Section rewritten as "Three readings, kept separate": classical health reading, contemporary transition reading, site policy. Modern readings are explicitly not attributed to Cheiro or Benham |
+| "the transition reads as one phase giving way to another"; "the tradition consistently treats the presence of supporting lines…" | Split by framework. The supporting-lines point is one place the two genuinely agree, and now says so, citing Cheiro on the line of Mars |
+| "A note on other traditions" — classical *Jeevan Rekha*/*prana* reading of breaks, Chinese *qi* continuity, cross-tradition consensus against mortality readings | Section removed entirely. None of it is supported by the Indian or Chinese sources established in Pass 2 |
+| "no responsible contemporary practitioner reads a break that way"; "no responsible practitioner today offers them" | Replaced with what can be defended: the claim has not survived testing, the modern literature has dropped it, and this site does not use it |
+| FAQ "A break is traditionally associated with a significant transition" | Marked as the contemporary reading, with the classical position named |
+| Section heading "A broken life line does not predict death" | Found during the full read. Read as a claim about the tradition; retitled "Why this site does not read a break as predicting death" |
+| "This section describes the geometry only" followed by interpretive descriptions of faded and chained sections | Found during the full read. Reworded to promise only that the *break* reading is deferred |
+
+### Standing conclusion
+
+Three of the corrections above were found by reading the complete files rather
+than by review or by grep. Targeted sweeps reliably miss contradictions that live
+in the gap between two passages, and neither a search worker nor a reviewer
+reading excerpts substitutes for reading the article as a reader would. Any
+future pass on this class of problem should read whole files.
+
+The 78 quotation attributions from Pass 1 remain open and untouched.
