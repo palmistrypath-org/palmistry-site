@@ -12,6 +12,14 @@
 
 ---
 
+## Outstanding editorial work on existing articles
+
+Ahead of new articles, one remediation item is open from Batch 2B (2026-08-10):
+
+**Quotation verification pass.** 78 quotation-marked passages attributed to Cheiro or Benham could not be found in the public-domain texts they are credited to. They are inventoried by file and line in `source-verification-log.md`. The concentration is in the mount articles (`mount-of-jupiter`, `mount-of-mars`, `mount-of-apollo`, `mount-of-mercury`, `mount-of-saturn`, `mount-of-luna`, `mount-of-venus`, `sun-line`) and the corresponding mount lessons, which should be handled as one group. For each: verify against the cited edition, or drop the quotation marks and paraphrase. Do not invent page references. Several of these articles will need a genuine editorial rewrite rather than a citation-level fix, because the attributed wording is load-bearing in the surrounding prose.
+
+---
+
 ## Scoring Key
 
 | Factor | Label | Scale | Notes |
