@@ -23,6 +23,7 @@ Implemented:
 - Learn index + module + lesson routes
 - Glossary
 - Pagefind search
+- Global skip-to-main navigation and shared keyboard focus styling
 - Sitemap
 - RSS
 - robots.txt
@@ -56,13 +57,16 @@ Available scripts include:
 - `npm run audit:images`
 - `npm run audit:schema`
 - `npm run audit:all`
+- `npm run audit:accessibility`
 - `npm run content-audit`
 - IndexNow dry-run/submission scripts
 
 No separate unit-test runner or linter is declared in `package.json`; Astro build plus the project audit scripts are the main automated validation layer.
 
+The accessibility audit checks generated pages for the global skip link and exactly one `main#main-content` target, and checks lesson `Figure` alt text for prompt-like language.
+
 ## Agent/documentation state
 As of 2026-08-09, the repo is being migrated from a monolithic `PROJECT.md` startup model to the same progressive-disclosure agent operating system used across the user’s other AI-assisted projects. `AGENTS.md` and the canonical wiki/handoff pages are the new source of workflow context; `PROJECT.md` is retained as a compatibility pointer.
 
 ## Known verification boundaries
-This inventory was derived from repository contents/configuration rather than a local production build in this session. Future implementation tasks should validate the affected runtime behavior using the commands in `AGENTS.md`.
+This inventory is based on repository state and local validation, not live production observation. Future implementation tasks should validate the affected runtime behavior using the commands in `AGENTS.md`.

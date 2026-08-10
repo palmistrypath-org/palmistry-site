@@ -30,7 +30,6 @@ import { SITE_TITLE } from '../consts';
 				text-transform: uppercase;
 				color: var(--color-text-muted);
 				margin: 0 0 1.1em;
-				opacity: 0.7;
 			}
 			.hero h1 {
 				font-size: clamp(1.6rem, 6vw, 3em);
@@ -64,7 +63,6 @@ import { SITE_TITLE } from '../consts';
 			.status-note {
 				font-size: 0.75em;
 				color: var(--color-text-muted);
-				opacity: 0.65;
 			}
 			.btn-buy {
 				display: inline-block;
@@ -88,7 +86,6 @@ import { SITE_TITLE } from '../consts';
 			.guarantee {
 				font-size: 0.73em;
 				color: var(--color-text-muted);
-				opacity: 0.6;
 			}
 
 			/* ── Divider ──────────────────────────────────────────────── */
@@ -117,7 +114,6 @@ import { SITE_TITLE } from '../consts';
 				letter-spacing: 0.2em;
 				text-transform: uppercase;
 				color: var(--color-text-muted);
-				opacity: 0.6;
 				text-align: center;
 				margin: 0 0 1.75em;
 			}
@@ -149,7 +145,6 @@ import { SITE_TITLE } from '../consts';
 				font-size: 0.76em;
 				color: var(--color-text-muted);
 				line-height: 1.65;
-				opacity: 0.8;
 			}
 
 			/* ── Comparison ───────────────────────────────────────────── */
@@ -165,7 +160,6 @@ import { SITE_TITLE } from '../consts';
 				letter-spacing: 0.1em;
 				text-transform: uppercase;
 				color: var(--color-text-muted);
-				opacity: 0.7;
 				padding: 0.7em 1em;
 				text-align: left;
 				border-bottom: 1px solid rgba(201, 169, 110, 0.2);
@@ -182,7 +176,6 @@ import { SITE_TITLE } from '../consts';
 			}
 			.comparison-table td:first-child {
 				color: var(--color-text);
-				opacity: 0.75;
 			}
 			.check {
 				color: var(--accent);
@@ -220,12 +213,11 @@ import { SITE_TITLE } from '../consts';
 				margin-top: 1.5em;
 				font-size: 0.75em;
 				color: var(--color-text-muted);
-				opacity: 0.6;
 				text-decoration: none;
-				transition: opacity 0.2s ease;
+				transition: color 0.2s ease;
 			}
 			.free-link:hover {
-				opacity: 1;
+				color: var(--accent);
 				text-decoration: underline;
 				text-underline-offset: 2px;
 			}
@@ -253,8 +245,23 @@ import { SITE_TITLE } from '../consts';
 				flex-wrap: wrap;
 				justify-content: center;
 			}
-			#notify-form input[type="email"] {
+			.form-field {
 				flex: 1 1 220px;
+				min-width: 0;
+				text-align: left;
+			}
+			.form-label {
+				display: block;
+				margin: 0 0 0.35em;
+				color: var(--color-text);
+				font-family: var(--font-cinzel);
+				font-size: 0.62em;
+				letter-spacing: 0.11em;
+				text-transform: uppercase;
+			}
+			#notify-form input[type="email"] {
+				width: 100%;
+				box-sizing: border-box;
 				padding: 0.65em 1em;
 				border: 1px solid rgba(201, 169, 110, 0.35);
 				border-radius: 4px;
@@ -263,7 +270,10 @@ import { SITE_TITLE } from '../consts';
 				font-family: var(--font-lora);
 				font-size: 0.9em;
 			}
-			#notify-form input[type="email"]::placeholder { opacity: 0.5; }
+			#notify-form input[type="email"]::placeholder {
+				color: var(--color-text-muted);
+				opacity: 0.75;
+			}
 			#notify-form button {
 				padding: 0.65em 1.25em;
 				background: var(--color-gold, #c9a96e);
@@ -281,7 +291,6 @@ import { SITE_TITLE } from '../consts';
 			.notify-caveat {
 				font-size: 0.72em;
 				color: var(--color-text-muted);
-				opacity: 0.6;
 				margin-top: 0.9em;
 				line-height: 1.6;
 			}
@@ -299,13 +308,13 @@ import { SITE_TITLE } from '../consts';
 				.contents-grid { grid-template-columns: 1fr; gap: 1.1em; margin-bottom: 2.5em; }
 				.comparison-table th, .comparison-table td { padding: 0.55em 0.6em; }
 				#notify-form { flex-direction: column; align-items: stretch; }
-				#notify-form input[type="email"], #notify-form button { flex: none; width: 100%; }
+				.form-field, #notify-form button { flex: none; width: 100%; }
 			}
 		</style>
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main id="main-content" tabindex="-1">
 			<section class="hero">
 				<p class="eyebrow">Palmistry Path — Complete Reference</p>
 				<h1>The Complete Palmistry Reference</h1>
@@ -435,7 +444,7 @@ import { SITE_TITLE } from '../consts';
 
 			<div class="section notify-section">
 				<h2 class="section-heading">Get notified when it's available</h2>
-				<p class="notify-note">
+				<p class="notify-note" id="notify-note">
 					The Complete Reference is in final preparation. Leave your email and we'll send you a link when it's ready.
 				</p>
 				<div class="notify-form-wrap">
@@ -445,20 +454,23 @@ import { SITE_TITLE } from '../consts';
 						method="post"
 						aria-label="Notify me when available"
 					>
-						<label for="notify-email" class="sr-only">Email address</label>
-						<input
-							type="email"
-							id="notify-email"
-							name="email_address"
-							placeholder="Your email address"
-							autocomplete="email"
-							required
-						/>
+						<div class="form-field">
+							<label for="notify-email" class="form-label">Email address</label>
+							<input
+								type="email"
+								id="notify-email"
+								name="email_address"
+								placeholder="you@example.com"
+								autocomplete="email"
+								aria-describedby="notify-note notify-error notify-success notify-caveat"
+								required
+							/>
+						</div>
 						<button type="submit" id="notify-btn" data-track="cta" data-track-location="premium-guide-notify" data-track-target="notify-submit">Notify Me →</button>
 					</form>
-					<p class="notify-error" id="notify-error" style="display:none;">Something went wrong — please try again.</p>
-					<p class="notify-success" id="notify-success" style="display:none;">You're on the list. We'll email you when it's ready.</p>
-					<p class="notify-caveat">No spam. Just the launch email and occasional Palmistry Path notes. <a href="/privacy/" class="caveat-link">Privacy policy.</a></p>
+					<p class="notify-error" id="notify-error" role="alert" style="display:none;">Something went wrong — please try again.</p>
+					<p class="notify-success" id="notify-success" role="status" aria-live="polite" style="display:none;">You're on the list. We'll email you when it's ready.</p>
+					<p class="notify-caveat" id="notify-caveat">No spam. Just the launch email and occasional Palmistry Path notes. <a href="/privacy/" class="caveat-link">Privacy policy.</a></p>
 				</div>
 			</div>
 
@@ -488,7 +500,13 @@ import { SITE_TITLE } from '../consts';
 
 			form?.addEventListener('submit', async (e) => {
 				e.preventDefault();
+				if (!form.checkValidity()) {
+					form.reportValidity();
+					return;
+				}
 				if (!emailInput?.value || !btn) return;
+				if (errorMsg) errorMsg.style.display = 'none';
+				if (successMsg) successMsg.style.display = 'none';
 				btn.textContent = 'Submitting…';
 				btn.disabled = true;
 				try {

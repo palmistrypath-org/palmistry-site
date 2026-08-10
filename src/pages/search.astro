@@ -18,7 +18,41 @@ import { SITE_TITLE } from '../consts';
 			}
 			h1 {
 				text-align: center;
-				margin-bottom: 1.25em;
+				margin-bottom: 0.4em;
+			}
+			.search-intro {
+				margin: 0 auto 1.5em;
+				color: var(--color-text-muted);
+				font-size: 0.9em;
+				line-height: 1.7;
+				text-align: center;
+			}
+			.search-fallback {
+				margin-top: 2em;
+				padding-top: 1.25em;
+				border-top: 1px solid rgba(201, 169, 110, 0.16);
+				font-size: 0.82em;
+				color: var(--color-text-muted);
+			}
+			.search-fallback h2 {
+				font-size: 1em;
+			}
+			.search-links {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.65em;
+				padding: 0;
+				margin: 0;
+				list-style: none;
+			}
+			.search-links a {
+				display: inline-flex;
+				align-items: center;
+				min-height: 44px;
+				padding: 0 0.85em;
+				border: 1px solid rgba(201, 169, 110, 0.24);
+				border-radius: 4px;
+				text-decoration: none;
 			}
 
 			/* Pagefind UI theming */
@@ -34,10 +68,24 @@ import { SITE_TITLE } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main data-pagefind-ignore>
+		<main id="main-content" tabindex="-1" data-pagefind-ignore>
 			<div class="search-wrap">
 				<h1>Search</h1>
+				<p class="search-intro">Search the lesson and article library, or browse a starting point below.</p>
 				<Search />
+				<noscript>
+					<p class="search-fallback">Search requires JavaScript. You can still browse by lesson module or article topic below.</p>
+				</noscript>
+				<section class="search-fallback" aria-labelledby="browse-heading">
+					<h2 id="browse-heading">Browse instead</h2>
+					<ul class="search-links">
+						<li><a href="/learn/">Learning path</a></li>
+						<li><a href="/blog/#major-lines">Major lines</a></li>
+						<li><a href="/blog/#hand-shape">Hand shape</a></li>
+						<li><a href="/blog/#mounts">Mounts</a></li>
+						<li><a href="/glossary/">Glossary</a></li>
+					</ul>
+				</section>
 			</div>
 		</main>
 		<Footer />

@@ -16,7 +16,6 @@ const { steps, currentOrder, moduleTitle, moduleSlug } = Astro.props;
 const total = steps.length;
 
 // Fill ends at the centre of the current pip.
-// space-between places pip centres at intervals of (W-16)/(N-1) across the track.
 const trackFillPct = total > 1 ? ((currentOrder - 1) / (total - 1)) * 100 : 0;
 ---
 
@@ -90,7 +89,6 @@ const trackFillPct = total > 1 ? ((currentOrder - 1) / (total - 1)) * 100 : 0;
 		text-transform: uppercase;
 		color: var(--color-text-muted);
 		margin: 0 0 1em;
-		opacity: 0.65;
 	}
 
 	.module-link {
@@ -115,12 +113,12 @@ const trackFillPct = total > 1 ? ((currentOrder - 1) / (total - 1)) * 100 : 0;
 		padding: 0.6em 0;
 	}
 
-	/* Track line: offset 8px each side so it runs pip-centre to pip-centre */
+	/* Track line: offset by half the 44px target so it runs pip-centre to pip-centre */
 	.track {
 		position: absolute;
 		top: 50%;
-		left: 8px;
-		right: 8px;
+		left: 22px;
+		right: 22px;
 		height: 1px;
 		background: rgba(201, 169, 110, 0.1);
 		transform: translateY(-50%);
@@ -146,17 +144,19 @@ const trackFillPct = total > 1 ? ((currentOrder - 1) / (total - 1)) * 100 : 0;
 		z-index: 1;
 	}
 
-	/* 16px wrapper gives generous tap target; visual dot lives inside via pip-dot */
+	/* 44px wrapper gives a practical target; visual dot lives inside via pip-dot */
 	.pip {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 16px;
-		height: 16px;
+		width: 44px;
+		height: 44px;
 	}
 
 	.pip-dot {
-		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		width: 7px;
 		height: 7px;
 		border-radius: 50%;

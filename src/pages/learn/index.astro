@@ -109,7 +109,6 @@ import { MODULES, SITE_TITLE } from '../../consts';
 				max-width: 520px;
 				margin: 0 auto;
 				line-height: 1.75;
-				opacity: 0.8;
 			}
 			.guide-aside a {
 				color: var(--color-text-muted);
@@ -134,7 +133,7 @@ import { MODULES, SITE_TITLE } from '../../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main id="main-content" tabindex="-1">
 			<section class="page-header">
 				<h1>Learn Palmistry</h1>
 				<p class="intro">A structured path from first principles to nuanced interpretation.</p>
@@ -146,9 +145,9 @@ import { MODULES, SITE_TITLE } from '../../consts';
 						<li>
 							<a href={`/learn/${mod.slug}`}>
 								<span class="module-difficulty">{mod.difficulty}</span>
-								<p class="module-title">
+								<h2 class="module-title">
 									{i + 1}. {mod.title}
-								</p>
+								</h2>
 								<p class="module-description">{mod.description}</p>
 							</a>
 						</li>

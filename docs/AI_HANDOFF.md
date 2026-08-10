@@ -11,9 +11,9 @@
 ## Current continuation context
 Current focus: none. `ACTIVE_TASK.md` is INACTIVE and awaiting the next assignment.
 
-Latest completed implementation: on 2026-08-10 Remediation Batch 1, Trust & Technical Safety, moved the Complete Reference to waitlist-only, removed the dead paid checkout flow, preserved the Complete Reference PDF source under `src/private/`, disabled AdSense temporarily, centralized indexability policy in `src/indexability.mjs`, and added generated-output trust/indexability audit coverage.
+Latest completed implementation: on 2026-08-10 Remediation Batch 2A, Accessibility & UX Safety, added global skip navigation, shared focus-visible styling, main-content targets, focused text-contrast/opacity fixes, learner-facing alt text for Lines lesson Figures, larger practical lesson/header targets, accessible labels/status semantics for the Starter Guide and waitlist forms, a search browse fallback, `/learn` module-card headings, and a focused accessibility audit.
 
-Known follow-up: `npm audit --omit=dev` still reports 4 vulnerabilities that require the breaking `npm audit fix --force` path to Astro 7.2.0 and sharp 0.35.3. Do not force that migration without explicit approval.
+Known follow-up: `npm audit --omit=dev` could not be completed during Batch 2A because the escalation reviewer rejected registry submission of dependency metadata without fresh explicit approval. Batch 1 previously observed 4 vulnerabilities requiring the breaking `npm audit fix --force` path to Astro 7.2.0 and sharp 0.35.3. Do not force that migration without explicit approval.
 
 Key current implementation facts are summarized in `CURRENT_STATE.md` and `ARCHITECTURE.md`; verify source before relying on them for a change.
 

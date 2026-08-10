@@ -3,6 +3,7 @@ import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <header>
 	<nav aria-label="Site navigation">
 		<p class="site-title">
@@ -60,6 +61,12 @@ import HeaderLink from './HeaderLink.astro';
 		padding: 0.5em 0;
 	}
 	nav a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 44px;
+		min-height: 44px;
+		box-sizing: border-box;
 		padding: 0.9em 0.5em;
 		color: var(--color-nav-text);
 		border-bottom: 2px solid transparent;
@@ -116,9 +123,6 @@ import HeaderLink from './HeaderLink.astro';
 			padding: 0.9em 0.4em;
 			font-size: 0.76em;
 			letter-spacing: 0.04em;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 		}
 	}
 </style>
