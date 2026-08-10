@@ -1,11 +1,12 @@
 :root {
 	--accent: #c9a96e;
 	--accent-light: #e0c07e;
+	--focus-ring: #f0cf86;
 	--color-bg: #0d0a1a;
 	--color-header-bg: #08060f;
 	--color-text: #e2d9c5;
 	--color-heading: #e8e0d0;
-	--color-text-muted: #8c84a8;
+	--color-text-muted: #b2aacb;
 	--color-nav-text: #c9b99a;
 	--color-nav-hover: #c9a96e;
 	--box-shadow:
@@ -79,6 +80,36 @@ a:hover {
 	text-decoration-color: var(--accent-light);
 }
 
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+	outline: 3px solid var(--focus-ring);
+	outline-offset: 4px;
+	box-shadow: 0 0 0 6px rgba(13, 10, 26, 0.85);
+}
+
+.skip-link {
+	position: fixed;
+	top: 0.75rem;
+	left: 0.75rem;
+	z-index: 1000;
+	padding: 0.65rem 0.9rem;
+	background: var(--accent-light);
+	color: var(--color-bg);
+	border-radius: 4px;
+	font-family: var(--font-cinzel), serif;
+	font-size: 0.75rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	text-decoration: none;
+	transform: translateY(-180%);
+	transition: transform 0.15s ease;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+	transform: translateY(0);
+	color: var(--color-bg);
+}
+
 p {
 	margin-bottom: 1em;
 }
@@ -129,7 +160,7 @@ blockquote {
 	margin: 0;
 	font-size: 1.15em;
 	font-style: italic;
-	color: var(--color-text-muted);
+	color: #c5bed8;
 }
 
 hr {

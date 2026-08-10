@@ -30,7 +30,6 @@ import { SITE_TITLE } from '../consts';
 				text-transform: uppercase;
 				color: var(--color-text-muted);
 				margin: 0 0 1.1em;
-				opacity: 0.7;
 			}
 			.guide-hero h1 {
 				font-size: clamp(1.6rem, 6vw, 3em);
@@ -75,7 +74,6 @@ import { SITE_TITLE } from '../consts';
 				letter-spacing: 0.2em;
 				text-transform: uppercase;
 				color: var(--color-text-muted);
-				opacity: 0.6;
 				text-align: center;
 				margin: 0 0 1.75em;
 			}
@@ -105,7 +103,6 @@ import { SITE_TITLE } from '../consts';
 				font-size: 0.76em;
 				color: var(--color-text-muted);
 				line-height: 1.65;
-				opacity: 0.8;
 			}
 
 			/* ── Signup block ─────────────────────────────────────────── */
@@ -126,8 +123,23 @@ import { SITE_TITLE } from '../consts';
 				max-width: 460px;
 				margin: 0 auto 0.85em;
 			}
-			.signup-form input[type='email'] {
+			.form-field {
 				flex: 1;
+				min-width: 0;
+				text-align: left;
+			}
+			.form-label {
+				display: block;
+				margin: 0 0 0.35em;
+				color: var(--color-text);
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.62em;
+				letter-spacing: 0.11em;
+				text-transform: uppercase;
+			}
+			.signup-form input[type='email'] {
+				width: 100%;
+				box-sizing: border-box;
 				background: rgba(255, 255, 255, 0.04);
 				border: 1px solid rgba(201, 169, 110, 0.28);
 				border-radius: 4px;
@@ -135,15 +147,13 @@ import { SITE_TITLE } from '../consts';
 				font-family: var(--font-lora), serif;
 				font-size: 0.82em;
 				padding: 0.75em 1em;
-				outline: none;
 				transition:
 					border-color 0.2s ease,
 					box-shadow 0.2s ease;
-				min-width: 0; /* prevent flex overflow */
 			}
 			.signup-form input[type='email']::placeholder {
 				color: var(--color-text-muted);
-				opacity: 0.55;
+				opacity: 0.75;
 			}
 			.signup-form input[type='email']:focus {
 				border-color: rgba(201, 169, 110, 0.55);
@@ -186,7 +196,6 @@ import { SITE_TITLE } from '../consts';
 			.signup-caveat {
 				font-size: 0.72em;
 				color: var(--color-text-muted);
-				opacity: 0.55;
 				margin: 0;
 				letter-spacing: 0.02em;
 			}
@@ -301,7 +310,6 @@ import { SITE_TITLE } from '../consts';
 			.preview-download p {
 				font-size: 0.78em;
 				color: var(--color-text-muted);
-				opacity: 0.6;
 				margin: 0 0 0.9em;
 				line-height: 1.6;
 			}
@@ -386,6 +394,9 @@ import { SITE_TITLE } from '../consts';
 				.signup-form {
 					flex-direction: column;
 				}
+				.form-field {
+					width: 100%;
+				}
 				.signup-form button {
 					width: 100%;
 					padding: 0.85em 1em;
@@ -395,7 +406,7 @@ import { SITE_TITLE } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main id="main-content" tabindex="-1">
 			<section class="guide-hero">
 				<p class="guide-eyebrow">Free Download</p>
 				<h1>The Palmistry Starter Guide</h1>
@@ -504,18 +515,21 @@ import { SITE_TITLE } from '../consts';
 					method="post"
 					aria-label="Guide download sign-up"
 				>
-					<label for="guide-email" class="sr-only">Email address</label>
-					<input
-						type="email"
-						id="guide-email"
-						name="email_address"
-						placeholder="Your email address"
-						autocomplete="email"
-						required
-					/>
+					<div class="form-field">
+						<label for="guide-email" class="form-label">Email address</label>
+						<input
+							type="email"
+							id="guide-email"
+							name="email_address"
+							placeholder="you@example.com"
+							autocomplete="email"
+							aria-describedby="signup-note signup-caveat signup-error"
+							required
+						/>
+					</div>
 					<button type="submit" id="signup-btn" data-track="cta" data-track-location="guide-form" data-track-target="guide-submit">Send Me the Guide</button>
 				</form>
-				<p class="signup-error" id="signup-error">Something went wrong — please try again.</p>
+				<p class="signup-error" id="signup-error" role="alert">Something went wrong — please try again.</p>
 				<p class="signup-caveat" id="signup-caveat">
 					You'll receive the guide and occasional Palmistry Path learning notes. <a href="/privacy/" class="caveat-link" data-track="nav" data-track-location="guide-caveat" data-track-target="privacy">Privacy policy.</a>
 				</p>
@@ -547,6 +561,7 @@ import { SITE_TITLE } from '../consts';
 				}
 
 				const emailInput = form.querySelector<HTMLInputElement>('input[name="email_address"]');
+				if (!emailInput) return;
 
 				if (errorMsg) errorMsg.style.display = 'none';
 				if (btn) { btn.textContent = 'Sending…'; btn.disabled = true; }

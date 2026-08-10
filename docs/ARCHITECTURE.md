@@ -86,10 +86,14 @@ The repo includes scripts for:
 - image audit
 - structured-data/schema audit
 - trust/indexability audit
+- focused accessibility audit for skip-link/main-target and prompt-like lesson Figure alt regressions
 - content audit
 - IndexNow dry-run/submission
 
 See `package.json` for canonical command names.
+
+## Accessibility baseline
+The global header emits a skip link to `#main-content`. Public pages and layouts that use the header are expected to expose exactly one `<main id="main-content" tabindex="-1">` target. Shared focus indication lives in `src/styles/global.css` using `:focus-visible`; component-level styles should not suppress visible focus without replacing it.
 
 ## SEO title coupling
 The current content model does not provide a separate SEO-title field. Blog `title` is used broadly for display/headline metadata, so changing it can affect H1/title/schema/breadcrumb behavior. Inspect the relevant layout/head code before altering that model.
