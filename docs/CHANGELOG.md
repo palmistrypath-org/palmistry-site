@@ -2,6 +2,14 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-10 - Batch 2B pre-merge correction pass
+- Corrected the life-line historical framing across nine content files, the glossary, and the print reference. Cheiro and Benham both read the life line for length of life and both supplied dating systems; the site no longer claims the tradition rejected lifespan reading. Palmistry Path's non-predictive stance is now presented as a modern editorial position resting on evidence.
+- Added a durable editorial rule separating historical description from Palmistry Path's own boundary, so the tradition is never sanitised to match site policy.
+- Re-audited the Chinese article: removed line-variation interpretations that rested only on Tier 4 material, reframed remaining line readings as contemporary practice, corrected the "interpretive, not prophetic" claim, and stopped claiming the lifespan reading was absent from the classical teaching of either tradition.
+- Re-audited the Indian article: removed the claim that no Indian tradition predicts outcomes with certainty (the *Bṛhat Saṃhitā* is openly predictive), and marked the karmic fate-line reading, mount correspondences, joint chart/hand practice, and per-formation meanings as contemporary practice or removed them.
+- Fixed two Tian/Di/Ren mapping errors in the Lines lessons and standardised the mapping and its source status across all occurrences.
+- Softened the About page sourcing claim to match the four-tier policy, and stated that describing the tradition honestly means reporting predictive claims the site does not endorse.
+
 ## 2026-08-10 - Remediation Batch 2B source integrity and editorial trust
 - Added a permanent task startup/local sync procedure to `AGENTS.md` so agents fetch, update `main`, and branch without manual user intervention.
 - Replaced the editorial style guide's source section with a four-tier source policy, plus rules for tradition-specific sourcing, quotation integrity, and encyclopaedia handling. Removed the prior allowance for citing commercial astrology sites.

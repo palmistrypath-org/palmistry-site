@@ -20,6 +20,8 @@ Observed lesson files cover foundational palmistry concepts, active/passive hand
 ## Sourcing state
 Citations follow the four-tier source policy in `editorial-style-guide.md` §5. As of Batch 2B (2026-08-10) no commercial astrology site, SEO content farm, unsourced blog, or general encyclopaedia is cited anywhere in `src/`. The About page source list matches the corpus the content actually cites. The Chinese and Indian tradition articles carry tradition-appropriate sources and state explicitly where a claim reflects contemporary practice rather than classical doctrine.
 
+Historical claims and site policy are kept separate: content reports the predictive readings the classical texts actually contain — lifespan, illness, fortune, marital outcome — and states separately that Palmistry Path does not treat them as reliable. No page claims the tradition rejected a reading it demonstrably made. The Tian/Di/Ren mapping (heart = Heaven, head = Human, life = Earth) is consistent across all articles, lessons, the glossary, and the print reference, and is presented as contemporary Chinese palm-reading terminology rather than traced classical doctrine.
+
 Open: 78 author-attributed quotations, concentrated in the mount articles and mount lessons, could not be verified against the public-domain primary texts and still carry quotation marks. They are inventoried in `source-verification-log.md` and need a dedicated editorial pass.
 
 ## Discovery/navigation

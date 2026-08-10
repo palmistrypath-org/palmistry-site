@@ -36,11 +36,15 @@ Identifying which of these you are actually looking at changes the reading consi
 
 This point is central enough to establish plainly before any interpretation.
 
-It is worth being precise about what the classical literature actually says, because the popular version and the textual version differ. William Benham, in *The Laws of Scientific Hand Reading* (1900), treats a break as an interruption to be diagnosed — most often illness, sometimes accident — and insists it be read against the mounts, the chance lines, and the condition of the hand as a whole rather than on its own. Cheiro, in *Palmistry for All* (1916), likewise reads breaks alongside supporting features rather than as a standalone sign. The modern practitioner literature has moved further, reading a break primarily as a marker of transition and change in the shape of a life.
+It is worth being precise about what the classical literature actually says, because the reassuring version and the textual version are not the same.
 
-What none of them does is read a break as a prediction of death. The classical writers treat it as something to interpret carefully within a whole hand; the modern tradition treats it as a marker of change. Neither treats it as a date.
+William Benham, in *The Laws of Scientific Hand Reading* (1900), treats a break as an interruption to be diagnosed — most often illness, sometimes accident — read against the mounts, the chance lines, and the condition of the hand as a whole. Cheiro, in *Palmistry for All* (1916), goes further than that: a broken life line in his system can indicate "great danger of death where the break appears," a danger he treats as survivable when a strong line of Mars runs behind the break. He also supplies a dating method, dividing the life line into seven-year periods, which is what allows a break to be assigned to an age at all.
 
-The fear response to a broken life line comes from the popular fortune-telling tradition — dramatic fair-booth palmistry that leaned into the life line's emotive weight to produce striking readings. It is not what systematic palmistry writing teaches. The tradition, in its serious literature, has never read a break as predicting death.
+So the classical texts do connect breaks to illness, accident, and in Cheiro's case to danger of death. That is the honest reading of the sources, and this article is not going to pretend otherwise in order to be comforting.
+
+What has changed is everything after them. The modern practitioner literature reads a break primarily as a marker of transition and change in the shape of a life, and drops the mortal reading entirely. The empirical work on the life line — covered in the [life line article](/blog/beginner/life-line/) — finds no reliable relationship between the line and lifespan.
+
+Palmistry Path's position is therefore a modern one, held for a stated reason rather than inherited: a break in the life line is not a prediction of death or illness, because that reading has been tested and has not held up. We describe what Cheiro and Benham wrote accurately, and we do not offer it as guidance about anyone's health or lifespan. If a feature of your hand is worrying you medically, the answer is a doctor, not a palm reader — and that was true in 1900 as well.
 
 ## What a broken life line is traditionally associated with
 
@@ -70,7 +74,7 @@ The break is not the only thing to observe. These are the questions to work thro
 
 ## Common mistakes when reading a broken life line
 
-**Assuming break means death or serious illness.** This is the most persistent error — and the one this article is primarily written to address. The serious tradition does not make this association. It comes from popular fortune-telling, not systematic palmistry writing.
+**Assuming break means death or serious illness.** This is the most persistent error, and the one this article is primarily written to address. The classical writers did make health and mortality associations here, so the error has a real ancestry rather than being invented at a fairground — but it has not survived testing, and no responsible contemporary practitioner reads a break that way.
 
 **Reading every faint section as a break.** A thinning or faded section is not the same as a gap. Beginners often see the line become indistinct for a stretch and read it as a break. Inspect carefully: does the line fully disappear, or does it continue more faintly? These read differently.
 

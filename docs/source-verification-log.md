@@ -89,7 +89,100 @@ Notable findings, all corrected in this batch:
 
 The mount articles and mount lessons carry the concentration and should be handled together. The remedy in each case is the one in `editorial-style-guide.md` §5.2: verify against the cited edition, or drop the quotation marks and paraphrase. Do not manufacture page references.
 
+### Pass 1 conclusions later corrected
+
+Pass 2 found that Pass 1 established the right evidence and then wrote the opposite of it into the content. The findings above stand; the framing built on them did not. See Pass 2.
+
 ### Not verified, deliberately
 
 - Gettings (1965), West (1998), Fincham (2005), Fitzherbert (1986), Goldberg & Dobkins (2016) are in copyright and were not available for text search. Attributions to them were left as they stand; none of them carries a quotation-marked passage that this pass could check.
 - Whether the Heaven/Human/Earth three-line mapping appears in any classical Chinese text. Searching surfaced only commercial sites. The article now presents the vocabulary as contemporary standard practice and says explicitly that classical textual authority is not claimed.
+
+---
+
+## Pass 2 — Pre-merge correction pass (2026-08-10)
+
+Cross-agent review of the Batch 2B branch found that Pass 1 had established the primary-text evidence correctly and then written content that contradicted it. The corrections below reconcile the two.
+
+### The contradiction
+
+Pass 1 recorded that Cheiro's `Palmistry for All` associates a long clear life line with "length of life", and that Cheiro links a broken life line with danger of death. Pass 1 then published text stating that neither Cheiro nor Benham "offers a scale on which years are measured", that "what none of them does is read a break as a prediction of death", and that the tradition "has never supported" lifespan reading. Those statements are false, and the evidence contradicting them was already in this log.
+
+### Additional primary-text verification
+
+Searched the same corpora used in Pass 1.
+
+| Finding | Source |
+|---|---|
+| "It is reasonable to assume that it is this intimate connection with the vital organs of the body which enables it to foretell the length of life from *natural causes*." | Cheiro, *Palmistry for All* (1916) |
+| A long, clear, unbroken life line "would indicate length of life, vitality, freedom from illness, and strength of constitution." | Cheiro, ibid. |
+| Where the life and health lines meet at equal strength "will be the date of death, even though the Line of Life should pass this point." | Cheiro, ibid. |
+| Ch. XIX, "How to Tell Time and Dates of Principal Events in the Life": "The most correct way in which to tell time by the hand is to divide the Line of Life into periods of seven years." | Cheiro, ibid. |
+| A broken life line with a line of Mars behind it "may indicate great danger of death where the break appears, but a danger that will be overcome." | Cheiro, ibid. |
+| Six-year divisions for dating the life line; "The above division of the Life line I have found more accurate than any I have ever used." | Benham, *The Laws of Scientific Hand Reading* (1900) |
+| A tasselled ending "shows entire dissipation of the vitality and end of the life… death of the subject at the age at which the tassel is seen." | Benham, ibid. |
+| "Islands on the Life line show that the Current is split in two… They are always indications of periods of delicacy." | Benham, ibid. |
+| "Length of life, however, is a field that should seldom be approached at all, certainly not unless you are absolutely proficient, careful, and tactful." | Benham, ibid. |
+| Breaks in the life line read as illness or accident, diagnosed against mounts and chance lines. | Benham, ibid. (recorded in Pass 1) |
+| Palm marks read for kingship, wealth, and longevity — e.g. "If the three lines issuing from the wrist reach the middle of the palm, the person will be a king." | Varāhamihira, *Bṛhat Saṃhitā* ch. 68, trans. N. Chidambaram Iyer (1884) |
+
+**Conclusion.** Both principal Western sources read the life line for duration and both supplied dating systems. Benham urged caution about raising the subject with a client, which is a caution about practice, not a denial of the reading. The classical Indian marks literature is openly predictive. Palmistry Path's non-predictive stance is a modern editorial position and is now presented as one.
+
+### Framing now used sitewide
+
+Two statements kept separate on every page that touches this:
+
+1. **Historical description** — what the texts say, reported accurately, including predictive claims about lifespan, death, illness, wealth, and status.
+2. **Palmistry Path's position** — we do not predict these things, because the claims have not held up under testing, and the modern practitioner literature has abandoned them.
+
+Recorded as a durable rule in `editorial-style-guide.md` §5.2 and §11.
+
+### Chinese article — claim-by-claim outcome
+
+| Claim | Outcome |
+|---|---|
+| `san cai` / Tian Di Ren as a classical Chinese cosmological triad | **Verified** — Yijing commentarial tradition; corrected from "Taoist" to classical Chinese, shared across Confucian and Daoist thought |
+| Chinese physiognomy's textual history and the `Shenxiang quanbian` | **Verified** — Kohn (1986), Smith (1991) |
+| `nan zuo nü you` hand-by-sex convention and left/right yang-yin | **Qualified** — the yin/yang pairing and the convention are well attested across Chinese medicine, ritual, and divination; no claim made that a specific classical physiognomy manual states the palmistry rule |
+| Heaven/Human/Earth three-line mapping | **Qualified** — presented as the terminology of contemporary Chinese palm reading; explicitly not claimed as classical doctrine, and explicitly not claimed to be absent from one either |
+| Heaven Line variation meanings (length, depth, forking, endpoint) | **Removed** — no citable source; article now says so |
+| Human Line depth/clarity/fragmentation readings | **Removed** — same |
+| Earth Line "not about longevity in either tradition, not a classical teaching" | **Removed** — false for the Western tradition and unestablished for the Chinese |
+| "The tradition is interpretive, not prophetic" | **Removed and inverted** — Chinese physiognomy is part of an openly divinatory culture; the article now says so and states the site's own boundary separately |
+| Structural principle that the three lines are read in relation to each other | **Kept** — framework-internal logic, not a table of meanings |
+
+### Indian article — claim-by-claim outcome
+
+| Claim | Outcome |
+|---|---|
+| Textual lineage: `Gārgīyajyotiṣa` (1st c. CE), Near Eastern omen roots, `Bṛhat Saṃhitā` (6th c.) | **Verified** — Zysk (2016) |
+| Classical texts read palm lines by shape and omen, naming no life/head/heart line | **Verified** — `Bṛhat Saṃhitā` ch. 68 |
+| `Jeevan`/`Mastishk`/`Hridaya`/`Bhagya Rekha` | **Qualified** — modern Hindi terminology mapping the Western scheme onto Indian vocabulary; corrected in the glossary too |
+| Mount names (`Guru Parvat` etc.) and one-to-one planetary correspondence | **Qualified** — real correspondence, but shared inheritance vs. later convergence not settled; presented as contemporary practice |
+| `karma phala` / `dharma` reading of the Bhagya Rekha | **Qualified** — concepts are central to Indian thought; attaching them to this line is modern practice, not classical marks literature |
+| Historical joint reading of birth chart and hand | **Qualified** — common in contemporary practice; historical routineness not established, and Zysk traces the marks material to omen collections rather than Jyotish |
+| Per-formation meanings for islands, chains, breaks | **Removed** — no citable source |
+| Which-hand conventions "including classical distinctions" | **Qualified** — no source for any single rule; stated as varying by school |
+| "No palmistry tradition, including the Indian one, predicts outcomes with certainty" | **Removed** — contradicted by `Bṛhat Saṃhitā`; replaced with an accurate description plus the site's own stance |
+
+### Tian / Di / Ren consistency
+
+Repo-wide sweep. Correct mapping is heart = Heaven (Tian), head = Human (Ren), life = Earth (Di).
+
+| Location | Before | Action |
+|---|---|---|
+| `lessons/lines/04-life-line.mdx` | life = Human (Ren), Earth = head | Corrected |
+| `lessons/lines/03-head-line.mdx` (two places) | head = Earth, Human = life | Corrected |
+| `lessons/lines/01-major-lines-overview.mdx` | mapping correct, framed as Taoist | Reframed as classical Chinese; mapping status qualified |
+| `blog/beginner/major-lines-overview.md` | mapping correct, "in classical texts", Taoist | Reframed as contemporary terminology, classical authority not claimed |
+| `blog/beginner/western-palmistry-basics.md` | Taoist framing | Reframed |
+| `pages/glossary.astro` (Earth/Heaven/Human line, life line, Jeevan Rekha) | mappings correct, Taoist framing; Jeevan Rekha as Sanskrit | Reframed; Jeevan Rekha corrected to modern Hindi |
+| `lessons/lines/02-heart-line.mdx`, `05-fate-line.mdx`, `private/print/complete-reference.astro` | already consistent | No change needed |
+
+All occurrences now agree.
+
+### Not established, deliberately left open
+
+- Whether any classical Chinese text states the three-line Heaven/Human/Earth mapping. Searching surfaced only Tier 4 material. The article claims neither presence nor absence.
+- Specific line-variation meanings in either the Chinese or Indian traditions. Left out rather than sourced to popular material.
+- The 78 quotation attributions from Pass 1 remain open and out of scope for this pass.
