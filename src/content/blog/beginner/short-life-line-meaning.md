@@ -66,7 +66,7 @@ A short-looking life line often requires more careful inspection before interpre
 
 ## Common mistakes
 
-**Assuming short means short life.** The most persistent error in reading this feature, and the one this article is primarily written to correct. The tradition — its most rigorous writers across centuries — does not make this association. It comes from popular palmistry and fortune-telling entertainment, not systematic practice.
+**Assuming short means short life.** The most persistent error in reading this feature, and the one this article is primarily written to correct. Note where the correction comes from: not from the classical writers, who did read the line for duration, but from the modern literature and from the studies that tested the claim and found nothing. Reading a short line as a short life is not a distortion of the old texts — it is a coarse version of something they genuinely taught, and which has since been abandoned for good reason.
 
 **Reading the life line without the rest of the hand.** A short life line read in isolation tells you very little. Its meaning is shaped by the hand's overall proportions, the character of the other major lines, the condition of the Mount of Venus, the presence or absence of a sister line, and the comparison between both hands. Reading one line without that context is like reading one sentence from a paragraph and drawing conclusions about the chapter. The [beginner's guide](/guide/) walks through the full observation sequence.
 
@@ -79,7 +79,7 @@ The Western tradition's rejection of the lifespan reading is not unique to it. H
 ## Frequently asked questions
 
 **Does a short life line mean a short life?**
-No. Cheiro, Benham, Fincham, and every serious writer in the Western tradition state clearly that the life line does not predict lifespan. It reflects vitality, constitution, and the character of major life transitions — not duration of life. The lifespan myth originates in popular fortune-telling, not systematic palmistry.
+Not reliably, and this site does not read it that way. The historical picture is not what the reassuring version suggests: Cheiro writes that the life line foretells "the length of life from *natural causes*" and divides it into seven-year periods for dating, and Benham uses six-year divisions and reads certain endings as death at the age shown. What broke with that was the modern practitioner literature — Fincham states plainly that a short life line does not mean a short life — and the studies of line length against recorded lifespan, which find no consistent relationship. Contemporary practice reads the line for vitality, constitution, and the character of major transitions instead.
 
 **What does a short life line usually mean in palmistry?**
 It is traditionally associated with a fundamental change of direction — a life that pivots substantially rather than running one continuous course. It may also suggest a different pattern of energy expression: more concentrated in particular phases rather than evenly distributed. Some practitioners associate it with a life lived with greater independence from family ties or inherited patterns. None of these is a negative reading.

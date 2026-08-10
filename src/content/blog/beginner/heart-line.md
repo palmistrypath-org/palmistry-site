@@ -82,7 +82,7 @@ A brief illustration: a long heart line ending under Jupiter, curving clearly up
 
 **"A broken heart line means heartbreak."** This conflates a marking with a specific narrative life event. The classical interpretation of a break is disruption or significant change — not romantic failure, and not a prediction of anything. Breaks on a line register a period of interruption or transformation; their cause and character are not readable from the line mark alone.
 
-**"The heart line tells you how many relationships you'll have."** Some popular accounts count breaks, islands, or branches as relationships. This is not grounded in any of the major traditions. The heart line is read for temperament and emotional style, not for a tally of romantic events.
+**"The heart line tells you how many relationships you'll have."** Some popular accounts count breaks, islands, or branches as relationships. The Western texts do not read the heart line that way — it is read for temperament and emotional style, not as a tally of romantic events. Cheiro does count and date the separate marriage lines on the Mount of Mercury, which is likely where the habit of counting came from; that is a different feature, and Palmistry Path does not read it as a count either.
 
 **"A short heart line means you're emotionally cold or unloving."** A short line ending under Saturn is, at most, traditionally associated with reserve or a particular kind of emotional focus. Neither Western nor Indian tradition reads this as incapacity for love. The mount of Venus and the hand's overall shape have as much bearing on that question as the line's length.
 

@@ -53,7 +53,7 @@ These are hard stops regardless of how popular the claim is elsewhere on the int
 
 - **Predictive claims:** Never state that a line or feature predicts a specific future event (illness, death, divorce, wealth).
 - **Medical claims:** Never suggest that palmistry identifies, diagnoses, or indicates medical conditions. Acknowledge historical writers (Benham, notably) who discussed potential physical correlates, but do so within the historical framing and with an explicit note that this article does not offer health interpretations.
-- **Relationship predictions:** Never claim that a line or marking predicts the number of relationships, marriages, or children a person will have. This framing is widespread in popular palmistry and is not grounded in any major classical tradition.
+- **Relationship predictions:** Never present a line or marking as predicting the number of relationships, marriages, or children a person will have. State this as site policy, not as a claim about history — Cheiro dates marriages and reads the Mount of Mercury lines for whether a marriage will be happy, so "no classical tradition did this" is false. See the historical-description rule in §5.2.
 - **Lifespan predictions:** Never suggest the life line indicates how long a person will live. Correct the myth by pointing at the evidence, not by misdescribing the sources — Cheiro and Benham both read the line for duration, and saying otherwise is a factual error. See the historical-description rule in §5.2.
 - **Talent/destiny determinations:** Avoid telling a reader what they are or who they will become. Palmistry describes tendencies and orientations; it does not determine character or destiny.
 
@@ -68,7 +68,7 @@ Palmistry Path draws on three primary traditions: Western palmistry (especially 
 **Naming conventions:**
 
 - Indian tradition: *Hasta Samudrika Shastra* (use Sanskrit terms accurately; introduce them with a translation or brief gloss on first use per article)
-- Chinese tradition: note the Taoist cosmological framework where relevant (e.g., *Tian Di Ren* for the three major lines); name concepts accurately without over-explaining
+- Chinese tradition: *Tian Di Ren* / *san cai* (the Three Powers) is a **classical Chinese** cosmological triad associated with the *Yijing* and its commentaries, running through Confucian and Daoist thought alike — do not call it Taoist. Its mapping onto the three major lines (heart = Heaven, head = Human, life = Earth) is treated here as the terminology of contemporary Chinese palm reading, not as classical doctrine, unless a Tier 1–3 source establishes otherwise. Note the framework where relevant; name concepts accurately without over-explaining
 - Western tradition: cite named authors rather than "Western palmistry says" where possible — "Cheiro noted," "Benham observed," "Gettings described"
 
 **Gender conventions in tradition:**

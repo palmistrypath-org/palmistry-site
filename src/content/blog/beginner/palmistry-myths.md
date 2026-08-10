@@ -90,7 +90,7 @@ They do not. The Western, Indian, and Chinese traditions share some common obser
 
 **Is palmistry the same as fortune-telling?**
 
-In its more considered forms, no. Palmistry as a serious practice is about observation and reflection — reading patterns associated with temperament and character — rather than prediction. Popular fortune-telling culture has grafted a set of deterministic claims onto the subject that the tradition's own methodologists did not make.
+As practised on this site, no: Palmistry Path treats it as observation and reflection — reading patterns associated with temperament and character — rather than prediction. That is a choice, and it is worth being honest that it departs from much of the literature. The classical systematisers were frequently predictive: Cheiro dates events along the lines and reads for length of life, marriage, and misfortune, and the classical Indian marks texts read the palm for wealth, status, and longevity. Popular fortune-telling coarsened those claims; it did not invent them.
 
 **Should I base decisions on a palm reading?**
 

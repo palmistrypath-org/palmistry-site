@@ -2,6 +2,13 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-10 - Batch 2B final consistency sweep
+- Removed leftover prose that still contradicted the corrected life-line framing further down the same pages: the empirical section's appeal to the classical writers, the "does not count out years" claim, the Short and Broken variation framings, and the short/broken FAQs.
+- Rewrote the life-line lesson's break section as classical (Benham illness/accident, Cheiro danger of death) versus modern practice versus Palmistry Path policy, and updated the figure captions to match.
+- Corrected the same class of claim in `short-life-line-meaning.md`, `broken-life-line-meaning.md`, `m-line-palmistry.md`, `palmistry-myths.md`, and `heart-line.md`.
+- Qualified the *Jeevan Rekha*/*prana* framing as modern Hindi terminology, and replaced "standard in current practice" for the Tian/Di/Ren line mapping with wording tied to the material actually consulted.
+- Corrected the style guide's "Taoist" description of *Tian Di Ren* and its unverified claim that relationship predictions are not grounded in any major classical tradition.
+
 ## 2026-08-10 - Batch 2B pre-merge correction pass
 - Corrected the life-line historical framing across nine content files, the glossary, and the print reference. Cheiro and Benham both read the life line for length of life and both supplied dating systems; the site no longer claims the tradition rejected lifespan reading. Palmistry Path's non-predictive stance is now presented as a modern editorial position resting on evidence.
 - Added a durable editorial rule separating historical description from Palmistry Path's own boundary, so the tradition is never sanitised to match site policy.

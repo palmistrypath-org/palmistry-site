@@ -186,3 +186,42 @@ All occurrences now agree.
 - Whether any classical Chinese text states the three-line Heaven/Human/Earth mapping. Searching surfaced only Tier 4 material. The article claims neither presence nor absence.
 - Specific line-variation meanings in either the Chinese or Indian traditions. Left out rather than sourced to popular material.
 - The 78 quotation attributions from Pass 1 remain open and out of scope for this pass.
+
+---
+
+## Pass 3 — Final pre-merge consistency sweep (2026-08-10)
+
+No new source research. Pass 2 corrected the framing at the top of the affected
+pages but left earlier prose in place further down, so several pages contradicted
+themselves. This pass removes those leftovers. All evidence relied on is already
+recorded in Pass 2.
+
+### Life-line contradictions removed
+
+| Location | Leftover claim | Fix |
+|---|---|---|
+| `life-line.md` empirical section | Authority comes from "practitioners who developed this system and rejected the lifespan reading" | Rejection now rests on the evidence, the modern literature, and site policy |
+| `life-line.md` | "What none of these frameworks ask the life line to do is count out years" | Now: this article does not; Cheiro and Benham did, each with a dating scheme |
+| `life-line.md` Short variation | "The tradition's position is clear" | Split into classical reading, modern reading, and site position |
+| `life-line.md` Broken variation | "Neither reading involves bodily harm" | Overlap/clean distinction now given in both classical and modern senses |
+| `life-line.md` FAQs (short, broken) | Modern reading presented as the historical one | Both now name the classical reading separately |
+| `04-life-line.mdx` break section | "The tradition is consistent across sources: a break is a transition marker, not a death marker"; "Neither reading involves bodily harm" | Section rewritten as classical / modern practice / Palmistry Path; figure captions updated to match |
+| `short-life-line-meaning.md` FAQ and mistakes section | "every serious writer… states clearly that the life line does not predict lifespan"; "the tradition does not make this association" | Both corrected |
+| `broken-life-line-meaning.md` opening and FAQ | "It is what the tradition's most rigorous writers have consistently said"; "not taught in systematic palmistry" | Both corrected |
+| `m-line-palmistry.md` | "a point the tradition is consistent on" (life line not read for length) | Corrected |
+| `palmistry-myths.md` | "deterministic claims… the tradition's own methodologists did not make" | Corrected; classical predictive practice named |
+| `heart-line.md` | Counting relationships "not grounded in any of the major traditions" | Narrowed to the Western texts on the heart line; notes Cheiro counts and dates the separate marriage lines |
+
+### Cross-tradition wording further qualified
+
+- `Jeevan Rekha` / *prana* in `life-line.md` and `04-life-line.mdx`: was presented as "the Vedic tradition" and as a classical parallel to the Western method. Now marked as modern Hindi terminology and a modern framing, with the note that the classical marks literature names no life line and is openly predictive where it reads the palm.
+- "Standard in current practice" for the Tian/Di/Ren line mapping, in `04-life-line.mdx`, `01-major-lines-overview.mdx`, and `major-lines-overview.md`: replaced with "the terminology found in the contemporary Chinese palm-reading material we have consulted", since standard usage is itself a claim and no Tier 1–3 source establishes it.
+
+### Style-guide corrections
+
+- Naming conventions bullet described *Tian Di Ren* as a "Taoist cosmological framework". Corrected to classical Chinese (*Yijing* tradition, Confucian and Daoist alike), with the line mapping marked as contemporary terminology unless a Tier 1–3 source establishes otherwise.
+- Relationship-predictions rule asserted the framing "is not grounded in any major classical tradition". Removed as an unverified historical claim — Cheiro dates marriages and reads the Mount of Mercury lines for marital happiness. The rule is now stated as site policy, pointing at the historical-description rule in §5.2.
+
+### Method note
+
+A bounded search worker swept `src/content`, `src/pages`, and the style guide for leftover phrasing and returned nine candidates; four were already fixed by the time it reported, four were confirmed and corrected, and one (`m-line-palmistry.md` on the M-shape luck claim) was inspected and kept, since that reading genuinely is modern. A second sweep after the edits surfaced three further contradictions the worker had not flagged, also corrected. The 78 quotation attributions from Pass 1 remain open and untouched.

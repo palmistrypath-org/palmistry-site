@@ -6,7 +6,7 @@ cluster: "line-variations"
 relatedLesson: "/learn/lines/04-life-line"
 ---
 
-If you are reading this because you noticed a gap, break, or interrupted section in your life line and felt a jolt of unease, the first thing to say is this: a broken life line does not predict death, illness, or a shortened lifespan. That is not a modern softening of an older, darker meaning. It is what the tradition's most rigorous writers have consistently said.
+If you are reading this because you noticed a gap, break, or interrupted section in your life line and felt a jolt of unease, the first thing to say is this: Palmistry Path does not read a broken life line as predicting death, illness, or a shortened lifespan. The second thing to say is that this *is* a modern position, and the article explains why we hold it rather than pretending the older writers agreed. They did not — and you deserve the accurate version rather than a comfortable one.
 
 What a break is actually associated with is more grounded and considerably less alarming — a significant transition, a change in the shape of a life, a shift in circumstances or direction. This article explains how to read that break carefully, what to observe before drawing any conclusion, and why context matters more than the break itself.
 
@@ -89,7 +89,7 @@ The Western tradition's reading of breaks as transition markers rather than deat
 ## Frequently asked questions
 
 **Does a broken life line mean death?**
-No. Cheiro, Benham, and the serious literature in the Western tradition consistently describe breaks in the life line as transition markers — major changes in life's direction or circumstances — not as predictions of death. The death association comes from the popular fortune-telling tradition and is not taught in systematic palmistry.
+Not in contemporary practice, which reads a break as a transition marker — a major change in life's direction or circumstances. The classical texts are another matter: Benham diagnoses a break as illness or accident, and Cheiro reads certain broken configurations as showing danger of death at the point of the break. Palmistry Path does not repeat those readings, because they have no demonstrated reliability, and no responsible practitioner today offers them.
 
 **What does a break in the life line usually mean?**
 A break is traditionally associated with a significant transition: a major change in how a life is organised, a relocation, a fundamental shift in direction or circumstances. The nature of the break — whether it overlaps, how clearly the line resumes, what supporting lines are present — shapes how the transition is read.
