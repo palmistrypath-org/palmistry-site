@@ -1,63 +1,37 @@
-# Astro Starter Kit: Blog
+# Palmistry Path
 
-```sh
-npm create astro@latest -- --template blog
+Source for [palmistrypath.com](https://palmistrypath.com), an educational palmistry learning site built with Astro.
+
+## Stack
+- Astro 6 static output
+- Markdown/MDX content collections
+- Pagefind search
+- Astro sitemap
+- Cloudflare Pages deployment
+- Node `>=22.12.0`
+
+## Local development
+```bash
+npm install
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and Open Graph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+Production validation:
+```bash
+npm run build
+npm run audit:all
+npm run content-audit
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Additional targeted commands are defined in `package.json` for link, image, schema, and IndexNow checks.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Content
+- Blog articles: `src/content/blog/`
+- Structured lessons: `src/content/lessons/`
+- Lesson modules: foundations, lines, mounts, advanced
+- Content schemas: `src/content.config.ts`
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+## Agent/wiki workflow
+Start with `AGENTS.md`. Do not recursively read the repo or all docs. Use `docs/WIKI.md` to open only the context required for the current task.
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-## Credit
-
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+`PROJECT.md` is retained only as a compatibility pointer for older workflows.
