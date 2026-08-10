@@ -10,12 +10,11 @@ export const AMAZON_TAG = 'palmpath-20';
 // Format: 'ca-pub-XXXXXXXXXXXXXXXX'
 // Leave empty ('') to disable AdSense (no script loads). Set it to your
 // real ID from adsense.google.com to enable auto-ads sitewide.
-export const ADSENSE_PUB_ID = 'ca-pub-1942922884645361';
+export const ADSENSE_PUB_ID = '';
 
-// Gumroad product URL for the premium guide.
-// After creating your product at gumroad.com, paste the product URL here.
-// Example: 'https://palmistrypath.gumroad.com/l/complete-reference'
-export const PREMIUM_GUIDE_URL = 'https://palmistrypath.gumroad.com/l/complete-reference';
+// Paid checkout URL for the premium guide.
+// Leave empty while the Complete Reference is waitlist-only.
+export const PREMIUM_GUIDE_URL = '';
 export const SITE_DESCRIPTION =
 	'An educational resource on palm reading grounded in Indian, Chinese, and Western traditions.';
 

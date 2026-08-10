@@ -2,7 +2,7 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
-import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../../consts';
+import { SITE_TITLE } from '../../consts';
 ---
 
 <!doctype html>
@@ -11,6 +11,7 @@ import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../../consts';
 		<BaseHead
 			title={`Your Guide Is on Its Way — ${SITE_TITLE}`}
 			description="Your Palmistry Starter Guide is on its way. Here's what to do while you wait — start with Lesson 1 or explore key beginner articles."
+			robots="noindex, follow"
 		/>
 		<style>
 			/* ── Hero ─────────────────────────────────────────────────── */
@@ -225,7 +226,7 @@ import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main data-pagefind-ignore>
 			<section class="thankyou-hero">
 				<p class="thankyou-eyebrow">Palmistry Starter Guide</p>
 				<h1>Your guide is on its way.</h1>
@@ -291,15 +292,13 @@ import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../../consts';
 						cross-tradition comparison tables — in one printable PDF.
 					</p>
 					<a
-						href={PREMIUM_GUIDE_URL}
+						href="/premium-guide/"
 						class="btn-upsell"
-						target="_blank"
-						rel="noopener"
 						data-track="cta"
 						data-track-location="thankyou-upsell"
 						data-track-target="premium-guide"
-					>Get the Complete Reference →</a>
-					<span class="upsell-price">$14 — one-time purchase, instant download</span>
+					>Join the Complete Reference waitlist →</a>
+					<span class="upsell-price">Waitlist-only while the printable reference is in preparation</span>
 				</div>
 			</div>
 

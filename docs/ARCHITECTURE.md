@@ -1,4 +1,4 @@
-# Architecture — Palmistry Path
+# Architecture - Palmistry Path
 
 ## Runtime/stack
 - Astro 6, static output
@@ -11,6 +11,8 @@
 - Cloudflare Pages is the documented hosting target
 
 `astro.config.mjs` sets the canonical site to `https://palmistrypath.com` and configures MDX, sitemap, Pagefind, and Google-hosted Cinzel/Lora fonts.
+
+Indexability rules are centralized in `src/indexability.mjs`. The sitemap integration filters private/noindex utility routes through that policy, and Pagefind indexes `main:not([data-pagefind-ignore])` so pages with ignored main content are not searchable.
 
 ## Content collections
 Defined in `src/content.config.ts`.
@@ -28,7 +30,7 @@ Current schema:
 - `cluster?`
 - `affiliate?`
 
-Routing: `src/pages/blog/[...slug].astro` → `/blog/<id>/`.
+Routing: `src/pages/blog/[...slug].astro` -> `/blog/<id>/`.
 
 ### `lessons`
 Source: `src/content/lessons/**/*.{md,mdx}`
@@ -46,7 +48,7 @@ Current schema:
 - `relatedArticle?`
 - `heroImage?`
 
-Routing: `src/pages/learn/[module]/[lesson].astro` → `/learn/<module>/<lesson>/`.
+Routing: `src/pages/learn/[module]/[lesson].astro` -> `/learn/<module>/<lesson>/`.
 
 ## Curriculum registry
 `src/consts.ts` contains the module registry used by Learn navigation/index pages. The repo currently contains lesson content under:
@@ -56,27 +58,34 @@ Routing: `src/pages/learn/[module]/[lesson].astro` → `/learn/<module>/<lesson>
 - `advanced`
 
 ## Important presentation/source locations
-- `src/layouts/BlogPost.astro` — blog article layout and structured data
-- `src/components/BaseHead.astro` — shared head/SEO behavior
-- `src/components/Header.astro`, `Footer.astro` — global navigation/footer
-- `src/components/LessonPath.astro`, `LessonFooter.astro` — learning flow UI
-- `src/pages/index.astro` — homepage
-- `src/pages/learn/` — curriculum routes
-- `src/pages/blog/` — article routes/listing
-- `src/pages/glossary.astro` — glossary
-- `src/pages/search.astro` — Pagefind search UI
-- `src/pages/guide.astro`, `src/pages/guide/thank-you.astro` — lead-magnet flow
-- `src/pages/premium-guide.astro` — premium-guide/waitlist page
-- `src/styles/global.css` — global styling
-- `public/` — static images, downloads, robots/headers, OG assets
+- `src/layouts/BlogPost.astro` - blog article layout and structured data
+- `src/components/BaseHead.astro` - shared head/SEO behavior
+- `src/components/Header.astro`, `Footer.astro` - global navigation/footer
+- `src/components/LessonPath.astro`, `LessonFooter.astro` - learning flow UI
+- `src/pages/index.astro` - homepage
+- `src/pages/learn/` - curriculum routes
+- `src/pages/blog/` - article routes/listing
+- `src/pages/glossary.astro` - glossary
+- `src/pages/search.astro` - Pagefind search UI
+- `src/pages/guide.astro`, `src/pages/guide/thank-you.astro` - lead-magnet flow
+- `src/pages/premium-guide.astro` - premium-guide/waitlist page
+- `src/private/print/complete-reference.astro` - preserved Complete Reference PDF source, intentionally outside public routing
+- `src/styles/global.css` - global styling
+- `public/` - static images, downloads, robots/headers, OG assets
 
 ## Search/indexing
-`npm run build` runs Astro’s static build and Pagefind integration, outputting the built site to `dist/` and Pagefind data under the build output.
+`npm run build` runs Astro's static build and Pagefind integration, outputting the built site to `dist/` and Pagefind data under the build output.
+
+Current indexability policy:
+- Public content and legal pages remain accessible and sitemap-eligible unless explicitly listed otherwise.
+- `/guide/thank-you/`, `/search/`, and the placeholder `/contact/` are public utility routes but use `noindex, follow`, are excluded from sitemap, and opt out of Pagefind.
+- `/print/complete-reference/` is private paid-product generation content and must not be emitted as a production route.
 
 The repo includes scripts for:
 - internal link audit
 - image audit
 - structured-data/schema audit
+- trust/indexability audit
 - content audit
 - IndexNow dry-run/submission
 

@@ -1,4 +1,4 @@
-# AI Handoff — Palmistry Path
+# AI Handoff - Palmistry Path
 
 ## Before working
 1. Read `../AGENTS.md`.
@@ -11,9 +11,11 @@
 ## Current continuation context
 Current focus: none. `ACTIVE_TASK.md` is INACTIVE and awaiting the next assignment.
 
-Latest operating-system change: on 2026-08-09 Palmistry Path adopted the same progressive-disclosure repo/wiki/handoff model used for the user’s other AI-assisted projects. The repo already contained significant site/content infrastructure; the migration intentionally preserved specialized domain docs and changed documentation/agent workflow only.
+Latest completed implementation: on 2026-08-10 Remediation Batch 1, Trust & Technical Safety, moved the Complete Reference to waitlist-only, removed the dead paid checkout flow, preserved the Complete Reference PDF source under `src/private/`, disabled AdSense temporarily, centralized indexability policy in `src/indexability.mjs`, and added generated-output trust/indexability audit coverage.
+
+Known follow-up: `npm audit --omit=dev` still reports 4 vulnerabilities that require the breaking `npm audit fix --force` path to Astro 7.2.0 and sharp 0.35.3. Do not force that migration without explicit approval.
 
 Key current implementation facts are summarized in `CURRENT_STATE.md` and `ARCHITECTURE.md`; verify source before relying on them for a change.
 
 ## Immediate next action
-Await the user’s next Palmistry Path objective. Start it from a clean context if possible (`/clear`), reconstructing from Git plus targeted canonical docs rather than chat history.
+Await the user's next Palmistry Path objective. Start it from a clean context if possible (`/clear`), reconstructing from Git plus targeted canonical docs rather than chat history.
