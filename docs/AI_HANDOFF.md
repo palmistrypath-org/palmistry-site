@@ -13,7 +13,7 @@ Current focus: none. `ACTIVE_TASK.md` is INACTIVE and awaiting the next assignme
 
 Latest completed implementation: on 2026-08-10 Remediation Batch 2A, Accessibility & UX Safety, added global skip navigation, shared focus-visible styling, main-content targets, focused text-contrast/opacity fixes, learner-facing alt text for Lines lesson Figures, larger practical lesson/header targets, accessible labels/status semantics for the Starter Guide and waitlist forms, a search browse fallback, `/learn` module-card headings, and a focused accessibility audit.
 
-Known follow-up: `npm audit --omit=dev` could not be completed during Batch 2A because the escalation reviewer rejected registry submission of dependency metadata without fresh explicit approval. Batch 1 previously observed 4 vulnerabilities requiring the breaking `npm audit fix --force` path to Astro 7.2.0 and sharp 0.35.3. Do not force that migration without explicit approval.
+Known follow-up: after explicit approval during Batch 2A, `npm audit --omit=dev` completed and reported 4 production vulnerabilities: 1 low, 1 moderate, and 2 high. The remaining fix path is `npm audit fix --force`, which would install Astro 7.2.0 and sharp 0.35.3 as a breaking upgrade path. Do not force that migration without explicit approval.
 
 Key current implementation facts are summarized in `CURRENT_STATE.md` and `ARCHITECTURE.md`; verify source before relying on them for a change.
 
