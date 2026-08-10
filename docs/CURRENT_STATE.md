@@ -1,6 +1,6 @@
 # Current State — Palmistry Path
 
-Last repo inventory: 2026-08-09. This page summarizes observed implementation; source code remains authoritative.
+Last repo inventory: 2026-08-10. This page summarizes observed implementation; source code remains authoritative.
 
 ## Product/site
 Palmistry Path is a live-oriented static Astro learning site at `palmistrypath.com`, with a dark atmospheric brand, structured learning path, article library, glossary/search, lead magnet flow, and early paid-product/waitlist groundwork.
@@ -29,13 +29,20 @@ Implemented:
 - structured-data behavior in layouts/components
 - Bing/indexing support assets/scripts
 
+Utility/private indexability policy is explicit: `/guide/thank-you/`, `/search/`, and placeholder `/contact/` are built but marked `noindex`, excluded from sitemap, and excluded from Pagefind. `/print/complete-reference/` is treated as private paid-product generation content and is not emitted as a public route.
+
 ## Email/lead magnet/products
 Implemented in the repo:
 - Starter Guide landing page
 - thank-you/download flow
 - Palmistry Starter Guide PDFs under `public/downloads/`
-- premium-guide page
+- premium-guide page in waitlist-only state
 - email/waitlist form on the premium-guide page
+
+The Complete Reference is not currently offered for purchase. The paid checkout URL is intentionally empty until a working product URL exists, and the Complete Reference PDF-generation source is preserved outside public Astro routes under `src/private/`.
+
+## Advertising/privacy state
+Google AdSense is temporarily disabled by leaving `ADSENSE_PUB_ID` empty in `src/consts.ts`. No replacement advertising or analytics system is active.
 
 Specialized email and lead-magnet planning docs remain in `docs/`.
 

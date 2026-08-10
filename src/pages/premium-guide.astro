@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../consts';
+import { SITE_TITLE } from '../consts';
 ---
 
 <!doctype html>
@@ -48,20 +48,20 @@ import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../consts';
 				margin: 0 auto 2em;
 				line-height: 1.75;
 			}
-			.price-block {
+			.status-block {
 				display: inline-flex;
 				flex-direction: column;
 				align-items: center;
 				gap: 0.2em;
 				margin-bottom: 1.5em;
 			}
-			.price {
+			.status {
 				font-family: var(--font-cinzel), serif;
 				font-size: clamp(1.6rem, 5vw, 2.4em);
 				color: var(--color-heading);
 				letter-spacing: 0.05em;
 			}
-			.price-note {
+			.status-note {
 				font-size: 0.75em;
 				color: var(--color-text-muted);
 				opacity: 0.65;
@@ -314,22 +314,20 @@ import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../consts';
 					line variations, mount combinations, minor lines, markings, and cross-tradition comparisons,
 					in one printable reference.
 				</p>
-				<div class="price-block">
-					<span class="price">$14</span>
-					<span class="price-note">One-time purchase — PDF, yours to keep</span>
+				<div class="status-block">
+					<span class="status">Waitlist only</span>
+					<span class="status-note">The printable PDF is not available for purchase yet</span>
 				</div>
 				<br />
 				<a
-					href={PREMIUM_GUIDE_URL}
+					href="#notify-form"
 					class="btn-buy"
-					target="_blank"
-					rel="noopener"
 					data-track="cta"
 					data-track-location="premium-guide-hero"
-					data-track-target="buy"
-				>Get the Complete Reference →</a>
+					data-track-target="waitlist"
+				>Join the Waitlist →</a>
 				<br />
-				<span class="guarantee">Secure checkout. Instant PDF download.</span>
+				<span class="guarantee">We'll email you when the Complete Reference is ready.</span>
 			</section>
 
 			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
@@ -438,7 +436,7 @@ import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../consts';
 			<div class="section notify-section">
 				<h2 class="section-heading">Get notified when it's available</h2>
 				<p class="notify-note">
-					The Complete Reference is in final preparation. Leave your email and we'll send you a link the moment it's ready — plus an early-access discount.
+					The Complete Reference is in final preparation. Leave your email and we'll send you a link when it's ready.
 				</p>
 				<div class="notify-form-wrap">
 					<form
@@ -466,17 +464,15 @@ import { PREMIUM_GUIDE_URL, SITE_TITLE } from '../consts';
 
 			<div class="section bottom-cta">
 				<p class="bottom-cta-note">
-					One-time purchase. Instant download as a printable PDF. No subscription, no account required.
+					The printable reference is not available for purchase yet. Join the waitlist to hear when it is ready.
 				</p>
 				<a
-					href={PREMIUM_GUIDE_URL}
+					href="#notify-form"
 					class="btn-buy"
-					target="_blank"
-					rel="noopener"
 					data-track="cta"
 					data-track-location="premium-guide-bottom"
-					data-track-target="buy"
-				>Get the Complete Reference — $14 →</a>
+					data-track-target="waitlist"
+				>Join the Waitlist →</a>
 				<a href="/guide/" class="free-link" data-track="link" data-track-location="premium-guide-bottom" data-track-target="free-guide">
 					Not ready yet? The free Starter Guide is a good place to start.
 				</a>

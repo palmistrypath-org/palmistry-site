@@ -11,6 +11,7 @@ import { SITE_TITLE } from '../consts';
 		<BaseHead
 			title={`Contact — ${SITE_TITLE}`}
 			description="Contact Palmistry Path — corrections, questions, and feedback welcome."
+			robots="noindex, follow"
 		/>
 		<style>
 			main section {
@@ -38,7 +39,7 @@ import { SITE_TITLE } from '../consts';
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main data-pagefind-ignore>
 			<h1>Contact</h1>
 
 			<section>
