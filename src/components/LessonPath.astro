@@ -92,6 +92,9 @@ const trackFillPct = total > 1 ? ((currentOrder - 1) / (total - 1)) * 100 : 0;
 	}
 
 	.module-link {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
 		color: inherit;
 		text-decoration: none;
 		transition:
@@ -144,7 +147,7 @@ const trackFillPct = total > 1 ? ((currentOrder - 1) / (total - 1)) * 100 : 0;
 		z-index: 1;
 	}
 
-	/* 44px wrapper gives a practical target; visual dot lives inside via pip-dot */
+	/* 44px wrapper keeps pip centres aligned across the rail. */
 	.pip {
 		display: flex;
 		align-items: center;
@@ -157,8 +160,8 @@ const trackFillPct = total > 1 ? ((currentOrder - 1) / (total - 1)) * 100 : 0;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 7px;
-		height: 7px;
+		width: 44px;
+		height: 44px;
 		border-radius: 50%;
 		text-decoration: none;
 		transition:
@@ -167,36 +170,46 @@ const trackFillPct = total > 1 ? ((currentOrder - 1) / (total - 1)) * 100 : 0;
 			box-shadow 0.2s;
 	}
 
-	/* Upcoming (default) */
-	.pip .pip-dot {
+	.pip-dot::before {
+		content: '';
+		display: block;
+		width: 7px;
+		height: 7px;
+		border-radius: 50%;
 		border: 1px solid rgba(201, 169, 110, 0.22);
 		background: transparent;
+		transition:
+			background 0.2s,
+			border-color 0.2s,
+			box-shadow 0.2s;
 	}
 
 	/* Done */
-	.pip--done .pip-dot {
+	.pip--done .pip-dot::before {
 		border-color: transparent;
 		background: rgba(201, 169, 110, 0.28);
 	}
 
 	/* Current */
 	.pip--current .pip-dot {
+		cursor: default;
+	}
+	.pip--current .pip-dot::before {
 		width: 9px;
 		height: 9px;
 		border-color: transparent;
 		background: var(--accent);
 		box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.13);
-		cursor: default;
 	}
 
 	/* Hover: upcoming */
-	.pip:not(.pip--current) a.pip-dot:hover {
+	.pip:not(.pip--current) a.pip-dot:hover::before {
 		border-color: rgba(201, 169, 110, 0.55);
 		background: rgba(201, 169, 110, 0.1);
 	}
 
 	/* Hover: done */
-	.pip--done a.pip-dot:hover {
+	.pip--done a.pip-dot:hover::before {
 		background: rgba(201, 169, 110, 0.5);
 	}
 

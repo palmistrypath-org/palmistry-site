@@ -134,7 +134,11 @@ const { prevLesson, nextLesson } = Astro.props;
 	}
 
 	.btn-continue {
-		display: inline-block;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 44px;
+		box-sizing: border-box;
 		padding: 0.7em 1.9em;
 		background: var(--accent);
 		color: var(--color-bg);
@@ -158,6 +162,9 @@ const { prevLesson, nextLesson } = Astro.props;
 		margin-bottom: 0;
 	}
 	.prev-link {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
 		font-size: 0.78em;
 		color: var(--color-text-muted);
 		text-decoration: none;
@@ -238,7 +245,11 @@ const { prevLesson, nextLesson } = Astro.props;
 	}
 
 	.btn-guide {
-		display: inline-block;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 44px;
+		box-sizing: border-box;
 		padding: 0.65em 1.65em;
 		border: 1px solid rgba(201, 169, 110, 0.4);
 		color: var(--accent);
