@@ -54,7 +54,9 @@ The [life line](/blog/beginner/life-line/) sweeps in an arc around the base of t
 
 Islands on the life line are traditionally associated with a period of depleted vitality or physical strain. Cheiro, in *Palmistry for All* (1916), described such islands as indicating "a period of weakness" in constitutional energy. Benham framed it similarly: a period in which the life force is not running as a unified stream, but divided — less available, less robust.
 
-This must be stated plainly: an island on the life line is not a sign of serious illness, and it is not a sign of anything related to length of life. The tradition has never treated it that way, and responsible contemporary practice does not read it that way either. Fincham, in *The Spellbinding Power of Palmistry* (2005), was direct on this point: markings on the life line represent passages through experiences of the body, not predictions about health outcomes.
+This must be stated plainly, and accurately. Palmistry Path does not read an island on the life line as a sign of illness or as anything bearing on length of life. That is a contemporary position, not an inherited one: Benham treats islands on the life line as showing the vital current "split in two" and calls them "always indications of periods of delicacy," locating the period by where the island begins and ends. He is describing health, and pretending otherwise would misrepresent him.
+
+What has changed is that those health readings have no demonstrated reliability, and contemporary practice — Fincham among others — treats markings on the life line as registering passages of experience rather than predicting health outcomes. Nothing on your palm is a diagnosis, and no responsible reader offers one.
 
 An island on the life line may correspond to a period in memory when physical energy was low — illness, exhaustion, periods of high stress that manifested physically — or it may be a current or future passage of the same kind. What it does not represent is a verdict.
 

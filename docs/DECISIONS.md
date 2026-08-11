@@ -2,6 +2,27 @@
 
 Only durable decisions belong here. Newest entries first.
 
+## 2026-08-10 - Historical description is separate from editorial policy
+**Decision:** Content must keep two things apart and may not collapse them. *Historical description* reports what the sources actually say, including predictive claims about lifespan, death, illness, wealth, and status, and including the dating systems built for them. *Editorial policy* is Palmistry Path's own boundary: we do not predict those things and do not present historical predictive claims as reliable. Where the two differ, the page says they differ and why. No article may state that the tradition "never" made a claim the primary texts demonstrably make.
+
+**Why:** Batch 2B established from the primary texts that Cheiro reads the life line to "foretell the length of life from natural causes" and divides it into seven-year periods, that Benham dates the line in six-year divisions and reads a tasselled ending as death at the indicated age, and that the *Bṛhat Saṃhitā* reads palm marks for kingship, wealth, and longevity — and then published content asserting the opposite. Sanitising the tradition to match the site's safety boundary is a factual error, and on a site whose differentiator is traceability it is the most damaging kind.
+
+**Consequences:** Recorded in `editorial-style-guide.md` §5.2 and §11. Myth-corrections must be grounded in the evidence and the modern literature, never in a false claim about what the historical writers taught. The same rule governs relationship, health, and fortune claims, not only lifespan.
+
+## 2026-08-10 - Four-tier source policy and quotation integrity
+**Decision:** All citations sit in one of four tiers, defined in `editorial-style-guide.md` §5: primary/historical source texts; serious secondary and scholarly works; targeted reputable factual references; and discovery-only weak sources. Tier 4 material — commercial astrology sites, SEO content farms, unsourced blogs, listicles, aggregators, AI summaries — may be used to find leads but is never cited, never named as an authority, and never appears in a source footer. Wikipedia and general encyclopaedias are discovery aids: follow them to the underlying source and cite that. Claims presented as Chinese or Indian tradition require tradition-appropriate sources; a Western bibliography does not support a tradition-internal claim. Quotation marks mean verbatim wording verified in the cited edition; anything else is paraphrased without quotation marks.
+
+**Why:** The site's differentiator is that its claims can be traced. The August 2026 audit found nine articles citing content farms alongside Cheiro and Benham, two tradition articles carrying a byte-identical Western bibliography, and an About page listing books the corpus never cites. Verification during Batch 2B then found that most author-attributed quotations could not be located in the texts they were credited to. A stated hierarchy is what prevents each of these from recurring.
+
+**Consequences:** The style guide no longer permits citing named commercial practitioners as authorities, which was the rule that produced the problem. Articles that cannot reach a tradition-appropriate source must say the claim reflects contemporary practice, or drop it. Quotation-level work must be verifiable before publication; `docs/source-verification-log.md` is the durable record and carries the 78 outstanding unverified attributions.
+
+## 2026-08-10 - Automatic task startup and local sync
+**Decision:** At the start of an implementation task an agent inspects `git status`, and — if the tree is clean — fetches, switches to `main`, fast-forwards, verifies the remote and upstream state, and creates or switches to the designated task branch. A dirty tree stops the task and is reported; nothing is reset, stashed, or discarded without approval.
+
+**Why:** The user was manually synchronising `main` between tasks, and new work risked starting from a stale completed feature branch.
+
+**Consequences:** Recorded once in `AGENTS.md` under "Task startup and local sync"; the progressive-disclosure list points at it rather than repeating it.
+
 ## 2026-08-10 - Accessibility baseline for Batch 2A
 **Decision:** Keep accessibility remediation systemic and minimal: a global skip link targets `main#main-content`, shared `:focus-visible` styling handles keyboard indication, compact lesson/header controls use larger practical targets, and lesson Figure alt text must describe learner-relevant visual information rather than image-generation briefs.
 

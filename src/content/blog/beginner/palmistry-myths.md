@@ -16,7 +16,7 @@ This article works through the most persistent myths, one by one, and sets them 
 
 This is probably the single most widespread misconception about palmistry, and it has been doing damage for a long time — causing genuine anxiety in people who glimpse their own hands.
 
-The life line, [discussed in detail here](/blog/beginner/life-line), is not a calendar. Cheiro himself — the Victorian palmist most frequently quoted in support of dramatic life-line claims — did not say that line length corresponds to lifespan in any literal way. What the tradition consistently associates the life line with is vitality, resilience, and the quality of physical energy available to a person. A shorter life line in the Western tradition is often interpreted as a different distribution of that energy, not as a countdown.
+The life line, [discussed in detail here](/blog/beginner/life-line), is not a calendar — but the honest version of this correction is more interesting than the usual one. Cheiro, the palmist most often quoted in support of dramatic life-line claims, genuinely did connect the line to length of life and supplied a seven-year dating scheme for reading events along it. The myth is not a distortion of him; it is a coarsening of him. What has actually undone it is the modern literature and the empirical work, which is why contemporary practice associates the life line with vitality, resilience, and the quality of physical energy instead. A shorter life line in the Western tradition is often interpreted as a different distribution of that energy, not as a countdown.
 
 Benham's *Laws of Scientific Hand Reading* (1900) is explicit that the life line is read in combination with the other major lines and the overall hand. No single feature carries the weight popular myth assigns to it.
 
@@ -82,7 +82,7 @@ The [beginner's guide to palmistry](/guide/) situates the practice within this m
 
 **Can palmistry predict lifespan?**
 
-No. The life line is traditionally associated with vitality and physical energy, not with the length of a person's life. No serious practitioner in the major Western, Indian, or Chinese traditions has made a credible case that line length predicts lifespan, and the claim causes unnecessary distress. If you have been worried by a glance at your own life line, the concern is not grounded in what the tradition actually says.
+Not reliably, and Palmistry Path does not attempt it. Historically some palmists did try — Cheiro and Benham both read the life line partly in terms of duration and both built dating schemes for it. No one has since made that case stand up: the studies that have tested line length against recorded lifespan find no consistent relationship, and contemporary practice reads the line for vitality and physical energy instead. If a glance at your own palm has worried you, the worry is not supported by the evidence.
 
 **Do all palmistry traditions agree on what lines mean?**
 
@@ -90,7 +90,7 @@ They do not. The Western, Indian, and Chinese traditions share some common obser
 
 **Is palmistry the same as fortune-telling?**
 
-In its more considered forms, no. Palmistry as a serious practice is about observation and reflection — reading patterns associated with temperament and character — rather than prediction. Popular fortune-telling culture has grafted a set of deterministic claims onto the subject that the tradition's own methodologists did not make.
+As practised on this site, no: Palmistry Path treats it as observation and reflection — reading patterns associated with temperament and character — rather than prediction. That is a choice, and it is worth being honest that it departs from much of the literature. The classical systematisers were frequently predictive: Cheiro dates events along the lines and reads for length of life, marriage, and misfortune, and the classical Indian marks texts read the palm for wealth, status, and longevity. Popular fortune-telling coarsened those claims; it did not invent them.
 
 **Should I base decisions on a palm reading?**
 
@@ -100,4 +100,4 @@ No reading of any kind — palmistry, astrology, or any other framework — shou
 
 ## Sources note
 
-The interpretations in this article draw on the following sources: Cheiro, *Palmistry for All* (1916); William G. Benham, *The Laws of Scientific Hand Reading* (1900); Fred Gettings, *The Book of the Hand* (1965); Peter West, *The Complete Illustrated Guide to Palmistry* (1998); Johnny Fincham, *The Spellbinding Power of Palmistry* (2005); Encyclopaedia Britannica, "Palmistry."
+*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); Johnny Fincham, The Spellbinding Power of Palmistry (2005).*

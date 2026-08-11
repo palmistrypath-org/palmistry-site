@@ -40,7 +40,7 @@ A clearly formed [heart line](/blog/beginner/heart-line/) is traditionally assoc
 
 A clearly formed [head line](/blog/beginner/head-line/) is associated with mental focus, clarity of thought, and the capacity for sustained concentration. Benham in particular gives extensive treatment to the head line as the primary indicator of intellectual character and the quality of mental life.
 
-A clearly formed [life line](/blog/beginner/life-line/) is associated with vitality, robustness of constitution, and an active relationship to physical life. The arc, depth, and clarity of the life line together indicate the quality and character of a person's vital energy rather than the length of their life — a point the tradition is consistent on.
+A clearly formed [life line](/blog/beginner/life-line/) is associated with vitality, robustness of constitution, and an active relationship to physical life. The arc, depth, and clarity of the life line together indicate the quality and character of a person's vital energy. This site does not read it for length of life; the classical writers did, and the [life line article](/blog/beginner/life-line/) covers why that reading was dropped.
 
 A clearly formed [fate line](/blog/beginner/fate-line/) is associated with a sense of direction, purpose, and the feeling of having a defined path through life. It is the most variable of the four: not everyone has a clear fate line, and its presence or absence says something about the degree to which a person's life feels shaped by a guiding trajectory. The [fate line lesson](/learn/lines/05-fate-line) covers this in detail.
 

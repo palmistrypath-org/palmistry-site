@@ -6,7 +6,7 @@ cluster: "line-variations"
 relatedLesson: "/learn/lines/04-life-line"
 ---
 
-One of the most persistent myths in popular palmistry is that a forked life line signals a shortened lifespan or a life split into two incompatible directions. It does neither. The life line has never been a reliable indicator of longevity in the classical tradition — even Cheiro, who made bold claims about many features, was inconsistent on this point — and a fork at the end of the life line is a recognised variation with its own specific traditional associations, none of which involve crisis or curtailment.
+One of the most persistent myths in popular palmistry is that a forked life line signals a shortened lifespan or a life split into two incompatible directions. Palmistry Path does not read it that way. Being accurate about why matters: the classical writers did treat the life line as speaking to duration — Cheiro says so explicitly — but the terminal fork specifically is a recognised variation with its own traditional associations, and testing has not supported reading longevity from this line at all. A fork is a variation to interpret, not a curtailment to fear.
 
 What the fork actually suggests depends on three things: what kind of fork it is, where along the life line it appears, and what direction each branch runs. A terminal fork at the wrist end reads differently from a branch departing mid-line. An upward branch is interpreted differently from a downward one. Getting the type right before reaching for a meaning is the essential first step.
 
@@ -68,7 +68,7 @@ The specific Western associations above — and particularly the Benham reading 
 
 ## Common mistakes when reading a forked life line
 
-**Treating any fork as a sign of shortened lifespan.** This association has no grounding in the classical Western texts. The life line has never been a reliable lifespan indicator in the mainstream tradition, and the terminal fork in particular says nothing about length of life.
+**Treating any fork as a sign of shortened lifespan.** The classical texts do not attach this meaning to the terminal fork — Benham reads a *tasselled* ending in terms of declining vitality, which is a different formation from a clean fork. More to the point, the life line has not proved to be a reliable lifespan indicator under testing, so the question does not arise in contemporary practice.
 
 **Confusing a fork with a break.** A [broken life line](/blog/beginner/broken-life-line-meaning/) involves an actual gap or interruption in the line — a different formation read in different terms. A fork is a split, not a gap.
 

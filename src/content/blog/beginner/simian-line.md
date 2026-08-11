@@ -8,7 +8,7 @@ relatedLesson: "/learn/lines/06-simian-line"
 
 The simian line is the name given to a single horizontal crease that crosses the full width of the palm where two lines would ordinarily be separate. On most hands, the heart line runs across the upper palm and the head line runs beneath it, with a clear zone of palm between them. When those two lines are fused — sharing one channel rather than running as distinct features — the result is a single transverse crease: the simian line.
 
-The name comes from the fact that this configuration is common among non-human primates, where a single palmar crease is the norm rather than an exception. It appears in roughly one to four percent of the general human population, making it uncommon but far from rare. On some hands it appears only on one palm; on others it runs across both, and this distinction carries interpretive weight addressed below.
+The name comes from the fact that this configuration is common among non-human primates, where a single palmar crease is the norm rather than an exception. Commonly reported estimates put it at roughly one to three percent of the general population, with substantially higher rates recorded in some East Asian populations — uncommon, but far from rare, and varying enough by population that any single figure should be treated as approximate. On some hands it appears only on one palm; on others it runs across both, and this distinction carries interpretive weight addressed below.
 
 It is identified primarily by what it lacks: the clear separation between two distinct horizontal lines that characterises most palms. Where an ordinary hand shows heart line above and head line below, a simian-line hand shows one crease occupying a zone somewhere between where the two would ordinarily run.
 
@@ -40,11 +40,11 @@ Gettings, in *The Book of the Hand*, noted the ambivalence the tradition carries
 
 ## The Indian tradition
 
-In Hasta Samudrika Shastra, this configuration is associated with the concept of *ekaagra* — single-pointed, undivided attention. The Sanskrit framing emphasises the same quality the Western sources name: thought and feeling are not separated in such a person; they arrive together and reinforce each other. Where the Indian tradition adds something the Western sources do not foreground is in the observation that this same quality of unified focus is considered both a precondition for worldly achievement and, in the Vedic frame, a disposition toward deep spiritual practice. The same single-pointedness that drives exceptional accomplishment is also what extended contemplative practice attempts to cultivate deliberately.
+Contemporary Indian-tradition practitioners often read this configuration through the concept of *ekāgratā* — single-pointed, undivided attention. The term is a genuine one, but it belongs to yogic and philosophical literature rather than to the classical hand-reading texts, and its application to the single crease appears to be a modern cross-tradition reading rather than a doctrine that can be traced to *Hasta Samudrika Shastra* itself. Presented on those terms it is a useful framing: thought and feeling are not separated in such a person; they arrive together and reinforce each other, and the same unified focus that drives worldly accomplishment is what extended contemplative practice tries to cultivate deliberately. Presented as ancient doctrine it would be overstating what the sources support.
 
 ## A note on medical context
 
-The single transverse palmar crease has been documented in medical literature in connection with certain chromosomal conditions, including trisomy 21, where it appears at elevated rates alongside other clinical features. It is also a common anatomical variant found in approximately one to four percent of otherwise healthy individuals with no associated conditions. Its presence alone, without additional clinical indicators, carries no diagnostic significance.
+The single transverse palmar crease has been documented in medical literature in connection with certain chromosomal conditions, including trisomy 21, where it appears at elevated rates alongside other clinical features. It is also a common anatomical variant found in a small percentage of otherwise healthy individuals with no associated conditions, at rates that differ between populations. Its presence alone, without additional clinical indicators, carries no diagnostic significance.
 
 ## The simian line in context
 
@@ -66,4 +66,4 @@ Three features in particular inflect how the simian line's qualities are express
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); Andrew Fitzherbert, Hand Psychology (1986); Hasta Samudrika Shastra (traditional Indian palmistry framework).*
+*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); Andrew Fitzherbert, Hand Psychology (1986).*

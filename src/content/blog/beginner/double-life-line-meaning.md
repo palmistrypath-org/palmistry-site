@@ -30,7 +30,9 @@ Fred Gettings, in *The Book of the Hand* (1965), describes a well-formed sister 
 
 Peter West, in *The Complete Illustrated Guide to Palmistry* (1998), and Johnny Fincham, in *The Spellbinding Power of Palmistry* (2005), both follow this broadly consistent line: the inner life line is a favourable companion sign, most strongly read when it appears alongside a section of the main line that would otherwise raise questions.
 
-What the tradition does not say is equally important. A sister line does not mean a literal second life, a second chance at existence, or a particular destiny. It does not predict physical health outcomes or longevity. The tradition treats it as a qualitative strengthener — a sign of depth and resilience in the life force — not as a narrative counter or a second fortune.
+What the tradition does not say is equally important. A sister line does not mean a literal second life, a second chance at existence, or a particular destiny; it is treated as a qualitative strengthener, a sign of depth and resilience in the life force, not a narrative counter or a second fortune.
+
+It does carry health associations in the older texts, and this article will not hide them. Cheiro reads the inner life line as the thing that can carry a subject through "great danger of death" marked at a break in the main line. Palmistry Path does not offer that as a prediction about anyone's health or survival — but a reader who opens *Palmistry for All* will find it.
 
 ## When presence and absence matter most
 
@@ -84,7 +86,7 @@ A sister line that appears on one hand accompanying a break, but where the break
 
 ## Common myths
 
-**A double life line means you will live twice as long.** This is not in the tradition. Neither Benham, Cheiro, Gettings, West, nor Fincham makes a longevity prediction from the inner life line. Vitality and resilience are the consistent associations — not lifespan prediction. The tradition does not read lines as predicting duration of life.
+**A double life line means you will live twice as long.** No source says this. Vitality, resistance, and resilience are the consistent associations across Benham, Cheiro, Gettings, West, and Fincham. The older writers do connect the line to surviving danger and illness — Cheiro explicitly — but "greater power of resistance" is not "double the years," and neither reading is one Palmistry Path presents as a prediction.
 
 **The inner line is a separate life story.** The sister line does not run a parallel narrative. It does not represent a second relationship, a second path, or a dual nature in any meaningful sense. It is a strengthening of the primary life line's story, not an alternative to it.
 

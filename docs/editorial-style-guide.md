@@ -53,8 +53,8 @@ These are hard stops regardless of how popular the claim is elsewhere on the int
 
 - **Predictive claims:** Never state that a line or feature predicts a specific future event (illness, death, divorce, wealth).
 - **Medical claims:** Never suggest that palmistry identifies, diagnoses, or indicates medical conditions. Acknowledge historical writers (Benham, notably) who discussed potential physical correlates, but do so within the historical framing and with an explicit note that this article does not offer health interpretations.
-- **Relationship predictions:** Never claim that a line or marking predicts the number of relationships, marriages, or children a person will have. This framing is widespread in popular palmistry and is not grounded in any major classical tradition.
-- **Lifespan predictions:** Never suggest the life line indicates how long a person will live. This is one of the most persistent myths in popular palmistry and one of the most important to correct. State clearly that the tradition has never supported this reading.
+- **Relationship predictions:** Never present a line or marking as predicting the number of relationships, marriages, or children a person will have. State this as site policy, not as a claim about history — Cheiro dates marriages and reads the Mount of Mercury lines for whether a marriage will be happy, so "no classical tradition did this" is false. See the historical-description rule in §5.2.
+- **Lifespan predictions:** Never suggest the life line indicates how long a person will live. Correct the myth by pointing at the evidence, not by misdescribing the sources — Cheiro and Benham both read the line for duration, and saying otherwise is a factual error. See the historical-description rule in §5.2.
 - **Talent/destiny determinations:** Avoid telling a reader what they are or who they will become. Palmistry describes tendencies and orientations; it does not determine character or destiny.
 
 ---
@@ -68,7 +68,7 @@ Palmistry Path draws on three primary traditions: Western palmistry (especially 
 **Naming conventions:**
 
 - Indian tradition: *Hasta Samudrika Shastra* (use Sanskrit terms accurately; introduce them with a translation or brief gloss on first use per article)
-- Chinese tradition: note the Taoist cosmological framework where relevant (e.g., *Tian Di Ren* for the three major lines); name concepts accurately without over-explaining
+- Chinese tradition: *Tian Di Ren* / *san cai* (the Three Powers) is a **classical Chinese** cosmological triad associated with the *Yijing* and its commentaries, running through Confucian and Daoist thought alike — do not call it Taoist. Its mapping onto the three major lines (heart = Heaven, head = Human, life = Earth) is treated here as the terminology of contemporary Chinese palm reading, not as classical doctrine, unless a Tier 1–3 source establishes otherwise. Note the framework where relevant; name concepts accurately without over-explaining
 - Western tradition: cite named authors rather than "Western palmistry says" where possible — "Cheiro noted," "Benham observed," "Gettings described"
 
 **Gender conventions in tradition:**
@@ -83,28 +83,58 @@ Palmistry Path draws on three primary traditions: Western palmistry (especially 
 
 ## 5. Sources
 
-**Approved primary sources:**
+### 5.1 Source tiers
+
+Every citation on this site must sit in one of four tiers. Tier decides what a source is allowed to carry, not merely whether it may be mentioned.
+
+**Tier 1 — Primary and historical source texts.** The tradition speaking in its own voice. Cite by work and edition.
+
+| Author | Work | Year | Tradition |
+|---|---|---|---|
+| Cheiro (William John Warner) | *Palmistry for All* | 1916 | Western |
+| Cheiro | *Cheiro's Language of the Hand* | 1894/1897 | Western |
+| William G. Benham | *The Laws of Scientific Hand Reading* | 1900 | Western |
+| Comte de Saint-Germain | *The Practice of Palmistry* | 1897 | Western |
+| Stanislas d'Arpentigny | *La Chirognomonie* | 1843 | Western |
+| Varāhamihira | *Bṛhat Saṃhitā*, chs. 68–70 (*puruṣa-lakṣaṇa*) | 6th c. CE | Indian |
+| — | *Shenxiang quanbian* and the Chinese physiognomy compendia | Ming, from earlier material | Chinese |
+
+**Tier 2 — Serious secondary and reference works.** Modern practitioner-scholars and academic treatments of the traditions.
 
 | Author | Work | Year |
 |---|---|---|
-| Cheiro (Count Louis Hamon) | *Palmistry for All* | 1916 |
-| William G. Benham | *The Laws of Scientific Hand Reading* | 1900 |
 | Fred Gettings | *The Book of the Hand* | 1965 |
-| Peter West | *The Complete Illustrated Guide to Palmistry* | 1998 |
-| Lori Reid | *The Art of Hand Reading* | 1996 |
 | Andrew Fitzherbert | *Hand Psychology* | 1986 |
+| Peter West | *The Complete Illustrated Guide to Palmistry* | 1998 |
+| Johnny Fincham | *The Spellbinding Power of Palmistry* | 2005 |
+| Ellen Goldberg & Doris Dobkins | *The Art and Science of Hand Reading* | 2016 |
+| Kenneth G. Zysk | *The Indian System of Human Marks* (Brill) | 2016 |
+| Livia Kohn | "A Textbook of Physiognomy: The Tradition of the *Shenxiang quanbian*", *Asian Folklore Studies* 45:2 | 1986 |
+| Richard J. Smith | *Fortune-tellers and Philosophers: Divination in Traditional Chinese Society* | 1991 |
 
-Secondary sources (for specific Indian tradition content): traditional Hasta Samudrika Shastra texts; where citing secondary commentary, name the commentator.
+**Tier 3 — Targeted reputable factual references.** Used where palmistry literature is not the right authority: anatomy, embryology, general history, etymology, cultural background. Peer-reviewed papers, university and museum publications, government and medical reference bodies, and academic encyclopaedias (e.g. the *Stanford Encyclopedia of Philosophy*). Cite the specific work, not the genre.
 
-**Rules for sourcing:**
+**Tier 4 — Discovery only.** Commercial astrology and palmistry sites, SEO content farms, unsourced palmistry blogs, listicles, scraped or aggregated sites, AI-generated summaries, social posts. These may help you locate terminology, spot a claim worth chasing, or find a lead to a real source. **They are never cited, never named in body prose as an authority, and never appear in a source footer.** If a claim rests only on Tier 4 material, the claim does not run.
 
-- Do not invent palmistry meanings. If a claim cannot be attributed to a named tradition or source, do not include it.
-- Attribute specific claims to specific authors where possible: "Benham described…", "Cheiro, writing in *Palmistry for All*, noted…"
-- Note genuine disagreement between sources. Do not synthesise a false consensus.
-- Do not cite undated web content as an authority on traditional palmistry. You may reference a specific practitioner (e.g., Sarah Yip of Destiny Palmistry, AstroSight for Vedic perspectives) when they are reading from classical texts closely — but name them explicitly, not as an unnamed source.
-- Sources appear at the foot of every article in the standard italic format (see article template).
+**Wikipedia and general encyclopaedias** sit outside the tiers as discovery aids. Use them to find the underlying source, then cite that source. Do not name an encyclopaedia in body prose as the authority for a meaningful or disputed claim.
 
-**No broad web research.** A single targeted lookup to verify one specific claim is acceptable. Do not scrape the internet for palmistry content to synthesise into an article.
+### 5.2 Rules for sourcing
+
+- Do not invent palmistry meanings, and do not invent source support. If a claim cannot be traced to a named tradition or source at Tier 1–3, cut it or qualify it explicitly as popular modern practice.
+- Attribute specific claims to specific authors and works: "Benham described…", "Cheiro, writing in *Palmistry for All* (1916), noted…"
+- **Quotation integrity.** Quotation marks mean verbatim wording that has been checked in the cited edition. If the wording has not been verified, paraphrase without quotation marks. Do not invent page or chapter precision. Where a much-repeated maxim cannot be located in the text it is usually attributed to, present it as a traditional formulation rather than as an author's words.
+- **Tradition-specific sourcing is required.** Claims presented as Chinese tradition need a Chinese-tradition source; claims presented as Indian tradition need an Indian-tradition source. A Western author is not an authority on Chinese or Sanskrit material, and a Western bibliography does not support a tradition-internal claim. Where no tradition-appropriate source can be reached, say the claim reflects contemporary popular practice, or drop it.
+- Distinguish historical and textual claims from modern popular practice. Do not present modern web folklore as ancient doctrine.
+- **Do not sanitise the tradition to match our editorial boundary.** These are two separate things and must be kept separate on the page:
+  - *Historical description.* Historical palmists made predictive claims about lifespan, death, illness, accident, wealth, and status, and some built formal dating systems for them. Cheiro writes that the life line "enables it to foretell the length of life from *natural causes*" and divides it into seven-year periods; Benham uses six-year divisions, reads a tasselled ending as death at the age shown, and calls islands "indications of periods of delicacy"; Varāhamihira's *Bṛhat Saṃhitā* reads palm marks for kingship, wealth, and longevity. Describe all of this accurately.
+  - *Palmistry Path's editorial policy.* We do not predict lifespan, death, illness, or any other outcome, and we do not present historical predictive claims as reliable or as advice. Our reason is the evidence, and we say so.
+  - Never write that "the tradition never taught this", "no serious writer said this", or "this is only fairground fortune-telling" when the primary texts show otherwise. Reassurance must come from the evidence, not from rewriting the sources. Where the site's position differs from the historical one, say that it differs and why.
+- Note genuine disagreement between sources and between traditions. Do not synthesise a false consensus, and do not reconcile traditions on the site's own authority.
+- Phrase traditional associations as traditional: "traditionally associated with", "often interpreted as", "read in the tradition as". Never as fact about the reader.
+- Transliteration and name variants (Sanskrit, Chinese, romanisation systems) should be given once with a note that forms vary, rather than presented as a single fixed spelling.
+- Sources appear at the foot of every article in the standard italic format (see article template), most authoritative first, semicolon-separated, with author, italicised title, and year.
+
+**No broad web research.** Targeted lookups to verify specific claims are expected and encouraged, especially for Tier 3 factual material and for tradition-specific sourcing. Do not scrape the internet for palmistry content to synthesise into an article.
 
 ---
 
@@ -211,10 +241,10 @@ These deserve their own section because they are so persistently misrepresented 
 
 **Lifespan:**
 
-- The life line does not indicate how long a person will live. This is the most persistent myth in popular palmistry and directly contradicts the classical tradition.
-- Benham, Cheiro, and Gettings all address this directly: the life line indicates the quality of vitality, energy, and life force — not its duration.
-- Short life lines on hands of people who lived to old age, and long life lines on hands of people who died young, have been documented in the literature. The myth does not survive scrutiny.
-- Always correct this myth explicitly in any article that covers the life line.
+- Palmistry Path does not read the life line for how long a person will live, and no article may imply otherwise.
+- The correction rests on evidence, not on the tradition. Cheiro states the line foretells "the length of life from *natural causes*" and divides it into seven-year periods for dating; Benham uses six-year divisions and reads a tasselled ending as death at the age shown. Do not write that the classical tradition rejected lifespan reading — it did not.
+- What did reject it is the modern practitioner literature (Fincham, Gettings, West), supported by the studies of line length against recorded lifespan, which find no consistent relationship.
+- Always address the myth explicitly in any article covering the life line, using the two-part framing: what the historical texts claimed, and why we do not repeat it.
 
 **Children:**
 

@@ -123,4 +123,4 @@ The head line completes the deep-dive pass through the major lines. The [heart l
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); God Given Glyphs, "Lines — Writer's Fork"; Destiny Palmistry (Sarah Yip), "Forked Head Line Meaning in Palmistry."*
+*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); Johnny Fincham, The Spellbinding Power of Palmistry (2005).*

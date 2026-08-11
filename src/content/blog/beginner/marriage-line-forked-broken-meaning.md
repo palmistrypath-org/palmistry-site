@@ -88,7 +88,9 @@ Chinese palmistry also draws heavily on the heart line and overall hand quality 
 
 A forked, broken, or faint relationship line does not predict divorce. No tradition has developed a reliable system for predicting relationship dissolution from this feature — or from any palm marking.
 
-These variations are not a compatibility assessment. They do not tell you whether a relationship will succeed or whether a partner is right for you. Palmistry has never been a compatibility test, and the relationship lines are not an exception to that.
+Palmistry Path does not read these variations as a compatibility assessment. They are not used here to tell you whether a relationship will succeed or whether a partner is right for you.
+
+That is this site's boundary rather than the tradition's. Cheiro is explicit that "for a happy marriage the lines on the Mount of Mercury should be straight and clear", dates when a marriage will occur, and reads certain endings as showing how a partner will die. Those are outcome predictions about real relationships, and this article does not offer them.
 
 They are not a count of marriages or separations. A forked line does not mean two marriages; a broken line does not mean a separation has occurred or will occur. These markers describe qualities within significant bonds, not biographical events.
 
