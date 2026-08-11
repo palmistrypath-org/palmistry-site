@@ -337,3 +337,171 @@ that reordering as modern; and one checklist entry stated the modern transition
 reading without labelling it. Both corrected.
 
 The 78 quotation attributions from Pass 1 remain open and untouched.
+---
+
+## Batch 2C — Quotation Integrity (2026-08-11)
+
+Resolves the quotation backlog opened by Batch 2B. Same corpora, same method,
+no new external research.
+
+### Method change, and why the count moved
+
+Pass 1 counted quotation-marked passages of five or more words inside a sentence
+attributing them to Cheiro or Benham, and found 92, of which 78 failed. That
+undercounts. Short terminology quotations (`"lines of union"`, `"writer's fork"`)
+carry attribution too, and an attribution often sits in the sentence next to the
+quotation rather than inside it.
+
+This pass re-inventoried from source rather than trusting Pass 1's line numbers,
+which had shifted. Every quotation-marked span of two or more words inside a
+paragraph naming Cheiro or Benham, across `src/content`, `src/pages` and
+`src/private`: **245 passages**. Each was normalised and matched against the six
+scans by exact substring, then by trigram-anchored fuzzy alignment to catch OCR
+damage. The base tree and the final tree were both measured, so before/after is
+exact rather than estimated.
+
+Of the 245, **83 were never Cheiro/Benham attributions** and are out of scope:
+
+| Not an attribution | Count |
+|---|---|
+| Site's own term or phrase under discussion | 24 |
+| Site's own myth headers (strawmen the article then refutes) | 20 |
+| Quotations attributed to Gettings, West, or Fincham | 20 |
+| Markup and CSS class attributes in the print reference | 13 |
+| Bibliography lines and journal titles | 2 |
+| Frontmatter title/description | 2 |
+| Figure alt text and captions | 2 |
+
+That leaves **162 genuine Cheiro/Benham attributions** adjudicated in this pass.
+
+### Standing count
+
+| Disposition | Count |
+|---|---|
+| Verified exact, quotation marks retained unchanged | 55 |
+| Corrected — unsupported wording, now replaced or removed | 93 |
+| Corrected — wording found in the corpus but misapplied or misattributed | 14 |
+| **Unresolved** | **0** |
+
+Final state of the tree: 278 quotation-marked passages inside Cheiro/Benham
+paragraphs; **205 verify against the scans** (180 exact after normalisation, 25
+exact but for OCR artefacts — hyphenation across line breaks, running heads and
+page numbers interpolated mid-sentence); the remaining 73 fall into the
+non-attribution categories above. **No quotation-marked Cheiro or Benham
+attribution remains in published content that this log classifies as unverified.**
+
+### The 14 that matched the corpus and were still wrong
+
+Worth recording, because a string match is not a verification. A short phrase can
+be genuinely present in the book and still be attached to the wrong feature.
+
+| Passage | Where the site used it | Where it actually is |
+|---|---|---|
+| "the love nature" | Mount of Venus (3 places) | Cheiro, on the **Line of Heart** |
+| "the strength of the constitution" | Mount of Venus (2 places) | Benham, on the **Line of Life** |
+| "nervous energy" | nail readings | Benham, on the **Line of Life** |
+| "love of display" | overdeveloped Apollo mount | Benham, on Apollo **line deflections** |
+| "the left hand is what you are, constitutionally; the right hand, what you make yourself or acquire" | Cheiro on the active/passive hand (2 places) | Present in *Language of the Hand*, but inside a reader's letter printed under the heading "A Defense" and signed "Speranus" — **not Cheiro's sentence**, and its writer attributes it to "cheiromants" |
+| "great vitality and power of resistance to illness" | Benham on the sister line (2 places) | **Cheiro**, *Palmistry for All*, "The Line of Mars or Inner Life Line" |
+| "from the standpoint of material success" | Benham on the fate line | Benham writes "from **a** standpoint" |
+| "determines the size of the Mount of Venus" | Benham on the life line and Venus | Benham writes "**reduces** the size… thus **checking** the operation of that Mount" |
+| "not a very happy mark to possess" | Cheiro on the simian formation | Cheiro writes "I have never found it a very happy mark to possess" |
+| "the type is determined by the character and color of the line" | Benham on head line length | Benham writes "the **kind** to be **estimated** by…" |
+
+Replacing the left/right hand quotation cost nothing: Cheiro states the same
+principle in his own voice in *Palmistry for All* under "Right and Left Hands" —
+the right "denotes the developed or active brain, the left only giving the natural
+tendencies or inclinations."
+
+### Substantive corrections, not just wording
+
+Five cases where the quotation was carrying a claim the source does not make.
+
+| Claim as published | What the sources say | Action |
+|---|---|---|
+| Benham reads an absent Mercury/health line as a sign of a sound constitution (`mercury-line.md`, `mount-of-mercury.md`, `06-mount-of-mercury.mdx`) | Benham does not read the line's absence at all; he reads the character of a line that is present. The absence-is-favourable reading is **Cheiro's**, stated plainly in both his books | Re-attributed to Cheiro; the two are no longer presented as agreeing |
+| Benham was "direct" that a missing Sun Line does not mean success is out of reach (`sun-line.md`, `05-mount-of-apollo.mdx`) | Benham says nothing of the kind. Cheiro says close to the opposite: on an otherwise well-marked hand its absence means recognition "will be difficult or even impossible to gain" | Classical reading stated as it stands; the site's gentler reading kept and labelled as our own, per the §5.2 rule |
+| Benham read a fate line rising from Luna as showing success "aided by the public" (`05-fate-line.mdx`) | "the subject's success in life will be materially assisted by **one of the opposite sex**" | Corrected; the public/audience reading relabelled as the modern extension it is |
+| Benham preferred "lines of union", against Gettings' "affection lines" (4 files) | Benham argues for affection himself: "More properly speaking, these are lines of deep affection rather than lines of marriage or union." His term is also singular, "line of union" | Framing corrected in all four; Benham is part of that move, not the stage before it |
+| "Writer's fork" is Cheiro's term (6 places) | The phrase is in neither author. Cheiro's terminal-fork reading is also narrower and carries a caveat the popular version drops: it "gives more of what is called a dual mentality and **less** power of concentration on any one subject" | Term reassigned to later popular palmistry; Cheiro's actual reading quoted. The print reference had additionally attached the term to a *heart* line fork |
+
+### Wrong work
+
+`mount-of-mars.md` and `08-mount-of-mars.mdx` cited Cheiro's *Palmistry for All*
+for the Mars mount associations. His mount-by-mount treatment of Mars is in
+*Cheiro's Language of the Hand*. (*Palmistry for All* has a separate "Line of Mars
+or Inner Life Line" chapter, which is a different subject.) Corrected, including
+the sources-consulted footer.
+
+### Per-file disposition
+
+`C` = corrected, `R` = matched the corpus but misapplied, `K` = kept verified.
+
+| File | C | R | K |
+|---|---|---|---|
+| `blog/beginner/mount-of-jupiter.md` | 13 | 0 | 0 |
+| `blog/beginner/mount-of-apollo.md` | 7 | 1 | 0 |
+| `blog/beginner/mount-of-mars.md` | 7 | 0 | 0 |
+| `blog/beginner/mount-of-mercury.md` | 6 | 0 | 0 |
+| `blog/beginner/mount-of-saturn.md` | 6 | 0 | 0 |
+| `blog/beginner/sun-line.md` | 6 | 0 | 0 |
+| `blog/beginner/mount-of-venus.md` | 4 | 3 | 1 |
+| `blog/beginner/mounts-overview.md` | 4 | 1 | 0 |
+| `blog/beginner/mount-of-luna.md` | 3 | 0 | 0 |
+| `blog/beginner/mercury-line.md` | 3 | 0 | 0 |
+| `blog/beginner/nails-in-palmistry.md` | 3 | 1 | 0 |
+| `blog/beginner/double-life-line-meaning.md` | 2 | 0 | 1 |
+| `blog/beginner/islands-on-palm-lines.md` | 2 | 0 | 2 |
+| `blog/beginner/thumb-meaning-palmistry.md` | 2 | 0 | 1 |
+| `blog/beginner/fate-line.md` | 1 | 1 | 1 |
+| `blog/beginner/head-line.md` | 1 | 0 | 8 |
+| `blog/beginner/broken-life-line-meaning.md` | 1 | 0 | 1 |
+| `blog/beginner/short-life-line-meaning.md` | 1 | 0 | 4 |
+| `blog/beginner/no-fate-line-meaning.md` | 1 | 0 | 0 |
+| `blog/beginner/what-do-palm-lines-mean.md` | 1 | 0 | 2 |
+| `blog/beginner/heart-line.md` | 0 | 1 | 2 |
+| `blog/beginner/life-line.md` | 0 | 1 | 10 |
+| `blog/beginner/how-to-read-a-palm.md` | 0 | 1 | 0 |
+| `blog/beginner/which-hand-to-read-palmistry.md` | 0 | 1 | 0 |
+| `lessons/mounts/03-mount-of-jupiter.mdx` | 4 | 0 | 0 |
+| `lessons/mounts/08-mount-of-mars.mdx` | 4 | 0 | 0 |
+| `lessons/mounts/04-mount-of-saturn.mdx` | 3 | 0 | 0 |
+| `lessons/mounts/02-mount-of-venus.mdx` | 2 | 2 | 0 |
+| `lessons/mounts/06-mount-of-mercury.mdx` | 2 | 0 | 0 |
+| `lessons/mounts/05-mount-of-apollo.mdx` | 1 | 0 | 0 |
+| `lessons/mounts/07-mount-of-luna.mdx` | 1 | 0 | 1 |
+| `lessons/lines/05-fate-line.mdx` | 2 | 0 | 0 |
+| `lessons/lines/04-life-line.mdx` | 0 | 1 | 9 |
+
+Two further files changed without a quoted string changing, because the fix was to
+the framing around the quotation: `blog/beginner/forked-head-line-meaning.md` and
+`private/print/complete-reference.astro`, both on the "writer's fork" attribution.
+
+### Left as they stand, deliberately
+
+- **Gettings (1965), West (1998), Fincham (2005).** In copyright, not searchable,
+  20 quotations across the corpus. Unchanged, as in Batch 2B. This is the one
+  remaining class of unverifiable quotation on the site, and it stays unverifiable
+  until someone has the editions in hand.
+- **Quoted phrases attributed to no one in particular** — "writer's head lines" in
+  the print reference, credited vaguely to "Western texts". Not a Cheiro/Benham
+  attribution, so outside this batch's scope; worth a look in a future pass.
+- No page numbers were added anywhere. None of the scans paginate reliably enough
+  to cite, and inventing them is the failure mode this thread of work exists to
+  prevent.
+
+### Method note
+
+Corpus search was run by bounded workers; every classification and every
+replacement wording was adjudicated against the retrieved text before being
+applied. Two worker errors were caught in review and corrected: a genuine Cheiro
+quotation on marriage-line quality was de-quoted as though unsupported, and
+Benham's "cold-blooded tyrant" was used as a general statement about an
+overdeveloped Jupiter when the source says it of a white, cold hand — replaced
+with his general statement about the type in excess, "the excess of a commanding
+disposition, which is tyranny or despotism".
+
+The reusable finding: **matching a quotation to the corpus is not the same as
+verifying it.** Fourteen passages here matched and were still wrong, most of them
+short phrases sitting under the wrong feature. A future pass should check the
+subject the source is discussing, not only the string.

@@ -3,12 +3,29 @@
 Status: INACTIVE
 
 ## Last completed
-Remediation Batch 2B, Source Integrity & Editorial Trust (2026-08-10): added a permanent task startup/local sync rule to `AGENTS.md`; replaced the editorial style guide's source section with a four-tier source policy covering tradition-specific sourcing, quotation integrity, and encyclopaedia handling; removed all commercial astrology blogs, content farms, unsourced blogs, and encyclopaedia attributions from content; gave the Chinese and Indian tradition articles tradition-appropriate sources; corrected the factual claims flagged for verification; corrected the highest-risk unverifiable quotations; and regenerated the About page source list from the actual corpus.
+Remediation Batch 2C, Quotation Integrity (2026-08-11), on branch
+`fix/quotation-integrity-batch-2c`. Closed the 78-item quotation backlog left by
+Batch 2B. Re-inventoried from source rather than from the stale line numbers:
+245 quotation-marked passages inside paragraphs naming Cheiro or Benham, of
+which 162 were genuine attributions. 55 were already exact; 107 were corrected;
+none remain unverified. Beyond wording, corrected five attributions carrying
+claims the sources do not make (the Mercury line's absence, the Sun line's
+absence, the fate line from Luna, Benham on "union" versus "affection", and
+"writer's fork"), one wrong work (Cheiro on Mars is in *Language of the Hand*),
+and one of Batch 2B's own replacement quotations, which came from a reader's
+letter printed in Cheiro's book rather than from Cheiro.
 
-Validation: `npm run build` (93 pages), `npm run audit:all`, `npm run content-audit`, and `git diff --check` all passed. `/about` and the Chinese tradition article were rendered and inspected locally.
+Validation: `npm run build` (93 pages), `npm run audit:all`,
+`npm run content-audit`, and `git diff --check` all passed. A final repository
+sweep reconciles against the verification log with zero unresolved
+Cheiro/Benham attributions.
 
-A pre-merge correction pass followed on the same branch, after cross-agent review found the batch contradicting its own evidence: the life-line historical framing was corrected across nine content files plus the glossary and print reference, the Chinese and Indian articles were re-audited claim by claim against what Kohn, Smith, Zysk, and Varāhamihira actually support, two Tian/Di/Ren mapping errors were fixed, and the separation of historical description from editorial policy was recorded as a durable rule.
+Durable record: `source-verification-log.md` (Batch 2C section) carries the
+per-file disposition. The new rule from this batch is in `DECISIONS.md`
+(2026-08-11): a quotation is verified only when the source is saying it about
+the feature the article attributes it to.
 
-Known open item: 78 author-attributed quotations, concentrated in the mount articles and mount lessons, could not be verified against the primary texts and still carry quotation marks. Inventoried in `source-verification-log.md`, queued in `editorial-backlog.md`. This needs an editorial rewrite pass, not a citation-level fix.
+Known open item: 20 quotations attributed to Gettings, West, and Fincham remain
+unverifiable — the editions are in copyright. Flagged in `editorial-backlog.md`.
 
 Start the next task by reading `../AGENTS.md`, then this file and `AI_HANDOFF.md`.

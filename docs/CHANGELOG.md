@@ -2,6 +2,14 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-11 - Remediation Batch 2C quotation integrity
+- Closed the 78-item quotation backlog from Batch 2B. Re-inventorying from source found 245 quotation-marked passages inside paragraphs naming Cheiro or Benham, of which 162 were genuine attributions: 55 already exact, 107 corrected, none left unverified.
+- Corrected five attributions that carried a claim the source does not make: Benham does not read an absent Mercury/health line as a sign of a sound constitution (that is Cheiro's reading); Benham offers no reassurance about a missing Sun Line, and Cheiro says close to the opposite; Benham reads a fate line from Luna as help from one of the opposite sex, not from "the public"; Benham argues for "affection" over "union" rather than against it; and "writer's fork" is in neither author.
+- Corrected the wrong work on Mars: Cheiro's mount-by-mount treatment is in *Cheiro's Language of the Hand*, not *Palmistry for All*.
+- Corrected the Batch 2B replacement quotation for the active/passive hand. The wording is in *Language of the Hand* but belongs to a reader's letter signed "Speranus", not to Cheiro. Cheiro states the principle himself in *Palmistry for All*, and that is now quoted.
+- Re-attributed the sister line: "great vitality and power of resistance to illness" is Cheiro's, not Benham's, though Benham does treat the line and his own wording now carries the point.
+- Recorded that fourteen passages matched the corpus and were still wrong, most of them short phrases attached to the wrong feature — string match is not verification.
+
 ## 2026-08-10 - Batch 2B final consistency sweep
 - Removed leftover prose that still contradicted the corrected life-line framing further down the same pages: the empirical section's appeal to the classical writers, the "does not count out years" claim, the Short and Broken variation framings, and the short/broken FAQs.
 - Rewrote the life-line lesson's break section as classical (Benham illness/accident, Cheiro danger of death) versus modern practice versus Palmistry Path policy, and updated the figure captions to match.
