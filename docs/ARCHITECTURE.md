@@ -44,7 +44,6 @@ Current schema:
 - `pubDate`
 - `difficulty` (`beginner | intermediate | advanced`)
 - `duration`
-- `prerequisites?`
 - `relatedArticle?`
 - `heroImage?`
 

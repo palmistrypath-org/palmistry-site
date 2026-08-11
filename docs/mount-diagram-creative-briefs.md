@@ -4,6 +4,8 @@
 
 These briefs define the requirements for replacing the temporary schematic SVGs in `public/images/lessons/mounts/` with designed `.webp` artwork. The lines module diagrams (`public/images/lessons/lines/`) are the reference for visual style — study those first. Do not reference the current SVG placeholders for style or composition.
 
+> **Terminology note (2026-08-11).** These briefs predate the canonical mount model and describe "nine mount regions" in several places. The published model is: **seven planetary mounts occupy eight mount regions**, because Mars appears in two distinct areas of the palm; the **Plain of Mars** is a separate central region, not a raised mount and not a ninth mount. The per-diagram specs below are otherwise unchanged, since they document artwork already produced — but any new or revised label text must follow the canonical model, not the counts written here.
+
 ---
 
 ## Shared Art Direction
