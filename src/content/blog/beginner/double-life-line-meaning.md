@@ -22,7 +22,7 @@ Note the [Mount of Venus](/blog/beginner/mount-of-venus/) — the region this in
 
 ## Traditional associations
 
-Benham, in *The Laws of Scientific Hand Reading* (1900), is among the most specific in describing this line. He calls it the Line of Mars and reads it as indicating "great vitality and power of resistance" — particularly physical resilience and an augmented life force. He notes that when the Line of Mars is present, the subject has a strengthened constitution that can carry them through periods of strain, difficulty, or bodily challenge. Crucially, he does not describe it as predicting longevity or as a talisman against illness; he frames it as an augmenting influence on vitality, not a guarantee of any outcome.
+Benham, in *The Laws of Scientific Hand Reading* (1900), is among the most specific in describing this line. He calls it the line of Mars, says that it and the life line "are sister lines, in fact," and gives its effect as being "to strengthen its sister line and to indicate a stronger constitution than is shown by even a deep Life line." He reads it against the life line rather than on its own: where the life line is "thin, broad and shallow, or chained," a line of Mars means the subject "will be inherently delicate, but there will be an underlying vital strength which will prevent the delicacy from taking any serious form"; where the life line is already deep, the subject "will have tremendous vitality, great endurance, and much aggression." He also notes it is "comparatively a rare marking." His account of the line is about constitution and endurance, not about length of life.
 
 Cheiro, in *Palmistry for All* (1916), approached the inner line as a companion or strengthening line — a "double" that reinforces rather than replaces or extends the main line's story. His framing is consistent with Benham's: the sister line bolsters the life force recorded in the primary line. He does not treat it as a separate life narrative running in parallel, nor as a predictor of particular events.
 
@@ -86,7 +86,7 @@ A sister line that appears on one hand accompanying a break, but where the break
 
 ## Common myths
 
-**A double life line means you will live twice as long.** No source says this. Vitality, resistance, and resilience are the consistent associations across Benham, Cheiro, Gettings, West, and Fincham. The older writers do connect the line to surviving danger and illness — Cheiro explicitly — but "greater power of resistance" is not "double the years," and neither reading is one Palmistry Path presents as a prediction.
+**A double life line means you will live twice as long.** No source says this. Vitality, resistance, and resilience are the consistent associations across Benham, Cheiro, Gettings, West, and Fincham. The older writers do connect the line to surviving danger and illness — Cheiro explicitly — but a stronger constitution and greater resistance to illness is not "double the years," and neither reading is one Palmistry Path presents as a prediction.
 
 **The inner line is a separate life story.** The sister line does not run a parallel narrative. It does not represent a second relationship, a second path, or a dual nature in any meaningful sense. It is a strengthening of the primary life line's story, not an alternative to it.
 

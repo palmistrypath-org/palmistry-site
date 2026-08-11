@@ -26,7 +26,7 @@ Natural light or a small magnifying glass makes identification considerably easi
 
 Across Western palmistry — and with parallel recognition in Indian and Chinese traditions — islands have been associated with a period of difficulty, strain, or divided energy affecting the person at or near the time suggested by the island's position along the line.
 
-William Benham, writing in *The Laws of Scientific Hand Reading* (1900), described islands as representing "a period of weakness or deficiency" in the quality the line represents. Fred Gettings, in *The Book of the Hand* (1965), characterised the island as a sign of "temporary division" — energy that cannot proceed as a unified stream but is split, running on two tracks without the strength of one. Both writers were consistent in treating islands as passages rather than permanent conditions: the line rejoins, and that rejoining is part of the reading.
+William Benham, writing in *The Laws of Scientific Hand Reading* (1900), treated islands as one of a family of signs that "indicate defects of the Mount, either of health or of character" — with the specific line, its chance lines, and its colour determining which. Fred Gettings, in *The Book of the Hand* (1965), characterised the island as a sign of "temporary division" — energy that cannot proceed as a unified stream but is split, running on two tracks without the strength of one. Both writers were consistent in treating islands as passages rather than permanent conditions: the line rejoins, and that rejoining is part of the reading.
 
 This matters. An island does not mark the line as damaged or broken. It marks a passage through something — and a passage, by definition, has an end.
 
@@ -52,7 +52,7 @@ No medical interpretation is offered here, and none should be assumed. The tradi
 
 The [life line](/blog/beginner/life-line/) sweeps in an arc around the base of the thumb, and is widely — if inaccurately — believed to measure lifespan. It does not. What it traditionally represents is vitality: the quality and flow of physical energy, the body's general robustness, and how a person navigates their embodied life over time.
 
-Islands on the life line are traditionally associated with a period of depleted vitality or physical strain. Cheiro, in *Palmistry for All* (1916), described such islands as indicating "a period of weakness" in constitutional energy. Benham framed it similarly: a period in which the life force is not running as a unified stream, but divided — less available, less robust.
+Islands on the life line are traditionally associated with a period of depleted vitality or physical strain. Cheiro, in *Palmistry for All* (1916), held more generally that islands "must be considered as showing a weakness in any line wherever they may be found, and are to be considered unfortunate signs." Benham framed it similarly: a period in which the life force is not running as a unified stream, but divided — less available, less robust.
 
 This must be stated plainly, and accurately. Palmistry Path does not read an island on the life line as a sign of illness or as anything bearing on length of life. That is a contemporary position, not an inherited one: Benham treats islands on the life line as showing the vital current "split in two" and calls them "always indications of periods of delicacy," locating the period by where the island begins and ends. He is describing health, and pretending otherwise would misrepresent him.
 

@@ -42,7 +42,7 @@ This is the variation Western palmistry discusses most specifically at the head 
 
 ### Length
 
-A long head line — one that travels well across the palm — is traditionally associated with breadth of mental interest: a mind that ranges widely, considers many angles, and engages extensively with what it encounters. Benham is explicit that length indicates "abundant mentality" but that "the type is determined by the character and color of the line," not by length alone. A short head line is traditionally associated with more focused or concentrated mental engagement — narrower in range, not weaker in quality. The popular pairing of *long* with *intelligent* is a simplification the tradition does not support.
+A long head line — one that travels well across the palm — is traditionally associated with breadth of mental interest: a mind that ranges widely, considers many angles, and engages extensively with what it encounters. Benham is explicit that the head line "tells by its length of abundant mentality, the kind to be estimated by the character and color of the line" — length indicates abundant mentality, but the kind of mind is estimated by the line's character and color, not by length alone. A short head line is traditionally associated with more focused or concentrated mental engagement — narrower in range, not weaker in quality. The popular pairing of *long* with *intelligent* is a simplification the tradition does not support.
 
 ### Depth and clarity
 

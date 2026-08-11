@@ -22,7 +22,7 @@ For most readings these lines are considered alongside the [heart line](/blog/be
 
 ## What the tradition says these lines reflect
 
-A brief word on naming before continuing, because the terminology itself carries meaning. Cheiro, writing in *Palmistry for All* (1916), called these "the marriage line" — singular, and linked to the timing and nature of marriage as an institution. William Benham, in *The Laws of Scientific Hand Reading* (1900), preferred "lines of union," a deliberate shift that acknowledged the bond itself rather than its legal form. Fred Gettings, in *The Book of the Hand* (1965), used "affection lines" — decoupling the marking from marriage entirely. Johnny Fincham's *The Spellbinding Power of Palmistry* (2005) treats them as reflections of significant emotional bonds rather than a tally of partnerships.
+A brief word on naming before continuing, because the terminology itself carries meaning. Cheiro, writing in *Palmistry for All* (1916), called these "the marriage line" — singular, and linked to the timing and nature of marriage as an institution. William Benham, in *The Laws of Scientific Hand Reading* (1900), used the conventional term "line of union," but pushed past it in his own analysis, writing that "these are lines of deep affection rather than lines of marriage or union." Fred Gettings, in *The Book of the Hand* (1965), used "affection lines" — decoupling the marking from marriage entirely, the same direction Benham had already argued for. Johnny Fincham's *The Spellbinding Power of Palmistry* (2005) treats them as reflections of significant emotional bonds rather than a tally of partnerships.
 
 The naming shift matters for this article because it shapes how variations are read. Once you understand that these lines are traditionally associated with emotional bonding rather than contractual relationship, variations like forks and breaks read differently — less as verdicts, more as observations about the texture of a bond.
 
@@ -90,7 +90,7 @@ A forked, broken, or faint relationship line does not predict divorce. No tradit
 
 Palmistry Path does not read these variations as a compatibility assessment. They are not used here to tell you whether a relationship will succeed or whether a partner is right for you.
 
-That is this site's boundary rather than the tradition's. Cheiro is explicit that "for a happy marriage the lines on the Mount of Mercury should be straight and clear", dates when a marriage will occur, and reads certain endings as showing how a partner will die. Those are outcome predictions about real relationships, and this article does not offer them.
+That is this site's boundary rather than the tradition's. Cheiro's own system goes further than what this article offers. He is explicit that "for a happy marriage the lines on the Mount of Mercury should be straight and clear, without breaks or irregularities of any kind," he dates when a marriage will occur, and he reads a line that "curves or droops downwards" as meaning the person will outlive their partner. Those are outcome predictions about real relationships, and this article does not offer them.
 
 They are not a count of marriages or separations. A forked line does not mean two marriages; a broken line does not mean a separation has occurred or will occur. These markers describe qualities within significant bonds, not biographical events.
 

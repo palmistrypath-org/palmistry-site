@@ -22,7 +22,7 @@ Its variability is greater than any of the three other major lines, and its abse
 
 William Benham, whose *The Laws of Scientific Hand Reading* (1900) remains one of the most systematic treatments of the subject, acknowledged the absent fate line without negative evaluation. He did not present it as a lesser condition.
 
-The passage most often associated with Cheiro describes an absent fate line as suggesting a life "so much under the control of the individual" that external fate plays no structuring role. Whether this exact formulation is Cheiro's cannot be confirmed from the 1916 text in a quotable form, but it represents a position consistent with how the tradition has treated the absent line more broadly. The framing is clear: where no fate line appears, direction comes from within rather than being externally imposed or visible as a fixed course. That is not a consolation reading. It is what the tradition says.
+Cheiro addressed this directly: "There are some who appear to have no Fate, and others who seem to carve their Destiny from day to day. I have seen hundreds of cases where every step of the journey was indicated from childhood to the grave; others where only the principal changes in the career were marked in advance." Where no fate line appears, in other words, direction comes from within rather than being externally imposed or visible as a fixed course. That is not a consolation reading. It is what the tradition says.
 
 ### The Indian tradition
 

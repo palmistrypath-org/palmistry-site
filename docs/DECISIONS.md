@@ -2,6 +2,13 @@
 
 Only durable decisions belong here. Newest entries first.
 
+## 2026-08-11 - Verifying a quotation means checking the subject, not the string
+**Decision:** A quotation counts as verified only when the source is saying it *about the feature the article attributes it to*. Finding the words somewhere in the right book is not sufficient and does not license quotation marks. The same test applies to the speaker: wording reproduced inside a source — a quoted letter, an epigraph, a passage the author is themselves citing — is not that author's sentence and may not be attributed to them.
+
+**Why:** Batch 2C found fourteen passages that matched the corpora and were still wrong. "The love nature" is Cheiro's, about the heart line, and was used for the Mount of Venus. "The strength of the constitution" and "nervous energy" are Benham's, about the life line, and were used for Venus and for nails. Worse, Batch 2B's own replacement quotation for the active/passive hand — "the left hand is what you are, constitutionally" — is genuinely in *Cheiro's Language of the Hand*, but sits inside a reader's letter signed "Speranus" whose writer attributes it to cheiromants generally. An exact-match check certified all of these. Short quotations are the highest-risk category, because a common phrase will match something.
+
+**Consequences:** Quotation checks must retrieve surrounding context, not just a hit. Prefer a longer quotation that carries its own subject over a three-word fragment. When a check is delegated, the worker returns the source's sentence and what it describes, and the adjudication happens against that. Recorded in `source-verification-log.md` under Batch 2C.
+
 ## 2026-08-10 - Historical description is separate from editorial policy
 **Decision:** Content must keep two things apart and may not collapse them. *Historical description* reports what the sources actually say, including predictive claims about lifespan, death, illness, wealth, and status, and including the dating systems built for them. *Editorial policy* is Palmistry Path's own boundary: we do not predict those things and do not present historical predictive claims as reliable. Where the two differ, the page says they differ and why. No article may state that the tradition "never" made a claim the primary texts demonstrably make.
 
@@ -14,7 +21,7 @@ Only durable decisions belong here. Newest entries first.
 
 **Why:** The site's differentiator is that its claims can be traced. The August 2026 audit found nine articles citing content farms alongside Cheiro and Benham, two tradition articles carrying a byte-identical Western bibliography, and an About page listing books the corpus never cites. Verification during Batch 2B then found that most author-attributed quotations could not be located in the texts they were credited to. A stated hierarchy is what prevents each of these from recurring.
 
-**Consequences:** The style guide no longer permits citing named commercial practitioners as authorities, which was the rule that produced the problem. Articles that cannot reach a tradition-appropriate source must say the claim reflects contemporary practice, or drop it. Quotation-level work must be verifiable before publication; `docs/source-verification-log.md` is the durable record and carries the 78 outstanding unverified attributions.
+**Consequences:** The style guide no longer permits citing named commercial practitioners as authorities, which was the rule that produced the problem. Articles that cannot reach a tradition-appropriate source must say the claim reflects contemporary practice, or drop it. Quotation-level work must be verifiable before publication; `docs/source-verification-log.md` is the durable record. The 78 outstanding attributions this decision created were resolved by Batch 2C on 2026-08-11.
 
 ## 2026-08-10 - Automatic task startup and local sync
 **Decision:** At the start of an implementation task an agent inspects `git status`, and — if the tree is clean — fetches, switches to `main`, fast-forwards, verifies the remote and upstream state, and creates or switches to the designated task branch. A dirty tree stops the task and is reported; nothing is reset, stashed, or discarded without approval.
