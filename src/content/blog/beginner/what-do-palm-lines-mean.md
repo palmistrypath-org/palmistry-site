@@ -82,7 +82,7 @@ Certain errors appear so consistently in beginner palmistry that naming them her
 
 **Don't read one line without the others.** No line carries a context-free meaning. A Heart Line read without knowing what the Head Line and the hand shape suggest is a fragment, not a reading. The most common beginner error is to look up a single line's definition and treat it as settled. It isn't.
 
-**Don't assume lines are permanent or determining.** Palmistry is an interpretive framework applied to observable features — it is not a claim that those features control or fix what a person does or becomes. The tradition has always allowed for will and development as factors; Cheiro's "what man makes of it" framing is built into the structure of the active/passive hand distinction. The question of [whether palm lines can change](/blog/beginner/can-palm-lines-change/) is addressed directly in its own article.
+**Don't assume lines are permanent or determining.** Palmistry is an interpretive framework applied to observable features — it is not a claim that those features control or fix what a person does or becomes. The tradition has always allowed for will and development as factors; Cheiro's own reading of the active hand as the one showing "the developed or active brain," against a passive hand "only giving the natural tendencies or inclinations," is built into that distinction. The question of [whether palm lines can change](/blog/beginner/can-palm-lines-change/) is addressed directly in its own article.
 
 **Don't confuse absence with deficiency.** A missing Fate Line, a short Head Line, or an unusual Heart Line path is not a problem to be corrected — it is a feature to be read, in context, alongside everything else the hand shows.
 
