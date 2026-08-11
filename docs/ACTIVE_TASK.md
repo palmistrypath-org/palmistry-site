@@ -4,9 +4,10 @@ Status: INACTIVE
 
 ## Last completed
 Remediation Batch 3B — Truthful Labelling, Mount Model, and Simian Correction
-(2026-08-11), on branch `fix/curriculum-batch-3b`. Pushed, unmerged. Two commits:
-the simian source-integrity correction, then the curriculum labelling, mount
-model, and prerequisites implementation.
+(2026-08-11), on branch `fix/curriculum-batch-3b`. Pushed, unmerged. Two
+implementation commits — the simian source-integrity correction, then the
+curriculum labelling, mount model, and prerequisites implementation — plus one
+documentation/state commit, and a pre-merge review correction.
 
 ## What shipped
 - **Simian (P0-2 closed).** `lines/06-simian-line.mdx` no longer asserts *ekaagra*
@@ -37,7 +38,18 @@ order may differ from the reading procedure; and "a lesson teaches the variable,
 the blog covers the specific value" with the 25-lesson target.
 
 ## Next action
-Batch 3C — add the three approved lessons under the `AGENTS.md` article approval
-gate. Start from a clean context.
+**Batch 3C — Line Quality and Markings only.** One new lesson plus the
+subtractive revisions to `lines/01`–`05` it enables: the line-quality vocabulary
+currently repeated across nine lesson files can then be taught once and
+referenced. The audit keeps it deliberately alone — highest leverage, six files.
+One new lesson, not three. New-lesson work runs under the `AGENTS.md` article
+approval gate.
+
+The approved phasing after that (audit §18), kept brief:
+- **3D** — The Thumb and the Fingers, plus folding texture and flexibility into the retitled hand-shape lesson.
+- **3E** — Module 4 rebuild: the simian move, and revising `advanced/01` so it teaches the sun and Mercury lines.
+- **3F** — Synthesis and practice: Combining What You See, the capstone revision, `<Practice>`, and module `<Checkpoint>`s.
+
+Do not pull later batches forward. Start from a clean context.
 
 Start the next task by reading `../AGENTS.md`, then this file and `AI_HANDOFF.md`.

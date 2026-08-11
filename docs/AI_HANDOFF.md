@@ -14,7 +14,9 @@ complete and pushed on `fix/curriculum-batch-3b`, unmerged.
 
 Latest completed work: on 2026-08-11 Remediation Batch 3B implemented the first
 tranche of the approved curriculum decisions — truthful labelling, the mount
-model, and the simian correction. Two commits. The simian source defect (P0-2) is
+model, and the simian correction. Two implementation commits plus one
+documentation/state commit, and a pre-merge review correction. The simian source
+defect (P0-2) is
 **fixed**: the lesson no longer asserts *ekaagra* as Hasta Samudrika Shastra
 doctrine, the 1–3% / 1–4% contradiction is resolved to 1–3%, and the same stale
 attribution in `heart-line.md` was corrected. The mount model is published
@@ -86,11 +88,19 @@ Key current implementation facts are summarized in `CURRENT_STATE.md` and `ARCHI
 Await the user's review and merge of `fix/curriculum-batch-3b`, or their next
 Palmistry Path objective. Do not merge it unprompted.
 
-The natural next batch is 3C: add the three approved lessons — the thumb and
-fingers, line quality and markings, and combining what you see (a worked complete
-reading) — taking the core curriculum from 22 to 25. That is new-article work and
-needs the `AGENTS.md` approval gate: pre-draft report, write to file, user
-approval, then validation and commit. Do not reorder modules, and do not move the
-simian lesson; that move is Batch 3E. Start from a clean context if possible
-(`/clear`), reconstructing from Git plus targeted canonical docs rather than chat
-history.
+The next batch is **3C: Line Quality and Markings, and nothing else** — one new
+lesson plus the subtractive revisions to `lines/01`–`05` it enables, since the
+line-quality vocabulary currently repeated across nine lesson files can then be
+taught once and referenced. The audit (§18) keeps it deliberately alone. The three
+approved additions are phased, not batched together: **3D** is The Thumb and the
+Fingers, plus folding texture and flexibility into the retitled hand-shape lesson;
+**3E** is the module 4 rebuild, the simian lesson's module move, and revising
+`advanced/01` so it teaches the sun and Mercury lines; **3F** is synthesis and
+practice — Combining What You See, the capstone revision, `<Practice>`, and module
+`<Checkpoint>`s. Do not pull later batches forward, do not reorder modules, and do
+not move the simian lesson in 3C.
+
+New-lesson work runs under the `AGENTS.md` approval gate: pre-draft report, write
+to file, user approval, then validation and commit. Start from a clean context if
+possible (`/clear`), reconstructing from Git plus targeted canonical docs rather
+than chat history.
