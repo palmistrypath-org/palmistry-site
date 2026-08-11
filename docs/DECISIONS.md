@@ -2,6 +2,27 @@
 
 Only durable decisions belong here. Newest entries first.
 
+## 2026-08-11 - Seven planetary mounts across eight mount regions
+**Decision:** The site publishes one mount model. There are **seven planetary mounts** — Jupiter, Saturn, Apollo/Sun, Mercury, Venus, Luna/Moon, and Mars — occupying **eight physical mount regions**, because Mars appears in two distinct areas of the palm (Lower/Inner and Upper/Outer). The **Plain of Mars** is a separate central region between them: read in its own right, but not a raised planetary mount, not an eighth planetary type, and not a ninth mount. The preferred first explanation is "seven planetary mounts occupy eight mount regions, because Mars appears in two distinct areas of the palm"; concise equivalents are fine where space is tight. An unqualified "the eight mounts" is not acceptable where it implies eight planetary types — use "eight mount regions" when the count refers to physical areas.
+
+**Why:** The site previously said "seven" in some places and "eight" in others, and the docs said "nine". Both counts are defensible in isolation — the tradition names seven, a learner's hand shows eight — and the contradiction was invisible until they appeared on the same site. Learners physically find eight rises and read that the tradition has seven; the reconciliation has to be stated rather than left to them. The glossary had also drifted into a genuine error, equating the Outer Mount of Mars with the Plain of Mars.
+
+**Consequences:** Applies to lessons, articles, glossary, guide and premium-guide copy, and the print reference. `mounts/01` carries the one explicit explanation; `foundations/02` names all eight regions so the Lines module has the geography it depends on. `docs/mount-diagram-creative-briefs.md` predates this model and carries a terminology note — its per-diagram specs document artwork already produced, but new label text follows this decision.
+
+## 2026-08-11 - Teaching order may differ from the reading procedure
+**Decision:** The acquisition order (Foundations → Major Lines → Mounts → Minor Lines & Synthesis) and the actual reading procedure (overall impression and hand structure → mounts → major lines → minor lines → close) are deliberately different, and the site says so rather than pretending they match. The four-module architecture is retained.
+
+**Why:** Batch 3A's first pass argued the curriculum should teach mounts before lines because a reading examines mounts first, and that inference was retracted on measured dependency: the Mounts module makes heavy interpretive use of lines, while the Lines module needs only mount *location*, which `foundations/02` supplies. Lines are also visually obvious on a first attempt where mount development is not, so teaching lines first gets a learner reading sooner. The only real risk was the site appearing to contradict itself, which one paragraph in `foundations/02` resolves.
+
+**Consequences:** Do not reorder the modules to match the reading procedure. Any future lesson that teaches the reading sequence states the distinction rather than silently re-ordering.
+
+## 2026-08-11 - A lesson teaches the variable; the blog covers the specific value
+**Decision:** The core curriculum teaches the general variable — how to assess a mount, how to read line quality, what placement means. The blog covers specific values of that variable — this particular mount, this particular marking. New specific-topic content goes to the blog by default; a lesson is added only when a variable is genuinely untaught. The approved core curriculum target is **25 lessons in four modules**, up from 22, to be implemented in later batches. Nails remain blog-only.
+
+**Why:** Batch 3A's first pass proposed 11 new lessons; a lean-curriculum test and an independent competency test cut that to 3. Most apparent gaps were specific values that belong in articles, or could fold into neighbouring lessons. Without this rule the module count grows with every topic the site covers.
+
+**Consequences:** Governs which of the audit's remaining proposals become lessons. The three approved additions are the thumb and fingers, line quality and markings, and a worked complete reading; Practice and Checkpoint components are approved for a later batch.
+
 ## 2026-08-11 - Verifying a quotation means checking the subject, not the string
 **Decision:** A quotation counts as verified only when the source is saying it *about the feature the article attributes it to*. Finding the words somewhere in the right book is not sufficient and does not license quotation marks. The same test applies to the speaker: wording reproduced inside a source — a quoted letter, an epigraph, a passage the author is themselves citing — is not that author's sentence and may not be attributed to them.
 

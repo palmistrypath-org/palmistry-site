@@ -2,6 +2,15 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-11 - Remediation Batch 3B truthful labelling, mount model, simian correction
+- Corrected the live source-integrity defect in `lines/06-simian-line.mdx`, which still asserted *ekaagra* as Hasta Samudrika Shastra doctrine after Batch 2B corrected exactly that framing in the twin article. The lesson now presents *ekāgratā* as genuine yogic/philosophical terminology whose application to the single transverse crease is a modern cross-tradition reading. The same stale attribution in `heart-line.md` was corrected to match, and the file's internal 1–3% / 1–4% prevalence contradiction was resolved to 1–3%.
+- Published one mount model across the site: seven planetary mounts occupy eight mount regions, because Mars appears in two distinct areas of the palm. The Plain of Mars is a separate central region, not a raised mount and not a ninth mount. The mounts overview lesson explains the count once; `foundations/02` now names all eight regions explicitly.
+- Fixed a factual error in the glossary, which equated the Outer Mount of Mars with the Plain of Mars.
+- Made module labelling truthful. Module 4 was titled "Advanced Interpretation" and labelled Advanced while containing four intermediate lessons on minor lines and synthesis; it is now "Minor Lines & Synthesis", Intermediate. The `advanced` slug and every lesson URL are unchanged. Module 2 became "The Major Lines" and no longer promises Sun, Mercury, and Girdle content that lives in module 4. Module difficulty labels now match the lessons they contain.
+- Stated briefly in `foundations/02` that the course teaches line reading before full mount assessment even though a complete reading assesses the mounts first — the two orders differ deliberately.
+- Removed the decorative `prerequisites` frontmatter field from all 22 lessons and from the content schema. It restated the previous lesson, had zero code consumers, and was never rendered.
+- No lesson was added, moved, or renamed; no route changed; no pricing, waitlist, checkout, or product promise was touched.
+
 ## 2026-08-11 - Remediation Batch 2C quotation integrity
 - Closed the 78-item quotation backlog from Batch 2B. Re-inventorying from source found 245 quotation-marked passages inside paragraphs naming Cheiro or Benham, of which 162 were genuine attributions: 55 already exact, 107 corrected, none left unverified.
 - Corrected five attributions that carried a claim the source does not make: Benham does not read an absent Mercury/health line as a sign of a sound constitution (that is Cheiro's reading); Benham offers no reassurance about a missing Sun Line, and Cheiro says close to the opposite; Benham reads a fate line from Luna as help from one of the opposite sex, not from "the public"; Benham argues for "affection" over "union" rather than against it; and "writer's fork" is in neither author.

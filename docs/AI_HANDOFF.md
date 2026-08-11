@@ -9,14 +9,30 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
-Current focus: none in implementation. `ACTIVE_TASK.md` is INACTIVE. An audit is
-awaiting the user's decisions.
+Current focus: none in implementation. `ACTIVE_TASK.md` is INACTIVE. Batch 3B is
+complete and pushed on `fix/curriculum-batch-3b`, unmerged.
 
-Latest completed work: on 2026-08-11 Remediation Batch 3A, the Learning Path &
+Latest completed work: on 2026-08-11 Remediation Batch 3B implemented the first
+tranche of the approved curriculum decisions — truthful labelling, the mount
+model, and the simian correction. Two commits. The simian source defect (P0-2) is
+**fixed**: the lesson no longer asserts *ekaagra* as Hasta Samudrika Shastra
+doctrine, the 1–3% / 1–4% contradiction is resolved to 1–3%, and the same stale
+attribution in `heart-line.md` was corrected. The mount model is published
+sitewide (seven planetary mounts, eight mount regions, Mars in two, Plain of Mars
+separate), module 4 is now "Minor Lines & Synthesis" at Intermediate with the
+`advanced` slug and all lesson URLs unchanged, and the decorative `prerequisites`
+field is gone from all 22 lessons and the schema.
+
+**Not implemented and still pending:** the three new lessons (thumb and fingers,
+line quality and markings, combining what you see), Practice and Checkpoint
+components, the second worked reading, and the simian lesson's module move
+(Batch 3E). Do not treat the 25-lesson target as delivered — the curriculum is
+still 22 lessons.
+
+Preceding work: on 2026-08-11 Remediation Batch 3A, the Learning Path &
 Curriculum Audit, produced `docs/audits/CURRICULUM_AUDIT_2026-08.md` on branch
 `audit/curriculum-learning-path-3a`, revised the same day after independent
-review. **It is an audit. No curriculum change has been implemented and none is
-authorized.** Nothing in `src/` was touched.
+review.
 
 **Read the audit's second-pass box before acting on anything in it.** The first
 pass argued that because the reading procedure examines mounts before lines, the
@@ -37,20 +53,18 @@ new lessons, and an independent competency test demoted the sun line and Mercury
 line from P0 to P1 (the remedy is revising `advanced/01` so it teaches them, not
 adding lessons).
 
-The four P0s are: line-quality vocabulary used across nine lesson files and
-taught in none; **a live source-integrity defect in
-`lines/06-simian-line.mdx:84`**, which still asserts *ekaagra* as Hasta Samudrika
-Shastra doctrine after Batch 2B corrected exactly that framing in the twin
-article (`blog/beginner/simian-line.md:43`), plus a 1–3% / 1–4% contradiction
-inside the same file; the thumb and fingers absent; and no worked example of a
-complete reading. The simian defect is recorded, not fixed — it is assigned to
-Batch 3E and may be pulled forward as a standalone micro-batch (decision D4).
+The audit listed four P0s. **The simian source defect is closed by Batch 3B.**
+Three remain open: line-quality vocabulary used across nine lesson files and
+taught in none; the thumb and fingers absent; and no worked example of a complete
+reading. Each is a new lesson and belongs to a later batch.
 
-Eight decisions in §17 must be settled before any implementation batch begins.
-D3 adopts a seven-mounts/eight-regions model — "seven mounts across eight
-regions, because Mars occupies two" — rather than replacing "eight" with "seven"
-everywhere; it touches paid-product copy. Recommended first batch is 3B,
-labelling and the mount model, config and copy only.
+The eight §17 decisions were settled by the user before Batch 3B. The durable
+ones are now recorded in `DECISIONS.md` (2026-08-11): the four-module
+architecture is retained; teaching order may differ from the reading procedure;
+seven planetary mounts across eight mount regions with Mars in two and the Plain
+of Mars separate; the 25-lesson target is approved for later implementation; and
+a lesson teaches the variable while the blog covers the specific value. Read
+those three entries rather than re-deriving them from the audit.
 
 Preceding implementation: on 2026-08-11 Remediation Batch 2C, Quotation Integrity, closed the quotation backlog Batch 2B opened. Every quotation-marked passage in a paragraph naming Cheiro or Benham was re-inventoried from source and matched against the six public-domain scans: 245 spans, 162 of them genuine attributions, 55 already exact, 107 corrected, zero left unverified. Beyond wording, it corrected five attributions that carried claims the sources do not make, one wrong work (Cheiro on Mars is in *Language of the Hand*, not *Palmistry for All*), and one of Batch 2B's own replacement quotations, which turned out to come from a reader's letter printed in Cheiro's book rather than from Cheiro.
 
@@ -69,12 +83,14 @@ Known follow-up: after explicit approval during Batch 2A, `npm audit --omit=dev`
 Key current implementation facts are summarized in `CURRENT_STATE.md` and `ARCHITECTURE.md`; verify source before relying on them for a change.
 
 ## Immediate next action
-Await the user's decisions on `docs/audits/CURRICULUM_AUDIT_2026-08.md` §17, or
-their next Palmistry Path objective. Do not begin any curriculum implementation
-without those approvals — in particular, do not add lessons or change the mount
-count on the strength of the audit alone, and do not reorder the modules at all.
-The one item that is unambiguously a defect rather than a proposal is the simian
-lesson's stale *ekaagra* framing (P0-2); it still needs approval to fix, but the
-correction itself is settled and requires no new research. Start the next task
-from a clean context if possible (`/clear`), reconstructing from Git plus
-targeted canonical docs rather than chat history.
+Await the user's review and merge of `fix/curriculum-batch-3b`, or their next
+Palmistry Path objective. Do not merge it unprompted.
+
+The natural next batch is 3C: add the three approved lessons — the thumb and
+fingers, line quality and markings, and combining what you see (a worked complete
+reading) — taking the core curriculum from 22 to 25. That is new-article work and
+needs the `AGENTS.md` approval gate: pre-draft report, write to file, user
+approval, then validation and commit. Do not reorder modules, and do not move the
+simian lesson; that move is Batch 3E. Start from a clean context if possible
+(`/clear`), reconstructing from Git plus targeted canonical docs rather than chat
+history.
