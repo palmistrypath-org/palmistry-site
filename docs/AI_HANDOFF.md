@@ -14,26 +14,43 @@ awaiting the user's decisions.
 
 Latest completed work: on 2026-08-11 Remediation Batch 3A, the Learning Path &
 Curriculum Audit, produced `docs/audits/CURRICULUM_AUDIT_2026-08.md` on branch
-`audit/curriculum-learning-path-3a`. **It is an audit. No curriculum change has
-been implemented and none is authorized.** Nothing in `src/` was touched.
+`audit/curriculum-learning-path-3a`, revised the same day after independent
+review. **It is an audit. No curriculum change has been implemented and none is
+authorized.** Nothing in `src/` was touched.
 
-The finding that drives the rest: the course teaches an observation order in
-`foundations/02-how-to-read-a-palm.mdx` (impression → shape → texture → mounts →
-major lines → minor lines), restates it in the capstone
-`advanced/04-how-to-give-a-reading.mdx:25-33`, and then contradicts it with its
-own module sequence, which runs Lines before Mounts. Alongside that: line-quality
-vocabulary (chained, breaks, forks, branches, islands) is used across nine lesson
-files and taught in none; the thumb, the fingers, the sun line, and the Mercury
-line have no lesson despite the capstone depending on them; and no worked example
-of a complete reading exists anywhere in the 22 lessons.
+**Read the audit's second-pass box before acting on anything in it.** The first
+pass argued that because the reading procedure examines mounts before lines, the
+curriculum must teach the Mounts module before the Lines module. That inference
+was wrong and is retracted. Measured dependency runs the other way: the Mounts
+module carries 54 line references and four `##` sections that interpret
+line–mount relationships (`mounts/02:74`, `05:24`, `06:26`, `07:47`); the Lines
+module carries 22 mount references, all positional landmarks, and no sections —
+and `foundations/02:65` already names and locates every mount region before the
+Lines module runs. The Lines module needs mount *location*, not mount
+*assessment*. **The existing module order is correct and is not proposed for
+change.** The six-module restructure is withdrawn.
 
-The audit proposes a six-module target curriculum (KEEP 8, MOVE 5, REVISE 8,
-MERGE 1, ADD 11) and eight named decisions in §18 that must be settled before any
-implementation batch begins. The recommended first batch is 3B — structure and
-labelling only, no new lesson prose. Note that §18 D3 (seven mounts or eight)
-touches paid-product copy, and that the audit overturns the August site audit's
-§5 claim that sequencing and prerequisites are correct; where the two disagree,
-Batch 3A re-verified against the current tree and §20 records the evidence.
+The audit now proposes four modules and **25 core lessons** — KEEP 11, MOVE 1,
+REVISE 10, MERGE 0, ADD 3 — plus 4 optional/later lessons. A lean-curriculum test
+folded most first-pass gaps into neighbouring lessons and checkpoints rather than
+new lessons, and an independent competency test demoted the sun line and Mercury
+line from P0 to P1 (the remedy is revising `advanced/01` so it teaches them, not
+adding lessons).
+
+The four P0s are: line-quality vocabulary used across nine lesson files and
+taught in none; **a live source-integrity defect in
+`lines/06-simian-line.mdx:84`**, which still asserts *ekaagra* as Hasta Samudrika
+Shastra doctrine after Batch 2B corrected exactly that framing in the twin
+article (`blog/beginner/simian-line.md:43`), plus a 1–3% / 1–4% contradiction
+inside the same file; the thumb and fingers absent; and no worked example of a
+complete reading. The simian defect is recorded, not fixed — it is assigned to
+Batch 3E and may be pulled forward as a standalone micro-batch (decision D4).
+
+Eight decisions in §17 must be settled before any implementation batch begins.
+D3 adopts a seven-mounts/eight-regions model — "seven mounts across eight
+regions, because Mars occupies two" — rather than replacing "eight" with "seven"
+everywhere; it touches paid-product copy. Recommended first batch is 3B,
+labelling and the mount model, config and copy only.
 
 Preceding implementation: on 2026-08-11 Remediation Batch 2C, Quotation Integrity, closed the quotation backlog Batch 2B opened. Every quotation-marked passage in a paragraph naming Cheiro or Benham was re-inventoried from source and matched against the six public-domain scans: 245 spans, 162 of them genuine attributions, 55 already exact, 107 corrected, zero left unverified. Beyond wording, it corrected five attributions that carried claims the sources do not make, one wrong work (Cheiro on Mars is in *Language of the Hand*, not *Palmistry for All*), and one of Batch 2B's own replacement quotations, which turned out to come from a reader's letter printed in Cheiro's book rather than from Cheiro.
 
@@ -52,9 +69,12 @@ Known follow-up: after explicit approval during Batch 2A, `npm audit --omit=dev`
 Key current implementation facts are summarized in `CURRENT_STATE.md` and `ARCHITECTURE.md`; verify source before relying on them for a change.
 
 ## Immediate next action
-Await the user's decisions on `docs/audits/CURRICULUM_AUDIT_2026-08.md` §18, or
+Await the user's decisions on `docs/audits/CURRICULUM_AUDIT_2026-08.md` §17, or
 their next Palmistry Path objective. Do not begin any curriculum implementation
-without those approvals — in particular, do not reorder modules, add lessons, or
-change the mount count on the strength of the audit alone. Start the next task
+without those approvals — in particular, do not add lessons or change the mount
+count on the strength of the audit alone, and do not reorder the modules at all.
+The one item that is unambiguously a defect rather than a proposal is the simian
+lesson's stale *ekaagra* framing (P0-2); it still needs approval to fix, but the
+correction itself is settled and requires no new research. Start the next task
 from a clean context if possible (`/clear`), reconstructing from Git plus
 targeted canonical docs rather than chat history.
