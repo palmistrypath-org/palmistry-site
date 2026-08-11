@@ -273,3 +273,67 @@ reading excerpts substitutes for reading the article as a reader would. Any
 future pass on this class of problem should read whole files.
 
 The 78 quotation attributions from Pass 1 remain open and untouched.
+
+---
+
+## Pass 5 — Evidence-precision correction (2026-08-10)
+
+No new research. Independent review after Pass 4 found that the two life-line
+variation articles claimed more from the documented evidence than it supports.
+Scope limited to `short-life-line-meaning.md` and `broken-life-line-meaning.md`.
+
+### Break-specific testing overstatement
+
+`broken-life-line-meaning.md` said in three places that the classical break
+reading — illness, accident, danger of death — "has been tested and has not held
+up", "has not survived testing", or lacks "demonstrated reliability".
+
+The studies recorded in Pass 1 and cited in the life-line article (Newrick 1990,
+Wilson & Mather 1974, Lucas et al. 2019) tested **life line length against
+recorded lifespan**. They did not test broken-line configurations as predictors
+of illness, accident, injury, or death. Applying their result to the break
+reading was an overstatement of this branch's own evidence.
+
+Corrected throughout to the defensible statement: no evidence establishing the
+classical break readings has been produced and this site has found none;
+Palmistry Path does not use them; the modern sources used here do not carry them
+forward. The article now states explicitly that this is **not** a claim that
+those specific readings were tested and refuted, and a new paragraph sets out
+what the studies do and do not cover.
+
+### Universal "every framework" wording removed
+
+- "every framework treats it as a milder version of a clean gap" → distinguished in the classical texts and in the modern sources used here
+- "treated as the milder form in every framework" → same
+- "The nature of the break shapes every version of the reading" / "Surrounding context matters in all three" → narrowed
+- "the modern practitioner literature has dropped it / has abandoned them" and "What has changed is everything after them" → narrowed to the modern sources this site works from
+- `short-life-line-meaning.md`: "Depth and clarity carry weight in every framework" → in the classical texts and in modern practice alike
+
+Earlier universals removed in Pass 4 ("no responsible practitioner today") remain removed.
+
+### Mixed longevity evidence
+
+`short-life-line-meaning.md` said the correction comes from "the studies that
+tested the claim and found nothing". Replaced with wording stating the studies
+have not established a consistent or reliable relationship, and explicitly
+preserving that the results were mixed rather than uniformly negative — the 1990
+study did report a correlation. "Has been tested and has not held up" also
+softened to "has not been borne out consistently".
+
+### Origin-story wording
+
+"belongs to the fair and market tradition of dramatic predictive readings" was
+an origin claim this branch has not established. Replaced with the supportable
+statement that the crudest version is the one that circulates popularly, and
+that lifespan readings existed in both popular and systematic historical
+palmistry. No fairground or market attribution remains in either file.
+
+### Found during the Opus full read
+
+Two further items neither review nor grep flagged: "depth and clarity, not
+length, are the primary quality indicators" survived in the common-mistakes
+section as a flat fact, contradicting the same article's corrected framing of
+that reordering as modern; and one checklist entry stated the modern transition
+reading without labelling it. Both corrected.
+
+The 78 quotation attributions from Pass 1 remain open and untouched.
