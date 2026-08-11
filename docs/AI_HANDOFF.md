@@ -9,9 +9,33 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
-Current focus: none. `ACTIVE_TASK.md` is INACTIVE and awaiting the next assignment.
+Current focus: none in implementation. `ACTIVE_TASK.md` is INACTIVE. An audit is
+awaiting the user's decisions.
 
-Latest completed implementation: on 2026-08-11 Remediation Batch 2C, Quotation Integrity, closed the quotation backlog Batch 2B opened. Every quotation-marked passage in a paragraph naming Cheiro or Benham was re-inventoried from source and matched against the six public-domain scans: 245 spans, 162 of them genuine attributions, 55 already exact, 107 corrected, zero left unverified. Beyond wording, it corrected five attributions that carried claims the sources do not make, one wrong work (Cheiro on Mars is in *Language of the Hand*, not *Palmistry for All*), and one of Batch 2B's own replacement quotations, which turned out to come from a reader's letter printed in Cheiro's book rather than from Cheiro.
+Latest completed work: on 2026-08-11 Remediation Batch 3A, the Learning Path &
+Curriculum Audit, produced `docs/audits/CURRICULUM_AUDIT_2026-08.md` on branch
+`audit/curriculum-learning-path-3a`. **It is an audit. No curriculum change has
+been implemented and none is authorized.** Nothing in `src/` was touched.
+
+The finding that drives the rest: the course teaches an observation order in
+`foundations/02-how-to-read-a-palm.mdx` (impression → shape → texture → mounts →
+major lines → minor lines), restates it in the capstone
+`advanced/04-how-to-give-a-reading.mdx:25-33`, and then contradicts it with its
+own module sequence, which runs Lines before Mounts. Alongside that: line-quality
+vocabulary (chained, breaks, forks, branches, islands) is used across nine lesson
+files and taught in none; the thumb, the fingers, the sun line, and the Mercury
+line have no lesson despite the capstone depending on them; and no worked example
+of a complete reading exists anywhere in the 22 lessons.
+
+The audit proposes a six-module target curriculum (KEEP 8, MOVE 5, REVISE 8,
+MERGE 1, ADD 11) and eight named decisions in §18 that must be settled before any
+implementation batch begins. The recommended first batch is 3B — structure and
+labelling only, no new lesson prose. Note that §18 D3 (seven mounts or eight)
+touches paid-product copy, and that the audit overturns the August site audit's
+§5 claim that sequencing and prerequisites are correct; where the two disagree,
+Batch 3A re-verified against the current tree and §20 records the evidence.
+
+Preceding implementation: on 2026-08-11 Remediation Batch 2C, Quotation Integrity, closed the quotation backlog Batch 2B opened. Every quotation-marked passage in a paragraph naming Cheiro or Benham was re-inventoried from source and matched against the six public-domain scans: 245 spans, 162 of them genuine attributions, 55 already exact, 107 corrected, zero left unverified. Beyond wording, it corrected five attributions that carried claims the sources do not make, one wrong work (Cheiro on Mars is in *Language of the Hand*, not *Palmistry for All*), and one of Batch 2B's own replacement quotations, which turned out to come from a reader's letter printed in Cheiro's book rather than from Cheiro.
 
 The rule worth carrying forward is in `DECISIONS.md` (2026-08-11): a quotation is verified only when the source is saying it about the feature the article attributes it to. Fourteen passages in this batch matched the corpus and were still wrong, mostly short phrases sitting under the wrong feature. Do not treat an exact string match as a check.
 
@@ -28,4 +52,9 @@ Known follow-up: after explicit approval during Batch 2A, `npm audit --omit=dev`
 Key current implementation facts are summarized in `CURRENT_STATE.md` and `ARCHITECTURE.md`; verify source before relying on them for a change.
 
 ## Immediate next action
-Await the user's next Palmistry Path objective. Start it from a clean context if possible (`/clear`), reconstructing from Git plus targeted canonical docs rather than chat history.
+Await the user's decisions on `docs/audits/CURRICULUM_AUDIT_2026-08.md` §18, or
+their next Palmistry Path objective. Do not begin any curriculum implementation
+without those approvals — in particular, do not reorder modules, add lessons, or
+change the mount count on the strength of the audit alone. Start the next task
+from a clean context if possible (`/clear`), reconstructing from Git plus
+targeted canonical docs rather than chat history.

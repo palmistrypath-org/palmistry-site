@@ -3,29 +3,31 @@
 Status: INACTIVE
 
 ## Last completed
-Remediation Batch 2C, Quotation Integrity (2026-08-11), on branch
-`fix/quotation-integrity-batch-2c`. Closed the 78-item quotation backlog left by
-Batch 2B. Re-inventoried from source rather than from the stale line numbers:
-245 quotation-marked passages inside paragraphs naming Cheiro or Benham, of
-which 162 were genuine attributions. 55 were already exact; 107 were corrected;
-none remain unverified. Beyond wording, corrected five attributions carrying
-claims the sources do not make (the Mercury line's absence, the Sun line's
-absence, the fate line from Luna, Benham on "union" versus "affection", and
-"writer's fork"), one wrong work (Cheiro on Mars is in *Language of the Hand*),
-and one of Batch 2B's own replacement quotations, which came from a reader's
-letter printed in Cheiro's book rather than from Cheiro.
+Remediation Batch 3A, Learning Path & Curriculum Audit (2026-08-11), on branch
+`audit/curriculum-learning-path-3a`. Audit and planning only — **no curriculum
+change was implemented and none is authorized.** Nothing under `src/` was
+touched; the only files changed are the new audit report and this handoff pair.
 
-Validation: `npm run build` (93 pages), `npm run audit:all`,
-`npm run content-audit`, and `git diff --check` all passed. A final repository
-sweep reconciles against the verification log with zero unresolved
-Cheiro/Benham attributions.
+Deliverable: `docs/audits/CURRICULUM_AUDIT_2026-08.md`. It maps all 22 lessons,
+audits the learner journey from zero knowledge to a basic responsible reading,
+and proposes a six-module target curriculum (KEEP 8, MOVE 5, REVISE 8, MERGE 1,
+ADD 11).
 
-Durable record: `source-verification-log.md` (Batch 2C section) carries the
-per-file disposition. The new rule from this batch is in `DECISIONS.md`
-(2026-08-11): a quotation is verified only when the source is saying it about
-the feature the article attributes it to.
+Driving finding: the course teaches an observation order in
+`foundations/02-how-to-read-a-palm.mdx` and restates it at
+`advanced/04-how-to-give-a-reading.mdx:25-33` — mounts before lines — then
+contradicts it with a module sequence that runs Lines before Mounts. Supporting
+P0s: line-quality vocabulary used across nine lesson files and taught in none;
+thumb, fingers, sun line, and Mercury line missing while the capstone depends on
+them; no worked reading example anywhere.
 
-Known open item: 20 quotations attributed to Gettings, West, and Fincham remain
-unverifiable — the editions are in copyright. Flagged in `editorial-backlog.md`.
+The audit corrects four findings from `SITE_AUDIT_2026-08.md` §5 and overturns
+its claim that sequencing and prerequisites are correct. Evidence is in §20.
+
+## Blocking
+Eight decisions in §18 of the audit require user approval before any
+implementation batch starts. D3 (seven mounts or eight) touches paid-product
+copy. Recommended first batch is 3B — structure and labelling only, no new
+lesson prose.
 
 Start the next task by reading `../AGENTS.md`, then this file and `AI_HANDOFF.md`.
