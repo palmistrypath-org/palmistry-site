@@ -35,23 +35,23 @@ export const MODULES: ModuleConfig[] = [
 	},
 	{
 		slug: 'lines',
-		title: 'The Lines',
+		title: 'The Major Lines',
 		description:
-			'The four major lines — Heart, Head, Life, and Fate — and the key minor lines: Sun, Mercury, Girdle of Venus, and more.',
-		difficulty: 'Beginner – Intermediate',
+			'The four major lines — Heart, Head, Life, and Fate — plus the simian line: how to locate each one and read its length, depth, and course.',
+		difficulty: 'Beginner',
 	},
 	{
 		slug: 'mounts',
 		title: 'The Mounts',
 		description:
-			'The eight mounts of the palm, their traditional associations, and how to read relative prominence and flatness.',
-		difficulty: 'Intermediate',
+			'The seven planetary mounts across the eight mount regions of the palm, their traditional associations, and how to read relative prominence and flatness.',
+		difficulty: 'Beginner',
 	},
 	{
 		slug: 'advanced',
-		title: 'Advanced Interpretation',
+		title: 'Minor Lines & Synthesis',
 		description:
-			'Reading the hand as a whole, reconciling cross-tradition differences, and developing a consistent interpretive practice.',
-		difficulty: 'Advanced',
+			'The minor lines — Sun, Mercury, relationship lines, and the Girdle of Venus — and how to bring a whole hand together into one coherent reading.',
+		difficulty: 'Intermediate',
 	},
 ];

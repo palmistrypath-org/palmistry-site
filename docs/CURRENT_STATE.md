@@ -6,13 +6,22 @@ Last repo inventory: 2026-08-10. This page summarizes observed implementation; s
 Palmistry Path is a live-oriented static Astro learning site at `palmistrypath.com`, with a dark atmospheric brand, structured learning path, article library, glossary/search, lead magnet flow, and early paid-product/waitlist groundwork.
 
 ## Learning content
-The `lessons` collection is implemented across four modules:
-- Foundations
-- Lines
-- Mounts
-- Advanced
+The `lessons` collection is implemented across four modules, 22 lessons. Learner-facing titles and difficulty labels are set in `src/consts.ts`; route slugs differ from titles and are stable:
+
+| Slug | Title | Difficulty |
+|---|---|---|
+| `foundations` | Foundations | Beginner |
+| `lines` | The Major Lines | Beginner |
+| `mounts` | The Mounts | Beginner |
+| `advanced` | Minor Lines & Synthesis | Intermediate |
+
+Batch 3B (2026-08-11) corrected these labels: module 4 previously claimed to be "Advanced Interpretation" at Advanced difficulty while containing four intermediate lessons on minor lines and synthesis. Slugs and lesson URLs were not changed. The approved target is 25 core lessons; the three additions are not yet implemented.
 
 Observed lesson files cover foundational palmistry concepts, active/passive hand reading, hand shapes, major lines, individual line lessons, the mounts, minor lines, marriage/relationship lines, the Girdle of Venus, and how to give a reading.
+
+Lesson frontmatter no longer carries `prerequisites`; the field was decorative, restated `order`, and had no code consumers. Sequence is expressed by `order` alone.
+
+The published mount model is seven planetary mounts across eight mount regions, with Mars in two regions and the Plain of Mars a separate central region. See `DECISIONS.md` (2026-08-11).
 
 ## Blog/reference content
 `src/content/blog/` contains a substantial beginner-focused article library covering major/minor lines and variations, hand/finger/nail topics, traditions, myths, books, worksheets, and related search-oriented topics. Intermediate/advanced blog directories currently exist but the observed populated library is concentrated under beginner content.

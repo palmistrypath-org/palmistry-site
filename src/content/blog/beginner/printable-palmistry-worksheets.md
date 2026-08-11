@@ -66,7 +66,7 @@ A fuller printable worksheet pack is planned; for now, start with the free guide
 
 **What should a palmistry worksheet include?**
 
-A thorough worksheet should record: hand shape and skin texture, nails, finger proportions and type, thumb features, mount development for each of the eight mounts, the four major lines (heart, head, life, fate) with notes on location, length, depth, and any notable features, visible minor lines, and a space for an overall first impression. Critically, it should have parallel columns for both the active and passive hand — recording only one hand loses the most informative dimension of palmistry practice.
+A thorough worksheet should record: hand shape and skin texture, nails, finger proportions and type, thumb features, mount development for each of the eight mount regions, the four major lines (heart, head, life, fate) with notes on location, length, depth, and any notable features, visible minor lines, and a space for an overall first impression. Critically, it should have parallel columns for both the active and passive hand — recording only one hand loses the most informative dimension of palmistry practice.
 
 **Can beginners practise palmistry on their own hands?**
 

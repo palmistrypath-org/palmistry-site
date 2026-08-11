@@ -154,7 +154,7 @@ The mounts are one of the most spatially confusing topics for beginners because 
 
 **Key sections and fields:**
 - Labelled hand diagram: a blank palm outline with mount zones marked by number only (no names) — the learner writes the name beside each number as a recall exercise
-- For each of the 8 mounts (Jupiter, Saturn, Apollo, Mercury, Venus, Luna, Inner Mars, Outer Mars):
+- For each of the 8 mount regions (Jupiter, Saturn, Apollo, Mercury, Venus, Luna, Inner Mars, Outer Mars):
   - Mount name (filled in from the diagram exercise)
   - Development: flat / average / well-developed / overdeveloped (circle one)
   - Dominant feature of this area (1–2 lines)
@@ -177,7 +177,7 @@ The mounts are one of the most spatially confusing topics for beginners because 
 - /blog/beginner/mount-of-mars/
 
 **Gaps to resolve before building:**
-None. All 8 mounts have full articles.
+None. All 8 mount regions have full articles.
 
 ---
 

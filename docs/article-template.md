@@ -31,7 +31,7 @@ relatedLesson: "/learn/[module]/[lesson-slug]"   # omit if no lesson exists yet
 | Value | Use for |
 |---|---|
 | `major-lines` | Heart, head, life, fate, sun/Apollo lines |
-| `mounts` | All nine mounts |
+| `mounts` | Seven planetary mounts across eight mount regions |
 | `minor-lines` | Girdle of Venus, Mercury line, marriage lines, etc. |
 | `hand-shape` | Hand types, finger shapes, thumb, nails |
 | `techniques` | How-to articles, reading methodology |

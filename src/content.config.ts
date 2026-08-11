@@ -29,7 +29,6 @@ const lessons = defineCollection({
 			pubDate: z.coerce.date(),
 			difficulty: z.enum(['beginner', 'intermediate', 'advanced']),
 			duration: z.number(),
-			prerequisites: z.array(z.string()).optional(),
 			relatedArticle: z.string().optional(),
 			heroImage: z.optional(image()),
 		}),
