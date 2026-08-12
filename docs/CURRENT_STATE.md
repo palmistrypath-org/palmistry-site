@@ -6,7 +6,7 @@ Last repo inventory: 2026-08-10. This page summarizes observed implementation; s
 Palmistry Path is a live-oriented static Astro learning site at `palmistrypath.com`, with a dark atmospheric brand, structured learning path, article library, glossary/search, lead magnet flow, and early paid-product/waitlist groundwork.
 
 ## Learning content
-The `lessons` collection is implemented across four modules, 22 lessons. Learner-facing titles and difficulty labels are set in `src/consts.ts`; route slugs differ from titles and are stable:
+The `lessons` collection is implemented across four modules, 23 lessons. Learner-facing titles and difficulty labels are set in `src/consts.ts`; route slugs differ from titles and are stable:
 
 | Slug | Title | Difficulty |
 |---|---|---|
@@ -15,7 +15,11 @@ The `lessons` collection is implemented across four modules, 22 lessons. Learner
 | `mounts` | The Mounts | Beginner |
 | `advanced` | Minor Lines & Synthesis | Intermediate |
 
-Batch 3B (2026-08-11) corrected these labels: module 4 previously claimed to be "Advanced Interpretation" at Advanced difficulty while containing four intermediate lessons on minor lines and synthesis. Slugs and lesson URLs were not changed. The approved target is 25 core lessons; the three additions are not yet implemented.
+Batch 3B (2026-08-11) corrected these labels: module 4 previously claimed to be "Advanced Interpretation" at Advanced difficulty while containing four intermediate lessons on minor lines and synthesis. Slugs and lesson URLs were not changed.
+
+The approved target is 25 core lessons. **One of the three additions is implemented.** Batch 3C (2026-08-11) added *Line Quality and Markings* as the Lines module's first lesson, taking the curriculum from 22 to 23 and the Lines module to 7 lessons. The two remaining additions — The Thumb and the Fingers (3D) and Combining What You See (3F) — are not implemented.
+
+Lesson URLs derive from the content filename; display order derives from the `order` frontmatter. The two are independent, so a lesson can be inserted at any position by setting `order` alone, without renaming files or changing routes. Batch 3C used this: the new lesson has an unnumbered filename and `order: 1`, the existing Lines lessons increment to 2–7, and every existing lesson URL is unchanged. `order: 0` is not usable — `learn/[module]/index.astro` renders `order` directly as "Lesson N".
 
 Observed lesson files cover foundational palmistry concepts, active/passive hand reading, hand shapes, major lines, individual line lessons, the mounts, minor lines, marriage/relationship lines, the Girdle of Venus, and how to give a reading.
 
