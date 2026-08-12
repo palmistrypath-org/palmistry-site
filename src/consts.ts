@@ -37,7 +37,7 @@ export const MODULES: ModuleConfig[] = [
 		slug: 'lines',
 		title: 'The Major Lines',
 		description:
-			'The four major lines — Heart, Head, Life, and Fate — plus the simian line: how to locate each one and read its length, depth, and course.',
+			'The four major lines — Heart, Head, Life, and Fate — plus the simian line: the shared vocabulary of line quality, then how to locate each line and read its length, depth, and course.',
 		difficulty: 'Beginner',
 	},
 	{
