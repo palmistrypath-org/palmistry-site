@@ -28,6 +28,11 @@ const APPROVED_PLACEHOLDER_PAGES = [
 // The placeholder file path as it appears in image URLs (root-relative).
 const PLACEHOLDER_PATH = '/images/lessons/placeholder.jpg';
 
+// Homepage artwork is deliberately optimized and should stay comfortably
+// below this limit. Scope the guardrail to raster assets actually referenced by
+// the built homepage so unrelated downloads and source files are unaffected.
+const HOMEPAGE_RASTER_MAX_BYTES = 500 * 1024;
+
 // ---------------------------------------------------------------------------
 // Imports
 // ---------------------------------------------------------------------------
@@ -162,11 +167,12 @@ console.log(`Scanning ${htmlFiles.length} HTML files in dist/ for image referenc
 
 const missing = [];       // { file, url, distPath }
 const placeholders = [];  // { file, url }
+const oversizedHomepageRasters = []; // { url, bytes }
 const checked = new Set();
 
 for (const htmlFile of htmlFiles) {
   const content = readFileSync(htmlFile, 'utf8');
-  const relFile = htmlFile.replace(DIST, '');
+	const relFile = htmlFile.replace(DIST, '').replaceAll('\\', '/');
   const rawUrls = extractImageUrls(content);
 
   for (const raw of rawUrls) {
@@ -185,7 +191,20 @@ for (const htmlFile of htmlFiles) {
       missing.push({ file: relFile, url: raw, resolved: localPath });
     }
 
-    // 2. Check for placeholder.jpg usage
+		// 2. Keep referenced homepage artwork from regressing to raw multi-MB files.
+		if (
+			relFile === '/index.html' &&
+			localPath.startsWith('/images/home/') &&
+			/\.(?:avif|gif|jpe?g|png|webp)$/i.test(localPath) &&
+			existsSync(fsPath)
+		) {
+			const bytes = statSync(fsPath).size;
+			if (bytes > HOMEPAGE_RASTER_MAX_BYTES) {
+				oversizedHomepageRasters.push({ url: localPath, bytes });
+			}
+		}
+
+		// 3. Check for placeholder.jpg usage
     if (localPath.toLowerCase().endsWith('placeholder.jpg')) {
       const isApproved = APPROVED_PLACEHOLDER_PAGES.some(
         (approved) => relFile === approved || relFile.startsWith(approved)
@@ -245,6 +264,16 @@ if (placeholders.length === 0) {
   console.error(
     '  To approve a placeholder, add the page path to APPROVED_PLACEHOLDER_PAGES in scripts/audit-images.mjs'
   );
+}
+
+if (oversizedHomepageRasters.length === 0) {
+	console.log('✅  Referenced homepage raster images are within the 500 KiB limit.');
+} else {
+	exitCode = 1;
+	console.error(`\n❌  Found ${oversizedHomepageRasters.length} oversized homepage raster image(s):\n`);
+	for (const item of oversizedHomepageRasters) {
+		console.error(`  ${item.url} — ${(item.bytes / 1024).toFixed(1)} KiB (max 500 KiB)`);
+	}
 }
 
 process.exit(exitCode);
