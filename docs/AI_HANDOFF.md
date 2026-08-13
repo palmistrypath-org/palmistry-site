@@ -9,10 +9,63 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
-Current focus: none in implementation. `ACTIVE_TASK.md` is INACTIVE. Batch 3C is
-complete and pushed on `feat/curriculum-batch-3c-line-quality`, unmerged.
+Current focus: none in implementation. `ACTIVE_TASK.md` is INACTIVE. Batch 3D is
+complete and pushed on `feat/curriculum-batch-3d-hand-structure`, unmerged.
 
-Latest completed work: on 2026-08-11 Remediation Batch 3C added **Line Quality
+**The review model changed during Batch 3D.** Agents may implement, test, commit,
+and push on non-`main` task branches without a separate approval step; the branch
+is the review surface. **Merging to `main` still requires explicit user review.**
+The rule is in `AGENTS.md` under "Feature-branch review gate" and is mirrored in
+`CLAUDE.md`. Pause only for an unresolved product/editorial decision, insufficient
+source evidence for a material claim, substantial scope expansion, unsafe Git
+state, or a conflict with a durable decision.
+
+Latest completed work: on 2026-08-13 Remediation Batch 3D added **The Thumb and
+the Fingers** as the fourth Foundations lesson and retitled `foundations/03` to
+**Hand Shape, Texture, and Flexibility**. The core curriculum is now **24
+lessons**, not 23, and Foundations has **5**. `04-active-and-passive-hand.mdx`
+moved to `order: 5` and remains the module's closing lesson; its filename and URL
+are unchanged.
+
+**Two source findings from this batch are load-bearing.** First, the thumb-length
+landmark now taught is Benham's and only Benham's: the thumb held against the side
+of the hand reaches about the middle of the index finger's *base* segment, with
+his own caveat that a low or high setting confounds it. **Cheiro gives no landmark
+at all** — the "to or beyond the first joint" wording in
+`blog/beginner/thumb-meaning-palmistry.md:35` is in neither author. Second, the
+**will/logic phalange framework is Benham's, not Cheiro's**; Benham adopted the
+two names "for brevity", and Cheiro's second-phalange reading in *Palmistry for
+All* is tact and diplomacy, not logic. The blog article attributes it to both,
+which is wrong and remains open. Do not let that attribution drift into a lesson.
+
+**The will/reason framing is as erodible as the islands framing.** The lesson
+teaches proportion → historical reading → site boundary, states plainly that the
+labels are not measurements of intelligence, willpower, self-control, judgement,
+or character, and **installs no modern replacement meaning**. Preserve the
+asymmetry.
+
+**The two-input rule in the hand-shape lesson is load-bearing.** Texture,
+consistency, and whole-hand flexibility were added as a separate qualifying layer
+placed *after* the four types, and the lesson says three times that the elemental
+classification rests on two observations and only two. A future edit that lets
+texture or flexibility become a classification input breaks the system. The four
+flexibility/firmness ideas on the site are also deliberately distinct: whole-hand
+flexibility (`foundations/03`), thumb-tip flexibility (`foundations/
+thumb-and-fingers`), line quality (`lines/line-quality-and-markings`), and mount
+firmness (Mounts module).
+
+Deliberately out of the new lesson and not to be added back without a decision:
+the clubbed or "murderer's" thumb, fingertip and thumb-tip typologies, the three
+phalange zones, knotted-versus-smooth joints, per-finger meaning tables, and
+nails. No Indian or Chinese equivalence is claimed anywhere in it.
+
+One visual follow-up was carried out of the batch: **no figure was created**, and
+Foundations still has no designed image system per `visual-assets-roadmap.md`. If
+revisited, the plate to commission is a combined thumb/finger diagram in the Lines
+module's ornate register whose required discrimination is the thumb's two segments
+against the fingers' three.
+
+Preceding implementation: on 2026-08-11 Remediation Batch 3C added **Line Quality
 and Markings** as the first lesson of the Lines module. The core curriculum is
 now **23 lessons**, not 22, and the Lines module has **7**. The lesson teaches
 the observational vocabulary shared by every line — depth as a continuum,
@@ -63,10 +116,10 @@ separate), module 4 is now "Minor Lines & Synthesis" at Intermediate with the
 `advanced` slug and all lesson URLs unchanged, and the decorative `prerequisites`
 field is gone from all 22 lessons and the schema.
 
-**Not implemented and still pending:** two of the three new lessons (thumb and
-fingers; combining what you see), Practice and Checkpoint components, the second
-worked reading, and the simian lesson's module move (Batch 3E). Do not treat the
-25-lesson target as delivered — the curriculum is at 23 lessons.
+**Not implemented and still pending:** the last of the three new lessons
+(combining what you see), Practice and Checkpoint components, the second worked
+reading, and the simian lesson's module move (Batch 3E). Do not treat the
+25-lesson target as delivered — the curriculum is at 24 lessons.
 
 Preceding work: on 2026-08-11 Remediation Batch 3A, the Learning Path &
 Curriculum Audit, produced `docs/audits/CURRICULUM_AUDIT_2026-08.md` on branch
@@ -92,10 +145,10 @@ new lessons, and an independent competency test demoted the sun line and Mercury
 line from P0 to P1 (the remedy is revising `advanced/01` so it teaches them, not
 adding lessons).
 
-The audit listed four P0s. **The simian source defect is closed by Batch 3B, and
-the line-quality defect is closed by Batch 3C.** Two remain open: the thumb and
-the fingers are absent, and there is no worked example of a complete reading.
-Each is a new lesson and belongs to a later batch.
+The audit listed four P0s. **Three are closed** — the simian source defect by
+Batch 3B, the line-quality defect by 3C, and the absent thumb/fingers material by
+3D. One remains open: there is no worked example of a complete reading. It is a
+new lesson and belongs to Batch 3F.
 
 The eight §17 decisions were settled by the user before Batch 3B. The durable
 ones are now recorded in `DECISIONS.md` (2026-08-11): the four-module
@@ -122,18 +175,20 @@ Known follow-up: after explicit approval during Batch 2A, `npm audit --omit=dev`
 Key current implementation facts are summarized in `CURRENT_STATE.md` and `ARCHITECTURE.md`; verify source before relying on them for a change.
 
 ## Immediate next action
-Await the user's review and merge of `feat/curriculum-batch-3c-line-quality`, or
-their next Palmistry Path objective. Do not merge it unprompted.
+Await the user's review and merge of `feat/curriculum-batch-3c-line-quality` and
+`feat/curriculum-batch-3d-hand-structure`, or their next Palmistry Path
+objective. **Do not merge either unprompted** — both are pushed and unmerged, and
+3D builds on 3C.
 
-The next batch is **3D: The Thumb and the Fingers**, plus folding texture and
-flexibility into the retitled hand-shape lesson. The remaining phases: **3E** is
-the module 4 rebuild — the simian lesson's module move (take the generic
-chained/faint cleanup at `lines/06:65` with it) and revising `advanced/01` so it
-teaches the sun and Mercury lines; **3F** is synthesis and practice — Combining
-What You See, the capstone revision, `<Practice>`, and module `<Checkpoint>`s. Do
-not pull later batches forward and do not reorder modules.
+The remaining phases: **3E** is the module 4 rebuild — the simian lesson's module
+move (take the generic chained/faint cleanup at `lines/06:65` with it) and
+revising `advanced/01` so it teaches the sun and Mercury lines; **3F** is
+synthesis and practice — Combining What You See, the capstone revision,
+`<Practice>`, and module `<Checkpoint>`s. Do not pull later batches forward and do
+not reorder modules.
 
-New-lesson work runs under the `AGENTS.md` approval gate: pre-draft report, write
-to file, user approval, then validation and commit. Start from a clean context if
-possible (`/clear`), reconstructing from Git plus targeted canonical docs rather
-than chat history.
+New-lesson work runs under the `AGENTS.md` article workflow and feature-branch
+review gate: pre-draft report, write to file, self-review, validation, then commit
+and push to the task branch. Merging still needs the user. Start from a clean
+context if possible (`/clear`), reconstructing from Git plus targeted canonical
+docs rather than chat history.

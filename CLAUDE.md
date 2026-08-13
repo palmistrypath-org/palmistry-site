@@ -29,7 +29,7 @@ Escalate when uncertainty or downstream risk justifies it. Do not push product j
 - Compaction should preserve facts, not historical exploration.
 
 ## Editorial workflow
-For new or materially rewritten articles, preserve the approval gate in `AGENTS.md`: concise pre-draft report → write to file → user approval → validation/commit/push. Never print the entire article to chat unless the user explicitly asks.
+For new or materially rewritten articles, follow the article workflow in `AGENTS.md`: concise pre-draft report → write to file → self-review → validation → commit/push to the task branch. The feature branch is the review surface; **merging to `main` still requires explicit user approval.** Never print the entire article to chat unless the user explicitly asks.
 
 Primary established Western references include Cheiro (1916), Benham (1900), Gettings (1965), West (1998), and Fincham (2005). Use targeted research only when needed; never invent meanings or attributions. For detailed voice, structure, tradition handling, and content rules, read only the relevant sections of `docs/editorial-style-guide.md` and `docs/article-template.md`.
 

@@ -46,16 +46,27 @@ Do not recursively read `docs/` or reread unchanged context “just in case.” 
 - Historical gender conventions may be described accurately; practical instruction defaults to active/passive or dominant/non-dominant hand framing unless the historical distinction materially changes the interpretation.
 - For article/lesson work, the detailed editorial guides in `docs/` are controlling.
 
-## Article approval workflow
-For a new or materially rewritten article unless the user explicitly overrides this workflow:
+## Feature-branch review gate
+The task branch is the review surface. Main is the gate.
+
+- Agents may implement, test, commit, and push work on non-`main` task branches without a separate user approval step.
+- **Pushing a feature branch is not approval to merge.** Never merge to `main`; it stays protected by independent user/ChatGPT review.
+- Pause mid-task only for: an unresolved product/editorial decision, source evidence insufficient for a material claim, scope that would need to expand substantially, an unsafe or unresolved Git state, or a conflict with an approved durable decision. Minor wording choices and routine source-safe editing are not pause conditions.
+- For source-heavy editorial work a pre-draft/source plan is still appropriate, but approve related items as one work packet rather than one approval per file.
+- Prefer coherent work waves of 2–3 substantial objectives. Keep independently reviewable work in separate commits or branches.
+- Parallel agents must use non-overlapping files or isolated worktrees/branches.
+- Several completed branches/PRs may be reviewed together before merge.
+
+## Article workflow
+For a new or materially rewritten article, unless the user explicitly overrides this workflow:
 1. Give a concise pre-draft report only: intended sources, genuine editorial flags, target word count, and preview path/URL when known.
 2. Write the article directly to the file; do not dump the full article into chat.
-3. Do not commit/push the article until the user explicitly approves it.
-4. After approval, run the relevant validation, update durable docs if needed, then commit/push.
-5. Recommend `/clear` before starting the next article.
+3. Self-review against the editorial guardrails, run the relevant validation, update durable docs, then commit and push to the task branch under the feature-branch review gate above.
+4. Recommend `/clear` before starting the next article.
 
 ## Git safety
 - Check status/branch before editing.
+- Never merge a task branch into `main` without explicit user approval.
 - Never overwrite another agent’s uncommitted work.
 - Do not use destructive Git operations just to clean the tree.
 - Keep commits small, coherent, and reviewable; do not mix unrelated refactoring into a requested change.
@@ -115,7 +126,7 @@ For a meaningful approved change:
 8. Update `ARCHITECTURE.md` if structure materially changed.
 9. Update `AI_HANDOFF.md` with unresolved risks and immediate continuation context.
 10. Update/mark `ACTIVE_TASK.md` inactive.
-11. Commit coherent code/content + docs together when the task’s approval workflow permits it.
+11. Commit coherent code/content + docs together and push the task branch. Do not merge.
 12. Report what changed, tests run, remaining risks, Git status, commit hash, and push status.
 
 Documentation maintenance is part of done. If no canonical docs were affected, report `Wiki impact: none`.

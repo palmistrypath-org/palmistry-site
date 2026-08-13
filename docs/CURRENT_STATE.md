@@ -6,7 +6,7 @@ Last repo inventory: 2026-08-10. This page summarizes observed implementation; s
 Palmistry Path is a live-oriented static Astro learning site at `palmistrypath.com`, with a dark atmospheric brand, structured learning path, article library, glossary/search, lead magnet flow, and early paid-product/waitlist groundwork.
 
 ## Learning content
-The `lessons` collection is implemented across four modules, 23 lessons. Learner-facing titles and difficulty labels are set in `src/consts.ts`; route slugs differ from titles and are stable:
+The `lessons` collection is implemented across four modules, 24 lessons. Module titles and difficulty labels are set in `src/consts.ts`; lesson titles come from frontmatter. Route slugs differ from titles and are stable:
 
 | Slug | Title | Difficulty |
 |---|---|---|
@@ -17,9 +17,11 @@ The `lessons` collection is implemented across four modules, 23 lessons. Learner
 
 Batch 3B (2026-08-11) corrected these labels: module 4 previously claimed to be "Advanced Interpretation" at Advanced difficulty while containing four intermediate lessons on minor lines and synthesis. Slugs and lesson URLs were not changed.
 
-The approved target is 25 core lessons. **One of the three additions is implemented.** Batch 3C (2026-08-11) added *Line Quality and Markings* as the Lines module's first lesson, taking the curriculum from 22 to 23 and the Lines module to 7 lessons. The two remaining additions — The Thumb and the Fingers (3D) and Combining What You See (3F) — are not implemented.
+The approved target is 25 core lessons. **Two of the three additions are implemented.** Batch 3C (2026-08-11) added *Line Quality and Markings* as the Lines module's first lesson, taking the curriculum from 22 to 23 and the Lines module to 7. Batch 3D (2026-08-13) added *The Thumb and the Fingers* as the fourth Foundations lesson, taking the curriculum to 24 and Foundations to 5. The remaining addition — Combining What You See (3F) — is not implemented.
 
-Lesson URLs derive from the content filename; display order derives from the `order` frontmatter. The two are independent, so a lesson can be inserted at any position by setting `order` alone, without renaming files or changing routes. Batch 3C used this: the new lesson has an unnumbered filename and `order: 1`, the existing Lines lessons increment to 2–7, and every existing lesson URL is unchanged. `order: 0` is not usable — `learn/[module]/index.astro` renders `order` directly as "Lesson N".
+Foundations now runs: What Palmistry Is (and Isn't) · How to Read a Palm · Hand Shape, Texture, and Flexibility · The Thumb and the Fingers · Your Active and Passive Hand. The active/passive lesson remains the module's closing transition from single-hand to both-hand work; its file is still `04-active-and-passive-hand.mdx` at `order: 5`.
+
+Lesson URLs derive from the content filename; display order derives from the `order` frontmatter. The two are independent, so a lesson can be inserted at any position by setting `order` alone, without renaming files or changing routes. Batches 3C and 3D both used this: each new lesson has an unnumbered filename, neighbouring lessons re-ordered by frontmatter alone, and every existing lesson URL is unchanged. `order: 0` is not usable — `learn/[module]/index.astro` renders `order` directly as "Lesson N".
 
 Observed lesson files cover foundational palmistry concepts, active/passive hand reading, hand shapes, major lines, individual line lessons, the mounts, minor lines, marriage/relationship lines, the Girdle of Venus, and how to give a reading.
 
@@ -37,7 +39,9 @@ Historical claims and site policy are kept separate: content reports the predict
 
 Quotation integrity is settled for the public-domain sources. Batch 2C (2026-08-11) re-inventoried every quotation-marked passage in a paragraph naming Cheiro or Benham — 245 spans, of which 162 were genuine attributions — and matched each against *Palmistry for All*, three scans of *Cheiro's Language of the Hand*, and two of Benham's *Laws of Scientific Hand Reading*. 55 were already exact and 107 were corrected. **No quotation-marked Cheiro or Benham attribution remains that the verification log classifies as unverified.** Where quotation marks now appear against those two authors, the wording is theirs.
 
-Still open: 20 quotations attributed to Gettings (1965), West (1998), and Fincham (2005) cannot be checked, because those editions are in copyright and not text-searchable. They are unchanged and flagged in `editorial-backlog.md`.
+Still open: 20 quotations attributed to Gettings (1965), West (1998), and Fincham (2005) cannot be checked, because those editions are in copyright and not text-searchable. They are unchanged and flagged in `editorial-backlog.md`. Batch 3D added none.
+
+Batch 3D's primary-source pass on the thumb surfaced three defects in `blog/beginner/thumb-meaning-palmistry.md`, none of them fixed in that batch and all open: it attributes the will/logic phalange framework to Cheiro as well as Benham, when the framework is Benham's and Cheiro's second-phalange reading in *Palmistry for All* is tact and diplomacy rather than logic; it states a thumb-length threshold ("to or beyond the first joint") found in neither author and inconsistent with Benham's actual landmark; and it still carries the unresolved Gettings quotation. The lessons attribute the framework to Benham alone.
 
 ## Discovery/navigation
 Implemented:
