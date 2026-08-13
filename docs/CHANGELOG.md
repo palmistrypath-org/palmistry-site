@@ -2,6 +2,14 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-13 - Technical Remediation Wave merged to main
+Implemented on a parallel branch and merged to `main` ahead of the curriculum wave. Recorded here for canonical state only — **`docs/audits/TECHNICAL_REMEDIATION_WAVE_2026-08.md` remains the detailed source of truth** and is not duplicated.
+- Added a **real 404 recovery page** (`src/pages/404.astro`), emitted as `dist/404.html`, carrying `noindex, follow` and held out of the sitemap and Pagefind via `/404/` in `NOINDEX_PATHS`.
+- **Expanded the source-level content audit** (`scripts/audit-content.mjs`) to cover lessons as well as blog posts and to validate content relationship routes, rejecting non-local relationships. It now reports both collections — currently 53 blog posts and 25 lessons — with non-blocking legacy warnings for over-length descriptions and blank optional `relatedArticle` values.
+- **Optimized homepage image delivery** to WebP, taking the five homepage rasters from about 10.5 MB to about 266 KB in total, a ~97.5% reduction (~10.2 MB absolute).
+- Added a **narrow homepage raster-size guardrail** to `scripts/audit-images.mjs`, asserting referenced homepage rasters stay under 500 KiB.
+- Closes the implementation work for two P2 findings in `TECHNICAL_AUDIT_2026-08.md`: blog-heavy content integrity checks, and heavy unoptimized public assets (homepage portion only — public PDFs were out of scope). Live host 404 behaviour remains unverified until deployment.
+
 ## 2026-08-13 - Curriculum Wave 3E + 3F the 25-lesson core is complete
 - **The approved 25-lesson core curriculum is complete.** Module totals are now **Foundations 5, Lines 6, Mounts 8, Minor Lines & Synthesis 6**. Remaining curriculum work in `ROADMAP.md` is P2-or-later polish and is not part of the core.
 - **`advanced/01` now genuinely teaches the Sun and Mercury lines**, and is retitled **The Minor Lines: Sun and Mercury** (route unchanged, duration 7→13). It had named four minor lines and promised each "its own full lesson", but the Sun and Mercury lessons did not exist and were never going to — an independent competency test had already demoted both from P0 to P1, with the remedy being to revise this lesson rather than add two. Relationship lines and the Girdle of Venus are now brief forward-pointing orientation, which is honest because their own lessons follow immediately. **No separate Sun or Mercury lesson was created.**

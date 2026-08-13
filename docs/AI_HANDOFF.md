@@ -31,7 +31,12 @@ noindex path) and `scripts/audit-schema.mjs` (noindex pages exempted from
 required-type checks) — so those are the reconciliation candidates if the parallel
 branch touched indexability or the audit scripts.
 
-**Three things from this wave are load-bearing.** First, `advanced/01` now teaches
+**The wave went through a consolidated review correction pass on 2026-08-13**, after the technical wave merged. Current `origin/main` is merged into the branch. Two error classes were corrected, and both are worth watching for in any future lesson:
+
+1. **Epistemic overclaiming in synthesis prose.** The first draft of `combining-what-you-see.mdx` described converging features as "independent evidence" that could be trusted "with real confidence", and concluded that traits were "real". Corroboration inside a single interpretive tradition is not evidence about a person; repetition earns a theme prominence in the reading, not truth. Recorded in `DECISIONS.md` (2026-08-13) with the phrasing to avoid.
+2. **Inventing replacement meanings, and sanitising history.** Declining a strong historical claim does not license installing a gentler universal one — absent sun lines and absent fate lines are now simply recorded as absent. And palmistry's predictive history must not be edited down to match site policy: the capstone had claimed Benham addressed the short-life-line misconception, when Benham in fact divided the life line into periods and read a tasselled ending as death at the indicated age. His caution was about practice, not a rejection of the reading. The limits this course observes are **its own**, justified by unproven reliability, not by the tradition's restraint.
+
+**Three further things from this wave are load-bearing.** First, `advanced/01` now teaches
 the Sun and Mercury lines and is titled *The Minor Lines: Sun and Mercury*; it must
 not drift back toward promising either line a lesson of its own, because neither
 will ever have one. Second, on the Mercury line **Cheiro and Benham are not in
