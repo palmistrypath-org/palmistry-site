@@ -11,6 +11,8 @@ The durable sequence remains:
 4. Expand monetization deliberately without weakening trust.
 
 ## Recently completed approved work
+2026-08-13: Curriculum Wave 3E + 3F **completed the approved 25-lesson core curriculum.** Totals are Foundations 5, Lines 6, Mounts 8, Minor Lines & Synthesis 6. 3E rebuilt Module 4 — `advanced/01` now genuinely teaches the Sun and Mercury lines instead of promising them lessons that were never going to exist, and the Simian lesson moved from Lines to Minor Lines & Synthesis, the one planned existing-lesson URL change, with the old URL preserved by a `noindex` canonical redirect stub. 3F added *Combining What You See*, closing the curriculum audit's last open P0, and revised *How to Give a Reading* to shed the synthesis burden and foreground ethics. It also established the practice layer: a `Practice` component on all 25 lessons and four module-end `Checkpoint`s with native `<details>` answers, all purely presentational with no accounts, progress tracking, scoring or backend. **The 25-lesson core target is no longer outstanding work.** Remaining curriculum items below are P2-or-later polish.
+
 2026-08-13: Remediation Batch 3D added *The Thumb and the Fingers* as the fourth Foundations lesson and retitled the hand-shape lesson *Hand Shape, Texture, and Flexibility*, folding skin texture, consistency, and whole-hand flexibility into it as a separate qualifying layer. The core curriculum is now 24 lessons and Foundations has 5. All existing lesson URLs were preserved. One of the approved 25-lesson additions remains outstanding: *Combining What You See* (3F). The batch also adopted the feature-branch review gate recorded in `AGENTS.md`.
 
 2026-08-11: Remediation Batch 3C added *Line Quality and Markings* as the first lesson of the Lines module, taking the core curriculum to 23 lessons and the Lines module to 7. The line-quality vocabulary previously re-derived in four separate lesson files is now taught once and applied thereafter. All existing lesson URLs were preserved. Two of the approved 25-lesson additions remain outstanding.
@@ -35,7 +37,9 @@ These contain detailed candidate work and historical planning. They are not auto
 - `mount-diagram-creative-briefs.md` - mount illustration briefs
 
 ## Long-term directions, not approved tasks
-Potential future features include interactive hand maps, observation/practice exercises, glossary cross-linking, reading journals, progress tracking, paid guides/courses, and possible membership. Do not build these merely because they appear here or in older planning docs.
+Potential future features include interactive hand maps, glossary cross-linking, reading journals, progress tracking, paid guides/courses, and possible membership. Do not build these merely because they appear here or in older planning docs.
+
+Two entries need qualifying after Wave 3F. **Observation/practice exercises are now built** as a static presentational layer — a `Practice` block on all 25 lessons and four module-end `Checkpoint`s — so that item is delivered rather than pending. **Progress tracking remains deliberately unbuilt**, and the practice layer was designed to avoid it: no state, no persistence, no localStorage, no score, no pass/fail, no accounts. Printable observation worksheets and a PDF pipeline were considered as a later layer and explicitly deferred; a systematic outbound "go deeper" link convention across lessons is also still deferred, with `relatedArticle` remaining sufficient.
 
 ## Roadmap maintenance
 When the user chooses a next milestone, record it here at a high level and use `ACTIVE_TASK.md` for the immediate execution state. Detailed domain plans may remain in their specialized docs.

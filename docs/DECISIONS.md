@@ -2,6 +2,20 @@
 
 Only durable decisions belong here. Newest entries first.
 
+## 2026-08-13 - The practice layer is presentational and stateless, permanently
+**Decision:** The curriculum's practice and checkpoint layer is **purely presentational**. `Practice.astro`, `Checkpoint.astro` and `CheckpointItem.astro` carry no JavaScript, no state, no persistence, no localStorage, no backend, no accounts, no score, no pass/fail and no progress tracking. Checkpoint answers are revealed by native `<details>`/`<summary>`, which is keyboard-accessible without any of that. Checkpoints are self-checks, not assessments, and each states plainly that a learner may continue and revisit a lesson with no penalty. **Nothing in the curriculum credentials a learner.**
+
+**Why:** A learning site accretes this kind of machinery by default — a score here, a "lessons completed" badge there — and each addition is individually small. Two things make it the wrong direction here. Palmistry is an interpretive tradition, not a validated body of knowledge, so scoring a learner's answers would imply a correctness the subject cannot support, and a completion credential would imply a qualification that does not exist. Separately, the moment any of it persists state, the site acquires accounts, storage, and a privacy surface it currently does not have. The static, stateless version delivers the pedagogical value — a place to test your own understanding — at none of that cost.
+
+**Consequences:** Applies to all 25 core lessons and to any future lesson. A request for quiz scoring, streaks, completion tracking, badges, certificates, or saved answers is a change to this decision and needs an explicit reversal, not an incremental feature. `ROADMAP.md` keeps progress tracking listed as a long-term direction, and it remains unbuilt on purpose. If a future paid product needs progress state, scope it as its own system rather than by quietly adding persistence to these components.
+
+## 2026-08-13 - Lesson `order` uniqueness is not enforced by the build
+**Decision:** Treat per-module `order` uniqueness and sequentiality as a **manual check**, performed whenever a lesson is inserted, moved, or renumbered. Do not assume a green build means the ordering is sound.
+
+**Why:** Lesson URLs derive from the content filename while display position derives from the `order` frontmatter, which is what lets lessons be inserted without renaming files or breaking routes. The cost is that `getStaticPaths` in `learn/[module]/[lesson].astro` sorts by `order` and never checks it: duplicate values sort into an arbitrary stable position and render as two lessons bearing the same number, with no build error, no schema failure, and no audit failure. Wave 3E introduced exactly this collision — the moved Simian lesson and the capstone both sat at `order: 4` — and a full green `build` + `audit:all` + `content-audit` run did not surface it.
+
+**Consequences:** Any batch that touches lesson ordering should verify module counts and `order` sequences explicitly before committing. If this recurs, the durable fix is a check in the audit suite rather than more careful reading.
+
 ## 2026-08-11 - Seven planetary mounts across eight mount regions
 **Decision:** The site publishes one mount model. There are **seven planetary mounts** — Jupiter, Saturn, Apollo/Sun, Mercury, Venus, Luna/Moon, and Mars — occupying **eight physical mount regions**, because Mars appears in two distinct areas of the palm (Lower/Inner and Upper/Outer). The **Plain of Mars** is a separate central region between them: read in its own right, but not a raised planetary mount, not an eighth planetary type, and not a ninth mount. The preferred first explanation is "seven planetary mounts occupy eight mount regions, because Mars appears in two distinct areas of the palm"; concise equivalents are fine where space is tight. An unqualified "the eight mounts" is not acceptable where it implies eight planetary types — use "eight mount regions" when the count refers to physical areas.
 

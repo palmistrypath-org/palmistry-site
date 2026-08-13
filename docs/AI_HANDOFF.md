@@ -9,8 +9,65 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
-Current focus: none in implementation. `ACTIVE_TASK.md` is INACTIVE. Batch 3D is
-complete and pushed on `feat/curriculum-batch-3d-hand-structure`, unmerged.
+Current focus: none in implementation. Curriculum Wave 3E + 3F is complete and
+pushed on `feat/curriculum-wave-3e-3f`, unmerged. Batch 3D is also complete and
+pushed on `feat/curriculum-batch-3d-hand-structure`, unmerged. Several branches
+may be reviewed together before merge.
+
+**The 25-lesson core curriculum is complete.** Do not treat it as outstanding
+work. Totals are Foundations 5, Lines 6, Mounts 8, Minor Lines & Synthesis 6.
+Remaining curriculum items in `ROADMAP.md` are P2-or-later polish. **All four of
+the curriculum audit's P0s are now closed** — the simian source defect (3B), the
+line-quality defect (3C), the absent thumb/fingers material (3D), and the missing
+worked example of a complete reading (3F).
+
+Wave 3E + 3F was implemented in an isolated worktree while a Codex agent worked
+concurrently in the canonical checkout. The wave deliberately did not touch
+`astro.config.mjs`, `src/pages/404.astro`, `src/pages/index.astro`,
+`public/images/home/**`, `scripts/audit-content.mjs`, `scripts/audit-images.mjs`,
+or `docs/audits/TECHNICAL_REMEDIATION_WAVE_2026-08.md`. It did modify two shared
+technical files that were not on that list — `src/indexability.mjs` (one added
+noindex path) and `scripts/audit-schema.mjs` (noindex pages exempted from
+required-type checks) — so those are the reconciliation candidates if the parallel
+branch touched indexability or the audit scripts.
+
+**Three things from this wave are load-bearing.** First, `advanced/01` now teaches
+the Sun and Mercury lines and is titled *The Minor Lines: Sun and Mercury*; it must
+not drift back toward promising either line a lesson of its own, because neither
+will ever have one. Second, on the Mercury line **Cheiro and Benham are not in
+agreement** — Cheiro reads the line's absence as actively favourable, Benham does
+not read absence at all — and the historical health claims, including Cheiro dating
+death from where the life and health lines meet, are reported unsanitised with the
+site's refusal to read a crease for health stated as a separate position. The
+rejected medical reading was deliberately **not** replaced with an invented
+symbolic one; do not "fix" that gap. Third, on the Sun line Cheiro's severe reading
+of absence is his and is not softened, the gentler reading is labelled as ours, and
+**Benham must not be credited with reassurance about absence he never gave** — an
+error a previous batch already had to correct once.
+
+**The Simian lesson's URL moved**, the one planned change in the target
+curriculum. Canonical is `/learn/advanced/simian-line`. The old
+`/learn/lines/06-simian-line` still resolves through a static stub at
+`src/pages/learn/lines/06-simian-line.astro`, which outranks the dynamic lesson
+route and carries the canonical to the new URL, `noindex, follow`, and a
+Pagefind-ignored `<main id="main-content">`. Do not delete that stub, and do not
+add lesson JSON-LD to it. `npm run audit:indexability` asserts its behaviour on
+every build, so a regression will fail the audit rather than pass silently.
+
+**Watch for one structural trap.** Nothing in the build enforces unique or
+sequential `order` values within a module: `getStaticPaths` sorts by `order` and
+tolerates duplicates, so a collision renders two lessons with the same number and
+still produces a fully green `build`, `audit:all` and `content-audit`. This wave
+hit it and caught it only by checking ordering explicitly. Verify module counts and
+`order` sequences by hand whenever you insert, move, or renumber a lesson. Recorded
+in `DECISIONS.md` (2026-08-13).
+
+**The practice layer is stateless on purpose.** All 25 lessons carry a `Practice`
+block and four module-end `Checkpoint`s exist, with answers behind native
+`<details>`. There is no JavaScript, state, persistence, localStorage, backend,
+account, score, or pass/fail anywhere in them, and nothing credentials a learner.
+Adding scoring, streaks, completion tracking or saved answers reverses a durable
+decision — see `DECISIONS.md` (2026-08-13) — rather than extending a feature.
 
 **The review model changed during Batch 3D.** Agents may implement, test, commit,
 and push on non-`main` task branches without a separate approval step; the branch
@@ -101,7 +158,10 @@ plates and a plain schematic would introduce a conflicting visual register as
 the module's first figure. The new lesson ships with no figures and teaches the
 island form by prose contrast against fork, support line, and break. And the
 **generic chained/faint duplication at `lines/06-simian-line.mdx:65` remains**,
-since 3C was explicitly order-only for that file; fold it into 3E.
+since 3C was explicitly order-only for that file; fold it into 3E. *(Closed by
+Wave 3E: the duplication is gone, and the lesson — now at
+`advanced/simian-line.mdx` — applies the Line Quality vocabulary and links to the
+lesson that owns it.)*
 
 Preceding implementation: on 2026-08-11 Remediation Batch 3B implemented the first
 tranche of the approved curriculum decisions — truthful labelling, the mount
@@ -116,10 +176,10 @@ separate), module 4 is now "Minor Lines & Synthesis" at Intermediate with the
 `advanced` slug and all lesson URLs unchanged, and the decorative `prerequisites`
 field is gone from all 22 lessons and the schema.
 
-**Not implemented and still pending:** the last of the three new lessons
-(combining what you see), Practice and Checkpoint components, the second worked
-reading, and the simian lesson's module move (Batch 3E). Do not treat the
-25-lesson target as delivered — the curriculum is at 24 lessons.
+Everything that block listed as pending — the combining-what-you-see lesson, the
+Practice and Checkpoint components, the worked reading, and the simian module move
+— **shipped in Wave 3E + 3F on 2026-08-13.** The curriculum is at 25 lessons and
+the core target is complete. See the continuation context at the top of this file.
 
 Preceding work: on 2026-08-11 Remediation Batch 3A, the Learning Path &
 Curriculum Audit, produced `docs/audits/CURRICULUM_AUDIT_2026-08.md` on branch
@@ -145,10 +205,12 @@ new lessons, and an independent competency test demoted the sun line and Mercury
 line from P0 to P1 (the remedy is revising `advanced/01` so it teaches them, not
 adding lessons).
 
-The audit listed four P0s. **Three are closed** — the simian source defect by
-Batch 3B, the line-quality defect by 3C, and the absent thumb/fingers material by
-3D. One remains open: there is no worked example of a complete reading. It is a
-new lesson and belongs to Batch 3F.
+The audit listed four P0s. **All four are now closed** — the simian source defect
+by Batch 3B, the line-quality defect by 3C, the absent thumb/fingers material by
+3D, and the missing worked example of a complete reading by 3F, which added
+*Combining What You See* with one worked reading on a described hand. The audit's
+sun-line/Mercury-line P1 is also closed, by the `advanced/01` revision in 3E
+rather than by new lessons, exactly as the competency test recommended.
 
 The eight §17 decisions were settled by the user before Batch 3B. The durable
 ones are now recorded in `DECISIONS.md` (2026-08-11): the four-module
