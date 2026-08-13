@@ -9,10 +9,48 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
-Current focus: none in implementation. `ACTIVE_TASK.md` is INACTIVE. Batch 3B is
-complete and pushed on `fix/curriculum-batch-3b`, unmerged.
+Current focus: none in implementation. `ACTIVE_TASK.md` is INACTIVE. Batch 3C is
+complete and pushed on `feat/curriculum-batch-3c-line-quality`, unmerged.
 
-Latest completed work: on 2026-08-11 Remediation Batch 3B implemented the first
+Latest completed work: on 2026-08-11 Remediation Batch 3C added **Line Quality
+and Markings** as the first lesson of the Lines module. The core curriculum is
+now **23 lessons**, not 22, and the Lines module has **7**. The lesson teaches
+the observational vocabulary shared by every line — depth as a continuum,
+clarity as a separate axis, relative rather than absolute depth,
+clean/chained/broken continuity, clean versus overlapping breaks, forks versus
+branches, islands, and parallel/support lines — and its competency is
+description before interpretation. The line-quality vocabulary that four lesson
+files previously re-derived is now taught once; the revisions to `lines/01`–`05`
+were subtractive (30 insertions against 36 deletions).
+
+**The insertion mechanism matters for every future lesson.** Lesson URLs derive
+from the content filename; display order derives from the `order` frontmatter.
+They are independent, so a lesson can be inserted anywhere by setting `order`
+alone — no renames, no route changes. Batch 3C used an unnumbered filename with
+`order: 1` and incremented `lines/01`–`06` to 2–7, leaving all 45 inbound links
+to existing Lines routes intact. Do not renumber filenames to reorder lessons.
+`order: 0` is unusable: `learn/[module]/index.astro` renders `order` as "Lesson N".
+
+**The islands framing is load-bearing and easy to erode.** The lesson teaches
+form → verified historical reading → site policy. Cheiro (1916) and Benham
+(1900) are quoted exactly and their health framing is not softened. Palmistry
+Path's boundary is stated separately as a modern position resting on evidence —
+and **no invented modern universal meaning replaces the historical one.** There
+is no comparably sourced modern symbolic reading for islands; the lesson says so
+and substitutes method rather than meaning. Preserve that asymmetry. A future
+edit that quietly supplies "islands mean divided energy" as though it were
+sourced would reintroduce exactly the error the batch avoided.
+
+Two follow-ups were carried out of the batch deliberately. The **island diagram
+was not created** — the repo has none, and a hand-built schematic SVG was
+assessed and declined because the Lines module's figures are ornate generated
+plates and a plain schematic would introduce a conflicting visual register as
+the module's first figure. The new lesson ships with no figures and teaches the
+island form by prose contrast against fork, support line, and break. And the
+**generic chained/faint duplication at `lines/06-simian-line.mdx:65` remains**,
+since 3C was explicitly order-only for that file; fold it into 3E.
+
+Preceding implementation: on 2026-08-11 Remediation Batch 3B implemented the first
 tranche of the approved curriculum decisions — truthful labelling, the mount
 model, and the simian correction. Two implementation commits plus one
 documentation/state commit, and a pre-merge review correction. The simian source
@@ -25,11 +63,10 @@ separate), module 4 is now "Minor Lines & Synthesis" at Intermediate with the
 `advanced` slug and all lesson URLs unchanged, and the decorative `prerequisites`
 field is gone from all 22 lessons and the schema.
 
-**Not implemented and still pending:** the three new lessons (thumb and fingers,
-line quality and markings, combining what you see), Practice and Checkpoint
-components, the second worked reading, and the simian lesson's module move
-(Batch 3E). Do not treat the 25-lesson target as delivered — the curriculum is
-still 22 lessons.
+**Not implemented and still pending:** two of the three new lessons (thumb and
+fingers; combining what you see), Practice and Checkpoint components, the second
+worked reading, and the simian lesson's module move (Batch 3E). Do not treat the
+25-lesson target as delivered — the curriculum is at 23 lessons.
 
 Preceding work: on 2026-08-11 Remediation Batch 3A, the Learning Path &
 Curriculum Audit, produced `docs/audits/CURRICULUM_AUDIT_2026-08.md` on branch
@@ -55,10 +92,10 @@ new lessons, and an independent competency test demoted the sun line and Mercury
 line from P0 to P1 (the remedy is revising `advanced/01` so it teaches them, not
 adding lessons).
 
-The audit listed four P0s. **The simian source defect is closed by Batch 3B.**
-Three remain open: line-quality vocabulary used across nine lesson files and
-taught in none; the thumb and fingers absent; and no worked example of a complete
-reading. Each is a new lesson and belongs to a later batch.
+The audit listed four P0s. **The simian source defect is closed by Batch 3B, and
+the line-quality defect is closed by Batch 3C.** Two remain open: the thumb and
+the fingers are absent, and there is no worked example of a complete reading.
+Each is a new lesson and belongs to a later batch.
 
 The eight §17 decisions were settled by the user before Batch 3B. The durable
 ones are now recorded in `DECISIONS.md` (2026-08-11): the four-module
@@ -85,20 +122,16 @@ Known follow-up: after explicit approval during Batch 2A, `npm audit --omit=dev`
 Key current implementation facts are summarized in `CURRENT_STATE.md` and `ARCHITECTURE.md`; verify source before relying on them for a change.
 
 ## Immediate next action
-Await the user's review and merge of `fix/curriculum-batch-3b`, or their next
-Palmistry Path objective. Do not merge it unprompted.
+Await the user's review and merge of `feat/curriculum-batch-3c-line-quality`, or
+their next Palmistry Path objective. Do not merge it unprompted.
 
-The next batch is **3C: Line Quality and Markings, and nothing else** — one new
-lesson plus the subtractive revisions to `lines/01`–`05` it enables, since the
-line-quality vocabulary currently repeated across nine lesson files can then be
-taught once and referenced. The audit (§18) keeps it deliberately alone. The three
-approved additions are phased, not batched together: **3D** is The Thumb and the
-Fingers, plus folding texture and flexibility into the retitled hand-shape lesson;
-**3E** is the module 4 rebuild, the simian lesson's module move, and revising
-`advanced/01` so it teaches the sun and Mercury lines; **3F** is synthesis and
-practice — Combining What You See, the capstone revision, `<Practice>`, and module
-`<Checkpoint>`s. Do not pull later batches forward, do not reorder modules, and do
-not move the simian lesson in 3C.
+The next batch is **3D: The Thumb and the Fingers**, plus folding texture and
+flexibility into the retitled hand-shape lesson. The remaining phases: **3E** is
+the module 4 rebuild — the simian lesson's module move (take the generic
+chained/faint cleanup at `lines/06:65` with it) and revising `advanced/01` so it
+teaches the sun and Mercury lines; **3F** is synthesis and practice — Combining
+What You See, the capstone revision, `<Practice>`, and module `<Checkpoint>`s. Do
+not pull later batches forward and do not reorder modules.
 
 New-lesson work runs under the `AGENTS.md` approval gate: pre-draft report, write
 to file, user approval, then validation and commit. Start from a clean context if

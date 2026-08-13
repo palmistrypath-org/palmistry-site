@@ -11,6 +11,10 @@ The durable sequence remains:
 4. Expand monetization deliberately without weakening trust.
 
 ## Recently completed approved work
+2026-08-11: Remediation Batch 3C added *Line Quality and Markings* as the first lesson of the Lines module, taking the core curriculum to 23 lessons and the Lines module to 7. The line-quality vocabulary previously re-derived in four separate lesson files is now taught once and applied thereafter. All existing lesson URLs were preserved. Two of the approved 25-lesson additions remain outstanding.
+
+2026-08-11: Remediation Batch 3B made module labelling truthful, published the seven-mounts/eight-regions model sitewide, corrected the simian lesson's source framing, and removed the decorative `prerequisites` field.
+
 2026-08-10: Remediation Batch 2A added the sitewide accessibility baseline: skip navigation, shared keyboard focus indication, safer text contrast, larger practical compact targets, form/search accessibility improvements, learner-facing lesson Figure alt text, and a focused regression audit.
 
 2026-08-10: Remediation Batch 1 moved the Complete Reference to waitlist-only, removed public paid-reference route exposure, disabled AdSense temporarily, established explicit utility/private indexability rules, and added guardrails for those trust/technical safety boundaries.
