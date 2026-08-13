@@ -15,6 +15,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const BLOG_DIR = resolve(ROOT, 'src', 'content', 'blog');
 const LESSONS_DIR = resolve(ROOT, 'src', 'content', 'lessons');
+const SITE_ORIGIN = 'https://palmistrypath.com';
 
 const DESCRIPTION_MAX = 170;
 const VALID_BLOG_SUBFOLDERS = new Set(['beginner', 'intermediate', 'advanced']);
@@ -83,8 +84,13 @@ function sourcePath(file) {
 }
 
 function normalizeRoute(route) {
-	const pathname = new URL(route, 'https://palmistrypath.com').pathname;
-	return pathname.endsWith('/') ? pathname : `${pathname}/`;
+	try {
+		const url = new URL(route, SITE_ORIGIN);
+		if (url.origin !== SITE_ORIGIN) return null;
+		return url.pathname.endsWith('/') ? url.pathname : `${url.pathname}/`;
+	} catch {
+		return null;
+	}
 }
 
 function routeFromSource(file, collectionDir, prefix) {
@@ -175,7 +181,7 @@ for (const file of blogFiles) {
 		errors.push(`[${sourcePath(file)}] Missing relatedLesson field`);
 	} else {
 		const target = normalizeRoute(frontmatter.relatedLesson);
-		if (!lessonRoutes.has(target.toLowerCase())) {
+		if (!target || !lessonRoutes.has(target.toLowerCase())) {
 			errors.push(
 				`[${sourcePath(file)}] relatedLesson does not resolve to a lesson route: ${frontmatter.relatedLesson}`,
 			);
@@ -247,7 +253,7 @@ for (const file of lessonFiles) {
 			);
 		} else {
 			const target = normalizeRoute(frontmatter.relatedArticle);
-			if (!blogRoutes.has(target.toLowerCase())) {
+			if (!target || !blogRoutes.has(target.toLowerCase())) {
 				errors.push(
 					`[${sourcePath(file)}] relatedArticle does not resolve to a blog route: ${frontmatter.relatedArticle}`,
 				);
