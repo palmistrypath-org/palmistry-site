@@ -51,7 +51,7 @@ export const MODULES: ModuleConfig[] = [
 		slug: 'advanced',
 		title: 'Minor Lines & Synthesis',
 		description:
-			'The minor lines — Sun, Mercury, the relationship lines, the Girdle of Venus, and the simian line — and how to bring a whole hand together into one coherent reading.',
+			'The minor lines — Sun, Mercury, the relationship lines, the Girdle of Venus, and the simian line — then how to weigh a whole hand together, and how to read for another person.',
 		difficulty: 'Intermediate',
 	},
 ];
