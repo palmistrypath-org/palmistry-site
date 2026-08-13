@@ -74,7 +74,7 @@ Palmistry Path competes on **structured education**, not on fortune-telling prom
 | `/learn/lines/03-head-line` | The Head Line | "head line palmistry" (curriculum) | — | Learning | — |
 | `/learn/lines/04-life-line` | The Life Line | "life line palmistry" (curriculum) | — | Learning | Life line article addresses short life line myth — high-value |
 | `/learn/lines/05-fate-line` | The Fate Line | "fate line palmistry" (curriculum) | — | Learning | — |
-| `/learn/lines/06-simian-line` | The Simian Line | "simian line palmistry" (curriculum) | — | Learning | — |
+| `/learn/advanced/simian-line` | The Simian Line | "simian line palmistry" (curriculum) | — | Learning | — |
 
 ### Mounts Lessons
 

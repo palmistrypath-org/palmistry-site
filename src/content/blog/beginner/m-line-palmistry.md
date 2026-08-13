@@ -54,7 +54,7 @@ The fate line is the rarest of the four principal lines. Many people have no fat
 
 This means the M is not a feature that is present or absent in any morally weighted way. Hands without a clear fate line are not lacking something important; they are simply hands where the fate line — traditionally associated with a particular kind of driven, purposeful trajectory — has not formed clearly. Fincham notes that the fate line's absence is often found in people who move through life in a more improvisational, adaptive way, responding to conditions rather than pursuing a fixed course. That is not a deficiency.
 
-For the same reason, hands with a [simian line](/learn/lines/06-simian-line) — where the heart line and head line fuse into a single powerful transverse crease rather than running as two separate lines — cannot form an M in the usual sense. When two of the four components merge into one, the composite shape changes fundamentally. The simian line carries its own set of traditional associations, but it specifically cannot produce the separate heart and head line bars that the M requires.
+For the same reason, hands with a [simian line](/learn/advanced/simian-line) — where the heart line and head line fuse into a single powerful transverse crease rather than running as two separate lines — cannot form an M in the usual sense. When two of the four components merge into one, the composite shape changes fundamentally. The simian line carries its own set of traditional associations, but it specifically cannot produce the separate heart and head line bars that the M requires.
 
 ## Cross-tradition perspectives
 

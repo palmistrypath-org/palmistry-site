@@ -1,0 +1,39 @@
+---
+/**
+ * Redirect stub for the Simian lesson's former URL.
+ *
+ * The lesson moved from the Lines module to Minor Lines & Synthesis in
+ * curriculum Batch 3E, which changed its generated route. Lesson routes are
+ * derived from the content filename by `src/pages/learn/[module]/[lesson].astro`,
+ * so the old path stops being emitted once the file moves. This static route
+ * takes precedence over that dynamic route and keeps the old URL resolving for
+ * inbound links and anything already indexed.
+ *
+ * It must not become duplicate indexable content, so it carries the canonical
+ * pointing at the new route, `noindex, follow`, and a Pagefind-ignored <main>
+ * (the Pagefind rootSelector is `main:not([data-pagefind-ignore])`). The path is
+ * also listed in NOINDEX_PATHS in `src/indexability.mjs`, which both excludes it
+ * from the sitemap and makes `npm run audit:indexability` verify the three
+ * guarantees above on every build.
+ */
+const target = '/learn/advanced/simian-line';
+const canonical = new URL(target, Astro.site);
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Redirecting to The Simian Line</title>
+		<meta name="robots" content="noindex, follow" />
+		<link rel="canonical" href={canonical} />
+		<meta http-equiv="refresh" content={`0; url=${target}`} />
+	</head>
+	<body>
+		<a href="#main-content">Skip to main content</a>
+		<main id="main-content" data-pagefind-ignore>
+			<p>
+				This lesson has moved to <a href={target}>The Simian Line</a>.
+			</p>
+		</main>
+	</body>
+</html>

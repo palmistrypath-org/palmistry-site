@@ -16,6 +16,15 @@
  *                (depth ≥ 3 segments after dist, starts with learn/)
  *   Other      — listing pages, home, etc. — no required-type checks
  *
+ * Pages marked `noindex` are exempt from the required-type checks regardless of
+ * their path. Structured data exists to describe a page to search engines, so a
+ * page deliberately withheld from the index has nothing to declare. The concrete
+ * case is the redirect stub at /learn/lines/06-simian-line/, which preserves that
+ * lesson's pre-Batch-3E URL: it sits under /learn/ but is not a lesson, and
+ * emitting LearningResource there would advertise the same lesson at two URLs.
+ * `npm run audit:indexability` separately asserts that stub's noindex, canonical,
+ * sitemap, and Pagefind behaviour.
+ *
  * Exits 0 with a clear summary on success.
  * Exits 1 with errors printed to stderr on failure.
  *
@@ -71,6 +80,11 @@ function classifyPage(relPath) {
   return 'other';
 }
 
+/** True if the page asks search engines not to index it. */
+function isNoindexHtml(html) {
+  return /<meta[^>]+name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
+}
+
 /**
  * Extract all JSON-LD blocks from an HTML string.
  * Returns an array of { raw: string, parsed: object|null, error: string|null }.
@@ -122,7 +136,9 @@ let lessonCount = 0;
 for (const htmlFile of htmlFiles) {
   const content = readFileSync(htmlFile, 'utf8');
   const relFile = htmlFile.replace(DIST, '');
-  const pageType = classifyPage(relFile);
+  // Noindex pages still get their JSON-LD parsed for validity below, but are not
+  // required to carry the schema types their path would otherwise imply.
+  const pageType = isNoindexHtml(content) ? 'other' : classifyPage(relFile);
 
   const blocks = extractJsonLd(content);
 
