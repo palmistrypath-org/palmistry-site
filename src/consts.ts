@@ -30,7 +30,7 @@ export const MODULES: ModuleConfig[] = [
 		slug: 'foundations',
 		title: 'Foundations',
 		description:
-			'What palmistry is, how to approach a reading, and the basic structures of the hand — shape, skin texture, and the active and passive hands.',
+			'What palmistry is, how to approach a reading, and the basic structures of the hand — shape, texture and flexibility, the thumb and fingers, and the active and passive hands.',
 		difficulty: 'Beginner',
 	},
 	{

@@ -3,86 +3,97 @@
 Status: INACTIVE
 
 ## Last completed
-Remediation Batch 3C — Line Quality and Markings (2026-08-11), on branch
-`feat/curriculum-batch-3c-line-quality`. Implemented under the `AGENTS.md`
-article approval gate: pre-draft report, user approval, implementation, second
-approval, then commit.
+Remediation Batch 3D — The Thumb and the Fingers, plus the hand-shape lesson's
+retitle and texture/flexibility fold-in (2026-08-13), on branch
+`feat/curriculum-batch-3d-hand-structure`. Implemented under the new
+feature-branch review gate: pre-draft/source plan, user-approved refinements,
+implementation, self-review, validation, commit and push. **Not merged.**
 
 ## What shipped
-- **New lesson.** `src/content/lessons/lines/line-quality-and-markings.mdx`,
-  route `/learn/lines/line-quality-and-markings`, `order: 1` — now the first
-  lesson of the Lines module. It teaches the observational vocabulary every line
-  shares: depth as a continuum, clarity as a separate axis, relative rather than
-  absolute depth, clean/chained/broken continuity, clean versus overlapping
-  breaks, forks versus branches, islands, and parallel/support lines. Its
-  competency is description before interpretation.
-- **Core curriculum is now 23 lessons.** The Lines module has 7.
-- **No URL changed and no file was renamed.** Lesson routes come from the
-  filename, display order from the `order` frontmatter — they are independent.
-  The new lesson took an unnumbered filename plus `order: 1`; `lines/01`–`06`
-  incremented to 2–7. The 45 inbound links to existing Lines routes are intact.
-  `order: 0` is not usable: the module index renders `order` as "Lesson N".
-- **Subtractive revisions to `lines/01`–`05`.** The generic depth/faint/chained
-  definitions, the relative-depth rule, and the generic break, fork, branch, and
-  parallel-line definitions were removed from the four major-line lessons, which
-  had quadruplicated them. Each now applies the shared vocabulary rather than
-  re-deriving it. `lines/01` also had two statements corrected that became false
-  once a lesson preceded it. Net 30 insertions, 36 deletions.
-- **Line-specific historical material preserved in full**, including Benham's
-  nervous-versus-muscular vitality distinction, the Line of Mars quotations, the
-  classical-versus-modern life-line break discussion, and the Batch 2B lifespan
-  corrections. A brief physical definition of a tasselled ending was added inside
-  the existing Benham passage in `lines/04` without softening the claim.
-- **`lines/06-simian-line.mdx` changed in frontmatter `order` only.**
+- **New lesson.** `src/content/lessons/foundations/thumb-and-fingers.mdx`, route
+  `/learn/foundations/thumb-and-fingers`, `order: 4` — now the fourth lesson of
+  Foundations. It teaches thumb length against a verified landmark, thumb
+  setting, the two thumb sections, resting opening angle, tip-joint flexibility,
+  the one-time planetary finger mapping, per-finger comparison landmarks, the
+  base arch, resting spacing, and lean. Its competency is accurate structural
+  description, with the finger→mount correspondence carried forward to Module 3.
+- **Core curriculum is now 24 lessons.** Foundations has 5.
+- **`foundations/03-hand-shapes.mdx` retitled** to *Hand Shape, Texture, and
+  Flexibility* (route unchanged, duration 8→10) with a new section adding skin
+  texture, consistency, and whole-hand flexibility.
+- **No URL changed and no file was renamed.** The new lesson took an unnumbered
+  filename plus `order: 4`; `04-active-and-passive-hand.mdx` moved to `order: 5`
+  and its opening line went from "the last three lessons" to "the last four".
+- **Bounded revisions elsewhere.** `foundations/02` had step three compressed, a
+  thumb/finger step added (steps renumbered to seven), the "every major hand
+  classification system" claim narrowed, "associations across traditions"
+  removed, and the Sun/Apollo inversion corrected. `mounts/03-mount-of-jupiter`
+  had one forward reference corrected. Both blog articles' `relatedLesson` were
+  repointed. `src/consts.ts` module description updated.
 
-## Islands — the source decision that governs this lesson
-Taught as form → verified historical reading → Palmistry Path policy. The Cheiro
-(*Palmistry for All*, 1916) and Benham (*The Laws of Scientific Hand Reading*,
-1900) health readings are quoted exactly from the Batch 2C-verified record and
-are **not** sanitised; the lesson says plainly that Benham is describing health.
+## The source decisions that govern these lessons
+Verified this batch against the primary texts (Gutenberg #20480; Internet Archive
+`lawsscientifich00benhgoog`):
 
-The site's own boundary is stated separately as a modern position resting on
-evidence. Critically, **no invented modern universal meaning replaces the
-historical one.** There is no comparably sourced modern symbolic reading for
-islands, and the lesson says so rather than manufacturing one: what replaces the
-health claim is method — which line, where along it, how large, the surrounding
-line's condition, nearby features, and the other hand. Preserve that asymmetry in
-any future edit. Do not let a generic substitute meaning drift back in.
+- **Thumb length is Benham's landmark alone.** Held against the side of the hand,
+  a thumb of ordinary length reaches about the middle of the index finger's
+  *base* segment — with Benham's own caveat that a low or high setting confounds
+  the reading. **Cheiro gives no landmark.** Do not reintroduce the ambiguous
+  "to or beyond the first joint" wording from the blog; it is in neither author.
+- **Will and logic are Benham's names, not Cheiro's.** Benham adopted them "for
+  brevity". Cheiro's second-phalange reading in *Palmistry for All* is tact and
+  diplomacy. Attribute the framework to Benham alone.
+- **Cheiro's thumb quotation is verified verbatim** and used once, framed as his
+  weighting of the feature rather than a fact about people.
+- **The three-move framing is load-bearing**: proportion → historical reading →
+  site boundary, with **no modern replacement meaning installed**. Preserve that
+  asymmetry, exactly as with islands in 3C.
+- **Finger prominence is not raw length.** The middle finger is longest on almost
+  every hand; prominence means departure from Benham's per-finger landmarks.
+
+## The structural rule in the hand-shape lesson
+The elemental classification rests on **two inputs and only two** — palm
+proportion and finger length relative to palm. Texture, consistency, and
+flexibility were added *after* the four types as a separate qualifying layer that
+never changes a hand's type, and the lesson states this three times. Do not let
+them drift into the classification.
+
+Four related-but-distinct ideas must stay separate across the site: whole-hand
+flexibility (`foundations/03`), thumb-tip flexibility (the new lesson), line
+quality (`lines/line-quality-and-markings`), and mount firmness (Mounts module).
 
 ## Not implemented — do not assume otherwise
-The curriculum is **23 lessons, not 25**. Still outstanding: The Thumb and the
-Fingers (3D), Combining What You See (3F), the `<Practice>` and `<Checkpoint>`
-components, the second worked reading, the nails lesson, and the simian lesson's
-module move (3E).
+The curriculum is **24 lessons, not 25**. Still outstanding: Combining What You
+See (3F), the `<Practice>` and `<Checkpoint>` components, the second worked
+reading, the simian lesson's module move (3E), and the nails lesson, which
+remains a deliberate non-goal.
 
 ## Open follow-ups carried out of this batch
-- **Island diagram — visual follow-up, not created.** The repo has no island
-  image. A hand-built schematic SVG was assessed and declined: the Lines module's
-  figures are ornate generated plates (dark ground, gold linework, hand outlines,
-  ornamental frames), and a plain schematic would introduce a conflicting visual
-  register as the module's *first* figure. The new lesson ships with no figures
-  and teaches the island form in prose by contrast against fork, support line,
-  and break. Spec if revisited: one plate showing an island (splits, encloses an
-  elongated space, rejoins) beside a fork (splits, no rejoin) and a parallel line
-  (alongside, encloses nothing).
-- **Simian generic duplication — deferred to 3E.** `lines/06-simian-line.mdx:65`
-  still carries a generic chained/faint definition the new lesson now duplicates.
-  Batch 3C was explicitly order-only for that file. Fold the cleanup into 3E when
-  the lesson moves modules.
+- **No figure created.** Foundations has no designed image system by an existing
+  recorded decision (`visual-assets-roadmap.md`), so the lesson ships without
+  one. Spec if revisited: one plate in the Lines module's ornate register whose
+  required discrimination is the thumb's two segments against the fingers' three.
+- **Three open defects in `blog/beginner/thumb-meaning-palmistry.md`**, none
+  fixed here because blog rewrites were out of scope: the will/logic framework is
+  misattributed to Cheiro as well as Benham (line 31); a thumb-length threshold
+  appears that is in neither author (line 35); and the unresolved Gettings
+  quotation remains (line 29). These are editorial-backlog items.
 
 ## Durable decisions
-`DECISIONS.md` was not modified. No new durable decision emerged — the lesson,
-blog-split, and curriculum decisions governing this batch were already recorded
-on 2026-08-11.
+`DECISIONS.md` was not modified for curriculum content — the lesson, blog-split,
+and 25-lesson decisions governing this batch were already recorded on 2026-08-11.
+The **feature-branch review gate** was added to `AGENTS.md` and mirrored in
+`CLAUDE.md`: agents may commit and push task branches without a separate approval
+step; merging to `main` still requires explicit user review.
 
 ## Next action
-**Batch 3D — The Thumb and the Fingers**, plus folding texture and flexibility
-into the retitled hand-shape lesson. Then:
-- **3E** — Module 4 rebuild: the simian move (and its generic-quality cleanup),
-  and revising `advanced/01` so it teaches the sun and Mercury lines.
-- **3F** — Synthesis and practice: Combining What You See, the capstone revision,
-  `<Practice>`, and module `<Checkpoint>`s.
+**Batch 3E — Module 4 rebuild**: the simian lesson's module move (taking the
+generic chained/faint cleanup at `lines/06:65` with it), and revising
+`advanced/01` so it teaches the sun and Mercury lines. Then **3F** — synthesis and
+practice: Combining What You See, the capstone revision, `<Practice>`, and module
+`<Checkpoint>`s.
 
-Do not pull later batches forward. Start from a clean context.
+Do not pull later batches forward. Do not merge 3C or 3D without user review.
+Start from a clean context.
 
 Start the next task by reading `../AGENTS.md`, then this file and `AI_HANDOFF.md`.
