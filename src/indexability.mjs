@@ -1,4 +1,5 @@
 const NOINDEX_PATHS = new Set([
+	'/404/',
 	'/contact/',
 	'/guide/thank-you/',
 	'/search/',

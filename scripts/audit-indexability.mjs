@@ -31,6 +31,7 @@ function collectFiles(dir, predicate, results = []) {
 }
 
 function distPathForRoute(route) {
+	if (route === '/404/') return join(DIST, '404.html');
 	return join(DIST, route.replace(/^\//, ''), 'index.html');
 }
 
