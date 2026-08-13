@@ -3,7 +3,7 @@ title: "Finger Shapes in Palmistry: A Beginner Guide"
 description: "How finger length, shape, phalange zones, and planetary associations are read in palmistry — covering each finger with notes on Western and Indian traditions."
 pubDate: 2026-05-27
 cluster: "hand-shape"
-relatedLesson: "/learn/foundations/03-hand-shapes"
+relatedLesson: "/learn/foundations/thumb-and-fingers"
 ---
 
 Palmistry does not begin with the lines. It begins with what surrounds them — and before the mounts and before the major lines, the fingers themselves carry a layer of structural information that shapes every reading that follows. Their length relative to the palm, the contour of their tips, the texture of their knuckle joints, and the proportions of their three segments each contribute to an interpretive baseline that experienced readers establish before they trace a single line.

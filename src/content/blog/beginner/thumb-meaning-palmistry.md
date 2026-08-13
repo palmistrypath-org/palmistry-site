@@ -3,7 +3,7 @@ title: "Thumb Meaning in Palmistry: Will, Logic, and Balance"
 description: "What palmistry says about the thumb — its two phalanges, length, set, and flexibility — and why many classical practitioners considered it the most revealing digit."
 pubDate: 2026-05-27
 cluster: "hand-shape"
-relatedLesson: "/learn/foundations/03-hand-shapes"
+relatedLesson: "/learn/foundations/thumb-and-fingers"
 ---
 
 Of all the digits on the hand, the thumb occupies a category of its own in palmistry. The four fingers each carry a planetary association — Jupiter, Saturn, Apollo, Mercury — and much of their traditional interpretation flows from those cosmological frameworks. The thumb has no planetary counterpart in the standard Western system. It stands apart, and that distinction is not incidental. Rather than being folded into a celestial map, the thumb is read through a different set of coordinates entirely: will, reason, and the balance between the two. Understanding why the thumb is treated differently — and how to read it — is one of the more clarifying steps a beginning student of palmistry can take.
