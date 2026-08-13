@@ -5,10 +5,10 @@ import Header from '../components/Header.astro';
 import { MODULES, SITE_TITLE } from '../consts';
 
 const MODULE_ART: Record<string, string> = {
-	foundations: '/images/home/path-foundations.png',
-	lines: '/images/home/path-lines.png',
-	mounts: '/images/home/path-mounts.png',
-	advanced: '/images/home/path-advanced.png',
+	foundations: '/images/home/path-foundations.webp',
+	lines: '/images/home/path-lines.webp',
+	mounts: '/images/home/path-mounts.webp',
+	advanced: '/images/home/path-advanced.webp',
 };
 ---
 
@@ -27,13 +27,14 @@ const MODULE_ART: Record<string, string> = {
 			<section class="hero">
 				<div class="hero-image-wrap">
 					<img
-						src="/images/home/hero-palm-map.png"
+						src="/images/home/hero-palm-map.webp"
 						alt="Illustrated palm map with highlighted palmistry lines and mount regions"
 						class="hero-image"
 						width="1672"
 						height="941"
 						loading="eager"
 						decoding="async"
+						fetchpriority="high"
 					/>
 				</div>
 				<h1>Learn palmistry as a structured practice</h1>
@@ -87,6 +88,10 @@ const MODULE_ART: Record<string, string> = {
 											alt=""
 											aria-hidden="true"
 											class="path-card-art"
+											width="640"
+											height="640"
+											loading="lazy"
+											decoding="async"
 										/>
 									)}
 									<span class="step-content">
