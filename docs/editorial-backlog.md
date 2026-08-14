@@ -511,4 +511,12 @@ When Group 1 articles are published, update these existing articles to add links
 
 ---
 
+---
+
+## Open source-framing items (not article work)
+
+- **`lines/04-life-line.mdx:122` — "it has not held up under testing".** Pre-existing legacy prose, outside Wave 3E/3F's scope; the wave only added a `<Practice>` wrapper to that file. Flagged during the 3E/3F review correction pass, which removed the same phrasing from newly-written prose because the project has not established broad empirical testing of palmistry claims. This instance is the narrowest and most defensible form — it is about **life-line lifespan dating systems specifically**, where `source-verification-log.md` Pass 5 did record mixed longevity evidence, and the sentence already separates what the tradition claimed from why the site declines it. Worth a decision in a future source pass: either cite what the "testing" refers to, or narrow it to the site's standard "reliability has not been demonstrated" wording, which is what the rest of the curriculum now uses. **Do not fix in isolation** — the same phrase pattern may appear in blog articles on the life line, and it should be settled in one pass across the corpus rather than lesson by lesson.
+
+---
+
 *End of document. Update this file as articles are published — move completed items to the seo-content-roadmap.md keyword map.*
