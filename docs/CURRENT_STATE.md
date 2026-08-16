@@ -1,6 +1,6 @@
 # Current State — Palmistry Path
 
-Last repo inventory: 2026-08-10. This page summarizes observed implementation; source code remains authoritative.
+Last repo inventory: 2026-08-16. This page summarizes observed implementation; source code remains authoritative.
 
 ## Product/site
 Palmistry Path is a live-oriented static Astro learning site at `palmistrypath.com`, with a dark atmospheric brand, structured learning path, article library, glossary/search, lead magnet flow, and early paid-product/waitlist groundwork.
@@ -55,6 +55,7 @@ Implemented:
 - robots.txt
 - structured-data behavior in layouts/components
 - Bing/indexing support assets/scripts
+- Accessible custom 404 page (`src/pages/404.astro`, emitted as `dist/404.html`), `noindex, follow`, excluded from sitemap and Pagefind
 
 Utility/private indexability policy is explicit: `/guide/thank-you/`, `/search/`, and placeholder `/contact/` are built but marked `noindex`, excluded from sitemap, and excluded from Pagefind. `/print/complete-reference/` is treated as private paid-product generation content and is not emitted as a public route.
 
@@ -74,7 +75,7 @@ Google AdSense is temporarily disabled by leaving `ADSENSE_PUB_ID` empty in `src
 Specialized email and lead-magnet planning docs remain in `docs/`.
 
 ## Visual assets
-The repo contains homepage path imagery, lesson line imagery, mount SVG diagrams, OG assets, and specialized visual-asset/creative-brief docs.
+The repo contains homepage path imagery, lesson line imagery, mount SVG diagrams, OG assets, and specialized visual-asset/creative-brief docs. The homepage hero and four module-path images are WebP (converted from PNG in the 2026-08 technical remediation wave), a ~97% byte reduction; the superseded PNGs were removed.
 
 ## Quality tooling
 Available scripts include:
@@ -87,7 +88,7 @@ Available scripts include:
 - `npm run content-audit`
 - IndexNow dry-run/submission scripts
 
-No separate unit-test runner or linter is declared in `package.json`; Astro build plus the project audit scripts are the main automated validation layer.
+No separate unit-test runner or linter is declared in `package.json`; Astro build plus the project audit scripts are the main automated validation layer. `content-audit` discovers and validates both the blog (53 posts) and lessons (24) collections, including lesson module/order/difficulty/duration checks and cross-collection `relatedLesson`/`relatedArticle` route resolution.
 
 The accessibility audit checks generated pages for the global skip link and exactly one `main#main-content` target, and checks lesson `Figure` alt text for prompt-like language.
 

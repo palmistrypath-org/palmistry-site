@@ -11,6 +11,8 @@ The durable sequence remains:
 4. Expand monetization deliberately without weakening trust.
 
 ## Recently completed approved work
+2026-08-13 (merged 2026-08-16, PR #12): Technical Remediation Wave added an accessible custom 404 page, expanded `content-audit` to validate both the blog and lessons collections with cross-collection route checks, and converted the five homepage path/hero images from PNG to WebP (~97% byte reduction). No curriculum or content changes. See `docs/audits/TECHNICAL_REMEDIATION_WAVE_2026-08.md`.
+
 2026-08-13: Remediation Batch 3D added *The Thumb and the Fingers* as the fourth Foundations lesson and retitled the hand-shape lesson *Hand Shape, Texture, and Flexibility*, folding skin texture, consistency, and whole-hand flexibility into it as a separate qualifying layer. The core curriculum is now 24 lessons and Foundations has 5. All existing lesson URLs were preserved. One of the approved 25-lesson additions remains outstanding: *Combining What You See* (3F). The batch also adopted the feature-branch review gate recorded in `AGENTS.md`.
 
 2026-08-11: Remediation Batch 3C added *Line Quality and Markings* as the first lesson of the Lines module, taking the core curriculum to 23 lessons and the Lines module to 7. The line-quality vocabulary previously re-derived in four separate lesson files is now taught once and applied thereafter. All existing lesson URLs were preserved. Two of the approved 25-lesson additions remain outstanding.

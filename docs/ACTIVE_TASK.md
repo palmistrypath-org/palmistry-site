@@ -7,7 +7,11 @@ Remediation Batch 3D — The Thumb and the Fingers, plus the hand-shape lesson's
 retitle and texture/flexibility fold-in (2026-08-13), on branch
 `feat/curriculum-batch-3d-hand-structure`. Implemented under the new
 feature-branch review gate: pre-draft/source plan, user-approved refinements,
-implementation, self-review, validation, commit and push. **Not merged.**
+implementation, self-review, validation, commit and push. **Merged into `main`
+via PR #11**, along with Batches 3A–3C (PRs #8–#10) and the Technical
+Remediation Wave (PR #12: accessible 404 page, expanded content-integrity
+checks, homepage image WebP optimization) — confirmed on `main` as of
+2026-08-16.
 
 ## What shipped
 - **New lesson.** `src/content/lessons/foundations/thumb-and-fingers.mdx`, route
@@ -93,7 +97,13 @@ generic chained/faint cleanup at `lines/06:65` with it), and revising
 practice: Combining What You See, the capstone revision, `<Practice>`, and module
 `<Checkpoint>`s.
 
-Do not pull later batches forward. Do not merge 3C or 3D without user review.
+A branch named `feat/curriculum-wave-3e-3f` already exists on the remote
+(unmerged, no PR opened, not reviewed) with apparent 3E/3F progress; this has
+not been inspected or verified as part of this reconciliation and should not
+be assumed complete or correct without review.
+
+Do not pull later batches forward. 3C and 3D are now merged (see above); apply
+the same no-unprompted-merge discipline to whatever branch carries 3E/3F.
 Start from a clean context.
 
 Start the next task by reading `../AGENTS.md`, then this file and `AI_HANDOFF.md`.

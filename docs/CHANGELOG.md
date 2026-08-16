@@ -2,6 +2,12 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-16 - Documentation reconciliation (Relay PP-RELAY-001)
+- Reconciled `CURRENT_STATE.md`, `ACTIVE_TASK.md`, and `AI_HANDOFF.md` against verified `main` history: Curriculum Batches 3A–3D (PRs #8–#11) and the Technical Remediation Wave (PR #12) were previously documented as pushed-but-unmerged and are confirmed merged into `main` as of this date.
+- Added the Technical Remediation Wave (accessible 404 page, expanded blog+lesson `content-audit` coverage, homepage PNG→WebP conversion) to `ROADMAP.md` and `CURRENT_STATE.md`; it had not previously been recorded in canonical state docs.
+- Noted that `feat/curriculum-wave-3e-3f` exists on the remote unmerged and unreviewed; not treated as shipped.
+- No runtime, content, or SEO behavior changed.
+
 ## 2026-08-13 - Remediation Batch 3D the thumb and the fingers
 - Added **The Thumb and the Fingers** as the fourth lesson of Foundations (`src/content/lessons/foundations/thumb-and-fingers.mdx`, route `/learn/foundations/thumb-and-fingers`). It teaches the structural pass the course previously walked past: thumb length against a source-verified landmark, thumb setting, the two thumb sections, resting opening angle, tip-joint flexibility, the one-time planetary finger mapping, per-finger comparison landmarks, base arch, resting spacing, and lean. The core curriculum is now **24 lessons**; Foundations has **5**.
 - The new lesson carries an unnumbered filename with `order: 4`; `04-active-and-passive-hand.mdx` moved to `order: 5` and remains the Foundations closing lesson. **No file renamed and no URL changed.**
