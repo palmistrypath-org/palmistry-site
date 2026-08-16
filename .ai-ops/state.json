@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "project": "palmistry-path",
+  "pilot": "relay-pilot-1",
+  "relay_enabled": false,
+  "credit_guard": "UNCONFIRMED",
+  "autonomous_merge": false,
+  "status": "DISABLED",
+  "iteration_budget": 3,
+  "iterations_completed": 0,
+  "current_task_id": null,
+  "current_task_revision": 0,
+  "last_accepted_task_id": null,
+  "active_relay_pr": null,
+  "pause_reason": "Initial setup in progress; Routine and GitHub secrets not yet configured.",
+  "human_gate": null
+}
