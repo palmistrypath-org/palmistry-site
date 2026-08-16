@@ -17,7 +17,7 @@ were previously pushed unmerged on their feature branches; that is no longer
 current.
 
 The Technical Remediation Wave (`fix/technical-wave-ux-integrity-performance`,
-merged 2026-08-16 via PR #12) shipped in parallel with the curriculum batches
+merged 2026-08-13 via PR #12) shipped in parallel with the curriculum batches
 and was not previously reconciled into these state docs. It added a real
 accessible `/404` page (no client JS, shared head/header/footer, `noindex,
 follow`, excluded from sitemap/Pagefind); expanded `npm run content-audit` to
