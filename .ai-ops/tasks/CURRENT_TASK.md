@@ -3,42 +3,61 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-001
+PP-RELAY-002
 
 ## Revision
-3
+1
 
 ## Objective
-Correct the bounded factual issue found during Director review of PR #13, then re-verify the existing documentation-only reconciliation without broadening scope.
+Add a small, deterministic GitHub Actions validation workflow so ordinary pull requests and pushes to `main` automatically prove that the Palmistry Path site still builds and that its existing repository audits pass.
 
-## Revision note
-Revision 2 successfully proved GitHub write access by pushing `claude/relay-PP-RELAY-001-docs-reconcile` and opening PR #13. Director review found one factual error: `docs/AI_HANDOFF.md` says the Technical Remediation Wave was "merged 2026-08-16 via PR #12", but GitHub records PR #12 as merged on 2026-08-13. The reconciliation itself was verified/reviewed on 2026-08-16; do not conflate that reconciliation date with the original merge date.
+The repository currently has strong local validation scripts but no general CI workflow beyond Relay dispatch. Reuse those existing scripts rather than inventing a new test framework.
 
 ## Authorized scope
-- Work only on the existing PR #13 / branch `claude/relay-PP-RELAY-001-docs-reconcile`.
-- Correct the PR #12 merge date to 2026-08-13 where it is stated incorrectly.
-- Inspect the five-file PR diff for any other statements that confuse the 2026-08-16 reconciliation/verification date with the actual merge dates of PRs #8–#12; correct only objectively wrong date/status wording.
-- Preserve the already-correct documentation reconciliation and the note that `feat/curriculum-wave-3e-3f` remains unmerged/unreviewed.
+- Inspect `package.json`, `package-lock.json`, `AGENTS.md`, and the existing `.github/workflows/relay-dispatch.yml` before editing.
+- Add exactly one general-purpose validation workflow under `.github/workflows/` for pull requests targeting `main` and pushes to `main`.
+- Use the Node version compatible with the repository's declared engine (`>=22.12.0`), `npm ci`, and existing scripts.
+- The workflow should run, in a sensible order, at minimum:
+  - `npm run build`
+  - `npm run content-audit`
+  - `npm run audit:all`
+- Keep permissions least-privilege/read-only unless GitHub requires otherwise for checkout.
+- Add practical concurrency/cancellation behavior so superseded PR runs do not waste resources, if this can be done without complexity.
+- Keep the Relay dispatch workflow behavior unchanged.
+- Update only directly relevant project docs/changelog if required by `AGENTS.md`.
 
-## Non-goals
-- No Astro/TypeScript/MDX/runtime changes.
-- No article or lesson edits.
-- No new palmistry claims, research, citations, curriculum decisions, SEO strategy, monetization changes, visual changes, dependencies, generated assets, deployments, or external-service changes.
-- No new PR. Update PR #13 only.
-- Do not merge the PR.
-- Do not choose or begin the next Relay task.
+## Non-goals / prohibited changes
+- No production deployment, Cloudflare/Vercel changes, Pages publishing, secrets, credentials, or environment-variable changes.
+- No dependency upgrades or lockfile changes unless absolutely required to make the existing locked install work; if required, stop with `HUMAN_REQUIRED` instead of changing dependencies.
+- No article/lesson/content edits, palmistry claims, SEO strategy changes, visual changes, monetization changes, or curriculum work.
+- Do not modify existing audit semantics merely to make CI green.
+- Do not merge the PR or choose the next task.
 
 ## Acceptance criteria
-- Every explicit merge date introduced by PR #13 agrees with GitHub PR/merge history.
-- Statements using 2026-08-16 only as the reconciliation/inventory/verification date remain clearly framed that way.
-- The diff remains documentation-only and otherwise preserves the accepted scope of revision 2.
-- PR #13 is updated in place and its Relay footer/result reflects revision 3 and `READY_FOR_REVIEW`.
+- A new PR/main validation workflow exists and is syntactically valid YAML.
+- It runs on pull requests to `main` and pushes to `main`.
+- It checks out the repository, sets up a compatible Node 22 environment, installs from `package-lock.json` with `npm ci`, builds the site, and executes both `content-audit` and `audit:all` using the existing scripts.
+- Workflow permissions are no broader than needed.
+- `relay-dispatch.yml` behavior remains unchanged.
+- Local equivalents of the workflow commands pass from a clean dependency install, or any pre-existing/environment-only failure is clearly demonstrated rather than masked.
+- Final diff is limited to CI/tooling and directly relevant documentation.
 
-## Verification
-- Verify PR #12 `merged_at` / merge commit date from GitHub/repository history before editing.
-- Inspect the five changed docs for other date/status ambiguity introduced by PR #13.
-- Run `git diff --check`.
-- Review the final diff for scope drift.
+## Required verification
+- Run `npm ci` (or establish a clean equivalent if the environment already has dependencies), then `npm run build`, `npm run content-audit`, and `npm run audit:all`.
+- Validate the workflow YAML with an available parser/linter or careful deterministic parse/check; do not add a dependency solely for YAML linting.
+- Inspect Git diff for unintended changes, especially `package-lock.json`, content, and the existing Relay workflow.
+- `git diff --check`.
 
-## Result
-Commit and push the correction to the existing `claude/relay-PP-RELAY-001-docs-reconcile` branch so PR #13 updates in place. Update the PR body/footer to `RELAY_TASK_REVISION: 3` and `RELAY_RESULT: READY_FOR_REVIEW`. Do not open a second PR. Stop after the updated PR/result.
+## Human gates
+All Palmistry Relay human gates remain in force. If CI requires secrets, paid services, deployment permissions, dependency upgrades, or a broad tooling redesign, stop with `HUMAN_REQUIRED`.
+
+## Expected result
+Push a `claude/relay-PP-RELAY-002-...` branch and open exactly one PR to `main` titled with `[RELAY PP-RELAY-002]`. Include implementation summary, verification evidence, risks, and:
+
+`RELAY_TASK_ID: PP-RELAY-002`
+
+`RELAY_TASK_REVISION: 1`
+
+`RELAY_RESULT: READY_FOR_REVIEW`
+
+Stop after the PR/result.
