@@ -9,7 +9,7 @@
   "iteration_budget": 3,
   "iterations_completed": 0,
   "current_task_id": "PP-RELAY-001",
-  "current_task_revision": 1,
+  "current_task_revision": 2,
   "last_accepted_task_id": null,
   "active_relay_pr": null,
   "pause_reason": null,
