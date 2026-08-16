@@ -1,27 +1,44 @@
 # Relay Current Task
 
-Status: NONE
+Status: AUTHORIZED
 
 ## Task ID
-NONE
+PP-RELAY-001
 
 ## Revision
-0
+1
 
 ## Objective
-No Relay task is currently authorized.
+Reconcile Palmistry Path's canonical project-state documentation with the actual current `main` branch after the recently merged technical remediation work, without changing runtime code, site content, SEO behavior, or product direction.
 
 ## Authorized scope
-None.
+- Inspect the current `main` history and implementation only as needed to establish what has actually merged/shipped.
+- Read the recent technical remediation record in `docs/audits/TECHNICAL_REMEDIATION_WAVE_2026-08.md` and the minimum relevant portions of canonical state docs.
+- Reconcile stale or contradictory status statements in `docs/CURRENT_STATE.md`, `docs/ACTIVE_TASK.md`, and `docs/AI_HANDOFF.md` where the current repository provides objective evidence.
+- Update `docs/ROADMAP.md` only if a status statement there is objectively stale because of work already on `main`.
+- Add a concise `docs/CHANGELOG.md` entry only if required by `AGENTS.md` for this state-document reconciliation.
+- Preserve existing product/editorial decisions and unresolved work accurately.
 
 ## Non-goals
-Do not implement project work from this placeholder.
+- No Astro/TypeScript/MDX/runtime changes.
+- No article or lesson edits.
+- No new palmistry claims, research, citations, curriculum decisions, SEO strategy, monetization changes, visual changes, dependencies, generated assets, deployments, or external-service changes.
+- Do not mark unmerged work as shipped.
+- Do not choose or begin the next Relay task.
+- Do not merge the PR.
 
 ## Acceptance criteria
-A future Director-authored task must replace this file and its Task ID must match `.ai-ops/state.json` before Claude may work.
+- Canonical state/handoff docs no longer contradict objectively verifiable current `main` state for the recently completed technical remediation.
+- Any still-unmerged curriculum or other work remains clearly identified as unmerged/not shipped.
+- No runtime, content, SEO, or product behavior changes.
+- Changes are minimal and traceable to repository evidence rather than assumptions.
+- One PR is opened to `main` with title prefix `[RELAY PP-RELAY-001]`.
 
 ## Verification
-None.
+- Start from current `main` and inspect relevant Git history/diffs before editing docs.
+- Review `git diff --check`.
+- Review the final diff for accidental product/editorial assertions or scope drift.
+- Because this is documentation-only, a site build is not required unless a runtime file is touched; if any runtime/content file would need changing, stop with `HUMAN_REQUIRED` rather than expanding scope.
 
 ## Result
-Stop without making project changes while this placeholder is active.
+Push a `claude/relay-PP-RELAY-001-...` branch and open exactly one PR to `main`. Include the repository evidence used, files reconciled, verification performed, remaining known stale/unmerged areas if any, and the standard Relay footer. Stop after the PR/result.
