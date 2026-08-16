@@ -1,0 +1,86 @@
+name: Relay Dispatch
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .ai-ops/state.json
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: palmistry-path-relay-dispatch
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Read Relay gate
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          ENABLED="$(jq -r '.relay_enabled' .ai-ops/state.json)"
+          CREDIT_GUARD="$(jq -r '.credit_guard' .ai-ops/state.json)"
+          STATUS="$(jq -r '.status' .ai-ops/state.json)"
+          TASK_ID="$(jq -r '.current_task_id // empty' .ai-ops/state.json)"
+          REVISION="$(jq -r '.current_task_revision // 0' .ai-ops/state.json)"
+          COMPLETED="$(jq -r '.iterations_completed' .ai-ops/state.json)"
+          BUDGET="$(jq -r '.iteration_budget' .ai-ops/state.json)"
+
+          SHOULD_DISPATCH=false
+          if [[ "$ENABLED" == "true" \
+             && "$CREDIT_GUARD" == "CONFIRMED_DISABLED" \
+             && ( "$STATUS" == "READY_FOR_CLAUDE" || "$STATUS" == "REWORK_REQUIRED" ) \
+             && -n "$TASK_ID" \
+             && "$COMPLETED" -lt "$BUDGET" ]]; then
+            SHOULD_DISPATCH=true
+          fi
+
+          echo "should_dispatch=$SHOULD_DISPATCH" >> "$GITHUB_OUTPUT"
+          echo "task_id=$TASK_ID" >> "$GITHUB_OUTPUT"
+          echo "revision=$REVISION" >> "$GITHUB_OUTPUT"
+
+          if [[ "$SHOULD_DISPATCH" != "true" ]]; then
+            echo "Relay dispatch skipped: enabled=$ENABLED credit_guard=$CREDIT_GUARD status=$STATUS task=$TASK_ID iterations=$COMPLETED/$BUDGET"
+          fi
+
+      - name: Verify routine secrets exist
+        if: steps.gate.outputs.should_dispatch == 'true'
+        env:
+          CLAUDE_ROUTINE_URL: ${{ secrets.CLAUDE_ROUTINE_URL }}
+          CLAUDE_ROUTINE_TOKEN: ${{ secrets.CLAUDE_ROUTINE_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$CLAUDE_ROUTINE_URL" || { echo "Missing CLAUDE_ROUTINE_URL secret"; exit 1; }
+          test -n "$CLAUDE_ROUTINE_TOKEN" || { echo "Missing CLAUDE_ROUTINE_TOKEN secret"; exit 1; }
+
+      - name: Fire Claude Relay routine
+        if: steps.gate.outputs.should_dispatch == 'true'
+        env:
+          CLAUDE_ROUTINE_URL: ${{ secrets.CLAUDE_ROUTINE_URL }}
+          CLAUDE_ROUTINE_TOKEN: ${{ secrets.CLAUDE_ROUTINE_TOKEN }}
+          TASK_ID: ${{ steps.gate.outputs.task_id }}
+          TASK_REVISION: ${{ steps.gate.outputs.revision }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          PAYLOAD="$(jq -n \
+            --arg text "Relay dispatch hint: task ${TASK_ID}, revision ${TASK_REVISION}, state commit ${GITHUB_SHA}. Read the repository state and task packet; this payload is only for stale/duplicate detection." \
+            '{text: $text}')"
+
+          curl --fail-with-body \
+            -X POST "$CLAUDE_ROUTINE_URL" \
+            -H "Authorization: Bearer $CLAUDE_ROUTINE_TOKEN" \
+            -H "anthropic-beta: experimental-cc-routine-2026-04-01" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "Content-Type: application/json" \
+            --data "$PAYLOAD"
