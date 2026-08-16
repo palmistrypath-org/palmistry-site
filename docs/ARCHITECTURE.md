@@ -97,5 +97,8 @@ The global header emits a skip link to `#main-content`. Public pages and layouts
 ## SEO title coupling
 The current content model does not provide a separate SEO-title field. Blog `title` is used broadly for display/headline metadata, so changing it can affect H1/title/schema/breadcrumb behavior. Inspect the relevant layout/head code before altering that model.
 
+## CI
+`.github/workflows/ci.yml` (added 2026-08-16, Relay PP-RELAY-002) checks out the repo, installs Node from `package-lock.json` with `npm ci`, then runs `npm run build`, `npm run content-audit`, and `npm run audit:all` on pull requests to `main` and pushes to `main`. It is read-only permissions and cancels superseded runs per PR/ref. `.github/workflows/relay-dispatch.yml` is a separate, unmodified workflow that only fires the Relay routine on `.ai-ops/state.json` pushes to `main`.
+
 ## Architecture rule
 This document is a map, not a replacement for source inspection. For any change, verify the actual current implementation and use targeted source reads.

@@ -92,6 +92,8 @@ No separate unit-test runner or linter is declared in `package.json`; Astro buil
 
 The accessibility audit checks generated pages for the global skip link and exactly one `main#main-content` target, and checks lesson `Figure` alt text for prompt-like language.
 
+As of 2026-08-16 (Relay PP-RELAY-002), `.github/workflows/ci.yml` runs `npm ci`, `npm run build`, `npm run content-audit`, and `npm run audit:all` on pull requests targeting `main` and on pushes to `main`, giving ordinary PRs the same validation coverage the Relay pilot already used. It is separate from `.github/workflows/relay-dispatch.yml`, which is unchanged and only fires the Relay routine on `.ai-ops/state.json` pushes.
+
 ## Agent/documentation state
 As of 2026-08-09, the repo is being migrated from a monolithic `PROJECT.md` startup model to the same progressive-disclosure agent operating system used across the user’s other AI-assisted projects. `AGENTS.md` and the canonical wiki/handoff pages are the new source of workflow context; `PROJECT.md` is retained as a compatibility pointer.
 
