@@ -9,8 +9,24 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
-Current focus: none in implementation. `ACTIVE_TASK.md` is INACTIVE. Batch 3D is
-complete and pushed on `feat/curriculum-batch-3d-hand-structure`, unmerged.
+Current focus: none in implementation. `ACTIVE_TASK.md` is INACTIVE. Batches
+3A–3D (PRs #8–#11) and the Technical Remediation Wave (PR #12) are now merged
+into `main`, confirmed by repository history as of 2026-08-16 — see the
+reconciliation note near the end of this file. Curriculum Batches 3C and 3D
+were previously pushed unmerged on their feature branches; that is no longer
+current.
+
+The Technical Remediation Wave (`fix/technical-wave-ux-integrity-performance`,
+merged 2026-08-13 via PR #12) shipped in parallel with the curriculum batches
+and was not previously reconciled into these state docs. It added a real
+accessible `/404` page (no client JS, shared head/header/footer, `noindex,
+follow`, excluded from sitemap/Pagefind); expanded `npm run content-audit` to
+discover and validate both the blog and lessons collections (53 posts, 24
+lessons) including module/order/difficulty/duration checks and
+`relatedLesson`/`relatedArticle` route resolution; and converted the five
+homepage path/hero images from PNG to WebP (~97% byte reduction), removing the
+superseded PNGs. See `docs/audits/TECHNICAL_REMEDIATION_WAVE_2026-08.md` for
+full detail. No curriculum/content files were touched by that wave.
 
 **The review model changed during Batch 3D.** Agents may implement, test, commit,
 and push on non-`main` task branches without a separate approval step; the branch
@@ -172,13 +188,21 @@ Preceding implementation: on 2026-08-10 Remediation Batch 2A, Accessibility & UX
 
 Known follow-up: after explicit approval during Batch 2A, `npm audit --omit=dev` completed and reported 4 production vulnerabilities: 1 low, 1 moderate, and 2 high. The remaining fix path is `npm audit fix --force`, which would install Astro 7.2.0 and sharp 0.35.3 as a breaking upgrade path. Do not force that migration without explicit approval.
 
+**2026-08-16 documentation reconciliation (Relay PP-RELAY-001):** these state
+docs previously described Curriculum Batches 3A–3D and the Technical
+Remediation Wave as pushed-but-unmerged. Git history confirms all five PRs
+(#8–#12) are merged into `main` via merge commits, and `main` was verified at
+24 lessons / 53 blog posts with the 404 page and WebP homepage images present.
+No content, runtime, or SEO behavior was changed by this reconciliation —
+only stale status statements in `CURRENT_STATE.md`, `ACTIVE_TASK.md`, and this
+file were corrected. `feat/curriculum-wave-3e-3f` remains unmerged and
+unreviewed; do not treat it as shipped.
+
 Key current implementation facts are summarized in `CURRENT_STATE.md` and `ARCHITECTURE.md`; verify source before relying on them for a change.
 
 ## Immediate next action
-Await the user's review and merge of `feat/curriculum-batch-3c-line-quality` and
-`feat/curriculum-batch-3d-hand-structure`, or their next Palmistry Path
-objective. **Do not merge either unprompted** — both are pushed and unmerged, and
-3D builds on 3C.
+Batches 3B–3D and the Technical Remediation Wave are merged into `main` (see
+above). Await the user's next Palmistry Path objective.
 
 The remaining phases: **3E** is the module 4 rebuild — the simian lesson's module
 move (take the generic chained/faint cleanup at `lines/06:65` with it) and
@@ -186,6 +210,11 @@ revising `advanced/01` so it teaches the sun and Mercury lines; **3F** is
 synthesis and practice — Combining What You See, the capstone revision,
 `<Practice>`, and module `<Checkpoint>`s. Do not pull later batches forward and do
 not reorder modules.
+
+A remote branch `feat/curriculum-wave-3e-3f` already exists with apparent 3E/3F
+work (no PR opened yet). It has not been inspected or verified as part of this
+reconciliation — do not assume it is complete, correct, or ready to merge
+without independent review.
 
 New-lesson work runs under the `AGENTS.md` article workflow and feature-branch
 review gate: pre-draft report, write to file, self-review, validation, then commit
