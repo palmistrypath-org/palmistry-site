@@ -5,7 +5,7 @@
   "relay_enabled": true,
   "credit_guard": "CONFIRMED_DISABLED",
   "autonomous_merge": false,
-  "status": "READY_FOR_CLAUDE",
+  "status": "HUMAN_REQUIRED",
   "iteration_budget": 3,
   "iterations_completed": 0,
   "current_task_id": "PP-RELAY-001",
@@ -13,5 +13,5 @@
   "last_accepted_task_id": null,
   "active_relay_pr": 13,
   "pause_reason": null,
-  "human_gate": null
+  "human_gate": "ChatGPT Director accepted PR #13 revision 3; explicit human approval is required before merging to main under the Palmistry Path pilot policy."
 }
