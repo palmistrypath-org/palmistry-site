@@ -2,6 +2,11 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-17 - Frontmatter description-length cleanup (Relay PP-RELAY-006)
+- Shortened the `description` frontmatter field on the four lesson files the baseline `npm run content-audit` flagged for exceeding the 170-character SEO target: `src/content/lessons/advanced/simian-line.mdx`, `src/content/lessons/foundations/thumb-and-fingers.mdx`, `src/content/lessons/lines/line-quality-and-markings.mdx`, and `src/content/lessons/mounts/08-mount-of-mars.mdx`.
+- Each revised description trims the existing wording only (no new palmistry claim, source attribution, or search-intent change) and stays within the audit's accepted length.
+- No title, slug, route, lesson ordering, body copy, or indexability behavior changed. Verified with `npm run content-audit`, `npm run build`, and `git diff --check`; the two remaining content-audit warnings (blank `relatedArticle` on two advanced lessons) are pre-existing and out of this task's scope.
+
 ## 2026-08-17 - Simian Line module move (Relay PP-RELAY-005)
 - Replayed the already-approved, independently audited Batch 3E Simian Line module move (from the unmerged `feat/curriculum-wave-3e-3f` branch audit, `docs/audits/CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md`) onto current `main` as a fresh bounded implementation, rather than merging that stale branch. The Sun/Mercury quote-fidelity rewrite and all 3F synthesis/practice work remain deliberately out of scope.
 - Moved `src/content/lessons/lines/06-simian-line.mdx` to `src/content/lessons/advanced/simian-line.mdx`, route `/learn/advanced/simian-line/`. It is now the fourth lesson of Minor Lines & Synthesis (`order: 4`, `difficulty: intermediate`, matching the module); `advanced/04-how-to-give-a-reading.mdx` moved to `order: 5` to stay collision-free. The Lines module is now 6 lessons and Advanced is 5; the core curriculum is still 24 lessons total.

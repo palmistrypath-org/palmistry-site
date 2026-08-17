@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-006",
+  "revision": 1,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Shortened the description frontmatter field on the 4 lesson files the baseline content-audit flagged for exceeding the 170-char SEO target (simian-line.mdx, thumb-and-fingers.mdx, line-quality-and-markings.mdx, 08-mount-of-mars.mdx). Each revision trims existing wording only; no new palmistry claim, source attribution, title, route, or body change.",
+  "pr_number": null,
+  "verification": [
+    "Baseline npm run content-audit (on main @ c80d85a) reported 6 warnings: 4 description-length warnings on the 4 files listed above, plus 2 pre-existing unrelated blank-relatedArticle warnings.",
+    "Post-edit npm run content-audit reports 0 description-length warnings; only the 2 pre-existing unrelated relatedArticle warnings remain, and content-audit still passes.",
+    "npm run build completes successfully (97 pages built).",
+    "Spot-checked generated <meta name=\"description\"> in dist/ for all 4 changed pages: content matches the new frontmatter exactly.",
+    "git diff --check reports no whitespace errors.",
+    "Reviewed final diff: only the 4 authorized description fields plus docs/CHANGELOG.md (dated entry) and this result artifact changed; no title/slug/route/order/body/schema/indexability change."
+  ],
+  "human_action": null
+}
