@@ -6,12 +6,15 @@ Status: AUTHORIZED
 PP-RELAY-003
 
 ## Revision
-1
+2
 
 ## Objective
 Independently audit the existing unmerged remote branch `feat/curriculum-wave-3e-3f` against current `main` and the already-recorded approved Batch 3E/3F curriculum plan, without shipping or rewriting curriculum in this task.
 
 The branch predates the Relay pilot and canonical docs explicitly say it contains apparent 3E/3F progress that has not been inspected or verified. Establish a trustworthy, repository-grounded readiness assessment so the next implementation decision does not rely on assumptions.
+
+## Revision 2 correction
+Director review of PR #15 found one bounded inventory error. The revision-1 audit repeatedly says five stale `docs/*.md` files overlap between the audited branch and current `main`, but comparison from merge-base `3543f26` shows six overlapping docs: `docs/ACTIVE_TASK.md`, `docs/AI_HANDOFF.md`, `docs/ARCHITECTURE.md`, `docs/CHANGELOG.md`, `docs/CURRENT_STATE.md`, and `docs/ROADMAP.md`. The audit table also omitted `docs/ROADMAP.md`, although the audited branch changes it substantially and current `main` has also changed it since the merge-base. Update the existing PR #15 only: classify `docs/ROADMAP.md`, correct every five-file overlap/count reference to six where applicable, and re-check the audit and PR summary for internal consistency. Do not broaden scope or change any curriculum/runtime file.
 
 ## Authorized scope
 - Start from current `main`; read `AGENTS.md`, `docs/ACTIVE_TASK.md`, `docs/AI_HANDOFF.md`, `docs/DECISIONS.md`, and only the minimum relevant curriculum/remediation planning records needed to identify the approved 3E/3F scope.
@@ -33,16 +36,17 @@ The branch predates the Relay pilot and canonical docs explicitly say it contain
 - Do not choose work beyond the already-recorded 3E/3F plan.
 
 ## Acceptance criteria
-- The branch's actual delta versus current `main` is fully inventoried and classified.
+- The branch's actual delta versus current `main` is fully inventoried and classified, including `docs/ROADMAP.md` and all six docs changed on both sides since the merge-base.
 - The audit clearly states which parts, if any, remain reusable for approved 3E and 3F work, which are stale/conflicting, and what should happen next.
 - Any source/provenance or curriculum-integrity concerns visible from the branch are called out with concrete file/line or commit evidence rather than assumptions.
 - Validation results are recorded accurately.
 - Final Relay diff is documentation-only and does not alter curriculum, runtime behavior, dependencies, CI, deployment, or the audited branch itself.
-- One PR is opened to `main` with title prefix `[RELAY PP-RELAY-003]`.
+- Exactly the existing PR #15 is updated; do not open another PR.
 
 ## Required verification
 - Inspect `git log`/merge-base/diff evidence for both current `main` and `feat/curriculum-wave-3e-3f`.
 - Review the complete changed-file list and relevant diffs from the branch.
+- Explicitly verify the overlap set of files changed on both sides since merge-base `3543f26` and ensure the audit count/list matches it.
 - Run the existing build/audit commands against the branch state where practical and record exact results.
 - `git diff --check` on the Relay documentation diff.
 - Confirm the Relay PR touches documentation only.
@@ -51,12 +55,12 @@ The branch predates the Relay pilot and canonical docs explicitly say it contain
 If evaluating any branch change requires a new palmistry interpretation, new source choice, change to the approved curriculum direction, dependency upgrade, deployment permission, or other product decision not already recorded, do not decide it. Mark it clearly as requiring human/product judgment in the audit.
 
 ## Expected result
-Push a `claude/relay-PP-RELAY-003-...` branch and open exactly one PR to `main` titled with `[RELAY PP-RELAY-003]`. Include the branch-readiness summary, validation evidence, recommended bounded next step, risks, and:
+Update the existing `claude/relay-PP-RELAY-003-branch-audit` branch and PR #15. Include the corrected branch-readiness summary, validation evidence, recommended bounded next step, risks, and:
 
 `RELAY_TASK_ID: PP-RELAY-003`
 
-`RELAY_TASK_REVISION: 1`
+`RELAY_TASK_REVISION: 2`
 
 `RELAY_RESULT: READY_FOR_REVIEW`
 
-Stop after the PR/result.
+Stop after updating the existing PR/result.
