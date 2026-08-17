@@ -5,13 +5,13 @@
   "relay_enabled": true,
   "credit_guard": "CONFIRMED_DISABLED",
   "autonomous_merge": true,
-  "status": "READY_FOR_REVIEW",
+  "status": "READY_FOR_CLAUDE",
   "iteration_budget": 3,
-  "iterations_completed": 1,
-  "current_task_id": "PP-RELAY-002",
+  "iterations_completed": 2,
+  "current_task_id": "PP-RELAY-003",
   "current_task_revision": 1,
-  "last_accepted_task_id": "PP-RELAY-001",
-  "active_relay_pr": 14,
+  "last_accepted_task_id": "PP-RELAY-002",
+  "active_relay_pr": null,
   "pause_reason": null,
   "human_gate": null
 }
