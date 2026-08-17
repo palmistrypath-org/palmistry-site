@@ -1,0 +1,19 @@
+{
+  "schema_version": 2,
+  "experiment": "relay-v2b-near-autonomous",
+  "started_at": "2026-08-17T18:54:00Z",
+  "target_accepted_iterations": 20,
+  "previous_experiment_archive": ".ai-ops/archive/relay-pilot-1.json",
+  "summary": {
+    "accepted": 0,
+    "first_pass_accepted": 0,
+    "tasks_requiring_rework": 0,
+    "rework_revisions": 0,
+    "human_gates": 0,
+    "usage_limit_events": 0,
+    "technical_blockers": 0,
+    "verified_no_change": 0,
+    "autonomous_merges": 0
+  },
+  "tasks": []
+}
