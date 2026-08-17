@@ -2,6 +2,12 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-17 - Curriculum Wave 3E/3F branch audit (Relay PP-RELAY-003, revision 2)
+- Independently audited the unmerged remote branch `feat/curriculum-wave-3e-3f` (tip `c70f861`) against current `main` (`0abbf75`): full file-by-file scope classification, source/provenance review of the new sun/Mercury quotations, the simian-lesson move/redirect, merge-conflict analysis, and a clean `npm ci` / `build` / `content-audit` / `audit:all` run in an isolated worktree. Findings recorded in `docs/audits/CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md`.
+- The branch stays inside the approved 3E/3F scope and validates cleanly. Every curriculum/runtime file merges with no textual conflicts, but revision 2 corrects an inventory/merge-feasibility error in the first pass: five `docs/*.md` files overlap and produce real Git conflict markers (`ACTIVE_TASK.md`, `AI_HANDOFF.md`, `CHANGELOG.md`, `CURRENT_STATE.md`, `ROADMAP.md` — `ROADMAP.md` was omitted from the original table), not just narrative drift as first reported. Two bounded items remain before shipping: a source-fidelity check on the new Cheiro/Benham quotations in `advanced/01-minor-lines-overview.mdx`, and conflict resolution plus editorial reconciliation of those five docs files against current `main`'s narrative.
+- Replaced the "uninspected/unverified" placeholder statements about the branch in `ACTIVE_TASK.md` and `AI_HANDOFF.md` with these objective findings.
+- No curriculum, runtime, dependency, or SEO behavior changed; this Relay diff is documentation-only and the audited branch itself was not modified, merged, or rebased.
+
 ## 2026-08-16 - CI validation workflow (Relay PP-RELAY-002)
 - Added `.github/workflows/ci.yml`, a general-purpose validation workflow that runs on pull requests targeting `main` and on pushes to `main`. It checks out the repo, installs Node 22 dependencies from the committed lockfile with `npm ci`, and runs `npm run build`, `npm run content-audit`, and `npm run audit:all` (link, image, schema, indexability, and accessibility audits). Permissions are `contents: read`; runs are grouped and cancelled per PR/ref to avoid wasting resources on superseded pushes.
 - Ordinary PRs and pushes to `main` now get the same build/audit coverage the Relay pilot already used for its own dispatched tasks; previously only `.github/workflows/relay-dispatch.yml` existed, and it only fires the Relay routine on `.ai-ops/state.json` changes.
