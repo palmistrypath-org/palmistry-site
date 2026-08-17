@@ -9,9 +9,9 @@
   "iteration_budget": 3,
   "iterations_completed": 2,
   "current_task_id": "PP-RELAY-003",
-  "current_task_revision": 1,
+  "current_task_revision": 2,
   "last_accepted_task_id": "PP-RELAY-002",
-  "active_relay_pr": null,
+  "active_relay_pr": 15,
   "pause_reason": null,
   "human_gate": null
 }
