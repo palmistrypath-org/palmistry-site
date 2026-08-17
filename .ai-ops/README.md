@@ -4,8 +4,8 @@ Relay Mode is a bounded cross-agent orchestration layer for Palmistry Path. GitH
 
 ## Roles
 
-- **Human owner:** authorizes the pilot, controls billing/usage-credit settings, approves human-gated decisions, and explicitly approves merges while this pilot is in review-before-merge mode.
-- **Director (ChatGPT):** selects one bounded task, writes the task packet, independently reviews Claude's actual diff/tests/evidence, and either requests bounded rework, recommends acceptance, pauses, or completes the pilot.
+- **Human owner:** authorizes the pilot, controls billing/usage-credit settings, and approves decisions that remain explicitly human-gated.
+- **Director (ChatGPT):** selects one bounded task, writes the task packet, independently reviews Claude's actual diff/tests/evidence, and either requests bounded rework, autonomously merges an accepted low/medium-risk Relay PR when all merge conditions pass, pauses, or escalates to the human owner.
 - **Worker (Claude):** executes exactly one authorized task packet, verifies it, updates project docs as required by `AGENTS.md`, pushes a `claude/` branch, opens one reviewable PR, and stops. The worker never chooses the next project task and never merges.
 
 ## Source of truth
@@ -45,15 +45,16 @@ If either value differs, automated dispatch is forbidden.
 
 The worker must stop conservatively if it sees an approaching plan/session/weekly usage-limit warning or any indication that continued work may consume usage credits. Preserve recoverable work when practical, report the stop, and do not start additional implementation. Do not work around limits with API/pay-as-you-go credentials.
 
-## Initial Palmistry Path pilot budget
+## Palmistry Path pilot budget
 
-This first pilot is intentionally conservative:
+This pilot remains intentionally bounded:
 
 - maximum outer iterations: `3`
 - one authorized task per worker run
-- `autonomous_merge: false`
-- all Relay PRs remain unmerged until independently reviewed and explicitly human-approved under the existing `AGENTS.md` feature-branch review gate
-- prefer low-to-medium-risk, objectively verifiable technical/SEO-hygiene/accessibility/tooling tasks for the first pilot
+- `autonomous_merge: true`
+- Relay PRs may be merged by the Director only after independent review of the actual diff, relevant implementation/content, and verification evidence; required checks must pass, the reviewed PR head must not have changed, scope must remain within the authorized task, and no human gate may apply
+- Claude never merges its own Relay PR
+- prefer low-to-medium-risk, objectively verifiable technical/SEO-hygiene/accessibility/tooling tasks for the pilot
 - no autonomous deployment or production release
 - no secrets or credential changes
 - no new paid services
@@ -91,20 +92,21 @@ For each task Claude must:
 
 12. Stop. Do not merge and do not select or begin the next task.
 
-## Director review contract
+## Director review and merge contract
 
 The Director must inspect the actual PR diff, relevant implementation/content, and verification evidence rather than trusting the worker summary.
 
-- If accepted: report acceptance and leave the PR unmerged for explicit human approval during this pilot.
+- If accepted and `autonomous_merge` is `true`: confirm required checks pass, confirm the PR head has not changed since review, confirm the change stays within the authorized task, confirm no human gate applies, then merge to `main` and advance Relay state.
+- If any autonomous-merge condition is not satisfied: do not merge until the condition is resolved or escalate to `HUMAN_REQUIRED` when human judgment is necessary.
 - If rejected: write a bounded remediation revision; do not silently broaden scope.
 - If human judgment is required: set `HUMAN_REQUIRED` and stop.
 - If the iteration budget is exhausted: set `PILOT_COMPLETE` or `HUMAN_REQUIRED`; do not continue automatically.
 
 ## Human gates for this pilot
 
-Stop for the human before:
+Routine Director-reviewed merges to `main` are not a human gate. Stop for the human before:
 
-- merging to `main`, deployment, release, or production publishing actions,
+- deployment, release, or production publishing actions,
 - secrets, credentials, or account access changes,
 - spending or enabling paid usage,
 - major architecture/product-scope changes,
@@ -112,4 +114,5 @@ Stop for the human before:
 - materially changing monetization or lead-capture strategy,
 - creating or materially rewriting source-heavy palmistry content when source sufficiency or interpretation requires editorial judgment,
 - high-risk SEO/indexing changes with uncertain downstream effects,
+- destructive or irreversible migrations,
 - any action whose correctness cannot be reasonably verified from available objective evidence.
