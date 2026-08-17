@@ -30,6 +30,21 @@
       "pr_number": 17,
       "rework_count": 0,
       "terminal_result": "READY_FOR_REVIEW"
+    },
+    {
+      "task_id": "PP-RELAY-005",
+      "revision": 1,
+      "status": "READY_FOR_CLAUDE",
+      "task_path": ".ai-ops/tasks/PP-RELAY-005.md",
+      "result_path": ".ai-ops/results/PP-RELAY-005-r1.json",
+      "dispatched_at": null,
+      "result_discovered_at": null,
+      "reviewed_at": null,
+      "merge_approved_at": null,
+      "merged_at": null,
+      "pr_number": null,
+      "rework_count": 0,
+      "terminal_result": null
     }
   ]
 }
