@@ -41,7 +41,7 @@ Quotation integrity is settled for the public-domain sources. Batch 2C (2026-08-
 
 Still open: 20 quotations attributed to Gettings (1965), West (1998), and Fincham (2005) cannot be checked, because those editions are in copyright and not text-searchable. They are unchanged and flagged in `editorial-backlog.md`. Batch 3D added none.
 
-Batch 3D's primary-source pass on the thumb surfaced three defects in `blog/beginner/thumb-meaning-palmistry.md`, none of them fixed in that batch and all open: it attributes the will/logic phalange framework to Cheiro as well as Benham, when the framework is Benham's and Cheiro's second-phalange reading in *Palmistry for All* is tact and diplomacy rather than logic; it states a thumb-length threshold ("to or beyond the first joint") found in neither author and inconsistent with Benham's actual landmark; and it still carries the unresolved Gettings quotation. The lessons attribute the framework to Benham alone.
+Batch 3D's primary-source pass on the thumb surfaced three defects in `blog/beginner/thumb-meaning-palmistry.md`. Two are now corrected (Relay PP-RELAY-004, 2026-08-17, on unmerged branch `claude/relay-PP-RELAY-004-thumb-defects`): the will/logic phalange framework no longer attributes Benham's naming to Cheiro, whose second-phalange reading in *Palmistry for All* is now described as tact and diplomacy rather than logic; and the "to or beyond the first joint" thumb-length threshold, found in neither author, was replaced with Benham's actual base-segment landmark and setting caveat. The unresolved Gettings quotation remains open. The lessons already attributed the framework to Benham alone.
 
 ## Discovery/navigation
 Implemented:

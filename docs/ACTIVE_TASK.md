@@ -77,11 +77,16 @@ remains a deliberate non-goal.
   recorded decision (`visual-assets-roadmap.md`), so the lesson ships without
   one. Spec if revisited: one plate in the Lines module's ornate register whose
   required discrimination is the thumb's two segments against the fingers' three.
-- **Three open defects in `blog/beginner/thumb-meaning-palmistry.md`**, none
-  fixed here because blog rewrites were out of scope: the will/logic framework is
-  misattributed to Cheiro as well as Benham (line 31); a thumb-length threshold
-  appears that is in neither author (line 35); and the unresolved Gettings
-  quotation remains (line 29). These are editorial-backlog items.
+- **Two of three open defects in `blog/beginner/thumb-meaning-palmistry.md` are
+  now fixed** (Relay PP-RELAY-004, 2026-08-17, on branch
+  `claude/relay-PP-RELAY-004-thumb-defects`, not yet merged): the will/logic
+  framework no longer attributes Benham's naming to Cheiro (Cheiro's own
+  second-phalange reading is now described as tact/diplomacy), and the
+  unsupported "reaches to or beyond the first joint" thumb-length threshold was
+  replaced with the same Benham base-segment landmark and setting caveat used in
+  the Foundations thumb lesson. **The unresolved Gettings quotation remains**,
+  explicitly out of scope for that task and still an open editorial-backlog
+  item.
 
 ## Durable decisions
 `DECISIONS.md` was not modified for curriculum content — the lesson, blog-split,

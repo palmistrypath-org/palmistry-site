@@ -47,12 +47,18 @@ are unchanged.
 landmark now taught is Benham's and only Benham's: the thumb held against the side
 of the hand reaches about the middle of the index finger's *base* segment, with
 his own caveat that a low or high setting confounds it. **Cheiro gives no landmark
-at all** — the "to or beyond the first joint" wording in
-`blog/beginner/thumb-meaning-palmistry.md:35` is in neither author. Second, the
-**will/logic phalange framework is Benham's, not Cheiro's**; Benham adopted the
-two names "for brevity", and Cheiro's second-phalange reading in *Palmistry for
-All* is tact and diplomacy, not logic. The blog article attributes it to both,
-which is wrong and remains open. Do not let that attribution drift into a lesson.
+at all**. Second, the **will/logic phalange framework is Benham's, not Cheiro's**;
+Benham adopted the two names "for brevity", and Cheiro's second-phalange reading in
+*Palmistry for All* is tact and diplomacy, not logic. Do not let that attribution
+drift into a lesson.
+
+Both of those defects in `blog/beginner/thumb-meaning-palmistry.md` are now fixed
+(Relay PP-RELAY-004, 2026-08-17, unmerged branch
+`claude/relay-PP-RELAY-004-thumb-defects`): the "to or beyond the first joint"
+wording is removed in favor of Benham's base-segment landmark plus setting
+caveat, and the will/logic framework no longer credits Cheiro with Benham's
+naming. The article's separate unresolved Gettings quotation issue is untouched
+and still open.
 
 **The will/reason framing is as erodible as the islands framing.** The lesson
 teaches proportion → historical reading → site boundary, states plainly that the

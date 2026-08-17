@@ -2,6 +2,13 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-17 - Thumb article Cheiro/Benham and thumb-length fixes (Relay PP-RELAY-004)
+- Corrected two of the three open defects in `src/content/blog/beginner/thumb-meaning-palmistry.md` recorded in `ACTIVE_TASK.md` from Remediation Batch 3D: the will/logic framework was misattributed to Cheiro as well as Benham, and an unsupported thumb-length threshold ("reaches to or beyond the first joint" of the index finger) appeared in neither cited author.
+- Will and logic are now attributed to Benham alone, with Cheiro's own second-phalange reading described as tact and diplomacy per *Palmistry for All* rather than logic; Cheiro's verified quotation on the thumb's overall importance is preserved.
+- The thumb-length threshold now uses the same source-verified Benham landmark and setting caveat already taught in `src/content/lessons/foundations/thumb-and-fingers.mdx`: ordinary length reaches roughly the middle of the index finger's base segment, with a note that thumb setting can confound the comparison.
+- The unresolved Fred Gettings quotation issue in the same article was explicitly left out of scope, per the authorized task packet.
+- No lesson, route, schema, dependency, or SEO behavior changed. Verified with `npm run build`, `npm run content-audit`, and `git diff --check`.
+
 ## 2026-08-17 - Curriculum Wave 3E/3F branch audit (Relay PP-RELAY-003, revision 2)
 - Independently audited the unmerged remote branch `feat/curriculum-wave-3e-3f` (tip `c70f861`) against current `main` (`0abbf75`): full file-by-file scope classification, source/provenance review of the new sun/Mercury quotations, the simian-lesson move/redirect, merge-conflict analysis, and a clean `npm ci` / `build` / `content-audit` / `audit:all` run in an isolated worktree. Findings recorded in `docs/audits/CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md`.
 - The branch stays inside the approved 3E/3F scope and validates cleanly. Every curriculum/runtime file merges with no textual conflicts, but revision 2 corrects an inventory/merge-feasibility error in the first pass: five `docs/*.md` files overlap and produce real Git conflict markers (`ACTIVE_TASK.md`, `AI_HANDOFF.md`, `CHANGELOG.md`, `CURRENT_STATE.md`, `ROADMAP.md` — `ROADMAP.md` was omitted from the original table), not just narrative drift as first reported. Two bounded items remain before shipping: a source-fidelity check on the new Cheiro/Benham quotations in `advanced/01-minor-lines-overview.mdx`, and conflict resolution plus editorial reconciliation of those five docs files against current `main`'s narrative.
