@@ -2,6 +2,12 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-16 - CI validation workflow (Relay PP-RELAY-002)
+- Added `.github/workflows/ci.yml`, a general-purpose validation workflow that runs on pull requests targeting `main` and on pushes to `main`. It checks out the repo, installs Node 22 dependencies from the committed lockfile with `npm ci`, and runs `npm run build`, `npm run content-audit`, and `npm run audit:all` (link, image, schema, indexability, and accessibility audits). Permissions are `contents: read`; runs are grouped and cancelled per PR/ref to avoid wasting resources on superseded pushes.
+- Ordinary PRs and pushes to `main` now get the same build/audit coverage the Relay pilot already used for its own dispatched tasks; previously only `.github/workflows/relay-dispatch.yml` existed, and it only fires the Relay routine on `.ai-ops/state.json` changes.
+- `relay-dispatch.yml` was not modified.
+- No dependency, content, or runtime behavior changed; verified locally with a clean `npm ci` followed by `npm run build`, `npm run content-audit`, and `npm run audit:all`, all passing.
+
 ## 2026-08-16 - Documentation reconciliation (Relay PP-RELAY-001)
 - Reconciled `CURRENT_STATE.md`, `ACTIVE_TASK.md`, and `AI_HANDOFF.md` against verified `main` history: Curriculum Batches 3A–3D (PRs #8–#11) and the Technical Remediation Wave (PR #12) were previously documented as pushed-but-unmerged and are confirmed merged into `main` as of this date.
 - Added the Technical Remediation Wave (accessible 404 page, expanded blog+lesson `content-audit` coverage, homepage PNG→WebP conversion) to `ROADMAP.md` and `CURRENT_STATE.md`; it had not previously been recorded in canonical state docs.
