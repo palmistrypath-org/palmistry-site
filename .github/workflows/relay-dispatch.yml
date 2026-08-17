@@ -22,7 +22,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Read Relay gate
+      - name: Read and validate Relay gate
         id: gate
         shell: bash
         run: |
@@ -32,6 +32,7 @@ jobs:
           STATUS="$(jq -r '.status' .ai-ops/state.json)"
           TASK_ID="$(jq -r '.current_task_id // empty' .ai-ops/state.json)"
           REVISION="$(jq -r '.current_task_revision // 0' .ai-ops/state.json)"
+          TASK_PATH="$(jq -r '.current_task_path // empty' .ai-ops/state.json)"
           COMPLETED="$(jq -r '.iterations_completed' .ai-ops/state.json)"
           BUDGET="$(jq -r '.iteration_budget' .ai-ops/state.json)"
 
@@ -40,17 +41,34 @@ jobs:
              && "$CREDIT_GUARD" == "CONFIRMED_DISABLED" \
              && ( "$STATUS" == "READY_FOR_CLAUDE" || "$STATUS" == "REWORK_REQUIRED" ) \
              && -n "$TASK_ID" \
+             && "$REVISION" -gt 0 \
+             && -n "$TASK_PATH" \
              && "$COMPLETED" -lt "$BUDGET" ]]; then
             SHOULD_DISPATCH=true
+          fi
+
+          if [[ "$SHOULD_DISPATCH" == "true" ]]; then
+            [[ "$TASK_PATH" == .ai-ops/tasks/* ]] || { echo "Invalid current_task_path: $TASK_PATH"; exit 1; }
+            test -f "$TASK_PATH" || { echo "Immutable task packet missing: $TASK_PATH"; exit 1; }
+            test -f .ai-ops/tasks/CURRENT_TASK.md || { echo "Compatibility mirror missing"; exit 1; }
+
+            PACKET_ID="$(awk '/^## Task ID$/{getline; print; exit}' "$TASK_PATH")"
+            PACKET_REV="$(awk '/^## Revision$/{getline; print; exit}' "$TASK_PATH")"
+            MIRROR_ID="$(awk '/^## Task ID$/{getline; print; exit}' .ai-ops/tasks/CURRENT_TASK.md)"
+            MIRROR_REV="$(awk '/^## Revision$/{getline; print; exit}' .ai-ops/tasks/CURRENT_TASK.md)"
+
+            [[ "$PACKET_ID" == "$TASK_ID" ]] || { echo "Task packet ID mismatch: state=$TASK_ID packet=$PACKET_ID"; exit 1; }
+            [[ "$MIRROR_ID" == "$TASK_ID" ]] || { echo "CURRENT_TASK ID mismatch: state=$TASK_ID mirror=$MIRROR_ID"; exit 1; }
+            [[ "$PACKET_REV" == "$REVISION" ]] || { echo "Task packet revision mismatch: state=$REVISION packet=$PACKET_REV"; exit 1; }
+            [[ "$MIRROR_REV" == "$REVISION" ]] || { echo "CURRENT_TASK revision mismatch: state=$REVISION mirror=$MIRROR_REV"; exit 1; }
+          else
+            echo "Relay dispatch skipped: enabled=$ENABLED credit_guard=$CREDIT_GUARD status=$STATUS task=$TASK_ID revision=$REVISION path=$TASK_PATH iterations=$COMPLETED/$BUDGET"
           fi
 
           echo "should_dispatch=$SHOULD_DISPATCH" >> "$GITHUB_OUTPUT"
           echo "task_id=$TASK_ID" >> "$GITHUB_OUTPUT"
           echo "revision=$REVISION" >> "$GITHUB_OUTPUT"
-
-          if [[ "$SHOULD_DISPATCH" != "true" ]]; then
-            echo "Relay dispatch skipped: enabled=$ENABLED credit_guard=$CREDIT_GUARD status=$STATUS task=$TASK_ID iterations=$COMPLETED/$BUDGET"
-          fi
+          echo "task_path=$TASK_PATH" >> "$GITHUB_OUTPUT"
 
       - name: Verify routine secrets exist
         if: steps.gate.outputs.should_dispatch == 'true'
@@ -70,11 +88,12 @@ jobs:
           CLAUDE_ROUTINE_TOKEN: ${{ secrets.CLAUDE_ROUTINE_TOKEN }}
           TASK_ID: ${{ steps.gate.outputs.task_id }}
           TASK_REVISION: ${{ steps.gate.outputs.revision }}
+          TASK_PATH: ${{ steps.gate.outputs.task_path }}
         shell: bash
         run: |
           set -euo pipefail
           PAYLOAD="$(jq -n \
-            --arg text "Relay dispatch hint: task ${TASK_ID}, revision ${TASK_REVISION}, state commit ${GITHUB_SHA}. Read the repository state and task packet; this payload is only for stale/duplicate detection." \
+            --arg text "Relay v2B dispatch hint: task ${TASK_ID}, revision ${TASK_REVISION}, packet ${TASK_PATH}, state commit ${GITHUB_SHA}. Read repository state, immutable task packet, CURRENT_TASK compatibility mirror, and v2B durable-result contract; this payload is only for stale/duplicate detection." \
             '{text: $text}')"
 
           curl --fail-with-body \

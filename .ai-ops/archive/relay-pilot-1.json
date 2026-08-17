@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "experiment": "relay-pilot-1",
+  "closed_at": "2026-08-17T18:54:00Z",
+  "iteration_budget": 3,
+  "iterations_completed": 3,
+  "last_accepted_task_id": "PP-RELAY-003",
+  "final_task_revision": 2,
+  "final_status": "PILOT_COMPLETE",
+  "relay_enabled": true,
+  "credit_guard": "CONFIRMED_DISABLED",
+  "autonomous_merge": true,
+  "summary": "Initial Palmistry Path Relay pilot completed all three authorized outer iterations. The next experiment graduates the project to the v2B durable-result, SHA-gated auto-merge control plane with a larger bounded development budget.",
+  "source_state": {
+    "project": "palmistry-path",
+    "pilot": "relay-pilot-1",
+    "current_task_id": "PP-RELAY-003",
+    "active_relay_pr": null,
+    "pause_reason": "Palmistry Relay pilot completed all 3 authorized outer iterations.",
+    "human_gate": null
+  }
+}

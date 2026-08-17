@@ -1,0 +1,98 @@
+name: Relay Auto Merge
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .ai-ops/state.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: palmistry-path-relay-automerge
+  cancel-in-progress: false
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Read merge approval gate
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          ENABLED="$(jq -r '.relay_enabled' .ai-ops/state.json)"
+          CREDIT_GUARD="$(jq -r '.credit_guard' .ai-ops/state.json)"
+          AUTONOMOUS_MERGE="$(jq -r '.autonomous_merge' .ai-ops/state.json)"
+          STATUS="$(jq -r '.status' .ai-ops/state.json)"
+          TASK_ID="$(jq -r '.current_task_id // empty' .ai-ops/state.json)"
+          APPROVED_PR="$(jq -r '.approved_pr // 0' .ai-ops/state.json)"
+          APPROVED_HEAD_SHA="$(jq -r '.approved_head_sha // empty' .ai-ops/state.json)"
+
+          SHOULD_MERGE=false
+          if [[ "$ENABLED" == "true" \
+             && "$CREDIT_GUARD" == "CONFIRMED_DISABLED" \
+             && "$AUTONOMOUS_MERGE" == "true" \
+             && "$STATUS" == "MERGE_APPROVED" \
+             && -n "$TASK_ID" \
+             && "$APPROVED_PR" =~ ^[1-9][0-9]*$ \
+             && "$APPROVED_HEAD_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            SHOULD_MERGE=true
+          fi
+
+          echo "should_merge=$SHOULD_MERGE" >> "$GITHUB_OUTPUT"
+          echo "task_id=$TASK_ID" >> "$GITHUB_OUTPUT"
+          echo "approved_pr=$APPROVED_PR" >> "$GITHUB_OUTPUT"
+          echo "approved_head_sha=$APPROVED_HEAD_SHA" >> "$GITHUB_OUTPUT"
+
+          if [[ "$SHOULD_MERGE" != "true" ]]; then
+            echo "Relay auto-merge skipped: enabled=$ENABLED credit_guard=$CREDIT_GUARD autonomous_merge=$AUTONOMOUS_MERGE status=$STATUS task=$TASK_ID pr=$APPROVED_PR head=$APPROVED_HEAD_SHA"
+          fi
+
+      - name: Validate exact PR and squash merge
+        if: steps.gate.outputs.should_merge == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPOSITORY: ${{ github.repository }}
+          TASK_ID: ${{ steps.gate.outputs.task_id }}
+          APPROVED_PR: ${{ steps.gate.outputs.approved_pr }}
+          APPROVED_HEAD_SHA: ${{ steps.gate.outputs.approved_head_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          API="https://api.github.com/repos/${GH_REPOSITORY}"
+          AUTH=(-H "Authorization: Bearer ${GH_TOKEN}" -H "Accept: application/vnd.github+json" -H "X-GitHub-Api-Version: 2022-11-28")
+
+          PR_JSON="$(curl --fail-with-body -sS "${AUTH[@]}" "${API}/pulls/${APPROVED_PR}")"
+
+          LIVE_STATE="$(jq -r '.state' <<<"$PR_JSON")"
+          LIVE_HEAD="$(jq -r '.head.sha' <<<"$PR_JSON")"
+          LIVE_BASE="$(jq -r '.base.ref' <<<"$PR_JSON")"
+          LIVE_TITLE="$(jq -r '.title' <<<"$PR_JSON")"
+          LIVE_DRAFT="$(jq -r '.draft' <<<"$PR_JSON")"
+
+          [[ "$LIVE_STATE" == "open" ]] || { echo "Approved PR is not open: $LIVE_STATE"; exit 1; }
+          [[ "$LIVE_DRAFT" == "false" ]] || { echo "Approved PR is still draft"; exit 1; }
+          [[ "$LIVE_BASE" == "main" ]] || { echo "Approved PR targets unexpected base: $LIVE_BASE"; exit 1; }
+          [[ "$LIVE_HEAD" == "$APPROVED_HEAD_SHA" ]] || { echo "Approved head SHA changed: expected=$APPROVED_HEAD_SHA live=$LIVE_HEAD"; exit 1; }
+          [[ "$LIVE_TITLE" == *"[RELAY ${TASK_ID}]"* ]] || { echo "Approved PR title does not identify current task: $LIVE_TITLE"; exit 1; }
+
+          BODY="$(jq -r '.body // ""' <<<"$PR_JSON")"
+          grep -Fq "RELAY_TASK_ID: ${TASK_ID}" <<<"$BODY" || { echo "PR body missing matching RELAY_TASK_ID footer"; exit 1; }
+          grep -Fq "RELAY_RESULT: READY_FOR_REVIEW" <<<"$BODY" || { echo "PR body missing READY_FOR_REVIEW footer"; exit 1; }
+
+          MERGE_JSON="$(curl --fail-with-body -sS -X PUT "${AUTH[@]}" \
+            -H "Content-Type: application/json" \
+            "${API}/pulls/${APPROVED_PR}/merge" \
+            --data "$(jq -n --arg sha "$APPROVED_HEAD_SHA" --arg title "[RELAY ${TASK_ID}] Director-approved squash merge" '{sha:$sha, merge_method:"squash", commit_title:$title}')")"
+
+          [[ "$(jq -r '.merged' <<<"$MERGE_JSON")" == "true" ]] || { echo "GitHub did not report merged=true"; jq . <<<"$MERGE_JSON"; exit 1; }
+          echo "Merged PR #${APPROVED_PR} at approved head ${APPROVED_HEAD_SHA}."
