@@ -98,9 +98,17 @@ practice: Combining What You See, the capstone revision, `<Practice>`, and modul
 `<Checkpoint>`s.
 
 A branch named `feat/curriculum-wave-3e-3f` already exists on the remote
-(unmerged, no PR opened, not reviewed) with apparent 3E/3F progress; this has
-not been inspected or verified as part of this reconciliation and should not
-be assumed complete or correct without review.
+(unmerged, no PR opened) with 3E/3F progress. It has now been independently
+audited (Relay PP-RELAY-003, 2026-08-17) —
+`docs/audits/CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md`. Findings: the
+branch's changes stay inside the approved 3E/3F scope, merge cleanly against
+current `main` with no textual conflicts, and pass `build`/`content-audit`/
+`audit:all`. Two items remain before it should be shipped: the new Cheiro/
+Benham quotations in `advanced/01-minor-lines-overview.mdx` need a
+source-fidelity spot-check (no web access in the audit), and the branch's
+five stale `docs/*.md` files need editorial reconciliation against current
+`main`'s narrative rather than a blind merge. The audit does not authorize
+merging the branch.
 
 Do not pull later batches forward. 3C and 3D are now merged (see above); apply
 the same no-unprompted-merge discipline to whatever branch carries 3E/3F.

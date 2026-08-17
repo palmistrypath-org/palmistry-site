@@ -211,10 +211,16 @@ synthesis and practice — Combining What You See, the capstone revision,
 `<Practice>`, and module `<Checkpoint>`s. Do not pull later batches forward and do
 not reorder modules.
 
-A remote branch `feat/curriculum-wave-3e-3f` already exists with apparent 3E/3F
-work (no PR opened yet). It has not been inspected or verified as part of this
-reconciliation — do not assume it is complete, correct, or ready to merge
-without independent review.
+A remote branch `feat/curriculum-wave-3e-3f` already exists with 3E/3F work (no
+PR opened yet). It has since been independently audited (Relay PP-RELAY-003,
+2026-08-17; see `docs/audits/CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md`).
+Findings: the branch's changes stay inside approved 3E/3F scope, merge
+cleanly against current `main` with no textual conflicts, and pass
+`build`/`content-audit`/`audit:all`. It is not yet cleared to ship — a
+source-fidelity spot-check on the new Cheiro/Benham quotations in
+`advanced/01-minor-lines-overview.mdx` and an editorial reconciliation of the
+branch's five stale `docs/*.md` files against current `main`'s narrative are
+still needed. This audit does not authorize merging the branch.
 
 New-lesson work runs under the `AGENTS.md` article workflow and feature-branch
 review gate: pre-draft report, write to file, self-review, validation, then commit
