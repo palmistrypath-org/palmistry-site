@@ -19,17 +19,17 @@
     {
       "task_id": "PP-RELAY-004",
       "revision": 1,
-      "status": "DISPATCHING",
+      "status": "MERGE_APPROVED",
       "task_path": ".ai-ops/tasks/PP-RELAY-004.md",
       "result_path": ".ai-ops/results/PP-RELAY-004-r1.json",
       "dispatched_at": null,
-      "result_discovered_at": null,
+      "result_discovered_at": "2026-08-17T19:14:58Z",
       "reviewed_at": null,
       "merge_approved_at": null,
       "merged_at": null,
-      "pr_number": null,
+      "pr_number": 17,
       "rework_count": 0,
-      "terminal_result": null
+      "terminal_result": "READY_FOR_REVIEW"
     }
   ]
 }
