@@ -11,6 +11,8 @@ The durable sequence remains:
 4. Expand monetization deliberately without weakening trust.
 
 ## Recently completed approved work
+2026-08-17 (Relay PP-RELAY-005): Replayed the approved Batch 3E Simian Line module move onto current `main` — moved from the Lines module to Advanced (Minor Lines & Synthesis) as its fourth lesson, with the old URL preserved through a noindex redirect stub. The Sun/Mercury quote-fidelity rewrite and 3F synthesis/practice work remain outstanding.
+
 2026-08-13 (merged 2026-08-13, PR #12): Technical Remediation Wave added an accessible custom 404 page, expanded `content-audit` to validate both the blog and lessons collections with cross-collection route checks, and converted the five homepage path/hero images from PNG to WebP (~97% byte reduction). No curriculum or content changes. See `docs/audits/TECHNICAL_REMEDIATION_WAVE_2026-08.md`.
 
 2026-08-13: Remediation Batch 3D added *The Thumb and the Fingers* as the fourth Foundations lesson and retitled the hand-shape lesson *Hand Shape, Texture, and Flexibility*, folding skin texture, consistency, and whole-hand flexibility into it as a separate qualifying layer. The core curriculum is now 24 lessons and Foundations has 5. All existing lesson URLs were preserved. One of the approved 25-lesson additions remains outstanding: *Combining What You See* (3F). The batch also adopted the feature-branch review gate recorded in `AGENTS.md`.

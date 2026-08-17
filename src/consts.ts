@@ -37,7 +37,7 @@ export const MODULES: ModuleConfig[] = [
 		slug: 'lines',
 		title: 'The Major Lines',
 		description:
-			'The four major lines — Heart, Head, Life, and Fate — plus the simian line: the shared vocabulary of line quality, then how to locate each line and read its length, depth, and course.',
+			'The four major lines — Heart, Head, Life, and Fate: the shared vocabulary of line quality, then how to locate each line and read its length, depth, and course.',
 		difficulty: 'Beginner',
 	},
 	{
@@ -51,7 +51,7 @@ export const MODULES: ModuleConfig[] = [
 		slug: 'advanced',
 		title: 'Minor Lines & Synthesis',
 		description:
-			'The minor lines — Sun, Mercury, relationship lines, and the Girdle of Venus — and how to bring a whole hand together into one coherent reading.',
+			'The minor lines — Sun, Mercury, relationship lines, and the Girdle of Venus — the simian line, and how to bring a whole hand together into one coherent reading.',
 		difficulty: 'Intermediate',
 	},
 ];

@@ -69,8 +69,10 @@ quality (`lines/line-quality-and-markings`), and mount firmness (Mounts module).
 ## Not implemented — do not assume otherwise
 The curriculum is **24 lessons, not 25**. Still outstanding: Combining What You
 See (3F), the `<Practice>` and `<Checkpoint>` components, the second worked
-reading, the simian lesson's module move (3E), and the nails lesson, which
-remains a deliberate non-goal.
+reading, the Sun/Mercury quote-fidelity rewrite in `advanced/01-minor-lines-overview.mdx`,
+and the nails lesson, which remains a deliberate non-goal. The simian lesson's
+module move (3E) is **now implemented** (Relay PP-RELAY-005, 2026-08-17) —
+see `CHANGELOG.md`.
 
 ## Open follow-ups carried out of this batch
 - **No figure created.** Foundations has no designed image system by an existing
@@ -78,8 +80,8 @@ remains a deliberate non-goal.
   one. Spec if revisited: one plate in the Lines module's ornate register whose
   required discrimination is the thumb's two segments against the fingers' three.
 - **Two of three open defects in `blog/beginner/thumb-meaning-palmistry.md` are
-  now fixed** (Relay PP-RELAY-004, 2026-08-17, on branch
-  `claude/relay-PP-RELAY-004-thumb-defects`, not yet merged): the will/logic
+  now fixed** (Relay PP-RELAY-004, 2026-08-17, merged into `main` via PR #17):
+  the will/logic
   framework no longer attributes Benham's naming to Cheiro (Cheiro's own
   second-phalange reading is now described as tact/diplomacy), and the
   unsupported "reaches to or beyond the first joint" thumb-length threshold was
@@ -96,27 +98,27 @@ The **feature-branch review gate** was added to `AGENTS.md` and mirrored in
 step; merging to `main` still requires explicit user review.
 
 ## Next action
-**Batch 3E — Module 4 rebuild**: the simian lesson's module move (taking the
-generic chained/faint cleanup at `lines/06:65` with it), and revising
-`advanced/01` so it teaches the sun and Mercury lines. Then **3F** — synthesis and
-practice: Combining What You See, the capstone revision, `<Practice>`, and module
-`<Checkpoint>`s.
+The simian lesson's module move (3E) is **now implemented** as a fresh bounded
+replay against `main` (Relay PP-RELAY-005, 2026-08-17), not by merging the
+stale branch below. What remains of Batch 3E is **revising `advanced/01`** so
+it teaches the sun and Mercury lines (source-fidelity-sensitive, still
+unimplemented). Then **3F** — synthesis and practice: Combining What You See,
+the capstone revision, `<Practice>`, and module `<Checkpoint>`s.
 
-A branch named `feat/curriculum-wave-3e-3f` already exists on the remote
-(unmerged, no PR opened) with 3E/3F progress. It has now been independently
-audited (Relay PP-RELAY-003, 2026-08-17, revision 2) —
-`docs/audits/CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md`. Findings: the
-branch's changes stay inside the approved 3E/3F scope and pass
-`build`/`content-audit`/`audit:all`. Every curriculum/runtime file merges
-cleanly against current `main` with no textual conflicts, but five docs
-files (`ACTIVE_TASK.md`, `AI_HANDOFF.md`, `CHANGELOG.md`, `CURRENT_STATE.md`,
-`ROADMAP.md`) produce real Git conflict markers, not just narrative drift.
-Two items remain before it should be shipped: the new Cheiro/Benham
-quotations in `advanced/01-minor-lines-overview.mdx` need a source-fidelity
-spot-check (no web access in the audit), and those five docs files need
-conflict resolution and editorial reconciliation against current `main`'s
-narrative rather than a blind merge. The audit does not authorize merging
-the branch.
+A branch named `feat/curriculum-wave-3e-3f` still exists on the remote
+(unmerged, no PR opened) with 3E/3F progress, independently audited (Relay
+PP-RELAY-003, 2026-08-17, revision 2) —
+`docs/audits/CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md`. Its Simian Line
+portion is now superseded by the PP-RELAY-005 replay above and should not be
+pulled from the branch. Its remaining scope — the Sun/Mercury rewrite and all
+3F work — is unaffected: the branch passes `build`/`content-audit`/`audit:all`
+and merges cleanly against current `main` for curriculum/runtime files, but
+five docs files (`ACTIVE_TASK.md`, `AI_HANDOFF.md`, `CHANGELOG.md`,
+`CURRENT_STATE.md`, `ROADMAP.md`) produce real Git conflict markers, not just
+narrative drift, and the new Cheiro/Benham quotations in
+`advanced/01-minor-lines-overview.mdx` still need a source-fidelity spot-check
+(no web access in the audit). The audit does not authorize merging the
+branch.
 
 Do not pull later batches forward. 3C and 3D are now merged (see above); apply
 the same no-unprompted-merge discipline to whatever branch carries 3E/3F.

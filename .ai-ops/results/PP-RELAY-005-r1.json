@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-005",
+  "revision": 1,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Replayed the already-approved, independently audited Batch 3E Simian Line module move onto current main as a fresh bounded implementation, per the PP-RELAY-005 task packet, rather than merging the stale feat/curriculum-wave-3e-3f branch. Moved src/content/lessons/lines/06-simian-line.mdx to src/content/lessons/advanced/simian-line.mdx (route /learn/advanced/simian-line/), now the fourth lesson of Minor Lines & Synthesis (order: 4, difficulty: intermediate); bumped advanced/04-how-to-give-a-reading.mdx to order: 5 to stay collision-free. Replaced the lesson's now-false 'taught in this module' line-quality self-reference with a link to line-quality-and-markings. Preserved the old /learn/lines/06-simian-line/ URL with a new noindex, follow stub page that canonicalizes and meta-refreshes to the new route, added to the indexability noindex allowlist (excluded from sitemap/Pagefind) and exempted from the lesson-schema requirement in the schema audit. Added an optional canonicalPath override prop to BaseHead.astro for the stub only; every other caller is unaffected. Repointed the three direct internal references to the old lesson URL (simian-line.md relatedLesson, the m-line-palmistry.md inline link, and the glossary entry) and updated the Lines/Advanced module descriptions in consts.ts. Updated canonical docs to correct a stale note that PP-RELAY-004 was unmerged (it merged via PR #17) and to record the 3E Simian move as shipped. No Sun/Mercury rewrite or other 3F content/practice work was touched; the stale branch was not merged, rebased, or cherry-picked.",
+  "pr_number": 18,
+  "verification": [
+    "npm run build: passed, all routes emitted including both /learn/lines/06-simian-line/ (noindex stub) and /learn/advanced/simian-line/ (moved lesson)",
+    "npm run content-audit: passed (53 blog posts, 24 lessons valid; only pre-existing unrelated non-blocking description-length warnings, including simian-line.mdx's, unchanged from before the move)",
+    "npm run audit:all (link, image, schema, indexability, accessibility): all passed; schema audit confirms 24 lessons carry LearningResource + BreadcrumbList and the stub page is correctly exempted",
+    "git diff --check: clean, no whitespace errors",
+    "grep for 06-simian-line and simian-line across src/: only the intentional stub route, the indexability allowlist entry, and the moved lesson's own route/content remain; no stray reference to the old URL",
+    "Inspected dist/ output: old route absent from dist/sitemap*.xml and dist/pagefind; stub HTML carries <meta name=\"robots\" content=\"noindex, follow\">, a canonical link to /learn/advanced/simian-line/, and a 0-second meta-refresh to the new route",
+    "Manual diff review: order uniqueness preserved in both modules, no Sun/Mercury or 3F content introduced, no new palmistry claims/citations/quotations added, only the authorized frontmatter/module-placement/cross-reference/redirect/doc changes are present"
+  ],
+  "human_action": null
+}
