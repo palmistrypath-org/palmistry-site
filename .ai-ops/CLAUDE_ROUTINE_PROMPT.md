@@ -73,4 +73,4 @@ Stop with `HUMAN_REQUIRED` rather than guessing if the task unexpectedly require
 
 ## Stop condition
 
-After the PR/result is produced, stop. Do **not** merge the PR. Do **not** choose the next task. Do **not** continue improving the project. The ChatGPT Director independently reviews the actual diff and the human owner retains the merge gate during this pilot.
+After the PR/result is produced, stop. Do **not** merge the PR. Do **not** choose the next task. Do **not** continue improving the project. The ChatGPT Director independently reviews the actual diff and, when `.ai-ops/state.json` authorizes autonomous merge and no human gate applies, may merge an accepted PR after required checks pass. Human approval is reserved for the explicit human-gated categories in `.ai-ops/README.md`.
