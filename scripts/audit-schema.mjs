@@ -25,9 +25,11 @@
 import { readFileSync, readdirSync, statSync, existsSync } from 'fs';
 import { join, resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { INDEXABILITY_POLICY } from '../src/indexability.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, '..', 'dist');
+const NOINDEX_ROUTES = new Set(INDEXABILITY_POLICY.noindexPaths);
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -54,11 +56,20 @@ function collectHtml(dir, results = []) {
  * /learn/lines/02-heart-line/index.html  → 'lesson'
  * /learn/lines/index.html                → 'other'
  * /index.html                            → 'other'
+ *
+ * Routes on the noindex allowlist (`src/indexability.mjs`) are always 'other',
+ * even under /blog or /learn — e.g. a noindex redirect stub left at a lesson's
+ * old URL is not required to carry lesson schema.
  */
 function classifyPage(relPath) {
   // Normalise to forward-slash, no leading slash
   const p = relPath.replace(/\\/g, '/').replace(/^\//, '');
   const parts = p.split('/');
+
+  const route = `/${p.replace(/index\.html$/, '')}`;
+  if (NOINDEX_ROUTES.has(route)) {
+    return 'other';
+  }
 
   if (parts[0] === 'blog' && parts.length >= 4) {
     // blog / <category> / <slug> / index.html

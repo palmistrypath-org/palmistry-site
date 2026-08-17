@@ -1,0 +1,87 @@
+---
+import BaseHead from '../../../components/BaseHead.astro';
+import Footer from '../../../components/Footer.astro';
+import Header from '../../../components/Header.astro';
+import { SITE_TITLE } from '../../../consts';
+
+const newPath = '/learn/advanced/simian-line/';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead
+			title={`This lesson has moved — ${SITE_TITLE}`}
+			description="The Simian Line lesson now lives in the Minor Lines & Synthesis module."
+			robots="noindex, follow"
+			canonicalPath={newPath}
+		/>
+		<meta http-equiv="refresh" content={`0;url=${newPath}`} />
+	</head>
+	<body>
+		<Header />
+		<main id="main-content" tabindex="-1" data-pagefind-ignore>
+			<section class="moved" aria-labelledby="moved-heading">
+				<h1 id="moved-heading">This lesson has moved</h1>
+				<p class="intro">
+					The Simian Line lesson is now part of the Minor Lines &amp; Synthesis module.
+				</p>
+				<a class="primary-action" href={newPath}>Continue to the Simian Line lesson</a>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+
+<style>
+	main {
+		display: grid;
+		place-items: center;
+		min-height: min(50vh, 32rem);
+	}
+
+	.moved {
+		width: min(100%, 36rem);
+		padding: clamp(2rem, 7vw, 3rem);
+		border: 1px solid rgba(201, 169, 110, 0.22);
+		border-radius: 8px;
+		background: rgba(255, 255, 255, 0.02);
+		box-sizing: border-box;
+		text-align: center;
+	}
+
+	h1 {
+		font-size: clamp(1.5rem, 6vw, 2.2rem);
+	}
+
+	.intro {
+		max-width: 30rem;
+		margin: 1rem auto 1.75rem;
+		color: var(--color-text-muted);
+		font-size: 0.95rem;
+		line-height: 1.8;
+	}
+
+	.primary-action {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 44px;
+		padding: 0.65rem 1.25rem;
+		border-radius: 4px;
+		background: var(--accent);
+		color: var(--color-bg);
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+
+	.primary-action:hover {
+		background: var(--accent-light);
+		color: var(--color-bg);
+		text-decoration: none;
+	}
+</style>

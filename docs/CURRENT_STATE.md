@@ -1,6 +1,6 @@
 # Current State — Palmistry Path
 
-Last repo inventory: 2026-08-16. This page summarizes observed implementation; source code remains authoritative.
+Last repo inventory: 2026-08-17. This page summarizes observed implementation; source code remains authoritative.
 
 ## Product/site
 Palmistry Path is a live-oriented static Astro learning site at `palmistrypath.com`, with a dark atmospheric brand, structured learning path, article library, glossary/search, lead magnet flow, and early paid-product/waitlist groundwork.
@@ -18,6 +18,8 @@ The `lessons` collection is implemented across four modules, 24 lessons. Module 
 Batch 3B (2026-08-11) corrected these labels: module 4 previously claimed to be "Advanced Interpretation" at Advanced difficulty while containing four intermediate lessons on minor lines and synthesis. Slugs and lesson URLs were not changed.
 
 The approved target is 25 core lessons. **Two of the three additions are implemented.** Batch 3C (2026-08-11) added *Line Quality and Markings* as the Lines module's first lesson, taking the curriculum from 22 to 23 and the Lines module to 7. Batch 3D (2026-08-13) added *The Thumb and the Fingers* as the fourth Foundations lesson, taking the curriculum to 24 and Foundations to 5. The remaining addition — Combining What You See (3F) — is not implemented.
+
+Relay PP-RELAY-005 (2026-08-17) moved *The Simian Line* from the Lines module to Advanced, per the already-approved Batch 3E scope: the lesson now lives at `src/content/lessons/advanced/simian-line.mdx`, route `/learn/advanced/simian-line/`, as the module's fourth lesson (`order: 4`); `advanced/04-how-to-give-a-reading.mdx` moved to `order: 5` to keep the module's order collision-free. The Lines module is now 6 lessons and Advanced is 5; the total core curriculum is still 24. The old `/learn/lines/06-simian-line/` URL continues to resolve through a `noindex, follow` stub that canonicalizes and client-redirects to the new route, and is excluded from the sitemap and Pagefind via `src/indexability.mjs`'s noindex allowlist. The lesson's line-quality cross-reference, previously a false "taught in this module" self-reference, now links to `lines/line-quality-and-markings`. No Sun/Mercury rewrite or other 3F content was touched.
 
 Foundations now runs: What Palmistry Is (and Isn't) · How to Read a Palm · Hand Shape, Texture, and Flexibility · The Thumb and the Fingers · Your Active and Passive Hand. The active/passive lesson remains the module's closing transition from single-hand to both-hand work; its file is still `04-active-and-passive-hand.mdx` at `order: 5`.
 
@@ -41,7 +43,7 @@ Quotation integrity is settled for the public-domain sources. Batch 2C (2026-08-
 
 Still open: 20 quotations attributed to Gettings (1965), West (1998), and Fincham (2005) cannot be checked, because those editions are in copyright and not text-searchable. They are unchanged and flagged in `editorial-backlog.md`. Batch 3D added none.
 
-Batch 3D's primary-source pass on the thumb surfaced three defects in `blog/beginner/thumb-meaning-palmistry.md`. Two are now corrected (Relay PP-RELAY-004, 2026-08-17, on unmerged branch `claude/relay-PP-RELAY-004-thumb-defects`): the will/logic phalange framework no longer attributes Benham's naming to Cheiro, whose second-phalange reading in *Palmistry for All* is now described as tact and diplomacy rather than logic; and the "to or beyond the first joint" thumb-length threshold, found in neither author, was replaced with Benham's actual base-segment landmark and setting caveat. The unresolved Gettings quotation remains open. The lessons already attributed the framework to Benham alone.
+Batch 3D's primary-source pass on the thumb surfaced three defects in `blog/beginner/thumb-meaning-palmistry.md`. Two are now corrected (Relay PP-RELAY-004, 2026-08-17, merged into `main` via PR #17): the will/logic phalange framework no longer attributes Benham's naming to Cheiro, whose second-phalange reading in *Palmistry for All* is now described as tact and diplomacy rather than logic; and the "to or beyond the first joint" thumb-length threshold, found in neither author, was replaced with Benham's actual base-segment landmark and setting caveat. The unresolved Gettings quotation remains open. The lessons already attributed the framework to Benham alone.
 
 ## Discovery/navigation
 Implemented:
@@ -57,7 +59,7 @@ Implemented:
 - Bing/indexing support assets/scripts
 - Accessible custom 404 page (`src/pages/404.astro`, emitted as `dist/404.html`), `noindex, follow`, excluded from sitemap and Pagefind
 
-Utility/private indexability policy is explicit: `/guide/thank-you/`, `/search/`, and placeholder `/contact/` are built but marked `noindex`, excluded from sitemap, and excluded from Pagefind. `/print/complete-reference/` is treated as private paid-product generation content and is not emitted as a public route.
+Utility/private indexability policy is explicit: `/guide/thank-you/`, `/search/`, and placeholder `/contact/` are built but marked `noindex`, excluded from sitemap, and excluded from Pagefind. `/print/complete-reference/` is treated as private paid-product generation content and is not emitted as a public route. The same noindex allowlist (`src/indexability.mjs`) now also covers `/learn/lines/06-simian-line/`, the redirect stub left behind by the Simian Line module move (PP-RELAY-005); the schema audit (`scripts/audit-schema.mjs`) treats any noindex-allowlisted route as exempt from the lesson `LearningResource` schema requirement.
 
 ## Email/lead magnet/products
 Implemented in the repo:

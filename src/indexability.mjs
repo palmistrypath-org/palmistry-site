@@ -3,6 +3,7 @@ const NOINDEX_PATHS = new Set([
 	'/contact/',
 	'/guide/thank-you/',
 	'/search/',
+	'/learn/lines/06-simian-line/',
 ]);
 
 const PRIVATE_PATHS = new Set([

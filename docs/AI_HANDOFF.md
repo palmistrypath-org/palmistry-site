@@ -210,12 +210,17 @@ Key current implementation facts are summarized in `CURRENT_STATE.md` and `ARCHI
 Batches 3B–3D and the Technical Remediation Wave are merged into `main` (see
 above). Await the user's next Palmistry Path objective.
 
-The remaining phases: **3E** is the module 4 rebuild — the simian lesson's module
-move (take the generic chained/faint cleanup at `lines/06:65` with it) and
-revising `advanced/01` so it teaches the sun and Mercury lines; **3F** is
-synthesis and practice — Combining What You See, the capstone revision,
-`<Practice>`, and module `<Checkpoint>`s. Do not pull later batches forward and do
-not reorder modules.
+**2026-08-17 (Relay PP-RELAY-005):** the simian lesson's module move — the first
+half of Batch 3E — is **now implemented**, replayed as a fresh bounded change
+against current `main` rather than by merging `feat/curriculum-wave-3e-3f`. See
+`CHANGELOG.md` and `CURRENT_STATE.md`. Do not treat this as reopening or
+reworking that move.
+
+The remaining phases: **3E** still needs `advanced/01-minor-lines-overview.mdx`
+revised so it teaches the sun and Mercury lines (source-fidelity-sensitive,
+unimplemented); **3F** is synthesis and practice — Combining What You See, the
+capstone revision, `<Practice>`, and module `<Checkpoint>`s. Do not pull later
+batches forward and do not reorder modules.
 
 A remote branch `feat/curriculum-wave-3e-3f` already exists with 3E/3F work (no
 PR opened yet). It has since been independently audited (Relay PP-RELAY-003,
