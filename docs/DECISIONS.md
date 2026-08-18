@@ -2,6 +2,13 @@
 
 Only durable decisions belong here. Newest entries first.
 
+## 2026-08-18 - Lesson `order` uniqueness stays in `content-audit`; no separate validator
+**Decision:** Per-module lesson `order` uniqueness is enforced by the existing check in `scripts/audit-content.mjs` and nothing further is added. No new validator script, no test runner, and no committed fixture curriculum. The guard's contract is: duplicate `order` values are blocking only within the same module, distinct modules may reuse the same numeric order, and the error names the module, the order value, and both colliding files.
+
+**Why:** Relay PP-RELAY-013 was authorized to close this as an open tooling gap, on the strength of `docs/audits/CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md`'s claim that no such check existed anywhere in the pipeline. Inspection showed the check was already present, and byte-identical on `main` and on the audited 3E/3F branch. Reproducing the exact historical Advanced-module `order: 4` pair made `content-audit` exit non-zero with a message naming both files, so the requested behaviour already ships. Adding a second checker would have duplicated a working guard, and the repo declares no test runner, so a fixture harness would have meant new parallel tooling for a check that ordinary CI already exercises on every pull request.
+
+**Consequences:** The audit doc's §2 paragraph and open item 3 are corrected/withdrawn in place so the false premise cannot re-authorize this work. `CURRENT_STATE.md` now states the guard's contract and its CI coverage explicitly. Anyone tempted to add lesson-ordering validation should extend the existing block in `audit-content.mjs` rather than introduce a parallel script. A future genuine gap here — for example gaps or non-contiguous sequences within a module, which is deliberately *not* checked — remains available as separate authorized work.
+
 ## 2026-08-11 - Seven planetary mounts across eight mount regions
 **Decision:** The site publishes one mount model. There are **seven planetary mounts** — Jupiter, Saturn, Apollo/Sun, Mercury, Venus, Luna/Moon, and Mars — occupying **eight physical mount regions**, because Mars appears in two distinct areas of the palm (Lower/Inner and Upper/Outer). The **Plain of Mars** is a separate central region between them: read in its own right, but not a raised planetary mount, not an eighth planetary type, and not a ninth mount. The preferred first explanation is "seven planetary mounts occupy eight mount regions, because Mars appears in two distinct areas of the palm"; concise equivalents are fine where space is tight. An unqualified "the eight mounts" is not acceptable where it implies eight planetary types — use "eight mount regions" when the count refers to physical areas.
 

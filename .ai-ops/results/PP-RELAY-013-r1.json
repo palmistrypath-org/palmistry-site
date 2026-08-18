@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-013",
+  "revision": 1,
+  "result": "READY_FOR_REVIEW",
+  "summary": "No validator was added, because the authorized one already exists. scripts/audit-content.mjs already keys each lesson's order by its top-level content directory and reports a blocking error on a same-module collision, and it is byte-identical on main and on the audited 3E/3F branch (git diff origin/feat/curriculum-wave-3e-3f main -- scripts/audit-content.mjs is empty), so the guard was present when the audit that reported it missing was written. .github/workflows/ci.yml already runs content-audit on every pull request to main and every push to main, so a collision cannot reach main through ordinary CI. Every acceptance criterion in the packet is already satisfied by main and was verified rather than assumed, including reproduction of the exact historical Advanced-module order: 4 pair. Building a second checker would have duplicated a working guard, and the repo declares no test runner, so a fixture harness would have meant the parallel tooling the packet discourages; the packet's stated fallback (demonstrate the failure mode locally without committing fake curriculum) was used instead. The shipped change is therefore a docs-only correction of the stale premise that produced this task: the 3E/3F branch audit's section 2 claim carries a dated correction note and its open item 3 is struck through and withdrawn, CURRENT_STATE.md now states the guard's contract and CI coverage explicitly (and its lesson count is corrected from 24 to the actual 25), DECISIONS.md records that lesson-ordering validation stays in audit-content.mjs rather than gaining a parallel script, and CHANGELOG.md/AI_HANDOFF.md carry the dated entry and continuation context. The original near-miss most plausibly predates PR #12, the Technical Remediation Wave that extended content-audit to the lessons collection. Director judgment is invited on whether a documentation correction under a packet whose stated objective was code merits an accepted iteration.",
+  "pr_number": 26,
+  "verification": [
+    "Existing guard located at scripts/audit-content.mjs:216-232; keys order by top-level content directory, so collisions are blocking only within the same module.",
+    "Exact historical failure reproduced: advanced/simian-line.mdx and advanced/04-how-to-give-a-reading.mdx both at order: 4 makes npm run content-audit exit 1 with 'Duplicate order 4 in module \"advanced\" (same as ...)', naming both colliding files.",
+    "Second same-module pair reproduced: advanced/03-girdle-of-venus.mdx moved to order: 4 exits 1 with the same message shape.",
+    "Three-way collision in the lines module reproduced: exits 1 with one error per colliding file.",
+    "Cross-module reuse confirmed valid: baseline passes with four modules legitimately reusing orders 1-6 (foundations 1-5, lines 1-6, mounts 1-8, advanced 1-6).",
+    "All reproductions were made in the working tree and reverted; git status confirmed clean afterwards. No fixture or fake curriculum is committed.",
+    "CI integration confirmed: .github/workflows/ci.yml runs npm run content-audit on pull_request to main and push to main.",
+    "Byte-identity confirmed: git diff origin/feat/curriculum-wave-3e-3f main -- scripts/audit-content.mjs is empty, so the audit's 'no automated check anywhere in the pipeline' claim was wrong against the script on its own branch.",
+    "npm run build: 98 pages built successfully.",
+    "npm run content-audit: passes cleanly, 53 blog posts and 25 lessons valid.",
+    "npm run audit:all: all sub-checks pass (links, images, schema, indexability, accessibility).",
+    "git diff --check: no whitespace errors.",
+    "Final diff bounded to five docs files and this result artifact; no runtime, script, lesson, frontmatter, route, or content change. package-lock.json unmodified after npm ci.",
+    "Not verified and deliberately out of scope: the 3E/3F audit's other open items were not re-checked and may carry the same staleness; order gaps and non-contiguous sequences within a module remain genuinely unchecked by any audit."
+  ],
+  "human_action": null
+}
