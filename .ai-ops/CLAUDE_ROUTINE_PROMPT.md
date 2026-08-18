@@ -50,6 +50,37 @@ After the startup gate passes:
 
 For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the result branch and normally do **not** create a dummy PR solely to signal status.
 
+## Execution telemetry — required, compact, and truthful
+
+Every terminal result artifact must include an `execution` object so the Director and human owner can see how the Routine actually performed the work without opening the Claude session transcript.
+
+Record only information known from the run; never infer or invent model names, token counts, or subagent activity that the environment does not expose.
+
+```json
+"execution": {
+  "primary_role": "implementation-owner",
+  "primary_model": null,
+  "subagents_used": false,
+  "subagents": [],
+  "tools_or_methods": [],
+  "validation": [],
+  "notes": null
+}
+```
+
+Rules:
+- `primary_role` should normally be `implementation-owner` unless the task was purely analysis/review.
+- `primary_model` is the exact model name only when the environment exposes it reliably; otherwise `null`.
+- `subagents_used` must reflect whether subagents/workers were actually invoked.
+- When subagents are used, add one concise item per subagent to `subagents`, for example `{"role":"source-review","objective":"Verify Sun/Mercury quotation fidelity","model":null,"outcome":"completed"}`. Keep objectives and outcomes short.
+- If no subagents were used, keep `subagents_used: false` and `subagents: []`; this is a valid and often preferable result for small tasks.
+- `tools_or_methods` is a short list of meaningful execution methods, not a transcript (for example `git`, `grep`, `targeted source review`).
+- `validation` is a compact list of checks actually run; it may overlap with the top-level `verification` evidence but should be shorter and status-oriented.
+- `notes` is only for a material execution detail such as why subagents were intentionally unnecessary; otherwise `null`.
+- Do not add verbose chain-of-thought, hidden reasoning, prompts, or full subagent transcripts. Telemetry is operational metadata only.
+
+The PR summary may include a one-line execution note when useful, but the durable result artifact is authoritative.
+
 ## PR body contract
 
 For `READY_FOR_REVIEW`, include a concise summary, tests/evidence, risks, and exactly one result footer near the end:
