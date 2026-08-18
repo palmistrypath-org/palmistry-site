@@ -1,0 +1,64 @@
+---
+/**
+ * CheckpointItem — one prompt inside a <Checkpoint>, with its answer hidden
+ * behind a native disclosure.
+ *
+ * Exists so every checkpoint answer across the curriculum uses identical,
+ * keyboard-accessible markup rather than sixteen hand-written <details> blocks
+ * that can drift apart. No JavaScript: <details> opens on Enter or Space when the
+ * <summary> has focus, and the global focus-visible ring already covers it.
+ *
+ * The answer goes in the default slot so it stays authored as ordinary MDX.
+ */
+interface Props {
+	question: string;
+	/** Overrides the disclosure label, e.g. "Compare your answer". */
+	reveal?: string;
+}
+
+const { question, reveal = 'Show a worked answer' } = Astro.props;
+---
+
+<li class="checkpoint-item">
+	<p class="checkpoint-question">{question}</p>
+	<details class="checkpoint-answer">
+		<summary>{reveal}</summary>
+		<div class="checkpoint-answer-body">
+			<slot />
+		</div>
+	</details>
+</li>
+
+<style>
+	.checkpoint-question {
+		margin: 0 0 0.5em 0;
+	}
+
+	.checkpoint-answer > summary {
+		cursor: pointer;
+		font-size: 0.85em;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--accent);
+	}
+
+	.checkpoint-answer > summary:hover {
+		color: var(--accent-light);
+	}
+
+	.checkpoint-answer-body {
+		margin-top: 0.75em;
+		padding-left: 1em;
+		border-left: 2px solid rgba(201, 169, 110, 0.3);
+		font-size: 0.95em;
+		color: var(--color-text-muted);
+	}
+
+	.checkpoint-answer-body :global(> :first-child) {
+		margin-top: 0;
+	}
+
+	.checkpoint-answer-body :global(> :last-child) {
+		margin-bottom: 0;
+	}
+</style>

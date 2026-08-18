@@ -1,0 +1,70 @@
+---
+/**
+ * Checkpoint — a self-check at the end of a module.
+ *
+ * Purely presentational. There is deliberately no score, no pass/fail, no
+ * progress tracking, no persistence and no JavaScript: answers are revealed by
+ * native <details>/<summary>, which is keyboard-accessible without any of that.
+ * This is a place to test your own understanding, not a quiz engine, and nothing
+ * here credentials anyone.
+ *
+ * Prompts go in the default slot as <CheckpointItem> elements.
+ */
+interface Props {
+	title?: string;
+	/** Overrides the standard reassurance line under the heading. */
+	intro?: string;
+}
+
+const {
+	title = 'Module checkpoint',
+	intro = 'Work through these before moving on. If any of them leaves you unsure, go back to the lesson it draws on — there is no penalty for revisiting a lesson, and nothing here is a test you can fail.',
+} = Astro.props;
+
+const headingId = `checkpoint-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<section class="checkpoint" aria-labelledby={headingId}>
+	<h2 id={headingId} class="checkpoint-heading">{title}</h2>
+	<p class="checkpoint-intro">{intro}</p>
+	<ol class="checkpoint-list">
+		<slot />
+	</ol>
+</section>
+
+<style>
+	.checkpoint {
+		margin: 3em 0 2em;
+		padding: 1.75em;
+		border: 1px solid rgba(178, 170, 203, 0.3);
+		background-color: rgba(178, 170, 203, 0.05);
+	}
+
+	.checkpoint-heading {
+		font-size: 1em;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--color-heading);
+		margin: 0 0 0.6em 0;
+	}
+
+	.checkpoint-intro {
+		font-size: 0.9em;
+		color: var(--color-text-muted);
+		font-style: italic;
+		margin: 0 0 1.25em 0;
+	}
+
+	.checkpoint-list {
+		margin: 0;
+		padding-left: 1.4em;
+	}
+
+	.checkpoint-list :global(> li) {
+		margin-bottom: 1.25em;
+	}
+
+	.checkpoint-list :global(> li:last-child) {
+		margin-bottom: 0;
+	}
+</style>
