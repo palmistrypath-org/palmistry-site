@@ -9,6 +9,20 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
+**Relay PP-RELAY-013 (2026-08-18) closed as no-code-change.** It was authorized
+to add a per-module duplicate lesson `order` check; that check already exists in
+`scripts/audit-content.mjs` and already runs in CI on every pull request to
+`main`, so nothing was built. The premise came from
+`docs/audits/CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md`, whose §2 claim and
+open item 3 asserted no such check existed anywhere in the pipeline; both are now
+corrected/withdrawn in place, and `DECISIONS.md` records that lesson-ordering
+validation stays in `audit-content.mjs` rather than gaining a parallel script.
+**Before authorizing tooling work from an audit document, check the claim against
+the current script** — that audit's other open items were not re-verified here
+and may carry the same staleness. One genuinely unchecked adjacent condition
+remains available as separate work if wanted: `order` *gaps* and non-contiguous
+sequences within a module are deliberately not validated.
+
 Current focus: none in implementation. `ACTIVE_TASK.md` is INACTIVE. Batches
 3A–3D (PRs #8–#11) and the Technical Remediation Wave (PR #12) are now merged
 into `main`, confirmed by repository history as of 2026-08-16 — see the
