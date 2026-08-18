@@ -2,6 +2,11 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-18 - Blank relatedArticle cleanup (Relay PP-RELAY-007)
+- Removed the blank `relatedArticle: ""` frontmatter field from the two advanced lessons that had carried it as an unused legacy value: `src/content/lessons/advanced/01-minor-lines-overview.mdx` and `src/content/lessons/advanced/04-how-to-give-a-reading.mdx`. The field is optional (`z.string().optional()` in `src/content.config.ts`); no related article was invented to fill it.
+- This eliminates the two "relatedArticle is blank; optional legacy value ignored" warnings that `npm run content-audit` had reported as pre-existing since Relay PP-RELAY-004/005/006 (see prior changelog entries); the audit now passes with zero warnings.
+- No title, slug, route, lesson ordering, body copy, palmistry claims, or indexability behavior changed. Verified with `npm run content-audit`, `npm run build`, and `git diff --check`.
+
 ## 2026-08-17 - Frontmatter description-length cleanup (Relay PP-RELAY-006)
 - Shortened the `description` frontmatter field on the four lesson files the baseline `npm run content-audit` flagged for exceeding the 170-character SEO target: `src/content/lessons/advanced/simian-line.mdx`, `src/content/lessons/foundations/thumb-and-fingers.mdx`, `src/content/lessons/lines/line-quality-and-markings.mdx`, and `src/content/lessons/mounts/08-mount-of-mars.mdx`.
 - Each revised description trims the existing wording only (no new palmistry claim, source attribution, or search-intent change) and stays within the audit's accepted length.
