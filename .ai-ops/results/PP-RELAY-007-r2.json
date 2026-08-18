@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-007",
+  "revision": 2,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Removed the blank relatedArticle: \"\" frontmatter field from the two advanced lessons that carried it as an unused legacy value (01-minor-lines-overview.mdx, 04-how-to-give-a-reading.mdx). The field is optional in the content schema; no related article was invented to fill it.",
+  "pr_number": null,
+  "verification": [
+    "Baseline npm run content-audit (on main @ e89768c) reported 2 warnings: 'relatedArticle is blank; optional legacy value ignored' on 01-minor-lines-overview.mdx and 04-how-to-give-a-reading.mdx.",
+    "Post-edit npm run content-audit reports 0 warnings; audit passes cleanly for 53 blog posts and 24 lessons.",
+    "npm run build completes successfully (97 pages built).",
+    "git diff --check reports no whitespace errors.",
+    "Reviewed final diff: only the 2 blank relatedArticle lines removed, plus docs/CHANGELOG.md (dated entry) and this result artifact changed; no title/slug/route/order/body/schema/indexability change."
+  ],
+  "human_action": null
+}
