@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-010",
+  "revision": 1,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Replayed the already-audited, source-safe Batch 3F Practice treatment across all five Foundations lessons and added the already-audited end-of-module Checkpoint to the closing Active and Passive Hand lesson, without changing established palmistry content. Each Foundations lesson's closing hands-on/takeaway section is now wrapped in <Practice title=\"...\"> in place of a plain ## heading, importing the existing Practice.astro (unmodified). Added Checkpoint.astro and CheckpointItem.astro (reused unmodified from the audited branch) and a four-item <Checkpoint title=\"Checkpoint - Foundations\"> block to 04-active-and-passive-hand.mdx, matching the audited branch treatment exactly; its prompts were independently verified to recap only material already established earlier in the current Foundations module. One unrelated frontmatter description wording change bundled into the audited branch's commit for thumb-and-fingers.mdx was deliberately not replayed as out of the mechanical Practice/Checkpoint scope. Updated docs/CURRENT_STATE.md and docs/CHANGELOG.md.",
+  "pr_number": null,
+  "verification": [
+    "npm run build: 98 pages built successfully, including all five /learn/foundations/ routes; the closing lesson renders four native <details>/<summary> checkpoint disclosures and all five render the accessible <section class=\"practice\" aria-labelledby=...> disclosure natively.",
+    "npm run content-audit: passes cleanly, 53 blog posts and 25 lessons valid.",
+    "npm run audit:all: all sub-checks pass (links, images, schema - LearningResource + BreadcrumbList unchanged, indexability, accessibility).",
+    "git diff --check: no whitespace errors.",
+    "diff against origin/feat/curriculum-wave-3e-3f for each target file: byte-identical for the four Practice-only lessons and for the Checkpoint block/components in 04-active-and-passive-hand.mdx; thumb-and-fingers.mdx intentionally diverges from the audited branch by one line (frontmatter description left at current-main wording, out of authorized scope).",
+    "Manual recap check: each of the four checkpoint prompts in 04-active-and-passive-hand.mdx was traced to material already taught earlier in 03-hand-shapes.mdx, thumb-and-fingers.mdx, or the same lesson's own body; no new claims introduced.",
+    "Final diff bounded to: the five Foundations lesson files, two new Checkpoint component files, docs/CURRENT_STATE.md, docs/CHANGELOG.md, and this result artifact. No lesson prose, routes, ordering, source attribution, or quotations changed; Practice.astro untouched; package-lock.json reverted after npm install touched it."
+  ],
+  "human_action": null
+}
