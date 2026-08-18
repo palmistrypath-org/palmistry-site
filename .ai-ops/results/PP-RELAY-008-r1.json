@@ -4,7 +4,7 @@
   "revision": 1,
   "result": "READY_FOR_REVIEW",
   "summary": "Replayed the already-audited Batch 3F 'Combining What You See' synthesis lesson onto current main as a bounded increment, without merging the stale feat/curriculum-wave-3e-3f branch. Added src/content/lessons/advanced/combining-what-you-see.mdx (order: 5, immediately after the Simian Line) and src/components/Practice.astro (reused unmodified from the audited branch version, stateless/no client JS). Moved advanced/04-how-to-give-a-reading.mdx from order: 5 to order: 6 (order field only, body untouched) to stay collision-free. No blank relatedArticle introduced; the field is omitted, matching current main's convention. Core curriculum reaches the approved 25-lesson target. Updated docs/CURRENT_STATE.md and docs/CHANGELOG.md.",
-  "pr_number": null,
+  "pr_number": 21,
   "verification": [
     "npm run build: 98 pages built successfully, including the new /learn/advanced/combining-what-you-see/ route.",
     "npm run content-audit: passes cleanly, 53 blog posts and 25 lessons valid, no order-collision or blank relatedArticle warnings.",
