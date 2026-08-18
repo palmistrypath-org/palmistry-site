@@ -230,11 +230,17 @@ against current `main` rather than by merging `feat/curriculum-wave-3e-3f`. See
 `CHANGELOG.md` and `CURRENT_STATE.md`. Do not treat this as reopening or
 reworking that move.
 
-The remaining phases: **3E** still needs `advanced/01-minor-lines-overview.mdx`
+The remaining phases, updated 2026-08-18 (Relay PP-RELAY-014 documentation
+reconciliation): **3E** still needs `advanced/01-minor-lines-overview.mdx`
 revised so it teaches the sun and Mercury lines (source-fidelity-sensitive,
-unimplemented); **3F** is synthesis and practice — Combining What You See, the
-capstone revision, `<Practice>`, and module `<Checkpoint>`s. Do not pull later
-batches forward and do not reorder modules.
+unimplemented). **3F**'s synthesis/practice rollout has since shipped —
+*Combining What You See* (Relay PP-RELAY-008), `<Practice>` across
+Foundations, Lines, Mounts, and three of Advanced's six lessons (Relay
+PP-RELAY-008–011), and `<Checkpoint>` across Foundations, Lines, and Mounts
+(Relay PP-RELAY-010–012), all 2026-08-18; see `CURRENT_STATE.md` and
+`CHANGELOG.md`. What remains of 3F is narrower: the capstone body revision
+(the second worked reading). Do not pull later batches forward and do not
+reorder modules.
 
 A remote branch `feat/curriculum-wave-3e-3f` already exists with 3E/3F work (no
 PR opened yet). It has since been independently audited (Relay PP-RELAY-003,

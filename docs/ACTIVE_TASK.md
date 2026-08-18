@@ -67,11 +67,16 @@ flexibility (`foundations/03`), thumb-tip flexibility (the new lesson), line
 quality (`lines/line-quality-and-markings`), and mount firmness (Mounts module).
 
 ## Not implemented — do not assume otherwise
-The curriculum is **24 lessons, not 25**. Still outstanding: Combining What You
-See (3F), the `<Practice>` and `<Checkpoint>` components, the second worked
-reading, the Sun/Mercury quote-fidelity rewrite in `advanced/01-minor-lines-overview.mdx`,
-and the nails lesson, which remains a deliberate non-goal. The simian lesson's
-module move (3E) is **now implemented** (Relay PP-RELAY-005, 2026-08-17) —
+**Superseded 2026-08-18 (Relay PP-RELAY-014):** the curriculum reached the
+approved **25-lesson target** with Relay PP-RELAY-008's *Combining What You
+See* (2026-08-18), and Relay PP-RELAY-009 through PP-RELAY-012 (2026-08-18)
+shipped `<Practice>` across Foundations, Lines, Mounts, and three of
+Advanced's six lessons, plus `<Checkpoint>` across Foundations, Lines, and
+Mounts — see `CURRENT_STATE.md` and `CHANGELOG.md`. Still outstanding: the
+capstone body revision (the second worked reading), the Sun/Mercury
+quote-fidelity rewrite in `advanced/01-minor-lines-overview.mdx`, and the
+nails lesson, which remains a deliberate non-goal. The simian lesson's
+module move (3E) was implemented (Relay PP-RELAY-005, 2026-08-17) —
 see `CHANGELOG.md`.
 
 ## Open follow-ups carried out of this batch

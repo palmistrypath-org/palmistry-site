@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-014",
+  "revision": 1,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Reconciled the three canonical operating docs that still made the stale claim that the core curriculum is 24 lessons and that Combining What You See / the 3F Practice-Checkpoint rollout is still outstanding. Verified against current main: src/content/lessons/ contains 25 .mdx files including advanced/combining-what-you-see.mdx, and CHANGELOG.md/CURRENT_STATE.md confirm Relay PP-RELAY-008 through PP-RELAY-012 (all 2026-08-18) already shipped the 25th lesson plus the <Practice> wrapper (Foundations, Lines, Mounts, and three of Advanced's six lessons) and the <Checkpoint> component (Foundations, Lines, Mounts). docs/CURRENT_STATE.md was already accurate (corrected in PP-RELAY-013) and was left unchanged per the packet's minimal-edit instruction. docs/ROADMAP.md, docs/ACTIVE_TASK.md, and docs/AI_HANDOFF.md each still asserted 24 lessons and/or unshipped Combining What You See / Practice / Checkpoint work; each got a dated 2026-08-18 correction that states the current, precise rollout (naming exactly which lessons/modules have <Practice> vs <Checkpoint>, since Advanced only has 3 of 6 lessons wrapped and has no Checkpoint yet, to avoid overstating the rollout as the packet's acceptance criteria warned against) and narrows the still-outstanding work to the capstone body revision (second worked reading) and the Sun/Mercury quote-fidelity rewrite in advanced/01-minor-lines-overview.mdx. Historical dated entries in ROADMAP.md and AI_HANDOFF.md that were accurate as of their own date (the 2026-08-13 Batch 3D entry, the 2026-08-17 PP-RELAY-005 entry) were left intact rather than rewritten, per the packet's guardrail against altering historical records; ROADMAP.md's new top entry explicitly frames the two entries below it as predating the rollout. No runtime, content, frontmatter, route, or component file was touched. This also fixed a pre-existing local Git-state problem unrelated to the docs themselves: this container's local main branch was stale/diverged from origin/main (a rewritten remote history), which was reset to origin/main (confirmed independently via the GitHub API commit lookup, matching the dispatch payload's state commit) before creating the task branch; no uncommitted work existed on the stale local main, so nothing was lost.",
+  "pr_number": null,
+  "verification": [
+    "find src/content/lessons -name '*.mdx' | wc -l: 25, including advanced/combining-what-you-see.mdx.",
+    "Grepped docs/ for '24 lessons', 'Combining What You See', '3F', 'Batch 3F', and lesson-order-gap phrasing before and after edits; remaining hits are either accurate historical dated entries (now explicitly framed as superseded/predating the rollout) or CHANGELOG.md/audit files, which are out of the authorized scope.",
+    "docs/CURRENT_STATE.md read in full: already states 25 lessons, the full Practice/Checkpoint rollout by module with exact lesson names, and the PP-RELAY-013 lesson-order-guard finding accurately. Left unchanged.",
+    "docs/ROADMAP.md, docs/ACTIVE_TASK.md, docs/AI_HANDOFF.md: each had a stale present-tense or forward-looking '24 lessons' / outstanding-3F claim; each corrected with a dated 2026-08-18 note cross-referencing CURRENT_STATE.md and CHANGELOG.md rather than duplicating full detail.",
+    "git diff --check: no whitespace/conflict-marker errors.",
+    "git diff docs/ reviewed in full: change set limited to docs/ACTIVE_TASK.md, docs/AI_HANDOFF.md, docs/ROADMAP.md plus this result artifact. No runtime/content/frontmatter/route/component files touched.",
+    "git status: clean except the intended docs + result-artifact changes on the task branch.",
+    "Docs-only change per the packet; no build/content-audit run required and none was run, consistent with AGENTS.md's wiki/agent-doc-only validation tier."
+  ],
+  "human_action": null
+}
