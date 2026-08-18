@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-012",
+  "revision": 1,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Replayed the already-audited, source-safe Batch 3F Practice treatment across all eight current Mounts lessons and added the already-audited end-of-module Checkpoint to the closing Mount of Mars lesson, without changing established palmistry content. Each Mounts lesson's closing hands-on/takeaway section is now wrapped in <Practice> (or <Practice title=\"...\"> matching the audited branch) in place of a plain heading or bare paragraph, importing the existing Practice.astro (unmodified). 08-mount-of-mars.mdx now carries a four-item <Checkpoint title=\"Checkpoint - The Mounts\"> block using the existing Checkpoint.astro/CheckpointItem.astro components (unmodified), matching the audited branch's wording exactly and recapping only the seven-planetary-mounts/eight-region model, the two-part elevation-plus-firmness assessment, and neighbour-relative reading already established earlier in the module. One unrelated frontmatter description wording change bundled into the audited branch's commit for 08-mount-of-mars.mdx was deliberately not replayed, following the PP-RELAY-010/011 precedent, as out of the mechanical Practice/Checkpoint scope. Updated docs/CURRENT_STATE.md and docs/CHANGELOG.md.",
+  "pr_number": 25,
+  "verification": [
+    "npm run build: 98 pages built successfully, including all eight /learn/mounts/ routes; Mount of Mars renders four native <details>/<summary> checkpoint disclosures and the other seven lessons render the accessible <section class=\"practice\" aria-labelledby=...> disclosure natively.",
+    "npm run content-audit: passes cleanly, 53 blog posts and 25 lessons valid.",
+    "npm run audit:all: all sub-checks pass (links, images, schema - LearningResource + BreadcrumbList unchanged, indexability, accessibility).",
+    "git diff --check: no whitespace errors.",
+    "Diff against origin/feat/curriculum-wave-3e-3f for each target file: byte-identical for the seven Practice-only additions and for the Practice/Checkpoint block/components in 01-mounts-overview.mdx and 08-mount-of-mars.mdx; 08-mount-of-mars.mdx intentionally diverges from the audited branch by one line (frontmatter description left at current-main wording, out of authorized scope).",
+    "Manual recap check: each of the four checkpoint prompts in 08-mount-of-mars.mdx was traced to material already taught earlier in the Mounts module (mount count/region arithmetic, elevation-plus-firmness assessment method, neighbour-relative development reading); no new claims introduced.",
+    "Final diff bounded to: the eight Mounts lesson files, docs/CURRENT_STATE.md, docs/CHANGELOG.md, and this result artifact. No lesson prose, routes, ordering, or source attribution changed; Practice.astro/Checkpoint.astro/CheckpointItem.astro untouched; package-lock.json reverted after npm install touched it."
+  ],
+  "human_action": null
+}
