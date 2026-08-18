@@ -1,6 +1,15 @@
-# PP-RELAY-007 — Blank relatedArticle warning cleanup
+# Relay Task Packet
 
-Revision: 1
+Status: AUTHORIZED
+
+## Task ID
+PP-RELAY-007
+
+## Revision
+2
+
+## Revision note
+Revision 1 never reached the Claude worker because the Relay Dispatch gate correctly failed closed: the packet/mirror were missing the gate-required `## Task ID` and `## Revision` sections. Revision 2 repairs only the control-plane packet format. The product task scope and acceptance criteria are unchanged.
 
 ## Objective
 Remove the remaining blank `relatedArticle` content-audit warnings on current `main` using the smallest source-safe metadata correction.
@@ -24,5 +33,27 @@ Remove the remaining blank `relatedArticle` content-audit warnings on current `m
 - Build and content audit pass at their existing acceptance level.
 - Final diff is bounded to the warned metadata, directly necessary docs, and Relay result artifact.
 
-## v2B durable-result contract
-Every worker run that passes startup must create `.ai-ops/results/PP-RELAY-007-r1.json` on a pushed `claude/relay-PP-RELAY-007-...` branch. Allowed terminal results are `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, and `PAUSED_USAGE_LIMIT`. For `READY_FOR_REVIEW`, commit implementation/docs plus the result artifact, push the branch, and open exactly one PR to `main` with the standard Relay footer. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact; a dummy PR is not required. Do not merge or choose another task.
+## Verification
+- Run baseline `npm run content-audit` and record the warned files/reasons.
+- After edits, run `npm run content-audit` again.
+- Run `npm run build`.
+- Run `git diff --check`.
+- Review the final diff for scope drift.
+
+## v2B durable-result contract — REQUIRED
+Every worker run that passes startup must create `.ai-ops/results/PP-RELAY-007-r2.json`, commit it on a pushed `claude/relay-PP-RELAY-007-...` branch, and use one of these terminal results: `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+
+Minimum artifact fields:
+- `schema_version`: 1
+- `task_id`: `PP-RELAY-007`
+- `revision`: 2
+- `result`: one allowed terminal result
+- `summary`: concise outcome
+- `pr_number`: PR number for `READY_FOR_REVIEW`, otherwise normally `null`
+- `verification`: concise verification evidence
+- `human_action`: exact action only when applicable, otherwise `null`
+
+For `READY_FOR_REVIEW`, commit implementation/docs plus the result artifact, push one `claude/relay-PP-RELAY-007-...` branch, and open exactly one PR to `main` with title prefix `[RELAY PP-RELAY-007]` and matching Relay footers. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and do not create a dummy PR merely to signal completion. Absence of a PR is valid for non-change terminal outcomes.
+
+## Result
+Stop after producing the durable result, pushing the Relay branch, and opening a PR only if the result is `READY_FOR_REVIEW`. Do not merge and do not select subsequent work.
