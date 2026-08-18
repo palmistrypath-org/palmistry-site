@@ -3,63 +3,54 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-012
+PP-RELAY-013
 
 ## Revision
 1
 
 ## Objective
-Replay the already-audited, source-safe Batch 3F Practice treatment across the eight current Mounts lessons and add the already-audited end-of-module Checkpoint to the closing Mount of Mars lesson, without changing established palmistry content.
+Add an automated validation that fails when two lessons in the same curriculum module share the same `order` value, closing the specific audit gap that previously allowed an Advanced-module order collision to pass all existing checks.
 
 ## Why this task is authorized
-The approved Batch 3F direction includes stateless Practice wrappers around existing lesson exercises and end-of-module Checkpoints. Foundations and Lines have now shipped this same bounded learning-structure pattern through PP-RELAY-010 and PP-RELAY-011. Current `main` contains eight Mounts lessons from `01-mounts-overview.mdx` through `08-mount-of-mars.mdx`. The audited `feat/curriculum-wave-3e-3f` branch may be used only as evidence for the previously reviewed Mounts Practice/Checkpoint treatment.
+The audited 3E/3F branch documented a real tooling gap: an earlier branch state had two Advanced lessons with `order: 4`, while `npm run build`, `npm run content-audit`, and `npm run audit:all` all remained green. The collision was corrected manually, but the repository still lacks a guard against recurrence. This is bounded technical validation work with objective pass/fail behavior and no palmistry-content judgment.
 
 ## Authorized scope
-1. Start from current `main`. Inspect all eight current Mounts lesson files, existing `Practice.astro`, `Checkpoint.astro`, and `CheckpointItem.astro`, and the audited branch versions only as evidence.
-2. Replay only the audited `<Practice>` treatment around each Mounts lesson's existing closing hands-on/takeaway material. Preserve underlying lesson prose exactly except for mechanical imports/markup.
-3. Replay the audited Mounts module checkpoint only in the closing lesson `src/content/lessons/mounts/08-mount-of-mars.mdx`, using the existing stateless Checkpoint components.
-4. Before adding the checkpoint, verify every prompt/answer strictly recaps material already established in the current Mounts module and matches the audited branch treatment. If that cannot be established mechanically from repository evidence, return `HUMAN_REQUIRED` rather than improvising.
-5. Preserve frontmatter, routes, ordering, titles, quotations, source attribution, related-content metadata, and indexability except purely mechanical component imports/markup required by this replay.
-6. Update only canonical docs genuinely required by `AGENTS.md` for this shipped learning-structure increment.
+1. Start from current `main` and inspect the lesson content schema plus existing audit/validation scripts and package scripts.
+2. Implement the smallest maintainable automated check that detects duplicate lesson `order` values within the same `module` and exits non-zero with a useful message identifying the conflicting module/order/files.
+3. Integrate the check into the existing validation path that best fits repository conventions so ordinary CI catches future collisions. Prefer extending an existing audit rather than creating unnecessary parallel tooling.
+4. Add a focused regression fixture/test or equivalent deterministic verification if the current audit architecture supports it cheaply; otherwise demonstrate the failure mode with a temporary/local validation method that is not committed as fake content.
+5. Preserve existing validation behavior for valid curriculum content.
+6. Update only directly necessary canonical docs required by `AGENTS.md` to record the new guardrail.
 
-## Editorial/source guardrails
-- This is learning-structure replay, not authorization for editorial rewriting.
-- Do not change, add, remove, soften, strengthen, or reinterpret palmistry claims.
-- Do not change quotations or source attribution.
-- Treat `feat/curriculum-wave-3e-3f` as evidence only; do not merge, rebase, or cherry-pick it wholesale.
-- Do not touch the separately source-sensitive Sun/Mercury rewrite or any other unresolved source-framing item.
-
-## Explicit non-goals
-- No Practice or Checkpoint work outside the Mounts module.
-- No Foundations, Lines, or Advanced changes.
-- No capstone body revision.
-- No Sun/Mercury editorial rewrite.
-- No changes to Practice/Checkpoint visual design.
-- No SEO/indexability, monetization, ads, email, dependency, deployment, or external-service changes.
-- Do not merge the PR or choose the next task.
+## Guardrails
+- Do not change lesson content, frontmatter values, module ordering, routes, titles, palmistry meanings, quotations, citations, or source framing merely to exercise the validator.
+- Do not touch the source-sensitive Sun/Mercury rewrite, capstone editorial rewrite, unresolved life-line testing phrase, or unrelated Batch 3F content.
+- Do not alter deployment, monetization, external services, dependencies, or generated artifacts unless a dependency change is strictly necessary; prefer no dependency changes.
+- Keep diagnostics actionable and deterministic.
 
 ## Acceptance criteria
-- All eight current Mounts lessons use the existing stateless Practice pattern around the same audited existing exercise/takeaway material.
-- `mounts/08-mount-of-mars.mdx` contains the audited Mounts module checkpoint using existing stateless presentational components and only recap material already established in Mounts.
-- Lesson prose/frontmatter remains unchanged except required imports/markup and the exact already-audited checkpoint block.
-- No new palmistry claims, interpretations, quotations, or source assertions are introduced.
-- Routes, module ordering, schemas, and indexability remain unchanged.
-- Final diff is bounded to Mounts lesson markup, directly necessary canonical docs, and the Relay result artifact.
+- Duplicate `order` values are rejected only when they occur within the same lesson `module`.
+- The error clearly identifies enough context to correct the collision.
+- Distinct modules may legitimately reuse the same numeric order without failure.
+- Current valid curriculum passes the new check.
+- Existing CI/audit behavior remains green on current valid content.
+- Final diff is bounded to validation/tooling, directly necessary docs, and the Relay result artifact.
 
 ## Verification
+- Run the new/updated targeted validator against current valid content.
+- Demonstrate that a same-module duplicate is detected and returns non-zero without committing fake curriculum data.
+- Demonstrate that same order numbers across different modules remain valid.
 - Run `npm run build`.
 - Run `npm run content-audit`.
-- Run `npm run audit:all` because MDX/component rendering changes.
-- Run `git diff --check`.
-- Inspect generated Mounts lesson routes as practical, especially Mount of Mars, confirming Practice/Checkpoint disclosures are accessible/native and existing lesson text remains unchanged.
-- Compare the relevant final diff against current `main` and the audited branch treatment.
+- Run `npm run audit:all` if the validation is integrated there or if affected by the implementation.
+- Run `git diff --check` and inspect the final diff for scope drift.
 
 ## v2B durable-result contract — REQUIRED
-Every worker run that passes startup must create `.ai-ops/results/PP-RELAY-012-r1.json`, commit it on a pushed `claude/relay-PP-RELAY-012-...` branch, and use one terminal result: `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must create `.ai-ops/results/PP-RELAY-013-r1.json`, commit it on a pushed `claude/relay-PP-RELAY-013-...` branch, and use one terminal result: `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
 Minimum artifact fields:
 - `schema_version`: 1
-- `task_id`: `PP-RELAY-012`
+- `task_id`: `PP-RELAY-013`
 - `revision`: 1
 - `result`: one allowed terminal result
 - `summary`: concise outcome
@@ -67,7 +58,7 @@ Minimum artifact fields:
 - `verification`: concise verification evidence
 - `human_action`: exact action only when applicable, otherwise `null`
 
-For `READY_FOR_REVIEW`, commit implementation/docs plus the result artifact, push one `claude/relay-PP-RELAY-012-...` branch, and open exactly one PR to `main` with title prefix `[RELAY PP-RELAY-012]` and matching Relay footers. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and do not create a dummy PR merely to signal completion. Absence of a PR is valid for non-change terminal outcomes.
+For `READY_FOR_REVIEW`, commit implementation/docs plus the result artifact, push one `claude/relay-PP-RELAY-013-...` branch, and open exactly one PR to `main` with title prefix `[RELAY PP-RELAY-013]` and matching Relay footers. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and do not create a dummy PR merely to signal completion. Absence of a PR is valid for non-change terminal outcomes.
 
 ## Result
 Stop after producing the durable result, pushing the Relay branch, and opening a PR only if the result is `READY_FOR_REVIEW`. Do not merge and do not select subsequent work.
