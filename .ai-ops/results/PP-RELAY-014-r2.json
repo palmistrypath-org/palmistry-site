@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-014",
+  "revision": 2,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Applied the bounded revision-2 correction requested in Director review of PR #27: docs/ROADMAP.md's 2026-08-18 PP-RELAY-014 entry previously said remaining 3F scope included both the capstone body revision and the Sun/Mercury quote-fidelity rewrite in advanced/01-minor-lines-overview.mdx. Split that sentence so remaining 3F scope is stated as only the capstone body revision (the second worked reading), and the Sun/Mercury rewrite is now explicitly stated as separate unresolved 3E work, not 3F. Rechecked the revision-1 edits in docs/ACTIVE_TASK.md and docs/AI_HANDOFF.md per the packet's item 4: AI_HANDOFF.md's 'remaining phases' paragraph already correctly separates 3E (advanced/01-minor-lines-overview.mdx, unimplemented) from 3F (synthesis/practice shipped; only the capstone body revision remains), so it was left unchanged. ACTIVE_TASK.md's 'Not implemented' note lists the capstone revision, the Sun/Mercury rewrite, and the nails lesson together as still-outstanding items without attributing either to 3F, so it does not contain the misclassification and was also left unchanged. No other file was touched. All revision-1 content (lesson-count, Combining What You See, and Practice/Checkpoint reconciliation) remains intact.",
+  "pr_number": 27,
+  "verification": [
+    "Diffed origin/main against the PP-RELAY-014 PR branch before editing to confirm the branch was current with main's ops-metadata dispatch commits (state.json/task packet/CURRENT_TASK.md/metrics.json already reflect revision 2) and that only docs/ROADMAP.md still carried the revision-1 classification error.",
+    "grep -n \"Sun/Mercury\" docs/ROADMAP.md docs/ACTIVE_TASK.md docs/AI_HANDOFF.md after the edit: the corrected 2026-08-18 ROADMAP.md entry now reads '...only the capstone body revision (the second worked reading) is still outstanding. The Sun/Mercury quote-fidelity rewrite ... is separate unresolved 3E work, not 3F.' The one remaining ROADMAP.md hit is the 2026-08-17 PP-RELAY-005 historical entry, explicitly framed as predating this rollout, so it is not in scope. ACTIVE_TASK.md's two hits list the item as outstanding without a 3F attribution.",
+    "Read docs/AI_HANDOFF.md lines 233-241 in full: '3E still needs advanced/01-minor-lines-overview.mdx revised ... What remains of 3F is narrower: the capstone body revision (the second worked reading).' Already correct; not modified.",
+    "git diff --check: no whitespace/conflict-marker errors.",
+    "git diff --stat: change limited to a single-line edit in docs/ROADMAP.md plus this result artifact.",
+    "Docs-only rework per the packet; no build/content-audit run required and none was run."
+  ],
+  "human_action": null
+}

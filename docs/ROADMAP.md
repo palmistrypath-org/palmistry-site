@@ -11,6 +11,8 @@ The durable sequence remains:
 4. Expand monetization deliberately without weakening trust.
 
 ## Recently completed approved work
+2026-08-18 (Relay PP-RELAY-014, documentation reconciliation): The curriculum reached the approved 25-lesson target on 2026-08-18 when Relay PP-RELAY-008 added *Combining What You See* as the Advanced module's fifth lesson. Relay PP-RELAY-009 through PP-RELAY-012 (2026-08-18) then shipped the `<Practice>` closing-exercise wrapper across Foundations, Lines, Mounts, and three of Advanced's six lessons, and the end-of-module `<Checkpoint>` component across Foundations, Lines, and Mounts. Remaining 3F scope is narrower than the two entries below describe: only the capstone body revision (the second worked reading) is still outstanding. The Sun/Mercury quote-fidelity rewrite in `advanced/01-minor-lines-overview.mdx` is separate unresolved 3E work, not 3F. See `CURRENT_STATE.md` and `CHANGELOG.md` for full detail; the two entries immediately below predate this rollout.
+
 2026-08-17 (Relay PP-RELAY-005): Replayed the approved Batch 3E Simian Line module move onto current `main` — moved from the Lines module to Advanced (Minor Lines & Synthesis) as its fourth lesson, with the old URL preserved through a noindex redirect stub. The Sun/Mercury quote-fidelity rewrite and 3F synthesis/practice work remain outstanding.
 
 2026-08-13 (merged 2026-08-13, PR #12): Technical Remediation Wave added an accessible custom 404 page, expanded `content-audit` to validate both the blog and lessons collections with cross-collection route checks, and converted the five homepage path/hero images from PNG to WebP (~97% byte reduction). No curriculum or content changes. See `docs/audits/TECHNICAL_REMEDIATION_WAVE_2026-08.md`.
