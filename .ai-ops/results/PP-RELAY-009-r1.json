@@ -4,7 +4,7 @@
   "revision": 1,
   "result": "READY_FOR_REVIEW",
   "summary": "Replayed the already-audited, source-safe Batch 3F Practice disclosure treatment onto the two remaining Advanced lessons, 02-marriage-relationship-lines.mdx and 03-girdle-of-venus.mdx, without changing their palmistry content. Each lesson's closing 'What to take away from your hand' section is now wrapped in <Practice title=\"What to take away from your hand\"> in place of a plain ## heading, importing the existing Practice.astro (landed unmodified by PP-RELAY-008) with the same relative import path already used by combining-what-you-see.mdx. Diff against the audited feat/curriculum-wave-3e-3f branch treatment is byte-identical for both files. Practice.astro itself was not modified. Updated docs/CURRENT_STATE.md and docs/CHANGELOG.md.",
-  "pr_number": null,
+  "pr_number": 22,
   "verification": [
     "npm run build: 98 pages built successfully, including /learn/advanced/02-marriage-relationship-lines/ and /learn/advanced/03-girdle-of-venus/ rendering the accessible <section class=\"practice\" aria-labelledby=...> disclosure natively.",
     "npm run content-audit: passes cleanly, 53 blog posts and 25 lessons valid.",
