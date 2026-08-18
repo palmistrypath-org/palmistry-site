@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "mode": "preauthorized_low_risk",
+  "tasks": [
+    {
+      "task_id": "PP-RELAY-015",
+      "revision": 1,
+      "task_path": ".ai-ops/tasks/PP-RELAY-015.md",
+      "expected_result_path": ".ai-ops/results/PP-RELAY-015-r1.json",
+      "allowed_paths": [
+        ".ai-ops/archive/fastlane-smoke-015.txt",
+        ".ai-ops/results/PP-RELAY-015-r1.json"
+      ],
+      "next_task_id": "PP-RELAY-016"
+    },
+    {
+      "task_id": "PP-RELAY-016",
+      "revision": 1,
+      "task_path": ".ai-ops/tasks/PP-RELAY-016.md",
+      "expected_result_path": ".ai-ops/results/PP-RELAY-016-r1.json",
+      "allowed_paths": [
+        ".ai-ops/archive/fastlane-smoke-016.txt",
+        ".ai-ops/results/PP-RELAY-016-r1.json"
+      ],
+      "next_task_id": null
+    }
+  ]
+}
