@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-011",
+  "revision": 1,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Replayed the already-audited, source-safe Batch 3F Practice treatment across all six current Lines lessons and added the already-audited end-of-module Checkpoint to the closing Fate Line lesson, without changing established palmistry content. Each Lines lesson's closing hands-on/takeaway section is now wrapped in <Practice> (or <Practice title=\"...\"> matching the audited branch) in place of a plain heading or bare paragraph, importing the existing Practice.astro (unmodified). 05-fate-line.mdx now carries a five-item <Checkpoint title=\"Checkpoint - The Major Lines\"> block using the existing Checkpoint.astro/CheckpointItem.astro components (unmodified, first added by PP-RELAY-010), matching the audited branch's post-correction wording exactly and recapping only material already established earlier in the Lines module. One unrelated frontmatter description wording change bundled into the audited branch's commit for line-quality-and-markings.mdx was deliberately not replayed, following the PP-RELAY-010 thumb-and-fingers.mdx precedent, as out of the mechanical Practice/Checkpoint scope. The pre-existing life-line testing-claim wording in 04-life-line.mdx was left untouched. Updated docs/CURRENT_STATE.md and docs/CHANGELOG.md.",
+  "pr_number": 24,
+  "verification": [
+    "npm run build: 98 pages built successfully, including all six /learn/lines/ routes; Fate Line renders five native <details>/<summary> checkpoint disclosures and the other five lessons render the accessible <section class=\"practice\" aria-labelledby=...> disclosure natively.",
+    "npm run content-audit: passes cleanly, 53 blog posts and 25 lessons valid.",
+    "npm run audit:all: all sub-checks pass (links, images, schema - LearningResource + BreadcrumbList unchanged, indexability, accessibility).",
+    "git diff --check: no whitespace errors.",
+    "Diff against origin/feat/curriculum-wave-3e-3f for each target file: byte-identical for the five Practice-only lessons and for the Checkpoint block/components in 05-fate-line.mdx; line-quality-and-markings.mdx intentionally diverges from the audited branch by one line (frontmatter description left at current-main wording, out of authorized scope).",
+    "Manual recap check: each of the five checkpoint prompts in 05-fate-line.mdx was traced to material already taught in line-quality-and-markings.mdx, 03-head-line.mdx, or 05-fate-line.mdx's own body; no new claims introduced.",
+    "Confirmed 04-life-line.mdx's pre-existing 'it has not held up under testing' wording is byte-unchanged.",
+    "Final diff bounded to: the six Lines lesson files, docs/CURRENT_STATE.md, docs/CHANGELOG.md, and this result artifact. No lesson prose, routes, ordering, or source attribution changed; Practice.astro/Checkpoint.astro/CheckpointItem.astro untouched; package-lock.json reverted after npm install touched it."
+  ],
+  "human_action": null
+}
