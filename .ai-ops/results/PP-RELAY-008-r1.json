@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-008",
+  "revision": 1,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Replayed the already-audited Batch 3F 'Combining What You See' synthesis lesson onto current main as a bounded increment, without merging the stale feat/curriculum-wave-3e-3f branch. Added src/content/lessons/advanced/combining-what-you-see.mdx (order: 5, immediately after the Simian Line) and src/components/Practice.astro (reused unmodified from the audited branch version, stateless/no client JS). Moved advanced/04-how-to-give-a-reading.mdx from order: 5 to order: 6 (order field only, body untouched) to stay collision-free. No blank relatedArticle introduced; the field is omitted, matching current main's convention. Core curriculum reaches the approved 25-lesson target. Updated docs/CURRENT_STATE.md and docs/CHANGELOG.md.",
+  "pr_number": 21,
+  "verification": [
+    "npm run build: 98 pages built successfully, including the new /learn/advanced/combining-what-you-see/ route.",
+    "npm run content-audit: passes cleanly, 53 blog posts and 25 lessons valid, no order-collision or blank relatedArticle warnings.",
+    "npm run audit:all: all sub-checks pass (links, images, schema — LearningResource + BreadcrumbList present on the new route, indexability, accessibility).",
+    "git diff --check: no whitespace errors.",
+    "Verified module-index HTML renders lessons in display order 01-minor-lines-overview, 02-marriage-relationship-lines, 03-girdle-of-venus, simian-line, combining-what-you-see, 04-how-to-give-a-reading.",
+    "Diff reviewed against docs/audits/CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md and current-main editorial/source guardrails: no new palmistry doctrine introduced, weighting-not-evidence framing preserved, grounded language preserved, no changes to the capstone body, Sun/Mercury lesson, Checkpoint components, or files outside the authorized scope.",
+    "Final diff bounded to: the new lesson, Practice.astro, the capstone order-only change, docs/CURRENT_STATE.md, docs/CHANGELOG.md, and this result artifact."
+  ],
+  "human_action": null
+}

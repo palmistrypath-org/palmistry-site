@@ -1,0 +1,55 @@
+---
+/**
+ * Practice — marks the hands-on exercise a lesson ends with.
+ *
+ * Purely presentational. The curriculum already asks learners to look at their
+ * own hands throughout; this makes that layer recognisable as its own thing
+ * rather than more prose. No state, no scoring, no JavaScript, no persistence.
+ *
+ * The exercise itself goes in the default slot, so it stays authored as ordinary
+ * MDX. `title` overrides the heading when a lesson's exercise deserves a more
+ * specific name than "Practice".
+ */
+interface Props {
+	title?: string;
+}
+
+const { title = 'Practice' } = Astro.props;
+
+// Scoped id so the region's accessible name comes from its own visible heading,
+// even when a page carries more than one Practice block.
+const headingId = `practice-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<section class="practice" aria-labelledby={headingId}>
+	<h2 id={headingId} class="practice-heading">{title}</h2>
+	<div class="practice-body">
+		<slot />
+	</div>
+</section>
+
+<style>
+	.practice {
+		margin: 2.5em 0;
+		padding: 1.5em 1.75em;
+		border: 1px solid rgba(201, 169, 110, 0.35);
+		border-left: 3px solid var(--accent);
+		background-color: rgba(201, 169, 110, 0.05);
+	}
+
+	.practice-heading {
+		font-size: 0.95em;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--accent-light);
+		margin: 0 0 0.75em 0;
+	}
+
+	.practice-body :global(> :first-child) {
+		margin-top: 0;
+	}
+
+	.practice-body :global(> :last-child) {
+		margin-bottom: 0;
+	}
+</style>
