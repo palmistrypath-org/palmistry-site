@@ -4,7 +4,7 @@
   "revision": 1,
   "result": "READY_FOR_REVIEW",
   "summary": "Fast-lane smoke test: created .ai-ops/archive/fastlane-smoke-016.txt marker file identifying PP-RELAY-016 to prove automatic task-to-task chaining. No product, content, SEO, or documentation changes made.",
-  "pr_number": null,
+  "pr_number": 31,
   "verification": [
     "git diff --check reported no whitespace errors",
     "Changed paths confirmed to be exactly .ai-ops/archive/fastlane-smoke-016.txt and .ai-ops/results/PP-RELAY-016-r1.json"
