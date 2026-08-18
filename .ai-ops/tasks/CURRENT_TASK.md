@@ -3,54 +3,50 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-013
+PP-RELAY-014
 
 ## Revision
 1
 
 ## Objective
-Add an automated validation that fails when two lessons in the same curriculum module share the same `order` value, closing the specific audit gap that previously allowed an Advanced-module order collision to pass all existing checks.
+Reconcile the canonical roadmap/status documentation with the curriculum and learning-structure work that is already merged on current `main`, so future task selection is not driven by stale statements that the 25th lesson or Batch 3F practice/checkpoint work is still outstanding.
 
 ## Why this task is authorized
-The audited 3E/3F branch documented a real tooling gap: an earlier branch state had two Advanced lessons with `order: 4`, while `npm run build`, `npm run content-audit`, and `npm run audit:all` all remained green. The collision was corrected manually, but the repository still lacks a guard against recurrence. This is bounded technical validation work with objective pass/fail behavior and no palmistry-content judgment.
+Current `main` now contains 25 lessons, including `advanced/combining-what-you-see.mdx`, plus the audited Practice/Checkpoint rollout across Advanced, Foundations, Lines, and Mounts from PP-RELAY-008 through PP-RELAY-012. `docs/CURRENT_STATE.md` was corrected to 25 lessons in PP-RELAY-013, but `docs/ROADMAP.md` still says the curriculum has 24 lessons and that Combining What You See / 3F remain outstanding. The Relay just demonstrated that stale audit/docs premises can cause unnecessary implementation tasks, so this is a bounded source-of-truth repair with objective repository evidence.
 
 ## Authorized scope
-1. Start from current `main` and inspect the lesson content schema plus existing audit/validation scripts and package scripts.
-2. Implement the smallest maintainable automated check that detects duplicate lesson `order` values within the same `module` and exits non-zero with a useful message identifying the conflicting module/order/files.
-3. Integrate the check into the existing validation path that best fits repository conventions so ordinary CI catches future collisions. Prefer extending an existing audit rather than creating unnecessary parallel tooling.
-4. Add a focused regression fixture/test or equivalent deterministic verification if the current audit architecture supports it cheaply; otherwise demonstrate the failure mode with a temporary/local validation method that is not committed as fake content.
-5. Preserve existing validation behavior for valid curriculum content.
-6. Update only directly necessary canonical docs required by `AGENTS.md` to record the new guardrail.
+1. Start from current `main` and verify the actual lesson inventory and the merged Relay history for PP-RELAY-008 through PP-RELAY-013.
+2. Inspect only canonical operating docs needed to reconcile stale curriculum/learning-structure status, especially `docs/ROADMAP.md`, `docs/AI_HANDOFF.md`, `docs/ACTIVE_TASK.md`, and `docs/CURRENT_STATE.md` where relevant.
+3. Correct only statements that are objectively stale against current `main`: lesson count/25-lesson target, Combining What You See status, shipped Practice/Checkpoint rollout, and PP-RELAY-013's corrected lesson-order guard premise.
+4. Preserve unresolved/source-sensitive work as unresolved, including the Sun/Mercury quotation/source rewrite, Gettings/West/Fincham quotation fidelity, and the life-line testing phrase.
+5. Do not invent a new product milestone or convert historical planning docs into an approved backlog.
+6. Keep edits minimal; if a canonical doc is already accurate, leave it unchanged.
 
 ## Guardrails
-- Do not change lesson content, frontmatter values, module ordering, routes, titles, palmistry meanings, quotations, citations, or source framing merely to exercise the validator.
-- Do not touch the source-sensitive Sun/Mercury rewrite, capstone editorial rewrite, unresolved life-line testing phrase, or unrelated Batch 3F content.
-- Do not alter deployment, monetization, external services, dependencies, or generated artifacts unless a dependency change is strictly necessary; prefer no dependency changes.
-- Keep diagnostics actionable and deterministic.
+- Documentation/status reconciliation only. Do not change runtime code, lesson/article content, frontmatter, routes, ordering, components, SEO/indexability behavior, monetization, deployment, dependencies, or external services.
+- Do not rewrite historical changelog/audit records except to add a clearly dated correction where a false current-state claim would otherwise remain actionable.
+- Do not erase unresolved source/editorial caveats.
+- Follow `AGENTS.md`: implementation is authoritative when docs disagree.
 
 ## Acceptance criteria
-- Duplicate `order` values are rejected only when they occur within the same lesson `module`.
-- The error clearly identifies enough context to correct the collision.
-- Distinct modules may legitimately reuse the same numeric order without failure.
-- Current valid curriculum passes the new check.
-- Existing CI/audit behavior remains green on current valid content.
-- Final diff is bounded to validation/tooling, directly necessary docs, and the Relay result artifact.
+- Canonical operating docs no longer claim the core curriculum has 24 lessons or that Combining What You See is still outstanding.
+- Canonical docs accurately reflect the already-merged Practice/Checkpoint rollout without implying broader unshipped 3F work is complete if it is not.
+- PP-RELAY-013's lesson-order guard correction is represented consistently where current-status docs discuss that tooling gap.
+- No production/runtime/content behavior changes.
+- Final diff is limited to directly relevant canonical docs plus the Relay result artifact.
 
 ## Verification
-- Run the new/updated targeted validator against current valid content.
-- Demonstrate that a same-module duplicate is detected and returns non-zero without committing fake curriculum data.
-- Demonstrate that same order numbers across different modules remain valid.
-- Run `npm run build`.
-- Run `npm run content-audit`.
-- Run `npm run audit:all` if the validation is integrated there or if affected by the implementation.
-- Run `git diff --check` and inspect the final diff for scope drift.
+- Verify current lesson count and module inventory from `src/content/lessons/`.
+- Verify relevant merged PR/commit history for PP-RELAY-008 through PP-RELAY-013.
+- Search canonical docs for stale `24 lessons`, `Combining What You See`, `3F`, and lesson-order-gap statements after edits.
+- Run `git diff --check` and inspect the final diff. A site build is not required for docs-only changes unless runtime files are unexpectedly touched.
 
 ## v2B durable-result contract — REQUIRED
-Every worker run that passes startup must create `.ai-ops/results/PP-RELAY-013-r1.json`, commit it on a pushed `claude/relay-PP-RELAY-013-...` branch, and use one terminal result: `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must create `.ai-ops/results/PP-RELAY-014-r1.json`, commit it on a pushed `claude/relay-PP-RELAY-014-...` branch, and use one terminal result: `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
 Minimum artifact fields:
 - `schema_version`: 1
-- `task_id`: `PP-RELAY-013`
+- `task_id`: `PP-RELAY-014`
 - `revision`: 1
 - `result`: one allowed terminal result
 - `summary`: concise outcome
@@ -58,7 +54,7 @@ Minimum artifact fields:
 - `verification`: concise verification evidence
 - `human_action`: exact action only when applicable, otherwise `null`
 
-For `READY_FOR_REVIEW`, commit implementation/docs plus the result artifact, push one `claude/relay-PP-RELAY-013-...` branch, and open exactly one PR to `main` with title prefix `[RELAY PP-RELAY-013]` and matching Relay footers. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and do not create a dummy PR merely to signal completion. Absence of a PR is valid for non-change terminal outcomes.
+For `READY_FOR_REVIEW`, commit implementation/docs plus the result artifact, push one `claude/relay-PP-RELAY-014-...` branch, and open exactly one PR to `main` with title prefix `[RELAY PP-RELAY-014]` and matching Relay footers. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and do not create a dummy PR merely to signal completion. Absence of a PR is valid for non-change terminal outcomes.
 
 ## Result
 Stop after producing the durable result, pushing the Relay branch, and opening a PR only if the result is `READY_FOR_REVIEW`. Do not merge and do not select subsequent work.
