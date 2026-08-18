@@ -11,7 +11,7 @@
     "rework_revisions": 0,
     "human_gates": 0,
     "usage_limit_events": 0,
-    "technical_blockers": 1,
+    "technical_blockers": 2,
     "verified_no_change": 0,
     "autonomous_merges": 9
   },
@@ -25,6 +25,6 @@
     {"task_id":"PP-RELAY-010","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-010.md","result_path":".ai-ops/results/PP-RELAY-010-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-18T10:14:20Z","reviewed_at":"2026-08-18T11:07:39Z","merge_approved_at":"2026-08-18T11:07:39Z","merged_at":"2026-08-18T11:09:55Z","pr_number":23,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
     {"task_id":"PP-RELAY-011","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-011.md","result_path":".ai-ops/results/PP-RELAY-011-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-18T12:17:59Z","reviewed_at":"2026-08-18T13:07:05Z","merge_approved_at":"2026-08-18T13:07:05Z","merged_at":"2026-08-18T13:10:26Z","pr_number":24,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
     {"task_id":"PP-RELAY-012","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-012.md","result_path":".ai-ops/results/PP-RELAY-012-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-18T14:13:36Z","reviewed_at":"2026-08-18T15:06:10Z","merge_approved_at":"2026-08-18T15:06:10Z","merged_at":"2026-08-18T15:08:31Z","pr_number":25,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-013","revision":1,"status":"AUTHORIZED","task_path":".ai-ops/tasks/PP-RELAY-013.md","result_path":".ai-ops/results/PP-RELAY-013-r1.json","dispatched_at":null,"result_discovered_at":null,"reviewed_at":null,"merge_approved_at":null,"merged_at":null,"pr_number":null,"rework_count":0,"terminal_result":null}
+    {"task_id":"PP-RELAY-013","revision":1,"status":"BLOCKED","task_path":".ai-ops/tasks/PP-RELAY-013.md","result_path":".ai-ops/results/PP-RELAY-013-r1.json","dispatched_at":null,"result_discovered_at":null,"reviewed_at":null,"merge_approved_at":null,"merged_at":null,"pr_number":null,"rework_count":0,"terminal_result":null}
   ]
 }
