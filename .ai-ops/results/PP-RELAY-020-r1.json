@@ -4,7 +4,7 @@
   "revision": 1,
   "result": "READY_FOR_REVIEW",
   "summary": "Published src/content/blog/beginner/phalanges-palmistry.md (Benham 1900, Gettings 1965, West 1998), added a reciprocal link with finger-shapes-palmistry.md (which already carried a brief phalange summary), and corrected editorial-backlog.md's stale open status for the already-live forked-head-line-meaning.md.",
-  "pr_number": null,
+  "pr_number": 35,
   "verification": [
     "npm run build: 102 routes built, including /blog/beginner/phalanges-palmistry/",
     "npm run content-audit: 57 blog posts, 25 lessons valid",
