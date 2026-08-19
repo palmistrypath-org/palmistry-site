@@ -4,7 +4,7 @@
   "revision": 1,
   "result": "READY_FOR_REVIEW",
   "summary": "Published the beginner blog pillar 'The Minor Lines of the Palm: A Beginner Overview' at src/content/blog/beginner/minor-lines-overview.md, closing the #1-ranked item in docs/editorial-backlog.md's Next 10 queue. The article orients readers to the minor-line layer (what makes a line minor, why absence is normal, how much interpretive weight to give these lines) and gives a concise orientation to the Sun Line, Mercury Line, marriage/relationship lines, and Girdle of Venus, linking to each dedicated article for depth. Added one navigation-only reciprocal link back to the new pillar at the end of each of those four existing articles, with no changes to their palmistry claims or quotations. Updated docs/editorial-backlog.md, docs/CHANGELOG.md, and docs/AI_HANDOFF.md to record the shipped item.",
-  "pr_number": null,
+  "pr_number": 32,
   "verification": [
     "npm run build: 100 routes generated, including /blog/beginner/minor-lines-overview/",
     "npm run content-audit: 54 blog posts and 25 lessons valid",
