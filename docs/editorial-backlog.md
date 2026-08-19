@@ -6,7 +6,7 @@
 
 ## Status
 
-**Published:** 48 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018.
+**Published:** 49 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019.
 
 **This document:** 50 scored future article ideas, grouped into Next 10 / Next 25 / Later.
 
@@ -57,7 +57,7 @@ These articles have the highest priority scores and should be written before any
 |---|---|---|---|---|---|---|---|---|
 | 1 | ~~The Minor Lines of the Palm: A Beginner Overview~~ (published 2026-08-19) | `minor-lines-overview` | 3 | 3 | 5 | 2 | 5 | **14** |
 | 2 | ~~Reading Both Hands: How to Compare Your Active and Passive Hand~~ (published 2026-08-19) | `reading-both-hands-palmistry` | 4 | 4 | 3 | 2 | 4 | **13** |
-| 3 | How to Practice Palm Reading: Tips for Building Your Skills | `how-to-practice-palm-reading` | 3 | 5 | 3 | 2 | 4 | **13** |
+| 3 | ~~How to Practice Palm Reading: Tips for Building Your Skills~~ (published 2026-08-19) | `how-to-practice-palm-reading` | 3 | 5 | 3 | 2 | 4 | **13** |
 | 4 | Forked Head Line Meaning in Palmistry (The Writer's Fork) | `forked-head-line-meaning` | 4 | 2 | 4 | 2 | 4 | **12** |
 | 5 | Phalanges in Palmistry: What the Three Finger Sections Reveal | `phalanges-palmistry` | 3 | 3 | 5 | 3 | 4 | **12** |
 | 6 | Is Palmistry Real? What the Tradition Claims and What It Doesn't | `is-palmistry-real` | 5 | 3 | 3 | 2 | 3 | **12** |
@@ -94,7 +94,7 @@ These articles have the highest priority scores and should be written before any
 
 ---
 
-#### 3. How to Practice Palm Reading
+#### 3. How to Practice Palm Reading (published 2026-08-19)
 - **Slug:** `beginner/how-to-practice-palm-reading`
 - **Title:** How to Practice Palm Reading: Tips for Building Your Skills
 - **Primary keyword/intent:** "how to practice palm reading" / "palm reading practice tips"
