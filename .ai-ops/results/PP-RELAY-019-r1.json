@@ -4,7 +4,7 @@
   "revision": 1,
   "result": "READY_FOR_REVIEW",
   "summary": "Published src/content/blog/beginner/how-to-practice-palm-reading.md, closing Next-10 backlog item #3. Distinct from how-to-read-a-palm.md (method) and printable-palmistry-worksheets.md (recording template): teaches a repeatable practice regimen (repetition, one feature family at a time, permission-gated hand comparison, note revisiting, naming ambiguity). Added one navigation-only reciprocal link from how-to-read-a-palm.md. Updated docs/editorial-backlog.md and docs/CURRENT_STATE.md.",
-  "pr_number": null,
+  "pr_number": 34,
   "verification": [
     "npm run build: 101 pages built, including /blog/beginner/how-to-practice-palm-reading/",
     "npm run content-audit: 56 blog posts, 25 lessons valid",
