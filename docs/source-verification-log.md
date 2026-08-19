@@ -563,3 +563,52 @@ No new studies, palmistry interpretations, or scientific claims were
 introduced. `04-life-line.mdx` line 96 ("the readings above have no
 demonstrated reliability") concerns the break reading, not line length, and
 was already correctly scoped by Pass 5; it was inspected and left unchanged.
+
+---
+
+## Pass 7 — Life-line freshness superlative correction (2026-08-19)
+
+Scope: Relay PP-RELAY-024 revision 2 (`SOURCE_SENSITIVE`). Director review of
+the revision-1 result found that `life-line.md`'s existing phrase "the most
+recent peer-reviewed study" (applied to Lucas et al. 2019) is a freshness
+claim, not a neutral description, and was never established by Pass 6's
+lookup — Pass 6 verified only that Wilson & Mather (1974), published as a
+letter, doesn't count as a peer-reviewed study; it did not check whether any
+later study exists. Public evidence indicates at least one 2025
+lifeline/mortality paper is now in circulation, so the superlative is not
+safe to keep in 2026. No search of the 2025 literature was performed for
+this pass — the packet's authorized remedy was to drop the freshness claim
+rather than to verify or characterize it.
+
+### Correction made
+
+`life-line.md`'s "A note on the empirical question" paragraph no longer
+calls Lucas et al. (2019) the "most recent peer-reviewed study"; it now
+lists the three verified studies (Newrick et al. 1990, Wilson & Mather 1974,
+Lucas et al. 2019) without a freshness ranking, and closes with "across
+these three published studies, the record is mixed and does not establish a
+reliable predictive relationship" so the conclusion is explicitly scoped to
+the three studies already verified in Pass 6, not stated as a general
+"on balance" finding.
+
+Two related sentences that summarized the same evidence as "the studies
+that have tested it find no reliable relationship" — `life-line.md`'s FAQ
+answer and `04-life-line.mdx`'s closing "Lesson takeaway" — were reworded to
+"the limited published studies that have tested it show a mixed record that
+does not establish a reliable relationship." The prior phrasing, read on its
+own, risked being misread as claiming every study was negative; one of the
+three (Newrick et al. 1990) found a significant association. This corrects
+the same "Lesson takeaway" sentence Pass 6 introduced, which reused the
+identical construction.
+
+`04-life-line.mdx` line 28 (the "myth, corrected" section, not the closing
+takeaway) contains the same "find no reliable relationship" construction
+and was inspected but left unchanged: revision 2's authorized scope named
+only the empirical/testing discussion in `life-line.md` and the "corrected
+takeaway" in `04-life-line.mdx`, not this earlier section. It is a
+candidate for a future bounded pass.
+
+No new studies, citations, palmistry interpretations, or scientific claims
+were introduced. The three verified study citations and outcomes from
+Pass 6 (Newrick et al. 1990 significant association; Wilson & Mather 1974
+no correlation; Lucas et al. 2019 no correlation) are unchanged.
