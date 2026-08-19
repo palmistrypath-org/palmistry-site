@@ -9,6 +9,24 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
+**Relay PP-RELAY-021 (2026-08-19) shipped Is Palmistry Real?** at
+`src/content/blog/beginner/is-palmistry-real.md`, closing the #6 item in
+`docs/editorial-backlog.md`'s Next 10 queue. This is an evidence/trust FAQ for
+skeptical readers, deliberately differentiated from `what-palmistry-is.md`'s
+history-and-definition overview: it separates what historical palmists
+actually claimed (Cheiro's life-line dating and marriage readings, Benham's
+tasselled-ending/islands readings, Varāhamihira's kingship/wealth/longevity
+marks) from what the evidence does and doesn't establish (no scientific
+support for occult predictive meaning; Ray Hyman's 1977 account kept as an
+anecdote, not a controlled experiment) from why the site still treats
+palmistry as worth studying. No new sources beyond what the style guide
+already establishes as Tier 1–3; the one quoted phrase matches wording
+already verified in `docs/editorial-style-guide.md` §5.2. Bounded diff: the
+new article, one reciprocal link in `what-palmistry-is.md`, and the
+backlog/changelog/current-state docs. `npm run build` (103 routes),
+`npm run content-audit` (58 posts/25 lessons), and `npm run audit:all` all
+passed. Nothing else outstanding from this task.
+
 **Relay PP-RELAY-020 (2026-08-19) shipped Phalanges in Palmistry** at
 `src/content/blog/beginner/phalanges-palmistry.md`, closing the #5 item in
 `docs/editorial-backlog.md`'s Next 10 queue, and corrected that backlog's
