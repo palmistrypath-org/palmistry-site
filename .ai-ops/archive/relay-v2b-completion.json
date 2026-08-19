@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "experiment": "relay-v2b-near-autonomous",
+  "started_at": "2026-08-17T18:54:00Z",
+  "completed_at": "2026-08-19T18:05:25Z",
+  "target_accepted_iterations": 20,
+  "summary": {
+    "accepted": 20,
+    "first_pass_accepted": 15,
+    "tasks_requiring_rework": 5,
+    "rework_revisions": 6,
+    "human_gates": 0,
+    "usage_limit_events": 0,
+    "technical_blockers": 2,
+    "verified_no_change": 0,
+    "autonomous_merges": 20
+  },
+  "final_metrics_blob_sha": "8c387af1777b1aa99b196d576a255c6dc2781aa0",
+  "final_state_blob_sha": "1a9220dc4a3039b0840be0b016e48b61e63cf437",
+  "note": "The full per-task v2B metrics remain recoverable from Git history at the recorded final metrics blob SHA. This compact archive preserves the completion baseline used to evaluate v2C."
+}
