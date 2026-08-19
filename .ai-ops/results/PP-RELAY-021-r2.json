@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-021",
+  "revision": 2,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Remediated src/content/blog/beginner/is-palmistry-real.md per Director review: removed the unsupported claim that studies comparing life-line length to recorded lifespan find no consistent relationship (body and FAQ, two occurrences), replacing it with the repository-approved general statements already established in foundations/01-what-palmistry-is.mdx and beginner/what-palmistry-is.md (no scientific support for occult predictive meaning; no palmistry tradition validated as reliably predictive under controlled conditions), applied explicitly to the article's own historical examples (Cheiro, Benham, Varahamihira). Narrowed the unsupported 'practiced continuously, in several independent forms, for centuries' claim to 'practiced in distinct forms across multiple cultures for centuries', dropping the unsupported continuity assertion (the approved West-tradition history notes a medieval suppression period, i.e. not continuous) while keeping the multi-culture framing, which is directly supported by what-palmistry-is.md's approved India/China/West independent-development language elsewhere in this same article. No canonical docs required changes: reviewed docs/editorial-backlog.md, docs/CHANGELOG.md, docs/CURRENT_STATE.md, and docs/AI_HANDOFF.md's revision-1 additions and confirmed none repeat the two flagged claims, so no doc churn was made per the task packet's explicit scope limit. Reused PR #36 rather than opening a second PR, pushing the fix to the existing claude/relay-PP-RELAY-021-is-palmistry-real branch.",
+  "pr_number": 36,
+  "verification": [
+    "Diffed against revision-1: only src/content/blog/beginner/is-palmistry-real.md changed, 4 lines added/4 removed, no other files touched",
+    "Searched article for studies/study/research/scientific/evidence/validated/lifespan/life line/continuous/independent/most/generally/typically/consensus and equivalent wording; inspected every occurrence — no specific unsupported study claim remains, general approved statements are accurately scoped",
+    "Compared final article against src/content/lessons/foundations/01-what-palmistry-is.mdx and src/content/blog/beginner/what-palmistry-is.md for claim fidelity: the 'no scientific support / no controlled validation' phrasing and the India/China/West independent-development framing both match approved repository language verbatim or near-verbatim",
+    "Confirmed Ray Hyman remains explicitly anecdotal ('an anecdote, not a controlled experiment') in both the body and FAQ",
+    "Confirmed historical claims (Cheiro/Benham/Varahamihira predictive systems) remain clearly separated from Palmistry Path's non-predictive editorial posture",
+    "Sources footer unchanged and still contains only the four sources actually cited in body prose, none implying scientific-study support",
+    "npm run build: 103 routes built, including /blog/beginner/is-palmistry-real/",
+    "npm run content-audit: 58 blog posts, 25 lessons valid",
+    "npm run audit:all: links, images, schema, indexability, accessibility all pass",
+    "git diff --check: clean"
+  ],
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["git", "grep", "targeted source review against repository style guide and sibling articles", "npm build/audit scripts"],
+    "validation": [
+      "npm run build (103 routes)",
+      "npm run content-audit (58 posts / 25 lessons)",
+      "npm run audit:all (links, images, schema, indexability, accessibility)",
+      "git diff --check"
+    ],
+    "notes": "Single-owner remediation of a narrowly scoped, already-identified defect; no subagent delegation needed."
+  }
+}

@@ -8,7 +8,7 @@ relatedLesson: "/learn/foundations/01-what-palmistry-is"
 
 Short answer: it depends which claim you mean.
 
-Palmistry as a documented cultural and interpretive tradition is real in the most straightforward sense — it has been practiced continuously, in several independent forms, for centuries. Palmistry as a way of predicting your future by reading the lines on your hand is a different claim entirely, and the honest answer there is no: no palmistry tradition has been validated as reliably predictive under controlled conditions. Those two answers are not in tension. They are about different things, and most of the confusion around "is palmistry real" comes from treating them as one question.
+Palmistry as a documented cultural and interpretive tradition is real in the most straightforward sense — it has been practiced in distinct forms across multiple cultures for centuries. Palmistry as a way of predicting your future by reading the lines on your hand is a different claim entirely, and the honest answer there is no: no palmistry tradition has been validated as reliably predictive under controlled conditions. Those two answers are not in tension. They are about different things, and most of the confusion around "is palmistry real" comes from treating them as one question.
 
 This article separates them properly: what historical palmistry traditions actually claimed, what the evidence does and doesn't establish about those claims, and why Palmistry Path still treats palmistry as worth studying seriously despite the second answer.
 
@@ -22,7 +22,7 @@ That matters because it would be easy, and dishonest, to defend palmistry today 
 
 ## What the evidence does and doesn't show
 
-There is no scientific support for the idea that features of the hand carry predictive meaning in an occult sense — that a line's length or shape encodes information about a specific future event. No palmistry tradition has been validated as reliably predictive under controlled conditions, and the specific claims discussed above haven't fared any better under scrutiny than palmistry's predictive claims generally: studies comparing life line length against recorded lifespan, for instance, find no consistent relationship.
+There is no scientific support for the idea that features of the hand carry predictive meaning in an occult sense — that a line's length or shape encodes information about a specific future event. No palmistry tradition has been validated as reliably predictive under controlled conditions, and that includes the specific claims discussed above: Cheiro's life-line dating and marriage readings, Benham's six-year divisions and tasselled-ending and island readings, and Varāhamihira's kingship, wealth, and longevity marks.
 
 It's worth being precise about what that does and doesn't establish. It means palmistry's occult predictive claims lack scientific support — not that every observation a palm reader makes is meaningless, and not that the entire practice has been disproven in some blanket sense. Whether the hand carries useful information about temperament or habitual patterns is a separate, much harder question from whether a line predicts a specific future event, and this article isn't claiming to settle it.
 
@@ -40,11 +40,11 @@ None of that requires pretending the predictive claims are true. It requires bei
 
 **Is palmistry pseudoscience?**
 
-If palmistry is presented as a way to predict specific future events from the hand, then yes — that claim has no scientific support and hasn't held up under study. As taught on this site, palmistry is presented differently: as a traditional interpretive framework for reflection, not as an established fact about what will happen to you. The distinction matters, and this article exists because it's often lost.
+If palmistry is presented as a way to predict specific future events from the hand, then yes — that claim has no scientific support and hasn't held up under scrutiny. As taught on this site, palmistry is presented differently: as a traditional interpretive framework for reflection, not as an established fact about what will happen to you. The distinction matters, and this article exists because it's often lost.
 
 **Has palmistry actually been tested scientifically?**
 
-The predictive claims have been tested in specific, checkable ways — most thoroughly for the life line, where studies comparing its length to recorded lifespan find no consistent relationship. No palmistry tradition has been validated as reliably predictive under controlled conditions more broadly. That's a narrower and more useful statement than "science has disproven palmistry," which overstates what has actually been examined.
+No palmistry tradition has been validated as reliably predictive under controlled conditions, and there is no scientific support for the idea that features of the hand carry occult predictive meaning. That's a narrower and more useful statement than "science has disproven palmistry": it describes an absence of supporting evidence, not a specific disproof of every individual claim ever made.
 
 **If it's not scientifically validated, why do palm readings sometimes feel accurate?**
 
