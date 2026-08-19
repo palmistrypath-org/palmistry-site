@@ -3,65 +3,69 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-019
+PP-RELAY-020
 
 ## Revision
 1
 
 ## Objective
-Publish the already-prioritized beginner article **“How to Practice Palm Reading: Tips for Building Your Skills”** at `src/content/blog/beginner/how-to-practice-palm-reading.md`, serving the distinct skill-building intent that follows the existing “How to Read a Palm” method article and Foundations lesson.
+Publish the already-prioritized beginner article **“Phalanges in Palmistry: What the Three Finger Sections Reveal”** at `src/content/blog/beginner/phalanges-palmistry.md`, using the existing Western-source framework for finger phalanges while preserving Palmistry Path’s distinction between observable anatomy, historical interpretation, and demonstrated fact.
 
 ## Why this task is authorized
-`docs/editorial-backlog.md` ranks this article #3 in its “Next 10” queue with priority score 13. The backlog explicitly distinguishes its intent from `how-to-read-a-palm`: the existing article teaches the reading sequence/method, while this article should teach how a beginner builds fluency through repeated observation and structured practice. Current repository evidence already supports the practice method through `src/content/lessons/foundations/02-how-to-read-a-palm.mdx`, its existing `<Practice>` exercise, the established observation-first curriculum, and already-published beginner material. This is bounded, source-safe skill-development content rather than a new palmistry interpretation.
+`docs/editorial-backlog.md` ranks this article in the “Next 10” queue with priority score 12. Current `main` confirms the intended file does not yet exist. The existing Foundations lesson `src/content/lessons/foundations/thumb-and-fingers.mdx` explicitly identifies “the three sections of each finger” as a real classification topic in the Western literature that the lesson deliberately does not teach, while the backlog identifies Benham and Gettings as the primary sources for this dedicated treatment. This is therefore a bounded expansion of an already-approved topic, not authorization to invent a new palmistry system.
+
+Current implementation also shows that backlog item #4 (`forked-head-line-meaning`) is already published at `src/content/blog/beginner/forked-head-line-meaning.md` even though the backlog still lists it as open. Reconcile that stale status while updating the backlog for this task; do not recreate or materially rewrite the existing forked-head-line article.
 
 ## Authorized scope
-1. Start from current `main` and verify `src/content/blog/beginner/how-to-practice-palm-reading.md` does not already exist.
-2. Compare the intended search/user intent against `src/content/blog/beginner/how-to-read-a-palm.md` before drafting. Preserve a clear division: the existing article remains the “how to perform a reading / observation sequence” guide; the new article must focus on repeated practice, fluency, observation habits, note-taking, comparison, and self-review.
+1. Start from current `main` and verify `src/content/blog/beginner/phalanges-palmistry.md` does not already exist.
+2. Verify the already-live `src/content/blog/beginner/forked-head-line-meaning.md` and correct only the stale backlog status for item #4. Do not count that existing article as new work and do not substantially edit it.
 3. Follow `AGENTS.md`, `docs/editorial-style-guide.md`, and `docs/article-template.md` with targeted context loading only.
-4. Build the article primarily from source-supported material already established in `src/content/lessons/foundations/02-how-to-read-a-palm.mdx`, the existing how-to-read article, current Practice/Checkpoint patterns, other approved corpus material, and repository-verified Tier 1/2 sources where needed. Do not use commercial astrology/SEO sites as authorities.
-5. Teach a practical beginner practice loop centered on observation before interpretation. Useful elements may include: work through the same general-to-specific sequence repeatedly; practice on both of your own hands; compare the same feature across multiple hands with permission; record what is visibly present before attaching meaning; choose one feature family at a time; revisit earlier notes after learning more; and explicitly note ambiguity instead of forcing a reading. Include only steps supported by current repository evidence and ordinary skill-building practice, not invented palmistry doctrine.
-6. Make the distinction from `how-to-read-a-palm.md` obvious in the title/description/opening. Link to that article for readers who still need the base reading sequence rather than reteaching its full content.
-7. Link naturally to `/learn/foundations/02-how-to-read-a-palm` and other current routes only where they genuinely support the practice workflow.
-8. Add a concise reciprocal navigation link from `how-to-read-a-palm.md` to the new practice article if it can be done without changing substantive palmistry claims. Do not broadly rewrite the existing article.
-9. Use only currently available site CTAs/products. Do not present the planned worksheet pack or any unlaunched product as available. A live Starter Guide / Learn Path CTA is acceptable if it matches current article conventions.
-10. Update canonical docs required by `AGENTS.md`, including marking backlog item #3 shipped if appropriate. Do not alter unrelated editorial priorities.
+4. Before drafting, establish a concise source plan from approved Tier 1/2 material. Prefer William G. Benham, *The Laws of Scientific Hand Reading* (1900), and Fred Gettings, *The Book of the Hand* (1965), as identified by the approved backlog; other approved repository sources may supplement them when directly relevant. Commercial astrology/SEO sites may not be used as authorities.
+5. Explain the observable structure first: each of the four fingers has three phalanges/sections separated by joints/creases, while the thumb has two anatomical segments and is treated separately in the existing curriculum. Keep anatomy and palmistry interpretation clearly separated.
+6. Teach only interpretations that are explicitly supported by verified sources. If the traditional upper/middle/lower-section framework is described, state it as a Western palmistry convention and avoid presenting physical proportions as measurements of intelligence, character, wealth, morality, or destiny.
+7. Where sources disagree or use materially different terminology, describe the disagreement rather than manufacturing one unified system.
+8. Keep the article complementary to `finger-shapes-palmistry` and the Foundations `thumb-and-fingers` lesson: finger shape is a whole-finger classification; this article is specifically about the three sections and how traditional Western palmistry reads their relative development.
+9. Add natural reciprocal/internal links from existing directly relevant content only when navigation improves and the edit can remain claim-neutral. Do not broadly rewrite established articles or lessons.
+10. Use only currently live CTAs/products and current site conventions. Do not introduce a new product, worksheet, or monetization claim.
+11. Update canonical docs required by `AGENTS.md`, including marking backlog item #4 as already published and item #5 shipped if this article is successfully published. Preserve the remaining queue order and scores.
 
 ## Editorial/source guardrails
-- Never invent palmistry meanings, scientific support, prevalence claims, consensus, quotations, citations, or historical claims.
-- Keep practice advice observational and educational. Do not convert repetition or note-taking into claims that palmistry becomes scientifically validated or objectively predictive with practice.
-- Preserve the explicit distinction between palmistry tradition and demonstrated fact.
-- Do not make medical, lifespan, legal, financial, or relationship-outcome claims.
-- Do not encourage reading another person's hand without permission; if practicing with other people is suggested, include a concise consent/respect boundary.
-- Do not duplicate the current `how-to-read-a-palm` article’s role. If, after inspecting the current corpus, a distinct skill-building article cannot be produced without substantial cannibalization or repetition, return `NO_CHANGE` with evidence rather than forcing a thin duplicate.
-- If a material interpretation or source claim requires support that cannot be established from approved repository evidence, narrow the claim or return `HUMAN_REQUIRED` rather than guessing.
+- Never invent palmistry meanings, quotations, prevalence claims, consensus, source attributions, or historical claims.
+- Quotation marks require verified verbatim wording from the cited edition. Prefer paraphrase unless exact wording has been verified.
+- Do not turn traditional phalange associations into claims of scientifically demonstrated personality, intelligence, aptitude, finances, health, lifespan, morality, or future outcomes.
+- Avoid deterministic wording such as “reveals who you are” in body prose even if the backlog title uses search-oriented language. Use grounded phrases such as “traditionally associated with” and explicitly state the interpretive status.
+- Do not imply that three finger phalanges are a universal palmistry framework across Indian, Chinese, and Western traditions unless approved evidence establishes that. Scope to Western palmistry when that is what the sources support.
+- If the source evidence is insufficient to support a materially useful dedicated article, return `HUMAN_REQUIRED` with the exact missing source/fidelity issue rather than filling gaps from low-tier web material or intuition.
 
 ## Acceptance criteria
-- A new `how-to-practice-palm-reading.md` exists only if it serves a clearly distinct skill-building/practice intent from `how-to-read-a-palm.md`.
-- The opening explicitly positions the article as the next step after learning the basic reading method.
-- The article gives a concrete, beginner-usable practice routine grounded in the current observation-first curriculum.
-- Practice advice separates observable features from interpretation and encourages noting uncertainty rather than forcing conclusions.
-- Any suggestion to practice on other people's hands includes permission/respect framing.
-- The existing how-to-read article, if touched, receives navigation-only reciprocal linking with no substantive claim rewrite.
+- A new `src/content/blog/beginner/phalanges-palmistry.md` exists only if a source-supported, materially useful dedicated article can be produced.
+- The article clearly distinguishes observable finger anatomy from historical/traditional interpretation.
+- The three phalanges/sections are explained in a beginner-usable way, including how a reader observes relative development before applying meaning.
+- All material palmistry interpretations are traceable to approved Tier 1/2 sources; no unsupported universal or deterministic claims are added.
+- The article is clearly differentiated from `finger-shapes-palmistry` and the thumb-specific material in the Foundations lesson.
+- Existing relevant content, if touched, receives only bounded navigation/context edits with no unsupported claim expansion.
+- The stale backlog status for the already-live forked-head-line article is corrected without recreating that article.
 - Relevant internal links and `relatedLesson` resolve; frontmatter follows current schema/conventions.
-- No unlaunched worksheet/product is represented as currently available.
-- Build/content audits pass and the final diff remains bounded to the new article, navigation-only reciprocal link(s), directly necessary canonical docs, and the Relay result artifact.
+- Build/content audits pass and the final diff remains bounded to the new article, directly relevant navigation-only edits, canonical docs, and the Relay result artifact.
 
 ## Verification
 - Run `npm run build`.
 - Run `npm run content-audit`.
-- Run `npm run audit:all` because this adds an indexable article and internal links.
-- Verify the new article’s title/description/opening are materially distinct from `how-to-read-a-palm.md` and do not compete for the same primary intent.
+- Run `npm run audit:all` because this adds an indexable article and may add internal links.
+- Verify every quotation against the cited edition or remove quotation marks and paraphrase.
+- Verify each material phalange interpretation has an approved-source basis and that Western/tradition scope is stated accurately.
+- Verify title/description/opening are distinct from `finger-shapes-palmistry` and do not compete for the same primary intent.
 - Verify all new internal links and `relatedLesson` resolve.
-- Verify any edit to the existing how-to-read article is navigation-only.
-- Verify no CTA/link implies the planned worksheet pack is live unless current `main` independently proves that it is.
-- Run `git diff --check` and inspect the final diff for source, SEO, scope, consent, and editorial drift.
+- Verify any existing content edits are bounded and do not introduce new palmistry claims.
+- Verify backlog item #4 is reconciled as already published and item #5 is marked shipped only if this task publishes successfully.
+- Run `git diff --check` and inspect the final diff for source, SEO, scope, accessibility, and editorial drift.
 
 ## v2B durable-result contract — REQUIRED
-Every worker run that passes startup must create `.ai-ops/results/PP-RELAY-019-r1.json`, commit it on a pushed `claude/relay-PP-RELAY-019-...` branch, and use one terminal result: `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must create `.ai-ops/results/PP-RELAY-020-r1.json`, commit it on a pushed `claude/relay-PP-RELAY-020-...` branch, and use one terminal result: `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
 Minimum artifact fields:
 - `schema_version`: 1
-- `task_id`: `PP-RELAY-019`
+- `task_id`: `PP-RELAY-020`
 - `revision`: 1
 - `result`: one allowed terminal result
 - `summary`: concise outcome
@@ -70,7 +74,7 @@ Minimum artifact fields:
 - `human_action`: exact action only when applicable, otherwise `null`
 - `execution`: truthful compact execution telemetry per current Relay contract; do not invent model names, token counts, hidden reasoning, or subagent activity.
 
-For `READY_FOR_REVIEW`, commit implementation/docs plus the result artifact, push one `claude/relay-PP-RELAY-019-...` branch, and open exactly one PR to `main` with title prefix `[RELAY PP-RELAY-019]` and matching Relay footers. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and do not create a dummy PR merely to signal completion. Absence of a PR is valid for non-change terminal outcomes.
+For `READY_FOR_REVIEW`, commit implementation/docs plus the result artifact, push one `claude/relay-PP-RELAY-020-...` branch, and open exactly one PR to `main` with title prefix `[RELAY PP-RELAY-020]` and matching Relay footers. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and do not create a dummy PR merely to signal completion. Absence of a PR is valid for non-change terminal outcomes.
 
 ## Result
 Stop after producing the durable result, pushing the Relay branch, and opening a PR only if the result is `READY_FOR_REVIEW`. Do not merge and do not select subsequent work.
