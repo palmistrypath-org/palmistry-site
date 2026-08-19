@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-022",
+  "revision": 2,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Applied the revision-2 source-safety remediation to src/content/blog/beginner/short-heart-line-meaning.md. The 'Length in context' section previously asserted four combined readings that no approved repository source establishes as combinations: short line plus depth/faintness, short line plus a Saturn or Jupiter endpoint, short line plus Mount of Venus development, and short line plus a compact or expansive whole-hand pattern. Each is now reduced to separate observation guidance under an explicit caution that these variables sit alongside length rather than folding into a length-specific reading, and the two cases where approved sources are silent (Venus mount development, whole-hand proportion) now say so directly instead of asserting a meaning. Three equivalent cross-tradition/consensus overreaches were narrowed in the same focused pass: an Indian-tradition reading of heart line length specifically (approved evidence establishes Hridaya Rekha and bhava and structural similarity, not a length reading), 'Neither the Western nor the Indian tradition reads shortness this way', and 'No major tradition Palmistry Path draws from reads length as a relationship tally'. The accepted revision-1 structure, SEO intent, observation workflow, core bounded interpretation, reciprocal navigation, sources footer, and canonical-doc updates are otherwise preserved; the only doc change is one added CHANGELOG bullet recording the remediation. origin/main was merged into the branch first so the revision-2 dispatch commit is not reverted by the PR.",
+  "pr_number": 37,
+  "verification": [
+    "npm run build — 104 page(s) built, including /blog/beginner/short-heart-line-meaning/",
+    "npm run content-audit — passed; 59 blog posts and 25 lessons valid",
+    "npm run audit:all — links, images, schema, indexability, and accessibility all passed",
+    "git diff --check — clean, exit 0",
+    "Re-scanned the article for most, generally, typically, always, never, consensus, modern, classical, Western, scientific, study, research, proves, predicts, cold, selfish, relationship, Venus, endpoint, deep, faint, compact; inspected every occurrence in context. Remaining hits are non-prevalence usages ('most worrying', 'most decisive'), anatomical description matching the lesson, explicitly negated myth statements, or phrasing carried verbatim in substance from src/content/lessons/lines/02-heart-line.mdx.",
+    "Re-checked every multi-feature sentence against src/content/lessons/lines/02-heart-line.mdx and src/content/blog/beginner/heart-line.md; no sentence now states a combined interpretive conclusion that approved repository evidence does not establish as a combination.",
+    "Removed a duplicate internal link to /blog/beginner/heart-line/ introduced by the rewrite, preserving the one-link-per-target rule; each internal target still appears exactly once.",
+    "Reviewed the complete diff against origin/main for scope drift: bounded to the article body, one CHANGELOG bullet, the r2 result artifact, and the merge of main."
+  ],
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "git",
+      "grep",
+      "targeted source review against 02-heart-line.mdx and heart-line.md",
+      "npm build and audit scripts"
+    ],
+    "validation": [
+      "npm run build — pass",
+      "npm run content-audit — pass",
+      "npm run audit:all — pass",
+      "git diff --check — pass",
+      "flagged-term scan — pass",
+      "combination-claim review — pass"
+    ],
+    "notes": "Subagents were unnecessary: the remediation was a bounded single-file source-safety edit with two small reference files, well within one implementation owner's context."
+  }
+}
