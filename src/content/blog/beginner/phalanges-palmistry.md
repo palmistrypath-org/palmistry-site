@@ -38,7 +38,7 @@ A phalange that stands out on one finger will not necessarily stand out on the o
 
 ## Where sources use different terminology
 
-The three-register framework is consistent across Benham, Gettings, and West in substance, but not always in name. Older texts sometimes call the three phalanges "worlds" — the spiritual world, the practical or logical world, and the material world. Some modern writers instead call them the mental, practical, and material zones, dropping the "world" language without changing the underlying reading. Readers encountering both phrasings in older and newer material are looking at the same tradition described in two different vocabularies, not two competing systems.
+The three-register framework is consistent across Benham, Gettings, and West in substance, but not always in name. Some texts call the three phalanges "worlds" — the spiritual world, the practical or logical world, and the material world; this article uses the equivalent mental, practical, and material register names throughout. Both phrasings describe the same underlying reading, not two competing systems.
 
 Where sources genuinely diverge is on weighting: Benham's treatment leans toward reading phalange development as a modifier on the finger's own planetary meaning, while Gettings treats phalange balance as more of a standalone character indicator in its own right, useful even before the finger's planetary domain is factored in. Both approaches agree on what a developed first, second, or third phalange traditionally suggests — they differ on how much independent weight to give the phalange reading versus the finger it sits on.
 
@@ -64,7 +64,7 @@ Phalange balance is also read alongside the joint texture covered in the finger 
 The four main fingers — index, middle, ring, and little — each have three phalanges, divided by two knuckle joints. The thumb has two phalanges and is read through a separate framework.
 
 **Which phalange is most important to read?**
-None is inherently most important; Western palmistry reads all three in relation to each other, on the same finger, to see which is most developed. Some sources give slightly more independent weight to phalange balance than others, but no single phalange is treated as decisive on its own.
+None is inherently most important; Western palmistry reads all three in relation to each other, on the same finger, to see which is most developed. Gettings gives phalange balance somewhat more independent weight than Benham does, but no single phalange is treated as decisive on its own.
 
 **Do phalanges mean the same thing on every finger?**
 The three-register framework — mental/spiritual at the tip, practical in the middle, material at the base — applies to all four fingers, but its meaning shifts with each finger's own planetary domain. A developed first phalange reads differently on the Jupiter finger than on the Mercury finger, because the fingers themselves carry different traditional associations.
