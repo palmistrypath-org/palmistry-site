@@ -109,4 +109,4 @@ The life line is a window into how palmistry thinks about vitality and life forc
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Johnny Fincham, The Spellbinding Power of Palmistry (2005); Lucas et al., "Predicting longevity from the line of life: is it accurate?", Anthropological Review (2019).*
+*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Johnny Fincham, The Spellbinding Power of Palmistry (2005); Newrick, Affie & Corrall, "Relationship between longevity and lifeline: a manual study of 100 patients," Journal of the Royal Society of Medicine 83:8 (1990); Wilson & Mather, "Life expectancy" (letter), JAMA 229:11 (1974); Lucas et al., "Predicting longevity from the line of life: is it accurate?", Anthropological Review (2019).*

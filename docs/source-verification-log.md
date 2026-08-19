@@ -505,3 +505,61 @@ The reusable finding: **matching a quotation to the corpus is not the same as
 verifying it.** Fourteen passages here matched and were still wrong, most of them
 short phrases sitting under the wrong feature. A future pass should check the
 subject the source is discussing, not only the string.
+
+---
+
+## Pass 6 — Life-line empirical-evidence footer gap (2026-08-19)
+
+Scope: Relay PP-RELAY-024 (`SOURCE_SENSITIVE`). `life-line.md`'s "A note on
+the empirical question" section names three studies — Newrick and colleagues
+(1990), Wilson and Mather (1974), and Lucas and colleagues (2019) — but the
+closing source footer listed only Lucas et al., verified in Pass 1. The other
+two were not previously independently traced to a full citation in this log.
+
+### Studies verified by targeted lookup
+
+- **Newrick, Affie & Corrall (1990).** "Relationship between longevity and
+  lifeline: a manual study of 100 patients." *Journal of the Royal Society of
+  Medicine* 83(8):499–501. Departments of Medicine and Pathology, Bristol
+  Royal Infirmary. Sample: 100 consecutive autopsies (the site's "100
+  cadavers" is accurate to this methodology, notwithstanding the paper's own
+  "patients" title). Found a highly significant association between lifeline
+  length and age at death, strengthened when hand size was controlled for.
+- **Wilson & Mather (1974).** "Life expectancy" (letter). *JAMA* 229(11):1421–
+  1422. Sample: 51 cadavers, lifeline length compared against recorded age at
+  death and height. Found no significant correlation. Published as a letter,
+  not a full research article — the site's existing phrase "the most recent
+  peer-reviewed study" (reserved for Lucas et al.) already does not extend
+  peer-reviewed-study status to this one, so no wording change was needed on
+  that point.
+
+Both citations were added to `life-line.md`'s source footer alongside the
+already-verified Lucas et al. (2019) entry. No change was needed to the
+body prose describing these studies: the existing "results have been mixed,"
+the explicit statement that "the 1990 study did report a correlation," and
+"the empirical evidence, on balance, does not support a predictive
+relationship" already state the mixed finding accurately per Pass 5's
+established standard, and were re-checked against the citations above rather
+than only against each other.
+
+### Lesson takeaway wording corrected
+
+`04-life-line.mdx`'s closing "Lesson takeaway" sentence read "it has not held
+up under testing" — a legacy phrase flagged as an open item since Relay
+PP-RELAY-011 (2026-08-18), which deliberately left it untouched. Standing
+alone, without the mixed-evidence context the companion article gives, the
+phrase risks reading as a claim that testing was uniformly negative, which
+overstates the record the same lesson already states correctly earlier
+("the studies covered in the life line article find no reliable relationship
+between the line and how long anyone lives"). Reworded to "the studies that
+have directly tested it find no reliable relationship between line length
+and lifespan" — the same formulation already used earlier in the lesson,
+now applied consistently at the close. This is the same category of
+correction Pass 5 made elsewhere in this cluster (net-unsupportive framed
+without erasing that one study found a correlation), applied to the one
+file/location Pass 5 did not touch.
+
+No new studies, palmistry interpretations, or scientific claims were
+introduced. `04-life-line.mdx` line 96 ("the readings above have no
+demonstrated reliability") concerns the break reading, not line length, and
+was already correctly scoped by Pass 5; it was inspected and left unchanged.
