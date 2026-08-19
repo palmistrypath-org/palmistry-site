@@ -64,7 +64,7 @@ No palmistry tradition has been validated as reliably predictive in controlled c
 
 Palmistry is also not medical diagnosis. Nothing in these articles should be treated as health guidance. When a tradition notes that a particular feature of the hand is traditionally associated with vitality or constitution, that is a cultural and interpretive observation — not a medical claim.
 
-None of this makes palmistry worthless. It makes it something specific: a structured interpretive tradition with a long cultural history, not a science. The distinction matters, and holding it clearly is what allows you to engage with the subject honestly. The [common palmistry myths](/blog/beginner/palmistry-myths/) article works through the most persistent popular misconceptions — including several that the tradition itself explicitly rejects.
+None of this makes palmistry worthless. It makes it something specific: a structured interpretive tradition with a long cultural history, not a science. The distinction matters, and holding it clearly is what allows you to engage with the subject honestly. If you're weighing whether to trust any of this, [is palmistry real?](/blog/beginner/is-palmistry-real/) works through the evidence question directly. The [common palmistry myths](/blog/beginner/palmistry-myths/) article works through the most persistent popular misconceptions — including several that the tradition itself explicitly rejects.
 
 A related question beginners often raise: whether the lines are permanently fixed or whether they change over time. The answer is more nuanced than it first appears, and [can palm lines change?](/blog/beginner/can-palm-lines-change/) covers both the scientific and traditional positions.
 
