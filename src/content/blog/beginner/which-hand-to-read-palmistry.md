@@ -68,7 +68,7 @@ This is a popular shorthand, but it's not quite accurate, and it conflates left/
 No tradition in serious palmistry presents the active hand as a prediction of what will happen. It is traditionally associated with what has developed from the passive hand's baseline — choices made, patterns reinforced, the direction of travel so far. Palmistry, understood on its own terms, is a system of observation and pattern recognition, not a tool for predicting future events.
 
 **Should you compare both hands?**
-Yes — and this is the step most beginners skip. The comparison between hands is often the most revealing part of an examination. A life line that is long and clear on the passive hand but shorter or interrupted on the active may suggest something shifted; the reverse may suggest a different kind of development. Reading both hands together is what distinguishes a careful palmistry observation from a surface-level line lookup.
+Yes — and this is the step most beginners skip. The comparison between hands is often the most revealing part of an examination. A life line that is long and clear on the passive hand but shorter or interrupted on the active may suggest something shifted; the reverse may suggest a different kind of development. Reading both hands together is what distinguishes a careful palmistry observation from a surface-level line lookup. For a step-by-step method, see [Reading Both Hands: How to Compare Your Active and Passive Hand](/blog/beginner/reading-both-hands-palmistry).
 
 ## A note on certainty
 

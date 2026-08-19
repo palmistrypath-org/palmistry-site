@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-018",
+  "revision": 1,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Published the beginner blog article 'Reading Both Hands: How to Compare Your Active and Passive Hand' at src/content/blog/beginner/reading-both-hands-palmistry.md, closing the #2-ranked item in docs/editorial-backlog.md's Next 10 queue. which-hand-to-read-palmistry.md answers which hand is active/passive; this article assumes that is already settled and teaches the practical comparison workflow instead: aligning both palms, then checking depth/clarity, length, direction/branching, presence/absence, and broad structural agreement across the three major lines, grounded in the existing Active and Passive Hand lesson's comparison framework. Added one navigation-only reciprocal link from which-hand-to-read-palmistry.md's comparison FAQ answer to the new article, with no change to its existing palmistry claims. Updated docs/editorial-backlog.md and docs/CHANGELOG.md to record the shipped item.",
+  "pr_number": 33,
+  "verification": [
+    "npm run build: 100 page(s) built, including /blog/beginner/reading-both-hands-palmistry/",
+    "npm run content-audit: 55 blog posts and 25 lessons valid",
+    "npm run audit:all: link, image, schema (JSON-LD), indexability, and accessibility audits all passed",
+    "relatedLesson route /learn/foundations/04-active-and-passive-hand confirmed to exist and build",
+    "Verified the new article's title, description, and opening are distinct from which-hand-to-read-palmistry.md: the existing article's role is 'which hand is active/passive' with a history/tradition focus; the new article assumes that is settled and teaches a practical comparison workflow, explicitly signposting to the which-hand article rather than reteaching it",
+    "All new internal links (which-hand-to-read-palmistry, the foundations lesson, major-lines-overview, how-to-read-a-palm) confirmed present pre-build and verified broken-link-free post-build via npm run audit",
+    "Inspected the edit to which-hand-to-read-palmistry.md: a single added sentence with one link inside the existing 'Should you compare both hands?' FAQ answer; no existing claim, quotation, or frontmatter changed",
+    "git diff --check: no whitespace errors",
+    "Diff scope confirmed bounded to: the new article, the one reciprocal link in which-hand-to-read-palmistry.md, docs/editorial-backlog.md, docs/CHANGELOG.md, and this result artifact",
+    "No new palmistry claims, quotations, or source attributions introduced beyond what the existing lesson (04-active-and-passive-hand.mdx) and which-hand article already establish from Benham, Gettings, and Cheiro"
+  ],
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["git", "grep", "targeted source review of the existing lesson and which-hand article", "npm run build", "npm run content-audit", "npm run audit:all"],
+    "validation": ["npm run build", "npm run content-audit", "npm run audit:all (links, images, schema, indexability, accessibility)", "git diff --check", "manual diff-scope and distinctness review against which-hand-to-read-palmistry.md"],
+    "notes": "Local main in this session's checkout had an unrelated, no-merge-base history versus origin/main (stale container ref). Did not touch or reset local main; branched the Relay task branch directly from the fetched origin/main tip, which matched the dispatch payload's stale-detection commit SHA exactly."
+  }
+}
