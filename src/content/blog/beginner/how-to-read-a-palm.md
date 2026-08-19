@@ -104,7 +104,7 @@ The goal is not certainty. It is attention.
 
 The articles that follow in this series cover the foundational elements in sequence: hand shapes and the interpretive context each provides, then the major lines, then the mounts. Each builds on what the previous one established.
 
-For now, the most productive next step is simply to look. At your own hands, at the hands of people you know well. Practice the sequence above without yet worrying much about meanings — overall impression, shape, texture, mounts, then lines. What you learn to see before you learn what things are supposed to mean will serve you better in the long run than any amount of definition memorisation.
+For now, the most productive next step is simply to look. At your own hands, at the hands of people you know well. Practice the sequence above without yet worrying much about meanings — overall impression, shape, texture, mounts, then lines. What you learn to see before you learn what things are supposed to mean will serve you better in the long run than any amount of definition memorisation. For a concrete routine to build that practice on, see [how to practice palm reading](/blog/beginner/how-to-practice-palm-reading).
 
 ---
 

@@ -96,7 +96,7 @@ Available scripts include:
 - `npm run content-audit`
 - IndexNow dry-run/submission scripts
 
-No separate unit-test runner or linter is declared in `package.json`; Astro build plus the project audit scripts are the main automated validation layer. `content-audit` discovers and validates both the blog (53 posts) and lessons (25) collections, including lesson module/order/difficulty/duration checks and cross-collection `relatedLesson`/`relatedArticle` route resolution.
+No separate unit-test runner or linter is declared in `package.json`; Astro build plus the project audit scripts are the main automated validation layer. `content-audit` discovers and validates both the blog (56 posts) and lessons (25) collections, including lesson module/order/difficulty/duration checks and cross-collection `relatedLesson`/`relatedArticle` route resolution.
 
 Lesson `order` uniqueness is enforced per module: `scripts/audit-content.mjs` keys each lesson's `order` by its top-level content directory, so two lessons in the same module sharing an `order` is a blocking error naming the module, the order value, and both colliding source files, while distinct modules may legitimately reuse the same numeric order. Because `ci.yml` runs `content-audit` on every pull request to `main` and every push to `main`, an order collision cannot reach `main` through ordinary CI. Verified 2026-08-18 (Relay PP-RELAY-013) by reproducing the historical Advanced-module `order: 4` collision locally: the audit exits non-zero and the current curriculum passes unchanged.
 
