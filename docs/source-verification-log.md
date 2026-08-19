@@ -612,3 +612,45 @@ No new studies, citations, palmistry interpretations, or scientific claims
 were introduced. The three verified study citations and outcomes from
 Pass 6 (Newrick et al. 1990 significant association; Wilson & Mather 1974
 no correlation; Lucas et al. 2019 no correlation) are unchanged.
+
+## Pass 8 — Life-line residual testing-summary correction (2026-08-19)
+
+Scope: Relay PP-RELAY-024 revision 3 (`SOURCE_SENSITIVE`). Director review of
+the revision-2 result found two residual scientific/testing summaries in
+`lessons/lines/04-life-line.mdx` that Pass 7 had inspected but left
+unchanged as outside revision 2's authorized scope:
+
+1. Line 28 (the "myth, corrected" section): "...the older claim has been
+   tested, and the studies covered in the life line article find no
+   reliable relationship between the line and how long anyone lives." This
+   construction, read on its own, can imply all three verified studies were
+   negative, even though Newrick et al. (1990) found a significant
+   association.
+2. Line 40: "...the practice has not survived testing..." (referring to the
+   older writers' formal year-dating schemes). This claims a broader,
+   comprehensive/unanimous empirical verdict than the three verified studies
+   — which tested life-line length against lifespan generally, not the
+   specific dating schemes — establish.
+
+### Correction made
+
+Line 28 now reads: "...the older claim has been tested, and the limited
+published studies covered in the life line article show a mixed record that
+does not establish a reliable relationship between the line and how long
+anyone lives," matching the "mixed record" wording already used in the same
+file's closing "Lesson takeaway" (Pass 7) and in `life-line.md`.
+
+Line 40 now reads: "...the limited published testing on life-line length
+and lifespan does not support it, and it is not part of how you are being
+taught to read," replacing the unqualified "has not survived testing" with
+wording scoped to the limited three-study record rather than a comprehensive
+verdict, and naming what was actually tested (length vs. lifespan) rather
+than implying the dating schemes themselves were the subject of testing.
+
+No new studies, citations, palmistry interpretations, or scientific claims
+were introduced. The three verified study citations and outcomes from
+Pass 6 (Newrick et al. 1990 significant association; Wilson & Mather 1974
+no correlation; Lucas et al. 2019 no correlation) are unchanged. This closes
+the residual scope Pass 7 flagged as a candidate for a future bounded pass;
+no further residual testing-summary sentences remain in
+`lessons/lines/04-life-line.mdx` or `life-line.md`.

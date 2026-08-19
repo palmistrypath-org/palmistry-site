@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-024",
+  "revision": 3,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Corrected the two residual empirical/testing summaries in src/content/lessons/lines/04-life-line.mdx flagged by Director review after revision 2. (1) The 'myth, corrected' section's sentence ending '...the studies covered in the life line article find no reliable relationship between the line and how long anyone lives' now reads '...the limited published studies covered in the life line article show a mixed record that does not establish a reliable relationship between the line and how long anyone lives' — matching the 'mixed record' wording already used in the same file's closing Lesson takeaway (revision 2) and in life-line.md, so it can no longer be read as claiming all three verified studies were negative (Newrick et al. 1990 found a significant association). (2) The sentence 'the practice has not survived testing' (about the older writers' formal year-dating schemes) now reads 'the limited published testing on life-line length and lifespan does not support it,' removing the comprehensive/unanimous-verdict implication and scoping the claim to what the three studies actually tested (length vs. lifespan, not the dating schemes themselves). The verified three-study record (Wilson & Mather 1974 no correlation, Newrick et al. 1990 significant association, Lucas et al. 2019 no correlation) is unchanged and was not touched. No new studies, citations, historical claims, palmistry interpretations, or health/lifespan doctrine were introduced. Added Pass 8 to docs/source-verification-log.md documenting this correction and extended docs/CURRENT_STATE.md's PP-RELAY-024 note. Pushed to the existing claude/relay-PP-RELAY-024-life-line-sourcing branch and updated PR #40's footer to revision 3.",
+  "pr_number": 40,
+  "verification": [
+    "Grepped src/content/lessons/lines/04-life-line.mdx for test/testing/study/studies/evidence/reliable/correlation/significant/predict/lifespan/length of life/latest/most recent/all/only/modern literature and inspected every material occurrence",
+    "Confirmed the two target sentences (lines 28 and 40) were the only occurrences of the flagged 'find no reliable relationship' and 'has not survived testing' constructions remaining in the file",
+    "Confirmed the three retained study citations/outcomes (Wilson & Mather 1974, Newrick et al. 1990, Lucas et al. 2019) are unchanged from the Pass 6 verified record",
+    "Reviewed the complete revision-3 diff (git diff --stat and full diff): exactly three files changed (04-life-line.mdx, docs/source-verification-log.md, docs/CURRENT_STATE.md), no scope drift beyond the two authorized sentences plus bookkeeping",
+    "npm run build: 105 routes built, including /learn/lines/04-life-line/",
+    "npm run content-audit: 60 blog posts, 25 lessons valid",
+    "npm run audit:all: links, images, schema, indexability, accessibility all pass",
+    "git diff --check: clean"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Both revised sentences now use 'limited published studies' / 'limited published testing' rather than an unqualified 'no reliable relationship' or 'has not survived testing,' so neither implies unanimity, comprehensiveness, or a broader empirical verdict than the three-study record (one significant association, two no correlation) establishes. No new frequency/consensus wording (most/many/often/commonly/typically/generally) was introduced. No new study, citation, historical claim, or combination reading was added. No vague anonymous-authority phrasing (modern palmists, some writers, experts) appears in the changed sentences. No quotation marks were added or altered. Historical claim, empirical finding, and Palmistry Path teaching-policy claim types remain clearly separated, matching the file's existing structure. No medical, legal, financial, deterministic, or predictive-science claim was introduced."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["git", "grep", "targeted source review against docs/source-verification-log.md Pass 6/Pass 7", "npm build/audit scripts", "GitHub MCP for PR inspection/update"],
+    "validation": [
+      "npm run build (105 routes)",
+      "npm run content-audit (60 posts / 25 lessons)",
+      "npm run audit:all (links, images, schema, indexability, accessibility)",
+      "git diff --check"
+    ],
+    "notes": "Local main had diverged from a force-rewritten origin/main with no shared history at session start; reset local main to origin/main (clean working tree, no uncommitted work) before checking out the existing claude/relay-PP-RELAY-024-life-line-sourcing branch to continue revision 3 on PR #40."
+  }
+}
