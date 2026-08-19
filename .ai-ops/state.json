@@ -6,14 +6,14 @@
   "relay_enabled": true,
   "credit_guard": "CONFIRMED_DISABLED",
   "autonomous_merge": true,
-  "status": "READY_FOR_DIRECTOR",
+  "status": "READY_FOR_CLAUDE",
   "iteration_budget": 50,
   "iterations_completed": 0,
-  "current_task_id": null,
-  "current_task_revision": null,
-  "current_task_path": null,
-  "expected_result_path": null,
-  "current_task_risk_class": null,
+  "current_task_id": "PP-RELAY-024",
+  "current_task_revision": 1,
+  "current_task_path": ".ai-ops/tasks/PP-RELAY-024.md",
+  "expected_result_path": ".ai-ops/results/PP-RELAY-024-r1.json",
+  "current_task_risk_class": "SOURCE_SENSITIVE",
   "last_accepted_task_id": null,
   "active_relay_pr": null,
   "approved_pr": null,
@@ -23,5 +23,5 @@
   "metrics_path": ".ai-ops/metrics.json",
   "pilot_contract_path": ".ai-ops/V2C_PILOT.md",
   "previous_experiment_archive": ".ai-ops/archive/relay-v2b-completion.json",
-  "experiment_started_at": null
+  "experiment_started_at": "2026-08-19T20:07:40Z"
 }
