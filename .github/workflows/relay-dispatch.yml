@@ -93,7 +93,7 @@ jobs:
         run: |
           set -euo pipefail
           PAYLOAD="$(jq -n \
-            --arg text "Relay v2B dispatch hint: task ${TASK_ID}, revision ${TASK_REVISION}, packet ${TASK_PATH}, state commit ${GITHUB_SHA}. Read repository state, immutable task packet, CURRENT_TASK compatibility mirror, and v2B durable-result contract; this payload is only for stale/duplicate detection." \
+            --arg text "Relay dispatch hint: task ${TASK_ID}, revision ${TASK_REVISION}, packet ${TASK_PATH}, state commit ${GITHUB_SHA}. Read repository state, immutable task packet, CURRENT_TASK compatibility mirror, and the active Relay durable-result contract; this payload is only for stale/duplicate detection." \
             '{text: $text}')"
 
           curl --fail-with-body \

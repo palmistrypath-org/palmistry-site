@@ -16,6 +16,7 @@ You are the **worker** in the Palmistry Path `ai-project-ops` Relay. GitHub is t
    - `current_task_id` is non-null.
    - the immutable task packet exists.
    - Task ID + Revision match across `state.json`, the immutable task packet, and `CURRENT_TASK.md`.
+   - the task packet declares exactly one `Risk Class`: `LOW`, `STANDARD`, or `SOURCE_SENSITIVE`.
    - `iterations_completed` is less than `iteration_budget`.
    - there is no already-open Relay PR for the same task/revision.
    - there is no already-pushed terminal result artifact for the same task/revision on an existing `claude/relay-<task-id>-...` branch.
@@ -31,6 +32,14 @@ This Relay is intended to use included Claude subscription usage only.
 - Preserve recoverable work if practical without starting additional scope, write a durable `PAUSED_USAGE_LIMIT` result artifact, push it when practical, and stop.
 - Do not switch to API/pay-as-you-go credentials or another paid path to bypass a limit.
 
+## v2C risk classes
+
+Read `.ai-ops/V2C_PILOT.md` when the active experiment is v2C.
+
+- `LOW`: mechanically verifiable, narrow work. This does **not** itself authorize fast-lane merge; fast-lane requires an explicit exact allowlist entry in `.ai-ops/fastlane.json`.
+- `STANDARD`: normal objectively reviewable work requiring full Director review.
+- `SOURCE_SENSITIVE`: source/claim-sensitive editorial work requiring full Director review and the source-claim preflight below. It is never fast-lane eligible during the v2C 50-run pilot.
+
 ## Execution
 
 After the startup gate passes:
@@ -42,21 +51,38 @@ After the startup gate passes:
 5. Implement the task when a project/docs change is warranted.
 6. Run all task-required verification plus normal project checks required by `AGENTS.md` for that change type.
 7. Inspect the resulting diff for regressions, accessibility/responsive issues when relevant, SEO/content-model impact when relevant, unnecessary complexity, source integrity, and product/editorial drift.
-8. Update canonical project docs according to `AGENTS.md` when implementation/state changed.
-9. Write the durable result artifact at `.ai-ops/results/<task-id>-r<revision>.json` using the schema and allowed result values in `.ai-ops/README.md` and the task packet.
-10. Commit coherent changes, including the result artifact.
-11. Push one `claude/relay-<task-id>-<short-slug>` branch.
-12. If and only if the result is `READY_FOR_REVIEW`, open exactly one PR to `main` titled `[RELAY <task-id>] <short description>`.
+8. If the risk class is `SOURCE_SENSITIVE`, complete the source-claim preflight below against the final diff before choosing a terminal result.
+9. Update canonical project docs according to `AGENTS.md` when implementation/state changed.
+10. Write the durable result artifact at `.ai-ops/results/<task-id>-r<revision>.json` using the schema and allowed result values in `.ai-ops/README.md` and the task packet.
+11. Commit coherent changes, including the result artifact.
+12. Push one `claude/relay-<task-id>-<short-slug>` branch.
+13. If and only if the result is `READY_FOR_REVIEW`, open exactly one PR to `main` titled `[RELAY <task-id>] <short description>`.
 
 For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the result branch and normally do **not** create a dummy PR solely to signal status.
 
+## SOURCE_SENSITIVE source-claim preflight
+
+Before returning `READY_FOR_REVIEW` for any `SOURCE_SENSITIVE` task, inspect the final changed prose and explicitly verify all of the following:
+
+1. **Prevalence / consensus language:** every claim using or implying `most`, `many`, `often`, `commonly`, `typically`, `generally`, `usual`, `rare`, or equivalent frequency/consensus wording is directly grounded in approved repository evidence. If not, remove or narrow it.
+2. **Scientific / historical assertions:** every concrete study/result, historical continuity, chronology, evidence, or scientific claim is traceable to approved repository evidence. If not, remove, narrow, or use a genuine human gate when source acquisition/judgment is required.
+3. **No invented combination readings:** do not combine independently supported meanings into a new palmistry interpretation unless that specific combination is itself established in approved evidence.
+4. **No vague anonymous authority:** do not use unsupported attributions such as `modern palmists`, `some writers`, `traditional readers`, `experts`, or equivalents unless an identifiable approved source supports the statement.
+5. **Claim-type separation:** keep direct observation, historical/traditional interpretation, and Palmistry Path editorial guidance distinguishable.
+6. **Quotation fidelity:** quotation marks mean verified verbatim wording from the cited edition; otherwise paraphrase.
+7. **Safety boundaries:** introduce no medical, legal, financial, deterministic relationship, or predictive-science claim.
+
+Passing the preflight means the final prose has been checked; it does not mean inventing a source or assuming a claim is safe because it sounds plausible.
+
 ## Execution telemetry — required, compact, and truthful
 
-Every terminal result artifact must include an `execution` object so the Director and human owner can see how the Routine actually performed the work without opening the Claude session transcript.
+Every terminal result artifact must include `risk_class`, `source_preflight`, and an `execution` object so the Director and human owner can assess performance without opening the Claude session transcript.
 
-Record only information known from the run; never infer or invent model names, token counts, or subagent activity that the environment does not expose.
+Record only information known from the run; never infer or invent model names, token counts, evidence, or subagent activity that the environment does not expose.
 
 ```json
+"risk_class": "STANDARD",
+"source_preflight": null,
 "execution": {
   "primary_role": "implementation-owner",
   "primary_model": null,
@@ -68,18 +94,32 @@ Record only information known from the run; never infer or invent model names, t
 }
 ```
 
+For `SOURCE_SENSITIVE`, `source_preflight` must be a compact truthful object:
+
+```json
+"source_preflight": {
+  "completed": true,
+  "prevalence_language_checked": true,
+  "scientific_historical_claims_checked": true,
+  "combination_readings_checked": true,
+  "vague_attribution_checked": true,
+  "quotation_fidelity_checked": true,
+  "notes": null
+}
+```
+
 Rules:
+- `risk_class` must exactly match the authorized task packet.
+- `source_preflight` is `null` for `LOW` and `STANDARD` unless the task packet explicitly requires a source preflight; it is required for `SOURCE_SENSITIVE` terminal results after implementation has been reviewed.
 - `primary_role` should normally be `implementation-owner` unless the task was purely analysis/review.
 - `primary_model` is the exact model name only when the environment exposes it reliably; otherwise `null`.
 - `subagents_used` must reflect whether subagents/workers were actually invoked.
-- When subagents are used, add one concise item per subagent to `subagents`, for example `{"role":"source-review","objective":"Verify Sun/Mercury quotation fidelity","model":null,"outcome":"completed"}`. Keep objectives and outcomes short.
-- If no subagents were used, keep `subagents_used: false` and `subagents: []`; this is a valid and often preferable result for small tasks.
-- `tools_or_methods` is a short list of meaningful execution methods, not a transcript (for example `git`, `grep`, `targeted source review`).
-- `validation` is a compact list of checks actually run; it may overlap with the top-level `verification` evidence but should be shorter and status-oriented.
-- `notes` is only for a material execution detail such as why subagents were intentionally unnecessary; otherwise `null`.
-- Do not add verbose chain-of-thought, hidden reasoning, prompts, or full subagent transcripts. Telemetry is operational metadata only.
-
-The PR summary may include a one-line execution note when useful, but the durable result artifact is authoritative.
+- When subagents are used, add one concise item per subagent, for example `{"role":"source-review","objective":"Verify source-sensitive claims","model":null,"outcome":"completed"}`.
+- If no subagents were used, keep `subagents_used: false` and `subagents: []`; this is valid and often preferable for small tasks.
+- `tools_or_methods` is a short list of meaningful execution methods, not a transcript.
+- `validation` is a compact list of checks actually run.
+- `notes` is only for a material execution detail; otherwise `null`.
+- Do not add chain-of-thought, hidden reasoning, prompts, or full subagent transcripts.
 
 ## PR body contract
 
