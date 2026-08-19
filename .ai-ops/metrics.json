@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "experiment": "relay-v2c-50-iteration",
-  "started_at": null,
+  "started_at": "2026-08-19T20:07:40Z",
   "target_accepted_iterations": 50,
   "baseline": {
     "experiment": "relay-v2b-near-autonomous",
@@ -62,5 +62,23 @@
     "DOCUMENTATION_STATE": 0,
     "OTHER": 0
   },
-  "tasks": []
+  "tasks": [
+    {
+      "task_id": "PP-RELAY-024",
+      "revision": 1,
+      "risk_class": "SOURCE_SENSITIVE",
+      "status": "AUTHORIZED",
+      "task_path": ".ai-ops/tasks/PP-RELAY-024.md",
+      "result_path": ".ai-ops/results/PP-RELAY-024-r1.json",
+      "dispatched_at": null,
+      "result_discovered_at": null,
+      "reviewed_at": null,
+      "merge_approved_at": null,
+      "merged_at": null,
+      "pr_number": null,
+      "rework_count": 0,
+      "reason_categories": [],
+      "terminal_result": null
+    }
+  ]
 }
