@@ -9,6 +9,24 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
+**Relay PP-RELAY-022 (2026-08-19) shipped Short Heart Line Meaning** at
+`src/content/blog/beginner/short-heart-line-meaning.md`, closing the #7 item
+in `docs/editorial-backlog.md`'s Next 10 queue. This is a focused companion to
+`heart-line.md`, following the established variation-article pattern already
+used by `forked-heart-line-meaning.md`, `chained-heart-line-meaning.md`, and
+`broken-heart-line-meaning.md`. It adds a distinct-angle "Confirming the line
+is actually short" section — teaching readers to rule out faintness, breaks,
+and chaining before concluding the line is genuinely short — that the general
+article does not cover step by step. All interpretation stays within the
+bound already established in `lessons/lines/02-heart-line.mdx` and
+`heart-line.md`: a shorter line may suggest focused emotional investment
+rather than limited feeling, not coldness or reduced capacity to love. No new
+source, quotation, or palmistry meaning was introduced. Bounded diff: the new
+article, one reciprocal link in `heart-line.md`'s "Explore further" list, and
+the backlog/changelog/current-state docs. `npm run build` (104 routes),
+`npm run content-audit` (59 posts/25 lessons), and `npm run audit:all` all
+passed. Nothing else outstanding from this task.
+
 **Relay PP-RELAY-021 (2026-08-19) shipped Is Palmistry Real?** at
 `src/content/blog/beginner/is-palmistry-real.md`, closing the #6 item in
 `docs/editorial-backlog.md`'s Next 10 queue. This is an evidence/trust FAQ for

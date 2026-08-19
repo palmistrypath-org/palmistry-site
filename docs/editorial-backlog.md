@@ -6,7 +6,7 @@
 
 ## Status
 
-**Published:** 51 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019. Item 4 (`forked-head-line-meaning`) was already live on `main` before PP-RELAY-020 but missing from this count; its backlog status is corrected, not counted as new. Item 5 (`phalanges-palmistry`) shipped 2026-08-19; see PP-RELAY-020 (49 → 50). Item 6 (`is-palmistry-real`) shipped 2026-08-19; see PP-RELAY-021 (50 → 51).
+**Published:** 52 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019. Item 4 (`forked-head-line-meaning`) was already live on `main` before PP-RELAY-020 but missing from this count; its backlog status is corrected, not counted as new. Item 5 (`phalanges-palmistry`) shipped 2026-08-19; see PP-RELAY-020 (49 → 50). Item 6 (`is-palmistry-real`) shipped 2026-08-19; see PP-RELAY-021 (50 → 51). Item 7 (`short-heart-line-meaning`) shipped 2026-08-19; see PP-RELAY-022 (51 → 52).
 
 **This document:** 50 scored future article ideas, grouped into Next 10 / Next 25 / Later.
 
@@ -61,7 +61,7 @@ These articles have the highest priority scores and should be written before any
 | 4 | ~~Forked Head Line Meaning in Palmistry (The Writer's Fork)~~ (already published; status reconciled 2026-08-19) | `forked-head-line-meaning` | 4 | 2 | 4 | 2 | 4 | **12** |
 | 5 | ~~Phalanges in Palmistry: What the Three Finger Sections Reveal~~ (published 2026-08-19) | `phalanges-palmistry` | 3 | 3 | 5 | 3 | 4 | **12** |
 | 6 | ~~Is Palmistry Real? What the Tradition Claims and What It Doesn't~~ (published 2026-08-19) | `is-palmistry-real` | 5 | 3 | 3 | 2 | 3 | **12** |
-| 7 | Short Heart Line Meaning in Palmistry | `short-heart-line-meaning` | 4 | 2 | 3 | 2 | 3 | **10** |
+| 7 | ~~Short Heart Line Meaning in Palmistry~~ (published 2026-08-19) | `short-heart-line-meaning` | 4 | 2 | 3 | 2 | 3 | **10** |
 | 8 | The Via Lascivia in Palmistry (The Allergy Line) | `via-lascivia-palmistry` | 2 | 2 | 4 | 2 | 4 | **10** |
 | 9 | The Ring of Solomon in Palmistry | `ring-of-solomon-palmistry` | 3 | 2 | 4 | 2 | 3 | **10** |
 | 10 | Where Does Your Fate Line Start? What Each Starting Point Means | `fate-line-starting-points` | 3 | 2 | 4 | 3 | 3 | **9** |
@@ -142,7 +142,7 @@ These articles have the highest priority scores and should be written before any
 
 ---
 
-#### 7. Short Heart Line Meaning
+#### 7. Short Heart Line Meaning — PUBLISHED 2026-08-19 (PP-RELAY-022)
 - **Slug:** `beginner/short-heart-line-meaning`
 - **Title:** Short Heart Line Meaning in Palmistry
 - **Primary keyword/intent:** "short heart line meaning" / "short heart line palmistry"
@@ -490,7 +490,7 @@ When Group 1 articles are published, update these existing articles to add links
 | Existing article | Add link to |
 |---|---|
 | `head-line` | `forked-head-line-meaning`, `broken-head-line-meaning` (#4, #14) when published |
-| `heart-line` | `short-heart-line-meaning`, `long-heart-line-meaning` (#7, #15) when published |
+| `heart-line` | `short-heart-line-meaning` (#7, done 2026-08-19); `long-heart-line-meaning` (#15) when published |
 | `life-line` | `faint-life-line-meaning`, `curved-life-line-meaning` (#16, #17) |
 | `fate-line` | `fate-line-starting-points`, `forked-fate-line-meaning`, `broken-fate-line-meaning` (#10, #18, #19) |
 | `mercury-line` + `sun-line` + `marriage-relationship-lines` + `girdle-of-venus` | → `minor-lines-overview` (#1) once it's the cluster pillar |
