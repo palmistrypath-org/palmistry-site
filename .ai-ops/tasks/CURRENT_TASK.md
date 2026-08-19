@@ -6,57 +6,51 @@ Status: AUTHORIZED
 PP-RELAY-024
 
 ## Revision
-2
+3
 
 ## Risk Class
 SOURCE_SENSITIVE
 
 ## Objective
-Resolve the documented life-line empirical-evidence sourcing gap by auditing the lifespan-testing claims in the current Life Line lesson and companion article, then make only the bounded source-safe corrections needed so every scientific/testing assertion is accurately supported and traceable under Palmistry Path's editorial policy.
+Finish the Life Line empirical-evidence sourcing correction by fixing the two residual testing summaries in `src/content/lessons/lines/04-life-line.mdx` so the lesson no longer implies a uniformly negative study record or a broader testing conclusion than the verified evidence supports.
 
 ## Revision note
-Revision 1 correctly verified and cited the 1974, 1990, and 2019 studies, but Director review found one freshness-dependent claim that is not safe in 2026: the article calls Lucas et al. (2019) the "most recent peer-reviewed study." Public evidence now includes at least 2025 lifeline/mortality or lifeline-forecasting papers, so that superlative was not established by the worker's source review. Revision 2 is limited to removing or accurately narrowing that freshness claim and making the nearby synthesis explicitly reflect the mixed three-study record already verified. Do not broaden into a literature review of the 2025 papers unless needed merely to avoid a false superlative.
+Revision 2 correctly removed the unsupported `most recent peer-reviewed study` claim and corrected the article plus closing lesson takeaway to describe the verified three-study record as mixed. Director review found two residual scientific/testing summaries earlier in the same lesson: (1) `the studies ... find no reliable relationship`, which can imply all verified studies were negative even though Newrick et al. (1990) found a significant association; and (2) `the practice has not survived testing`, which is broader than the verified evidence. Revision 3 is limited to correcting those two residual summaries and directly necessary bookkeeping. Do not broaden the task.
 
 ## Authorized scope
-1. Re-open only the empirical/testing discussion in `src/content/blog/beginner/life-line.md`, the corrected takeaway in `src/content/lessons/lines/04-life-line.mdx`, and directly related source-log/docs bookkeeping from revision 1.
-2. Preserve the verified facts already established for Wilson & Mather (1974), Newrick, Affie & Corrall (1990), and Lucas, Dhugga & Henneberg (2019): 1974 found no significant correlation in 51 cadavers; 1990 found a significant association in 100 consecutive autopsies; 2019 found no significant correlation in 60 donated cadavers.
-3. Remove or narrow the phrase `most recent peer-reviewed study` and any equivalent claim that 2019 is the latest study unless a comprehensive, traceable search actually establishes that claim as of 2026. The preferred bounded remedy is to avoid the freshness superlative.
-4. Ensure summary language such as `the studies that have tested it find no reliable relationship` cannot be misread as claiming all studies were negative. A concise formulation may say that the limited published results are mixed and do not establish a reliable predictive relationship, provided that wording is supported by the three verified studies.
-5. Do not add new palmistry interpretations, new health/lifespan doctrine, new scientific claims about the 2025 papers, or unrelated rewrites.
-6. Update `docs/source-verification-log.md` / `docs/CURRENT_STATE.md` only if revision-1 wording there also needs the same correction.
+1. Edit only the two residual empirical/testing sentences in `src/content/lessons/lines/04-life-line.mdx` plus directly necessary `docs/source-verification-log.md` / `docs/CURRENT_STATE.md` bookkeeping.
+2. Preserve the verified study record: Wilson & Mather (1974), 51 cadavers, no significant correlation; Newrick, Affie & Corrall (1990), 100 consecutive autopsies, significant association; Lucas, Dhugga & Henneberg (2019), 60 donated cadavers, no significant correlation.
+3. Replace/narrow the sentence ending `the studies covered in the life line article find no reliable relationship between the line and how long anyone lives` so it accurately reflects a limited mixed record that does not establish a reliable predictive relationship.
+4. Replace/narrow `the practice has not survived testing` so it does not claim a comprehensive or unanimous empirical verdict. Keep Palmistry Path's policy that this lesson does not teach lifespan prediction.
+5. Do not add new studies, new historical claims, new palmistry meanings, health/lifespan doctrine, or unrelated rewrites.
 
 ## Source-sensitive preflight — REQUIRED
-Before `READY_FOR_REVIEW`, complete the v2C source-claim preflight from `.ai-ops/V2C_PILOT.md` against the final changed prose. In particular:
-- re-check every freshness/superlative phrase (`latest`, `most recent`, `only`, `all`, `no other`, and equivalents);
-- keep the three verified study outcomes separate before synthesizing them;
-- do not convert two null findings and one positive finding into a claim of unanimous evidence;
-- avoid vague `research shows` or `studies prove` language;
-- preserve the separation between historical palmistry claims, empirical findings, and Palmistry Path policy.
+Before `READY_FOR_REVIEW`, complete the v2C source-claim preflight from `.ai-ops/V2C_PILOT.md` against the final changed prose. Re-check all empirical/testing statements in the touched lesson for unanimity, comprehensiveness, freshness, prevalence/consensus, vague authority, and claim-type separation.
 
 ## Acceptance criteria
-- No unsupported claim remains that Lucas et al. (2019) is the most recent/latest peer-reviewed study.
-- The empirical paragraph accurately states the mixed results of the three verified studies and does not imply unanimity.
-- Any synthesis that says the evidence does not establish a reliable predictive relationship is clearly presented as a conclusion from this limited mixed record, not as a universal claim that every study is negative.
-- The verified citations for Wilson & Mather (1974), Newrick et al. (1990), and Lucas et al. (2019) remain traceable and accurate.
+- The lesson no longer says or implies that all verified studies found no relationship.
+- The lesson no longer says the lifespan-dating practice categorically `has not survived testing` unless that exact breadth is established by approved evidence.
+- The limited three-study record is accurately represented as mixed and not establishing a reliable predictive relationship.
+- Historical palmistry claims, empirical findings, and Palmistry Path teaching policy remain clearly separated.
 - No new medical, deterministic, predictive-science, or palmistry-interpretation claim is introduced.
-- Scope remains limited to this residual source-integrity issue and directly necessary bookkeeping.
+- Scope remains limited to the two residual sentences and directly necessary bookkeeping.
 
 ## Verification
-- Search touched files for `latest`, `most recent`, `only`, `all`, `no other`, `test`, `study`, `studies`, `evidence`, `reliable`, `correlation`, `significant`, `peer-reviewed`, `longevity`, `lifespan`, and inspect every material occurrence.
-- Reconfirm the three retained study citations/results against traceable source evidence.
+- Search the touched lesson for `test`, `testing`, `study`, `studies`, `evidence`, `reliable`, `correlation`, `significant`, `predict`, `lifespan`, `length of life`, `latest`, `most recent`, `all`, `only`, `modern literature`, and inspect every material occurrence.
+- Reconfirm the retained three-study facts against the already-verified source record.
 - Run `npm run build`, `npm run content-audit`, `npm run audit:all`, and `git diff --check`.
-- Inspect the complete revision-2 diff for source integrity and scope drift.
+- Inspect the complete revision-3 diff for source integrity and scope drift.
 
 ## Explicit no-change condition
-Do not return `NO_CHANGE`: revision 1 contains the unsupported freshness superlative identified above, so a bounded wording correction is required.
+Do not return `NO_CHANGE`: the two residual lesson sentences identified above require bounded correction.
 
 ## v2C durable-result contract — REQUIRED
-Every worker run that passes startup must create `.ai-ops/results/PP-RELAY-024-r2.json`, commit it on the existing or matching pushed `claude/relay-PP-RELAY-024-...` branch, and use one terminal result: `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must create `.ai-ops/results/PP-RELAY-024-r3.json`, commit it on the existing/matching pushed `claude/relay-PP-RELAY-024-...` branch, and use one terminal result: `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
 Minimum artifact fields:
 - `schema_version`: 2
 - `task_id`: `PP-RELAY-024`
-- `revision`: 2
+- `revision`: 3
 - `risk_class`: `SOURCE_SENSITIVE`
 - `result`: one allowed terminal result
 - `summary`: concise outcome
@@ -66,7 +60,7 @@ Minimum artifact fields:
 - `human_action`: exact action only when applicable, otherwise `null`
 - `execution`: truthful compact execution telemetry
 
-For `READY_FOR_REVIEW`, push the bounded revision to the existing PP-RELAY-024 Relay branch/PR #40 and update the PR footer to `RELAY_TASK_REVISION: 2`. For non-change terminal outcomes, push the result artifact and do not create a dummy PR.
+For `READY_FOR_REVIEW`, push the bounded revision to the existing PP-RELAY-024 Relay branch/PR #40 and update the PR footer to `RELAY_TASK_REVISION: 3`. For non-change terminal outcomes, push the result artifact and do not create a dummy PR.
 
 ## Result
-Stop after producing the durable revision-2 result, pushing the Relay branch, and updating PR #40 only when the result is `READY_FOR_REVIEW`. Do not merge and do not select subsequent work.
+Stop after producing the durable revision-3 result, pushing the Relay branch, and updating PR #40 only when the result is `READY_FOR_REVIEW`. Do not merge and do not select subsequent work.
