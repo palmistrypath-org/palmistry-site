@@ -6,7 +6,7 @@
 
 ## Status
 
-**Published:** 46 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live).
+**Published:** 47 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017.
 
 **This document:** 50 scored future article ideas, grouped into Next 10 / Next 25 / Later.
 
@@ -55,7 +55,7 @@ These articles have the highest priority scores and should be written before any
 
 | # | Title | Slug | T | C | A | D | U | P |
 |---|---|---|---|---|---|---|---|---|
-| 1 | The Minor Lines of the Palm: A Beginner Overview | `minor-lines-overview` | 3 | 3 | 5 | 2 | 5 | **14** |
+| 1 | ~~The Minor Lines of the Palm: A Beginner Overview~~ (published 2026-08-19) | `minor-lines-overview` | 3 | 3 | 5 | 2 | 5 | **14** |
 | 2 | Reading Both Hands: How to Compare Your Active and Passive Hand | `reading-both-hands-palmistry` | 4 | 4 | 3 | 2 | 4 | **13** |
 | 3 | How to Practice Palm Reading: Tips for Building Your Skills | `how-to-practice-palm-reading` | 3 | 5 | 3 | 2 | 4 | **13** |
 | 4 | Forked Head Line Meaning in Palmistry (The Writer's Fork) | `forked-head-line-meaning` | 4 | 2 | 4 | 2 | 4 | **12** |
@@ -70,7 +70,7 @@ These articles have the highest priority scores and should be written before any
 
 ---
 
-#### 1. Minor Lines Overview (Blog Pillar)
+#### 1. Minor Lines Overview (Blog Pillar) — PUBLISHED 2026-08-19 (PP-RELAY-017)
 - **Slug:** `beginner/minor-lines-overview`
 - **Title:** The Minor Lines of the Palm: A Beginner Overview
 - **Primary keyword/intent:** "minor lines palmistry" / "what are the minor palm lines"

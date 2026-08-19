@@ -128,3 +128,5 @@ Start with the active hand — the dominant hand, which in most palmistry tradit
 Look at the Mercury zone in good light. Note how many lines are visible, which are clearest, and where they sit in the zone. Look for any of the quality markers — forks, islands, chains, breaks — without expecting to find them. Most lines in this zone are straightforward.
 
 Then set the hand down. The lines are a beginning of a conversation with the tradition, not an answer to a question. What they prompt you to notice — about the relationships that have mattered, about what you carry from them — is where the real inquiry begins.
+
+For how the marriage and relationship lines fit alongside the Sun Line, Mercury Line, and Girdle of Venus, see [the minor lines overview](/blog/beginner/minor-lines-overview).
