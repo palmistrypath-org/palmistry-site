@@ -1,10 +1,10 @@
 {
-  "schema_version": 2,
-  "experiment": "relay-v2b-near-autonomous",
-  "started_at": "2026-08-17T18:54:00Z",
-  "target_accepted_iterations": 20,
-  "previous_experiment_archive": ".ai-ops/archive/relay-pilot-1.json",
-  "summary": {
+  "schema_version": 3,
+  "experiment": "relay-v2c-50-iteration",
+  "started_at": null,
+  "target_accepted_iterations": 50,
+  "baseline": {
+    "experiment": "relay-v2b-near-autonomous",
     "accepted": 20,
     "first_pass_accepted": 15,
     "tasks_requiring_rework": 5,
@@ -12,29 +12,55 @@
     "human_gates": 0,
     "usage_limit_events": 0,
     "technical_blockers": 2,
-    "verified_no_change": 0,
-    "autonomous_merges": 20
+    "autonomous_merges": 20,
+    "archive": ".ai-ops/archive/relay-v2b-completion.json"
   },
-  "tasks": [
-    {"task_id":"PP-RELAY-004","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-004.md","result_path":".ai-ops/results/PP-RELAY-004-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-17T19:14:58Z","reviewed_at":null,"merge_approved_at":null,"merged_at":"2026-08-17T20:07:24Z","pr_number":17,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-005","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-005.md","result_path":".ai-ops/results/PP-RELAY-005-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-17T21:15:25Z","reviewed_at":"2026-08-17T22:05:17Z","merge_approved_at":"2026-08-17T22:05:17Z","merged_at":"2026-08-17T22:06:58Z","pr_number":18,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-006","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-006.md","result_path":".ai-ops/results/PP-RELAY-006-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-17T23:10:07Z","reviewed_at":"2026-08-18T00:04:02Z","merge_approved_at":"2026-08-18T00:04:02Z","merged_at":"2026-08-18T00:05:10Z","pr_number":19,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-007","revision":2,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-007.md","result_path":".ai-ops/results/PP-RELAY-007-r2.json","dispatched_at":null,"result_discovered_at":"2026-08-18T04:22:15Z","reviewed_at":"2026-08-18T05:02:19Z","merge_approved_at":"2026-08-18T05:02:19Z","merged_at":"2026-08-18T05:03:49Z","pr_number":20,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-008","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-008.md","result_path":".ai-ops/results/PP-RELAY-008-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-18T06:16:36Z","reviewed_at":"2026-08-18T07:06:14Z","merge_approved_at":"2026-08-18T07:06:14Z","merged_at":"2026-08-18T07:07:55Z","pr_number":21,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-009","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-009.md","result_path":".ai-ops/results/PP-RELAY-009-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-18T08:13:19Z","reviewed_at":"2026-08-18T09:07:06Z","merge_approved_at":"2026-08-18T09:07:06Z","merged_at":"2026-08-18T09:07:50Z","pr_number":22,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-010","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-010.md","result_path":".ai-ops/results/PP-RELAY-010-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-18T10:14:20Z","reviewed_at":"2026-08-18T11:07:39Z","merge_approved_at":"2026-08-18T11:07:39Z","merged_at":"2026-08-18T11:09:55Z","pr_number":23,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-011","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-011.md","result_path":".ai-ops/results/PP-RELAY-011-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-18T12:17:59Z","reviewed_at":"2026-08-18T13:07:05Z","merge_approved_at":"2026-08-18T13:07:05Z","merged_at":"2026-08-18T13:10:26Z","pr_number":24,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-012","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-012.md","result_path":".ai-ops/results/PP-RELAY-012-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-18T14:13:36Z","reviewed_at":"2026-08-18T15:06:10Z","merge_approved_at":"2026-08-18T15:06:10Z","merged_at":"2026-08-18T15:08:31Z","pr_number":25,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-013","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-013.md","result_path":".ai-ops/results/PP-RELAY-013-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-18T18:56:38Z","reviewed_at":"2026-08-18T19:22:29Z","merge_approved_at":"2026-08-18T19:22:29Z","merged_at":"2026-08-18T19:23:14Z","pr_number":26,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-014","revision":2,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-014.md","result_path":".ai-ops/results/PP-RELAY-014-r2.json","dispatched_at":null,"result_discovered_at":"2026-08-18T20:22:24Z","reviewed_at":"2026-08-18T21:06:59Z","merge_approved_at":"2026-08-18T21:06:59Z","merged_at":"2026-08-18T21:08:23Z","pr_number":27,"rework_count":1,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-015","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-015.md","result_path":".ai-ops/results/PP-RELAY-015-r1.json","dispatched_at":"2026-08-18T21:59:19Z","result_discovered_at":"2026-08-18T22:02:22Z","reviewed_at":null,"merge_approved_at":null,"merged_at":"2026-08-18T22:03:28Z","pr_number":29,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-016","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-016.md","result_path":".ai-ops/results/PP-RELAY-016-r1.json","dispatched_at":"2026-08-18T22:03:30Z","result_discovered_at":"2026-08-18T23:54:54Z","reviewed_at":null,"merge_approved_at":null,"merged_at":"2026-08-18T23:55:45Z","pr_number":31,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-017","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-017.md","result_path":".ai-ops/results/PP-RELAY-017-r1.json","dispatched_at":"2026-08-19T00:05:55Z","result_discovered_at":"2026-08-19T00:13:57Z","reviewed_at":"2026-08-19T01:07:25Z","merge_approved_at":"2026-08-19T01:07:25Z","merged_at":"2026-08-19T01:07:36Z","pr_number":32,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-018","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-018.md","result_path":".ai-ops/results/PP-RELAY-018-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-19T02:15:24Z","reviewed_at":"2026-08-19T03:02:40Z","merge_approved_at":"2026-08-19T03:02:40Z","merged_at":"2026-08-19T03:04:26Z","pr_number":33,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-019","revision":1,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-019.md","result_path":".ai-ops/results/PP-RELAY-019-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-19T04:17:21Z","reviewed_at":"2026-08-19T05:03:30Z","merge_approved_at":"2026-08-19T05:03:30Z","merged_at":"2026-08-19T05:04:50Z","pr_number":34,"rework_count":0,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-020","revision":3,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-020.md","result_path":".ai-ops/results/PP-RELAY-020-r3.json","dispatched_at":null,"result_discovered_at":"2026-08-19T08:13:08Z","reviewed_at":"2026-08-19T09:04:20Z","merge_approved_at":"2026-08-19T09:04:20Z","merged_at":"2026-08-19T09:06:13Z","pr_number":35,"rework_count":2,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-021","revision":2,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-021.md","result_path":".ai-ops/results/PP-RELAY-021-r2.json","dispatched_at":null,"result_discovered_at":"2026-08-19T11:10:17Z","reviewed_at":"2026-08-19T12:07:42Z","merge_approved_at":"2026-08-19T12:07:42Z","merged_at":"2026-08-19T12:09:38Z","pr_number":36,"rework_count":1,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-022","revision":2,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-022.md","result_path":".ai-ops/results/PP-RELAY-022-r2.json","dispatched_at":null,"result_discovered_at":"2026-08-19T13:17:00Z","reviewed_at":"2026-08-19T15:04:45Z","merge_approved_at":"2026-08-19T15:04:45Z","merged_at":"2026-08-19T15:06:30Z","pr_number":37,"rework_count":1,"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-023","revision":2,"status":"ACCEPTED","task_path":".ai-ops/tasks/PP-RELAY-023.md","result_path":".ai-ops/results/PP-RELAY-023-r2.json","dispatched_at":null,"result_discovered_at":"2026-08-19T17:13:19Z","reviewed_at":"2026-08-19T18:03:28Z","merge_approved_at":"2026-08-19T18:03:28Z","merged_at":"2026-08-19T18:05:25Z","pr_number":38,"rework_count":1,"terminal_result":"READY_FOR_REVIEW"}
-  ]
+  "summary": {
+    "accepted": 0,
+    "first_pass_accepted": 0,
+    "tasks_requiring_rework": 0,
+    "rework_revisions": 0,
+    "human_gates": 0,
+    "usage_limit_events": 0,
+    "technical_blockers": 0,
+    "verified_no_change": 0,
+    "autonomous_merges": 0,
+    "bad_merge_or_rollback_events": 0
+  },
+  "risk_classes": {
+    "LOW": {
+      "accepted": 0,
+      "first_pass_accepted": 0,
+      "tasks_requiring_rework": 0,
+      "rework_revisions": 0
+    },
+    "STANDARD": {
+      "accepted": 0,
+      "first_pass_accepted": 0,
+      "tasks_requiring_rework": 0,
+      "rework_revisions": 0
+    },
+    "SOURCE_SENSITIVE": {
+      "accepted": 0,
+      "first_pass_accepted": 0,
+      "tasks_requiring_rework": 0,
+      "rework_revisions": 0,
+      "source_preflight_missing_or_invalid": 0
+    }
+  },
+  "reason_counts": {
+    "SOURCE_INTEGRITY": 0,
+    "UNSUPPORTED_PREVALENCE_OR_CONSENSUS": 0,
+    "UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM": 0,
+    "UNSUPPORTED_COMBINATION_READING": 0,
+    "SCOPE_DRIFT": 0,
+    "SEO": 0,
+    "ACCESSIBILITY": 0,
+    "TEST_OR_CI": 0,
+    "CONTROL_PLANE": 0,
+    "IMPLEMENTATION_CORRECTNESS": 0,
+    "DOCUMENTATION_STATE": 0,
+    "OTHER": 0
+  },
+  "tasks": []
 }
