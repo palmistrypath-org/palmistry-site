@@ -57,7 +57,7 @@ A starting point is one observation among several, and the fate line lesson make
 ## Frequently asked questions
 
 **Where does the fate line usually start?**
-There is no single typical starting point. The classical sources describe several — the wrist or base of the palm, the Mount of Luna, the life line, and a start that comes later in the mid-palm — and each is a normal variation with its own association, not a deviation from a standard.
+The classical sources describe several starting points, each with its own traditional association: the wrist or base of the palm, the Mount of Luna, the life line, and a start that comes later in the mid-palm. The sources this site draws from do not establish which of these occurs most often.
 
 **What does it mean if my fate line starts at the wrist?**
 It is traditionally associated with a sense of direction or vocation that established itself early in life, and with a path read as a long, continuous thread rather than one adopted partway through life.

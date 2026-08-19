@@ -26,8 +26,16 @@ Luna/Apollo/head-line sentence already established in the lesson. Bounded
 diff: the new article, one reciprocal link in `fate-line.md`'s "The starting
 point" subsection, and the backlog/changelog/current-state/handoff docs.
 `npm run build` (105 routes), `npm run content-audit` (60 posts/25 lessons),
-`npm run audit:all`, and `git diff --check` all passed. Nothing else
-outstanding from this task.
+`npm run audit:all`, and `git diff --check` all passed.
+
+**Revision 2 (2026-08-19):** Director rework found the FAQ answer to "Where
+does the fate line usually start?" asserted an unsupported prevalence claim
+(`There is no single typical starting point... not a deviation from a
+standard`). Rewrote the answer to list the four starting points without
+asserting relative frequency; confirmed no other equivalent unsupported
+default/prevalence wording exists in the article. Re-ran `npm run build`,
+`npm run content-audit`, `npm run audit:all`, and `git diff --check` — all
+passed. Nothing else outstanding from this task.
 
 **Relay PP-RELAY-022 (2026-08-19) shipped Short Heart Line Meaning** at
 `src/content/blog/beginner/short-heart-line-meaning.md`, closing the #7 item
