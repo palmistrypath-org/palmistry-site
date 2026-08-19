@@ -9,6 +9,20 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
+**Relay PP-RELAY-020 (2026-08-19) shipped Phalanges in Palmistry** at
+`src/content/blog/beginner/phalanges-palmistry.md`, closing the #5 item in
+`docs/editorial-backlog.md`'s Next 10 queue, and corrected that backlog's
+stale status for `beginner/forked-head-line-meaning.md` (#4), which was
+already live on `main` unrelated to this task. `finger-shapes-palmistry.md`
+already carried a brief phalange summary as one sub-section; the new article
+differentiates by depth (observation method, Benham/Gettings weighting
+differences, phalange-plus-joint synthesis) and the two now link to each
+other once each way. Bounded diff: the new article, one reciprocal link in
+`finger-shapes-palmistry.md`, and the backlog/changelog/current-state docs.
+No existing article's palmistry claims or quotations changed. `npm run build`
+(102 routes), `npm run content-audit` (57 posts/25 lessons), and
+`npm run audit:all` all passed. Nothing else outstanding from this task.
+
 **Relay PP-RELAY-017 (2026-08-19) shipped the Minor Lines Overview blog pillar**
 at `src/content/blog/beginner/minor-lines-overview.md`, closing the #1 item in
 `docs/editorial-backlog.md`'s Next 10 queue. Bounded diff: the new article,
