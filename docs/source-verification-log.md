@@ -647,6 +647,35 @@ wording scoped to the limited three-study record rather than a comprehensive
 verdict, and naming what was actually tested (length vs. lifespan) rather
 than implying the dating schemes themselves were the subject of testing.
 
+## Pass 9 — Life-line residual dating-scheme inference removal (2026-08-19)
+
+Scope: Relay PP-RELAY-024 revision 4 (`SOURCE_SENSITIVE`). Director review of
+the revision-3 result found that Pass 8's rewording of line 40 still
+contained a residual inference: "the limited published testing on life-line
+length and lifespan does not support it," where "it" refers back to the
+older writers' formal year-dating schemes. The verified studies (Wilson &
+Mather 1974, 51 cadavers, no correlation; Newrick, Affie & Corrall 1990, 100
+consecutive autopsies, significant association; Lucas, Dhugga & Henneberg
+2019, 60 donated cadavers, no correlation) test life-line length against
+lifespan; they do not test whether particular locations along the line
+correspond to particular ages or events, so they cannot be cited as
+evidence against the dating schemes specifically.
+
+### Correction made
+
+Line 40 now reads: "What this lesson will not have you do is count years
+along the line. The older writers did exactly that, with formal dating
+schemes; this lesson does not teach them." The sentence now states the
+historical fact (formal dating schemes existed) and Palmistry Path's
+teaching policy (this lesson does not teach them) without citing the
+length-vs-lifespan evidence as if it bore on the dating schemes themselves.
+The lesson's other empirical summaries of the same three-study record (the
+"myth, corrected" section, line 28, and the closing "Lesson takeaway") are
+unchanged and remain correctly scoped to line length vs. lifespan.
+
+No new studies, citations, historical claims, palmistry interpretations, or
+health/lifespan doctrine were introduced.
+
 No new studies, citations, palmistry interpretations, or scientific claims
 were introduced. The three verified study citations and outcomes from
 Pass 6 (Newrick et al. 1990 significant association; Wilson & Mather 1974

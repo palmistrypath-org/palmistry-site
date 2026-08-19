@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-024",
+  "revision": 4,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Removed the residual evidence-to-dating-scheme inference in src/content/lessons/lines/04-life-line.mdx line 40. The sentence previously read '...the limited published testing on life-line length and lifespan does not support it,' where 'it' referred to the older writers' formal year-dating schemes, implying the length-vs-lifespan studies directly tested those schemes. It now reads '...The older writers did exactly that, with formal dating schemes; this lesson does not teach them,' separating the historical fact and teaching policy from the empirical claim without misattributing what the three verified studies tested. Added Pass 9 to docs/source-verification-log.md and extended docs/CURRENT_STATE.md's PP-RELAY-024 note. No new studies, citations, historical claims, palmistry interpretations, or health/lifespan doctrine were introduced; the verified three-study record (Wilson & Mather 1974, Newrick, Affie & Corrall 1990, Lucas, Dhugga & Henneberg 2019) is unchanged and remains accurately represented elsewhere in the file.",
+  "pr_number": 40,
+  "verification": [
+    "Keyword sweep of the touched lesson (test/testing/study/studies/evidence/support/dating/years/predict/lifespan/length of life) — every material occurrence inspected; none other than the target sentence conflate life-line-length/lifespan evidence with the historical dating schemes",
+    "Confirmed the retained three-study record concerns life-line length vs. lifespan, not formal line-position dating schemes",
+    "npm run build — 105 routes built, including /learn/lines/04-life-line/",
+    "npm run content-audit — 60 blog posts, 25 lessons valid",
+    "npm run audit:all — links, images, schema, indexability, accessibility all pass",
+    "git diff --check — clean",
+    "Inspected complete revision-4 diff for source integrity and scope drift — limited to the one target sentence plus source-verification-log.md/CURRENT_STATE.md bookkeeping"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "The corrected sentence no longer cites the length-vs-lifespan studies as evidence about the historical dating schemes. It makes only a historical-fact claim (older writers used formal dating schemes) and a teaching-policy claim (this lesson does not teach them), neither of which requires empirical grounding. The lesson's other empirical summaries of the same three-study record (myth-corrected section and closing takeaway) were inspected and are unchanged and correctly scoped to line length vs. lifespan."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["grep keyword sweep", "npm run build", "npm run content-audit", "npm run audit:all", "git diff --check"],
+    "validation": ["build", "content-audit", "audit:all", "git diff --check", "manual diff/source-integrity review"],
+    "notes": null
+  }
+}
