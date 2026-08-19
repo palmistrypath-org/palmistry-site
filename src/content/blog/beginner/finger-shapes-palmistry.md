@@ -38,7 +38,7 @@ The practical note is that most hands show a mix: one knuckle may be more develo
 
 ## The three phalange zones
 
-Each finger divides into three segments, called phalanges, separated by the two knuckle joints. In the Western tradition, these three zones correspond to three registers of experience, typically described as mental, practical, and material — or, in some older formulations, spiritual, middle, and base.
+Each finger divides into three segments, called phalanges, separated by the two knuckle joints. In the Western tradition, these three zones correspond to three registers of experience, typically described as mental, practical, and material — or, in some older formulations, spiritual, middle, and base. The [phalanges in palmistry article](/blog/beginner/phalanges-palmistry/) covers this framework in full, including how to compare the three segments within a single finger and where sources agree and disagree on weighting.
 
 **The first phalange** — the tip segment, from the top of the finger to the first knuckle — is traditionally associated with the mental and spiritual register: idealism, sensitivity, intuition, and abstract or creative thought. A long first phalange relative to the others may suggest an orientation toward ideas and impressions. A markedly short first phalange is sometimes associated with less developed imaginative or intuitive capacity in the finger's domain — though this must be read in the context of the whole hand.
 

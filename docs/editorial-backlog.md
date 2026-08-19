@@ -6,7 +6,7 @@
 
 ## Status
 
-**Published:** 49 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019.
+**Published:** 50 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019. Item 4 (`forked-head-line-meaning`) was already live on `main` before PP-RELAY-020 but missing from this count; its backlog status is corrected, not counted as new. Item 5 (`phalanges-palmistry`) shipped 2026-08-19; see PP-RELAY-020 — the one genuinely new article this count reflects (49 → 50).
 
 **This document:** 50 scored future article ideas, grouped into Next 10 / Next 25 / Later.
 
@@ -58,8 +58,8 @@ These articles have the highest priority scores and should be written before any
 | 1 | ~~The Minor Lines of the Palm: A Beginner Overview~~ (published 2026-08-19) | `minor-lines-overview` | 3 | 3 | 5 | 2 | 5 | **14** |
 | 2 | ~~Reading Both Hands: How to Compare Your Active and Passive Hand~~ (published 2026-08-19) | `reading-both-hands-palmistry` | 4 | 4 | 3 | 2 | 4 | **13** |
 | 3 | ~~How to Practice Palm Reading: Tips for Building Your Skills~~ (published 2026-08-19) | `how-to-practice-palm-reading` | 3 | 5 | 3 | 2 | 4 | **13** |
-| 4 | Forked Head Line Meaning in Palmistry (The Writer's Fork) | `forked-head-line-meaning` | 4 | 2 | 4 | 2 | 4 | **12** |
-| 5 | Phalanges in Palmistry: What the Three Finger Sections Reveal | `phalanges-palmistry` | 3 | 3 | 5 | 3 | 4 | **12** |
+| 4 | ~~Forked Head Line Meaning in Palmistry (The Writer's Fork)~~ (already published; status reconciled 2026-08-19) | `forked-head-line-meaning` | 4 | 2 | 4 | 2 | 4 | **12** |
+| 5 | ~~Phalanges in Palmistry: What the Three Finger Sections Reveal~~ (published 2026-08-19) | `phalanges-palmistry` | 3 | 3 | 5 | 3 | 4 | **12** |
 | 6 | Is Palmistry Real? What the Tradition Claims and What It Doesn't | `is-palmistry-real` | 5 | 3 | 3 | 2 | 3 | **12** |
 | 7 | Short Heart Line Meaning in Palmistry | `short-heart-line-meaning` | 4 | 2 | 3 | 2 | 3 | **10** |
 | 8 | The Via Lascivia in Palmistry (The Allergy Line) | `via-lascivia-palmistry` | 2 | 2 | 4 | 2 | 4 | **10** |
@@ -106,27 +106,27 @@ These articles have the highest priority scores and should be written before any
 
 ---
 
-#### 4. Forked Head Line / Writer's Fork
+#### 4. Forked Head Line / Writer's Fork — ALREADY PUBLISHED (status reconciled 2026-08-19, PP-RELAY-020)
 - **Slug:** `beginner/forked-head-line-meaning`
 - **Title:** Forked Head Line Meaning in Palmistry (The Writer's Fork)
 - **Primary keyword/intent:** "forked head line meaning" / "writer's fork palmistry"
 - **Secondary keywords:** "double-ended head line", "head line fork meaning", "forked headline palmistry"
 - **relatedLesson:** `/learn/lines/03-head-line`
 - **CTA angle:** Go Deeper to head line lesson
-- **Notes:** The Writer's Fork is one of the most searched head line variations. Cheiro gives it significant treatment. Easy to write from Benham and Cheiro sources. Add a link from the existing `head-line` article to this post.
+- **Notes:** The article was already live on `main` prior to this backlog line being scored; the table row and this entry were stale. Not recreated or materially rewritten by PP-RELAY-020 — status only.
 - **Cannibalization risk:** None. The main `head-line` article covers the line broadly; this is a companion targeting the fork variation specifically — same pattern as `forked-heart-line-meaning`.
 
 ---
 
-#### 5. Phalanges in Palmistry
+#### 5. Phalanges in Palmistry — PUBLISHED 2026-08-19 (PP-RELAY-020)
 - **Slug:** `beginner/phalanges-palmistry`
 - **Title:** Phalanges in Palmistry: What the Three Finger Sections Reveal
 - **Primary keyword/intent:** "phalanges palmistry" / "finger sections palm reading"
 - **Secondary keywords:** "upper phalange meaning", "middle phalange meaning", "lower phalange palmistry"
 - **relatedLesson:** `/learn/foundations/03-hand-shapes`
 - **CTA angle:** Guide download — phalanges are a key part of a complete reading
-- **Notes:** A major topical gap. The finger-shapes article covers overall shape; the thumb article covers its own phalanges in context; but phalanges as a system (three sections of each finger, what each world represents — mental/practical/material) has no dedicated article. Gettings and Benham are the primary sources.
-- **Cannibalization risk:** None. `finger-shapes-palmistry` covers overall shape (conic, spatulate, etc.); phalanges covers the three sections. Different aspects of the same subject.
+- **Notes:** `finger-shapes-palmistry` already carried a brief phalange summary (mental/practical/material framework, sourced to Benham/West/Gettings) as one sub-section among several. This dedicated article goes deeper — observation method, terminology and weighting differences between Benham and Gettings, and phalange-plus-joint-texture synthesis — and the two articles now link to each other. Gettings and Benham are the primary sources, per the original backlog identification.
+- **Cannibalization risk:** Low, not none as originally scored — `finger-shapes-palmistry` already touches this exact topic. Mitigated by depth/angle differentiation and a reciprocal link rather than by removing the existing summary from `finger-shapes-palmistry`, which is out of this task's bounded scope.
 
 ---
 
@@ -495,7 +495,7 @@ When Group 1 articles are published, update these existing articles to add links
 | `fate-line` | `fate-line-starting-points`, `forked-fate-line-meaning`, `broken-fate-line-meaning` (#10, #18, #19) |
 | `mercury-line` + `sun-line` + `marriage-relationship-lines` + `girdle-of-venus` | → `minor-lines-overview` (#1) once it's the cluster pillar |
 | `what-palmistry-is` | → `is-palmistry-real` (#6), `history-of-palmistry` (#32) |
-| `finger-shapes-palmistry` | → `phalanges-palmistry` (#5), `index-finger-length-palmistry` (#24), `little-finger-palmistry` (#26) |
+| `finger-shapes-palmistry` | → `phalanges-palmistry` (#5, done 2026-08-19), `index-finger-length-palmistry` (#24), `little-finger-palmistry` (#26) |
 | `double-life-line-meaning` | → `line-of-mars-palmistry` (#22) to clarify the distinction |
 
 ---

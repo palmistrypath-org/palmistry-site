@@ -1,6 +1,6 @@
 # Current State — Palmistry Path
 
-Last repo inventory: 2026-08-17. This page summarizes observed implementation; source code remains authoritative.
+Last repo inventory: 2026-08-19. This page summarizes observed implementation; source code remains authoritative.
 
 ## Product/site
 Palmistry Path is a live-oriented static Astro learning site at `palmistrypath.com`, with a dark atmospheric brand, structured learning path, article library, glossary/search, lead magnet flow, and early paid-product/waitlist groundwork.
@@ -38,7 +38,7 @@ Lesson frontmatter no longer carries `prerequisites`; the field was decorative, 
 The published mount model is seven planetary mounts across eight mount regions, with Mars in two regions and the Plain of Mars a separate central region. See `DECISIONS.md` (2026-08-11).
 
 ## Blog/reference content
-`src/content/blog/` contains a substantial beginner-focused article library covering major/minor lines and variations, hand/finger/nail topics, traditions, myths, books, worksheets, and related search-oriented topics. Intermediate/advanced blog directories currently exist but the observed populated library is concentrated under beginner content.
+`src/content/blog/` contains a substantial beginner-focused article library covering major/minor lines and variations, hand/finger/nail topics, traditions, myths, books, worksheets, and related search-oriented topics. Intermediate/advanced blog directories currently exist but the observed populated library is concentrated under beginner content. `content-audit` currently counts 57 blog posts; `editorial-backlog.md`'s "Published" figure (50) tracks only articles from its own Next 10/25/Later roadmap list, not the full file count, so the two numbers are not expected to match. Relay PP-RELAY-020 (2026-08-19) added `beginner/phalanges-palmistry.md`, a dedicated treatment of the three-phalange-per-finger framework, sourced from Benham (1900) and Gettings (1965), with a reciprocal link to/from `beginner/finger-shapes-palmistry.md` (which already carried a brief summary of the same framework as one sub-section). The same task also corrected `editorial-backlog.md`'s stale status for `beginner/forked-head-line-meaning.md`, which was already live on `main` but still listed as an open Next 10 item.
 
 ## Sourcing state
 Citations follow the four-tier source policy in `editorial-style-guide.md` §5. As of Batch 2B (2026-08-10) no commercial astrology site, SEO content farm, unsourced blog, or general encyclopaedia is cited anywhere in `src/`. The About page source list matches the corpus the content actually cites. The Chinese and Indian tradition articles carry tradition-appropriate sources and state explicitly where a claim reflects contemporary practice rather than classical doctrine.
