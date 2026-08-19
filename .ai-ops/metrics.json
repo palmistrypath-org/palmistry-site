@@ -18,8 +18,8 @@
   "summary": {
     "accepted": 0,
     "first_pass_accepted": 0,
-    "tasks_requiring_rework": 0,
-    "rework_revisions": 0,
+    "tasks_requiring_rework": 1,
+    "rework_revisions": 1,
     "human_gates": 0,
     "usage_limit_events": 0,
     "technical_blockers": 0,
@@ -28,30 +28,20 @@
     "bad_merge_or_rollback_events": 0
   },
   "risk_classes": {
-    "LOW": {
-      "accepted": 0,
-      "first_pass_accepted": 0,
-      "tasks_requiring_rework": 0,
-      "rework_revisions": 0
-    },
-    "STANDARD": {
-      "accepted": 0,
-      "first_pass_accepted": 0,
-      "tasks_requiring_rework": 0,
-      "rework_revisions": 0
-    },
+    "LOW": {"accepted": 0, "first_pass_accepted": 0, "tasks_requiring_rework": 0, "rework_revisions": 0},
+    "STANDARD": {"accepted": 0, "first_pass_accepted": 0, "tasks_requiring_rework": 0, "rework_revisions": 0},
     "SOURCE_SENSITIVE": {
       "accepted": 0,
       "first_pass_accepted": 0,
-      "tasks_requiring_rework": 0,
-      "rework_revisions": 0,
+      "tasks_requiring_rework": 1,
+      "rework_revisions": 1,
       "source_preflight_missing_or_invalid": 0
     }
   },
   "reason_counts": {
-    "SOURCE_INTEGRITY": 0,
+    "SOURCE_INTEGRITY": 1,
     "UNSUPPORTED_PREVALENCE_OR_CONSENSUS": 0,
-    "UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM": 0,
+    "UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM": 1,
     "UNSUPPORTED_COMBINATION_READING": 0,
     "SCOPE_DRIFT": 0,
     "SEO": 0,
@@ -65,20 +55,20 @@
   "tasks": [
     {
       "task_id": "PP-RELAY-024",
-      "revision": 1,
+      "revision": 2,
       "risk_class": "SOURCE_SENSITIVE",
-      "status": "AUTHORIZED",
+      "status": "REWORK_REQUIRED",
       "task_path": ".ai-ops/tasks/PP-RELAY-024.md",
-      "result_path": ".ai-ops/results/PP-RELAY-024-r1.json",
+      "result_path": ".ai-ops/results/PP-RELAY-024-r2.json",
       "dispatched_at": null,
       "result_discovered_at": null,
       "reviewed_at": null,
       "merge_approved_at": null,
       "merged_at": null,
-      "pr_number": null,
-      "rework_count": 0,
-      "reason_categories": [],
-      "terminal_result": null
+      "pr_number": 40,
+      "rework_count": 1,
+      "reason_categories": ["SOURCE_INTEGRITY", "UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM"],
+      "terminal_result": "READY_FOR_REVIEW"
     }
   ]
 }
