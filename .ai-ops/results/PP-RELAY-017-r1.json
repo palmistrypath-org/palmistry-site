@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-017",
+  "revision": 1,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Published the beginner blog pillar 'The Minor Lines of the Palm: A Beginner Overview' at src/content/blog/beginner/minor-lines-overview.md, closing the #1-ranked item in docs/editorial-backlog.md's Next 10 queue. The article orients readers to the minor-line layer (what makes a line minor, why absence is normal, how much interpretive weight to give these lines) and gives a concise orientation to the Sun Line, Mercury Line, marriage/relationship lines, and Girdle of Venus, linking to each dedicated article for depth. Added one navigation-only reciprocal link back to the new pillar at the end of each of those four existing articles, with no changes to their palmistry claims or quotations. Updated docs/editorial-backlog.md, docs/CHANGELOG.md, and docs/AI_HANDOFF.md to record the shipped item.",
+  "pr_number": 32,
+  "verification": [
+    "npm run build: 100 routes generated, including /blog/beginner/minor-lines-overview/",
+    "npm run content-audit: 54 blog posts and 25 lessons valid",
+    "npm run audit:all: link audit, image audit, schema (JSON-LD) audit, indexability audit, and accessibility audit all passed",
+    "relatedLesson route /learn/advanced/01-minor-lines-overview confirmed to exist and build; frontmatter matches existing convention already used by sun-line.md and mercury-line.md",
+    "All internal links to major-lines-overview, mounts-overview, how-to-read-a-palm, and the four dedicated minor-line articles confirmed to resolve pre-build and verified broken-link-free post-build",
+    "git diff --check: no whitespace errors",
+    "Diff scope confirmed bounded to: the new article, one reciprocal link appended per existing minor-line article (4 files), docs/editorial-backlog.md, docs/CHANGELOG.md, docs/AI_HANDOFF.md, and this result artifact",
+    "No new quotation-marked wording introduced; all claims paraphrase content already sourced in the four existing dedicated articles",
+    "Confirmed the out-of-scope Sun/Mercury quote-fidelity rewrite on feat/curriculum-wave-3e-3f (advanced/01-minor-lines-overview.mdx) was not touched or pulled forward"
+  ],
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["git", "grep", "targeted source review of existing published articles", "npm run build", "npm run content-audit", "npm run audit:all"],
+    "validation": ["npm run build", "npm run content-audit", "npm run audit:all (links, images, schema, indexability, accessibility)", "git diff --check", "manual diff-scope review"],
+    "notes": "Single-owner article task; drew source material entirely from the four already-published, already-sourced dedicated minor-line articles per the task packet's source plan, so no new external source lookups were needed."
+  }
+}

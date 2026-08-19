@@ -9,6 +9,16 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
+**Relay PP-RELAY-017 (2026-08-19) shipped the Minor Lines Overview blog pillar**
+at `src/content/blog/beginner/minor-lines-overview.md`, closing the #1 item in
+`docs/editorial-backlog.md`'s Next 10 queue. Bounded diff: the new article,
+one navigation-only reciprocal link appended to each of the four existing
+dedicated minor-line articles (Sun Line, Mercury Line, marriage/relationship
+lines, Girdle of Venus), and the backlog/changelog docs. No existing article's
+palmistry claims or quotations changed. `npm run build` (100 routes),
+`npm run content-audit` (54 posts/25 lessons), and `npm run audit:all` all
+passed. Nothing else outstanding from this task.
+
 **Relay PP-RELAY-013 (2026-08-18) closed as no-code-change.** It was authorized
 to add a per-module duplicate lesson `order` check; that check already exists in
 `scripts/audit-content.mjs` and already runs in CI on every pull request to

@@ -85,3 +85,5 @@ If you find nothing, that's a normal finding — many hands don't carry a visibl
 Then look at the hand as a whole. The Girdle is a single feature among many, and its significance — such as it is — only comes into focus alongside the heart line, the mounts, and the overall character of the hand. A Girdle on a hand that otherwise shows strong emotional expressiveness reads differently than the same marking on a hand that is otherwise reserved.
 
 What the Girdle has been taken to mark, across a long tradition, is not a flaw or an excess. It's a particular quality of attunement — to emotion, to atmosphere, to the texture of experience. Whether that resonates as a description is, as always, something only the person whose hand it is can judge.
+
+For how the Girdle fits alongside the Sun Line, Mercury Line, and marriage lines, see [the minor lines overview](/blog/beginner/minor-lines-overview).
