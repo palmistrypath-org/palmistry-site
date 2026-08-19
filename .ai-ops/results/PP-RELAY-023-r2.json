@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "task_id": "PP-RELAY-023",
+  "revision": 2,
+  "result": "READY_FOR_REVIEW",
+  "summary": "Fixed the unsupported prevalence claim flagged in revision-1 review. The FAQ answer to 'Where does the fate line usually start?' said 'There is no single typical starting point... not a deviation from a standard', asserting a default/prevalence position the approved sources do not establish. Rewrote the answer to describe the four starting points (wrist/base, Mount of Luna, life line, mid-palm) without asserting whether any is more or less common, and to state plainly that the sources this site draws from do not establish which occurs most often. Checked the rest of the article for directly equivalent unsupported default/prevalence wording: the two 'common' claims (Luna readings among people whose work involves the public/collaboration; late-starting lines among people who find vocation through accumulated experience) are both directly attributed to West/Fincham and match src/content/lessons/lines/05-fate-line.mdx verbatim in substance, so they were left unchanged. No other editorial or implementation change was made. Amended the existing CHANGELOG.md and AI_HANDOFF.md entries with a brief revision-2 note.",
+  "pr_number": 38,
+  "verification": [
+    "Diff scoped to one sentence in src/content/blog/beginner/fate-line-starting-points.md (the FAQ answer) plus revision-2 addenda to docs/CHANGELOG.md and docs/AI_HANDOFF.md",
+    "grep of the article, fate-line.md, and touched docs for most/generally/typically/typical/usually/usual/common/always/never/consensus/modern/classical/Western/scientific/study/research/proves/predicts/career/wealth/relationship/Luna/life line/wrist/mid/standard/default/deviation: every remaining occurrence checked in context and matches lessons/lines/05-fate-line.mdx or is unrelated to starting-point frequency",
+    "Confirmed both 'common' claims (Luna, late-start) are attributed to West/Fincham and match lessons/lines/05-fate-line.mdx lines 46 and 50",
+    "npm run build: 105 routes built, including /blog/beginner/fate-line-starting-points/",
+    "npm run content-audit: 60 blog posts, 25 lessons valid",
+    "npm run audit:all: links, images, schema, indexability, accessibility all pass",
+    "git diff --check: clean"
+  ],
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["git", "grep", "targeted source review against src/content/lessons/lines/05-fate-line.mdx", "npm build/audit scripts", "GitHub MCP for PR update"],
+    "validation": [
+      "npm run build (105 routes)",
+      "npm run content-audit (60 posts / 25 lessons)",
+      "npm run audit:all (links, images, schema, indexability, accessibility)",
+      "git diff --check"
+    ],
+    "notes": null
+  }
+}

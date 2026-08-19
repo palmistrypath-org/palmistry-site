@@ -28,7 +28,7 @@ Chinese palmistry calls this the career line and does not include it among the t
 
 ### The starting point
 
-Where the fate line begins is among its most interpretively significant features.
+Where the fate line begins is among its most interpretively significant features. For a closer look at each starting position on its own, see the dedicated article on [what each fate line starting point means](/blog/beginner/fate-line-starting-points/).
 
 **From the wrist** — a fate line rising from the base of the palm — is traditionally associated with a strong and early sense of direction: purpose that makes itself felt from early in life, a career or calling that is established relatively clearly and sustained across a long course.
 
