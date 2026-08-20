@@ -1,0 +1,70 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-032",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Closed the adjacent source-integrity defect PP-RELAY-031 identified but left out of scope: src/content/lessons/advanced/01-minor-lines-overview.mdx line 30 attributed to Benham the reading that absence of minor lines on an otherwise well-formed hand should not be read as a deficiency. docs/source-verification-log.md establishes twice that Benham does not read line absence at all (Mercury/health line, Sun Line), so no repository-held evidence supports the attribution. The sentence is restated as Palmistry Path's own editorial framing rather than attributed to Benham, with no replacement historical attribution or vague anonymous authority invented.",
+  "pr_number": 49,
+  "branch": "claude/relay-PP-RELAY-032-benham-absence-attribution",
+  "base_commit": "3635c20b0661c5f325d9c906b13b9cae6f8c6527",
+  "changed_paths": [
+    "src/content/lessons/advanced/01-minor-lines-overview.mdx",
+    "docs/source-verification-log.md",
+    "docs/CURRENT_STATE.md",
+    "docs/AI_HANDOFF.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-032-r1.json"
+  ],
+  "verification": [
+    "npm run build — pass, 105 pages built",
+    "npm run content-audit — pass, 60 blog posts and 25 lessons valid",
+    "npm run audit:all — pass (links, images, schema, indexability, accessibility)",
+    "npm run audit:claim-risk -- src/content/lessons/advanced/01-minor-lines-overview.mdx — 7 findings, identical count and locations to PP-RELAY-031's post-correction result (lines 13, 34, 38, 61, all pre-existing and outside this task's scope); no finding at the edited line 30",
+    "git diff --check — clean",
+    "Final diff re-read against the authorized scope boundary; changes confined to the target sentence, the required source-verification-log disposition, and directly necessary current-state/handoff/changelog updates"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      "docs/source-verification-log.md correction table entries establishing that Benham does not read the Mercury/health line's absence at all, and that Benham 'says nothing of the kind' regarding a missing Sun Line",
+      "docs/source-verification-log.md's own 'Deliberately not changed' record from PP-RELAY-031, naming this exact sentence and pattern",
+      "docs/editorial-style-guide.md §5.2, in particular the rule that the site's own position should be stated as its own rather than attributed to a source that does not support it"
+    ],
+    "external_access": "None attempted or required; the disposition rests entirely on evidence already established and recorded in this repository by prior verification passes.",
+    "in_copyright_sources": "Not applicable to this change."
+  },
+  "correction": {
+    "claim": "Benham, writing in 1900, noted that the absence of minor lines on an otherwise well-formed hand should not be read as a deficiency.",
+    "problem": "docs/source-verification-log.md establishes twice, independently, that Benham does not read line absence at all: for the Mercury/health line, 'Benham does not read the line's absence at all; he reads the character of a line that is present,' and for the Sun Line, 'Benham says nothing of the kind.' No repository evidence supports Benham making this general reassurance.",
+    "action": "Attribution to Benham removed. Sentence restated as Palmistry Path's own editorial framing: 'This site does not read the absence of minor lines on an otherwise well-formed hand as a deficiency.' No replacement historical source was invented, and no vague anonymous authority ('modern palmists', 'some writers') was substituted for the removed attribution.",
+    "surrounding_paragraph_check": "The sentences immediately before and after the edited sentence make no source attribution and were left unchanged. The following paragraph ('Some hands carry a rich secondary layer... Others show only the major lines...') describes hand-to-hand variation directly rather than attributing a reading to any authority, and contains no prevalence/consensus wording; left unchanged."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "The Benham attribution was the sole scientific/historical claim in the focused passage; it was removed rather than reassigned to any other named source, per the task's explicit instruction not to invent a replacement historical meaning. No prevalence/consensus wording was introduced in the replacement sentence. No vague anonymous authority was introduced. No quotation marks were involved before or after this change. No combination reading was created — the replacement sentence makes no interpretive claim beyond the site's own editorial stance, already implicit in the surrounding paragraph's framing. Claim-type separation preserved: the replacement sentence is explicitly framed as this site's own position ('This site does not read...'), distinct from any historical or traditional claim. No medical, legal, financial, deterministic relationship, or predictive-science claim is present."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Targeted grep/read of the lesson, source-verification log (Benham absence entries), and editorial-style-guide §5.2",
+      "Cross-read against PP-RELAY-031's result artifact and its 'Deliberately not changed' finding recorded in the same log"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "npm run audit:claim-risk (targeted)",
+      "git diff --check"
+    ],
+    "notes": "Local main had no merge base with origin/main at session start (84 vs. 54 diverged commits, unrelated histories) — origin/main's history had been rewritten by the Relay/Director process ahead of this container's stale local ref. Working tree was clean with no uncommitted local work, so local main was reset to match origin/main (`git reset --hard origin/main`) before branching, rather than left untouched as in PP-RELAY-031. The task branch was created from the resulting main, which matched the dispatch payload's stated state commit 3635c20."
+  }
+}
