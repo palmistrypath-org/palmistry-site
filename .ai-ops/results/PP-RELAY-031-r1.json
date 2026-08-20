@@ -5,7 +5,9 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Closed the Batch 3E Sun/Mercury source-fidelity item in advanced/01-minor-lines-overview.mdx. The audit's quote-fidelity concern applied to the unmerged feat/curriculum-wave-3e-3f branch's proposed treatment, not to main: the published lesson contains no quotation marks in its body, so there was no quotation to verify or convert and the stale branch was not merged, rebased, or copied. Corrected three unsupported source claims found by reading the focused Sun/Mercury material against the site's own Batch 2B/2C source-verified sun-line.md and mercury-line.md, and replaced anonymous-authority framing with the named attributions the evidence carries.",
-  "pr_number": null,
+  "pr_number": 47,
+  "branch": "claude/relay-PP-RELAY-031-sun-mercury-fidelity",
+  "base_commit": "c8fea45329ca4b22e7c0329435b734dece35be74",
   "changed_paths": [
     "src/content/lessons/advanced/01-minor-lines-overview.mdx",
     "docs/source-verification-log.md",
