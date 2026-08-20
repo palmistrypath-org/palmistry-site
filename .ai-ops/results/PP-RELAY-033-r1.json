@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Closed the 7 claim-risk findings in src/content/lessons/advanced/01-minor-lines-overview.mdx (lines 13, 34, 38, 61) that PP-RELAY-031/PP-RELAY-032 recorded as out-of-scope general prose. Each finding was individually dispositioned against approved repository evidence rather than treated as proof of a defect. Two (lines 13, 34) were retained unchanged as the site's own pedagogical/procedural framing, not external prevalence claims. One (line 38, 'typically read') was narrowed to 'traditionally read' to match the lesson's established diction. The relationship-lines paragraph (line 61) had its unsupported 'most frequently asked-about... most commonly misread' popularity-ranking claim removed outright; its substantive contested-belief point was kept and grounded in advanced/02-marriage-relationship-lines.mdx's existing sourced treatment (Cheiro's popularizing framing; Fincham's and Gettings' explicit contesting of the counting claim; West's 1998 length-as-depth-not-duration framing). No new minor-line topic, combination reading, or curriculum scope was added.",
-  "pr_number": null,
+  "pr_number": 51,
   "branch": "claude/relay-PP-RELAY-033-minor-lines-claim-audit",
   "base_commit": "1e4363e516911a480f453e405823a34f55b890c4",
   "changed_paths": [
