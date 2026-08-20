@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Added a second worked reading to src/content/lessons/advanced/combining-what-you-see.mdx, closing the remaining Batch 3F capstone-body scope. The first worked reading demonstrates two well-supported, genuinely opposing themes held open without resolution; the new second reading demonstrates a distinct synthesis problem the lesson names in its opening paragraphs — resisting an isolated, visually striking single feature (a fate line rising from the Mount of Luna on an otherwise sparsely-marked earth hand) that is not corroborated anywhere else on the hand, instead of promoting it into the reading's centre or folding it into the hand's structural theme. It also demonstrates the active/passive 'agree → settled' case, complementing the first reading's 'differ → developed through experience' case. Updated docs/CURRENT_STATE.md, docs/ROADMAP.md, and docs/CHANGELOG.md to record 3F capstone-body completion; the separate Sun/Mercury quote-fidelity 3E issue was left untouched as explicitly out of scope.",
-  "pr_number": null,
+  "pr_number": 45,
   "changed_paths": [
     "src/content/lessons/advanced/combining-what-you-see.mdx",
     "docs/CURRENT_STATE.md",
