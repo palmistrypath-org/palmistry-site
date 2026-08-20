@@ -17,6 +17,8 @@
     "audit:accessibility": "node scripts/audit-accessibility.mjs",
     "audit:indexability": "node scripts/audit-indexability.mjs",
     "content-audit": "node scripts/audit-content.mjs",
+    "audit:claim-risk": "node scripts/audit-claim-risk.mjs",
+    "audit:claim-risk:selftest": "node scripts/audit-claim-risk.mjs --self-test",
     "indexnow:dry-run": "node scripts/submit-indexnow.mjs",
     "indexnow:submit": "node scripts/submit-indexnow.mjs --submit"
   },
