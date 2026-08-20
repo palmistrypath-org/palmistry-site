@@ -837,3 +837,79 @@ naming references ("Contemporary Indian practice calls it the Jeevan Rekha",
 "Contemporary Chinese palm reading names the life line...") are unrelated to
 the short-line/break consensus-claim problem and were left unchanged, as they
 are outside revision 7's authorized scope.
+
+---
+
+## Sun/Mercury source fidelity in `advanced/01-minor-lines-overview.mdx` (Relay PP-RELAY-031, 2026-08-20)
+
+Closes the Batch 3E quote-fidelity item carried since
+`docs/audits/CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md` §2/open-item 1.
+
+### What the open item actually was
+
+The audit's quote-fidelity concern was raised against the **unmerged**
+`feat/curriculum-wave-3e-3f` branch's proposed Sun/Mercury treatment, which
+introduced quotation-marked Cheiro and Benham passages the audit could not check
+against the 1916/1900 editions. That treatment was never replayed onto `main`.
+The lesson as published on `main` contains **no quotation marks in its body at
+all** — the only quotation marks in the file are frontmatter string delimiters.
+There was therefore no quotation to verify or convert, and the stale branch was
+not merged, rebased, or copied.
+
+What the focused material did carry was three unsupported source claims, found
+by reading the Sun/Mercury sections against the site's own Batch 2B/2C
+source-verified articles.
+
+### Evidence used
+
+Approved repository-held evidence only: `src/content/blog/beginner/sun-line.md`
+and `src/content/blog/beginner/mercury-line.md`, both carried through the
+Batch 2B/2C Cheiro/Benham scan pass recorded earlier in this log, plus this
+log's own correction tables (the Benham absence-reading corrections at
+`mercury-line.md`/`mount-of-mercury.md` and at `sun-line.md`/`05-mount-of-apollo.mdx`).
+
+External source access was attempted and **failed**: Internet Archive,
+chestofbooks.com, iapsop.com, Wikisource, and Project Gutenberg are all blocked
+by this environment's network egress proxy. No external text was used to
+establish any wording. Search-engine result snippets were not treated as
+source-quality evidence, and no new quotation was introduced, so no claim in
+this change depends on unverified external text.
+
+### Corrections made
+
+| Claim as published | What the approved evidence supports | Action |
+|---|---|---|
+| A clear sun line "appears on roughly half of hands, depending on how you count it" | Neither `sun-line.md` nor `mercury-line.md` states any prevalence figure for any minor line | Numeric prevalence figure removed; replaced with presence/absence without a frequency claim. The trailing "rarer still" frequency claim went with it |
+| "what Cheiro described as personal magnetism or public recognition" | `sun-line.md`'s verified Cheiro material is luck, success and brilliancy in art/stage/public singing, and the world's recognition. "Personal magnetism" appears nowhere in the verified Cheiro content | "Personal magnetism" removed. Cheiro is now cited only for luck; Benham for creative power in art or productive capacity in business; Gettings for brightness in personality and reception by others, not requiring public fame |
+| "Fincham offers a more measured interpretation: the sun line is better understood as a marker of confidence and purposeful direction than as a line of fame or achievement" | Fincham (2005) is in copyright and unsearchable — see this log's standing position that in-copyright modern sources were left as they stand and carry no checkable quotation. No repository evidence attributes this reading to Fincham. `sun-line.md` assigns *purposeful direction* to the **fate** line and recognition to the sun line, so the claim also inverted the site's own distinction | Fincham attribution removed rather than reassigned. The not-celebrity point is retained as the site's framing, supported by Gettings' reception reading |
+| "Some give it substantial importance... Others use it primarily as a marker of practical intelligence..." | Anonymous-authority framing for readings the evidence attributes by name: Benham for digestion/liver/vitality/constitution on a present line; the communication-and-commerce reading derived from the mount of Mercury; Gettings treating both as complementary | Both "Some"/"Others" replaced with the named attributions |
+| "It is among the most variable minor lines in terms of how traditions and practitioners weight it... You will encounter genuine disagreement across sources" | `mercury-line.md` states the health and business readings are complementary and that neither is primary. The documented disagreement is specifically about **absence**: Cheiro reads absence as favourable, Benham does not read absence at all | Superlative-variability claim removed. The disagreement is now stated where the evidence actually places it — the absence question |
+| Mercury line "runs from the base of the palm, often from near the mount of Luna or the wrist area" | `mercury-line.md` names three origins and calls the **life line** origin "among the most common starting points" | Frequency claim removed; the three documented origins (life line, Luna, plain of Mars) are named without ranking them |
+
+### Deliberately not changed
+
+`01-minor-lines-overview.mdx` line 30 attributes to Benham the reading that "the
+absence of minor lines on an otherwise well-formed hand should not be read as a
+deficiency." This log's own correction tables establish twice that Benham does
+not read line absence — once for the Mercury/health line and once for the Sun
+Line, where the reassurance "sometimes credited to him" was removed from
+`sun-line.md` and `05-mount-of-apollo.mdx`. The line-30 sentence is the same
+pattern and is very likely unsupported.
+
+It was left unchanged because it is a general minor-lines statement, not Sun or
+Mercury material, and PP-RELAY-031's authorized scope is explicitly limited to
+the Sun Line and Mercury Line material. Recorded here so it is not lost;
+it needs its own bounded task.
+
+### Verification
+
+No quotation marks were added to the lesson body; every named-source statement
+is a paraphrase, per the §5 rule that quotation marks mean verified verbatim
+wording. `npm run audit:claim-risk` against the file went from 9 findings to 7;
+both findings inside the Sun/Mercury material are resolved, and the 7 remaining
+sit in general instructional prose (lines 13, 34, 38) and in the relationship-lines
+section (line 61), all outside this task's authorized scope. Note that the
+scanner never flagged the "roughly half of hands" figure — the most clearly
+unsupported empirical claim in the focused material — which is a concrete
+instance of the standing warning that a clean heuristic scan is not evidence of
+sourcing.

@@ -103,6 +103,13 @@ The **feature-branch review gate** was added to `AGENTS.md` and mirrored in
 step; merging to `main` still requires explicit user review.
 
 ## Next action
+
+**Superseded 2026-08-20 (Relay PP-RELAY-031).** Everything below is historical.
+Batch 3F was closed by Relay PP-RELAY-029 and Batch 3E's Sun/Mercury item by
+Relay PP-RELAY-031, both 2026-08-20, so no approved curriculum batch item is
+outstanding and the `feat/curriculum-wave-3e-3f` branch has no remaining scope
+to contribute. See `CURRENT_STATE.md`, `CHANGELOG.md`, and `AI_HANDOFF.md`.
+
 The simian lesson's module move (3E) is **now implemented** as a fresh bounded
 replay against `main` (Relay PP-RELAY-005, 2026-08-17), not by merging the
 stale branch below. What remains of Batch 3E is **revising `advanced/01`** so

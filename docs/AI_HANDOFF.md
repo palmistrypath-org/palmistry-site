@@ -328,8 +328,26 @@ PP-RELAY-008–011), and `<Checkpoint>` across Foundations, Lines, and Mounts
 (Relay PP-RELAY-010–012), all 2026-08-18; see `CURRENT_STATE.md` and
 `CHANGELOG.md`. The last outstanding 3F item, the capstone body revision (the
 second worked reading), was closed by Relay PP-RELAY-029 (2026-08-20); 3F is
-complete and 3E's Sun/Mercury rewrite is the only outstanding curriculum item.
-Do not pull later batches forward and do not reorder modules.
+complete. 3E's Sun/Mercury item was closed by Relay PP-RELAY-031 (2026-08-20),
+so no approved curriculum batch item is outstanding. Do not pull later batches
+forward and do not reorder modules.
+
+**2026-08-20 (Relay PP-RELAY-031):** the Sun/Mercury item is **closed**. The
+audit's quote-fidelity concern was about the unmerged branch's proposed
+quotations, not about `main` — the published lesson has no body quotations at
+all, so nothing needed verifying or converting. Three unsupported source claims
+in the focused material were corrected against the site's own source-verified
+`blog/beginner/sun-line.md` and `blog/beginner/mercury-line.md`: a "roughly half
+of hands" prevalence figure, a "personal magnetism" association credited to
+Cheiro, and a Fincham attribution no repository evidence supports. Per-claim
+evidence is in `docs/source-verification-log.md`. Do not reopen this.
+
+**Open, needs its own task:** `advanced/01-minor-lines-overview.mdx` still
+attributes to Benham the reading that absent minor lines should not be read as a
+deficiency. `docs/source-verification-log.md` establishes twice — for the
+Mercury/health line and for the Sun Line — that Benham does not read line
+absence at all. It was left unchanged only because it is general minor-lines
+prose, outside PP-RELAY-031's Sun/Mercury-only scope.
 
 A remote branch `feat/curriculum-wave-3e-3f` already exists with 3E/3F work (no
 PR opened yet). It has since been independently audited (Relay PP-RELAY-003,
