@@ -3,17 +3,39 @@
  * audit-links.mjs
  * Scans every HTML file in dist/ for internal href/src references
  * and verifies each referenced path exists on disk.
- * Exits 1 if any broken references are found.
+ * Also verifies that every published blog article route is reachable
+ * from at least one meaningful inbound internal link on another
+ * indexable page, so newly published articles cannot silently become
+ * orphaned from the site's navigational/link graph.
+ * Exits 1 if any broken references or orphaned articles are found.
  */
 
 import { readFileSync, readdirSync, statSync, existsSync } from 'fs';
 import { join, resolve, dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { isNoindexPath, isPrivatePath } from '../src/indexability.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = resolve(__dirname, '..', 'dist');
 
+// The blog listing page (/blog/) mechanically enumerates every published
+// article by design, so counting it as an inbound link source would make
+// the orphan check always pass and create false confidence. It is excluded
+// as a link *source* here; it is still scanned for broken links above.
+const NON_MEANINGFUL_LINK_SOURCES = new Set(['/blog/index.html']);
+
 // ── helpers ───────────────────────────────────────────────────────────────────
+
+/** Convert a dist-relative HTML file path to the site route it serves. */
+function routeFromRelFile(relFile) {
+  if (relFile === '/404.html') return '/404/';
+  return relFile.replace(/index\.html$/, '');
+}
+
+/** A source page only counts toward discoverability if it is itself indexable. */
+function isIndexableRoute(route) {
+  return !isNoindexPath(route) && !isPrivatePath(route);
+}
 
 /** Recursively collect all .html files under a directory. */
 function collectHtml(dir, results = []) {
@@ -82,6 +104,8 @@ const ATTR_RE = /(?:href|src|action|srcset)=["']([^"']+)["']/gi;
 
 const broken = [];
 const checked = new Set();
+/** Map of target relFile → Set of source relFiles linking to it (meaningful, non-self). */
+const inboundLinks = new Map();
 
 for (const htmlFile of htmlFiles) {
   const content = readFileSync(htmlFile, 'utf8');
@@ -108,8 +132,40 @@ for (const htmlFile of htmlFiles) {
 
       if (!existsSync(target)) {
         broken.push({ file: relFile, url, target: target.replace(DIST, '') });
+        continue;
       }
+
+      const targetRelFile = target.replace(DIST, '');
+      if (targetRelFile === relFile) continue; // self-link
+      if (NON_MEANINGFUL_LINK_SOURCES.has(relFile)) continue;
+      // A link only counts toward discoverability if its source page is
+      // itself indexable; a noindex/private page cannot rescue an
+      // otherwise orphaned article from the navigational link graph.
+      if (!isIndexableRoute(routeFromRelFile(relFile))) continue;
+
+      if (!inboundLinks.has(targetRelFile)) inboundLinks.set(targetRelFile, new Set());
+      inboundLinks.get(targetRelFile).add(relFile);
     }
+  }
+}
+
+// ── orphaned blog article detection ─────────────────────────────────────────
+
+const orphans = [];
+for (const htmlFile of htmlFiles) {
+  const relFile = htmlFile.replace(DIST, '');
+
+  // Individual blog article pages live at /blog/<slug.../index.html;
+  // the listing page itself (/blog/index.html) is not an article.
+  if (!relFile.startsWith('/blog/') || relFile === '/blog/index.html') continue;
+  if (!relFile.endsWith('/index.html')) continue;
+
+  const route = routeFromRelFile(relFile);
+  if (!isIndexableRoute(route)) continue;
+
+  const inbound = inboundLinks.get(relFile);
+  if (!inbound || inbound.size === 0) {
+    orphans.push(route);
   }
 }
 
@@ -117,7 +173,6 @@ for (const htmlFile of htmlFiles) {
 
 if (broken.length === 0) {
   console.log('✅  No broken internal links or missing local assets found.');
-  process.exit(0);
 } else {
   console.error(`❌  Found ${broken.length} broken reference(s):\n`);
 
@@ -136,6 +191,16 @@ if (broken.length === 0) {
     }
     console.error('');
   }
-
-  process.exit(1);
 }
+
+if (orphans.length === 0) {
+  console.log('✅  No orphaned blog articles found (every article has a meaningful inbound internal link).');
+} else {
+  console.error(`❌  Found ${orphans.length} orphaned blog article route(s) with no meaningful inbound internal link:\n`);
+  for (const route of orphans) {
+    console.error(`    ${route}`);
+  }
+  console.error('');
+}
+
+process.exit(broken.length === 0 && orphans.length === 0 ? 0 : 1);

@@ -2,6 +2,17 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-20 - Orphan-audit inbound links now require an indexable source (Relay PP-RELAY-027 revision 2)
+- Fixed a gap found in Director review of revision 1: the orphan detector correctly required the *target* article to be indexable, but counted an inbound link from *any* built page as rescuing it, including `noindex`/private pages. `scripts/audit-links.mjs` now also requires the link's source page to be indexable (per `src/indexability.mjs`) before it counts.
+- Verified with the same synthetic-orphan technique as revision 1, extended: after stripping all real inbound links to one article, adding a link to it from a `noindex` page (`/guide/thank-you/`) still failed the audit naming that route (proving a non-indexable source cannot mask an orphan), while adding a link from an indexable page made the audit pass; the build was then restored and re-verified clean. `npm run build`, `npm run audit`, `npm run audit:all`, and `npm run content-audit` all pass on final state.
+- Updated `docs/CURRENT_STATE.md` with the source-indexability requirement and verification.
+
+## 2026-08-20 - Orphaned-blog-article detection added to the link audit (Relay PP-RELAY-027)
+- `scripts/audit-links.mjs` (`npm run audit`) now also fails when a published/indexable blog article route has zero meaningful inbound internal links from another indexable page's built HTML, in addition to its existing broken-internal-link check. Self-links do not count, and the `/blog/` listing page is excluded as a link source because it mechanically lists every post and would otherwise make the check unable to ever fail.
+- No new dependency or standalone script; the existing per-file link scan now also builds an inbound-link graph and reports orphan routes by name.
+- Verified locally: `npm run build` then `npm run audit` passes with zero orphans on current repository state (60 published posts). A controlled synthetic orphan was created by stripping all real inbound references to one article from a built `dist/` copy (a gitignored artifact, not committed); the audit failed and named the exact route, then the build was restored from backup and re-verified passing before commit. `npm run audit:all` and `npm run content-audit` also pass on final state.
+- Updated `docs/CURRENT_STATE.md` and `docs/DECISIONS.md` to document the check and the blog-index exclusion rationale.
+
 ## 2026-08-20 - Published-blog-count drift check added to content-audit (Relay PP-RELAY-026)
 - PP-RELAY-025 mechanically corrected `docs/editorial-backlog.md`'s documented published blog count after it had silently drifted from 53 to 60. To prevent recurrence, `scripts/audit-content.mjs` now parses the backlog's `**Published:** N blog posts` marker and blocks `npm run content-audit` when that number does not match the actual `src/content/blog` collection count, or when the marker cannot be found/parsed (fails closed rather than skipping silently).
 - No new dependency, standalone script, or content change. Integrated into the existing `content-audit` check that already runs in CI (`ci.yml`) on every pull request to `main` and push to `main`, so a future drift now fails the same PR that introduces or misses a count update.
