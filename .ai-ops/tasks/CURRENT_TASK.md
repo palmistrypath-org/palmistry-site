@@ -2,60 +2,52 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-027
+PP-RELAY-028
 
 ## Revision
-2
+1
 
 ## Risk Class
 STANDARD
 
-## Revision note
-Revision 2 is bounded remediation for Director review of revision 1. The orphan detector correctly filters target articles for indexability, but it currently records inbound links from any built page. Fix only this gap so a link counts toward discoverability only when its source page is itself indexable under the repository's existing indexability policy. Preserve the accepted `/blog/` source exclusion and self-link exclusion. Add or demonstrate a controlled case proving that a noindex/private source link does not rescue an otherwise orphaned article.
-
 ## Objective
-Add a bounded internal-link discoverability audit that identifies published blog article routes with no meaningful inbound internal link from another indexable site page, so newly published content cannot silently become orphaned from the site's navigational/link graph.
+Add a bounded, mechanically testable source-claim risk audit that helps SOURCE_SENSITIVE Relay work catch risky wording before Director review, targeting the avoidable claim patterns observed in PP-RELAY-024 without replacing human/source judgment.
 
 ## Why this task
-The repository already has a strong broken-link audit, but it verifies that links point to existing targets rather than whether published articles are actually discoverable through inbound internal links. After the recent editorial expansion to 60 published posts, preventing orphaned articles is a high-value, mechanically reviewable SEO hygiene improvement and a useful STANDARD v2C task.
+PP-RELAY-024 required six rework revisions, mostly for unsupported scientific/historical overstatement and anonymous prevalence/consensus wording that survived the worker's manual source preflight. v2C's goal is decreasing avoidable rework without weakening safeguards. A small heuristic audit can surface those phrases earlier while leaving the Director and approved repository evidence as the final authority.
 
 ## Allowed scope
-- Inspect the built-site structure and existing `scripts/audit-links.mjs`, content collections, and audit command wiring.
-- Implement the smallest maintainable audit for published blog article routes that have zero meaningful inbound internal links from other indexable site pages.
-- Exclude self-links and clearly non-content/system surfaces where counting them would create false confidence; document any bounded exclusions in code or concise canonical docs.
-- For revision 2, ensure the source page of a counted inbound link is indexable under the existing `src/indexability.mjs` policy; noindex/private source pages must not count.
-- Preserve the deliberate `/blog/` listing-page exclusion as a source and the self-link exclusion unless objective evidence shows either is incorrect.
-- Prefer extending existing link-audit tooling or its already-required audit path rather than adding an unused standalone tool.
-- Emit actionable failures naming orphaned article route(s).
-- Prove the detector with a controlled/synthetic orphan condition or equivalent deterministic fixture/test that is fully restored and not committed as content damage.
-- For revision 2, additionally prove that an inbound link from a noindex/private source does not satisfy the orphan check.
-- Update narrowly relevant tooling documentation only when needed.
+- Inspect existing content/audit tooling and package scripts before choosing the smallest maintainable implementation.
+- Add or extend a script that can scan source-sensitive changed MD/MDX prose (or explicitly supplied files) for high-risk claim language such as unsupported frequency/consensus terms, anonymous authority phrases, strong empirical-disproof verbs, or equivalent patterns identified in `.ai-ops/V2C_PILOT.md`.
+- The audit must report file + line/context and the matched risk category clearly enough for a worker to review the claim against approved evidence.
+- Treat findings as review prompts, not proof that wording is wrong. Do not auto-rewrite prose and do not pretend regex/heuristics establish source validity.
+- Prefer opt-in/targeted use for SOURCE_SENSITIVE work rather than making all existing historical content fail immediately from legacy wording.
+- Add deterministic fixtures/tests or a controlled temporary test demonstrating at least: (a) risky prevalence/anonymous-authority wording is flagged, (b) strong unsupported empirical-overstatement wording is flagged, and (c) neutral observational/editorial phrasing does not trigger the same finding.
+- Wire the tool into a clear npm command or documented Relay worker invocation so future SOURCE_SENSITIVE packets can require it.
+- Update only narrowly relevant `.ai-ops`/canonical docs needed to document the new safeguard.
 - Necessary Relay result/bookkeeping files may be changed.
 
 ## Out of scope
-- Do not add or rewrite palmistry article prose merely to make the audit pass. If existing orphaned articles are discovered, report them in the result and either fix only straightforward contextual/internal navigation links that do not change palmistry meanings, or return a bounded blocker if resolving them would require semantic/source-sensitive editorial work.
-- No keyword strategy, indexing-policy changes, sitemap redesign, external SEO research, monetization, visual redesign, deployment, or fast-lane changes.
-- Do not require every article to meet an arbitrary link-count threshold; this task is about zero meaningful inbound links, not link-density optimization.
-- Do not redesign the overall audit architecture or add dependencies unless objectively necessary.
-- Do not broaden revision 2 into unrelated link-audit refactoring.
+- Do not rewrite palmistry articles or lessons as part of this tooling task.
+- Do not modify the proven dispatch, auto-merge, fast-lane, credit-guard, or one-worker-task control logic.
+- Do not turn heuristic matches into hard source truth or automatically approve/reject content based solely on wording.
+- No external source acquisition, SEO strategy changes, dependencies unless objectively necessary, broad audit refactor, deployment, or monetization changes.
 
 ## Acceptance checks
-- Existing valid internal links continue to be checked for broken targets.
-- Every published/indexable blog article is evaluated for at least one meaningful inbound internal link from another indexable site page under clearly defined rules.
-- Self-links alone do not satisfy the check.
-- `/blog/` listing-page links do not satisfy the check under the existing approved rationale.
-- A link whose source page is noindex/private does not satisfy the check.
-- A controlled orphan condition fails with an actionable route/path message, and normal repository state passes after restoration or after only bounded source-safe link fixes.
-- A controlled noindex/private-source condition demonstrates that non-indexable sources cannot mask an orphan.
-- `npm run build`, the directly affected link/audit command, and `npm run audit:all` pass on final state.
-- Final diff contains no unrelated content rewrite, SEO strategy change, or refactor.
+- A repeatable command exists for targeted claim-risk scanning of one or more source-sensitive content files.
+- Output identifies the affected file/location and useful risk category/pattern.
+- Controlled tests prove risky prevalence/anonymous-authority and empirical-overstatement examples are detected.
+- Controlled tests prove at least one neutral/acceptable example is not falsely reported by those same patterns.
+- Existing project audits/build remain passing after implementation; run the cheapest relevant checks plus `npm run build` and `npm run audit:all` if the implementation touches shared audit tooling.
+- Documentation makes explicit that this is a preflight aid and does not replace approved-source verification or Director review.
+- No palmistry prose or Relay dispatch/merge behavior changes.
 
 ## v2C durable-result contract
-For every terminal outcome after startup gate, create `.ai-ops/results/PP-RELAY-027-r2.json` on a pushed `claude/relay-PP-RELAY-027-...` branch. Allowed terminal results are `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, and `PAUSED_USAGE_LIMIT`. A non-change terminal outcome does not require a dummy PR. The result must include `task_id`, `revision`, `risk_class: STANDARD`, terminal `result`, verification performed, changed paths, tests/checks, discovered orphan routes if any, and any blocker/gate details. `source_preflight` may be null because this is not SOURCE_SENSITIVE.
+For every terminal outcome after startup gate, create `.ai-ops/results/PP-RELAY-028-r1.json` on a pushed `claude/relay-PP-RELAY-028-...` branch. Allowed terminal results are `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, and `PAUSED_USAGE_LIMIT`. A non-change terminal outcome does not require a dummy PR. The result must include `task_id`, `revision`, `risk_class: STANDARD`, terminal `result`, verification performed, changed paths, tests/checks, any discovered limitations/false-positive risks, and blocker/gate details. `source_preflight` may be null because this task is tooling rather than SOURCE_SENSITIVE content.
 
 ## PR contract
-If changed work is `READY_FOR_REVIEW`, update the single existing Relay PR targeting `main` with footers:
+If changed work is `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with footers:
 
-RELAY_TASK_ID: PP-RELAY-027
-RELAY_TASK_REVISION: 2
+RELAY_TASK_ID: PP-RELAY-028
+RELAY_TASK_REVISION: 1
 RELAY_RESULT: READY_FOR_REVIEW
