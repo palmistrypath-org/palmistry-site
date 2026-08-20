@@ -105,7 +105,7 @@
       "task_id": "PP-RELAY-026",
       "revision": 1,
       "risk_class": "STANDARD",
-      "status": "AUTHORIZED",
+      "status": "MERGE_APPROVED",
       "task_path": ".ai-ops/tasks/PP-RELAY-026.md",
       "result_path": ".ai-ops/results/PP-RELAY-026-r1.json",
       "dispatched_at": null,
@@ -113,10 +113,10 @@
       "reviewed_at": null,
       "merge_approved_at": null,
       "merged_at": null,
-      "pr_number": null,
+      "pr_number": 42,
       "rework_count": 0,
       "reason_categories": [],
-      "terminal_result": null
+      "terminal_result": "READY_FOR_REVIEW"
     }
   ]
 }
