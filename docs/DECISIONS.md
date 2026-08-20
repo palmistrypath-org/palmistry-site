@@ -2,6 +2,13 @@
 
 Only durable decisions belong here. Newest entries first.
 
+## 2026-08-20 - Published-blog-count drift check integrated into `content-audit`; no standalone script
+**Decision:** Detecting drift between `docs/editorial-backlog.md`'s documented published-blog-post count and the actual `src/content/blog` collection is a check inside `scripts/audit-content.mjs` (`npm run content-audit`), not a new standalone script or dependency. It parses a narrow, stable `**Published:** N blog posts` marker in the backlog doc and fails closed: both a count mismatch and a missing/unparseable marker block the audit with a documented-versus-actual message.
+
+**Why:** PP-RELAY-025 had to hand-correct a real drift (53 vs. 60) that went undetected for several publishing cycles. `content-audit` already runs on every pull request and push to `main` via `ci.yml` and already computes the actual blog count, so extending it is the smallest maintainable integration point — consistent with the same reasoning applied to lesson `order` uniqueness below. A heuristic prose parser was avoided in favor of one stable marker line the backlog's own "Status" section already uses.
+
+**Consequences:** Anyone changing the backlog's "Status" section must keep the `**Published:** N blog posts` line accurate and in that exact form, or `content-audit` fails with a clear message rather than the count silently drifting again. Anyone extending this guard should keep it inside `audit-content.mjs` rather than introduce a parallel script.
+
 ## 2026-08-18 - Lesson `order` uniqueness stays in `content-audit`; no separate validator
 **Decision:** Per-module lesson `order` uniqueness is enforced by the existing check in `scripts/audit-content.mjs` and nothing further is added. No new validator script, no test runner, and no committed fixture curriculum. The guard's contract is: duplicate `order` values are blocking only within the same module, distinct modules may reuse the same numeric order, and the error names the module, the order value, and both colliding files.
 

@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-026",
+  "revision": 1,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Added a published-blog-count drift check to scripts/audit-content.mjs (npm run content-audit). It parses the '**Published:** N blog posts' marker in docs/editorial-backlog.md and fails closed when that count does not match the actual src/content/blog collection count, or when the marker is missing/unparseable, so the drift PP-RELAY-025 hand-corrected (53 vs 60) cannot silently recur. No new dependency or standalone script; integrated into the existing CI-run content-audit check.",
+  "pr_number": 42,
+  "verification": [
+    "npm run content-audit passes on normal repo state (60 blog posts, 25 lessons valid)",
+    "Deliberately simulated a documented-count mismatch (backlog marker 60 -> 61, not committed): content-audit failed with 'Documented published blog count (61) does not match actual src/content/blog count (60)' and non-zero exit",
+    "Restored docs/editorial-backlog.md from the simulated edit and re-ran npm run content-audit to confirm it passes again before commit",
+    "git status/diff confirmed no unintended file changes and no leftover simulated mismatch"
+  ],
+  "changed_paths": [
+    "scripts/audit-content.mjs",
+    "docs/CURRENT_STATE.md",
+    "docs/CHANGELOG.md",
+    "docs/DECISIONS.md",
+    ".ai-ops/results/PP-RELAY-026-r1.json"
+  ],
+  "source_preflight": null,
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "grep/read of scripts/audit-content.mjs and docs/editorial-backlog.md to find the smallest integration point and a stable marker line",
+      "direct script edit adding checkPublishedCountDrift() and wiring it into the existing errors array",
+      "shell-based simulated mismatch test with restoration from a temp backup before commit"
+    ],
+    "validation": [
+      "npm run content-audit (pass on normal state)",
+      "npm run content-audit (fail on simulated mismatch, then restored and re-passed)"
+    ],
+    "notes": null
+  }
+}
