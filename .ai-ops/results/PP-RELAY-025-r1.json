@@ -5,7 +5,7 @@
   "risk_class": "LOW",
   "result": "READY_FOR_REVIEW",
   "summary": "Corrected the stale published-blog count in docs/editorial-backlog.md from 53 to 60, matching the actual src/content/blog collection and npm run content-audit output. Added a brief, factual reconciliation note; no article priorities, scores, roadmap items, or article bodies were changed.",
-  "pr_number": null,
+  "pr_number": 41,
   "verification": [
     "find src/content/blog -name '*.md*' | wc -l -> 60",
     "npm run content-audit -> 'Content audit passed — 60 blog post(s) and 25 lesson(s) are valid.'",
