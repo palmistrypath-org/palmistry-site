@@ -779,3 +779,61 @@ Henneberg 2019, no correlation) and the historical Cheiro/Benham attributions
 are unchanged. No new studies, citations, palmistry interpretations, or
 health/lifespan doctrine were introduced. This closes the residual
 lifespan-evidence/consensus scope-consistency problem across both files.
+
+## Pass 12 — Life-line residual anonymous modern-practice wording (2026-08-20)
+
+Scope: Relay PP-RELAY-024 revision 7 (`SOURCE_SENSITIVE`). Director review of
+the cumulative PR found that revision 6's own result preflight had identified
+remaining anonymous consensus phrases in the directly related short-line/break
+passages — "Modern practitioners read it instead as marking..." and
+"Contemporary practitioners read it as marking..." — but revision 6 treated
+them as outside its scope. Revision 7 is limited to those residual phrases and
+directly equivalent anonymous-authority wording ("in modern/contemporary
+practice", "some writers", "the modern tradition") in the same short-line and
+break passages.
+
+### Correction made
+
+- `life-line.md`'s short-line section: "Modern practitioners read it instead
+  as marking..." and "some associate it with a different relationship..." are
+  replaced with explicit Palmistry Path editorial framing ("Palmistry Path
+  reads a short line instead as marking..."), matching the editorial-choice
+  framing already used in the following paragraph.
+- `life-line.md`'s break section: "is read in the modern tradition as a
+  significant transition" is replaced with "is read here, as an editorial
+  choice, as a significant transition." The overlap-break sentence's "in
+  modern practice it describes..." is replaced with "here it describes..."
+  for the same reason.
+- `life-line.md`'s FAQ answers for "What does a short life line mean?" and
+  "What does a broken life line mean?" both replace "In modern practice..."
+  with explicit "Palmistry Path reads it/a break, as an editorial choice..."
+  framing.
+- `lessons/lines/04-life-line.mdx`'s short-line paragraph replaces "In
+  contemporary practice, a short life line is associated with..." and "Some
+  writers also associate it with..." with the same explicit Palmistry Path
+  editorial framing, preserving the existing "following Fincham, Gettings,
+  and West" attribution and the evidence-scope clarification ("it tested
+  lifespan length, not life transitions").
+- `lessons/lines/04-life-line.mdx`'s break section replaces "**In modern
+  practice, a break is a transition.** Contemporary practitioners read it as
+  marking..." with "**Palmistry Path reads a break as a transition, as an
+  editorial choice.** We read it as marking..." The overlap-break sentence
+  and the accompanying figure caption both replace "modern practice"/"Modern
+  practice" with "here"/"This course," respectively.
+
+No named-source position was invented: the "life transition" reading is
+attributed to Palmistry Path's own editorial choice rather than to Fincham,
+Gettings, or West, since the repository evidence supports only their
+rejection of the lifespan reading, not a specific alternative interpretation.
+The verified three-study record (Wilson & Mather 1974, no correlation;
+Newrick, Affie & Corrall 1990, significant association; Lucas, Dhugga &
+Henneberg 2019, no correlation) and the historical Cheiro/Benham attributions
+are unchanged. No new studies, citations, palmistry interpretations, or
+health/lifespan doctrine were introduced. A full-file sweep of both touched
+files for "modern literature", "modern practice", "modern practitioner",
+"contemporary practice", "contemporary practitioner", "some writers",
+"experts", and "consensus" returns no remaining matches. Cross-cultural
+naming references ("Contemporary Indian practice calls it the Jeevan Rekha",
+"Contemporary Chinese palm reading names the life line...") are unrelated to
+the short-line/break consensus-claim problem and were left unchanged, as they
+are outside revision 7's authorized scope.

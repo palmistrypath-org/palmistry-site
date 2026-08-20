@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-024",
+  "revision": 7,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Removed the residual anonymous modern-practice consensus wording ('Modern practitioners read it instead as marking...', 'Contemporary practitioners read it as marking...', and directly equivalent 'in modern/contemporary practice'/'some writers'/'the modern tradition' phrasing) that revision 6's own preflight had identified in the life-line short-line/break passages but left out of scope. Replaced with explicit Palmistry Path editorial framing in both src/content/blog/beginner/life-line.md and src/content/lessons/lines/04-life-line.mdx, without inventing a named-source position for the 'life transition' reading. The verified three-study record and Cheiro/Benham historical attribution are unchanged.",
+  "pr_number": 40,
+  "verification": [
+    "Keyword sweep of both touched files for 'modern literature', 'modern practice', 'modern practitioner', 'contemporary practice', 'contemporary practitioner', 'some writers', 'experts', 'consensus' — zero matches after edit",
+    "Inspected cumulative diff origin/main...HEAD (10 files changed: 2 content files, results r1-r6, docs bookkeeping) not only revision 7's own commit",
+    "npm run build — 105 routes built including /learn/lines/04-life-line/ and /blog/beginner/life-line/",
+    "npm run content-audit — 60 blog posts, 25 lessons valid",
+    "npm run audit:all — links, images, schema, indexability, accessibility all pass",
+    "git diff --check origin/main...HEAD — clean",
+    "Manual re-read of the two touched files confirming the three-study record, Cheiro/Benham attribution, and lifespan-vs-transition evidence-scope boundary remain intact"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "The 'life transition' short-line/break reading is attributed to Palmistry Path editorial choice rather than to Fincham, Gettings, or West, because repository evidence only supports those authors rejecting the lifespan reading, not endorsing a specific alternative interpretation. Cross-cultural naming references (Contemporary Indian/Chinese practice naming conventions) were left unchanged as unrelated to the short-line/break consensus-claim problem and outside revision 7's authorized scope."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["GitHub MCP file read/push", "local git worktree for build/audit validation"],
+    "validation": ["npm run build", "npm run content-audit", "npm run audit:all", "git diff --check"],
+    "notes": null
+  }
+}
