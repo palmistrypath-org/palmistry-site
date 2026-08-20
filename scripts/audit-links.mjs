@@ -26,6 +26,17 @@ const NON_MEANINGFUL_LINK_SOURCES = new Set(['/blog/index.html']);
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 
+/** Convert a dist-relative HTML file path to the site route it serves. */
+function routeFromRelFile(relFile) {
+  if (relFile === '/404.html') return '/404/';
+  return relFile.replace(/index\.html$/, '');
+}
+
+/** A source page only counts toward discoverability if it is itself indexable. */
+function isIndexableRoute(route) {
+  return !isNoindexPath(route) && !isPrivatePath(route);
+}
+
 /** Recursively collect all .html files under a directory. */
 function collectHtml(dir, results = []) {
   for (const entry of readdirSync(dir)) {
@@ -127,6 +138,10 @@ for (const htmlFile of htmlFiles) {
       const targetRelFile = target.replace(DIST, '');
       if (targetRelFile === relFile) continue; // self-link
       if (NON_MEANINGFUL_LINK_SOURCES.has(relFile)) continue;
+      // A link only counts toward discoverability if its source page is
+      // itself indexable; a noindex/private page cannot rescue an
+      // otherwise orphaned article from the navigational link graph.
+      if (!isIndexableRoute(routeFromRelFile(relFile))) continue;
 
       if (!inboundLinks.has(targetRelFile)) inboundLinks.set(targetRelFile, new Set());
       inboundLinks.get(targetRelFile).add(relFile);
@@ -135,16 +150,6 @@ for (const htmlFile of htmlFiles) {
 }
 
 // ── orphaned blog article detection ─────────────────────────────────────────
-
-/** Convert a dist-relative HTML file path to the site route it serves. */
-function routeFromRelFile(relFile) {
-  if (relFile === '/404.html') return '/404/';
-  return relFile.replace(/index\.html$/, '');
-}
-
-function isIndexableRoute(route) {
-  return !isNoindexPath(route) && !isPrivatePath(route);
-}
 
 const orphans = [];
 for (const htmlFile of htmlFiles) {

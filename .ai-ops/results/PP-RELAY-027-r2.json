@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-027",
+  "revision": 2,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 2 bounded fix for Director-reviewed revision 1: scripts/audit-links.mjs's orphaned-blog-article check correctly required the target article's route to be indexable, but counted an inbound link from any built page, including noindex/private pages, as rescuing it. Now a link only counts toward discoverability if its source page is itself indexable per src/indexability.mjs. The accepted /blog/ listing-page source exclusion and self-link exclusion are unchanged. Current repository state (60 published posts) still passes with zero orphans.",
+  "pr_number": 43,
+  "verification": [
+    "npm run build succeeds (105 pages, 60 blog posts, 25 lessons)",
+    "npm run audit passes on normal repository state: 0 broken links, 0 orphaned articles",
+    "Controlled synthetic orphan test: backed up dist/ (gitignored build artifact), stripped every real inbound reference to one published article (/blog/beginner/what-palmistry-is/) from all other built HTML files, ran npm run audit, confirmed it failed with 'Found 1 orphaned blog article route(s)' naming exactly that route",
+    "Controlled noindex-source test: with the same article still stripped of real links, added a single inbound link to it from a noindex page (/guide/thank-you/, per src/indexability.mjs NOINDEX_PATHS); npm run audit still failed naming the same route, proving a noindex source cannot rescue an orphan",
+    "Controlled indexable-source sanity check: additionally added an inbound link from an indexable page (/about/); npm run audit then passed, confirming the fix only excludes non-indexable sources and does not over-suppress the positive case",
+    "Restored the original dist/ from backup and re-ran npm run audit to confirm a clean pass again before committing any change",
+    "npm run audit:all passes on final state (audit, audit:images, audit:schema, audit:indexability, audit:accessibility)",
+    "npm run content-audit passes on final state (60 blog posts, 25 lessons valid)",
+    "git status/diff reviewed: change scoped to scripts/audit-links.mjs plus docs/CURRENT_STATE.md, docs/CHANGELOG.md, and this Relay result artifact; no article prose, SEO strategy, or unrelated refactor"
+  ],
+  "changed_paths": [
+    "scripts/audit-links.mjs",
+    "docs/CURRENT_STATE.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-027-r2.json"
+  ],
+  "discovered_orphan_routes": [],
+  "source_preflight": null,
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read of scripts/audit-links.mjs (revision-1 state) and src/indexability.mjs to locate the exact gap named in the revision 2 note: inbound-link recording checked target indexability but not source indexability",
+      "Moved the existing routeFromRelFile/isIndexableRoute helpers earlier in the file and reused them at the inbound-link recording site to gate on source-page indexability, keeping the orphan-detection pass itself unchanged",
+      "npm run build to produce a real dist/ to test against",
+      "shell-based simulated orphan test against a full dist/ backup/restore cycle (dist/ is gitignored, not committed), extended with a noindex-source injection and an indexable-source sanity check, so the fix was proven against the real generated site in both directions"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run audit (pass on normal state)",
+      "npm run audit (fail on simulated orphan with all real links stripped)",
+      "npm run audit (fail on simulated orphan with only a noindex-source link added)",
+      "npm run audit (pass once an indexable-source link is added)",
+      "npm run audit (pass again after restoring dist/ from backup)",
+      "npm run audit:all",
+      "npm run content-audit"
+    ],
+    "notes": "No orphaned articles exist in current repository state, so no source-safe link fix or blocker was needed for existing content. Docs already described the source-indexability requirement as intended behavior (docs/DECISIONS.md, written at revision 1); this revision's code change now matches that already-documented decision, so DECISIONS.md itself did not need a content change, only CURRENT_STATE.md and CHANGELOG.md."
+  }
+}
