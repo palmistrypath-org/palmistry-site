@@ -5,7 +5,7 @@
   "risk_class": "STANDARD",
   "result": "READY_FOR_REVIEW",
   "summary": "Added a published-blog-count drift check to scripts/audit-content.mjs (npm run content-audit). It parses the '**Published:** N blog posts' marker in docs/editorial-backlog.md and fails closed when that count does not match the actual src/content/blog collection count, or when the marker is missing/unparseable, so the drift PP-RELAY-025 hand-corrected (53 vs 60) cannot silently recur. No new dependency or standalone script; integrated into the existing CI-run content-audit check.",
-  "pr_number": null,
+  "pr_number": 42,
   "verification": [
     "npm run content-audit passes on normal repo state (60 blog posts, 25 lessons valid)",
     "Deliberately simulated a documented-count mismatch (backlog marker 60 -> 61, not committed): content-audit failed with 'Documented published blog count (61) does not match actual src/content/blog count (60)' and non-zero exit",
