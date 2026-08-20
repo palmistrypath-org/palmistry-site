@@ -5,7 +5,7 @@
   "risk_class": "STANDARD",
   "result": "READY_FOR_REVIEW",
   "summary": "Added scripts/audit-claim-risk.mjs, a bounded heuristic scanner that a worker can run against explicitly supplied changed Markdown/MDX files to surface wording matching the avoidable rework patterns from PP-RELAY-024: unsupported prevalence/consensus language, vague anonymous-authority attribution, and strong unsupported empirical-overstatement claims. It reports file:line, matched text, and risk category so a worker can check the claim against approved repository evidence; it never rewrites prose and never establishes source validity on its own. Wired as npm run audit:claim-risk (targeted files) and npm run audit:claim-risk:selftest (deterministic fixture test), both opt-in and not part of audit:all or the build. Documented in .ai-ops/README.md as an optional aid alongside the existing manual source-claim preflight, and referenced (without changing the preflight's required checks) in .ai-ops/CLAUDE_ROUTINE_PROMPT.md.",
-  "pr_number": null,
+  "pr_number": 44,
   "verification": [
     "npm ci to install dependencies in the worker environment",
     "npm run build succeeds (105 pages, 60 blog posts, 25 lessons) — unchanged from before this task",
@@ -57,6 +57,6 @@
       "npm run audit:claim-risk -- scripts/fixtures/claim-risk/neutral-observational.md",
       "npm run audit:claim-risk (no args) confirmed usage/exit-1 behavior"
     ],
-    "notes": "pr_number is filled in with a follow-up commit on this same branch immediately after the PR is opened, since the PR number is not known until after the branch is pushed."
+    "notes": "pr_number was filled in with a follow-up commit on this same branch immediately after PR #44 was opened, since the PR number was not known until after the branch was pushed."
   }
 }
