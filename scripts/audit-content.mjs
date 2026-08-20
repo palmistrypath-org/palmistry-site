@@ -15,6 +15,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 const BLOG_DIR = resolve(ROOT, 'src', 'content', 'blog');
 const LESSONS_DIR = resolve(ROOT, 'src', 'content', 'lessons');
+const EDITORIAL_BACKLOG_PATH = resolve(ROOT, 'docs', 'editorial-backlog.md');
+const PUBLISHED_COUNT_RE = /\*\*Published:\*\*\s*(\d+)\s*blog posts/;
 const SITE_ORIGIN = 'https://palmistrypath.com';
 
 const DESCRIPTION_MAX = 170;
@@ -115,6 +117,38 @@ function checkDescription(frontmatter, file, findings, severity) {
 	}
 }
 
+/**
+ * Guard against docs/editorial-backlog.md drifting from the actual published
+ * blog count (see PP-RELAY-025, which corrected a stale 53 vs. actual 60).
+ * Fails closed: a missing/unparseable marker is treated as an error rather
+ * than silently skipped.
+ */
+function checkPublishedCountDrift(actualCount, errors) {
+	const source = sourcePath(EDITORIAL_BACKLOG_PATH);
+	let content;
+	try {
+		content = readFileSync(EDITORIAL_BACKLOG_PATH, 'utf8');
+	} catch {
+		errors.push(`[${source}] Could not read file to verify documented published blog count`);
+		return;
+	}
+
+	const match = content.match(PUBLISHED_COUNT_RE);
+	if (!match) {
+		errors.push(
+			`[${source}] Could not find a "**Published:** N blog posts" marker to verify against the actual count (${actualCount})`,
+		);
+		return;
+	}
+
+	const documentedCount = Number(match[1]);
+	if (documentedCount !== actualCount) {
+		errors.push(
+			`[${source}] Documented published blog count (${documentedCount}) does not match actual src/content/blog count (${actualCount}) — update the "**Published:**" line`,
+		);
+	}
+}
+
 function checkDuplicateTitle(frontmatter, file, titlesSeen, label, errors) {
 	if (!frontmatter.title) return;
 	const key = frontmatter.title.trim().toLowerCase();
@@ -161,6 +195,8 @@ for (const file of lessonFiles) {
 console.log('Auditing source content integrity:');
 console.log(`  - ${blogFiles.length} blog post(s) in src/content/blog/`);
 console.log(`  - ${lessonFiles.length} lesson(s) in src/content/lessons/\n`);
+
+checkPublishedCountDrift(blogFiles.length, errors);
 
 const blogTitles = new Map();
 const lessonTitles = new Map();
