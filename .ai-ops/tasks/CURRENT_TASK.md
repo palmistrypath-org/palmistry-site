@@ -1,71 +1,45 @@
 # Relay Task Packet
-
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-024
+PP-RELAY-025
 
 ## Revision
-7
+1
 
 ## Risk Class
-SOURCE_SENSITIVE
+LOW
 
 ## Objective
-Finish the Life Line evidence-sourcing correction by removing the residual anonymous modern-practice consensus wording that revision 6's own cumulative preflight identified but incorrectly treated as out of scope. Preserve the verified mixed three-study record and all already-corrected evidence boundaries.
+Reconcile the stale published-blog count in `docs/editorial-backlog.md` against the actual current `src/content/blog` collection and the repository's own content-audit output. Keep this strictly mechanical: correct the count/status prose only where objectively verified, without changing article priorities, scores, editorial strategy, or palmistry content.
 
-## Revision note
-Revision 6 correctly fixed the remaining evidence-to-interpretation and overbroad empirical conclusions. Director review of the cumulative PR found one final acceptance mismatch: the result preflight explicitly notes that phrases such as `Modern practitioners read it instead as marking...` and `Contemporary practitioners read it as marking...` remain. The revision-6 packet expressly required that directly related modern-practice wording use named sources or Palmistry Path policy rather than unsupported broad consensus framing. Revision 7 is limited to those residual short-line/break modern-consensus phrases and directly equivalent wording in the same passages.
+## Why this task
+The backlog currently says 53 published blog posts, while the latest successful repository content audit reports 60 valid blog posts. Accurate inventory prevents duplicate commissioning and is a bounded, mechanically verifiable task suitable for testing the v2C LOW risk class.
 
-## Authorized scope
-1. In `src/content/blog/beginner/life-line.md`, narrowly replace the directly related anonymous `Modern practitioners...` short-line wording with either accurately named later sources already supported by the repository or explicit Palmistry Path editorial framing. Do not create a broader consensus claim.
-2. In `src/content/lessons/lines/04-life-line.mdx`, narrowly replace the directly related anonymous `In contemporary practice...` / `Contemporary practitioners...` short-line or break wording with accurately named supported sources or explicit Palmistry Path editorial framing.
-3. Inspect directly equivalent `modern practice`, `modern practitioners`, `contemporary practice`, `contemporary practitioners`, `some writers`, or equivalent anonymous-authority wording in those short-line/break passages only. Correct it when it functions as an unsupported consensus claim.
-4. Preserve unchanged the verified study record: Wilson & Mather (1974), 51 cadavers, no significant correlation; Newrick, Affie & Corrall (1990), 100 consecutive autopsies, significant association; Lucas, Dhugga & Henneberg (2019), 60 donated cadavers, no significant correlation.
-5. Preserve accurate Cheiro/Benham historical attribution and Palmistry Path's policy not to predict lifespan, illness, injury, or death.
-6. Do not add studies, meanings, health doctrine, prevalence claims, combination readings, or unrelated rewrites. Do not broaden into a general audit of every traditional interpretation in the files.
-7. Update only directly necessary `docs/source-verification-log.md` / `docs/CURRENT_STATE.md` bookkeeping.
+## Allowed scope
+- Count current blog content files/entries using repository tooling or an equivalent deterministic method.
+- Update `docs/editorial-backlog.md` only where needed to make the published count/status internally accurate.
+- If the discrepancy cannot be resolved mechanically, return `BLOCKED` or `NO_CHANGE` rather than guessing.
+- Necessary Relay result/bookkeeping files may be changed.
 
-## Source-sensitive preflight — REQUIRED
-Before `READY_FOR_REVIEW`, inspect the cumulative PR and verify:
-- no anonymous `modern literature`, `modern practitioners`, `contemporary practitioners`, `modern practice`, `contemporary practice`, `some writers`, or equivalent broad consensus wording remains in the directly related short-line/break lifespan-evidence passages unless directly grounded;
-- named later-source positions are used only where repository evidence supports those authors;
-- the three-study evidence remains scoped only to life-line length versus lifespan and is not used to validate transition/break meanings;
-- historical doctrine, empirical findings, named-source positions, and Palmistry Path editorial policy remain distinct;
-- no new prevalence, scientific, medical, deterministic, or palmistry-meaning claim is introduced.
+## Out of scope
+- No new or materially rewritten palmistry content.
+- No changes to article priority scores, SEO strategy, roadmap direction, monetization, site UX, source interpretations, or published article bodies.
+- Do not mark individual backlog candidates published unless their exact corresponding live article is mechanically verified.
+- Do not enable or modify fast-lane policy.
 
-## Acceptance criteria
-- The residual anonymous modern-practice consensus phrases identified above are removed, narrowed, or replaced by supported named attribution/site policy.
-- No directly related broad modern-consensus wording remains in the short-line/break passages.
-- The verified three-study record and its mixed conclusion remain accurate and unchanged.
-- The lifespan studies are not presented as validating short-line or break transition meanings.
-- No new source-integrity problem or scope drift is introduced.
+## Acceptance checks
+- The published count in `docs/editorial-backlog.md` matches the actual current blog collection as verified by repository tooling.
+- Any explanatory status text changed is factual and mechanically supported.
+- `npm run content-audit` passes; run broader existing audits if the changed scope requires them.
+- Diff remains bounded to the reconciliation and Relay bookkeeping.
 
-## Verification
-- Search both touched files for `modern literature`, `modern practice`, `modern practitioner`, `contemporary practice`, `contemporary practitioner`, `some writers`, `experts`, `consensus`, `evidence`, `studies`, `transition`, and `break`; inspect material occurrences in the directly related short-line/break passages.
-- Inspect cumulative `main...HEAD`, not only revision 7.
-- Run `npm run build`, `npm run content-audit`, `npm run audit:all`, and `git diff --check`.
+## v2C durable-result contract
+For every terminal outcome after startup gate, create `.ai-ops/results/PP-RELAY-025-r1.json` on a pushed `claude/relay-PP-RELAY-025-...` branch. Allowed terminal results are `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, and `PAUSED_USAGE_LIMIT`. A non-change terminal outcome does not require a dummy PR. The result must include `task_id`, `revision`, `risk_class: LOW`, terminal `result`, verification performed, changed paths, tests/checks, and any blocker/gate details.
 
-## Explicit no-change condition
-Do not return `NO_CHANGE`: cumulative review identified residual anonymous consensus wording that violates the revision-6 acceptance contract.
+## PR contract
+If changed work is `READY_FOR_REVIEW`, open or update one Relay PR targeting `main` with footers:
 
-## v2C durable-result contract — REQUIRED
-Every worker run that passes startup must create `.ai-ops/results/PP-RELAY-024-r7.json`, commit it on the existing/matching pushed `claude/relay-PP-RELAY-024-...` branch, and use one terminal result: `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`. Non-change terminal outcomes do not require a dummy PR.
-
-Minimum artifact fields:
-- `schema_version`: 2
-- `task_id`: `PP-RELAY-024`
-- `revision`: 7
-- `risk_class`: `SOURCE_SENSITIVE`
-- `result`: one allowed terminal result
-- `summary`: concise outcome
-- `pr_number`: PR 40 for `READY_FOR_REVIEW`, otherwise normally `null`
-- `verification`: concise verification evidence
-- `source_preflight`: completed compact v2C preflight object
-- `human_action`: exact action only when applicable, otherwise `null`
-- `execution`: truthful compact execution telemetry
-
-For `READY_FOR_REVIEW`, push the bounded revision to the existing PP-RELAY-024 Relay branch/PR #40 and update the PR footer to `RELAY_TASK_REVISION: 7`.
-
-## Result
-Stop after producing the durable revision-7 result, pushing the Relay branch, and updating PR #40 only when the result is `READY_FOR_REVIEW`. Do not merge and do not select subsequent work.
+RELAY_TASK_ID: PP-RELAY-025
+RELAY_TASK_REVISION: 1
+RELAY_RESULT: READY_FOR_REVIEW
