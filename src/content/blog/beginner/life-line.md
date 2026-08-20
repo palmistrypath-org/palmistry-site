@@ -30,7 +30,7 @@ Palmistry Path follows the modern position, and for a reason stated in the next 
 
 A small number of researchers have directly tested whether life line length predicts longevity. The results have been mixed: a 1990 study by Newrick and colleagues reported a significant correlation based on 100 cadavers; Wilson and Mather found no correlation in 1974; and Lucas and colleagues (2019), published in *Anthropological Review*, examining 60 cadavers donated to the University of Adelaide, found no significant relationship between life line length and lifespan, on either hand or between sexes. Across these three published studies, the record is mixed and does not establish a reliable predictive relationship.
 
-This is the main argument, and it is worth being clear that it has to be. The older palmists did not reject the lifespan reading — they practised it. What rejects it is the evidence above, together with the modern practitioner literature that has moved away from it. Palmistry Path's position rests on those two things, not on a claim that the tradition always knew better.
+This is the main argument, and it is worth being clear that it has to be. The older palmists did not reject the lifespan reading — they practised it. The evidence above is mixed and does not establish a reliable predictive relationship, and Fincham, Gettings, and West — the modern sources named above — have moved away from the lifespan reading. Palmistry Path's position rests on those two things, not on a claim that the tradition always knew better.
 
 ## What the life line actually signifies
 
@@ -85,7 +85,7 @@ The comparison between hands is particularly relevant here. In Benham's framewor
 ## Frequently asked questions
 
 **Does the life line predict how long I will live?**
-Not reliably, and Palmistry Path does not read it that way. The historical answer is more complicated than the reassuring one: Cheiro and Benham both did connect the line to length of life and both supplied methods for dating events along it. What has not survived is the claim itself — the modern practitioner literature, Fincham among them, rejects the lifespan mapping, and the limited published studies that have tested it show a mixed record that does not establish a reliable relationship.
+Not reliably, and Palmistry Path does not read it that way. The historical answer is more complicated than the reassuring one: Cheiro and Benham both did connect the line to length of life and both supplied methods for dating events along it. Modern sources including Fincham, Gettings, and West have moved away from the lifespan reading, and the limited published studies that have tested it show a mixed record that does not establish a reliable relationship.
 
 **What does a short life line mean?**
 In modern practice it is associated with a major life transition or fundamental change of direction — a life that pivots significantly rather than running one continuous course. The classical writers read it partly in terms of duration and constitution instead. Palmistry Path uses the modern reading and does not treat a short line as a statement about early death.

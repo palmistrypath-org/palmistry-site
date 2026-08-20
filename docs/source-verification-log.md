@@ -673,6 +673,51 @@ The lesson's other empirical summaries of the same three-study record (the
 "myth, corrected" section, line 28, and the closing "Lesson takeaway") are
 unchanged and remain correctly scoped to line length vs. lifespan.
 
+## Pass 10 — Life-line residual rejection/consensus wording removal (2026-08-20)
+
+Scope: Relay PP-RELAY-024 revision 5 (`SOURCE_SENSITIVE`). Director review of
+the cumulative PR found two residual statements in `life-line.md` that still
+overstated what the mixed three-study record can establish: "What rejects it
+is the evidence above" (empirical-conclusion paragraph) and "What has not
+survived is the claim itself ... the modern practitioner literature ...
+rejects the lifespan mapping" (FAQ answer). Both implied the mixed evidence
+itself disproves or rejects the historical lifespan claim, which overstates a
+record where one of three studies (Newrick, Affie & Corrall 1990) found a
+significant association. Both passages also used anonymous "modern
+practitioner literature" consensus wording where named sources (Fincham,
+Gettings, West) were already introduced earlier in the same article.
+`lessons/lines/04-life-line.mdx` line 28 used the same anonymous "modern
+literature" framing where the same named sources follow in the next
+sentence.
+
+### Correction made
+
+- `life-line.md`'s empirical-conclusion paragraph now reads: "The evidence
+  above is mixed and does not establish a reliable predictive relationship,
+  and Fincham, Gettings, and West — the modern sources named above — have
+  moved away from the lifespan reading." This states the absence of reliable
+  supporting evidence without claiming the mixed record itself rejects or
+  disproves the historical claim.
+- `life-line.md`'s FAQ answer ("Does the life line predict how long I will
+  live?") now reads: "Modern sources including Fincham, Gettings, and West
+  have moved away from the lifespan reading, and the limited published
+  studies that have tested it show a mixed record that does not establish a
+  reliable relationship." This removes the "rejects the lifespan mapping"
+  disproof framing and the anonymous "modern practitioner literature"
+  attribution.
+- `lessons/lines/04-life-line.mdx` line 28 now opens "**Fincham, Gettings,
+  and West broke with that,**" naming the same later sources the sentence
+  already cites, rather than the anonymous "the modern literature broke with
+  that."
+
+The verified three-study record (Wilson & Mather 1974, no correlation;
+Newrick, Affie & Corrall 1990, significant association; Lucas, Dhugga &
+Henneberg 2019, no correlation) is unchanged. No new studies, palmistry
+meanings, health/lifespan doctrine, or modern-practice prevalence claims were
+introduced. `lessons/lines/04-life-line.mdx` line 96's separate "the modern
+literature has abandoned them" sentence is a different sentence outside this
+revision's authorized scope and was left untouched.
+
 No new studies, citations, historical claims, palmistry interpretations, or
 health/lifespan doctrine were introduced.
 
