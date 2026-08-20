@@ -342,12 +342,16 @@ of hands" prevalence figure, a "personal magnetism" association credited to
 Cheiro, and a Fincham attribution no repository evidence supports. Per-claim
 evidence is in `docs/source-verification-log.md`. Do not reopen this.
 
-**Open, needs its own task:** `advanced/01-minor-lines-overview.mdx` still
-attributes to Benham the reading that absent minor lines should not be read as a
-deficiency. `docs/source-verification-log.md` establishes twice — for the
-Mercury/health line and for the Sun Line — that Benham does not read line
-absence at all. It was left unchanged only because it is general minor-lines
-prose, outside PP-RELAY-031's Sun/Mercury-only scope.
+**2026-08-20 (Relay PP-RELAY-032):** the general minor-lines Benham attribution
+is **closed**. `advanced/01-minor-lines-overview.mdx` line 30 no longer credits
+Benham with the reading that absent minor lines on an otherwise well-formed
+hand should not be read as a deficiency — `docs/source-verification-log.md`
+establishes twice, for the Mercury/health line and the Sun Line, that Benham
+does not read line absence at all, so no repository evidence supports the
+attribution. The sentence is restated as Palmistry Path's own editorial
+framing rather than attributed to Benham or to any invented replacement
+source or vague anonymous authority. Full disposition and the surrounding-
+paragraph check are in `docs/source-verification-log.md`. Do not reopen this.
 
 A remote branch `feat/curriculum-wave-3e-3f` already exists with 3E/3F work (no
 PR opened yet). It has since been independently audited (Relay PP-RELAY-003,

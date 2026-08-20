@@ -913,3 +913,15 @@ scanner never flagged the "roughly half of hands" figure — the most clearly
 unsupported empirical claim in the focused material — which is a concrete
 instance of the standing warning that a clean heuristic scan is not evidence of
 sourcing.
+
+## General minor-lines Benham attribution in `advanced/01-minor-lines-overview.mdx` (Relay PP-RELAY-032, 2026-08-20)
+
+Closes the item recorded above as "Deliberately not changed" under PP-RELAY-031.
+
+| Claim as published | What the approved evidence supports | Action |
+|---|---|---|
+| Line 30: "Benham, writing in 1900, noted that the absence of minor lines on an otherwise well-formed hand should not be read as a deficiency." | This log's own correction tables (lines 422–423 above) establish twice that Benham does not read line absence at all — for the Mercury/health line, "Benham does not read the line's absence at all; he reads the character of a line that is present," and for the Sun Line, "Benham says nothing of the kind." No repository-held evidence supports Benham making a reassurance about absent minor lines in general | Attribution removed. The sentence is restated as Palmistry Path's own editorial framing ("This site does not read the absence of minor lines on an otherwise well-formed hand as a deficiency"), per the §5.2 rule that the site's own position should be stated as its own, not attributed to a source that does not support it. No replacement historical attribution invented, and no vague anonymous-authority phrasing ("modern palmists", "some writers") substituted |
+
+**Surrounding-paragraph check:** the sentence before ("A hand without any minor lines is not an incomplete hand") and after (major-line-formation, nuance/silence) make no source attribution and were left unchanged. The following paragraph ("Some hands carry a rich secondary layer... Others show only the major lines...") describes variation among hands directly, not a claim attributed to any authority, and carries no prevalence/consensus wording of the kind this task screens for; it was left unchanged.
+
+**Verification:** `npm run audit:claim-risk -- src/content/lessons/advanced/01-minor-lines-overview.mdx` returns the same 7 findings as after PP-RELAY-031 (lines 13, 34, 38, 61), none at line 30; the corrected sentence introduces no new flagged wording. `npm run build`, `npm run content-audit`, and `npm run audit:all` pass. Diff is bounded to this one sentence in the lesson file plus this log entry and the required bookkeeping/canonical docs.
