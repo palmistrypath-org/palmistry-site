@@ -8,7 +8,7 @@ relatedLesson: "/learn/lines/04-life-line"
 
 Many people who look at their palm come with one specific worry: their life line is short, or broken, or faint, or seems to end too soon. It produces something — not quite fear, but close to it. The anxiety is real, and it is worth addressing directly rather than brushing past.
 
-That worry deserves a straight answer rather than a reassuring one. The honest position has two halves. Historically, the classical palmists did read the life line for length of life — Cheiro said so explicitly and supplied a method for dating events along it. Empirically, that reading has not held up, and Palmistry Path does not use the hand to predict how long anyone will live. This article explains where the idea came from, what the historical texts actually say, what the evidence shows, and what the life line is genuinely useful for reading.
+That worry deserves a straight answer rather than a reassuring one. The honest position has two halves. Historically, the classical palmists did read the life line for length of life — Cheiro said so explicitly and supplied a method for dating events along it. Empirically, a reliable relationship between life-line length and lifespan has not been established, and Palmistry Path does not use the hand to predict how long anyone will live. This article explains where the idea came from, what the historical texts actually say, what the evidence shows, and what the life line is genuinely useful for reading.
 
 If you arrived here directly, the [overview of the major lines](/blog/beginner/major-lines-overview) and [How to Read a Palm](/blog/beginner/how-to-read-a-palm) provide useful orientation for the interpretive framework underlying this series.
 
@@ -22,7 +22,7 @@ Cheiro, in *Palmistry for All* (1916), states that the life line's connection to
 
 So the fairground palmist and the systematic author were not doing entirely different things. They differed in method and in care, not in whether the hand was thought to speak to length of life.
 
-What has changed is the modern literature. Johnny Fincham, writing in *The Spellbinding Power of Palmistry* (2005), states plainly that a short life line does not mean a short life; Gettings and West take the same position. That shift is a genuine break with the older writers, not a continuation of them.
+What has changed is that later writers broke with that view. Johnny Fincham, writing in *The Spellbinding Power of Palmistry* (2005), states plainly that a short life line does not mean a short life; Gettings and West take the same position. That shift is a genuine break with the older writers, not a continuation of them.
 
 Palmistry Path follows the modern position, and for a reason stated in the next section rather than as a matter of taste. We describe the historical lifespan readings accurately, because sanitising them would misrepresent the tradition. We do not present them as reliable, and we do not use the hand to predict how long anyone will live.
 
@@ -48,7 +48,7 @@ What this article does not ask the life line to do is count out years. Cheiro an
 
 Cheiro and Benham read the life line partly in terms of duration and constitution, and their dating schemes make a short line something to interpret in those terms. Modern practitioners read it instead as marking a major life transition or fundamental change of direction — a life that pivots significantly rather than running one continuous course — and some associate it with a different relationship to physical energy, intense but less evenly sustained.
 
-Palmistry Path follows the modern reading, on the evidence set out above. A short life line is not treated here as a statement about how long you will live.
+Palmistry Path follows the modern reading as an editorial choice, not because the evidence above validates it — those studies tested line length against lifespan, not the transition interpretation. A short life line is not treated here as a statement about how long you will live.
 
 **Deep and clearly traced.** Benham describes a deep life line as indicating "a strong, healthy fellow": robust constitution, concentrated energy. The clarity of the line is read as the clarity of physical vitality — well-resourced, consistent, reliable.
 
@@ -101,11 +101,11 @@ Benham describes it as indicating nervous rather than muscular vitality — a fi
 
 ## What this article is and isn't
 
-If you arrived here worried about your own life line, the reassurance is real, but it comes from the evidence rather than from the tradition. The classical palmists did read this line for length of life; testing whether that works has not supported it, and contemporary practitioners have moved away from it. A short, broken, or faint life line is not a statement about how long you will live.
+If you arrived here worried about your own life line, the reassurance is real, but it comes from the evidence rather than from the tradition. The classical palmists did read this line for length of life; testing whether that works has not established a reliable relationship, and Fincham, Gettings, and West have moved away from the lifespan reading. A short, broken, or faint life line is not a statement about how long you will live.
 
 What this article cannot do is tell you what your specific life line means — that requires observing the whole hand in context, not matching a feature to a description. If reading this has raised questions rather than settled them, the most useful next step is to learn the framework: how hand shape, mounts, and all the major lines are read together, so that any individual feature has the context it needs to be meaningful.
 
-The life line is a window into how palmistry thinks about vitality and life force. Older palmists did try to read a lifespan in it. That attempt has not held up, and it is not what this line is worth studying for.
+The life line is a window into how palmistry thinks about vitality and life force. Older palmists did try to read a lifespan in it. The evidence for that attempt is mixed and does not establish a reliable relationship, and it is not what this line is worth studying for.
 
 ---
 

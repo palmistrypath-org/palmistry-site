@@ -728,3 +728,54 @@ no correlation; Lucas et al. 2019 no correlation) are unchanged. This closes
 the residual scope Pass 7 flagged as a candidate for a future bounded pass;
 no further residual testing-summary sentences remain in
 `lessons/lines/04-life-line.mdx` or `life-line.md`.
+
+## Pass 11 — Life-line residual evidence-scope consistency cleanup (2026-08-20)
+
+Scope: Relay PP-RELAY-024 revision 6 (`SOURCE_SENSITIVE`). Cumulative Director
+review found further nearby statements in both files that repeated the
+underlying problem Pass 10 addressed: broad "has not held up" conclusions
+treated as stronger than the mixed record supports, the anonymous "modern
+literature" / "contemporary practitioners" framing Pass 10 had not yet
+reached in every occurrence, and wording that presented the lifespan studies
+as validating the separate modern short-line/break transition interpretations
+those studies never tested.
+
+### Correction made
+
+- `life-line.md`'s opening paragraph ("Empirically, that reading has not held
+  up") and closing section ("That attempt has not held up") now both read
+  that a reliable relationship between life-line length and lifespan "has not
+  been established," rather than implying the mixed record disproved or
+  outgrew the historical claim.
+- `life-line.md`'s "What has changed is the modern literature" opening now
+  reads "What has changed is that later writers broke with that view,"
+  naming Fincham, Gettings, and West in the same sentence rather than citing
+  an anonymous "modern literature."
+- `life-line.md`'s closing "What this article is and isn't" section's
+  "contemporary practitioners have moved away from it" is replaced with the
+  named sources: "Fincham, Gettings, and West have moved away from the
+  lifespan reading."
+- `life-line.md`'s short-line section ("Palmistry Path follows the modern
+  reading, on the evidence set out above") is reworded to state the modern
+  reading is followed as editorial choice, not because the lifespan-vs-length
+  evidence validates the separate transition interpretation, since the three
+  studies tested length against lifespan, not life transitions.
+- `lessons/lines/04-life-line.mdx`'s short-line section similarly no longer
+  says the older duration/constitution reading is set aside "on the
+  evidence"; it now attributes the choice to following Fincham, Gettings, and
+  West, and states explicitly that the evidence above tested lifespan length,
+  not life transitions.
+- `lessons/lines/04-life-line.mdx` line 96, left untouched by Pass 10 as
+  outside that revision's scope, is reworded: "the readings above have no
+  demonstrated reliability, and the modern literature has abandoned them" is
+  replaced with language clarifying that the published length-vs-lifespan
+  studies do not test the break-as-illness/death reading specifically, and
+  that not using a break to predict illness/injury/death is Palmistry Path's
+  editorial position rather than a research-tested conclusion about breaks.
+
+The verified three-study record (Wilson & Mather 1974, no correlation;
+Newrick, Affie & Corrall 1990, significant association; Lucas, Dhugga &
+Henneberg 2019, no correlation) and the historical Cheiro/Benham attributions
+are unchanged. No new studies, citations, palmistry interpretations, or
+health/lifespan doctrine were introduced. This closes the residual
+lifespan-evidence/consensus scope-consistency problem across both files.
