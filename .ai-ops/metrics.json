@@ -4,11 +4,11 @@
   "started_at": "2026-08-19T20:07:40Z",
   "target_accepted_iterations": 50,
   "baseline": {"experiment":"relay-v2b-near-autonomous","accepted":20,"first_pass_accepted":15,"tasks_requiring_rework":5,"rework_revisions":6,"human_gates":0,"usage_limit_events":0,"technical_blockers":2,"autonomous_merges":20,"archive":".ai-ops/archive/relay-v2b-completion.json"},
-  "summary": {"accepted":8,"first_pass_accepted":6,"tasks_requiring_rework":2,"rework_revisions":7,"human_gates":0,"usage_limit_events":0,"technical_blockers":0,"verified_no_change":0,"autonomous_merges":8,"bad_merge_or_rollback_events":0},
+  "summary": {"accepted":9,"first_pass_accepted":7,"tasks_requiring_rework":2,"rework_revisions":7,"human_gates":0,"usage_limit_events":0,"technical_blockers":0,"verified_no_change":0,"autonomous_merges":9,"bad_merge_or_rollback_events":0},
   "risk_classes": {
     "LOW":{"accepted":2,"first_pass_accepted":2,"tasks_requiring_rework":0,"rework_revisions":0},
     "STANDARD":{"accepted":3,"first_pass_accepted":2,"tasks_requiring_rework":1,"rework_revisions":1},
-    "SOURCE_SENSITIVE":{"accepted":3,"first_pass_accepted":2,"tasks_requiring_rework":1,"rework_revisions":6,"source_preflight_missing_or_invalid":0}
+    "SOURCE_SENSITIVE":{"accepted":4,"first_pass_accepted":3,"tasks_requiring_rework":1,"rework_revisions":6,"source_preflight_missing_or_invalid":0}
   },
   "reason_counts": {"SOURCE_INTEGRITY":6,"UNSUPPORTED_PREVALENCE_OR_CONSENSUS":3,"UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM":5,"UNSUPPORTED_COMBINATION_READING":0,"SCOPE_DRIFT":0,"SEO":0,"ACCESSIBILITY":0,"TEST_OR_CI":0,"CONTROL_PLANE":0,"IMPLEMENTATION_CORRECTNESS":1,"DOCUMENTATION_STATE":0,"OTHER":0},
   "tasks": [
@@ -20,6 +20,7 @@
     {"task_id":"PP-RELAY-029","revision":1,"risk_class":"SOURCE_SENSITIVE","status":"ACCEPTED_MERGED","task_path":".ai-ops/tasks/PP-RELAY-029.md","result_path":".ai-ops/results/PP-RELAY-029-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-20T13:18:17Z","reviewed_at":"2026-08-20T14:03:37Z","merge_approved_at":"2026-08-20T14:03:37Z","merged_at":"2026-08-20T14:04:41Z","pr_number":45,"rework_count":0,"reason_categories":[],"terminal_result":"READY_FOR_REVIEW"},
     {"task_id":"PP-RELAY-030","revision":1,"risk_class":"LOW","status":"ACCEPTED_MERGED","task_path":".ai-ops/tasks/PP-RELAY-030.md","result_path":".ai-ops/results/PP-RELAY-030-r1.json","dispatched_at":null,"result_discovered_at":null,"reviewed_at":"2026-08-20T18:04:32Z","merge_approved_at":"2026-08-20T18:04:32Z","merged_at":"2026-08-20T18:05:30Z","pr_number":46,"rework_count":0,"reason_categories":[],"terminal_result":"READY_FOR_REVIEW"},
     {"task_id":"PP-RELAY-031","revision":1,"risk_class":"SOURCE_SENSITIVE","status":"ACCEPTED_MERGED","task_path":".ai-ops/tasks/PP-RELAY-031.md","result_path":".ai-ops/results/PP-RELAY-031-r1.json","dispatched_at":null,"result_discovered_at":"2026-08-20T19:19:46Z","reviewed_at":"2026-08-20T20:04:54Z","merge_approved_at":"2026-08-20T20:04:54Z","merged_at":"2026-08-20T20:06:00Z","pr_number":47,"rework_count":0,"reason_categories":[],"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-032","revision":1,"risk_class":"SOURCE_SENSITIVE","status":"MERGE_APPROVED","task_path":".ai-ops/tasks/PP-RELAY-032.md","result_path":".ai-ops/results/PP-RELAY-032-r1.json","dispatched_at":null,"result_discovered_at":null,"reviewed_at":"2026-08-20T22:07:59Z","merge_approved_at":"2026-08-20T22:07:59Z","merged_at":null,"pr_number":49,"rework_count":0,"reason_categories":[],"terminal_result":"READY_FOR_REVIEW"}
+    {"task_id":"PP-RELAY-032","revision":1,"risk_class":"SOURCE_SENSITIVE","status":"ACCEPTED_MERGED","task_path":".ai-ops/tasks/PP-RELAY-032.md","result_path":".ai-ops/results/PP-RELAY-032-r1.json","dispatched_at":null,"result_discovered_at":null,"reviewed_at":"2026-08-20T22:07:59Z","merge_approved_at":"2026-08-20T22:07:59Z","merged_at":"2026-08-20T22:09:04Z","pr_number":49,"rework_count":0,"reason_categories":[],"terminal_result":"READY_FOR_REVIEW"},
+    {"task_id":"PP-RELAY-033","revision":1,"risk_class":"SOURCE_SENSITIVE","status":"AUTHORIZED","task_path":".ai-ops/tasks/PP-RELAY-033.md","result_path":".ai-ops/results/PP-RELAY-033-r1.json","dispatched_at":null,"result_discovered_at":null,"reviewed_at":null,"merge_approved_at":null,"merged_at":null,"pr_number":null,"rework_count":0,"reason_categories":[],"terminal_result":null}
   ]
 }
