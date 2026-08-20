@@ -505,3 +505,335 @@ The reusable finding: **matching a quotation to the corpus is not the same as
 verifying it.** Fourteen passages here matched and were still wrong, most of them
 short phrases sitting under the wrong feature. A future pass should check the
 subject the source is discussing, not only the string.
+
+---
+
+## Pass 6 — Life-line empirical-evidence footer gap (2026-08-19)
+
+Scope: Relay PP-RELAY-024 (`SOURCE_SENSITIVE`). `life-line.md`'s "A note on
+the empirical question" section names three studies — Newrick and colleagues
+(1990), Wilson and Mather (1974), and Lucas and colleagues (2019) — but the
+closing source footer listed only Lucas et al., verified in Pass 1. The other
+two were not previously independently traced to a full citation in this log.
+
+### Studies verified by targeted lookup
+
+- **Newrick, Affie & Corrall (1990).** "Relationship between longevity and
+  lifeline: a manual study of 100 patients." *Journal of the Royal Society of
+  Medicine* 83(8):499–501. Departments of Medicine and Pathology, Bristol
+  Royal Infirmary. Sample: 100 consecutive autopsies (the site's "100
+  cadavers" is accurate to this methodology, notwithstanding the paper's own
+  "patients" title). Found a highly significant association between lifeline
+  length and age at death, strengthened when hand size was controlled for.
+- **Wilson & Mather (1974).** "Life expectancy" (letter). *JAMA* 229(11):1421–
+  1422. Sample: 51 cadavers, lifeline length compared against recorded age at
+  death and height. Found no significant correlation. Published as a letter,
+  not a full research article — the site's existing phrase "the most recent
+  peer-reviewed study" (reserved for Lucas et al.) already does not extend
+  peer-reviewed-study status to this one, so no wording change was needed on
+  that point.
+
+Both citations were added to `life-line.md`'s source footer alongside the
+already-verified Lucas et al. (2019) entry. No change was needed to the
+body prose describing these studies: the existing "results have been mixed,"
+the explicit statement that "the 1990 study did report a correlation," and
+"the empirical evidence, on balance, does not support a predictive
+relationship" already state the mixed finding accurately per Pass 5's
+established standard, and were re-checked against the citations above rather
+than only against each other.
+
+### Lesson takeaway wording corrected
+
+`04-life-line.mdx`'s closing "Lesson takeaway" sentence read "it has not held
+up under testing" — a legacy phrase flagged as an open item since Relay
+PP-RELAY-011 (2026-08-18), which deliberately left it untouched. Standing
+alone, without the mixed-evidence context the companion article gives, the
+phrase risks reading as a claim that testing was uniformly negative, which
+overstates the record the same lesson already states correctly earlier
+("the studies covered in the life line article find no reliable relationship
+between the line and how long anyone lives"). Reworded to "the studies that
+have directly tested it find no reliable relationship between line length
+and lifespan" — the same formulation already used earlier in the lesson,
+now applied consistently at the close. This is the same category of
+correction Pass 5 made elsewhere in this cluster (net-unsupportive framed
+without erasing that one study found a correlation), applied to the one
+file/location Pass 5 did not touch.
+
+No new studies, palmistry interpretations, or scientific claims were
+introduced. `04-life-line.mdx` line 96 ("the readings above have no
+demonstrated reliability") concerns the break reading, not line length, and
+was already correctly scoped by Pass 5; it was inspected and left unchanged.
+
+---
+
+## Pass 7 — Life-line freshness superlative correction (2026-08-19)
+
+Scope: Relay PP-RELAY-024 revision 2 (`SOURCE_SENSITIVE`). Director review of
+the revision-1 result found that `life-line.md`'s existing phrase "the most
+recent peer-reviewed study" (applied to Lucas et al. 2019) is a freshness
+claim, not a neutral description, and was never established by Pass 6's
+lookup — Pass 6 verified only that Wilson & Mather (1974), published as a
+letter, doesn't count as a peer-reviewed study; it did not check whether any
+later study exists. Public evidence indicates at least one 2025
+lifeline/mortality paper is now in circulation, so the superlative is not
+safe to keep in 2026. No search of the 2025 literature was performed for
+this pass — the packet's authorized remedy was to drop the freshness claim
+rather than to verify or characterize it.
+
+### Correction made
+
+`life-line.md`'s "A note on the empirical question" paragraph no longer
+calls Lucas et al. (2019) the "most recent peer-reviewed study"; it now
+lists the three verified studies (Newrick et al. 1990, Wilson & Mather 1974,
+Lucas et al. 2019) without a freshness ranking, and closes with "across
+these three published studies, the record is mixed and does not establish a
+reliable predictive relationship" so the conclusion is explicitly scoped to
+the three studies already verified in Pass 6, not stated as a general
+"on balance" finding.
+
+Two related sentences that summarized the same evidence as "the studies
+that have tested it find no reliable relationship" — `life-line.md`'s FAQ
+answer and `04-life-line.mdx`'s closing "Lesson takeaway" — were reworded to
+"the limited published studies that have tested it show a mixed record that
+does not establish a reliable relationship." The prior phrasing, read on its
+own, risked being misread as claiming every study was negative; one of the
+three (Newrick et al. 1990) found a significant association. This corrects
+the same "Lesson takeaway" sentence Pass 6 introduced, which reused the
+identical construction.
+
+`04-life-line.mdx` line 28 (the "myth, corrected" section, not the closing
+takeaway) contains the same "find no reliable relationship" construction
+and was inspected but left unchanged: revision 2's authorized scope named
+only the empirical/testing discussion in `life-line.md` and the "corrected
+takeaway" in `04-life-line.mdx`, not this earlier section. It is a
+candidate for a future bounded pass.
+
+No new studies, citations, palmistry interpretations, or scientific claims
+were introduced. The three verified study citations and outcomes from
+Pass 6 (Newrick et al. 1990 significant association; Wilson & Mather 1974
+no correlation; Lucas et al. 2019 no correlation) are unchanged.
+
+## Pass 8 — Life-line residual testing-summary correction (2026-08-19)
+
+Scope: Relay PP-RELAY-024 revision 3 (`SOURCE_SENSITIVE`). Director review of
+the revision-2 result found two residual scientific/testing summaries in
+`lessons/lines/04-life-line.mdx` that Pass 7 had inspected but left
+unchanged as outside revision 2's authorized scope:
+
+1. Line 28 (the "myth, corrected" section): "...the older claim has been
+   tested, and the studies covered in the life line article find no
+   reliable relationship between the line and how long anyone lives." This
+   construction, read on its own, can imply all three verified studies were
+   negative, even though Newrick et al. (1990) found a significant
+   association.
+2. Line 40: "...the practice has not survived testing..." (referring to the
+   older writers' formal year-dating schemes). This claims a broader,
+   comprehensive/unanimous empirical verdict than the three verified studies
+   — which tested life-line length against lifespan generally, not the
+   specific dating schemes — establish.
+
+### Correction made
+
+Line 28 now reads: "...the older claim has been tested, and the limited
+published studies covered in the life line article show a mixed record that
+does not establish a reliable relationship between the line and how long
+anyone lives," matching the "mixed record" wording already used in the same
+file's closing "Lesson takeaway" (Pass 7) and in `life-line.md`.
+
+Line 40 now reads: "...the limited published testing on life-line length
+and lifespan does not support it, and it is not part of how you are being
+taught to read," replacing the unqualified "has not survived testing" with
+wording scoped to the limited three-study record rather than a comprehensive
+verdict, and naming what was actually tested (length vs. lifespan) rather
+than implying the dating schemes themselves were the subject of testing.
+
+## Pass 9 — Life-line residual dating-scheme inference removal (2026-08-19)
+
+Scope: Relay PP-RELAY-024 revision 4 (`SOURCE_SENSITIVE`). Director review of
+the revision-3 result found that Pass 8's rewording of line 40 still
+contained a residual inference: "the limited published testing on life-line
+length and lifespan does not support it," where "it" refers back to the
+older writers' formal year-dating schemes. The verified studies (Wilson &
+Mather 1974, 51 cadavers, no correlation; Newrick, Affie & Corrall 1990, 100
+consecutive autopsies, significant association; Lucas, Dhugga & Henneberg
+2019, 60 donated cadavers, no correlation) test life-line length against
+lifespan; they do not test whether particular locations along the line
+correspond to particular ages or events, so they cannot be cited as
+evidence against the dating schemes specifically.
+
+### Correction made
+
+Line 40 now reads: "What this lesson will not have you do is count years
+along the line. The older writers did exactly that, with formal dating
+schemes; this lesson does not teach them." The sentence now states the
+historical fact (formal dating schemes existed) and Palmistry Path's
+teaching policy (this lesson does not teach them) without citing the
+length-vs-lifespan evidence as if it bore on the dating schemes themselves.
+The lesson's other empirical summaries of the same three-study record (the
+"myth, corrected" section, line 28, and the closing "Lesson takeaway") are
+unchanged and remain correctly scoped to line length vs. lifespan.
+
+## Pass 10 — Life-line residual rejection/consensus wording removal (2026-08-20)
+
+Scope: Relay PP-RELAY-024 revision 5 (`SOURCE_SENSITIVE`). Director review of
+the cumulative PR found two residual statements in `life-line.md` that still
+overstated what the mixed three-study record can establish: "What rejects it
+is the evidence above" (empirical-conclusion paragraph) and "What has not
+survived is the claim itself ... the modern practitioner literature ...
+rejects the lifespan mapping" (FAQ answer). Both implied the mixed evidence
+itself disproves or rejects the historical lifespan claim, which overstates a
+record where one of three studies (Newrick, Affie & Corrall 1990) found a
+significant association. Both passages also used anonymous "modern
+practitioner literature" consensus wording where named sources (Fincham,
+Gettings, West) were already introduced earlier in the same article.
+`lessons/lines/04-life-line.mdx` line 28 used the same anonymous "modern
+literature" framing where the same named sources follow in the next
+sentence.
+
+### Correction made
+
+- `life-line.md`'s empirical-conclusion paragraph now reads: "The evidence
+  above is mixed and does not establish a reliable predictive relationship,
+  and Fincham, Gettings, and West — the modern sources named above — have
+  moved away from the lifespan reading." This states the absence of reliable
+  supporting evidence without claiming the mixed record itself rejects or
+  disproves the historical claim.
+- `life-line.md`'s FAQ answer ("Does the life line predict how long I will
+  live?") now reads: "Modern sources including Fincham, Gettings, and West
+  have moved away from the lifespan reading, and the limited published
+  studies that have tested it show a mixed record that does not establish a
+  reliable relationship." This removes the "rejects the lifespan mapping"
+  disproof framing and the anonymous "modern practitioner literature"
+  attribution.
+- `lessons/lines/04-life-line.mdx` line 28 now opens "**Fincham, Gettings,
+  and West broke with that,**" naming the same later sources the sentence
+  already cites, rather than the anonymous "the modern literature broke with
+  that."
+
+The verified three-study record (Wilson & Mather 1974, no correlation;
+Newrick, Affie & Corrall 1990, significant association; Lucas, Dhugga &
+Henneberg 2019, no correlation) is unchanged. No new studies, palmistry
+meanings, health/lifespan doctrine, or modern-practice prevalence claims were
+introduced. `lessons/lines/04-life-line.mdx` line 96's separate "the modern
+literature has abandoned them" sentence is a different sentence outside this
+revision's authorized scope and was left untouched.
+
+No new studies, citations, historical claims, palmistry interpretations, or
+health/lifespan doctrine were introduced.
+
+No new studies, citations, palmistry interpretations, or scientific claims
+were introduced. The three verified study citations and outcomes from
+Pass 6 (Newrick et al. 1990 significant association; Wilson & Mather 1974
+no correlation; Lucas et al. 2019 no correlation) are unchanged. This closes
+the residual scope Pass 7 flagged as a candidate for a future bounded pass;
+no further residual testing-summary sentences remain in
+`lessons/lines/04-life-line.mdx` or `life-line.md`.
+
+## Pass 11 — Life-line residual evidence-scope consistency cleanup (2026-08-20)
+
+Scope: Relay PP-RELAY-024 revision 6 (`SOURCE_SENSITIVE`). Cumulative Director
+review found further nearby statements in both files that repeated the
+underlying problem Pass 10 addressed: broad "has not held up" conclusions
+treated as stronger than the mixed record supports, the anonymous "modern
+literature" / "contemporary practitioners" framing Pass 10 had not yet
+reached in every occurrence, and wording that presented the lifespan studies
+as validating the separate modern short-line/break transition interpretations
+those studies never tested.
+
+### Correction made
+
+- `life-line.md`'s opening paragraph ("Empirically, that reading has not held
+  up") and closing section ("That attempt has not held up") now both read
+  that a reliable relationship between life-line length and lifespan "has not
+  been established," rather than implying the mixed record disproved or
+  outgrew the historical claim.
+- `life-line.md`'s "What has changed is the modern literature" opening now
+  reads "What has changed is that later writers broke with that view,"
+  naming Fincham, Gettings, and West in the same sentence rather than citing
+  an anonymous "modern literature."
+- `life-line.md`'s closing "What this article is and isn't" section's
+  "contemporary practitioners have moved away from it" is replaced with the
+  named sources: "Fincham, Gettings, and West have moved away from the
+  lifespan reading."
+- `life-line.md`'s short-line section ("Palmistry Path follows the modern
+  reading, on the evidence set out above") is reworded to state the modern
+  reading is followed as editorial choice, not because the lifespan-vs-length
+  evidence validates the separate transition interpretation, since the three
+  studies tested length against lifespan, not life transitions.
+- `lessons/lines/04-life-line.mdx`'s short-line section similarly no longer
+  says the older duration/constitution reading is set aside "on the
+  evidence"; it now attributes the choice to following Fincham, Gettings, and
+  West, and states explicitly that the evidence above tested lifespan length,
+  not life transitions.
+- `lessons/lines/04-life-line.mdx` line 96, left untouched by Pass 10 as
+  outside that revision's scope, is reworded: "the readings above have no
+  demonstrated reliability, and the modern literature has abandoned them" is
+  replaced with language clarifying that the published length-vs-lifespan
+  studies do not test the break-as-illness/death reading specifically, and
+  that not using a break to predict illness/injury/death is Palmistry Path's
+  editorial position rather than a research-tested conclusion about breaks.
+
+The verified three-study record (Wilson & Mather 1974, no correlation;
+Newrick, Affie & Corrall 1990, significant association; Lucas, Dhugga &
+Henneberg 2019, no correlation) and the historical Cheiro/Benham attributions
+are unchanged. No new studies, citations, palmistry interpretations, or
+health/lifespan doctrine were introduced. This closes the residual
+lifespan-evidence/consensus scope-consistency problem across both files.
+
+## Pass 12 — Life-line residual anonymous modern-practice wording (2026-08-20)
+
+Scope: Relay PP-RELAY-024 revision 7 (`SOURCE_SENSITIVE`). Director review of
+the cumulative PR found that revision 6's own result preflight had identified
+remaining anonymous consensus phrases in the directly related short-line/break
+passages — "Modern practitioners read it instead as marking..." and
+"Contemporary practitioners read it as marking..." — but revision 6 treated
+them as outside its scope. Revision 7 is limited to those residual phrases and
+directly equivalent anonymous-authority wording ("in modern/contemporary
+practice", "some writers", "the modern tradition") in the same short-line and
+break passages.
+
+### Correction made
+
+- `life-line.md`'s short-line section: "Modern practitioners read it instead
+  as marking..." and "some associate it with a different relationship..." are
+  replaced with explicit Palmistry Path editorial framing ("Palmistry Path
+  reads a short line instead as marking..."), matching the editorial-choice
+  framing already used in the following paragraph.
+- `life-line.md`'s break section: "is read in the modern tradition as a
+  significant transition" is replaced with "is read here, as an editorial
+  choice, as a significant transition." The overlap-break sentence's "in
+  modern practice it describes..." is replaced with "here it describes..."
+  for the same reason.
+- `life-line.md`'s FAQ answers for "What does a short life line mean?" and
+  "What does a broken life line mean?" both replace "In modern practice..."
+  with explicit "Palmistry Path reads it/a break, as an editorial choice..."
+  framing.
+- `lessons/lines/04-life-line.mdx`'s short-line paragraph replaces "In
+  contemporary practice, a short life line is associated with..." and "Some
+  writers also associate it with..." with the same explicit Palmistry Path
+  editorial framing, preserving the existing "following Fincham, Gettings,
+  and West" attribution and the evidence-scope clarification ("it tested
+  lifespan length, not life transitions").
+- `lessons/lines/04-life-line.mdx`'s break section replaces "**In modern
+  practice, a break is a transition.** Contemporary practitioners read it as
+  marking..." with "**Palmistry Path reads a break as a transition, as an
+  editorial choice.** We read it as marking..." The overlap-break sentence
+  and the accompanying figure caption both replace "modern practice"/"Modern
+  practice" with "here"/"This course," respectively.
+
+No named-source position was invented: the "life transition" reading is
+attributed to Palmistry Path's own editorial choice rather than to Fincham,
+Gettings, or West, since the repository evidence supports only their
+rejection of the lifespan reading, not a specific alternative interpretation.
+The verified three-study record (Wilson & Mather 1974, no correlation;
+Newrick, Affie & Corrall 1990, significant association; Lucas, Dhugga &
+Henneberg 2019, no correlation) and the historical Cheiro/Benham attributions
+are unchanged. No new studies, citations, palmistry interpretations, or
+health/lifespan doctrine were introduced. A full-file sweep of both touched
+files for "modern literature", "modern practice", "modern practitioner",
+"contemporary practice", "contemporary practitioner", "some writers",
+"experts", and "consensus" returns no remaining matches. Cross-cultural
+naming references ("Contemporary Indian practice calls it the Jeevan Rekha",
+"Contemporary Chinese palm reading names the life line...") are unrelated to
+the short-line/break consensus-claim problem and were left unchanged, as they
+are outside revision 7's authorized scope.

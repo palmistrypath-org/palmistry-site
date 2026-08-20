@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-024",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "beginner/life-line.md's empirical section names three studies (Newrick et al. 1990, Wilson & Mather 1974, Lucas et al. 2019) but its source footer named only Lucas et al. Verified the other two by targeted lookup -- Newrick, Affie & Corrall (1990), J R Soc Med 83(8):499-501, 100 autopsies, significant correlation; Wilson & Mather (1974), JAMA 229(11):1421-1422 (letter), 51 cadavers, no correlation -- and added both to the footer. Reworded 04-life-line.mdx's lesson-takeaway sentence 'it has not held up under testing' (flagged open since PP-RELAY-011) to 'the studies that have directly tested it find no reliable relationship between line length and lifespan', matching the mixed-but-net-unsupportive record already stated accurately elsewhere in the same lesson/article rather than implying a uniform negative result. No new studies, claims, or palmistry interpretations introduced. Updated docs/CURRENT_STATE.md and added Pass 6 to docs/source-verification-log.md.",
+  "pr_number": 40,
+  "verification": [
+    "npm run build: 105 routes built successfully",
+    "npm run content-audit: 60 blog posts, 25 lessons valid",
+    "npm run audit:all: links, images, schema, indexability, accessibility all pass",
+    "git diff --check: clean",
+    "Manual keyword sweep of both touched files (test, testing, study, studies, research, evidence, reliable, correlation, significant, peer-reviewed, longevity, lifespan, predict, modern, contemporary, most, many, generally, typically, consensus) with every material occurrence inspected in context",
+    "Targeted web lookup to independently confirm full citations, sample types, and findings for Newrick et al. (1990) and Wilson & Mather (1974), cross-checked against the existing Pass 1 verification of Lucas et al. (2019) in docs/source-verification-log.md",
+    "Manual comparison of the corrected lesson-takeaway wording against the already-verified nuance already present earlier in both 04-life-line.mdx (\"find no reliable relationship\") and life-line.md (\"results have been mixed\", \"on balance, does not support\")"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "No prevalence/consensus wording (most/many/generally/typically) was added. Both added citations are traceable, identifiable, peer-reviewed-or-labeled-as-a-letter sources with correct sample sizes and findings, verified against multiple independent search results in the absence of direct journal-site access (egress-blocked). No new combination readings or new palmistry interpretations were introduced. No vague anonymous authority added. No quotation marks were touched by this change, so no new quotation-fidelity risk was introduced; existing quotations in both files were left untouched."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["git", "grep", "WebSearch for targeted citation verification", "npm build/audit scripts", "GitHub MCP for PR creation"],
+    "validation": [
+      "npm run build (105 routes)",
+      "npm run content-audit (60 posts / 25 lessons)",
+      "npm run audit:all (links, images, schema, indexability, accessibility)",
+      "git diff --check"
+    ],
+    "notes": "Direct fetch of the primary journal pages (SAGE, JAMA-linked, ResearchGate, NCBI/PMC) was blocked by the environment's egress proxy; citation details were corroborated across multiple independent WebSearch result sets (PubMed listings, SAGE catalog listing, Flinders research repository) before use."
+  }
+}

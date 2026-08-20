@@ -1,0 +1,37 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-024",
+  "revision": 5,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Removed the two residual overstatements Director review found in the cumulative PR. In src/content/blog/beginner/life-line.md, the empirical-conclusion paragraph no longer says 'What rejects it is the evidence above'; it now states the mixed three-study evidence does not establish a reliable predictive relationship, and that Fincham, Gettings, and West (named earlier in the article) moved away from the lifespan reading, without claiming the evidence itself disproves or rejects the historical claim. The FAQ answer 'Does the life line predict how long I will live?' no longer says the 'modern practitioner literature ... rejects the lifespan mapping'; it now names the same modern sources and keeps the existing 'mixed record that does not establish a reliable relationship' wording. Both passages replaced anonymous 'modern practitioner literature' wording with the named sources. In src/content/lessons/lines/04-life-line.mdx, the sentence 'The modern literature broke with that' now reads 'Fincham, Gettings, and West broke with that', naming the same later sources the sentence already cites rather than implying comprehensive modern consensus. The verified three-study record (Wilson & Mather 1974, no correlation; Newrick, Affie & Corrall 1990, significant association; Lucas, Dhugga & Henneberg 2019, no correlation) and the historical Cheiro/Benham lifespan-reading facts are unchanged. Added Pass 10 to docs/source-verification-log.md and extended docs/CURRENT_STATE.md's PP-RELAY-024 note. No new studies, citations, historical claims, palmistry interpretations, or health/lifespan doctrine were introduced.",
+  "pr_number": 40,
+  "verification": [
+    "Keyword sweep of both touched files (reject/disprove/survived/modern literature/modern practitioner/studies/evidence/reliable/predict/lifespan/length of life) — every material occurrence in the directly touched passages inspected; no anonymous consensus wording or rejection/disproof framing remains in them",
+    "Confirmed the retained three-study record is unchanged and remains accurately described as mixed (one significant association, two no-correlation results)",
+    "npm run build — 105 routes built, including /learn/lines/04-life-line/ and /blog/beginner/life-line/",
+    "npm run content-audit — 60 blog posts, 25 lessons valid",
+    "npm run audit:all — links, images, schema, indexability, accessibility all pass",
+    "git diff --check — clean",
+    "Inspected the complete revision-5 diff and cumulative PR (main...HEAD) for source integrity and scope drift — limited to the two targeted life-line.md passages, the one targeted 04-life-line.mdx sentence, and source-verification-log.md/CURRENT_STATE.md bookkeeping"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "The two corrected passages now describe the mixed evidence as not establishing a reliable predictive relationship rather than as rejecting/disproving the historical claim, which matches the actual mixed record (one of three studies found a significant association). Anonymous 'modern practitioner literature'/'modern literature' wording in the three directly touched sentences was replaced with the named sources (Fincham, Gettings, West) already introduced earlier in each file; no new attribution or source was invented. Historical claims (Cheiro/Benham lifespan readings), empirical findings (the three studies), named later-source positions, and Palmistry Path editorial policy remain clearly separated in the edited prose. lessons/lines/04-life-line.mdx line 96's separate 'the modern literature has abandoned them' sentence is a different, out-of-scope sentence and was left untouched, consistent with the task's bounded scope."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["grep keyword sweep", "npm run build", "npm run content-audit", "npm run audit:all", "git diff --check"],
+    "validation": ["build", "content-audit", "audit:all", "git diff --check", "manual diff/source-integrity review", "source-claim preflight"],
+    "notes": null
+  }
+}

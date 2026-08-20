@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-024",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Removed the unsupported freshness superlative flagged in Director review: src/content/blog/beginner/life-line.md no longer calls Lucas et al. (2019) 'the most recent peer-reviewed study'; the empirical paragraph now lists the three verified studies (Newrick et al. 1990 significant association, Wilson & Mather 1974 no correlation, Lucas et al. 2019 no correlation) without a freshness ranking and closes with 'across these three published studies, the record is mixed and does not establish a reliable predictive relationship,' scoping the conclusion explicitly to the verified record rather than a general claim. Also reworded the two nearby summary sentences that said 'the studies that have tested it find no reliable relationship' (life-line.md's FAQ answer and 04-life-line.mdx's closing Lesson takeaway) to 'the limited published studies that have tested it show a mixed record that does not establish a reliable relationship,' so neither can be misread as claiming all three studies were negative. 04-life-line.mdx line 28 (the earlier 'myth, corrected' section) contains the same construction but was left unchanged as outside the authorized scope (only the empirical/testing discussion in life-line.md and the closing takeaway in 04-life-line.mdx were authorized); flagged as a candidate for a future bounded pass. No new studies, citations, palmistry interpretations, or scientific claims were introduced; the three verified citations and outcomes from Pass 6 are unchanged. Added Pass 7 to docs/source-verification-log.md documenting this correction and updated docs/CURRENT_STATE.md's PP-RELAY-024 paragraph, which quoted the revision-1 wording that changed. Pushed to the existing claude/relay-PP-RELAY-024-life-line-sourcing branch and updated PR #40's footer to revision 2.",
+  "pr_number": 40,
+  "verification": [
+    "Grepped src/content/blog/beginner/life-line.md and src/content/lessons/lines/04-life-line.mdx for latest/most recent/only/all/no other/test(ed|ing)/stud(y|ies)/evidence/reliable/correlation/significant/peer-reviewed/longevity/lifespan and inspected every material occurrence",
+    "Confirmed no remaining freshness/superlative claim about which study is most recent",
+    "Confirmed the three retained study citations/results (Newrick et al. 1990, Wilson & Mather 1974, Lucas et al. 2019) are unchanged from the Pass 6 verified record and still traceable in the source footer",
+    "Reviewed the complete revision-2 diff (git diff): exactly four files changed (life-line.md, 04-life-line.mdx, docs/source-verification-log.md, docs/CURRENT_STATE.md), no scope drift",
+    "npm run build: 105 routes built, including /blog/beginner/life-line/ and /learn/lines/04-life-line/",
+    "npm run content-audit: 60 blog posts, 25 lessons valid",
+    "npm run audit:all: links, images, schema, indexability, accessibility all pass",
+    "git diff --check: clean"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Freshness/superlative phrases (latest, most recent, only, all, no other) re-checked across both touched files: the removed 'most recent peer-reviewed study' claim was the only one present and is now gone. The three verified study outcomes remain distinct in the empirical paragraph before the synthesis sentence. Reworded synthesis language explicitly says 'these three published studies' / 'the limited published studies' rather than implying unanimity or a comprehensive literature search. No vague anonymous-authority phrasing was introduced. No quotation marks were added or altered. Historical/empirical/editorial claim types remain distinguishable as before."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["git", "grep", "targeted source review against docs/source-verification-log.md Pass 6", "npm build/audit scripts", "GitHub MCP for PR inspection/update"],
+    "validation": [
+      "npm run build (105 routes)",
+      "npm run content-audit (60 posts / 25 lessons)",
+      "npm run audit:all (links, images, schema, indexability, accessibility)",
+      "git diff --check"
+    ],
+    "notes": "Single-owner remediation of a narrowly scoped, already-identified freshness-claim defect; no subagent delegation needed."
+  }
+}

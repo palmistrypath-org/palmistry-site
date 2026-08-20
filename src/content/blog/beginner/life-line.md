@@ -8,7 +8,7 @@ relatedLesson: "/learn/lines/04-life-line"
 
 Many people who look at their palm come with one specific worry: their life line is short, or broken, or faint, or seems to end too soon. It produces something — not quite fear, but close to it. The anxiety is real, and it is worth addressing directly rather than brushing past.
 
-That worry deserves a straight answer rather than a reassuring one. The honest position has two halves. Historically, the classical palmists did read the life line for length of life — Cheiro said so explicitly and supplied a method for dating events along it. Empirically, that reading has not held up, and Palmistry Path does not use the hand to predict how long anyone will live. This article explains where the idea came from, what the historical texts actually say, what the evidence shows, and what the life line is genuinely useful for reading.
+That worry deserves a straight answer rather than a reassuring one. The honest position has two halves. Historically, the classical palmists did read the life line for length of life — Cheiro said so explicitly and supplied a method for dating events along it. Empirically, a reliable relationship between life-line length and lifespan has not been established, and Palmistry Path does not use the hand to predict how long anyone will live. This article explains where the idea came from, what the historical texts actually say, what the evidence shows, and what the life line is genuinely useful for reading.
 
 If you arrived here directly, the [overview of the major lines](/blog/beginner/major-lines-overview) and [How to Read a Palm](/blog/beginner/how-to-read-a-palm) provide useful orientation for the interpretive framework underlying this series.
 
@@ -22,15 +22,15 @@ Cheiro, in *Palmistry for All* (1916), states that the life line's connection to
 
 So the fairground palmist and the systematic author were not doing entirely different things. They differed in method and in care, not in whether the hand was thought to speak to length of life.
 
-What has changed is the modern literature. Johnny Fincham, writing in *The Spellbinding Power of Palmistry* (2005), states plainly that a short life line does not mean a short life; Gettings and West take the same position. That shift is a genuine break with the older writers, not a continuation of them.
+What has changed is that later writers broke with that view. Johnny Fincham, writing in *The Spellbinding Power of Palmistry* (2005), states plainly that a short life line does not mean a short life; Gettings and West take the same position. That shift is a genuine break with the older writers, not a continuation of them.
 
 Palmistry Path follows the modern position, and for a reason stated in the next section rather than as a matter of taste. We describe the historical lifespan readings accurately, because sanitising them would misrepresent the tradition. We do not present them as reliable, and we do not use the hand to predict how long anyone will live.
 
 ## A note on the empirical question
 
-A small number of researchers have directly tested whether life line length predicts longevity. The results have been mixed: a 1990 study by Newrick and colleagues reported a significant correlation based on 100 cadavers; but Wilson and Mather found no correlation in 1974, and the most recent peer-reviewed study — Lucas and colleagues (2019), published in *Anthropological Review*, examining 60 cadavers donated to the University of Adelaide — found no significant relationship between life line length and lifespan, on either hand or between sexes. The empirical evidence, on balance, does not support a predictive relationship.
+A small number of researchers have directly tested whether life line length predicts longevity. The results have been mixed: a 1990 study by Newrick and colleagues reported a significant correlation based on 100 cadavers; Wilson and Mather found no correlation in 1974; and Lucas and colleagues (2019), published in *Anthropological Review*, examining 60 cadavers donated to the University of Adelaide, found no significant relationship between life line length and lifespan, on either hand or between sexes. Across these three published studies, the record is mixed and does not establish a reliable predictive relationship.
 
-This is the main argument, and it is worth being clear that it has to be. The older palmists did not reject the lifespan reading — they practised it. What rejects it is the evidence above, together with the modern practitioner literature that has moved away from it. Palmistry Path's position rests on those two things, not on a claim that the tradition always knew better.
+This is the main argument, and it is worth being clear that it has to be. The older palmists did not reject the lifespan reading — they practised it. The evidence above is mixed and does not establish a reliable predictive relationship, and Fincham, Gettings, and West — the modern sources named above — have moved away from the lifespan reading. Palmistry Path's position rests on those two things, not on a claim that the tradition always knew better.
 
 ## What the life line actually signifies
 
@@ -46,9 +46,9 @@ What this article does not ask the life line to do is count out years. Cheiro an
 
 **Short.** A line that ends before reaching the lower palm is the variation that most often prompts searches for answers, and it is where the historical and modern readings diverge most sharply.
 
-Cheiro and Benham read the life line partly in terms of duration and constitution, and their dating schemes make a short line something to interpret in those terms. Modern practitioners read it instead as marking a major life transition or fundamental change of direction — a life that pivots significantly rather than running one continuous course — and some associate it with a different relationship to physical energy, intense but less evenly sustained.
+Cheiro and Benham read the life line partly in terms of duration and constitution, and their dating schemes make a short line something to interpret in those terms. Palmistry Path reads a short line instead as marking a major life transition or fundamental change of direction — a life that pivots significantly rather than running one continuous course — with a different relationship to physical energy, intense but less evenly sustained.
 
-Palmistry Path follows the modern reading, on the evidence set out above. A short life line is not treated here as a statement about how long you will live.
+Palmistry Path follows this reading as an editorial choice, not because the evidence above validates it — those studies tested line length against lifespan, not the transition interpretation. A short life line is not treated here as a statement about how long you will live.
 
 **Deep and clearly traced.** Benham describes a deep life line as indicating "a strong, healthy fellow": robust constitution, concentrated energy. The clarity of the line is read as the clarity of physical vitality — well-resourced, consistent, reliable.
 
@@ -62,11 +62,11 @@ Palmistry Path follows the modern reading, on the evidence set out above. A shor
 
 **Broken.** This is the variation that produces the most alarm, and the one most worth addressing carefully.
 
-A break in the life line — a gap where the line stops and restarts — is read in the modern tradition as a significant transition: a major relocation, a fundamental change in life's direction or organisation, a point where the shape of a life alters substantially.
+A break in the life line — a gap where the line stops and restarts — is read here, as an editorial choice, as a significant transition: a major relocation, a fundamental change in life's direction or organisation, a point where the shape of a life alters substantially.
 
 The classical writers read it differently, and it is worth saying so plainly. Benham treats a break as an interruption to be diagnosed, most often illness and sometimes accident, against the mounts and chance lines rather than in isolation. Cheiro goes further: a broken life line, in his system, can indicate "great danger of death where the break appears" — a danger he reads as survivable when a strong line of Mars runs behind it. Those are predictive health claims, and Palmistry Path does not endorse them or offer them as guidance. But the older texts do make them, and a reader who goes to the source will find them there.
 
-One refinement is worth knowing, and it carries across both readings: when a break overlaps — the new section beginning before the old one ends, creating a short parallel — the change is read as smoother than a clean break with no overlap. In the classical texts that distinction bears on how serious the interruption is taken to be; in modern practice it describes how abruptly a life phase gives way to the next. Palmistry Path uses it only in the second sense, and does not read either form as telling you anything about your body.
+One refinement is worth knowing, and it carries across both readings: when a break overlaps — the new section beginning before the old one ends, creating a short parallel — the change is read as smoother than a clean break with no overlap. In the classical texts that distinction bears on how serious the interruption is taken to be; here it describes how abruptly a life phase gives way to the next. Palmistry Path uses it only in the second sense, and does not read either form as telling you anything about your body.
 
 **Chained.** Sections where the line is composed of small linked loops rather than a single course are associated with fluctuating or uncertain vitality — periods of lower energy, physical unsettlement, or conditions that place sustained demands on reserves. This is a quality marker, not a crisis signal.
 
@@ -85,13 +85,13 @@ The comparison between hands is particularly relevant here. In Benham's framewor
 ## Frequently asked questions
 
 **Does the life line predict how long I will live?**
-Not reliably, and Palmistry Path does not read it that way. The historical answer is more complicated than the reassuring one: Cheiro and Benham both did connect the line to length of life and both supplied methods for dating events along it. What has not survived is the claim itself — the modern practitioner literature, Fincham among them, rejects the lifespan mapping, and the studies that have tested it find no reliable relationship.
+Not reliably, and Palmistry Path does not read it that way. The historical answer is more complicated than the reassuring one: Cheiro and Benham both did connect the line to length of life and both supplied methods for dating events along it. Modern sources including Fincham, Gettings, and West have moved away from the lifespan reading, and the limited published studies that have tested it show a mixed record that does not establish a reliable relationship.
 
 **What does a short life line mean?**
-In modern practice it is associated with a major life transition or fundamental change of direction — a life that pivots significantly rather than running one continuous course. The classical writers read it partly in terms of duration and constitution instead. Palmistry Path uses the modern reading and does not treat a short line as a statement about early death.
+Palmistry Path reads it, as an editorial choice, as a major life transition or fundamental change of direction — a life that pivots significantly rather than running one continuous course. The classical writers read it partly in terms of duration and constitution instead. Palmistry Path does not treat a short line as a statement about early death.
 
 **What does a broken life line mean?**
-In modern practice, a break marks a significant transition — a major relocation, a fundamental change in how life is organised, a point where its shape alters substantially. An overlapping break suggests a smoother change; a clean break a sharper one. The classical texts read breaks differently, as illness or accident and in Cheiro's case as possible danger of death. Palmistry Path does not use a break to say anything about your health.
+Palmistry Path reads a break, as an editorial choice, as marking a significant transition — a major relocation, a fundamental change in how life is organised, a point where its shape alters substantially. An overlapping break suggests a smoother change; a clean break a sharper one. The classical texts read breaks differently, as illness or accident and in Cheiro's case as possible danger of death. Palmistry Path does not use a break to say anything about your health.
 
 **What is the sister line or inner life line?**
 A fine line running parallel to the life line on the Mount of Venus side. It is widely considered a strengthening feature, associated with resilience and greater vitality, particularly where it runs alongside a weaker section of the main line.
@@ -101,12 +101,12 @@ Benham describes it as indicating nervous rather than muscular vitality — a fi
 
 ## What this article is and isn't
 
-If you arrived here worried about your own life line, the reassurance is real, but it comes from the evidence rather than from the tradition. The classical palmists did read this line for length of life; testing whether that works has not supported it, and contemporary practitioners have moved away from it. A short, broken, or faint life line is not a statement about how long you will live.
+If you arrived here worried about your own life line, the reassurance is real, but it comes from the evidence rather than from the tradition. The classical palmists did read this line for length of life; testing whether that works has not established a reliable relationship, and Fincham, Gettings, and West have moved away from the lifespan reading. A short, broken, or faint life line is not a statement about how long you will live.
 
 What this article cannot do is tell you what your specific life line means — that requires observing the whole hand in context, not matching a feature to a description. If reading this has raised questions rather than settled them, the most useful next step is to learn the framework: how hand shape, mounts, and all the major lines are read together, so that any individual feature has the context it needs to be meaningful.
 
-The life line is a window into how palmistry thinks about vitality and life force. Older palmists did try to read a lifespan in it. That attempt has not held up, and it is not what this line is worth studying for.
+The life line is a window into how palmistry thinks about vitality and life force. Older palmists did try to read a lifespan in it. The evidence for that attempt is mixed and does not establish a reliable relationship, and it is not what this line is worth studying for.
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Johnny Fincham, The Spellbinding Power of Palmistry (2005); Lucas et al., "Predicting longevity from the line of life: is it accurate?", Anthropological Review (2019).*
+*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Johnny Fincham, The Spellbinding Power of Palmistry (2005); Newrick, Affie & Corrall, "Relationship between longevity and lifeline: a manual study of 100 patients," Journal of the Royal Society of Medicine 83:8 (1990); Wilson & Mather, "Life expectancy" (letter), JAMA 229:11 (1974); Lucas et al., "Predicting longevity from the line of life: is it accurate?", Anthropological Review (2019).*
