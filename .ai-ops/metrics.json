@@ -19,7 +19,7 @@
     "accepted": 0,
     "first_pass_accepted": 0,
     "tasks_requiring_rework": 1,
-    "rework_revisions": 5,
+    "rework_revisions": 6,
     "human_gates": 0,
     "usage_limit_events": 0,
     "technical_blockers": 0,
@@ -30,17 +30,11 @@
   "risk_classes": {
     "LOW": {"accepted": 0, "first_pass_accepted": 0, "tasks_requiring_rework": 0, "rework_revisions": 0},
     "STANDARD": {"accepted": 0, "first_pass_accepted": 0, "tasks_requiring_rework": 0, "rework_revisions": 0},
-    "SOURCE_SENSITIVE": {
-      "accepted": 0,
-      "first_pass_accepted": 0,
-      "tasks_requiring_rework": 1,
-      "rework_revisions": 5,
-      "source_preflight_missing_or_invalid": 0
-    }
+    "SOURCE_SENSITIVE": {"accepted": 0, "first_pass_accepted": 0, "tasks_requiring_rework": 1, "rework_revisions": 6, "source_preflight_missing_or_invalid": 0}
   },
   "reason_counts": {
-    "SOURCE_INTEGRITY": 5,
-    "UNSUPPORTED_PREVALENCE_OR_CONSENSUS": 2,
+    "SOURCE_INTEGRITY": 6,
+    "UNSUPPORTED_PREVALENCE_OR_CONSENSUS": 3,
     "UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM": 5,
     "UNSUPPORTED_COMBINATION_READING": 0,
     "SCOPE_DRIFT": 0,
@@ -55,18 +49,18 @@
   "tasks": [
     {
       "task_id": "PP-RELAY-024",
-      "revision": 6,
+      "revision": 7,
       "risk_class": "SOURCE_SENSITIVE",
       "status": "REWORK_REQUIRED",
       "task_path": ".ai-ops/tasks/PP-RELAY-024.md",
-      "result_path": ".ai-ops/results/PP-RELAY-024-r6.json",
+      "result_path": ".ai-ops/results/PP-RELAY-024-r7.json",
       "dispatched_at": null,
-      "result_discovered_at": "2026-08-20T00:11:59Z",
-      "reviewed_at": "2026-08-20T01:06:46Z",
+      "result_discovered_at": "2026-08-20T01:14:50Z",
+      "reviewed_at": "2026-08-20T02:02:35Z",
       "merge_approved_at": null,
       "merged_at": null,
       "pr_number": 40,
-      "rework_count": 5,
+      "rework_count": 6,
       "reason_categories": ["SOURCE_INTEGRITY", "UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM", "UNSUPPORTED_PREVALENCE_OR_CONSENSUS"],
       "terminal_result": "READY_FOR_REVIEW"
     }
