@@ -16,15 +16,15 @@
     "archive": ".ai-ops/archive/relay-v2b-completion.json"
   },
   "summary": {
-    "accepted": 2,
-    "first_pass_accepted": 1,
+    "accepted": 3,
+    "first_pass_accepted": 2,
     "tasks_requiring_rework": 1,
     "rework_revisions": 6,
     "human_gates": 0,
     "usage_limit_events": 0,
     "technical_blockers": 0,
     "verified_no_change": 0,
-    "autonomous_merges": 2,
+    "autonomous_merges": 3,
     "bad_merge_or_rollback_events": 0
   },
   "risk_classes": {
@@ -35,8 +35,8 @@
       "rework_revisions": 0
     },
     "STANDARD": {
-      "accepted": 0,
-      "first_pass_accepted": 0,
+      "accepted": 1,
+      "first_pass_accepted": 1,
       "tasks_requiring_rework": 0,
       "rework_revisions": 0
     },
@@ -77,11 +77,7 @@
       "merged_at": "2026-08-20T03:05:26Z",
       "pr_number": 40,
       "rework_count": 6,
-      "reason_categories": [
-        "SOURCE_INTEGRITY",
-        "UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM",
-        "UNSUPPORTED_PREVALENCE_OR_CONSENSUS"
-      ],
+      "reason_categories": ["SOURCE_INTEGRITY", "UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM", "UNSUPPORTED_PREVALENCE_OR_CONSENSUS"],
       "terminal_result": "READY_FOR_REVIEW"
     },
     {
@@ -105,18 +101,35 @@
       "task_id": "PP-RELAY-026",
       "revision": 1,
       "risk_class": "STANDARD",
-      "status": "MERGE_APPROVED",
+      "status": "ACCEPTED_MERGED",
       "task_path": ".ai-ops/tasks/PP-RELAY-026.md",
       "result_path": ".ai-ops/results/PP-RELAY-026-r1.json",
       "dispatched_at": null,
       "result_discovered_at": null,
       "reviewed_at": null,
       "merge_approved_at": null,
-      "merged_at": null,
+      "merged_at": "2026-08-20T07:05:38Z",
       "pr_number": 42,
       "rework_count": 0,
       "reason_categories": [],
       "terminal_result": "READY_FOR_REVIEW"
+    },
+    {
+      "task_id": "PP-RELAY-027",
+      "revision": 1,
+      "risk_class": "STANDARD",
+      "status": "AUTHORIZED",
+      "task_path": ".ai-ops/tasks/PP-RELAY-027.md",
+      "result_path": ".ai-ops/results/PP-RELAY-027-r1.json",
+      "dispatched_at": null,
+      "result_discovered_at": null,
+      "reviewed_at": null,
+      "merge_approved_at": null,
+      "merged_at": null,
+      "pr_number": null,
+      "rework_count": 0,
+      "reason_categories": [],
+      "terminal_result": null
     }
   ]
 }
