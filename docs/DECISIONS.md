@@ -2,6 +2,13 @@
 
 Only durable decisions belong here. Newest entries first.
 
+## 2026-08-20 - Orphan-article detection lives in `audit-links.mjs`; the blog index page is excluded as a link source
+**Decision:** Detecting blog articles with no meaningful inbound internal link is a check inside `scripts/audit-links.mjs` (`npm run audit`), reusing the link scan it already performs rather than a new standalone script. An article's own page and the `/blog/` listing page do not count as sources of a "meaningful" inbound link: self-links are excluded because they prove nothing about discoverability, and `/blog/` is excluded because it mechanically enumerates every published post regardless of an article's real connectedness — counting it would make the check pass unconditionally and provide false confidence. A page must also be indexable (per `src/indexability.mjs`) to count as a qualifying source or target.
+
+**Why:** The repository already has `audit-links.mjs` verifying that internal links resolve to real targets; it did not verify that published articles are actually reachable through the site's internal link graph. After the recent expansion to 60 published posts, a newly published article that isn't added to any curated link, related-articles cluster, or lesson cross-reference (but is still built and mechanically listed on `/blog/`) would be effectively undiscoverable to a reader following in-content links, while looking "fine" to a naive audit that only checks the listing page. Extending the existing scan was the smallest maintainable integration point and avoids a second full HTML/link-parsing implementation.
+
+**Consequences:** A new article needs at least one real contextual link from another indexable page (homepage, glossary, a lesson's `relatedArticle`, or another post's shared-`cluster` related-articles block) to avoid failing `npm run audit`. Anyone extending internal-link tooling should keep it inside `audit-links.mjs`'s existing scan rather than add a parallel checker, and should preserve the `/blog/` exclusion rationale if the listing page's behavior changes.
+
 ## 2026-08-20 - Published-blog-count drift check integrated into `content-audit`; no standalone script
 **Decision:** Detecting drift between `docs/editorial-backlog.md`'s documented published-blog-post count and the actual `src/content/blog` collection is a check inside `scripts/audit-content.mjs` (`npm run content-audit`), not a new standalone script or dependency. It parses a narrow, stable `**Published:** N blog posts` marker in the backlog doc and fails closed: both a count mismatch and a missing/unparseable marker block the audit with a documented-versus-actual message.
 

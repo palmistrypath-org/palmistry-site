@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-027",
+  "revision": 1,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Extended scripts/audit-links.mjs (npm run audit) to detect orphaned blog articles alongside its existing broken-internal-link check. Every published/indexable blog article route (/blog/<slug>/) must now have at least one meaningful inbound internal link from another indexable page's built HTML; self-links don't count, and the /blog/ listing page is deliberately excluded as a link source because it mechanically enumerates every post and would otherwise make the check always pass. Current repository state (60 published posts) passes with zero orphans. No new dependency or standalone script.",
+  "pr_number": null,
+  "verification": [
+    "npm run build succeeds (105 pages, 60 blog posts, 25 lessons)",
+    "npm run audit passes on normal repository state: 0 broken links, 0 orphaned articles",
+    "Controlled synthetic orphan test: backed up dist/ (gitignored build artifact), stripped every real inbound reference to one published article (/blog/beginner/what-palmistry-is/) from all other built HTML files, ran npm run audit, confirmed it failed with 'Found 1 orphaned blog article route(s)' naming exactly that route, then restored the original dist/ from backup and re-ran npm run audit to confirm a clean pass again before committing any change",
+    "npm run audit:all passes on final state (audit, audit:images, audit:schema, audit:indexability, audit:accessibility)",
+    "npm run content-audit passes on final state (60 blog posts, 25 lessons valid)",
+    "git status/diff reviewed: change is scoped to scripts/audit-links.mjs plus three canonical docs (CURRENT_STATE.md, CHANGELOG.md, DECISIONS.md); no article prose, SEO strategy, or unrelated refactor"
+  ],
+  "changed_paths": [
+    "scripts/audit-links.mjs",
+    "docs/CURRENT_STATE.md",
+    "docs/CHANGELOG.md",
+    "docs/DECISIONS.md",
+    ".ai-ops/results/PP-RELAY-027-r1.json"
+  ],
+  "discovered_orphan_routes": [],
+  "source_preflight": null,
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "grep/read of scripts/audit-links.mjs, src/indexability.mjs, src/content.config.ts, src/pages/blog/*.astro, src/components/RelatedArticles.astro, and src/pages/index.astro to map the actual inbound-link mechanisms (homepage curated links, RelatedArticles same-cluster blocks, lesson relatedArticle cross-references) before choosing which pages qualify as meaningful link sources",
+      "direct script edit adding an inbound-link graph built during the existing per-file scan, plus an orphan-detection pass over built blog article routes",
+      "npm run build to produce a real dist/ to test against",
+      "shell-based simulated orphan test against a full dist/ backup/restore cycle (dist/ is gitignored, not committed) rather than a synthetic standalone fixture, so the detector was proven against the real generated site"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run audit (pass on normal state)",
+      "npm run audit (fail on simulated single-article orphan, correct route named)",
+      "npm run audit (pass again after restoring dist/ from backup)",
+      "npm run audit:all",
+      "npm run content-audit"
+    ],
+    "notes": "No orphaned articles were found in current repository state, so no source-safe link-fix or blocker was needed for existing content per the task's out-of-scope guidance."
+  }
+}
