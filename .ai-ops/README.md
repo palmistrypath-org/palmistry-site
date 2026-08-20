@@ -76,6 +76,15 @@ Every active task packet must contain a `## Risk Class` heading followed by exac
 
 `LOW` is not automatic permission for fast-lane merge. During the 50-run pilot, a task must also be explicitly allowlisted in `.ai-ops/fastlane.json` with exact task ID, revision, and allowed paths. `SOURCE_SENSITIVE` tasks are never fast-lane eligible during this pilot.
 
+### Claim-risk preflight aid (PP-RELAY-028)
+
+`scripts/audit-claim-risk.mjs` is a bounded heuristic scanner that helps a worker catch risky wording in changed prose before the manual source-claim preflight above, targeting the avoidable rework patterns from PP-RELAY-024 (unsupported prevalence/consensus language, vague anonymous-authority attribution, strong unsupported empirical-overstatement claims).
+
+- Targeted/opt-in use only: `npm run audit:claim-risk -- <file> [file...]` against explicitly supplied changed MD/MDX content. It is **not** wired into `audit:all` or the build, and does not scan the whole repo.
+- Deterministic self-test with fixtures under `scripts/fixtures/claim-risk/`: `npm run audit:claim-risk:selftest`.
+- A worker doing `SOURCE_SENSITIVE` work should run it against the files it changed as an aid before the source-claim preflight in `.ai-ops/CLAUDE_ROUTINE_PROMPT.md`, not instead of it.
+- **This is a review-prompt aid, not a source-validity check.** A match does not mean wording is wrong, and no match does not mean a claim is sourced or safe. It never rewrites prose and never approves/rejects content; approved repository evidence and Director/human review remain the only authority on whether a claim is safe to publish.
+
 ## Immutable task + dispatch contract
 
 For every new task/revision, the Director must:

@@ -1,0 +1,62 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-028",
+  "revision": 1,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Added scripts/audit-claim-risk.mjs, a bounded heuristic scanner that a worker can run against explicitly supplied changed Markdown/MDX files to surface wording matching the avoidable rework patterns from PP-RELAY-024: unsupported prevalence/consensus language, vague anonymous-authority attribution, and strong unsupported empirical-overstatement claims. It reports file:line, matched text, and risk category so a worker can check the claim against approved repository evidence; it never rewrites prose and never establishes source validity on its own. Wired as npm run audit:claim-risk (targeted files) and npm run audit:claim-risk:selftest (deterministic fixture test), both opt-in and not part of audit:all or the build. Documented in .ai-ops/README.md as an optional aid alongside the existing manual source-claim preflight, and referenced (without changing the preflight's required checks) in .ai-ops/CLAUDE_ROUTINE_PROMPT.md.",
+  "pr_number": 44,
+  "verification": [
+    "npm ci to install dependencies in the worker environment",
+    "npm run build succeeds (105 pages, 60 blog posts, 25 lessons) — unchanged from before this task",
+    "npm run audit:all passes on final state (audit, audit:images, audit:schema, audit:indexability, audit:accessibility) — unchanged",
+    "npm run content-audit passes on final state (60 blog posts, 25 lessons valid) — unchanged",
+    "npm run audit:claim-risk:selftest passes: fixtures/claim-risk/risky-prevalence.md and risky-empirical.md are flagged in their intended categories (PREVALENCE_OR_CONSENSUS + ANONYMOUS_AUTHORITY, and SCIENTIFIC_OR_HISTORICAL_OVERSTATEMENT respectively); fixtures/claim-risk/neutral-observational.md (grounded, attributed, hedged phrasing per docs/editorial-style-guide.md §5) produces zero findings in any category",
+    "Manual npm run audit:claim-risk -- <fixture file> runs against each fixture individually and confirms file:line/category output matches the self-test's expectations",
+    "npm run audit:claim-risk with no file arguments prints usage and exits non-zero rather than scanning the repo, confirming opt-in/targeted-only behavior",
+    "git diff reviewed: no palmistry article/lesson prose changed; no changes to Relay dispatch, auto-merge, fast-lane, or credit-guard logic; only new script + fixtures, two npm scripts added, and narrowly scoped doc updates"
+  ],
+  "changed_paths": [
+    "scripts/audit-claim-risk.mjs",
+    "scripts/fixtures/claim-risk/risky-prevalence.md",
+    "scripts/fixtures/claim-risk/risky-empirical.md",
+    "scripts/fixtures/claim-risk/neutral-observational.md",
+    "package.json",
+    ".ai-ops/README.md",
+    ".ai-ops/CLAUDE_ROUTINE_PROMPT.md",
+    ".ai-ops/results/PP-RELAY-028-r1.json"
+  ],
+  "known_limitations_and_false_positive_risks": [
+    "Purely lexical/regex matching on whole words (e.g. most, many, often, commonly, typically, generally, usual(ly), rare(ly), majority; modern palmists, some writers/palmists/experts/scholars, traditional readers, experts, researchers, scholars agree; proves/proven, scientifically proven/confirmed, studies show/prove/confirm, science confirms/proves, research proves/confirms, clinically proven, conclusively/definitively proves/shows). It has no understanding of context, so grounded/attributed uses of the same words (e.g. a source explicitly saying a marking is rare) will still be flagged and must be judged by a human/worker, not auto-cleared.",
+    "It cannot verify that a flagged or unflagged claim is actually traceable to approved Tier 1-3 evidence; absence of a match is not evidence of sourcing.",
+    "It only scans files explicitly passed on the command line; it does not diff against git history or discover changed files itself.",
+    "Fenced code blocks are blanked out (to keep line numbers stable) but frontmatter and inline code spans are not specially excluded, so a match inside frontmatter or inline code would still be reported.",
+    "Deliberately not run against the existing content corpus or wired into audit:all/build, per the task's opt-in scope; running it broadly against legacy articles would likely surface many pre-existing instances of these common words that were never intended to be in scope for this task."
+  ],
+  "human_action": null,
+  "source_preflight": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read/grep of package.json, scripts/audit-content.mjs, .ai-ops/README.md, .ai-ops/V2C_PILOT.md, docs/editorial-style-guide.md §5, and the PP-RELAY-028 task packet to choose the smallest maintainable implementation consistent with existing script conventions (no test framework in this repo; other scripts are standalone Node scripts) before writing new code",
+      "New standalone script (scripts/audit-claim-risk.mjs) with no new dependency: word-boundary regex categories for prevalence/consensus, anonymous-authority, and empirical-overstatement wording, plus a --self-test mode against three fixture files",
+      "Two new npm scripts (audit:claim-risk, audit:claim-risk:selftest) added to package.json; neither added to audit:all",
+      "Manual CLI runs against each fixture and against no-argument invocation to confirm output format and opt-in behavior"
+    ],
+    "validation": [
+      "npm ci",
+      "npm run build",
+      "npm run audit:all",
+      "npm run content-audit",
+      "npm run audit:claim-risk:selftest",
+      "npm run audit:claim-risk -- scripts/fixtures/claim-risk/risky-prevalence.md",
+      "npm run audit:claim-risk -- scripts/fixtures/claim-risk/risky-empirical.md",
+      "npm run audit:claim-risk -- scripts/fixtures/claim-risk/neutral-observational.md",
+      "npm run audit:claim-risk (no args) confirmed usage/exit-1 behavior"
+    ],
+    "notes": "pr_number was filled in with a follow-up commit on this same branch immediately after PR #44 was opened, since the PR number was not known until after the branch was pushed."
+  }
+}

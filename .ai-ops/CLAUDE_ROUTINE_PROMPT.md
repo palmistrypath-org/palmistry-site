@@ -62,7 +62,7 @@ For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the 
 
 ## SOURCE_SENSITIVE source-claim preflight
 
-Before returning `READY_FOR_REVIEW` for any `SOURCE_SENSITIVE` task, inspect the final changed prose and explicitly verify all of the following:
+Before returning `READY_FOR_REVIEW` for any `SOURCE_SENSITIVE` task, inspect the final changed prose and explicitly verify all of the following. As a bounded aid (not a substitute) for checks 1, 2, and 4, a worker may first run `npm run audit:claim-risk -- <changed files>` (see `.ai-ops/README.md`) to surface candidate risky wording for manual review; a clean scan does not establish that a claim is sourced or safe.
 
 1. **Prevalence / consensus language:** every claim using or implying `most`, `many`, `often`, `commonly`, `typically`, `generally`, `usual`, `rare`, or equivalent frequency/consensus wording is directly grounded in approved repository evidence. If not, remove or narrow it.
 2. **Scientific / historical assertions:** every concrete study/result, historical continuity, chronology, evidence, or scientific claim is traceable to approved repository evidence. If not, remove, narrow, or use a genuine human gate when source acquisition/judgment is required.
