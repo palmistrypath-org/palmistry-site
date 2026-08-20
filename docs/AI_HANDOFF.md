@@ -326,9 +326,10 @@ unimplemented). **3F**'s synthesis/practice rollout has since shipped —
 Foundations, Lines, Mounts, and three of Advanced's six lessons (Relay
 PP-RELAY-008–011), and `<Checkpoint>` across Foundations, Lines, and Mounts
 (Relay PP-RELAY-010–012), all 2026-08-18; see `CURRENT_STATE.md` and
-`CHANGELOG.md`. What remains of 3F is narrower: the capstone body revision
-(the second worked reading). Do not pull later batches forward and do not
-reorder modules.
+`CHANGELOG.md`. The last outstanding 3F item, the capstone body revision (the
+second worked reading), was closed by Relay PP-RELAY-029 (2026-08-20); 3F is
+complete and 3E's Sun/Mercury rewrite is the only outstanding curriculum item.
+Do not pull later batches forward and do not reorder modules.
 
 A remote branch `feat/curriculum-wave-3e-3f` already exists with 3E/3F work (no
 PR opened yet). It has since been independently audited (Relay PP-RELAY-003,

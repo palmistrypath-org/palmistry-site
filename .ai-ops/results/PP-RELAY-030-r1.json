@@ -1,0 +1,141 @@
+{
+  "schema_version": 3,
+  "task_id": "PP-RELAY-030",
+  "revision": 1,
+  "risk_class": "LOW",
+  "result": "READY_FOR_REVIEW",
+  "branch": "claude/relay-PP-RELAY-030-current-state-reconcile",
+  "base_commit": "dd91e62166c2c035af52358884d8bbb528cdd73a",
+  "summary": "Re-ran a mechanical curriculum inventory against main and reconciled stale inventory/status prose in docs/CURRENT_STATE.md. Observed state is 25 lessons across four modules (Foundations 5, Lines 6, Mounts 8, Advanced 6). Corrected a stale content-audit blog figure (56 to 60), converted five present-tense out-of-scope tails in dated rollout paragraphs to past-tense per-task scope statements, added one verified current-status paragraph for Practice/Checkpoint coverage, and corrected one directly contradictory forward-looking sentence in docs/AI_HANDOFF.md that still directed a fresh session at the already-closed capstone body revision.",
+  "changed_paths": [
+    "docs/CURRENT_STATE.md",
+    "docs/AI_HANDOFF.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-030-r1.json"
+  ],
+  "mechanical_inventory": {
+    "inventory_date": "2026-08-20",
+    "total_lessons": 25,
+    "per_module": {
+      "foundations": 5,
+      "lines": 6,
+      "mounts": 8,
+      "advanced": 6
+    },
+    "lines_module_order": [
+      "line-quality-and-markings (order 1)",
+      "01-major-lines-overview (order 2)",
+      "02-heart-line (order 3)",
+      "03-head-line (order 4)",
+      "04-life-line (order 5)",
+      "05-fate-line (order 6)"
+    ],
+    "advanced_module_order": [
+      "01-minor-lines-overview (order 1)",
+      "02-marriage-relationship-lines (order 2)",
+      "03-girdle-of-venus (order 3)",
+      "simian-line (order 4)",
+      "combining-what-you-see (order 5)",
+      "04-how-to-give-a-reading (order 6)"
+    ],
+    "blog_posts": 60,
+    "practice_coverage": {
+      "foundations": "5 of 5",
+      "lines": "6 of 6",
+      "mounts": "8 of 8",
+      "advanced": "3 of 6"
+    },
+    "checkpoint_coverage": [
+      "foundations/04-active-and-passive-hand.mdx",
+      "lines/05-fate-line.mdx",
+      "mounts/08-mount-of-mars.mdx"
+    ]
+  },
+  "discrepancies_found_and_corrected": [
+    {
+      "file": "docs/CURRENT_STATE.md",
+      "issue": "Quality-tooling section stated content-audit validates the blog at 56 posts, contradicting both the audit's actual output and the 60-post figure used twice elsewhere in the same document.",
+      "correction": "Changed 56 to 60; verified against npm run content-audit output."
+    },
+    {
+      "file": "docs/CURRENT_STATE.md",
+      "issue": "Five present-tense tails in the dated PP-RELAY-008/009/010/011/012 rollout paragraphs asserted that the Batch 3F capstone body revision and module Checkpoints 'remain deliberately out of scope'. The Checkpoints shipped in PP-RELAY-010 to 012 and the capstone body was closed by PP-RELAY-029, so these read as current status while describing a superseded moment.",
+      "correction": "Converted each tail to a past-tense per-task scope statement ('were deliberately out of scope for that task'). The historical fact of what each task did and did not touch is preserved; only the implied current-status assertion was removed."
+    },
+    {
+      "file": "docs/CURRENT_STATE.md",
+      "issue": "Per-module lesson counts were not stated in one place; current Practice/Checkpoint coverage could only be reconstructed by reading the task-by-task narrative in order.",
+      "correction": "Added per-module counts to the module-table paragraph and one concise verified current-status paragraph recording Practice/Checkpoint coverage. Both are mechanically verified inventory, not new product or editorial assertions."
+    },
+    {
+      "file": "docs/AI_HANDOFF.md",
+      "issue": "The forward-looking remaining-phases paragraph still read 'What remains of 3F is narrower: the capstone body revision (the second worked reading)', directing a fresh session at work PP-RELAY-029 had already completed.",
+      "correction": "Recorded that PP-RELAY-029 closed it and that 3E's Sun/Mercury rewrite is the only outstanding curriculum item. This is the single directly-necessary contradiction corrected outside CURRENT_STATE.md under the packet's allowed-scope bullet for contradictory current-state sentences in another canonical status doc."
+    }
+  ],
+  "deliberately_not_changed": [
+    {
+      "path": "docs/CURRENT_STATE.md",
+      "reason": "The Sun/Mercury quote-fidelity 3E item remains explicitly unresolved and was not changed substantively, per the packet's out-of-scope list and acceptance checks."
+    },
+    {
+      "path": "docs/ROADMAP.md",
+      "reason": "Line 65 already records the capstone body revision as 'closed by PP-RELAY-029 above' and explicitly flags the two entries below it as predating the rollout. The dated 2026-08-13 and 2026-08-11 entries below are historically accurate records of their own moment and are covered by the packet's instruction not to broadly rewrite historical roadmap entries."
+    },
+    {
+      "path": "docs/ACTIVE_TASK.md",
+      "reason": "Status is INACTIVE and its stale counts sit inside a dated Batch 3D record that already carries an explicit 'Superseded 2026-08-18 (Relay PP-RELAY-014)' note. No present-tense current-state assertion required correction under the packet's narrow allowance."
+    }
+  ],
+  "known_remaining_inconsistency_for_director": {
+    "path": "docs/AI_HANDOFF.md",
+    "lines": "approximately 243-246",
+    "detail": "Inside the dated 'Preceding implementation: on 2026-08-11 Remediation Batch 3B' historical block, an imperative reads 'Do not treat the 25-lesson target as delivered - the curriculum is at 24 lessons.' This is historically accurate for that block's moment and is superseded by the later 'remaining phases, updated 2026-08-18' paragraph in the same file, but a fresh session reading only that block could be misled. It was left unchanged because correcting it means rewriting a dated historical passage rather than a current-state sentence, which exceeds this packet's narrow allowance. Flagged for the Director to task separately if desired.",
+    "changed": false
+  },
+  "verification": {
+    "startup_gate": "passed",
+    "startup_gate_detail": "relay_enabled true; credit_guard CONFIRMED_DISABLED; status READY_FOR_CLAUDE; current_task_id PP-RELAY-030; immutable packet present; task ID and revision 1 match across state.json, .ai-ops/tasks/PP-RELAY-030.md, and .ai-ops/tasks/CURRENT_TASK.md; single declared Risk Class LOW; iterations_completed 6 < iteration_budget 50; no open Relay PR for this task/revision; no pre-existing claude/relay-PP-RELAY-030-* branch or result artifact. Dispatch-hint state commit dd91e62 matches origin/main HEAD.",
+    "git_environment_note": "The container's local main ref was a stale clone artifact with no common ancestor to the current origin/main (origin history had been rewritten; fetch reported a forced update). No locally-authored commits existed on it, so it was left untouched and the task branch was created directly from origin/main at dd91e62. No destructive Git operation was performed.",
+    "checks": [
+      {"command": "npm run content-audit", "result": "pass", "detail": "60 blog post(s) and 25 lesson(s) valid; lesson count agrees with the reconciled documentation"},
+      {"command": "npm run build", "result": "pass", "detail": "105 page(s) built"},
+      {"command": "npm run audit:all", "result": "pass", "detail": "links, images, schema, indexability, accessibility all pass; schema audit confirms 60 blog posts and 25 lessons"},
+      {"command": "git diff --check", "result": "pass"}
+    ],
+    "diff_review": "Documentation only. Three files, 21 insertions and 10 deletions. No lesson, article, runtime, routing, schema, SEO, dependency, or control-plane change. No palmistry interpretation, source claim, quotation, or attribution was added or altered."
+  },
+  "acceptance_checks": [
+    {"check": "Lesson/module counts and order statements agree with observed repository state", "status": "pass"},
+    {"check": "PP-RELAY-029 / Batch 3F completion reflected consistently; no present-tense statement says the capstone body revision is outstanding", "status": "pass"},
+    {"check": "Sun/Mercury 3E item remains explicitly unresolved and substantively unchanged", "status": "pass"},
+    {"check": "Historical rollout descriptions remain historically accurate and were not silently rewritten", "status": "pass"},
+    {"check": "npm run content-audit passes and its lesson count agrees with the documentation", "status": "pass"},
+    {"check": "git diff --check passes", "status": "pass"},
+    {"check": "No unrelated files or product/content behavior changes", "status": "pass"}
+  ],
+  "source_preflight": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "mechanical lesson-file and frontmatter inventory via shell",
+      "grep for Practice/Checkpoint component usage per module",
+      "targeted reads of CURRENT_STATE.md, AI_HANDOFF.md, ACTIVE_TASK.md, ROADMAP.md, CHANGELOG.md",
+      "GitHub PR search for duplicate Relay PR detection"
+    ],
+    "validation": [
+      "npm run content-audit",
+      "npm run build",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Local main was a stale clone artifact with no common ancestor to origin/main; task branch was created from origin/main rather than resolving the divergence, and local main was left untouched."
+  },
+  "blocker": null,
+  "human_gate": null,
+  "wiki_impact": "docs/CURRENT_STATE.md, docs/AI_HANDOFF.md, and docs/CHANGELOG.md updated. No DECISIONS.md, ROADMAP.md, ARCHITECTURE.md, or ACTIVE_TASK.md change required.",
+  "next_step": "Director review. Worker stops here and does not merge or select the next task."
+}
