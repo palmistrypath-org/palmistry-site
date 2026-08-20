@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-029",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Added a second worked reading to src/content/lessons/advanced/combining-what-you-see.mdx, closing the remaining Batch 3F capstone-body scope. The first worked reading demonstrates two well-supported, genuinely opposing themes held open without resolution; the new second reading demonstrates a distinct synthesis problem the lesson names in its opening paragraphs — resisting an isolated, visually striking single feature (a fate line rising from the Mount of Luna on an otherwise sparsely-marked earth hand) that is not corroborated anywhere else on the hand, instead of promoting it into the reading's centre or folding it into the hand's structural theme. It also demonstrates the active/passive 'agree → settled' case, complementing the first reading's 'differ → developed through experience' case. Updated docs/CURRENT_STATE.md, docs/ROADMAP.md, and docs/CHANGELOG.md to record 3F capstone-body completion; the separate Sun/Mercury quote-fidelity 3E issue was left untouched as explicitly out of scope.",
+  "pr_number": null,
+  "changed_paths": [
+    "src/content/lessons/advanced/combining-what-you-see.mdx",
+    "docs/CURRENT_STATE.md",
+    "docs/ROADMAP.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-029-r1.json"
+  ],
+  "verification": [
+    "npm run audit:claim-risk -- src/content/lessons/advanced/combining-what-you-see.mdx (see source_preflight.claim_risk_audit below)",
+    "npm run build (105 pages built, no errors)",
+    "npm run content-audit (60 blog posts, 25 lessons valid)",
+    "npm run audit:all (audit, audit:images, audit:schema, audit:indexability, audit:accessibility all pass)",
+    "git diff --check (no whitespace errors)"
+  ],
+  "supporting_evidence": [
+    {
+      "interpretation_used": "Earth hand shape (square palm, short fingers) traditionally associated with practicality, physical groundedness, and a preference for direct experience over speculation; sparsely but deeply marked surface.",
+      "source": "src/content/lessons/foundations/03-hand-shapes.mdx, \"Earth: square palm, short fingers\" section"
+    },
+    {
+      "interpretation_used": "Life line wide arc + full, firm Mount of Venus read as a single paired observation, traditionally associated with robust constitution and outwardly-directed/expansive vitality (the lessons themselves treat this pairing as a compound reading, not a novel combination).",
+      "source": "src/content/lessons/lines/04-life-line.mdx, \"The arc\" section; src/content/lessons/mounts/02-mount-of-venus.mdx, \"Development and what it suggests\" and \"Its natural boundary\" sections"
+    },
+    {
+      "interpretation_used": "Developed Lower Mars traditionally associated with active courage: initiative, physical vitality, and directness.",
+      "source": "src/content/lessons/mounts/08-mount-of-mars.mdx, \"Lower Mars: the courage to act\" section"
+    },
+    {
+      "interpretation_used": "A straight, undeviating fate line traditionally associated with consistent, focused direction.",
+      "source": "src/content/lessons/lines/05-fate-line.mdx, \"The path: how it travels\" section"
+    },
+    {
+      "interpretation_used": "A fate line originating at the Mount of Luna carries the lesson's own broadened/contemporary association with direction shaped significantly by other people — collaborative work, public life, or audience-facing work — attributed to West, not to a vague/anonymous authority.",
+      "source": "src/content/lessons/lines/05-fate-line.mdx, \"Where it starts: the origin points\" section (\"From the Mount of Luna\")"
+    },
+    {
+      "interpretation_used": "The general principle that a single striking feature must be weighed against the rest of the hand before a meaning is assigned, and that a mount/feature earns interpretive weight only when echoed elsewhere on the hand.",
+      "source": "src/content/lessons/advanced/combining-what-you-see.mdx (this lesson's own opening paragraphs and 'Repetition and interpretive weight' section); src/content/lessons/mounts/08-mount-of-mars.mdx Checkpoint item 4 (\"You find one strikingly prominent mount on an otherwise even palm...\")"
+    },
+    {
+      "interpretation_used": "Active/passive comparison: where the two hands agree, the tradition reads the quality as settled — present in the same form on both — rather than as a difference to weigh further.",
+      "source": "src/content/lessons/advanced/combining-what-you-see.mdx, \"Active and passive hands as context\" section (existing lesson prose, unchanged)"
+    }
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "claim_risk_audit": {
+      "command": "npm run audit:claim-risk -- src/content/lessons/advanced/combining-what-you-see.mdx",
+      "total_findings": 12,
+      "findings_in_added_prose": 3,
+      "disposition_added_prose": "All 3 findings in the newly added text (line ~112 'most dramatic single line on the hand', line ~120 'single most dramatic feature on the hand', line ~124 'most visually striking line present') are the word 'most' used as an intra-hand comparative superlative describing one specific fictional example hand's lines relative to each other — not a prevalence/consensus claim about palmistry findings across real hands or people in general. No change required.",
+      "findings_in_preexisting_prose": 9,
+      "disposition_preexisting_prose": "9 findings occur in prose that predates this task (originally shipped under PP-RELAY-008 and not modified here): lines 16, 38, 48, 54, 56, 70, 70, 98 (the pre-existing worked reading and lesson body). These are outside this task's authorized scope (adding a second worked reading; not a rewrite of existing prose) and were left untouched. Reviewed only to confirm none of them interact with or are altered by the new section."
+    },
+    "notes": "No new quotation marks were introduced; all interpretive statements paraphrase associations already established in the cited lesson files. No combination reading was invented — the life-line/Venus-mount pairing reused is a compound reading already established in the source lessons themselves. The fate-line-from-Luna reading is explicitly kept separate from the earth-hand groundedness theme in the added prose rather than merged into a new synthesized meaning. No medical, legal, financial, deterministic-relationship, or predictive-science claim was introduced."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read/Grep of AGENTS.md, CLAUDE.md, .ai-ops/README.md, .ai-ops/state.json, .ai-ops/V2C_PILOT.md, .ai-ops/CLAUDE_ROUTINE_PROMPT.md, task packet, and CURRENT_TASK.md for the startup gate",
+      "Read of the target lesson and all source lessons cited in supporting_evidence before drafting new prose",
+      "Edit tool for the lesson addition and the three canonical-docs updates",
+      "Bash for npm ci, npm run audit:claim-risk, npm run build, npm run content-audit, npm run audit:all, git status/diff"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/lessons/advanced/combining-what-you-see.mdx",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "node_modules was not present at session start; ran npm ci before build/audit commands."
+  }
+}
