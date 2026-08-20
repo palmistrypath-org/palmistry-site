@@ -1,0 +1,111 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-031",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Closed the Batch 3E Sun/Mercury source-fidelity item in advanced/01-minor-lines-overview.mdx. The audit's quote-fidelity concern applied to the unmerged feat/curriculum-wave-3e-3f branch's proposed treatment, not to main: the published lesson contains no quotation marks in its body, so there was no quotation to verify or convert and the stale branch was not merged, rebased, or copied. Corrected three unsupported source claims found by reading the focused Sun/Mercury material against the site's own Batch 2B/2C source-verified sun-line.md and mercury-line.md, and replaced anonymous-authority framing with the named attributions the evidence carries.",
+  "pr_number": null,
+  "changed_paths": [
+    "src/content/lessons/advanced/01-minor-lines-overview.mdx",
+    "docs/source-verification-log.md",
+    "docs/CURRENT_STATE.md",
+    "docs/CHANGELOG.md",
+    "docs/ROADMAP.md",
+    "docs/AI_HANDOFF.md",
+    "docs/ACTIVE_TASK.md",
+    ".ai-ops/results/PP-RELAY-031-r1.json"
+  ],
+  "verification": [
+    "npm run build — pass, 105 pages built",
+    "npm run content-audit — pass, 60 blog posts and 25 lessons valid",
+    "npm run audit:all — pass (links, images, schema, indexability, accessibility)",
+    "npm run audit:claim-risk -- src/content/lessons/advanced/01-minor-lines-overview.mdx — 9 findings before, 7 after; both findings inside the Sun/Mercury material resolved; the 7 remaining are at lines 13, 34, 38 (general instructional prose) and line 61 (relationship-lines section), all outside this task's authorized scope",
+    "git diff --check — clean",
+    "Final diff re-read against the authorized scope boundary; no runtime, routing, schema, SEO, dependency, or unrelated curriculum change"
+  ],
+  "quotation_finding": {
+    "audit_open_item": "CURRICULUM_WAVE_3E_3F_BRANCH_AUDIT_2026-08.md open item 1 — quote fidelity for Cheiro/Benham quotations in advanced/01-minor-lines-overview.mdx",
+    "disposition": "Not applicable to current main. The quotations the audit flagged exist only on the unmerged feat/curriculum-wave-3e-3f branch and were never replayed onto main. The lesson as published on main has zero quotation marks in its body; the only quotation marks in the file are frontmatter string delimiters. No quotation was verified, converted, or introduced by this task.",
+    "quotation_marks_in_lesson_body_before": 0,
+    "quotation_marks_in_lesson_body_after": 0
+  },
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      "src/content/blog/beginner/sun-line.md (Batch 2B/2C Cheiro/Benham scan pass)",
+      "src/content/blog/beginner/mercury-line.md (Batch 2B/2C Cheiro/Benham scan pass)",
+      "docs/source-verification-log.md correction tables, including the two entries establishing that Benham does not read line absence",
+      "docs/editorial-style-guide.md §5 source policy and source table"
+    ],
+    "external_access": "None obtained. Internet Archive, chestofbooks.com, iapsop.com, Wikisource, and Project Gutenberg were all blocked by this environment's network egress proxy. Search-engine result snippets were not treated as source-quality evidence and no wording was taken from them. No claim in this change depends on unverified external text.",
+    "in_copyright_sources": "Fincham (2005) and Gettings (1965) remain unsearchable, consistent with the verification log's standing position. Fincham's attribution was removed rather than reassigned; Gettings is used only as a paraphrase of readings already carried by the source-verified sun-line.md and mercury-line.md."
+  },
+  "corrections": [
+    {
+      "claim": "A clear sun line 'appears on roughly half of hands, depending on how you count it'",
+      "problem": "Unsupported empirical prevalence figure; no repository evidence states any prevalence figure for any minor line",
+      "action": "Figure removed; replaced with presence/absence without a frequency claim. The trailing 'rarer still' frequency claim was removed with it",
+      "note": "The claim-risk scanner did not flag this — it carries no keyword — despite being the clearest unsupported empirical claim in the focused material"
+    },
+    {
+      "claim": "'what Cheiro described as personal magnetism or public recognition'",
+      "problem": "'Personal magnetism' appears nowhere in the verified Cheiro material, which supports luck, success and brilliancy in art/stage/public singing, and the world's recognition",
+      "action": "'Personal magnetism' removed. Cheiro now cited only for luck; Benham for creative power in art or productive capacity in business; Gettings for brightness in personality and reception by others, not requiring public fame"
+    },
+    {
+      "claim": "'Fincham offers a more measured interpretation: the sun line is better understood as a marker of confidence and purposeful direction than as a line of fame or achievement'",
+      "problem": "Fincham is in copyright and unverifiable, and no repository evidence attributes this reading to him. The claim also inverted the site's own distinction, which assigns purposeful direction to the fate line and recognition to the sun line",
+      "action": "Fincham attribution removed rather than reassigned. The not-celebrity point retained as the site's framing, supported by Gettings' reception reading"
+    },
+    {
+      "claim": "'Some give it substantial importance... Others use it primarily as a marker of practical intelligence...'",
+      "problem": "Vague anonymous authority for readings the evidence attributes by name",
+      "action": "Replaced with Benham for the digestive/constitutional reading, the mount of Mercury for the communication-and-commerce reading, and Gettings treating the two as complementary"
+    },
+    {
+      "claim": "'It is among the most variable minor lines in terms of how traditions and practitioners weight it... You will encounter genuine disagreement across sources'",
+      "problem": "Unsupported superlative-consensus claim that also misplaces the disagreement; mercury-line.md states the health and business readings are complementary and neither is primary",
+      "action": "Superlative removed; the disagreement relocated to where the evidence places it — Cheiro reads absence as favourable, Benham does not read absence at all"
+    },
+    {
+      "claim": "Mercury line 'runs from the base of the palm, often from near the mount of Luna or the wrist area'",
+      "problem": "Frequency claim that under-represents the evidence, which names the life line origin as among the most common starting points",
+      "action": "Frequency claim removed; the three documented origins (life line, Luna, plain of Mars) named without ranking"
+    }
+  ],
+  "out_of_scope_finding": {
+    "location": "src/content/lessons/advanced/01-minor-lines-overview.mdx, 'Why some hands don't have them' section",
+    "claim": "'Benham, writing in 1900, noted that the absence of minor lines on an otherwise well-formed hand should not be read as a deficiency.'",
+    "problem": "docs/source-verification-log.md establishes twice — for the Mercury/health line and for the Sun Line — that Benham does not read line absence at all, and the same reassurance 'sometimes credited to him' was removed from sun-line.md and 05-mount-of-apollo.mdx in an earlier pass. This is very likely the same unsupported attribution pattern.",
+    "action": "Deliberately left unchanged. It is general minor-lines prose, not Sun or Mercury material, and this task's authorized scope is explicitly limited to the Sun Line and Mercury Line material. Recorded in docs/source-verification-log.md, docs/AI_HANDOFF.md, and docs/CHANGELOG.md so it is not lost. Needs its own bounded task."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Quotation fidelity is vacuously satisfied on the changed prose: the lesson body contains no quotation marks before or after this change, and none were introduced, so every named-source statement is a paraphrase per editorial-style-guide §5. Prevalence: the two flagged terms inside the Sun/Mercury material were removed, as was the unflagged 'roughly half of hands' figure. Scientific/anatomical: no new empirical or anatomical claim introduced; the digestive/liver material is stated as Benham's traditional reading, not as physiology. Combination readings: none introduced — every association is reused from the source-verified sun-line.md and mercury-line.md. Vague authority: 'Some'/'Others' replaced with named attributions. Claim-type separation: historical readings are attributed by name, and the not-celebrity point is stated as the lesson's own framing rather than as a source's conclusion. Safety: no medical, legal, financial, deterministic relationship, or predictive claim; the health material is confined to the tradition's constitutional-sensitivity framing already published on mercury-line.md."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Targeted grep/read of the lesson, source-verification log, editorial style guide, and the 3E/3F branch audit",
+      "Cross-reading the focused Sun/Mercury material against the site's own source-verified sun-line.md and mercury-line.md",
+      "Attempted external primary-source lookup; all candidate hosts blocked by the egress proxy"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "npm run audit:claim-risk (targeted)",
+      "git diff --check"
+    ],
+    "notes": "Local main's ref had no merge base with origin/main (origin/main was force-updated to an unrelated history 30 relay iterations ahead), so the AGENTS.md startup sync could not fast-forward local main. Local main was left untouched and the task branch was created directly from origin/main, which the Relay contract treats as authoritative. No destructive Git operation was used."
+  }
+}
