@@ -6,7 +6,7 @@
 
 ## Status
 
-**Published:** 60 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019. Item 4 (`forked-head-line-meaning`) was already live on `main` before PP-RELAY-020 but missing from this count; its backlog status is corrected, not counted as new. Item 5 (`phalanges-palmistry`) shipped 2026-08-19; see PP-RELAY-020 (49 → 50). Item 6 (`is-palmistry-real`) shipped 2026-08-19; see PP-RELAY-021 (50 → 51). Item 7 (`short-heart-line-meaning`) shipped 2026-08-19; see PP-RELAY-022 (51 → 52). Item 10 (`fate-line-starting-points`) shipped 2026-08-19; see PP-RELAY-023 (52 → 53). Reconciled 2026-08-20 against `npm run content-audit` (60 valid blog posts currently in `src/content/blog/`): this backlog only tracked SEO-roadmap items and had drifted from the site's actual published count; corrected 53 → 60 with no new articles counted as shipped by this reconciliation — see PP-RELAY-025.
+**Published:** 61 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019. Item 4 (`forked-head-line-meaning`) was already live on `main` before PP-RELAY-020 but missing from this count; its backlog status is corrected, not counted as new. Item 5 (`phalanges-palmistry`) shipped 2026-08-19; see PP-RELAY-020 (49 → 50). Item 6 (`is-palmistry-real`) shipped 2026-08-19; see PP-RELAY-021 (50 → 51). Item 7 (`short-heart-line-meaning`) shipped 2026-08-19; see PP-RELAY-022 (51 → 52). Item 10 (`fate-line-starting-points`) shipped 2026-08-19; see PP-RELAY-023 (52 → 53). Reconciled 2026-08-20 against `npm run content-audit` (60 valid blog posts currently in `src/content/blog/`): this backlog only tracked SEO-roadmap items and had drifted from the site's actual published count; corrected 53 → 60 with no new articles counted as shipped by this reconciliation — see PP-RELAY-025. Item 9 (`ring-of-solomon-palmistry`) shipped 2026-08-21; see PP-RELAY-035 (60 → 61).
 
 **This document:** 50 scored future article ideas, grouped into Next 10 / Next 25 / Later.
 
@@ -166,14 +166,14 @@ These articles have the highest priority scores and should be written before any
 
 ---
 
-#### 9. The Ring of Solomon
+#### 9. The Ring of Solomon — PUBLISHED 2026-08-21 (PP-RELAY-035)
 - **Slug:** `beginner/ring-of-solomon-palmistry`
 - **Title:** The Ring of Solomon in Palmistry
 - **Primary keyword/intent:** "ring of solomon palmistry" / "ring of jupiter palmistry"
 - **Secondary keywords:** "solomon ring on hand", "ring of solomon meaning palmistry"
 - **relatedLesson:** `/learn/advanced/01-minor-lines-overview`
 - **CTA angle:** Advanced module CTA; also links to `mount-of-jupiter`
-- **Notes:** A popular minor feature with good name recognition. Cheiro covers it; Gettings gives more detail. Forms the beginning of the "rings and marks" sub-cluster (Ring of Solomon, Ring of Saturn, etc.).
+- **Notes:** Published within a narrower evidence boundary than originally scoped — Cheiro and verified Benham evidence only (`.ai-ops/evidence/PP-RELAY-035-cheiro-ring-of-solomon.md`, `.ai-ops/evidence/PP-RELAY-035-benham-ring-of-solomon.md`). Gettings (1965) remains unverified and was not used; if it is verified later, the article can be revisited to add his treatment.
 - **Cannibalization risk:** None.
 
 ---

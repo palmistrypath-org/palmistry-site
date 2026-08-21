@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-035",
+  "revision": 3,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Published src/content/blog/beginner/ring-of-solomon-palmistry.md, the last unpublished item from docs/editorial-backlog.md's Next 10 list, drafted within the combined Cheiro + Benham evidence boundary the Director established for revision 3. The article covers the marking's Mount of Jupiter location (Benham's specific path; Cheiro's less detailed placement, illustrated as mark 8 on Plate XX), the narrow mysticism/occult-interest theme both sources independently associate with it, and Benham's own conditional-proficiency reading, without generalizing into prevalence, psychology, expanded traits, or invented combinations. Gettings (1965) was not used. Backlog status/count and CURRENT_STATE blog-post counts were updated to match.",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-035-ring-of-solomon-article",
+  "base_commit": "62b9ab132fa1865a13748705ee22b74197e847ad",
+  "changed_paths": [
+    "src/content/blog/beginner/ring-of-solomon-palmistry.md",
+    "docs/editorial-backlog.md",
+    "docs/CURRENT_STATE.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-035-r3.json"
+  ],
+  "verification": [
+    "npm run build — pass, 106 pages built (new /blog/beginner/ring-of-solomon-palmistry/ route confirmed in output)",
+    "npm run content-audit — pass, 61 blog posts and 25 lessons valid (matches the backlog's corrected Published count)",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles — the new article's inbound links from mount-of-jupiter.md/minor-lines-overview.md were not required because the article itself links out and audit-links checks for a meaningful inbound link from any indexable page, satisfied via the beginner blog index), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "npm run audit:claim-risk -- src/content/blog/beginner/ring-of-solomon-palmistry.md — 9 findings on first pass, all manually dispositioned; 5 were reworded to remove non-load-bearing prevalence-pattern words (site-content-coverage and geography statements, not palmistry claims), 2 were myth-genre phrasing removed as an unsupported claim about how many external sites repeat a myth, leaving 2 findings after rewording — the FAQ question 'rare or common?' and its answer's explicit 'don't address ... frequency ... treat as unresolved' disclaimer, both retained as the required safe non-assertion pattern",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-035-cheiro-ring-of-solomon.md — Cheiro places the Ring of Solomon on the Mount of Jupiter (mark 8, Plate XX) and associates it with mysticism/occultism and aspiration toward mastery/adeptship in those subjects; no detailed geometric path in this source",
+      ".ai-ops/evidence/PP-RELAY-035-benham-ring-of-solomon.md — Benham gives the specific path (web between Jupiter/Saturn fingers, around the Mount of Jupiter, ending near the Life line's start) and associates the marking with interest in occult studies and potential proficiency conditional on other unspecified chirognomic indications; his additional personal observations were not used because their specific content isn't part of the durable evidence note and could not be included without fabricating detail"
+    ],
+    "external_access": "None attempted; both controlling sources were already verified and recorded by the Director in the two evidence notes above before this revision began.",
+    "in_copyright_sources": "Gettings (1965), referenced in the original backlog notes for this article, remains unverified per the task packet and docs/editorial-backlog.md's standing open item on copyright-era quotations; not cited."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Prevalence: no claim is made about how common/rare the marking is; the FAQ explicitly states the two sources don't address frequency rather than asserting either direction. Historical/traditional claims: every interpretive statement is attributed specifically to Cheiro or to Benham, matching the two evidence notes; no claim exceeds what each note's 'safe claim boundary' / 'safe use' section authorizes. Location/identification: Benham's path and Cheiro's Mount-of-Jupiter/Plate-XX placement are each attributed to their source, and the 'How cautiously to identify it' section explicitly flags that only one source gives a specific arc rather than presenting the geometry as universally agreed. Combination readings: the 'in context' section states only that the mount and the ring share interpretive territory in Cheiro/Benham's own writing and explicitly declines to state any further combined reading beyond what each source says on its own; Benham's own 'other chirognomic indications' condition is preserved without inventing which indications those are. Vague attribution: no 'modern palmists'/'some writers'/'experts' phrasing anywhere; myth-section corrections state what the two named sources do and don't say rather than attributing the myths to an unnamed authority. Quotation fidelity: no quotation marks are used around any Cheiro/Benham content — all paraphrased per the evidence notes' 'paraphrased rather than quoted unless independently re-verified verbatim' instruction; the myth-section bolded phrases are reader-voiced hypothetical claims in the site's established myth-format convention (see mount-of-jupiter.md), not source quotations. Claim-type separation: location/associations sections are source-attributed; 'How cautiously to identify it' and the FAQ disclaimers are explicit Palmistry Path editorial/procedural framing, kept visibly distinct. Safety boundaries: no medical, legal, financial, relationship-outcome, or predictive-science claim; all interpretive language uses grounded framing ('Cheiro connected', 'Benham associated', 'within his own system')."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read both PP-RELAY-035 evidence notes and the task packet's safe/unsupported boundary lists before drafting",
+      "Read docs/article-template.md and three structurally similar published articles (girdle-of-venus.md, mount-of-jupiter.md, crosses-stars-palmistry.md) to match established voice/structure/linking conventions, including the precedent of relatedLesson pointing at the general advanced minor-lines overview for a marking without its own dedicated lesson",
+      "Drafted the article strictly within the combined evidence boundary, omitting Benham's unspecified personal-observation content rather than inventing detail to fill it in",
+      "Ran scripts/audit-claim-risk.mjs against the changed file twice (before and after manual rewording) and individually dispositioned every finding"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "npm run audit:claim-risk (targeted)",
+      "git diff --check"
+    ],
+    "notes": "Local main had no merge base with origin/main at session start (84 vs. 54 diverged commits — origin/main's history had been rewritten by the Relay/Director process ahead of this container's stale local ref). The working tree was clean with no uncommitted local work, and the environment's pre-existing task branch (claude/amazing-wright-05s7wy) was already exactly at origin/main's tip (62b9ab1), matching the dispatch payload's stated state commit, so local main was reset to origin/main before branching rather than left untouched. node_modules were not present in the container; npm install was run to enable build/audit commands, and the resulting incidental package-lock.json metadata drift (optional-dependency 'libc' fields, unrelated to this task) was reverted before committing."
+  }
+}
