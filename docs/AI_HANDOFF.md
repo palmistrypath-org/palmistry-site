@@ -9,6 +9,27 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
+**Relay PP-RELAY-033 (2026-08-20) closed the remaining claim-risk findings**
+in `src/content/lessons/advanced/01-minor-lines-overview.mdx` (lines 13, 34,
+38, 61) that PP-RELAY-031/032 left as out-of-scope general prose. Each
+finding was dispositioned individually rather than treated as proof of a
+defect: two (lines 13, 34) are the site's own pedagogical/procedural framing
+and were retained unchanged; one (line 38) was narrowed from "typically
+read" to "traditionally read" to match the lesson's established diction; the
+relationship-lines paragraph (line 61) had its unsupported "most frequently
+asked-about... most commonly misread" popularity-ranking claim removed
+outright, while its substantive point — a specific popular belief about
+counting relationship lines and reading length as duration is contested —
+was kept and grounded in `advanced/02-marriage-relationship-lines.mdx`'s
+existing sourced treatment (Cheiro's popularizing framing, Fincham's and
+Gettings' contesting of the counting claim, West's length-as-depth framing).
+`npm run audit:claim-risk` against the file now returns 2 findings, both
+dispositioned with no change needed — see `docs/source-verification-log.md`
+for full per-finding reasoning. No new minor-line topic, combination
+reading, or curriculum scope was added. `npm run build`, `npm run
+content-audit`, `npm run audit:all`, and `git diff --check` all passed.
+Nothing else outstanding from this task.
+
 **Relay PP-RELAY-023 (2026-08-19) shipped Fate Line Starting Points** at
 `src/content/blog/beginner/fate-line-starting-points.md`, closing the #10 item
 in `docs/editorial-backlog.md`'s Next 10 queue. This is a focused companion to

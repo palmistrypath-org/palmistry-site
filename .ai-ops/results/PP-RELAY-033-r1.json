@@ -1,0 +1,91 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-033",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Closed the 7 claim-risk findings in src/content/lessons/advanced/01-minor-lines-overview.mdx (lines 13, 34, 38, 61) that PP-RELAY-031/PP-RELAY-032 recorded as out-of-scope general prose. Each finding was individually dispositioned against approved repository evidence rather than treated as proof of a defect. Two (lines 13, 34) were retained unchanged as the site's own pedagogical/procedural framing, not external prevalence claims. One (line 38, 'typically read') was narrowed to 'traditionally read' to match the lesson's established diction. The relationship-lines paragraph (line 61) had its unsupported 'most frequently asked-about... most commonly misread' popularity-ranking claim removed outright; its substantive contested-belief point was kept and grounded in advanced/02-marriage-relationship-lines.mdx's existing sourced treatment (Cheiro's popularizing framing; Fincham's and Gettings' explicit contesting of the counting claim; West's 1998 length-as-depth-not-duration framing). No new minor-line topic, combination reading, or curriculum scope was added.",
+  "pr_number": 51,
+  "branch": "claude/relay-PP-RELAY-033-minor-lines-claim-audit",
+  "base_commit": "1e4363e516911a480f453e405823a34f55b890c4",
+  "changed_paths": [
+    "src/content/lessons/advanced/01-minor-lines-overview.mdx",
+    "docs/source-verification-log.md",
+    "docs/CURRENT_STATE.md",
+    "docs/CHANGELOG.md",
+    "docs/AI_HANDOFF.md",
+    ".ai-ops/results/PP-RELAY-033-r1.json"
+  ],
+  "verification": [
+    "npm run build — pass, 105 pages built",
+    "npm run content-audit — pass, 60 blog posts and 25 lessons valid",
+    "npm run audit:all — pass (links, images, schema, indexability, accessibility)",
+    "npm run audit:claim-risk -- src/content/lessons/advanced/01-minor-lines-overview.mdx — 7 findings before (lines 13, 34, 38, 61x4), 2 after (lines 13, 34, both dispositioned as retained with direct reasoning, no correction needed)",
+    "git diff --check — clean",
+    "Final diff re-read against the authorized scope boundary; changes confined to the two corrected sentences in the lesson, the required source-verification-log disposition, and directly necessary current-state/changelog/handoff updates"
+  ],
+  "claim_risk_findings": {
+    "starting_count": 7,
+    "ending_count": 2,
+    "dispositions": [
+      {
+        "line": 13,
+        "phrase": "most (\"the features that carry the most interpretive weight\")",
+        "disposition": "retained",
+        "reasoning": "Self-referential statement of Palmistry Path's own curriculum hierarchy (major lines/mounts assessed first and carry the primary story; minor lines add nuance), developed and justified at length elsewhere in this same lesson ('How to read minor lines without overweighting them'). Not an external prevalence/consensus claim about what practitioners or sources believe."
+      },
+      {
+        "line": 34,
+        "phrase": "generally (\"should generally be set aside\")",
+        "disposition": "retained",
+        "reasoning": "Procedural/methodological guidance for distinguishing a true minor line from surface noise, not an empirical or attributed claim. advanced/02-marriage-relationship-lines.mdx states near-identical guidance for its own zone ('Fine, close-set lines with no consistent direction are common in this part of the hand, and not all of them are relationship lines in the interpretive sense'), so the two lessons are internally consistent."
+      },
+      {
+        "line": 38,
+        "phrase": "typically (\"how its variations are typically read\")",
+        "disposition": "corrected",
+        "reasoning": "Preview sentence pointing to lessons that present interpretation via named sources and tradition, not statistical typicality. Changed to 'traditionally read' to match the lesson's own established diction ('traditionally associated with') and docs/editorial-style-guide.md §5.2's preferred phrasing for traditional associations."
+      },
+      {
+        "line": 61,
+        "phrase": "most / most (\"among the most frequently asked-about features in palmistry and among the most commonly misread\")",
+        "disposition": "corrected — removed",
+        "reasoning": "Bare popularity/frequency-ranking claim with no repository-held evidence ranking relationship lines against other palmistry features. Cut rather than narrowed, since no evidence supports even a bounded version of the ranking claim."
+      },
+      {
+        "line": 61,
+        "phrase": "commonly / commonly (\"much of what is commonly claimed about them ... is contested or unsupported across serious sources\")",
+        "disposition": "corrected — substance retained, reworded",
+        "reasoning": "The underlying claim is directly grounded in advanced/02-marriage-relationship-lines.mdx: Cheiro's 1916 framing 'traveled through popular palmistry for most of the twentieth century and still dominates what most people have heard'; the counting claim 'is not supported by the tradition, and it has been actively contested within it. Fincham says so explicitly. Gettings implies it...'; and Peter West (1998) is cited there framing length as depth 'rather than chronological time.' Reworded to name this one specific, source-traceable belief instead of the unbounded 'commonly claimed' phrasing, which named no source."
+      }
+    ]
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "No scientific/anatomical/historical assertion, named-source attribution, or quotation was edited or introduced by this task — only prevalence/consensus wording in general instructional and relationship-lines prose. No combination reading was invented; the retained/reworded substance was grounded entirely in the existing sourced treatment already published in advanced/02-marriage-relationship-lines.mdx. No vague anonymous authority (e.g. 'modern palmists', 'some writers') was introduced; the one attribution referenced (Cheiro's popularizing framing) is the same named source already cited in the companion lesson."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "scripts/audit-claim-risk.mjs heuristic scan (before and after)",
+      "manual per-finding evidence review against docs/source-verification-log.md, advanced/02-marriage-relationship-lines.mdx, and docs/editorial-style-guide.md §5"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "npm run audit:claim-risk -- src/content/lessons/advanced/01-minor-lines-overview.mdx",
+      "git diff --check"
+    ],
+    "notes": null
+  }
+}
