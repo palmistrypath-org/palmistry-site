@@ -5,44 +5,46 @@ Status: AUTHORIZED
 PP-RELAY-034
 
 ## Revision
-1
+2
 
 ## Risk Class
 SOURCE_SENSITIVE
 
 ## Objective
-Audit and correct the remaining empirical/anatomical assertions in the opening and general-method sections of `src/content/lessons/advanced/01-minor-lines-overview.mdx` so anatomical, developmental, prevalence, and aging claims are either supported by approved repository evidence or narrowed into observation/editorial guidance without inventing new palmistry meanings.
+Complete the bounded empirical/anatomical cleanup in `src/content/lessons/advanced/01-minor-lines-overview.mdx` by removing or narrowing the two residual claims that still exceed approved repository evidence, while preserving the otherwise acceptable revision-1 corrections.
 
-## Why this task
-PP-RELAY-033 closed the claim-risk heuristic findings in this canonical lesson, but cumulative Director review of current `main` shows the heuristic does not cover several adjacent empirical/anatomical statements. Examples include claims about major lines being anchored in fetal folding/flexion, minor lines being influenced by constitution or habitual movement, virtually universal heart-line prevalence, a `normal range` of minor-line density, and aging/movement producing specific palm markings. Because future minor-line articles will rely on this lesson, closing these evidence-boundary gaps is higher value than expanding the cluster immediately. This task also provides a useful v2C test of whether source preflight catches claims that the heuristic scanner misses.
+## Revision 2 note
+Revision 1 correctly removed several unsupported claims, but independent Director review found two remaining evidence-boundary problems in the revised prose:
+1. `part of why they appear, in some form, on essentially every hand` turns the verified fetal-development timing of the three principal flexion creases into an unsupported near-universal prevalence claim. The repository evidence establishes developmental timing, not that prevalence/legibility conclusion.
+2. `the ordinary effects of aging` still implies an unsupported causal mechanism for the surface markings immediately described. Revision 1 was explicitly tasked to avoid unsupported aging/movement causation.
 
-## Required evidence-first workflow
-1. Inspect the opening through `How to read minor lines without overweighting them` and inventory empirical/anatomical/developmental/prevalence claims, including claims not flagged by `audit:claim-risk`.
-2. For each such claim, search approved repository evidence and source-verification records first. Do not infer scientific/anatomical support from palmistry sources or from general plausibility.
-3. Retain a claim only when the repository holds evidence appropriate to that claim. Otherwise narrow/remove it or restate it as direct observation/Palmistry Path editorial method where that is accurate.
-4. Keep historical/traditional palmistry interpretation explicitly separate from empirical anatomy and from Palmistry Path guidance.
-5. Do not replace removed empirical claims with new traditional meanings, prevalence estimates, medical implications, or vague authority.
-6. Run the targeted claim-risk audit as a supplement, not as proof of completeness, and manually disposition its findings in the touched passages.
+Also review the phrase `The fate line and the minor lines are less fixed in that way` so it does not imply an anatomical/developmental mechanism or comparative stability that is not directly supported by approved evidence. Preserve the practical distinction only if it can be framed as observation/editorial guidance without an unsupported empirical inference.
+
+## Required remediation
+1. Keep the supported statement that the heart, head, and life lines are the three principal palmar flexion creases and that repository-held Kimura & Kitagawa evidence places their formation during fetal development before spontaneous fetal hand movement.
+2. Remove/narrow the `essentially every hand` prevalence inference unless a repository-held source directly supports that exact prevalence claim.
+3. Remove/narrow the residual aging-causation wording. The practical point may simply state that fine surface markings can exist without being interpretive minor lines; do not assign an anatomical cause unless approved evidence supports it.
+4. Ensure the fate-line/minor-line transition does not imply unsupported fetal-development anatomy, causal mechanism, or comparative physical stability. If necessary, separate the verified principal-crease statement from the site's observational statement that minor-line presence/clarity varies among hands.
+5. Update the per-claim source-verification disposition so it accurately describes the final wording and does not claim evidence beyond what was verified.
+6. Preserve all acceptable revision-1 changes and do not expand into adjacent named-source interpretations or new content.
 
 ## Allowed scope
-- `src/content/lessons/advanced/01-minor-lines-overview.mdx`, limited to empirical/anatomical/developmental/prevalence wording in the opening/general-method sections and directly necessary local transitions.
-- `docs/source-verification-log.md` for concise evidence dispositions.
-- Canonical current-state/changelog/handoff docs only as directly necessary to record the completed audit.
+- `src/content/lessons/advanced/01-minor-lines-overview.mdx`, only the opening/general-method wording directly necessary for this remediation.
+- `docs/source-verification-log.md` for corrected dispositions.
+- Canonical current-state/changelog/handoff docs only as directly necessary to keep the record accurate.
 - Necessary Relay result/bookkeeping files.
 
 ## Out of scope
-- Do not create Via Lascivia, Ring of Solomon, or other planned articles.
-- Do not materially rewrite the named-source Sun, Mercury, relationship-line, or Girdle interpretations unless a directly adjacent empirical claim must be separated from them.
-- Do not add new palmistry meanings, combination readings, medical interpretations, prevalence estimates, or scientific claims.
+- No new palmistry meanings, combination readings, prevalence estimates, medical/scientific claims, or vague authority.
+- No new Via Lascivia, Ring of Solomon, or other planned article work.
+- No material rewrite of Sun, Mercury, relationship-line, Girdle, or other named-source interpretations.
 - Do not wholesale replay or merge `feat/curriculum-wave-3e-3f`.
-- Do not use vague authority such as `modern palmists`, `some writers`, `experts`, or equivalents as a substitute for evidence.
 
 ## Source-sensitive preflight — mandatory before READY_FOR_REVIEW
 Explicitly verify/disposition:
-- every empirical/anatomical/developmental/prevalence assertion in the scoped passages, including claims the heuristic does not flag;
-- all prevalence/frequency/consensus wording in edited passages;
-- every scientific/anatomical/historical assertion edited or retained there;
-- every named-source attribution edited or relied upon;
+- every empirical/anatomical/developmental/prevalence assertion retained or edited in the remediated passages;
+- all prevalence/frequency/consensus wording in those passages;
+- no unsupported causal wording about aging, movement, line formation, or stability;
 - no invented combination reading or replacement interpretation;
 - no vague anonymous authority;
 - clear separation of direct observation/anatomy, historical interpretation, and Palmistry Path editorial guidance;
@@ -50,19 +52,20 @@ Explicitly verify/disposition:
 - no medical, legal, financial, deterministic relationship, or predictive-science claim.
 
 ## Acceptance checks
-- Durable result contains a per-claim inventory/disposition for the scoped empirical/anatomical/developmental/prevalence statements, not merely the heuristic findings.
-- Unsupported claims are removed/narrowed rather than made more specific.
-- No new palmistry meaning is introduced to fill removed empirical wording.
-- `docs/source-verification-log.md` compactly records materially relevant evidence dispositions.
-- `npm run build`, `npm run content-audit`, `npm run audit:all`, `npm run audit:claim-risk -- src/content/lessons/advanced/01-minor-lines-overview.mdx`, and `git diff --check` are run; any remaining heuristic findings in touched passages are manually dispositioned.
-- Final diff remains bounded to this audit and directly necessary documentation/bookkeeping.
+- The final lesson no longer infers near-universal prevalence from the fetal-development source unless directly supported by repository-held evidence.
+- The final lesson no longer implies aging or habitual movement causes the surface markings unless directly supported by repository-held evidence.
+- Fate-line/minor-line wording does not imply unsupported anatomy/development or physical stability.
+- The source-verification log accurately matches the final wording and evidence boundary.
+- No new palmistry meaning or prevalence estimate is introduced.
+- `npm run build`, `npm run content-audit`, `npm run audit:all`, `npm run audit:claim-risk -- src/content/lessons/advanced/01-minor-lines-overview.mdx`, and `git diff --check` all run; remaining heuristic findings are manually dispositioned.
+- Final diff remains bounded to this remediation and directly necessary documentation/bookkeeping.
 
 ## v2C durable-result contract
-For every terminal outcome after startup gate, create `.ai-ops/results/PP-RELAY-034-r1.json` on a pushed `claude/relay-PP-RELAY-034-...` branch. Allowed terminal results are `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, and `PAUSED_USAGE_LIMIT`. A non-change terminal outcome does not require a dummy PR. The result must include `task_id`, `revision`, `risk_class: SOURCE_SENSITIVE`, terminal `result`, the manual empirical/anatomical claim inventory and dispositions, verification performed, changed paths, tests/checks, blocker/gate details when applicable, and a completed `source_preflight` object for a changed source-sensitive result.
+For every terminal outcome after startup gate, create `.ai-ops/results/PP-RELAY-034-r2.json` on a pushed `claude/relay-PP-RELAY-034-...` branch. Allowed terminal results are `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, and `PAUSED_USAGE_LIMIT`. A non-change terminal outcome does not require a dummy PR. The result must include `task_id`, `revision`, `risk_class: SOURCE_SENSITIVE`, terminal `result`, verification performed, changed paths, tests/checks, blocker/gate details when applicable, and a completed `source_preflight` object for a changed source-sensitive result.
 
 ## PR contract
-If changed work is `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with footers:
+If changed work is `READY_FOR_REVIEW`, continue using exactly one Relay PR targeting `main` for this task with footers updated to:
 
 RELAY_TASK_ID: PP-RELAY-034
-RELAY_TASK_REVISION: 1
+RELAY_TASK_REVISION: 2
 RELAY_RESULT: READY_FOR_REVIEW
