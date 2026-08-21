@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-035",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "HUMAN_REQUIRED",
+  "summary": "Did not create src/content/blog/beginner/ring-of-solomon-palmistry.md. The evidence-first requirement could not be satisfied: docs/source-verification-log.md contains no prior verification pass on the Ring of Solomon / Ring of Jupiter, no existing article or lesson on the site treats it, and the backlog's own note ('Cheiro covers it; Gettings gives more detail') is explicitly a lead, not an established citation. Gettings (1965) is already on record in the source-verification-log (Pass 1, 'Not verified, deliberately') as in-copyright and not accessible for text search, so it cannot ground any interpretive claim in this task. The only other lead, Cheiro's public-domain texts, would need to be retrieved and searched the same way prior passes searched Palmistry for All (Gutenberg #20480) and Language of the Hand (Internet Archive scans), but this session's network egress proxy blocks the relevant hosts (gutenberg.org, archive.org, and general web access were all tested and returned EGRESS_BLOCKED). With zero repository-held evidence for this specific marking and no way to acquire it in this environment, the task packet's instruction to return HUMAN_REQUIRED rather than fabricate or pad the article applies directly. No files were changed other than this result artifact.",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-035-ring-of-solomon-evidence-gap",
+  "base_commit": "4dc98699755dce29c543d34b58e92478f3d4f859",
+  "changed_paths": [
+    ".ai-ops/results/PP-RELAY-035-r1.json"
+  ],
+  "verification": [
+    "Searched repo (grep) for 'Ring of Solomon' / 'Ring of Jupiter' outside .ai-ops/tasks and docs/editorial-backlog.md and docs/seo-content-roadmap.md -- no existing article/lesson coverage found",
+    "Read docs/source-verification-log.md in full -- no verification pass addresses the Ring of Solomon/Ring of Jupiter; Gettings/West/Fincham confirmed on record as unverifiable (in-copyright, not searchable)",
+    "Confirmed no repository-held corpus files (Cheiro/Benham/Gettings source texts) are stored in the repo itself; prior verification passes retrieved primary texts externally (Project Gutenberg, Internet Archive)",
+    "Attempted WebFetch to www.gutenberg.org, archive.org, and en.wikipedia.org to retrieve/search Cheiro's public-domain texts for Ring of Solomon coverage -- all three returned EGRESS_BLOCKED from this session's network policy, confirming external primary-source verification is not possible in this environment",
+    "Confirmed no already-open Relay PR and no already-pushed result artifact exist for PP-RELAY-035 revision 1 before starting (git branch -r, git ls-remote, GitHub PR search)"
+  ],
+  "blocker": {
+    "gate": "evidence-first requirement (task packet, item 3): repository-held evidence insufficient to support a complete article without acquiring or guessing source material",
+    "missing_evidence_need": "A verified, on-the-record excerpt (or absence thereof) from Cheiro's public-domain texts (Palmistry for All, 1916; Language of the Hand, 1897/98/1900 scans) confirming what, if anything, Cheiro states about the Ring of Solomon/Ring of Jupiter -- location, shape, and any interpretive meaning -- added to docs/source-verification-log.md the same way Batch 2B/2C recorded Cheiro/Benham corpus searches. Gettings (1965) cannot supply this evidence at all under current site policy (in-copyright, not searchable, per Pass 1 of the log) and would need either a legitimately obtained copy someone manually checks, or the article scoped to omit any Gettings-attributed claim.",
+    "recommended_next_step": "A human (or a future session with working external-source access) retrieves and searches Cheiro's two public-domain texts for Ring of Solomon/Ring of Jupiter material, records the result in docs/source-verification-log.md (verified passage, or explicit 'not found'), and only then re-dispatches this task so a worker can draft the article strictly from what that pass establishes."
+  },
+  "source_preflight": null,
+  "human_action": "Provide or record verified source evidence for the Ring of Solomon/Ring of Jupiter (per blocker above) before this task can proceed; no article was drafted.",
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "grep across src/content, docs, and .ai-ops for existing Ring of Solomon/Ring of Jupiter coverage",
+      "full read of docs/source-verification-log.md",
+      "WebFetch attempts against gutenberg.org, archive.org, en.wikipedia.org (all blocked by network egress policy)"
+    ],
+    "validation": [],
+    "notes": "source_preflight is null per the README/CLAUDE_ROUTINE_PROMPT rule that it applies to a changed source-sensitive result; no article prose was produced to preflight."
+  }
+}
