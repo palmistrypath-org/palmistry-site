@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-034",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Corrected the two residual evidence-boundary problems Director review found in the PP-RELAY-034 revision-1 diff (PR #52) to src/content/lessons/advanced/01-minor-lines-overview.mdx's opening 'What minor lines are' section, while preserving all acceptable revision-1 corrections. (1) Revision 1's corrected fetal-development sentence had added the clause 'part of why they appear, in some form, on essentially every hand' -- turning the verified developmental-timing fact (heart, head, and life lines as the palm's three principal flexion creases, formed before fetal hand movement, per Kimura & Kitagawa 1986 via blog/beginner/can-palm-lines-change.md) into an unsupported near-universal prevalence/legibility conclusion the cited evidence does not establish. Removed the clause; the sentence now ends at the developmental-timing fact itself. (2) The adjacent sentence 'The fate line and the minor lines are less fixed in that way' implied an anatomical/developmental contrast tied to that same fetal-development mechanism, and no repository evidence describes fate-line or minor-line formation mechanics at all. Reworded to 'The fate line and the minor lines are not among those three principal creases' -- a plain classificatory statement rather than a comparative-mechanism/stability claim -- while leaving the already-acceptable observational point (their presence/clarity 'varies far more from person to person') unchanged. (3) In the second section, revision 1's corrected sentence still listed 'the ordinary effects of aging' among examples of fine surface markings, reintroducing in noun form the unsupported adult-line-formation causal claim revision 1 was tasked to remove from the verb position. Removed 'the ordinary effects of aging' from the list, leaving 'general skin texture and incidental creasing' with no causal attribution. No new palmistry meaning, combination reading, prevalence estimate, or vague anonymous attribution was introduced to fill any removed wording. All other revision-1 corrections (fate-line narrowing, minor-line causal-claim removal, heart-line prevalence-statistic removal, 'normal range' rewording) were preserved unchanged.",
+  "pr_number": 52,
+  "branch": "claude/relay-PP-RELAY-034-minor-lines-empirical-audit",
+  "base_commit": "9a609c743e38198c59cbaa20f6bbbd6855cb535a",
+  "changed_paths": [
+    "src/content/lessons/advanced/01-minor-lines-overview.mdx",
+    "docs/source-verification-log.md",
+    "docs/CURRENT_STATE.md",
+    "docs/CHANGELOG.md",
+    "docs/AI_HANDOFF.md",
+    ".ai-ops/results/PP-RELAY-034-r2.json"
+  ],
+  "verification": [
+    "npm run build -- pass, 105 pages built",
+    "npm run content-audit -- pass, 60 blog posts and 25 lessons valid",
+    "npm run audit:all -- pass (links, images, schema, indexability, accessibility)",
+    "npm run audit:claim-risk -- src/content/lessons/advanced/01-minor-lines-overview.mdx -- 2 findings before and after (lines 13, 34), unchanged from revision 1, both re-dispositioned as non-empirical, no new findings introduced",
+    "git diff --check -- clean",
+    "Final diff re-read against the authorized revision-2 remediation scope and the required source-claim preflight below; changes confined to three phrase-level corrections across two paragraphs in the lesson, plus the required source-verification-log disposition and directly necessary current-state/changelog/handoff updates"
+  ],
+  "claim_inventory": {
+    "scope_covered": "The two sentences in 'What minor lines are' and 'Why some hands don't have them' explicitly identified in the revision-2 task packet, re-verified against the same evidence base used for revision 1 (Kimura & Kitagawa 1986 via blog/beginner/can-palm-lines-change.md, docs/source-verification-log.md Pass 1 and the PP-RELAY-034 revision-1 entry).",
+    "dispositions": [
+      {
+        "line": 21,
+        "claim": "\"...formed during fetal development before the hand is capable of movement -- part of why they appear, in some form, on essentially every hand.\"",
+        "disposition": "corrected -- prevalence clause removed",
+        "reasoning": "Kimura & Kitagawa (1986) establishes only developmental timing (formation in utero before spontaneous fetal hand movement), not a prevalence or legibility conclusion. 'Essentially every hand' overstates what the cited evidence covers. Removed the clause; the sentence now ends at the developmental-timing fact."
+      },
+      {
+        "line": 21,
+        "claim": "\"The fate line and the minor lines are less fixed in that way: whether they appear at all, and how clearly, varies far more from person to person...\"",
+        "disposition": "corrected -- reworded to remove implied mechanism/stability claim",
+        "reasoning": "'Less fixed in that way' ties the fate-line/minor-line comparison back to the fetal-development mechanism just described for the three principal creases, implying an anatomical/developmental contrast no repository evidence supports (no source describes fate-line or minor-line formation mechanics). Reworded to 'are not among those three principal creases' -- a plain classificatory statement. The already-acceptable observational clause ('varies far more from person to person...') is preserved unchanged, now standing as the site's own descriptive observation rather than a stated consequence of an implied mechanism."
+      },
+      {
+        "line": 34,
+        "claim": "\"Fine surface markings -- general skin texture, incidental creasing, the ordinary effects of aging -- can appear on a palm without being a minor line in the interpretive sense.\"",
+        "disposition": "corrected -- aging example removed",
+        "reasoning": "No repository evidence supports aging as a mechanism producing adult palm surface markings; the repo's only embryological evidence covers prenatal crease formation, not adult/aging changes. Revision 1 removed 'aging...produce lines' as a causal claim in verb position but retained 'the ordinary effects of aging' as a listed example, reintroducing the same unsupported causal attribution in noun form. Removed from the list, leaving 'general skin texture and incidental creasing' with no causal attribution."
+      },
+      {
+        "line": 34,
+        "claim": "\"generally\" -- \"should generally be set aside\"",
+        "disposition": "retained -- unchanged from prior dispositions",
+        "reasoning": "Procedural/methodological guidance, not an empirical or attributed claim; not touched by this revision's remediation scope."
+      },
+      {
+        "line": 13,
+        "claim": "\"most\" -- \"the features that carry the most interpretive weight\"",
+        "disposition": "retained -- unchanged from prior dispositions",
+        "reasoning": "The site's own curriculum-weighting statement, not an external prevalence/consensus claim. Outside this revision's scoped sentences and not touched."
+      }
+    ]
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "The 'essentially every hand' prevalence clause was removed; the retained fetal-development sentence now states only the developmental-timing fact traceable to Kimura & Kitagawa (1986). The 'ordinary effects of aging' causal example was removed with no replacement cause substituted. The fate-line/minor-line sentence was reworded from an implied comparative-stability claim to a plain classificatory statement, with its already-acceptable observational clause left intact. No new combination reading, prevalence estimate, or vague anonymous authority was introduced. No quotation marks appear in the edited sentences. No medical, legal, financial, deterministic-relationship, or predictive-science claim was introduced or retained."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "scripts/audit-claim-risk.mjs heuristic scan (before and after)",
+      "manual per-claim evidence review against docs/source-verification-log.md (PP-RELAY-034 revision-1 entry and Pass 1), blog/beginner/can-palm-lines-change.md, and docs/editorial-style-guide.md §5"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "npm run audit:claim-risk -- src/content/lessons/advanced/01-minor-lines-overview.mdx",
+      "git diff --check"
+    ],
+    "notes": "Built on the existing open claude/relay-PP-RELAY-034-minor-lines-empirical-audit branch and PR #52 per the task packet's PR contract ('continue using exactly one Relay PR ... for this task'), rather than opening a second PR for the same task."
+  }
+}

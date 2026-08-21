@@ -9,10 +9,30 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
-**Relay PP-RELAY-034 (2026-08-21) audited the remaining empirical/anatomical
+**Relay PP-RELAY-034 revision 2 (2026-08-21) corrected two residual
+evidence-boundary problems Director review found in the revision-1 diff**
+to `src/content/lessons/advanced/01-minor-lines-overview.mdx`'s opening
+section. Revision 1 (summarized below) had already narrowed the
+fetal-development claim to the three principal flexion creases, but its own
+corrected wording still (1) turned that developmental-timing fact into an
+unsupported "essentially every hand" prevalence inference, and (2) used
+"the ordinary effects of aging" as a surface-marking example, reintroducing
+an unsupported adult-line-formation causal claim revision 1 was tasked to
+remove. Revision 2 removed the prevalence clause outright (the sentence now
+ends at the developmental-timing fact the Kimura & Kitagawa evidence
+supports) and removed "the ordinary effects of aging" from the surface-marking
+examples. It also reworded "The fate line and the minor lines are less fixed
+in that way" to "...are not among those three principal creases" — a plain
+classificatory statement rather than an implied comparative-stability claim
+tied to the fetal-development mechanism — while preserving unchanged the
+already-acceptable observation that fate-line/minor-line presence and
+clarity vary far more from person to person. No new palmistry meaning,
+combination reading, or prevalence estimate was introduced. Full per-claim
+disposition in `docs/source-verification-log.md` under the "Revision 2" entry.
+
+**Relay PP-RELAY-034 revision 1 (2026-08-21) audited the remaining empirical/anatomical
 claims** in the opening "What minor lines are" and "Why some hands don't
-have them" sections of `src/content/lessons/advanced/01-minor-lines-overview.mdx`
-that the `audit:claim-risk` heuristic does not catch (it only pattern-matches
+have them" sections of the same lesson that the `audit:claim-risk` heuristic does not catch (it only pattern-matches
 prevalence vocabulary, not anatomical/developmental assertions). Narrowed
 the fetal-development claim to the three principal flexion creases (heart,
 head, life) that the repo's Kimura & Kitagawa (1986) evidence actually

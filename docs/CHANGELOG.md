@@ -2,6 +2,13 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-21 - Minor-lines-overview empirical/anatomical claim audit, revision 2 (Relay PP-RELAY-034)
+- Director review of the revision-1 diff below found two of its own corrections still exceeded approved evidence: the corrected fetal-development sentence added an unsupported "essentially every hand" prevalence inference, and the corrected surface-marking sentence still listed "the ordinary effects of aging" as a causal example.
+- Removed the "essentially every hand" prevalence clause; the fetal-development sentence now ends at the developmental-timing fact the Kimura & Kitagawa (1986) evidence supports, with no prevalence conclusion drawn from it.
+- Removed "the ordinary effects of aging" from the surface-marking examples, leaving "general skin texture and incidental creasing" with no causal attribution.
+- Reworded "The fate line and the minor lines are less fixed in that way" to "...are not among those three principal creases" — a plain classificatory statement instead of an implied comparative-stability claim tied to the fetal-development mechanism — while leaving unchanged the already-acceptable observation that their presence and clarity vary far more from person to person.
+- No new palmistry meaning, combination reading, prevalence estimate, or vague anonymous attribution was introduced. `npm run audit:claim-risk` on the file still returns the same 2 findings (lines 13, 34), both already dispositioned as non-empirical. Full per-claim disposition in `docs/source-verification-log.md`.
+
 ## 2026-08-21 - Minor-lines-overview empirical/anatomical claim audit (Relay PP-RELAY-034)
 - Manually inventoried every empirical/anatomical/developmental/prevalence claim in the opening "What minor lines are" and "Why some hands don't have them" sections of `src/content/lessons/advanced/01-minor-lines-overview.mdx`, including claims the `audit:claim-risk` heuristic does not flag (it pattern-matches prevalence vocabulary, not anatomical/developmental assertions).
 - Narrowed the fetal-development claim to what the repo's own Kimura & Kitagawa (1986) evidence actually supports: only the heart, head, and life lines are the palm's three principal flexion creases formed before fetal hand movement begins. The fate line, previously grouped into that anatomical claim, is now grouped with the minor lines as "less fixed," with no anatomical-origin claim asserted about it either way.
