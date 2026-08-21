@@ -2,107 +2,94 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-035
+PP-RELAY-036
 
 ## Revision
-3
+1
 
 ## Risk Class
 SOURCE_SENSITIVE
 
-## Revision 3 note
-Revision 2 correctly returned `HUMAN_REQUIRED` because the Cheiro-only evidence boundary was too thin for the standard article shape. The Director independently resolved that source-sufficiency gate without owner intervention by verifying William G. Benham, *The Laws of Scientific Hand Reading* (1900), Chapter XIV, "The Minor Lines," section "The Ring of Solomon," and recording the bounded evidence at `.ai-ops/evidence/PP-RELAY-035-benham-ring-of-solomon.md`. Combined with the previously verified Cheiro evidence at `.ai-ops/evidence/PP-RELAY-035-cheiro-ring-of-solomon.md`, the task now has two named classical sources plus supported geometry/location detail. Gettings (1965) remains unverified and must not be used.
-
-Revision 3 must draft only within the combined Cheiro + Benham evidence boundary. Benham's personal observations must not be generalized into modern prevalence, consensus, psychology, or empirical fact.
-
 ## Objective
-Create the approved search-intent article `src/content/blog/beginner/ring-of-solomon-palmistry.md` only to the extent the Ring of Solomon identification and meanings are grounded in approved repository-held evidence under Palmistry Path's source policy. The article should answer where the marking is, how cautiously it can be identified, what Cheiro and Benham historically associate it with, and how Palmistry Path frames it non-deterministically, while avoiding invented prevalence, consensus, unsupported traits, or combination readings.
+Create the approved search-intent article `src/content/blog/beginner/via-lascivia-palmistry.md` within a strict source-safe boundary. Answer what the Via Lascivia is in classical palmistry, where Benham places it, how he historically framed its name/interpretation, and why Palmistry Path does not treat palm markings as medical evidence. Address the search phrase “allergy line” cautiously without endorsing an unsupported medical or historical equivalence.
 
 ## Why this task now
-`docs/editorial-backlog.md` lists **The Ring of Solomon in Palmistry** as one of the two remaining unpublished Next 10 articles, with clear search intent, no recorded cannibalization risk, and planned linkage to the Advanced minor-lines lesson and Mount of Jupiter content. The adjacent curriculum/source-integrity cleanup is now substantially complete, making this a bounded test of v2C's improved SOURCE_SENSITIVE workflow.
+`docs/editorial-backlog.md` shows this as the sole remaining unpublished item in the approved Next 10. PP-RELAY-035 is now merged, so this is the highest-priority outstanding editorial gap. The Director independently verified a usable public-domain Benham evidence boundary before dispatch so the worker does not have to guess or stall on inaccessible sources.
 
-## Controlling evidence for revision 3
-Read both evidence notes before drafting:
-- `.ai-ops/evidence/PP-RELAY-035-cheiro-ring-of-solomon.md`
-- `.ai-ops/evidence/PP-RELAY-035-benham-ring-of-solomon.md`
+## Controlling evidence
+Read `.ai-ops/evidence/PP-RELAY-036-benham-via-lascivia.md` before drafting.
 
 Safe supported boundary:
-- Cheiro treats the Ring of Solomon as a named hand marking, associates/illustrates it on the Mount of Jupiter as mark 8 on Plate XX, and links it in his historical system with mysticism/occultism and aspiration toward mastery/adeptship in those subjects.
-- Benham recognizes it as a minor line and describes its path as beginning between the Jupiter and Saturn fingers, descending around the Mount of Jupiter, and ending near the beginning of the Life line.
-- Benham links it within his historical system with interest in occult studies and potential proficiency when other chirognomic indications also support that reading.
-- Benham reports additional personal observations about hands in which he saw the marking and accompanying features. Those observations may be mentioned only if clearly attributed to Benham and genuinely useful; do not turn them into unqualified frequency, psychology, or consensus claims.
+- Benham recognizes the Via Lascivia and describes it in relation to the Line of Mercury/Mount of Moon area.
+- Benham gives a specific slanting course from the inside/base of the Mount of Moon toward the lower portion of the upper Mount of Moon near the percussion.
+- Benham’s historical explanation of the name connects it to period ideas about surplus energy/appetite/excess, and he explicitly qualifies that the same energy need not be expressed sexually in a non-sensual hand type.
+- Palmistry Path may describe those statements as historical palmistry claims only, not empirical fact.
 
-Unsupported unless separately established from already-approved repository evidence:
-- modern prevalence, rarity, consensus, empirical validation, or psychological fact;
-- psychic ability, wisdom, leadership, success, morality, or other expanded traits;
-- any combined reading involving Mount of Jupiter development, finger shape, other rings, lines, markings, or hand type unless that exact combination is supported;
-- any Gettings attribution.
+Hard exclusions unless separately established from already-approved repository evidence:
+- any medical/diagnostic claim about allergies, sensitivities, digestion, liver, stomach, illness, health, vitality, or disease;
+- any claim that the Via Lascivia reliably indicates allergy or that “allergy line” is an established classical synonym;
+- criminality, dangerousness, morality, rape, murder, arson, or other harmful/deterministic period claims;
+- modern prevalence/rarity, modern practitioner consensus, empirical validation, or psychological fact;
+- invented combination readings involving the Mercury line, Moon mount, hand type, other lines, mounts, or markings.
 
-If the combined Cheiro + Benham evidence is still insufficient to create a useful non-thin article under the existing article template, return `HUMAN_REQUIRED` with the exact remaining evidence need. Do not pad the page with unsupported meanings.
+If existing approved repository evidence independently establishes a safe non-medical use of the “allergy line” alias, cite and distinguish that evidence explicitly. Otherwise, treat “allergy line” only as a search term/question and state that the verified classical source reviewed for this task does not establish a medical allergy meaning.
 
-## Required article behavior if evidence is sufficient
-- Use the intended slug/title from the approved backlog: `ring-of-solomon-palmistry` / **The Ring of Solomon in Palmistry**.
-- Describe location/geometry using Benham's verified path and distinguish that source-attributed description from direct observation guidance.
-- Attribute traditional interpretations specifically to Cheiro and/or Benham rather than to anonymous palmists or universal tradition.
-- Keep observation separate from historical interpretation and Palmistry Path editorial guidance.
-- Use grounded language such as `Cheiro associated`, `Benham described`, `in Benham's system`, and `may be read within that historical framework`; no deterministic prediction.
-- If Cheiro and Benham overlap, say they overlap on a narrow historical theme rather than claiming broad consensus across palmistry.
-- Link naturally to relevant Mount of Jupiter content and the Advanced minor-lines learning path when those destinations exist and fit current linking patterns.
-- Follow the existing article template/frontmatter/content conventions and avoid creating a thin keyword page.
-- Update editorial backlog status/count only if the article is actually shipped and the repository's mechanical count remains consistent.
+## Required article shape
+Keep the article useful but proportionate to the evidence. Include, as support allows:
+- concise identification/location guidance attributed to Benham;
+- a historical-name/meaning section clearly labeled as traditional/source-attributed;
+- a grounded Palmistry Path section separating historical interpretation from evidence and medical reality;
+- a short FAQ that can directly answer whether this is really an “allergy line” without making medical claims;
+- natural links to the advanced minor-lines lesson and relevant Mercury/Moon content where they genuinely fit;
+- existing site CTA conventions without introducing a new offer or conversion strategy.
 
-## Source-sensitive prohibitions
-- No invented or unsupported prevalence/frequency language (`common`, `rare`, `often`, `most`, `typically`, etc.).
-- No vague anonymous authority such as `modern palmists`, `some writers`, `experts`, or `traditional readers` unless an identifiable approved source supports the exact statement.
-- No invented combination readings with Mount of Jupiter development, finger shape, other rings, lines, markings, or hand type unless that specific combination is directly supported in approved evidence.
-- No medical, psychological-diagnostic, legal, financial, relationship-outcome, or predictive-science claims.
-- No quotation marks unless wording is independently verified verbatim from the cited edition. Prefer paraphrase from the durable evidence notes.
-- Do not use the stale `feat/curriculum-wave-3e-3f` branch as authority or wholesale replay it.
+Do not pad the article with unsupported traits merely to reach a standard length. A shorter evidence-complete article is preferred to speculative completeness.
 
-## Allowed scope
-- New `src/content/blog/beginner/ring-of-solomon-palmistry.md` if source sufficiency is established.
-- Directly necessary reciprocal/internal-link edits to existing relevant Ring/Jupiter/minor-lines content, kept minimal and source-neutral.
-- `docs/editorial-backlog.md` status/count bookkeeping if the article ships.
-- `docs/source-verification-log.md` only if necessary to cross-reference the durable evidence notes; do not duplicate or embellish their claims.
-- Canonical changelog/current-state/handoff documentation only as directly necessary.
-- Required Relay result/bookkeeping files.
+## Validation
+Run all article/content validation required by `AGENTS.md`, including at minimum:
+- `npm run build`
+- `npm run content-audit`
+- `npm run audit:all`
+- `npm run audit:claim-risk -- src/content/blog/beginner/via-lascivia-palmistry.md`
+- `git diff --check`
 
-## Out of scope
-- No Via Lascivia / Allergy Line article in this task.
-- No broad rewrite of the Advanced minor-lines lesson or Mount of Jupiter material.
-- No new SEO strategy, visual redesign, monetization, lead-capture, or schema work.
-- No unrelated source cleanup or backlog reprioritization.
+Manually disposition every claim-risk finding in the changed article.
 
-## Mandatory v2C source preflight before READY_FOR_REVIEW
-Run the source-claim preflight against the final changed prose and explicitly disposition:
-- prevalence/frequency/consensus wording;
-- every historical/traditional/source attribution;
-- every concrete location/identification claim;
-- every substantive Ring of Solomon interpretation;
-- any Ring/Jupiter or other combination statement;
-- vague anonymous authority;
-- quotation fidelity;
-- separation of observation, historical interpretation, and Palmistry Path editorial framing;
-- deterministic/safety-boundary language.
+## SOURCE_SENSITIVE preflight
+Before `READY_FOR_REVIEW`, inspect the final changed prose and verify:
+1. every prevalence/consensus/frequency claim is directly supported or removed/narrowed;
+2. every scientific, medical, historical, or evidence claim is traceable to approved evidence and correctly scoped;
+3. no independently supported meanings have been combined into a new reading;
+4. no vague anonymous authority such as “modern palmists,” “some writers,” “experts,” or equivalent remains unsupported;
+5. observation, historical/traditional interpretation, and Palmistry Path editorial/medical-safety guidance remain visibly distinct;
+6. quotation marks are used only for independently verified verbatim wording;
+7. no medical, legal, financial, deterministic relationship, criminality, or predictive-science claim is introduced.
 
-Also run `npm run audit:claim-risk -- <each changed article/lesson MD/MDX path>` and manually disposition every finding; a clean heuristic scan is not proof of source sufficiency.
+The durable result must include `risk_class: "SOURCE_SENSITIVE"` and a completed `source_preflight` object.
 
-## Acceptance checks
-- A complete standalone article exists only if the verified Cheiro + Benham evidence supports its substantive identification and interpretation claims without padding.
-- Every substantive palmistry meaning traces to one of the two PP-RELAY-035 evidence notes or other already-approved repository evidence.
-- Benham geometry/location wording remains faithful to the verified source and is not broadened into universal observational certainty.
-- No unsupported prevalence/consensus, scientific, psychological, expanded-trait, or combination claims are introduced.
-- Search intent is distinct from the general minor-lines and Mount of Jupiter pages and the article links into the learning path without cannibalizing them.
-- Backlog/count bookkeeping is accurate if the article ships.
-- `npm run build`, `npm run content-audit`, `npm run audit:all`, targeted `npm run audit:claim-risk -- ...`, and `git diff --check` pass for changed work.
-- Final diff remains bounded to this task and directly necessary documentation/bookkeeping.
+## No-change / human gate
+Return `NO_CHANGE` only if the target article already exists on current `main` and materially satisfies this task’s explicit evidence-safe search intent after independent verification.
 
-## v2C durable-result contract
-For every terminal outcome after startup gate, create `.ai-ops/results/PP-RELAY-035-r3.json` on a pushed `claude/relay-PP-RELAY-035-...` branch. Allowed terminal results are `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, and `PAUSED_USAGE_LIMIT`. A non-change terminal outcome does not require a dummy PR. The result must include `task_id`, `revision`, `risk_class: SOURCE_SENSITIVE`, terminal `result`, verification performed, changed paths, tests/checks, blocker/gate details when applicable, and a completed `source_preflight` object for a changed source-sensitive result.
+Return `HUMAN_REQUIRED` only if a load-bearing claim or article requirement cannot be satisfied from the controlling evidence and resolving it genuinely requires inaccessible/copyright source material or owner judgment. Do not use a human gate merely because Gettings or another preferred source is unavailable; reduce scope to the verified Benham boundary when that still yields a useful article.
 
-## PR contract
-If changed work is `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with footers:
+## Scope
+Expected primary changes:
+- `src/content/blog/beginner/via-lascivia-palmistry.md`
+- directly necessary editorial backlog/current-state/changelog/handoff updates
+- `.ai-ops/results/PP-RELAY-036-r1.json`
 
-RELAY_TASK_ID: PP-RELAY-035
-RELAY_TASK_REVISION: 3
-RELAY_RESULT: READY_FOR_REVIEW
+Do not materially rewrite unrelated Mercury/Moon/minor-line articles merely to create reciprocal links. Do not change product direction, monetization, SEO/indexing policy, source policy, Relay control-plane logic, or fast-lane settings.
+
+## Durable result contract
+Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-036-r1.json` on a pushed `claude/relay-PP-RELAY-036-...` branch.
+
+Allowed terminal results:
+- `READY_FOR_REVIEW`
+- `NO_CHANGE`
+- `BLOCKED`
+- `HUMAN_REQUIRED`
+- `PAUSED_USAGE_LIMIT`
+
+For `READY_FOR_REVIEW`, commit implementation/docs plus the result artifact, push the branch, and open exactly one PR targeting `main` with the standard Relay task/revision/result footers. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and normally do not create a dummy PR.
+
+Do not merge. Do not select the next task.
