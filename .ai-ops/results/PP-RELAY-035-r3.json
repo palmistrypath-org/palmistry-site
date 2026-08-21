@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Published src/content/blog/beginner/ring-of-solomon-palmistry.md, the last unpublished item from docs/editorial-backlog.md's Next 10 list, drafted within the combined Cheiro + Benham evidence boundary the Director established for revision 3. The article covers the marking's Mount of Jupiter location (Benham's specific path; Cheiro's less detailed placement, illustrated as mark 8 on Plate XX), the narrow mysticism/occult-interest theme both sources independently associate with it, and Benham's own conditional-proficiency reading, without generalizing into prevalence, psychology, expanded traits, or invented combinations. Gettings (1965) was not used. Backlog status/count and CURRENT_STATE blog-post counts were updated to match.",
-  "pr_number": null,
+  "pr_number": 53,
   "branch": "claude/relay-PP-RELAY-035-ring-of-solomon-article",
   "base_commit": "62b9ab132fa1865a13748705ee22b74197e847ad",
   "changed_paths": [
