@@ -1,0 +1,85 @@
+name: Relay Ready Slack Notification
+
+on:
+  pull_request:
+    types: [opened, ready_for_review]
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  notify:
+    if: github.event_name == 'workflow_dispatch' || startsWith(github.event.pull_request.title, '[RELAY ')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inspect Relay result contract
+        id: gate
+        shell: bash
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          set -euo pipefail
+          READY=false
+          TASK_ID=""
+
+          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
+            READY=true
+            TASK_ID="CORPORATE-RELAY-TRANSPORT-TEST"
+          else
+            if printf '%s\n' "$PR_BODY" | grep -Fq 'RELAY_RESULT: READY_FOR_REVIEW'; then
+              READY=true
+            fi
+            TASK_ID="$(printf '%s\n' "$PR_BODY" | sed -n 's/^RELAY_TASK_ID:[[:space:]]*//p' | head -n1)"
+          fi
+
+          echo "ready=$READY" >> "$GITHUB_OUTPUT"
+          echo "task_id=$TASK_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Notify Slack director-ops
+        if: steps.gate.outputs.ready == 'true'
+        shell: bash
+        env:
+          SLACK_DIRECTOR_WEBHOOK_URL: ${{ secrets.SLACK_DIRECTOR_WEBHOOK_URL }}
+          TASK_ID: ${{ steps.gate.outputs.task_id }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          set -euo pipefail
+
+          test -n "${SLACK_DIRECTOR_WEBHOOK_URL:-}" || { echo "Missing SLACK_DIRECTOR_WEBHOOK_URL secret"; exit 1; }
+
+          RESULT="ready-for-review"
+          CANONICAL="$PR_URL"
+          NOTE="Claude/Relay finished and this PR is ready for Director review: ${PR_TITLE}"
+
+          if [[ "$GITHUB_EVENT_NAME" == "workflow_dispatch" ]]; then
+            RESULT="transport-test"
+            CANONICAL="https://github.com/palmistrypath/palmistry-site"
+            NOTE="Manual Corporate AI Dispatch → Relay transport validation."
+          elif [[ -z "$TASK_ID" ]]; then
+            TASK_ID="PR #${PR_NUMBER}"
+          fi
+
+          TEXT=$(cat <<EOF
+READY_FOR_DIRECTOR
+DIVISION: Palmistry Path
+PROJECT: Palmistry Path
+TASK: ${TASK_ID}
+RESULT: ${RESULT}
+CANONICAL: ${CANONICAL}
+HUMAN_ACTION_REQUIRED: false
+
+${NOTE}
+EOF
+          )
+
+          PAYLOAD="$(jq -n --arg text "$TEXT" '{text: $text}')"
+          curl --fail-with-body \
+            -X POST "$SLACK_DIRECTOR_WEBHOOK_URL" \
+            -H 'Content-Type: application/json' \
+            --data "$PAYLOAD"
