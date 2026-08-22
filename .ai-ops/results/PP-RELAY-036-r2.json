@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-036",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Reworked src/content/blog/beginner/via-lascivia-palmistry.md from the unmerged revision-1 draft (PR #54) into a source-safe revision 2, drafted fresh from current main per the task packet (not merged/cherry-picked from PR #54). Narrowed exactly the three Director-identified overstatements and nothing else: (1) the opening now attributes the line's name to Benham/his classical Western text rather than implying classical-Western-tradition-wide consensus; (2) removed the 'Not every hand carries a Via Lascivia' prevalence/universality sentence, retaining only the separately verified, directly attributed fact that Benham elsewhere treats it as more a chance line than a fixed minor line, without converting that into a modern frequency claim; (3) removed the comparative-strength phrase 'just as easily' from the non-sensual-hand qualification, leaving only that the same surplus energy 'could be expressed' in other activity. The article otherwise preserves the same evidence-complete Benham-only shape as revision 1 (location, historical-name section, allergy-line FAQ, medical-safety framing, links out to Mount of Luna/Mercury line/minor-lines overview).",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-036-via-lascivia-r2",
+  "base_commit": "2bec0e503eb9bda7fac8f9599b7ea13c8706e2f0",
+  "changed_paths": [
+    "src/content/blog/beginner/via-lascivia-palmistry.md",
+    "docs/editorial-backlog.md",
+    "docs/CURRENT_STATE.md",
+    "docs/CHANGELOG.md",
+    "docs/AI_HANDOFF.md",
+    ".ai-ops/results/PP-RELAY-036-r2.json"
+  ],
+  "verification": [
+    "npm run build — pass, 107 pages built",
+    "npm run content-audit — pass, 62 blog posts and 25 lessons valid (matches editorial-backlog.md's updated Published count)",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "npm run audit:claim-risk -- src/content/blog/beginner/via-lascivia-palmistry.md — 1 finding on first revision-2 pass ('often' in the chance-line negation sentence); reworded to 'modern prevalence claim about hands today' and a second pass returned 0 findings",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-036-benham-via-lascivia.md — Benham recognizes the Via Lascivia as a named line, treats it as a sister line to the Mercury line in the dedicated section while elsewhere calling it more a chance line than a fixed minor line, gives a specific course from the base of the Mount of Moon to the upper Mount of Moon near the percussion, and connects its historical name to period ideas about surplus energy/excess, explicitly qualifying that a non-sensual hand could express that energy in other activity instead. The note also documents the hard exclusions (no medical/allergy meaning, no criminality/dangerousness, no modern prevalence, no invented combinations) used to bound this article."
+    ],
+    "external_access": "None attempted; the controlling evidence note was already verified and recorded by the Director before this revision began.",
+    "in_copyright_sources": "Gettings (1965), referenced in the original backlog notes for this article, remains unverified per the task packet; not cited."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Director finding 1 (tradition-wide naming): the opening now reads 'what William Benham calls this line in his classical Western text' instead of 'actually called in the classical Western tradition' — narrowed to the single verified author, no tradition-wide consensus implied. Director finding 2 (prevalence/universality): 'Not every hand carries a Via Lascivia. As with the other minor lines... its absence is not a gap' was removed entirely (it was unattributed, site-wide framing, not sourced to Benham); the retained sentence attributes the chance-line/fixed-minor-line distinction directly and explicitly to Benham and states it is 'not a modern prevalence claim about hands today,' matching the evidence note's 'without converting that into a modern frequency claim' instruction. Director finding 3 (comparative-strength phrase): 'could just as easily be expressed' was changed to 'could be expressed' in both the body section and the parallel FAQ answer, matching the evidence note's 'could express the same surplus energy in other activity instead' (no comparative claim). Full-article re-check beyond the three named sentences: no other prevalence/consensus/frequency wording found; every historical/interpretive claim (course, sister-line relationship, chance-line classification, historical name/surplus-energy reading, non-sensual-hand qualification) is attributed specifically to Benham and matches the evidence note's safe boundary; the 'in context' section explicitly declines to extend the Mercury line's own health/vitality/business associations onto the Via Lascivia, so no new combination reading was introduced; no anonymous authority phrasing ('modern palmists', 'some writers', 'experts') appears anywhere; no quotation marks are used around any Benham content (all paraphrased) — the only quoted string is 'allergy line', used strictly as a labeled search term per the evidence note's instruction; the historical-name section and the allergy-line/medical-safety section remain visibly separate; no medical, legal, financial, deterministic-relationship, criminality, or predictive-science claim is introduced anywhere in the article."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the task packet, CURRENT_TASK.md mirror, and .ai-ops/evidence/PP-RELAY-036-benham-via-lascivia.md before drafting",
+      "Read the unmerged revision-1 article (PR #54 branch, claude/relay-PP-RELAY-036-via-lascivia) as reference/draft only, per the task packet's explicit instruction not to merge or cherry-pick it wholesale",
+      "Rewrote the article fresh on a new branch created from verified origin/main, changing only the three Director-identified sentences/phrases plus the pubDate/CHANGELOG-tracking metadata; left the rest of the revision-1 shape intact where it was already source-safe",
+      "Ran scripts/audit-claim-risk.mjs against the changed file twice (before and after a rewording) and manually dispositioned the one finding, then manually re-read the full final prose against all three Director findings and the seven-point SOURCE_SENSITIVE preflight",
+      "Diffed the old revision-1 branch against main to confirm which docs (editorial-backlog.md, CURRENT_STATE.md, CHANGELOG.md, AI_HANDOFF.md) needed equivalent revision-2 updates, since revision 1 was never merged and those updates never landed on main"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "npm run audit:claim-risk (targeted)",
+      "git diff --check"
+    ],
+    "notes": "Local main had no merge base with origin/main at session start (84 vs. 50 diverged commits). Per AGENTS.md's clean-divergence recovery path: the working tree was clean, origin and origin/main's tip (2bec0e5, matching state.json/task packet/dispatch-hint state commit) were verified, local main was left untouched, and the revision-2 task branch was created directly from origin/main. node_modules were not present in the container; npm install was run to enable build/audit commands, and the resulting incidental package-lock.json metadata drift (optional-dependency 'libc' fields, unrelated to this task) was reverted before committing, consistent with the PP-RELAY-035 precedent."
+  }
+}
