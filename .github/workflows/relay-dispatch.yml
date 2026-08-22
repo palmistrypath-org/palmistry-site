@@ -10,6 +10,7 @@ on:
 
 permissions:
   contents: read
+  statuses: write
 
 concurrency:
   group: palmistry-path-relay-dispatch
@@ -81,6 +82,28 @@ jobs:
           test -n "$CLAUDE_ROUTINE_URL" || { echo "Missing CLAUDE_ROUTINE_URL secret"; exit 1; }
           test -n "$CLAUDE_ROUTINE_TOKEN" || { echo "Missing CLAUDE_ROUTINE_TOKEN secret"; exit 1; }
 
+      - name: Mark Claude routine dispatch pending
+        if: steps.gate.outputs.should_dispatch == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TASK_ID: ${{ steps.gate.outputs.task_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          PAYLOAD="$(jq -n \
+            --arg state "pending" \
+            --arg context "relay-dispatch/claude-routine" \
+            --arg description "Dispatching ${TASK_ID} to Claude Routine" \
+            '{state: $state, context: $context, description: $description}')"
+          curl --silent --show-error --fail-with-body \
+            -X POST "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${GITHUB_SHA}" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            -H "Content-Type: application/json" \
+            --data "$PAYLOAD" >/dev/null
+
       - name: Fire Claude Relay routine
         if: steps.gate.outputs.should_dispatch == 'true'
         env:
@@ -96,10 +119,69 @@ jobs:
             --arg text "Relay dispatch hint: task ${TASK_ID}, revision ${TASK_REVISION}, packet ${TASK_PATH}, state commit ${GITHUB_SHA}. Read repository state, immutable task packet, CURRENT_TASK compatibility mirror, and the active Relay durable-result contract; this payload is only for stale/duplicate detection." \
             '{text: $text}')"
 
-          curl --fail-with-body \
+          RESPONSE_FILE="$(mktemp)"
+          trap 'rm -f "$RESPONSE_FILE"' EXIT
+
+          set +e
+          HTTP_CODE="$(curl --silent --show-error \
+            --output "$RESPONSE_FILE" \
+            --write-out '%{http_code}' \
             -X POST "$CLAUDE_ROUTINE_URL" \
             -H "Authorization: Bearer $CLAUDE_ROUTINE_TOKEN" \
             -H "anthropic-beta: experimental-cc-routine-2026-04-01" \
             -H "anthropic-version: 2023-06-01" \
             -H "Content-Type: application/json" \
-            --data "$PAYLOAD"
+            --data "$PAYLOAD")"
+          CURL_EXIT=$?
+          set -e
+
+          if [[ "$CURL_EXIT" -ne 0 || ! "$HTTP_CODE" =~ ^2[0-9][0-9]$ ]]; then
+            echo "Claude Routine dispatch failed: curl_exit=${CURL_EXIT} http_code=${HTTP_CODE:-none}"
+            exit 1
+          fi
+
+          echo "Claude Routine accepted dispatch request (HTTP ${HTTP_CODE})."
+
+      - name: Mark Claude routine dispatch accepted
+        if: success() && steps.gate.outputs.should_dispatch == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TASK_ID: ${{ steps.gate.outputs.task_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          PAYLOAD="$(jq -n \
+            --arg state "success" \
+            --arg context "relay-dispatch/claude-routine" \
+            --arg description "Claude Routine accepted ${TASK_ID} dispatch" \
+            '{state: $state, context: $context, description: $description}')"
+          curl --silent --show-error --fail-with-body \
+            -X POST "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${GITHUB_SHA}" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            -H "Content-Type: application/json" \
+            --data "$PAYLOAD" >/dev/null
+
+      - name: Mark Claude routine dispatch failed
+        if: failure() && steps.gate.outputs.should_dispatch == 'true'
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TASK_ID: ${{ steps.gate.outputs.task_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          PAYLOAD="$(jq -n \
+            --arg state "failure" \
+            --arg context "relay-dispatch/claude-routine" \
+            --arg description "Claude Routine rejected or failed ${TASK_ID} dispatch" \
+            '{state: $state, context: $context, description: $description}')"
+          curl --silent --show-error --fail-with-body \
+            -X POST "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${GITHUB_SHA}" \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            -H "Content-Type: application/json" \
+            --data "$PAYLOAD" >/dev/null
