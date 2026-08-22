@@ -38,7 +38,7 @@ Read this way, a long head line is traditionally associated with breadth of ment
 
 A long line is not read alone. The head line lesson treats length as one of several variables — origin, path, depth and clarity, length, and endpoint — to be held together rather than folded into a single reading. This article covers length only.
 
-Depth and clarity, path and slope, and the endpoint — including the terminal fork sometimes called the writer's fork — are each their own observation, with their own traditional associations covered in the main [head line guide](/blog/beginner/head-line/). They are not folded into what a long line means here.
+Depth and clarity, path and slope, and the endpoint — including the terminal fork sometimes called the writer's fork — are each their own observation, with their own traditional associations covered in the main [head line guide](/blog/beginner/head-line/). They are not folded into what a long line means here. The dedicated article on [straight versus curved head lines](/blog/beginner/straight-head-line-palmistry/) covers path and slope in full.
 
 Palmistry Path's approved sources do not set out a specific combined reading for a long head line together with a particular endpoint, slope, depth, or hand shape, so this article does not assert one. Observe those other features separately using the main guide, and treat length as its own observation rather than a shortcut to a fuller reading.
 

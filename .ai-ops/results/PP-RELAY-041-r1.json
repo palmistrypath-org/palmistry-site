@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-041",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Published src/content/blog/beginner/straight-head-line-palmistry.md, the Straight vs Curved Head Line companion article (editorial backlog Article 13), covering the head line's path variable only. Sourced entirely from the already twice-Director-reviewed path/slope content in the canonical lessons/lines/03-head-line.mdx lesson (PP-RELAY-040), not from the older unreviewed 'Curvature and endpoint' section of beginner/head-line.md, which still carries unverified monotonic-degree wording out of this task's scope to fix. Added one reciprocal link sentence each to head-line.md, short-head-line-meaning.md, and long-head-line-meaning.md, and marked editorial backlog Article 13 published, correcting the published-post count from 64 to 65.",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/straight-head-line-palmistry.md (2 findings, both PREVALENCE_OR_CONSENSUS on the same 'often read alongside creative or artistic inclination' hedge phrase already Director-reviewed and retained in the canonical mdx lesson under PP-RELAY-040; dispositioned as compliant on that precedent)",
+    "npm run build (110 pages, up from 109)",
+    "npm run content-audit (65 blog posts, 25 lessons valid)",
+    "npm run audit:all (links: no broken links, no orphaned articles; images; schema; indexability; accessibility — all pass)",
+    "git diff --check (clean)"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Only frequency-adjacent phrase is 'often read alongside creative or artistic inclination' (2 occurrences), reused in sense from the canonical mdx lesson where the Director explicitly reviewed and retained it as the style guide's sanctioned interpretive hedge, not a statistical claim. No fixed cutoff/average/monotonic-degree wording introduced; article explicitly states path has 'no fixed angle, zone, or threshold' and mirrors the Director-approved 'simply falls between the two' non-monotonic phrasing from PP-RELAY-040 r2. No combination reading asserted between path and length/depth/endpoint/hand shape (explicitly disclaimed in a dedicated section, matching the short/long sibling articles). No anonymous authority used; sole named attribution is Benham (1900), paraphrased with no invented quotation marks. Full disposition recorded in docs/source-verification-log.md under 'New article — straight-head-line-palmistry.md...'."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "grep/read of docs/source-verification-log.md and lessons/lines/03-head-line.mdx to identify already-Director-reviewed path/slope evidence and avoid reusing unreviewed wording from beginner/head-line.md",
+      "npm run audit:claim-risk (targeted scan)",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "validation": [
+      "audit:claim-risk targeted scan of new article",
+      "full site build",
+      "content-audit",
+      "audit:all (links/images/schema/indexability/accessibility)",
+      "git diff --check",
+      "manual source-claim preflight against final article prose"
+    ],
+    "notes": "Startup encountered the documented persistent-checkout condition: local main (c9abf2b, stale) had no fast-forward path to verified origin/main (109163d, matching both the dispatch-hint state commit and the GitHub API's live main SHA). Per AGENTS.md's clean-divergence recovery, local main was left untouched and the task branch was created directly from verified origin/main. Also reverted an unrelated package-lock.json normalization produced by a required `npm install` (no node_modules present in the environment) before finalizing the diff, since it was not part of the authorized task scope."
+  }
+}

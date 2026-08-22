@@ -2,6 +2,14 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-22 - Published Straight vs Curved Head Line companion article (Relay PP-RELAY-041)
+- Added `src/content/blog/beginner/straight-head-line-palmistry.md`, Article 13 of the editorial backlog, following the established short/long-head-line-meaning companion pattern. Covers the head line's path variable (straight/level vs. sloping/curved) only, kept separate from length, depth, and endpoint.
+- Sourced entirely from the already-verified, twice-Director-reviewed path/slope content in the canonical `lessons/lines/03-head-line.mdx` lesson (PP-RELAY-040); deliberately did not reuse the older, unreviewed monotonic-degree wording still present in `beginner/head-line.md`'s "Curvature and endpoint" section (out of this task's scope to correct).
+- Added one reciprocal link sentence each to `beginner/head-line.md`, `beginner/short-head-line-meaning.md`, and `beginner/long-head-line-meaning.md`, connecting the new article to the canonical article and the adjacent Head Line variation cluster; no other prose in those files was changed.
+- Marked editorial backlog Article 13 published and corrected the documented blog-post count from 64 to 65.
+- Full source-claim disposition in `docs/source-verification-log.md` ("New article — `straight-head-line-palmistry.md`...").
+- Verified with `npm run audit:claim-risk -- src/content/blog/beginner/straight-head-line-palmistry.md` (2 findings, both dispositioned as compliant precedent from PP-RELAY-040), `npm run build` (110 pages), `npm run content-audit` (65 blog posts, 25 lessons valid), `npm run audit:all` (links, images, schema, indexability, accessibility all pass, no orphan article), and `git diff --check`.
+
 ## 2026-08-22 - Canonical Head Line lesson, revision 2: residual claim-boundary corrections (Relay PP-RELAY-040 r2)
 - Director review of the revision-1 PR (#62) found four residual passages that, while no longer matching the automated heuristic's word list, still exceeded the approved evidence boundary: an unattributed cross-tradition consistency claim for path/slope, an unsupported "normal middle case" distribution claim for slope, a universalized endpoint-location claim contradicted by the lesson's own Length section, and a vague "popular palmistry gets wrong" anonymous-authority attribution.
 - Corrected all four in `src/content/lessons/lines/03-head-line.mdx` without reopening any other reviewed revision-1 wording; none was replaced with an equivalent unsupported synonym (`normal`, `usual`, `standard`, `generally`, `consistently`).

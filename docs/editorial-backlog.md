@@ -6,7 +6,7 @@
 
 ## Status
 
-**Published:** 64 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019. Item 4 (`forked-head-line-meaning`) was already live on `main` before PP-RELAY-020 but missing from this count; its backlog status is corrected, not counted as new. Item 5 (`phalanges-palmistry`) shipped 2026-08-19; see PP-RELAY-020 (49 → 50). Item 6 (`is-palmistry-real`) shipped 2026-08-19; see PP-RELAY-021 (50 → 51). Item 7 (`short-heart-line-meaning`) shipped 2026-08-19; see PP-RELAY-022 (51 → 52). Item 10 (`fate-line-starting-points`) shipped 2026-08-19; see PP-RELAY-023 (52 → 53). Reconciled 2026-08-20 against `npm run content-audit` (60 valid blog posts currently in `src/content/blog/`): this backlog only tracked SEO-roadmap items and had drifted from the site's actual published count; corrected 53 → 60 with no new articles counted as shipped by this reconciliation — see PP-RELAY-025. Item 9 (`ring-of-solomon-palmistry`) shipped 2026-08-21; see PP-RELAY-035 (60 → 61). Item 8 (`via-lascivia-palmistry`) shipped 2026-08-22; see PP-RELAY-036 revision 2 (61 → 62). Item 11 (`short-head-line-meaning`) shipped 2026-08-22; see PP-RELAY-037 (62 → 63). Item 12 (`long-head-line-meaning`) shipped 2026-08-22; see PP-RELAY-038 revision 2 (63 → 64).
+**Published:** 65 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019. Item 4 (`forked-head-line-meaning`) was already live on `main` before PP-RELAY-020 but missing from this count; its backlog status is corrected, not counted as new. Item 5 (`phalanges-palmistry`) shipped 2026-08-19; see PP-RELAY-020 (49 → 50). Item 6 (`is-palmistry-real`) shipped 2026-08-19; see PP-RELAY-021 (50 → 51). Item 7 (`short-heart-line-meaning`) shipped 2026-08-19; see PP-RELAY-022 (51 → 52). Item 10 (`fate-line-starting-points`) shipped 2026-08-19; see PP-RELAY-023 (52 → 53). Reconciled 2026-08-20 against `npm run content-audit` (60 valid blog posts currently in `src/content/blog/`): this backlog only tracked SEO-roadmap items and had drifted from the site's actual published count; corrected 53 → 60 with no new articles counted as shipped by this reconciliation — see PP-RELAY-025. Item 9 (`ring-of-solomon-palmistry`) shipped 2026-08-21; see PP-RELAY-035 (60 → 61). Item 8 (`via-lascivia-palmistry`) shipped 2026-08-22; see PP-RELAY-036 revision 2 (61 → 62). Item 11 (`short-head-line-meaning`) shipped 2026-08-22; see PP-RELAY-037 (62 → 63). Item 12 (`long-head-line-meaning`) shipped 2026-08-22; see PP-RELAY-038 revision 2 (63 → 64). Item 13 (`straight-head-line-palmistry`) shipped 2026-08-22; see PP-RELAY-041 (64 → 65).
 
 **This document:** 50 scored future article ideas, grouped into Next 10 / Next 25 / Later.
 
@@ -198,7 +198,7 @@ These build out the content clusters, fill topical gaps, and support monetisatio
 |---|---|---|---|---|---|---|---|---|
 | 11 | ~~Short Head Line Meaning~~ (published 2026-08-22) | `short-head-line-meaning` | 3 | 2 | 3 | 2 | 3 | **9** |
 | 12 | ~~Long Head Line Meaning~~ (published 2026-08-22) | `long-head-line-meaning` | 3 | 2 | 3 | 2 | 3 | **9** |
-| 13 | Straight vs Curved Head Line in Palmistry | `straight-curved-head-line` | 3 | 2 | 3 | 2 | 3 | **9** |
+| 13 | ~~Straight vs Curved Head Line in Palmistry~~ (published 2026-08-22) | `straight-head-line-palmistry` | 3 | 2 | 3 | 2 | 3 | **9** |
 | 14 | Broken Head Line Meaning | `broken-head-line-meaning` | 3 | 2 | 4 | 2 | 3 | **10** |
 | 15 | Long Heart Line Meaning | `long-heart-line-meaning` | 3 | 2 | 3 | 2 | 3 | **9** |
 | 16 | Faint Life Line Meaning | `faint-life-line-meaning` | 3 | 2 | 3 | 2 | 3 | **9** |
@@ -234,7 +234,7 @@ These follow the established variation-article pattern (same as the life line cl
 |---|---|---|---|
 | 11 Short Head Line | "short head line meaning" | `/learn/lines/03-head-line` | None |
 | 12 Long Head Line | "long head line meaning" | `/learn/lines/03-head-line` | None |
-| 13 Straight vs Curved Head Line | "straight head line palmistry" | `/learn/lines/03-head-line` | None — covers a shape dimension not addressed in the main article |
+| 13 Straight vs Curved Head Line | "straight head line palmistry" | `/learn/lines/03-head-line` | None — deep-dive companion on the path/slope variable, same pattern as the short/long length companions |
 | 14 Broken Head Line | "broken head line meaning" | `/learn/lines/03-head-line` | None |
 | 15 Long Heart Line | "long heart line meaning" | `/learn/lines/02-heart-line` | None |
 | 16 Faint Life Line | "faint life line meaning" | `/learn/lines/04-life-line` | **Moderate.** `short-life-line-meaning` addresses a similar anxiety. Differentiate: faint = quality/depth; short = length. Address both anxieties but frame clearly around the "faint" query. |
