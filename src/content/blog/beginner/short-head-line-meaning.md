@@ -20,7 +20,7 @@ The [overview of palm lines](/blog/beginner/what-do-palm-lines-mean/) and [How t
 
 Before interpreting length, confirm what you're looking at. A line can appear short for reasons that have nothing to do with its true length.
 
-**Compare it to the palm's own width, not to the other lines.** The reference point for "short" is where the head line ends relative to the palm — specifically, whether it stops before reaching the central zone of the palm, rather than continuing on toward or into the outer half.
+**Compare it to the palm's own width, not to the other lines.** The reference point for "short" is where the head line ends relative to the palm as a whole — whether it ends noticeably earlier across the palm than a long line's reach toward or into the outer half, rather than continuing that far.
 
 **Check whether the line is short or simply faint.** A faint line can look like it trails off and disappears when it has actually continued at reduced depth. Faintness and length are separate variables — trace the line under good light before deciding it has genuinely ended.
 
@@ -28,7 +28,7 @@ Before interpreting length, confirm what you're looking at. A line can appear sh
 
 **Rule out chaining that obscures the true endpoint.** A heavily chained head line — made up of small linked loops rather than a clean course — can be hard to trace to its actual terminus, since the texture can look like fading when the line is still continuing in chained form.
 
-Once you've confirmed the line is genuinely short — ending clearly before the central zone of the palm, without a gap, and without chaining disguising a longer course — the length itself is what this article addresses.
+Once you've confirmed the line is genuinely short — ending noticeably earlier across the palm than a long line's reach toward the outer half, without a gap, and without chaining disguising a longer course — the length itself is what this article addresses.
 
 ## What it's traditionally associated with
 
@@ -59,13 +59,13 @@ A short line is not read alone. The head line lesson treats length as one of sev
 ## Frequently asked questions
 
 **What does a short head line mean?**
-Traditionally, a short head line — one ending before the central zone of the palm — is associated with a focused, direct, and efficient mental approach: a mind that concentrates rather than ranges widely. It does not indicate limited intelligence.
+Traditionally, a short head line — one that ends noticeably earlier across the palm than a long line's reach toward the outer half — is associated with a focused, direct, and efficient mental approach: a mind that concentrates rather than ranges widely. It does not indicate limited intelligence.
 
 **Does a short head line mean lower intelligence?**
 No. Benham and Gettings both read length as describing a style of thinking — concentrated versus broad-ranging — rather than a measure of intelligence.
 
 **How short does the head line need to be to count as "short"?**
-This article measures length relative to the palm itself, as explained above: a line that stops before reaching the central zone of the palm is treated as short. There is no fixed measurement in inches or centimetres in the sources this site draws from.
+This article measures length relative to the palm itself, as explained above: a line that ends noticeably earlier across the palm than a long line's reach toward the outer half is treated as short. There is no fixed measurement, zone, or threshold in the sources this site draws from.
 
 **Is a short head line the same as a broken head line?**
 No. A break is a gap where the line stops and restarts, with a visible interruption. A short line simply ends earlier and does not resume. The two are distinct features and are not read the same way.
