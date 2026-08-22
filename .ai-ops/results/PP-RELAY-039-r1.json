@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-039",
+  "revision": 1,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Added a new PRECISION_OR_DEGREE_EXTRAPOLATION heuristic category to scripts/audit-claim-risk.mjs, targeting the exact unsupported-precision wording patterns that caused avoidable rework on PP-RELAY-037 (an invented 'ending before/reaches ... the central zone of the palm' fixed cutoff) and PP-RELAY-038 ('farther than average' and 'a very long line indicates...' monotonic degree scaling). The single new category combines three narrow sub-patterns via one regex: (1) average-based comparative cutoffs -- '(farther|further|longer|shorter|deeper|wider|narrower|higher|lower) than (the) average'; (2) fixed anatomical-zone cutoff phrasing tied specifically to 'central zone' ('ending before'/'reaches'/'extends to'/'stops before'/'before reaching' + 'the central zone', plus the standalone fixed phrase 'central zone of the palm'), not a general sweep of anatomical sentences; (3) monotonic degree-scaling extrapolation -- 'very (long|short|deep|wide|narrow|high|low) ... indicates' and 'the (longer|shorter|...) ... the (more|less|...)' with a bounded same-line character gap so the pattern cannot run unbounded across a whole paragraph. Added scripts/fixtures/claim-risk/risky-precision-degree.md exercising all three sub-patterns and extended scripts/fixtures/claim-risk/neutral-observational.md with the packet's own neutral example ('compare how far the line travels across this palm') to prove the new category does not flag ordinary comparative observation. Updated the self-test case list (existing risky/neutral fixtures now also assert the new category is absent/present as appropriate) and the module's top-of-file docstring to describe the new category and its originating tasks. No existing category, CLI usage, or output format changed. The new category is not wired into audit:all or any dispatch/merge/fast-lane/billing/human-gate behavior. As a sanity check (not required by the packet), ran the updated scanner against every currently published blog/lesson file: 3 findings across 89 files -- the already-known unresolved 'ending before it reaches the central zone of the palm' cutoff in src/content/lessons/lines/03-head-line.mdx (line 64, the same wording PP-RELAY-037 already identified as unsupported in the companion short-head-line article) and two 'the wider/longer ... the more' degree-scaling instances in src/content/blog/beginner/head-line.md and src/content/lessons/mounts/05-mount-of-apollo.mdx. These are heuristic review prompts surfaced for a future SOURCE_SENSITIVE task, not proof of a defect, and no published palmistry content was changed by this task. Added one dated docs/CHANGELOG.md entry describing the tooling change; no product/content state, roadmap, architecture, or durable decision changed, so no other canonical doc was touched.",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-039-claim-risk-precision-degree",
+  "base_commit": "8c6494730ff0b67d00adc52ecc6b3a35160b3a95",
+  "changed_paths": [
+    "scripts/audit-claim-risk.mjs",
+    "scripts/fixtures/claim-risk/risky-precision-degree.md",
+    "scripts/fixtures/claim-risk/neutral-observational.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-039-r1.json"
+  ],
+  "verification": [
+    "npm run audit:claim-risk:selftest -- pass, all 4 fixtures (risky-prevalence, risky-empirical, risky-precision-degree, neutral-observational) behave as expected",
+    "node scripts/audit-claim-risk.mjs scripts/fixtures/claim-risk/risky-precision-degree.md -- 5 findings, all PRECISION_OR_DEGREE_EXTRAPOLATION, matching all three required sub-patterns (average cutoff, central-zone cutoff, degree scaling)",
+    "node scripts/audit-claim-risk.mjs scripts/fixtures/claim-risk/neutral-observational.md -- 0 findings, confirming the packet's neutral example is not flagged",
+    "npm run build -- pass, 109 pages built",
+    "npm run content-audit -- pass, 64 blog posts and 25 lessons valid",
+    "git diff --check -- clean",
+    "manual spot-check: scanned every existing src/content blog/lesson file with the updated scanner (89 files) to confirm the new category is high-signal (3 findings total) rather than flooding ordinary prose"
+  ],
+  "source_preflight": null,
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "regex-based heuristic addition to scripts/audit-claim-risk.mjs, following the existing single-pattern-per-category structure",
+      "new and extended deterministic fixtures under scripts/fixtures/claim-risk/",
+      "manual scan of all existing published content with the updated tool as a false-positive/signal-quality sanity check (not a content change)"
+    ],
+    "validation": [
+      "npm run audit:claim-risk:selftest",
+      "npm run build",
+      "npm run content-audit",
+      "git diff --check"
+    ],
+    "notes": "No persistent-checkout divergence: local main and origin/main were identical to the dispatch commit at startup, so the clean-divergence recovery path was not needed. Task branch was created directly from that verified commit."
+  }
+}

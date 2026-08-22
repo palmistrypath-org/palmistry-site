@@ -3,9 +3,12 @@
  * Claim-risk preflight aid for SOURCE_SENSITIVE editorial work (PP-RELAY-028).
  *
  * Scans explicitly supplied Markdown/MDX files for wording patterns that
- * historically drove Relay rework on PP-RELAY-024: unsupported
- * prevalence/consensus language, vague anonymous-authority attribution, and
- * strong unsupported empirical-overstatement claims.
+ * historically drove Relay rework: unsupported prevalence/consensus language,
+ * vague anonymous-authority attribution, and strong unsupported
+ * empirical-overstatement claims (PP-RELAY-024), plus unsupported
+ * precision/degree extrapolation such as average-based cutoffs, fixed
+ * anatomical-zone thresholds, and monotonic degree-scaling wording
+ * (PP-RELAY-037, PP-RELAY-038, PP-RELAY-039).
  *
  * This is a heuristic review prompt, not a source-validity check. A match
  * means "have a human/worker check this claim against approved repository
@@ -46,6 +49,17 @@ const CATEGORIES = [
 		label: 'Strong unsupported empirical-overstatement wording',
 		pattern:
 			/\b(proves?|proven|has been proven|scientifically (?:proven|confirmed)|studies (?:show|prove|confirm)|science (?:confirms|proves)|research (?:proves|confirms)|clinically proven|conclusively (?:proves|shows)|definitively (?:proves|shows))\b/gi,
+	},
+	{
+		// PP-RELAY-039: narrow, high-signal patterns tied to the specific
+		// unsupported-precision failures observed in PP-RELAY-037 (fixed
+		// "central zone" cutoff) and PP-RELAY-038 ("farther than average" and
+		// "a very long line indicates..." degree scaling), not a general
+		// sweep of anatomical or comparative prose.
+		key: 'PRECISION_OR_DEGREE_EXTRAPOLATION',
+		label: 'Unsupported precision/degree extrapolation wording',
+		pattern:
+			/\b(?:farther|further|longer|shorter|deeper|wider|narrower|higher|lower)\s+than\s+(?:the\s+)?average\b|\b(?:ending before|reaches?|extends?\s+to|stops?\s+before|before reaching)\s+the\s+central\s+zone\b|\bcentral\s+zone\s+of\s+the\s+palm\b|\bvery\s+(?:long|short|deep|wide|narrow|high|low)\b[^.\n]{0,60}?\bindicates?\b|\bthe\s+(?:longer|shorter|deeper|wider|narrower|higher|lower)\b[^.\n]{0,60}?\bthe\s+(?:more|less|greater|weaker|stronger)\b/gi,
 	},
 ];
 
@@ -138,12 +152,17 @@ function runSelfTest() {
 		{
 			file: resolve(FIXTURES_DIR, 'risky-prevalence.md'),
 			expectCategories: ['PREVALENCE_OR_CONSENSUS', 'ANONYMOUS_AUTHORITY'],
-			expectNone: ['SCIENTIFIC_OR_HISTORICAL_OVERSTATEMENT'],
+			expectNone: ['SCIENTIFIC_OR_HISTORICAL_OVERSTATEMENT', 'PRECISION_OR_DEGREE_EXTRAPOLATION'],
 		},
 		{
 			file: resolve(FIXTURES_DIR, 'risky-empirical.md'),
 			expectCategories: ['SCIENTIFIC_OR_HISTORICAL_OVERSTATEMENT'],
-			expectNone: [],
+			expectNone: ['PRECISION_OR_DEGREE_EXTRAPOLATION'],
+		},
+		{
+			file: resolve(FIXTURES_DIR, 'risky-precision-degree.md'),
+			expectCategories: ['PRECISION_OR_DEGREE_EXTRAPOLATION'],
+			expectNone: ['PREVALENCE_OR_CONSENSUS', 'ANONYMOUS_AUTHORITY', 'SCIENTIFIC_OR_HISTORICAL_OVERSTATEMENT'],
 		},
 		{
 			file: resolve(FIXTURES_DIR, 'neutral-observational.md'),
@@ -152,6 +171,7 @@ function runSelfTest() {
 				'PREVALENCE_OR_CONSENSUS',
 				'ANONYMOUS_AUTHORITY',
 				'SCIENTIFIC_OR_HISTORICAL_OVERSTATEMENT',
+				'PRECISION_OR_DEGREE_EXTRAPOLATION',
 			],
 		},
 	];
