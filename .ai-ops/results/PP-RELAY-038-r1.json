@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Published src/content/blog/beginner/long-head-line-meaning.md (backlog item #12), a bounded beginner companion article on long head line meaning. Core claim is Benham's verified quotation that head line length shows 'abundant mentality' with the kind of mind estimated separately from character/color, framed as breadth of mental range rather than intelligence/IQ. Length is defined comparatively (relative to palm width), not by a fixed measurement or anatomical cutoff. No new combination readings synthesized; article explicitly defers endpoint/slope/hand-shape combinations to the parent head-line guide. Added one bounded reciprocal link from head-line.md's Length section to the new article, mirroring the existing short-head-line-meaning cross-link. Updated docs/editorial-backlog.md item #12 status, publication count (63->64), and the head-line cross-link inventory row.",
-  "pr_number": null,
+  "pr_number": 59,
   "verification": [
     "npm run build (passed, 109 pages incl. long-head-line-meaning)",
     "npm run content-audit (passed after correcting the Published count in docs/editorial-backlog.md from 63 to 64; 64 blog posts and 25 lessons valid)",
