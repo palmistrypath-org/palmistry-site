@@ -65,18 +65,16 @@ jobs:
             TASK_ID="PR #${PR_NUMBER}"
           fi
 
-          TEXT=$(cat <<EOF
-READY_FOR_DIRECTOR
-DIVISION: Palmistry Path
-PROJECT: Palmistry Path
-TASK: ${TASK_ID}
-RESULT: ${RESULT}
-CANONICAL: ${CANONICAL}
-HUMAN_ACTION_REQUIRED: false
-
-${NOTE}
-EOF
-          )
+          TEXT="$(printf '%s\n' \
+            'READY_FOR_DIRECTOR' \
+            'DIVISION: Palmistry Path' \
+            'PROJECT: Palmistry Path' \
+            "TASK: ${TASK_ID}" \
+            "RESULT: ${RESULT}" \
+            "CANONICAL: ${CANONICAL}" \
+            'HUMAN_ACTION_REQUIRED: false' \
+            '' \
+            "${NOTE}")"
 
           PAYLOAD="$(jq -n --arg text "$TEXT" '{text: $text}')"
           curl --fail-with-body \
