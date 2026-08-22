@@ -52,6 +52,7 @@ The task branch is the review surface. Main is the gate.
 - Agents may implement, test, commit, and push work on non-`main` task branches without a separate user approval step.
 - **Pushing a feature branch is not approval to merge.** Never merge to `main`; it stays protected by independent user/ChatGPT review.
 - Pause mid-task only for: an unresolved product/editorial decision, source evidence insufficient for a material claim, scope that would need to expand substantially, an unsafe or unresolved Git state, or a conflict with an approved durable decision. Minor wording choices and routine source-safe editing are not pause conditions.
+- For source-heavy editorial work a pre-draft/source plan is still appropriate, but approve related items as one work packet rather than one approval per file.
 - Prefer coherent work waves of 2–3 substantial objectives. Keep independently reviewable work in separate commits or branches.
 - Parallel agents must use non-overlapping files or isolated worktrees/branches.
 - Several completed branches/PRs may be reviewed together before merge.
