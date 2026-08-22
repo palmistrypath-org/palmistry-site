@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-041",
+  "revision": 3,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Added src/content/blog/beginner/straight-head-line-palmistry.md, the Straight vs Curved Head Line companion article, drafted fresh directly against the Director-verified Benham evidence boundary at .ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md rather than reusing the canonical Head Line lesson's prose as proof. Article covers only: a straight-running head line attributed to Benham as practical mentality, and a head line sloping toward the Mount of Luna attributed to Benham as imagination and a departure from purely material thought, both kept narrow and non-deterministic. Benham's writer/poet examples among sloping lines are mentioned as historical examples only; the article explicitly states this does not establish a monotonic 'steeper = more creative' rule and names that exact overstatement as a corrected myth, per the required revision-3 remediation. No fixed angle/zone/average cutoff, prevalence/consensus language, vague anonymous authority, invented combination reading, or clinical/insanity language was introduced. Updated docs/source-verification-log.md with a full claim-by-claim disposition, docs/CHANGELOG.md, and docs/editorial-backlog.md (item 13 marked published, slug corrected to match the task-packet-specified filename, published count 64 to 65).",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-041-straight-head-line-r3",
+  "base_commit": "ec13d4f57dc482ee189e357543e3a24f33d7e09d",
+  "changed_paths": [
+    "src/content/blog/beginner/straight-head-line-palmistry.md",
+    "docs/source-verification-log.md",
+    "docs/editorial-backlog.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-041-r3.json"
+  ],
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/straight-head-line-palmistry.md — 2 findings during drafting (PREVALENCE_OR_CONSENSUS: 'rarely', 'generally'), both reworded to remove the frequency/consensus framing entirely; 0 findings on the final file",
+    "npm run build — pass, 110 pages built (/blog/beginner/straight-head-line-palmistry/ route confirmed in output)",
+    "npm run content-audit — pass, 65 blog posts and 25 lessons valid (after correcting docs/editorial-backlog.md's published-count line, which the audit failed on before that fix)",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md — Director-verified against William G. Benham, The Laws of Scientific Hand Reading (1900), Part Second, chapter on the Line of Head. Establishes: straight head line = practical mentality (supported); sloping-to-Luna head line = imagination, departure from purely material thought (supported); writer/poet examples among sloping lines are Benham's illustrative observations, not a monotonic degree rule (explicitly not established); clinical/insanity language is unsafe for this article and not needed."
+    ],
+    "external_access": "None attempted; the controlling evidence note was already independently verified and recorded by the Director before this revision began, resolving the source-access gate that caused revision 2's HUMAN_REQUIRED.",
+    "canonical_lesson_used_as_proof": "No. The canonical lessons/lines/03-head-line.mdx lesson was read only for terminology/navigation consistency (e.g. 'Mount of Luna' naming convention); every interpretive claim in the new article is sourced to the Director evidence note directly, per the task's explicit instruction not to reuse the lesson as proof."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Prevalence/consensus: the claim-risk heuristic's two initial findings ('rarely' describing how head lines run generally, and 'generally' trailing a sentence about mental strength) were both reworded to remove the frequency/consensus framing rather than substituted with a synonym; a manual re-read for the same failure-mode words the heuristic's word list misses in prior tasks ('further', 'consistently', 'typically', 'usual', 'common') found no additional instances. Scientific/historical: every interpretive claim (straight = practical, sloping = imagination, writer/poet examples) is attributed to Benham by name and traced to the evidence note; no claim exceeds what the note authorizes, and no monotonic degree-scaling claim is stated or implied — the article explicitly names and rejects that exact overstatement as a myth. Combination readings: the 'Path in context' section explicitly separates path from length, depth/clarity, and endpoint, links to the relevant companion articles for each, and states plainly that Palmistry Path's approved sources do not set out a specific combined reading for path together with those features, so none is asserted. Vague attribution: no 'modern palmists'/'some writers'/'experts'/unnamed-tradition phrasing; every interpretive claim names Benham specifically. Three drafting-stage references to 'the sources this article draws from' (plural, though only one source is cited) were reworded to 'Benham's reading' for precision. Quotation fidelity: no quotation marks are used anywhere in the article; all Benham content is paraphrased at the level the evidence note supports. Precision/degree extrapolation: the 'Telling the two apart' section explicitly states there is no fixed angle or zone boundary between straight and sloping, and path is framed as a comparative reading only. Observation vs. interpretation: 'Telling the two apart' is pure observation guidance, 'What it's traditionally associated with' is Benham's historical interpretation (explicitly attributed), and 'Path in context'/'Common myths' are Palmistry Path's own editorial framing, kept structurally distinguishable. Safety boundaries: no medical, legal, financial, deterministic-relationship, or predictive-science claim was introduced."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the task packet, state.json, CURRENT_TASK.md mirror, and the Director evidence note before drafting",
+      "Reviewed the published short/long head-line companion articles and the article template for structural convention, and the canonical lesson's path/slope section only for terminology consistency (Mount of Luna naming), not as evidentiary content",
+      "Drafted the article directly against the evidence note's claim boundary, then ran the claim-risk heuristic and manually reworded the two flagged sentences",
+      "Manually re-read the complete final article against every source-sensitive preflight category before selecting READY_FOR_REVIEW",
+      "Noted, but explicitly did not fix (out of authorized scope), pre-existing unsupported degree-scaling wording found in the separate blog/beginner/head-line.md file while reading it for the reciprocal-link check"
+    ],
+    "validation": [
+      "npm run audit:claim-risk (targeted)",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "node_modules were not present in the container; ran npm ci to enable build/audit commands. Local main had diverged from origin/main at session start (local main at c9abf2b 'relay: dispatch PP-RELAY-001'); after git fetch origin, origin/main updated to ec13d4f, exactly matching the working tree already checked out (and the dispatch payload's stated state commit). Per AGENTS.md's clean-divergence recovery path, local main was left untouched and the Relay task branch was created directly from the verified checkout at ec13d4f (== origin/main). No article file existed on main going into this task: revision 1's draft and revision 2's (non-)draft were never merged, so this revision authored the file fresh rather than editing an existing one."
+  }
+}
