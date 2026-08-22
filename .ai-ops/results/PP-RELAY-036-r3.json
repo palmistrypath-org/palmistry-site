@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Applied the one authorized revision-3 remediation to src/content/blog/beginner/via-lascivia-palmistry.md: removed the unverified translation/etymology gloss 'roughly, a path of excess or wanton way' for 'Via Lascivia', which cumulative Director review of PR #56 (revision 2) found outside the controlling evidence boundary. Replaced it with non-translation wording that stays inside the evidence note (Benham connects the historical name to an older excess/surplus-energy reading, explicitly not a verified translation of the Latin). Manually re-inspected the full final article against every source-sensitive category and found no other translation/etymology, prevalence, consensus, comparative-strength, or invented-combination issue; all revision-2 corrections (Benham-specific naming attribution, no modern prevalence/universality claim, no 'just as easily' comparative claim) are preserved unchanged and no other content, structure, or scope changed.",
-  "pr_number": null,
+  "pr_number": 57,
   "branch": "claude/relay-PP-RELAY-036-via-lascivia-r3",
   "base_commit": "69771a83eb481257388821a69c7bde303450f143",
   "changed_paths": [
