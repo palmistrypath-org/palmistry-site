@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-037",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Bounded remediation of src/content/blog/beginner/short-head-line-meaning.md per revision 2: removed/narrowed four unsupported prevalence/consensus phrases ('popular palmistry most frequently distorts', 'most commonly distorted', 'generally treated as short', 'rarely the most decisive one on its own'), replaced vague-authority framing ('the tradition warns against', 'the careful tradition says', 'The tradition does not treat...', 'The tradition reads length...') with named Benham/Gettings attribution or neutral Palmistry Path editorial wording, and narrowed the source footer from all five house sources to only Benham and Gettings, the two sources actually consulted/supporting the retained claims. Preserved the accepted structure, navigation, core interpretation, and verified Benham quotation. No unrelated head-line interpretations, reciprocal link, or backlog bookkeeping changed.",
+  "pr_number": 58,
+  "verification": [
+    "npm run build",
+    "npm run content-audit",
+    "npm run audit:all",
+    "npm run audit:claim-risk -- src/content/blog/beginner/short-head-line-meaning.md",
+    "git diff --check"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Re-ran the full preflight against the final revision-2 prose, not only the four named sentences. All four packet-named prevalence/superlative phrases were removed or rewritten without frequency/ranking language. Did not treat the identical unsourced sentence already present in 03-head-line.mdx ('popular palmistry most frequently distorts') as evidence for the article's own claim, per remediation item 3; it was independently removed here. All four vague-authority 'the tradition says/warns/does not treat/reads' constructions were replaced with explicit Benham/Gettings attribution or neutral editorial framing ('this article measures...', 'this article treats...'); retained 'traditionally associated with' phrasing elsewhere in the article is the AGENTS.md-endorsed grounded-phrasing convention, not an anonymous-authority assertion, and was left unchanged as out of the named remediation scope. Source footer narrowed to Benham and Gettings only -- Cheiro, West, and Fincham are not named or drawn on anywhere in the article body, so listing them implied unverified support and was removed. The two claim-risk PREVALENCE_OR_CONSENSUS flags remaining after the edit ('most alarming' describing a beginner's reaction, and 'ranging widely across many' describing the long-line mental-style analogy already accepted in revision 1) are reader-framing/idiomatic phrasing, not frequency or consensus claims about palmistry practice, and were manually dispositioned as harmless. Quotation fidelity, combination-reading, and safety-boundary checks are unchanged from revision 1 and were re-verified: the two quoted phrases ('abundant mentality', 'kind to be estimated by the character and color of the line') remain verbatim-verified against docs/source-verification-log.md line 409; the 'Length in context' section still explicitly declines to assert an unsupported combination reading; the article continues to explicitly reject the short-line/low-intelligence and IQ inferences rather than asserting them, with no medical, legal, financial, or predictive-science claim introduced."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "grep of source lesson, companion article, and source-verification log for prevalence/authority wording",
+      "manual claim-risk heuristic disposition",
+      "manual sentence-level rewrite of four named remediation items plus one same-category vague-authority instance"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all (links, images, schema, indexability, accessibility)",
+      "npm run audit:claim-risk -- src/content/blog/beginner/short-head-line-meaning.md",
+      "git diff --check"
+    ],
+    "notes": "Startup gate hit the documented clean-divergence condition again: local main (c9abf2b) had no merge base with origin/main (c12eaf57dd763760d45143227c6c75b96bc36d4f, matching the state.json/dispatch-hint commit SHA). Local main was left untouched. The revision 2 task branch was built on the existing claude/relay-PP-RELAY-037-short-head-line-meaning branch (the single existing Relay review surface, PR #58) by merging verified origin/main into it to bring in the revision 2 dispatch/state files before making the article edits, per the packet's instruction to update PR #58 rather than open a duplicate PR."
+  }
+}

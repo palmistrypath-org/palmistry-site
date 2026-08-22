@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-037",
+  "revision": 3,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Bounded cumulative remediation of src/content/blog/beginner/short-head-line-meaning.md per revision 3: removed the four instances of the unsupported precise 'ending before the central zone of the palm' cutoff (in the length-confirmation guidance, the short-confirmation summary sentence, and two FAQ answers) and replaced each with comparative/observational wording -- 'ends noticeably earlier across the palm than a long line's reach toward or into the outer half' -- anchored to the approved head-line lesson's own description of a long line ('extends well across the palm toward or into the outer half'), per remediation item 2. The FAQ measurement answer now explicitly states there is no fixed measurement, zone, or threshold in the sources this site draws from. Did not treat 03-head-line.mdx's own unsourced 'central zone' phrasing as evidence for the article's claim, per the packet's 'Why this task' finding. No other precise-measurement, fixed-anatomical-zone, or categorical-threshold wording was found in a re-check of the rest of the article. Preserved the accepted revision-2 corrections, structure, navigation, core interpretation, verified Benham quotation, reciprocal link, and backlog bookkeeping. No unrelated head-line interpretations changed.",
+  "pr_number": 58,
+  "verification": [
+    "npm run build",
+    "npm run content-audit",
+    "npm run audit:all",
+    "npm run audit:claim-risk -- src/content/blog/beginner/short-head-line-meaning.md",
+    "git diff --check"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Re-ran the full preflight against the final revision-3 prose. The four 'central zone' cutoff instances named in the packet were rewritten as comparative/observational statements referencing the approved lesson's own 'outer half' long-line description; no measurement, inch/centimetre value, or fixed anatomical zone was introduced in their place, and the FAQ answer now says so explicitly. Re-checked the rest of the article for equivalent unsupported precision (fixed measurement, exact zone, categorical threshold); the only remaining descriptive phrase, 'well short of the outer edge of the palm' in the intro, is scene-setting about the myth's appeal rather than a rule-defining cutoff and was left unchanged. The two claim-risk PREVALENCE_OR_CONSENSUS flags remaining after the edit ('most alarming' describing a beginner's reaction, and 'ranging widely across many' describing the long-line mental-style analogy) are unchanged from revision 2, are reader-framing/idiomatic phrasing rather than frequency or consensus claims about palmistry practice, and remain manually dispositioned as harmless per the revision-2 result. Vague-anonymous-authority and source-footer scope corrections from revision 2 were re-verified as still in place and not reintroduced. Quotation fidelity, combination-reading, and safety-boundary checks are unchanged from revision 2 and were re-verified: the two quoted phrases ('abundant mentality', 'estimated by the character and color of the line') remain verbatim substrings of the verified Benham wording and were not touched; the 'Length in context' section still explicitly declines to assert an unsupported combination reading; the article continues to explicitly reject the short-line/low-intelligence and IQ inferences rather than asserting them, with no medical, legal, financial, deterministic-relationship, or predictive-science claim introduced; the article does not imply that line length alone determines overall mental capacity."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "grep of the article, approved head-line lesson/blog, and source-verification log for 'central zone'/'zone'/measurement wording",
+      "manual claim-risk heuristic disposition",
+      "manual sentence-level rewrite of the four named 'central zone' instances"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all (links, images, schema, indexability, accessibility)",
+      "npm run audit:claim-risk -- src/content/blog/beginner/short-head-line-meaning.md",
+      "git diff --check"
+    ],
+    "notes": "Startup gate passed on a clean local main; origin/main fast-forwarded normally to the state.json/dispatch-hint commit (bad4725acd1bc3b9523775d6e87f98bcb7a8f1f8). No merge of main into the relay branch was needed for this revision. The revision 3 work was built directly on the existing claude/relay-PP-RELAY-037-short-head-line-meaning branch (the single existing Relay review surface, PR #58) per the packet's instruction to update PR #58 rather than open a duplicate PR."
+  }
+}

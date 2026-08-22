@@ -6,7 +6,7 @@
 
 ## Status
 
-**Published:** 62 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019. Item 4 (`forked-head-line-meaning`) was already live on `main` before PP-RELAY-020 but missing from this count; its backlog status is corrected, not counted as new. Item 5 (`phalanges-palmistry`) shipped 2026-08-19; see PP-RELAY-020 (49 → 50). Item 6 (`is-palmistry-real`) shipped 2026-08-19; see PP-RELAY-021 (50 → 51). Item 7 (`short-heart-line-meaning`) shipped 2026-08-19; see PP-RELAY-022 (51 → 52). Item 10 (`fate-line-starting-points`) shipped 2026-08-19; see PP-RELAY-023 (52 → 53). Reconciled 2026-08-20 against `npm run content-audit` (60 valid blog posts currently in `src/content/blog/`): this backlog only tracked SEO-roadmap items and had drifted from the site's actual published count; corrected 53 → 60 with no new articles counted as shipped by this reconciliation — see PP-RELAY-025. Item 9 (`ring-of-solomon-palmistry`) shipped 2026-08-21; see PP-RELAY-035 (60 → 61). Item 8 (`via-lascivia-palmistry`) shipped 2026-08-22; see PP-RELAY-036 revision 2 (61 → 62).
+**Published:** 63 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019. Item 4 (`forked-head-line-meaning`) was already live on `main` before PP-RELAY-020 but missing from this count; its backlog status is corrected, not counted as new. Item 5 (`phalanges-palmistry`) shipped 2026-08-19; see PP-RELAY-020 (49 → 50). Item 6 (`is-palmistry-real`) shipped 2026-08-19; see PP-RELAY-021 (50 → 51). Item 7 (`short-heart-line-meaning`) shipped 2026-08-19; see PP-RELAY-022 (51 → 52). Item 10 (`fate-line-starting-points`) shipped 2026-08-19; see PP-RELAY-023 (52 → 53). Reconciled 2026-08-20 against `npm run content-audit` (60 valid blog posts currently in `src/content/blog/`): this backlog only tracked SEO-roadmap items and had drifted from the site's actual published count; corrected 53 → 60 with no new articles counted as shipped by this reconciliation — see PP-RELAY-025. Item 9 (`ring-of-solomon-palmistry`) shipped 2026-08-21; see PP-RELAY-035 (60 → 61). Item 8 (`via-lascivia-palmistry`) shipped 2026-08-22; see PP-RELAY-036 revision 2 (61 → 62). Item 11 (`short-head-line-meaning`) shipped 2026-08-22; see PP-RELAY-037 (62 → 63).
 
 **This document:** 50 scored future article ideas, grouped into Next 10 / Next 25 / Later.
 
@@ -196,7 +196,7 @@ These build out the content clusters, fill topical gaps, and support monetisatio
 
 | # | Title | Slug | T | C | A | D | U | P |
 |---|---|---|---|---|---|---|---|---|
-| 11 | Short Head Line Meaning | `short-head-line-meaning` | 3 | 2 | 3 | 2 | 3 | **9** |
+| 11 | ~~Short Head Line Meaning~~ (published 2026-08-22) | `short-head-line-meaning` | 3 | 2 | 3 | 2 | 3 | **9** |
 | 12 | Long Head Line Meaning | `long-head-line-meaning` | 3 | 2 | 3 | 2 | 3 | **9** |
 | 13 | Straight vs Curved Head Line in Palmistry | `straight-curved-head-line` | 3 | 2 | 3 | 2 | 3 | **9** |
 | 14 | Broken Head Line Meaning | `broken-head-line-meaning` | 3 | 2 | 4 | 2 | 3 | **10** |
@@ -489,7 +489,7 @@ When Group 1 articles are published, update these existing articles to add links
 
 | Existing article | Add link to |
 |---|---|
-| `head-line` | `forked-head-line-meaning`, `broken-head-line-meaning` (#4, #14) when published |
+| `head-line` | `forked-head-line-meaning` (#4, done 2026-08-19); `short-head-line-meaning` (#11, done 2026-08-22); `broken-head-line-meaning` (#14) when published |
 | `heart-line` | `short-heart-line-meaning` (#7, done 2026-08-19); `long-heart-line-meaning` (#15) when published |
 | `life-line` | `faint-life-line-meaning`, `curved-life-line-meaning` (#16, #17) |
 | `fate-line` | `fate-line-starting-points` (#10, done 2026-08-19); `forked-fate-line-meaning`, `broken-fate-line-meaning` (#18, #19) when published |
