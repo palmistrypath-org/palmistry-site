@@ -6,7 +6,7 @@ cluster: "line-variations"
 relatedLesson: "/learn/lines/03-head-line"
 ---
 
-A short head line is one of the features beginners notice fastest on their own hand — and one of the most alarming, because the myth attached to it is a familiar one: that a short head line means limited intelligence. Seeing the line end early, well short of the outer edge of the palm, invites exactly that unwelcome conclusion. That is the oversimplification the tradition warns against.
+A short head line is one of the features beginners notice fastest on their own hand — and one of the most alarming, because the myth attached to it is a familiar one: that a short head line means limited intelligence. Seeing the line end early, well short of the outer edge of the palm, invites exactly that unwelcome conclusion. Benham and Gettings' reading of length, covered below, does not support that conclusion.
 
 If you are working through the head line for the first time, the main [head line guide](/blog/beginner/head-line/) covers the full range of its traditional associations — starting point, path, depth, endpoint, and the writer's fork — and provides the context that makes any individual feature more useful. This article focuses specifically on length, and on what a genuinely short line does and does not suggest.
 
@@ -32,9 +32,9 @@ Once you've confirmed the line is genuinely short — ending clearly before the 
 
 ## What it's traditionally associated with
 
-Length is one of the variables the head line lesson singles out for its own dedicated observation, alongside the line's origin, its path, its depth and clarity, and its endpoint. Of all of them, length is the one popular palmistry most frequently distorts.
+Length is one of the variables the head line lesson singles out for its own dedicated observation, alongside the line's origin, its path, its depth and clarity, and its endpoint. This article focuses on length because it is the variable behind the length-equals-intelligence myth addressed below.
 
-The simplistic gloss — that a short head line means limited intelligence — is not what the careful tradition says. Benham, writing in *The Laws of Scientific Hand Reading* (1900), frames length as showing "abundant mentality," but is explicit that the *kind* of mind is "estimated by the character and color of the line" rather than by length on its own. Benham and Gettings both read a shorter head line as indicating a more focused, direct, and efficient mental approach: less range, but more concentration — a mind that selects and commits to a line of thinking rather than ranging widely across many. It describes a different style of thinking, not a deficiency of it.
+The simplistic gloss — that a short head line means limited intelligence — is not what Benham and Gettings' reading of length supports. Benham, writing in *The Laws of Scientific Hand Reading* (1900), frames length as showing "abundant mentality," but is explicit that the *kind* of mind is "estimated by the character and color of the line" rather than by length on its own. Benham and Gettings both read a shorter head line as indicating a more focused, direct, and efficient mental approach: less range, but more concentration — a mind that selects and commits to a line of thinking rather than ranging widely across many. It describes a different style of thinking, not a deficiency of it.
 
 Put another way: a long head line is traditionally read for breadth — a mind that reaches across subjects and holds complexity. A short one is read for concentration — a mind that narrows its focus and works efficiently within that narrower range. Neither is read as better than the other in the sources this site draws from; they describe different mental styles.
 
@@ -50,7 +50,7 @@ A short line is not read alone. The head line lesson treats length as one of sev
 
 ## Common myths and oversimplifications
 
-**"A short head line means limited intelligence."** This is the central myth this article exists to correct. Benham and Gettings both read shortness as a matter of mental style — focused and concentrated rather than wide-ranging — not as a measure of intelligence. The tradition does not treat head line length as an IQ reading.
+**"A short head line means limited intelligence."** This is the central myth this article exists to correct. Benham and Gettings both read shortness as a matter of mental style — focused and concentrated rather than wide-ranging — not as a measure of intelligence, and neither treats head line length as an IQ reading.
 
 **"A short head line means someone can't think deeply about complex things."** The careful reading is concentration rather than limitation: a mind that commits to fewer lines of thought and works them efficiently. That is a different claim from an inability to engage with complexity, and the sources used here do not support the stronger claim.
 
@@ -62,18 +62,18 @@ A short line is not read alone. The head line lesson treats length as one of sev
 Traditionally, a short head line — one ending before the central zone of the palm — is associated with a focused, direct, and efficient mental approach: a mind that concentrates rather than ranges widely. It does not indicate limited intelligence.
 
 **Does a short head line mean lower intelligence?**
-No. Benham and Gettings both read length as describing a style of thinking — concentrated versus broad-ranging — rather than a measure of intelligence. This is one of the most commonly distorted readings in popular palmistry.
+No. Benham and Gettings both read length as describing a style of thinking — concentrated versus broad-ranging — rather than a measure of intelligence.
 
 **How short does the head line need to be to count as "short"?**
-The tradition reads length relative to the palm itself: a line that stops before reaching the central zone of the palm is generally treated as short. There is no fixed measurement in inches or centimetres.
+This article measures length relative to the palm itself, as explained above: a line that stops before reaching the central zone of the palm is treated as short. There is no fixed measurement in inches or centimetres in the sources this site draws from.
 
 **Is a short head line the same as a broken head line?**
 No. A break is a gap where the line stops and restarts, with a visible interruption. A short line simply ends earlier and does not resume. The two are distinct features and are not read the same way.
 
 ## What comes next
 
-Length is one of several variables the head line lesson covers — alongside origin, path, depth, and endpoint — and it is rarely the most decisive one on its own. The main [head line guide](/blog/beginner/head-line/) walks through the rest of those variables in full, and the [head line lesson](/learn/lines/03-head-line) offers a guided practice for observing all of them on your own hand before drawing any conclusions.
+Length is one of several variables the head line lesson covers — alongside origin, path, depth, and endpoint — and this article treats it as one observation among several rather than a standalone reading. The main [head line guide](/blog/beginner/head-line/) walks through the rest of those variables in full, and the [head line lesson](/learn/lines/03-head-line) offers a guided practice for observing all of them on your own hand before drawing any conclusions.
 
 ---
 
-*Sources consulted: Cheiro, Palmistry for All (1916); William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965); Peter West, The Complete Illustrated Guide to Palmistry (1998); Johnny Fincham, The Spellbinding Power of Palmistry (2005).*
+*Sources consulted: William G. Benham, The Laws of Scientific Hand Reading (1900); Fred Gettings, The Book of the Hand (1965).*
