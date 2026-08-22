@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Revision 3 (PR #64) was never merged to main, so this task started from that branch's content and applied the authorized revision-4 remediation on top of it before merging to main for the first time. Removed the unsupported statement that head-line depth/clarity signifies 'focus and concentration' (not established by the controlling evidence note, .ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md, which covers only direction/path); the 'Path in context' section now states depth/clarity is a separate feature covered in the main head line guide without assigning it a meaning. Narrowed 'read the direction of the head line as one of its more telling features' (not directly established by the evidence note) to 'associated the direction of the head line with different mental tendencies.' No other revision-3 wording was reopened: the accepted straight/practical and sloping/imagination evidence boundary, the corrected myths, and the FAQ content are unchanged and re-verified against the evidence note. Updated docs/source-verification-log.md with a revision-4 claim-by-claim disposition table and docs/CHANGELOG.md with a revision-4 entry; docs/editorial-backlog.md carried forward unchanged from revision 3 since this is the first merge of the article to main.",
-  "pr_number": null,
+  "pr_number": 65,
   "branch": "claude/relay-PP-RELAY-041-straight-head-line-r4",
   "base_commit": "5327fd489e70c9a7c8c843e61f31145b1fcdd6dd",
   "changed_paths": [
