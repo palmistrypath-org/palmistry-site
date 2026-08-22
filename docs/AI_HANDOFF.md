@@ -433,3 +433,18 @@ review gate: pre-draft report, write to file, self-review, validation, then comm
 and push to the task branch. Merging still needs the user. Start from a clean
 context if possible (`/clear`), reconstructing from Git plus targeted canonical
 docs rather than chat history.
+
+**2026-08-22 (Relay PP-RELAY-036, revision 3):** `beginner/via-lascivia-palmistry.md`
+is published on branch `claude/relay-PP-RELAY-036-via-lascivia-r3` (PR opened,
+unmerged, awaiting Director/human review) — the last remaining unpublished item
+from `docs/editorial-backlog.md`'s Next 10. Revision 2 (PR #56, still open,
+superseded by this PR) had returned `READY_FOR_REVIEW`, but cumulative Director
+review found one residual claim outside the Benham-only evidence boundary at
+`.ai-ops/evidence/PP-RELAY-036-benham-via-lascivia.md`: an unverified
+translation/etymology gloss (`roughly, a path of excess or wanton way`) for
+"Via Lascivia". Revision 3 removes exactly that phrase, replaces it with
+non-translation wording that stays inside the evidence note, and preserves all
+revision-2 corrections and article structure — no other content changed. See
+`CHANGELOG.md` and `CURRENT_STATE.md` for the full disposition. Per the Relay
+contract, this worker did not merge, did not close PR #56, and did not select
+a next task.
