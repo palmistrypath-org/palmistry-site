@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-036",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Published src/content/blog/beginner/via-lascivia-palmistry.md, the last remaining unpublished item from docs/editorial-backlog.md's Next 10 list, drafted within a Benham-only evidence boundary. The article covers the line's course near the base of the Mount of Moon/Luna toward the upper Mount of Moon near the percussion, the historical name's link to an older reading about surplus energy/excess on a 'sensual' hand type with Benham's own qualification that a non-sensual hand could express the same energy otherwise, and a cautious direct answer to the 'allergy line' search term: the verified source does not establish that alias or any medical meaning, so the published title poses it as a question rather than the backlog's originally assumed synonym. No medical/diagnostic claim, criminality content, prevalence claim, or invented combination reading was introduced. Backlog status/count and CURRENT_STATE blog-post counts were updated to match.",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-036-via-lascivia",
+  "base_commit": "9ca2f738a789ca0e47d89ed09dcf32a63251e55d",
+  "changed_paths": [
+    "src/content/blog/beginner/via-lascivia-palmistry.md",
+    "docs/editorial-backlog.md",
+    "docs/CURRENT_STATE.md",
+    "docs/CHANGELOG.md",
+    "docs/AI_HANDOFF.md",
+    ".ai-ops/results/PP-RELAY-036-r1.json"
+  ],
+  "verification": [
+    "npm run build — pass, 107 pages built (new /blog/beginner/via-lascivia-palmistry/ route confirmed in output)",
+    "npm run content-audit — pass, 62 blog posts and 25 lessons valid (matches the backlog's corrected Published count)",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "npm run audit:claim-risk -- src/content/blog/beginner/via-lascivia-palmistry.md — 1 finding on first pass ('often begins', an unsupported frequency claim about where the Mercury line starts), reworded to remove the frequency claim; a subsequent manual preflight pass also found quotation marks around an untranslated Latin gloss ('path of excess'/'wanton way') that was not independently verified as Benham's verbatim wording, so quote marks were removed and the gloss reworded as plain paraphrase; second and third audit:claim-risk passes returned 0 findings",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-036-benham-via-lascivia.md — Benham (The Laws of Scientific Hand Reading, 1900) recognizes the Via Lascivia as a sister line to the Mercury line, describes its slanting course from the inside/base of the Mount of Moon to the lower part of the upper Mount of Moon near the percussion, and gives its historical name's origin in an older reading linking surplus vitality/energy on a sensual hand type to lascivious behavior, explicitly qualified that a non-sensual hand could express the same energy in other activity instead. The note explicitly states the reviewed evidence does not use or establish an 'allergy line' label or any medical meaning."
+    ],
+    "external_access": "None attempted; the controlling source was already verified and recorded by the Director in the evidence note above before dispatch.",
+    "in_copyright_sources": "Gettings (1965), referenced in the original backlog notes for this article, remains unverified per the task packet and docs/editorial-backlog.md's standing open item on copyright-era quotations; not cited."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Prevalence: the only frequency-adjacent claim found by audit:claim-risk ('the Mercury line often begins' near the Mount of Luna) was reworded to remove the frequency assertion, since the evidence note does not support it; the article otherwise makes no claim about how common the Via Lascivia itself is. Historical/scientific claims: every interpretive statement (course, sister-line relationship, historical name origin, non-sensual-hand qualification) is directly traceable to the evidence note's 'verified safe claim boundary'; the medical-exclusion section states plainly that the reviewed source does not address health/allergy at all, per the evidence note's 'important exclusions' list. Combination readings: the article explicitly declines to extend the Mercury line's own health/business associations to the Via Lascivia beyond what Benham himself states, and introduces no reading involving other lines, mounts, or hand type beyond the single surplus-energy/hand-type qualification the evidence note authorizes. Vague attribution: an initial draft phrase ('earlier palmists described') was reworded to 'Benham's text describes' to avoid unattributed authority language, since the older reading is Benham's own account of a prior tradition, not an independent appeal to unnamed sources; no 'modern palmists'/'some writers'/'experts' phrasing appears anywhere. Claim-type separation: location/course and historical-name sections are explicitly Benham-attributed; the 'allergy line' and medical-safety framing is explicit Palmistry Path editorial guidance, kept in its own section and FAQ entries, visibly distinct from the historical material. Quotation fidelity: no quotation marks are used around any Benham content; a draft phrase quoting an untranslated Latin gloss was reworded to remove the quotation marks since the exact translation wording was not independently verified against Benham's edition, per the evidence note's paraphrase-only instruction; the Via Lascivia line name itself and the 'allergy line' search term are set in quotes only as the term/name being discussed, not as claimed Benham quotations. Safety boundaries: no medical, legal, financial, deterministic-relationship, criminality, or predictive-science claim is introduced; the article explicitly directs allergy/health questions to a qualified medical professional."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the PP-RELAY-036 task packet and evidence note before drafting",
+      "Read the structurally closest recent precedent article (ring-of-solomon-palmistry.md, also SOURCE_SENSITIVE, single-heavy-source, same cluster) plus mercury-line.md, mount-of-luna.md, and minor-lines-overview.md to match established voice/structure/linking conventions and identify safe link targets",
+      "Checked docs/editorial-backlog.md's item 8 entry for the originally planned title/notes, and deliberately diverged from the planned '(The Allergy Line)' title framing since it asserted the equivalence the evidence note says is unsupported",
+      "Drafted the article strictly within the Benham-only evidence boundary, omitting any content beyond what the evidence note's safe claim boundary authorizes",
+      "Ran scripts/audit-claim-risk.mjs against the changed file three times (before rewording, after the frequency-claim fix, after the quotation-fidelity fix) and manually dispositioned every finding plus the full 7-point SOURCE_SENSITIVE preflight against the final prose"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "npm run audit:claim-risk (targeted)",
+      "git diff --check"
+    ],
+    "notes": "Local main had no merge base with origin/main at session start (84 vs. 52 diverged commits — origin/main's history had been rewritten by the Relay/Director process ahead of this container's stale local ref). The working tree was clean with no uncommitted local work, so local main was reset to origin/main (9ca2f73, matching the dispatch payload's stated state commit) before branching, rather than left in a diverged state. node_modules were not present in the container; npm ci was run to enable build/audit commands, with no resulting package-lock.json or other incidental diff."
+  }
+}

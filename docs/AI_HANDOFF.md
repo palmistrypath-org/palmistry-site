@@ -433,3 +433,11 @@ review gate: pre-draft report, write to file, self-review, validation, then comm
 and push to the task branch. Merging still needs the user. Start from a clean
 context if possible (`/clear`), reconstructing from Git plus targeted canonical
 docs rather than chat history.
+
+**2026-08-22 (Relay PP-RELAY-036):** `beginner/via-lascivia-palmistry.md` is
+published on branch `claude/relay-PP-RELAY-036-via-lascivia` (PR opened,
+unmerged, awaiting Director/human review) — the last remaining unpublished
+item from `docs/editorial-backlog.md`'s Next 10. Sourced from a Benham-only
+evidence boundary (Gettings unverified, not used); see `CHANGELOG.md` and
+`CURRENT_STATE.md` for the full disposition. Per the Relay contract, this
+worker did not merge and did not select a next task.

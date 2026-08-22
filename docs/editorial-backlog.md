@@ -6,7 +6,7 @@
 
 ## Status
 
-**Published:** 61 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019. Item 4 (`forked-head-line-meaning`) was already live on `main` before PP-RELAY-020 but missing from this count; its backlog status is corrected, not counted as new. Item 5 (`phalanges-palmistry`) shipped 2026-08-19; see PP-RELAY-020 (49 → 50). Item 6 (`is-palmistry-real`) shipped 2026-08-19; see PP-RELAY-021 (50 → 51). Item 7 (`short-heart-line-meaning`) shipped 2026-08-19; see PP-RELAY-022 (51 → 52). Item 10 (`fate-line-starting-points`) shipped 2026-08-19; see PP-RELAY-023 (52 → 53). Reconciled 2026-08-20 against `npm run content-audit` (60 valid blog posts currently in `src/content/blog/`): this backlog only tracked SEO-roadmap items and had drifted from the site's actual published count; corrected 53 → 60 with no new articles counted as shipped by this reconciliation — see PP-RELAY-025. Item 9 (`ring-of-solomon-palmistry`) shipped 2026-08-21; see PP-RELAY-035 (60 → 61).
+**Published:** 62 blog posts (all 20 articles from the SEO roadmap's Near-Term Opportunities list are now live). Item 1 of the Next 10 below (`minor-lines-overview`) shipped 2026-08-19; see PP-RELAY-017. Item 2 (`reading-both-hands-palmistry`) shipped 2026-08-19; see PP-RELAY-018. Item 3 (`how-to-practice-palm-reading`) shipped 2026-08-19; see PP-RELAY-019. Item 4 (`forked-head-line-meaning`) was already live on `main` before PP-RELAY-020 but missing from this count; its backlog status is corrected, not counted as new. Item 5 (`phalanges-palmistry`) shipped 2026-08-19; see PP-RELAY-020 (49 → 50). Item 6 (`is-palmistry-real`) shipped 2026-08-19; see PP-RELAY-021 (50 → 51). Item 7 (`short-heart-line-meaning`) shipped 2026-08-19; see PP-RELAY-022 (51 → 52). Item 10 (`fate-line-starting-points`) shipped 2026-08-19; see PP-RELAY-023 (52 → 53). Reconciled 2026-08-20 against `npm run content-audit` (60 valid blog posts currently in `src/content/blog/`): this backlog only tracked SEO-roadmap items and had drifted from the site's actual published count; corrected 53 → 60 with no new articles counted as shipped by this reconciliation — see PP-RELAY-025. Item 9 (`ring-of-solomon-palmistry`) shipped 2026-08-21; see PP-RELAY-035 (60 → 61). Item 8 (`via-lascivia-palmistry`) shipped 2026-08-22; see PP-RELAY-036 (61 → 62).
 
 **This document:** 50 scored future article ideas, grouped into Next 10 / Next 25 / Later.
 
@@ -154,14 +154,14 @@ These articles have the highest priority scores and should be written before any
 
 ---
 
-#### 8. The Via Lascivia (Allergy Line)
+#### 8. The Via Lascivia — PUBLISHED 2026-08-22 (PP-RELAY-036)
 - **Slug:** `beginner/via-lascivia-palmistry`
-- **Title:** The Via Lascivia in Palmistry (The Allergy Line)
+- **Title:** The Via Lascivia in Palmistry (Is It the "Allergy Line"?)
 - **Primary keyword/intent:** "via lascivia palmistry" / "allergy line palmistry"
 - **Secondary keywords:** "line on the mount of luna", "via lascivia meaning"
 - **relatedLesson:** `/learn/advanced/01-minor-lines-overview`
-- **CTA angle:** Advanced module CTA
-- **Notes:** Identified in the SEO roadmap (Cluster H, minor lines) as a planned article. Gettings gives it good treatment. Low competition keyword — specific enough that Palmistry Path's article could rank quickly.
+- **CTA angle:** Advanced module CTA; also links to `mount-of-luna` and `mercury-line`
+- **Notes:** Published within a Benham-only evidence boundary (`The Laws of Scientific Hand Reading`, 1900) — Gettings was not independently verified for this task and was not used. The originally planned title/notes assumed "Allergy Line" was an established synonym; the Director's pre-dispatch source check found the verified Benham text does not establish that label or a medical allergy meaning, so the published title poses it as a question and the article states the gap directly rather than asserting an equivalence. Full evidence at `.ai-ops/evidence/PP-RELAY-036-benham-via-lascivia.md`.
 - **Cannibalization risk:** None.
 
 ---
