@@ -2,6 +2,12 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-08-22 - Canonical Head Line lesson, revision 2: residual claim-boundary corrections (Relay PP-RELAY-040 r2)
+- Director review of the revision-1 PR (#62) found four residual passages that, while no longer matching the automated heuristic's word list, still exceeded the approved evidence boundary: an unattributed cross-tradition consistency claim for path/slope, an unsupported "normal middle case" distribution claim for slope, a universalized endpoint-location claim contradicted by the lesson's own Length section, and a vague "popular palmistry gets wrong" anonymous-authority attribution.
+- Corrected all four in `src/content/lessons/lines/03-head-line.mdx` without reopening any other reviewed revision-1 wording; none was replaced with an equivalent unsupported synonym (`normal`, `usual`, `standard`, `generally`, `consistently`).
+- Full claim-by-claim disposition in `docs/source-verification-log.md` ("...revision 2").
+- Verified with `npm run audit:claim-risk -- src/content/lessons/lines/03-head-line.mdx` (same 9 findings as rev. 1, all previously dispositioned; none of the four edits introduces a new finding), `npm run build` (109 pages), `npm run content-audit`, `npm run audit:all`, and `git diff --check`.
+
 ## 2026-08-22 - Canonical Head Line lesson: source-integrity claim-boundary cleanup (Relay PP-RELAY-040)
 - Bounded SOURCE_SENSITIVE cleanup of `src/content/lessons/lines/03-head-line.mdx`, closing the `central zone` fixed-cutoff finding PP-RELAY-037/PP-RELAY-039 had already flagged as unresolved on `main`, plus the wider prevalence/ranking and monotonic degree-extrapolation wording the task packet asked to be independently re-swept.
 - Removed the unsupported `ending before it reaches the central zone of the palm` fixed geometric threshold, replacing it with the same palm-relative comparative framing already vetted in `beginner/short-head-line-meaning.md` (PP-RELAY-037 rev. 3).
