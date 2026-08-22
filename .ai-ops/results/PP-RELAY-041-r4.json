@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-041",
+  "revision": 4,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 3 (PR #64) was never merged to main, so this task started from that branch's content and applied the authorized revision-4 remediation on top of it before merging to main for the first time. Removed the unsupported statement that head-line depth/clarity signifies 'focus and concentration' (not established by the controlling evidence note, .ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md, which covers only direction/path); the 'Path in context' section now states depth/clarity is a separate feature covered in the main head line guide without assigning it a meaning. Narrowed 'read the direction of the head line as one of its more telling features' (not directly established by the evidence note) to 'associated the direction of the head line with different mental tendencies.' No other revision-3 wording was reopened: the accepted straight/practical and sloping/imagination evidence boundary, the corrected myths, and the FAQ content are unchanged and re-verified against the evidence note. Updated docs/source-verification-log.md with a revision-4 claim-by-claim disposition table and docs/CHANGELOG.md with a revision-4 entry; docs/editorial-backlog.md carried forward unchanged from revision 3 since this is the first merge of the article to main.",
+  "pr_number": 65,
+  "branch": "claude/relay-PP-RELAY-041-straight-head-line-r4",
+  "base_commit": "5327fd489e70c9a7c8c843e61f31145b1fcdd6dd",
+  "changed_paths": [
+    "src/content/blog/beginner/straight-head-line-palmistry.md",
+    "docs/source-verification-log.md",
+    "docs/CHANGELOG.md",
+    "docs/editorial-backlog.md",
+    ".ai-ops/results/PP-RELAY-041-r4.json"
+  ],
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/straight-head-line-palmistry.md — 0 findings",
+    "npm run build — pass, 110 pages built (/blog/beginner/straight-head-line-palmistry/ route confirmed in output)",
+    "npm run content-audit — pass, 65 blog posts and 25 lessons valid",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md — Director-verified against William G. Benham, The Laws of Scientific Hand Reading (1900). Establishes only direction/path meanings (straight = practical mentality; sloping-to-Luna = imagination); does not establish a depth/clarity meaning and does not rank direction among the line's 'more telling' features."
+    ],
+    "external_access": "None attempted; the controlling evidence note was already independently verified and recorded by the Director. This revision's remediation is a removal/narrowing of two phrases that exceeded the evidence note's boundary, not new source acquisition.",
+    "canonical_lesson_used_as_proof": "No. Not consulted for this revision; the two remediated phrases were checked only against the controlling evidence note."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Re-read the complete final article end to end against the source-sensitive preflight categories, not only the two flagged passages. Depth/clarity: the unsupported 'focus and concentration' meaning was removed; the sentence now only states depth/clarity is a separate feature and points to where it is covered, asserting no interpretation. 'More telling features': narrowed to the task-suggested factual attribution ('associated the direction of the head line with different mental tendencies'), removing the unsupported ranking/emphasis claim while keeping the attribution to Benham by name. Prevalence/consensus: no frequency or consensus wording found anywhere in the article, including in the two edited sentences. Scientific/historical: every remaining interpretive claim (straight = practical, sloping = imagination, writer/poet examples, no monotonic degree-scaling rule) matches the revision-3 disposition, re-verified against the evidence note and unchanged by this revision. Combination readings: the 'Path in context' section still separates path from length, depth/clarity, and endpoint and asserts no combined reading; removing the depth/clarity meaning did not introduce a new combination. Vague attribution: every interpretive claim in the article names Benham specifically; no anonymous-authority phrasing was introduced or found remaining. Quotation fidelity: no quotation marks are used anywhere in the article. Precision/degree extrapolation: unchanged from revision 3 — no fixed angle/zone/average, and the 'steeper slope = more creative' myth remains explicitly corrected, not asserted. Observation-vs-interpretation framing: unchanged structurally ('Telling the two apart' = observation; 'What it's traditionally associated with' = attributed historical interpretation; 'Path in context'/'Common myths' = Palmistry Path editorial framing). Safety boundaries: no medical, legal, financial, deterministic-relationship, or predictive-science claim is present."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the task packet, state.json, and CURRENT_TASK.md mirror to confirm revision-4 scope before implementation",
+      "Confirmed revision 3's PR #64 was never merged (article file absent from origin/main) and pulled the revision-3 content (article, docs/CHANGELOG.md, docs/editorial-backlog.md, docs/source-verification-log.md) from the still-open claude/relay-PP-RELAY-041-straight-head-line-r3 branch as the starting point for revision 4, verifying each brought-over doc diff against origin/main was purely additive before applying it",
+      "Applied only the two authorized remediation edits (depth/clarity meaning removed; 'more telling features' narrowed) without reopening any other revision-3 wording",
+      "Manually re-read the complete final article against every source-sensitive preflight category before selecting READY_FOR_REVIEW",
+      "Added a revision-4 CHANGELOG entry and a revision-4 claim-by-claim disposition section in docs/source-verification-log.md documenting the two corrected passages"
+    ],
+    "validation": [
+      "npm run audit:claim-risk (targeted)",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "node_modules were not present in the container; ran npm ci to enable build/audit commands. Local main had no merge base with origin/main at session start (persistent-checkout divergence). Per AGENTS.md's clean-divergence recovery path, local main was left untouched and the revision-4 branch was created directly from verified origin/main at 5327fd489e70c9a7c8c843e61f31145b1fcdd6dd, matching state.json's dispatched state commit and the routine dispatch payload. An open PR (#64) exists for revision 3's branch/content but not for revision 4; it was left untouched since closing/managing other Relay PRs is outside this worker run's authorized scope."
+  }
+}
