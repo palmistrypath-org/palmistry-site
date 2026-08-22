@@ -115,6 +115,16 @@ Every task packet must retain this exact parser-compatible identity structure ne
 
 and must explicitly include the durable-result contract below.
 
+### Worker checkout recovery
+
+Claude Code may reuse a persistent checkout whose clean local `main` has diverged from, or has no merge base with, the current `origin/main` after Relay/Director history changes. This is a known control-plane condition, not permission for a destructive cleanup.
+
+When the tree is clean and the expected remote/default branch are unambiguous, the worker may leave local `main` untouched and create the new designated task branch directly from verified `origin/main`, as specified in `AGENTS.md` and `.ai-ops/CLAUDE_ROUTINE_PROMPT.md`. The worker must not reset, rebase, force-update, delete, or overwrite local `main` merely to satisfy startup. The fallback should be recorded in the terminal result's execution notes. A dirty tree, ambiguous remote identity/default branch, or collision with existing task work still fails closed.
+
+### Dispatch acknowledgement status
+
+`.github/workflows/relay-dispatch.yml` publishes commit status context `relay-dispatch/claude-routine` on the `state.json` dispatch commit. `pending` means the workflow reached the routine call, `success` means the Claude Routine endpoint returned HTTP 2xx and accepted the dispatch request, and `failure` means the request failed or was rejected. This is transport acknowledgement only: it does not prove the worker completed startup or produced a branch/result/PR. Durable worker completion remains the result artifact/branch contract below.
+
 ## Durable worker-result contract
 
 Every worker run that passes startup must leave one terminal result artifact at:
