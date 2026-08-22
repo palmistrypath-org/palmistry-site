@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Published src/content/blog/beginner/straight-head-line-palmistry.md, the Straight vs Curved Head Line companion article (editorial backlog Article 13), covering the head line's path variable only. Sourced entirely from the already twice-Director-reviewed path/slope content in the canonical lessons/lines/03-head-line.mdx lesson (PP-RELAY-040), not from the older unreviewed 'Curvature and endpoint' section of beginner/head-line.md, which still carries unverified monotonic-degree wording out of this task's scope to fix. Added one reciprocal link sentence each to head-line.md, short-head-line-meaning.md, and long-head-line-meaning.md, and marked editorial backlog Article 13 published, correcting the published-post count from 64 to 65.",
-  "pr_number": null,
+  "pr_number": 63,
   "verification": [
     "npm run audit:claim-risk -- src/content/blog/beginner/straight-head-line-palmistry.md (2 findings, both PREVALENCE_OR_CONSENSUS on the same 'often read alongside creative or artistic inclination' hedge phrase already Director-reviewed and retained in the canonical mdx lesson under PP-RELAY-040; dispositioned as compliant on that precedent)",
     "npm run build (110 pages, up from 109)",
