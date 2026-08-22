@@ -1,0 +1,77 @@
+{
+  "schema_version": 3,
+  "task_id": "PP-RELAY-040",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Director review of the revision-1 PR (#62) found four residual passages in src/content/lessons/lines/03-head-line.mdx that, while no longer matching the automated claim-risk heuristic's word list, still exceeded the approved evidence boundary: (1) line 42 'and it is one that is consistently read across the Western tradition' asserted unattributed cross-tradition reading consistency for path/slope; (2) line 48 'a moderate downward slope is a normal middle case' replaced a removed frequency claim with an unsupported population-norm/distribution claim; (3) line 72 'It comes to a clear terminus somewhere in the outer half of the palm' turned the prior removed 'In most hands...' wording into an effectively universal anatomical/prevalence claim, one that also contradicts the lesson's own Length section (line 64), which allows a head line to stop 'somewhere in the middle' or end 'noticeably earlier'; (4) line 68 'A short head line is a reading popular palmistry gets wrong' attributed a behavior/error to the vague, unattributed population 'popular palmistry'. All four were corrected: (1) reworded to the plain direct observation 'This is a clearly observable variable in the head line', dropping the consensus claim entirely; (2) reworded to 'simply falls between the two', a positional statement rather than a distribution/norm claim; (3) reworded to the neutral observation instruction 'Look at where your head line comes to its terminus', asserting no fixed location; (4) reworded to the direct, unattributed corrective statement 'A short head line does not, on its own, indicate limited intelligence', with the now-redundant adjacent 'simplistic gloss... is not what the careful tradition says' sentence removed as duplicative once the direct statement carries the correction (the sourced Benham/Gettings sentence immediately after is unchanged). None of the four replacements introduces an equivalent unsupported synonym (no 'normal', 'usual', 'standard', 'generally', or 'consistently' was reintroduced). No other revision-1 wording, lesson structure, figures, or learning flow were touched. Full claim-by-claim disposition recorded in docs/source-verification-log.md under a new revision-2 section; a matching revision-2 entry was added to docs/CHANGELOG.md directly above the existing PP-RELAY-040 entry, which is unchanged and remains accurate to what it describes (the revision-1 diff).",
+  "pr_number": 62,
+  "branch": "claude/relay-PP-RELAY-040-head-line-claim-cleanup",
+  "base_commit": "1b97f708f62a1a4268cc8d132698d90bc0a6e72f",
+  "changed_paths": [
+    "src/content/lessons/lines/03-head-line.mdx",
+    "docs/source-verification-log.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-040-r2.json"
+  ],
+  "revision_2_findings_disposition": [
+    {
+      "finding": "line 42: 'one that is consistently read across the Western tradition'",
+      "disposition": "corrected",
+      "detail": "Unattributed cross-tradition consistency claim removed. Sentence now reads 'This is a clearly observable variable in the head line.' with no consensus claim of any kind."
+    },
+    {
+      "finding": "line 48: 'a moderate downward slope is a normal middle case'",
+      "disposition": "corrected",
+      "detail": "Unsupported norm/distribution wording replaced with the plain positional statement 'a moderate downward slope simply falls between the two'; no population-frequency or norm claim retained."
+    },
+    {
+      "finding": "line 72: 'It comes to a clear terminus somewhere in the outer half of the palm'",
+      "disposition": "corrected",
+      "detail": "Universalized endpoint-location claim removed. Sentence now reads 'Look at where your head line comes to its terminus.', asserting no fixed or majority location, consistent with the Length section's own allowance for lines ending earlier or in the middle."
+    },
+    {
+      "finding": "line 68: 'a reading popular palmistry gets wrong'",
+      "disposition": "corrected",
+      "detail": "Vague anonymous-population attribution removed. Sentence now states the corrective point directly and without attribution: 'A short head line does not, on its own, indicate limited intelligence.' The redundant adjacent sentence restating the same point via an unnamed 'simplistic gloss' was removed as duplicative; the sourced Benham/Gettings explanation immediately following is unchanged."
+    }
+  ],
+  "verification": [
+    "npm run audit:claim-risk -- src/content/lessons/lines/03-head-line.mdx -- 9 findings, identical to the set already dispositioned after revision 1; none of the four revision-2 edits appears among them, confirming no new heuristic-flagged wording was introduced",
+    "npm run build -- pass, 109 pages built",
+    "npm run content-audit -- pass, 64 blog posts and 25 lessons valid",
+    "npm run audit:all -- pass (links/orphans, images, schema, indexability, accessibility)",
+    "git diff --check -- clean",
+    "manual independent re-read of the complete final lesson (all 117 lines) against the SOURCE_SENSITIVE preflight, confirming no equivalent unsupported wording (via 'normal', 'usual', 'standard', 'generally', 'consistently', or otherwise) was introduced in place of the four removed claims, and that all other revision-1 corrections remain intact"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Prevalence/consensus: the two revision-2 prevalence/consensus findings (line 42 cross-tradition consistency; line 48 norm/distribution wording) were removed without reintroducing an equivalent synonym; the 9 remaining heuristic findings are unchanged from revision 1 and remain individually dispositioned in docs/source-verification-log.md. Scientific/historical: no scientific or historical continuity/chronology claim appears in this lesson; not applicable, unchanged from revision 1. Combination readings: no new combination of independently supported meanings was introduced by any of the four edits. Vague attribution: the one revision-2 vague-attribution finding ('popular palmistry gets wrong') was removed and replaced with a direct, unattributed statement of the site's own corrective point, per style-guide guidance that the site's own framing should be stated as its own rather than attributed to an unnamed population; no other vague anonymous-authority phrasing ('modern palmists', 'some writers', etc.) was introduced or remains. Quotation fidelity: no quotation marks were added, changed, or relied upon in any of the four edits; the file's existing quotation ('writer's fork') is untouched. Precision/degree extrapolation: none of the four edits introduces a graduated or monotonic degree-scaling claim. Observation-vs-interpretation framing: all four edits keep direct observation, traditional/historical interpretation, and Palmistry Path's own editorial framing distinguishable, consistent with the lesson's existing structure. Full claim-by-claim disposition table is in docs/source-verification-log.md under 'Canonical Head Line lesson claim-boundary cleanup, revision 2' (2026-08-22)."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "npm run audit:claim-risk heuristic scan (before/after, confirming no new findings)",
+      "manual independent re-read of the complete final lesson against the source-claim preflight",
+      "targeted Edit-tool prose changes to exactly the four Director-identified passages, no full-file rewrite",
+      "git merge of origin/main into the existing PP-RELAY-040 rev-1 PR branch (#62) to pick up Relay bookkeeping (state.json, task packet, CURRENT_TASK.md dispatch for revision 2) ahead of the content edit"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/lessons/lines/03-head-line.mdx",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Startup used the AGENTS.md clean-divergence recovery path: the working tree was clean, but local main had diverged from origin/main (84 vs 50 differing commits) with no safe fast-forward. Local main was left untouched; the designated revision-2 work was built on the existing open claude/relay-PP-RELAY-040-head-line-claim-cleanup branch (PR #62, still open and unmerged for revision 1) per the task packet's instruction to update the existing task branch/PR when practical, merging in verified origin/main (base_commit 1b97f708f62a1a4268cc8d132698d90bc0a6e72f) first. This updates PR #62 in place for revision 2 rather than opening a second PR for the same lesson; the PR title/body and Relay footer are updated to reflect revision 2 in the same push."
+  }
+}
