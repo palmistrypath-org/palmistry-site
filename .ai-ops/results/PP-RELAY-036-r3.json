@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-036",
+  "revision": 3,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Applied the one authorized revision-3 remediation to src/content/blog/beginner/via-lascivia-palmistry.md: removed the unverified translation/etymology gloss 'roughly, a path of excess or wanton way' for 'Via Lascivia', which cumulative Director review of PR #56 (revision 2) found outside the controlling evidence boundary. Replaced it with non-translation wording that stays inside the evidence note (Benham connects the historical name to an older excess/surplus-energy reading, explicitly not a verified translation of the Latin). Manually re-inspected the full final article against every source-sensitive category and found no other translation/etymology, prevalence, consensus, comparative-strength, or invented-combination issue; all revision-2 corrections (Benham-specific naming attribution, no modern prevalence/universality claim, no 'just as easily' comparative claim) are preserved unchanged and no other content, structure, or scope changed.",
+  "pr_number": 57,
+  "branch": "claude/relay-PP-RELAY-036-via-lascivia-r3",
+  "base_commit": "69771a83eb481257388821a69c7bde303450f143",
+  "changed_paths": [
+    "src/content/blog/beginner/via-lascivia-palmistry.md",
+    "docs/editorial-backlog.md",
+    "docs/CURRENT_STATE.md",
+    "docs/CHANGELOG.md",
+    "docs/AI_HANDOFF.md",
+    ".ai-ops/results/PP-RELAY-036-r3.json"
+  ],
+  "verification": [
+    "npm run build — pass, 107 pages built (/blog/beginner/via-lascivia-palmistry/ route confirmed in output)",
+    "npm run content-audit — pass, 62 blog posts and 25 lessons valid",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "npm run audit:claim-risk -- src/content/blog/beginner/via-lascivia-palmistry.md — 0 findings",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-036-benham-via-lascivia.md — Benham recognizes the named line, describes its course, treats it as a sister/chance line in the documented contexts, connects its historical name to period ideas about surplus energy/appetite/excess, and qualifies that a non-sensual hand could express the same surplus energy in other activity. The note does not verify a literal or approximate Latin translation of 'Via Lascivia'."
+    ],
+    "external_access": "None attempted; the controlling evidence note was already verified and recorded by the Director before this revision began.",
+    "in_copyright_sources": "Gettings (1965), referenced in the original backlog notes for this article, remains unverified; not cited."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Translation/etymology (the specific revision-3 remediation): the sentence now reads 'Benham's text connects the line's historical name to an older reading tradition he describes, one built around ideas of surplus energy and excess rather than a verified translation of the Latin name itself' — no literal/approximate translation is asserted, and the disclaimer is explicit. Prevalence: the only prevalence-adjacent sentence (Benham treating it as a chance line) is explicitly labeled 'not a modern prevalence claim about hands today', unchanged from revision 2. Historical/scientific claims: every interpretive statement is attributed specifically to Benham by name, matching the evidence note's safe boundary; no claim exceeds what the note authorizes. Combination readings: the 'in context' section explicitly declines to extend the Mercury line's own associations to this line and states the article does not invent a combined reading, unchanged from revision 2. Vague attribution: no 'modern palmists'/'some writers'/'experts' phrasing anywhere; all historical claims are attributed to Benham by name. Claim-type separation: the historical-name section and FAQ both explicitly separate Benham's period claim from Palmistry Path's own non-medical framing ('This site presents that as a historical claim... not a verified fact'). Quotation fidelity: no quotation marks are used around any Benham content; 'allergy line' and 'Via Lascivia' appear as labels/search terms, not source quotations, per the evidence note's paraphrase-only instruction. Safety boundaries: no medical, legal, financial, deterministic-relationship, criminality, or predictive-science claim; the article explicitly states palm markings cannot diagnose allergies or health conditions and directs readers to a medical professional."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the task packet, state.json, CURRENT_TASK.md mirror, and the controlling evidence note before editing",
+      "Located the revision-2 article on the unmerged origin/claude/relay-PP-RELAY-036-via-lascivia-r2 branch (PR #56) since the article does not exist on origin/main, and checked out that file plus its already-updated docs/editorial-backlog.md count onto the new revision-3 branch to preserve accepted revision-2 corrections and structure exactly, per the task's scope authorization to carry forward directly necessary tracking/docs from the unmerged prior revision",
+      "Made the single targeted edit removing the translation/etymology gloss and manually re-read the entire final article against every SOURCE_SENSITIVE preflight category before proceeding",
+      "Wrote fresh docs/CURRENT_STATE.md, docs/CHANGELOG.md, and docs/AI_HANDOFF.md entries describing the revision-3 fix specifically, rather than carrying forward the revision-2 branch's versions of those entries, since those described an unmerged revision-2 state (PR #56 still open) that this revision supersedes"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "npm run audit:claim-risk (targeted)",
+      "git diff --check"
+    ],
+    "notes": "Local main had diverged from origin/main with no common recent history at session start (84 vs. 50 different commits); the working tree was clean with no uncommitted local work, origin identity and origin/main's tip (69771a8...) matched the dispatch payload's stated state commit exactly, so per AGENTS.md's clean-divergence recovery path, local main was left untouched and the revision-3 branch was created directly from verified origin/main. node_modules were not present in the container; npm ci was run to enable build/audit commands with no lockfile drift. PR #56 (revision 2, still open) is superseded by this revision-3 PR per the task packet's durable-result contract requiring a distinct branch; this worker did not close or modify PR #56."
+  }
+}
