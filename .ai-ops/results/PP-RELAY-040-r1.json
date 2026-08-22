@@ -1,0 +1,55 @@
+{
+  "schema_version": 3,
+  "task_id": "PP-RELAY-040",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Bounded source-integrity cleanup of the canonical Head Line lesson (src/content/lessons/lines/03-head-line.mdx). Ran the current npm run audit:claim-risk heuristic against the file (22 findings: 20 PREVALENCE_OR_CONSENSUS, 2 PRECISION_OR_DEGREE_EXTRAPOLATION), then independently re-read the full lesson per the task's required method for materially equivalent wording the heuristic's word list misses. Removed the already-known unsupported 'ending before it reaches the central zone of the palm' fixed cutoff (flagged unresolved by PP-RELAY-037/PP-RELAY-039), replacing it with the same palm-relative comparative wording already vetted in beginner/short-head-line-meaning.md. Removed/narrowed the other unattributed physical-prevalence claims (e.g. 'In most hands it starts at...', 'Most head lines fall somewhere between the two', 'In most hands it will come to a clear terminus...') and unattributed source/tradition-consensus ranking claims (e.g. 'one of the most closely studied features', 'the most visible variable... the one most consistently read', 'Most classical Western sources treat significant length as a positive quality' narrowed to Benham specifically, 'the reading that popular palmistry most frequently distorts'). Removed four monotonic degree-extrapolation sentences: two matched by the PRECISION_OR_DEGREE_EXTRAPOLATION heuristic (the head/life-line joined-duration 'the longer... the more' claim, and the central-zone cutoff) and two the heuristic's regex word list misses because they use 'further' instead of 'longer/shorter/deeper/...' ('the further the slope, the more strongly...' and 'the further it descends into Luna, the stronger...'). One further unflagged unattributed ranking claim ('appears consistently as a positive marking in the Western sources', using 'consistently', outside the heuristic's word list) was also removed on the same independent-review pass. Removed one unsupported, non-palmistry audience-behavior claim ('the one that most people ask about first'). Every one of the resulting 9 remaining heuristic findings was individually dispositioned in docs/source-verification-log.md as either an attributed and verified claim (Cheiro's 'most important line', verified verbatim in beginner/head-line.md), the style guide's sanctioned hedge phrasing ('often interpreted as'), a false positive (an individual's 'many interests', or one illustrative hand's own 'most lines'), already corrected under a prior dedicated writer's-fork verification pass, or supported by the foundational cross-line break/resumption principle already established in lessons/lines/line-quality-and-markings.mdx. No new palmistry meaning, prevalence claim, scientific claim, or combination reading was introduced. Lesson structure, figures, and learning flow are unchanged; only prose within existing sections was narrowed. Documented the heuristic's two word-list gaps ('further', 'consistently') as a tooling follow-up, not fixed in this content-only task. Added a dated docs/CHANGELOG.md entry and a full claim-by-claim disposition table in docs/source-verification-log.md.",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-040-head-line-claim-cleanup",
+  "base_commit": "64a5e8054267240101081fb32ef8d754ea3f0578",
+  "changed_paths": [
+    "src/content/lessons/lines/03-head-line.mdx",
+    "docs/CHANGELOG.md",
+    "docs/source-verification-log.md",
+    ".ai-ops/results/PP-RELAY-040-r1.json"
+  ],
+  "verification": [
+    "npm run audit:claim-risk -- src/content/lessons/lines/03-head-line.mdx -- 22 findings before, 9 findings after; all 9 remaining findings individually dispositioned as compliant/already-verified in docs/source-verification-log.md",
+    "npm run build -- pass, 109 pages built",
+    "npm run content-audit -- pass, 64 blog posts and 25 lessons valid",
+    "npm run audit:all -- pass (links/orphans, images, schema, indexability, accessibility)",
+    "git diff --check -- clean",
+    "manual independent re-read of the full lesson against the task's required source-sensitive method, surfacing 3 monotonic degree/ranking claims the automated heuristic's word list misses ('further...the more/stronger', 'consistently')"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Prevalence/consensus: every PREVALENCE_OR_CONSENSUS finding was individually checked against repository evidence; 13 unsupported instances were narrowed or removed (see docs/source-verification-log.md table), 9 remaining instances are the style guide's sanctioned hedge phrasing, attributed/verified claims, or false positives (an individual's own 'many interests', one hand's own 'most lines' in an illustrative contrast). Precision/degree extrapolation: both automated PRECISION_OR_DEGREE_EXTRAPOLATION findings (the central-zone cutoff; the joined-duration 'the longer...the more' claim) were removed/narrowed, plus two further monotonic-degree instances the heuristic's word list misses ('further the slope, the more strongly'; 'further it descends...the stronger'). Scientific/historical: no scientific or historical continuity/chronology claim appears in this lesson; not applicable. Combination readings: no new combination of independently supported meanings was introduced; the origin/path/length/endpoint/fork/break sections remain read as separate variables, matching the existing 'held together, not read in isolation' framing. Vague attribution: no 'modern palmists'/'some writers'/'popular palmistry' anonymous-authority wording was introduced; the one existing informal-authority phrase ('popular palmistry', describing the site's own corrective framing per style guide 5.2) was narrowed, not expanded. Quotation fidelity: no quotation marks were added, changed, or relied upon; the file carries none. Precision/degree extrapolation and observation-vs-interpretation framing: direct observation (what to look for on the reader's hand), historical/traditional interpretation (attributed to Cheiro/Benham/Gettings or 'the tradition'), and Palmistry Path's own editorial framing remain distinguishable throughout, unchanged from the original structure. Full claim-by-claim disposition table is in docs/source-verification-log.md under 'Canonical Head Line lesson claim-boundary cleanup (Relay PP-RELAY-040, 2026-08-22)'."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "npm run audit:claim-risk heuristic scan (before/after)",
+      "manual independent re-read of the full lesson against the task's required source-sensitive method",
+      "grep of docs/source-verification-log.md, beginner/head-line.md, and beginner/short-head-line-meaning.md to reconfirm existing verified evidence and established remediation precedent before editing",
+      "targeted Edit-tool prose changes, no full-file rewrite"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/lessons/lines/03-head-line.mdx",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "No persistent-checkout divergence: local main and origin/main were identical to the dispatch/state commit (64a5e8054267240101081fb32ef8d754ea3f0578) at startup, so the clean-divergence recovery path was not needed; the task branch was created directly from that verified commit. npm install was required before the build/audit commands would run (fresh checkout had no node_modules); the resulting package-lock.json optional-dependency metadata churn (npm client version difference, unrelated to this task) was reverted with git checkout before committing, so the diff stays bounded to the four files listed in changed_paths."
+  }
+}
