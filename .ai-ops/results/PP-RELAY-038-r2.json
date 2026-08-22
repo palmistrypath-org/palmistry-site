@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-038",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 2 remediation of src/content/blog/beginner/long-head-line-meaning.md per the rejected revision 1. Preserved the sound structure, navigation, backlog bookkeeping, verified Benham quotation ('tells by its length of abundant mentality, the kind to be estimated by the character and color of the line'), and the intelligence/IQ guardrail. Made five bounded corrections: (1) removed 'farther than average' and replaced with palm-relative comparative phrasing (no average/prevalence-style cutoff); (2) rewrote the 'Length in context' section so it no longer restates depth/clarity or path/slope feature meanings -- it now only names those as separate observations covered in the main head-line guide, without reproducing their interpretations; (3) removed the monotonic 'a very long line indicates...' extrapolation from the myths section and replaced it with a statement that the source gives no basis for reading additional length as more of anything; (4) rewrote the identification-guidance bullets so fork/branch/chaining/unevenness are no longer asserted to 'exaggerate' true length -- guidance now simply says to trace the line's own main course and treat those features separately; (5) re-ran the full 11-point SOURCE_SENSITIVE preflight against the final prose. The reciprocal head-line.md navigation link and docs/editorial-backlog.md bookkeeping (item #12 marked published, count 63->64, cross-link table) are unchanged from the bounded revision-1 scope.",
+  "pr_number": null,
+  "verification": [
+    "npm run build",
+    "npm run content-audit",
+    "npm run audit:all",
+    "npm run audit:claim-risk -- src/content/blog/beginner/long-head-line-meaning.md",
+    "git diff --check"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "The only 'average'/prevalence-style wording from revision 1 ('farther than average') was removed; identification is now purely comparative (palm-relative, versus a shorter example), with no average, population norm, or fixed threshold. The two claim-risk PREVALENCE_OR_CONSENSUS flags on 'many angles' are dispositioned as false positives: the phrase describes the mind's own breadth of engagement across subjects, not a frequency/consensus claim about how commonly something occurs, and identical phrasing ('considers many angles') already appears in the approved parent head-line.md Length section. The only quotation used is the already-verified Benham quote, matched verbatim against head-line.md and docs/source-verification-log.md line 409. No new combination reading is synthesized: the 'Length in context' section explicitly declines to combine length with endpoint/slope/depth/hand shape and redirects readers to the main guide instead of restating those features' meanings. No vague anonymous attribution (e.g. 'modern palmists', 'some writers') appears; the only named source is Benham. Observation (identification guidance), historical interpretation (Benham's quote and its reading), and Palmistry Path editorial guidance (myths section, scope limits) remain in clearly separate sections. No medical/legal/financial/deterministic-relationship/predictive-science/IQ/mental-health claim is introduced -- the article explicitly and repeatedly rejects the length-equals-IQ inference. No fixed measurement, anatomical zone, threshold, average, or degree-of-length scale is asserted for 'long'. Depth/clarity, path/slope, and endpoint/fork are referenced only by name and link to the main head-line guide, with no meaning reproduced here, so none of those retained references depend on unsourced legacy prose for a claim made in this article."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "read of revision-1 branch content as a remediation starting point",
+      "grep of head-line.md and docs/source-verification-log.md to reconfirm the verified Benham quotation",
+      "manual claim-risk heuristic disposition"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all (links, images, schema, indexability, accessibility)",
+      "npm run audit:claim-risk -- src/content/blog/beginner/long-head-line-meaning.md",
+      "git diff --check"
+    ],
+    "notes": "Startup gate hit the documented clean-divergence condition: local main had diverged from origin/main (84 vs 50 differing commits, no fast-forward). Local main was left untouched; the revision-2 task branch (claude/relay-PP-RELAY-038-long-head-line-meaning-r2) was created directly from verified origin/main at acaa933769a078d363222e002fc46c538f4334a0, matching both the state.json dispatch commit and the routine-fire-payload state commit, per AGENTS.md and .ai-ops/README.md worker-checkout-recovery guidance. The revision-1 PR (#59, branch claude/relay-PP-RELAY-038-long-head-line-meaning) remains open and untouched; it targets revision 1, which is superseded by this revision-2 result, and closing/updating it is a Director action outside this worker's authorized scope."
+  }
+}
