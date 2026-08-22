@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Published src/content/blog/beginner/short-head-line-meaning.md, a beginner companion article for the Short Head Line Meaning Next 25 backlog item. The article grounds the core meaning in the already-established repository reading (Benham and Gettings: a shorter head line indicates a focused, direct, efficient mental approach, not limited intelligence), sourced from src/content/lessons/lines/03-head-line.mdx and the already-published src/content/blog/beginner/head-line.md. Added a reciprocal internal link from head-line.md's Length section to the new article, and updated docs/editorial-backlog.md's published count (62 -> 63) and cross-link tracking table.",
-  "pr_number": null,
+  "pr_number": 58,
   "verification": [
     "npm run build",
     "npm run content-audit",
