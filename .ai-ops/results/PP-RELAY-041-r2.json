@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-041",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "HUMAN_REQUIRED",
+  "summary": "Revision 1 (PR #63) was rejected because it treated the post-PP-RELAY-040 canonical lessons/lines/03-head-line.mdx lesson as proof of the retained straight/sloping head-line meanings instead of independently verifying them, as the packet requires. This run checked repository-held evidence for the three retained meanings (straight=practical, sloping=imaginative, strongly-sloping=creative/artistic) and found none: the only verified Benham quotations for beginner/head-line.md cover general mentality and length, not direction; .ai-ops/evidence/ has no note for head-line direction/slope; and head-line.md's own 'Curvature and endpoint' section carrying these claims has itself never been quotation- or paraphrase-verified. Direct fetch attempts against the Project Gutenberg mirror, gutenberg.org, archive.org, and chestofbooks.com all returned EGRESS_BLOCKED from this environment's network proxy, matching the identical condition already recorded in docs/source-verification-log.md and docs/CHANGELOG.md for other tasks today. No src/content file was changed. Full disposition and the exact evidence gap are recorded in docs/source-verification-log.md under 'Straight vs Curved Head Line companion article — verification attempt, revision 2'.",
+  "pr_number": null,
+  "verification": [
+    "Reviewed revision-1 branch/article/result artifact (claude/relay-PP-RELAY-041-straight-vs-curved-head-line, PR #63) to identify exactly which retained meanings needed independent verification",
+    "Searched docs/source-verification-log.md for prior verification of head-line direction/slope claims (found none; only general-mentality and length quotations verified for beginner/head-line.md)",
+    "Checked .ai-ops/evidence/ for a Director-obtained primary-text note covering head-line direction/slope (none exists; only Ring of Solomon and Via Lascivia notes present)",
+    "WebFetch attempts against readingroo.ms, www.gutenberg.org, archive.org, and chestofbooks.com — all four returned EGRESS_BLOCKED",
+    "git diff --check (clean; only docs/source-verification-log.md and this result artifact changed)"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "No article prose was published or changed in this pass, so no new prevalence/consensus, scientific/historical, combination, anonymous-authority, or quotation claim was introduced. The preflight here consists of confirming that the three retained meanings from revision 1 (straight=practical, sloping=imaginative, strongly-sloping=creative/artistic) have no independently verifiable repository-held source and that primary-text access needed to verify them is blocked by network egress in this environment. See docs/source-verification-log.md revision-2 entry for the full disposition."
+  },
+  "human_action": "Obtain (or have the Director independently obtain, as was done for PP-RELAY-035's Ring of Solomon evidence) a primary-text excerpt from Benham's The Laws of Scientific Hand Reading (1900) -- and Cheiro's Palmistry for All (1916) or Language of the Hand if relevant -- covering the Line of Head's direction/course: (1) whether Benham ties a straight-running head line to practical/concrete/linear reasoning, and the closest verifiable wording; (2) whether Benham and/or Cheiro ties a head line sloping toward the Mount of Luna to imaginative/intuitive qualities; (3) whether either source specifically ties a strongly/steeply sloping line to creative/artistic inclination, or whether that reading (and head-line.md's existing unverified Cheiro 'morbid imagination' framing) is unsupported. Record the result as a durable evidence note under .ai-ops/evidence/ so a subsequent revision can proceed on identifiable approved evidence rather than guessing or reusing the rejected canonical-lesson method.",
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "git log/show inspection of the revision-1 branch, article draft, and result artifact",
+      "grep/read of docs/source-verification-log.md and .ai-ops/evidence/",
+      "WebFetch against readingroo.ms, www.gutenberg.org, archive.org, chestofbooks.com (all EGRESS_BLOCKED)"
+    ],
+    "validation": [
+      "git diff --check (clean)"
+    ],
+    "notes": "No build/content-audit/audit:all run: per AGENTS.md's risk-based validation matrix this is a wiki/agent-doc-only change (docs/source-verification-log.md plus this result artifact) with no runtime/content file touched, so those checks would add no signal. Startup gate passed cleanly against verified origin/main (de5f5077534e559d30c1d199033229b8056b15fe, matching the dispatch-hint state commit); no persistent-checkout divergence was encountered this run."
+  }
+}

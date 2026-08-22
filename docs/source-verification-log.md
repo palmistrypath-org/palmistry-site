@@ -1060,3 +1060,36 @@ Director review of the revision-1 PR (#62) found that four passages, while no lo
 **Safety boundaries:** none of the four rev. 2 corrections introduces or retains a medical, legal, financial, deterministic-relationship, or predictive-science claim.
 
 **Verification:** `npm run audit:claim-risk -- src/content/lessons/lines/03-head-line.mdx` returns the same 9 findings as after rev. 1, all previously dispositioned above as compliant or already-verified; none of the four rev. 2 edits appears in this list, confirming no new heuristic-flagged wording was introduced. `npm run build` (109 pages), `npm run content-audit` (64 blog posts, 25 lessons valid), `npm run audit:all` (links, images, schema, indexability, accessibility all pass), and `git diff --check` (clean) all pass. Diff is bounded to the four corrected passages above, this log entry, and the revision-2 result artifact. No curriculum scope, new companion article, or unrelated lesson content was touched; all sound revision-1 corrections are preserved.
+
+## Straight vs Curved Head Line companion article — verification attempt, revision 2 (Relay PP-RELAY-041 r2, 2026-08-22)
+
+Revision 1 of `src/content/blog/beginner/straight-head-line-palmistry.md` (PR #63) was rejected by Director review because its evidence method treated the post-PP-RELAY-040 canonical `lessons/lines/03-head-line.mdx` lesson as proof of the retained straight/sloping meanings, when the task packet explicitly states that lesson is a map to candidate interpretations, not automatic proof. Revision 2 requires independently verifying, against identifiable approved evidence, each of the three retained meanings:
+
+1. Straight head line → practical/linear thinking, including the Benham-specific paraphrase.
+2. Sloping head line toward the Mount of Luna → imaginative/intuitive thinking.
+3. Strongly/steeply sloping head line → creative/artistic inclination (plus the existing Cheiro "morbid imagination" paraphrase in `head-line.md`, which this article does not currently repeat).
+
+### Repository-held evidence checked
+
+- This log's Pass 1 quotation-verification table (line 62) records the only two quotation-marked Benham passages verified for `beginner/head-line.md`: general head-line mentality ("the amount of mentality possessed...") and length ("...the kind to be estimated by the character and color of the line"). Neither addresses the line's direction or slope.
+- `.ai-ops/evidence/` holds Director-obtained primary-text notes only for PP-RELAY-035 (Ring of Solomon) and PP-RELAY-036 (Via Lascivia). No note exists for head-line direction/slope.
+- `beginner/head-line.md`'s own "Curvature and endpoint" section (straight/practical, sloping/imaginative, steep-slope/creative-artistic, and the Cheiro "morbid imagination" paraphrase) uses no quotation marks, so it fell outside Pass 1's quotation-level check; its paraphrase accuracy against primary Benham/Cheiro text has never been independently verified. Per this packet's source boundary, the equally-unverified canonical mdx lesson cannot serve as proof for revision 2, and this parallel, similarly-unverified prose in `head-line.md` cannot substitute for it either.
+- No other repository doc records an independent verification of these three specific claims.
+
+### External source access
+
+Attempted direct fetch of `https://readingroo.ms/2/0/4/8/20480/20480-h/20480-h.htm` (the Project Gutenberg mirror for Cheiro's *Palmistry for All* used in PP-RELAY-035), `https://www.gutenberg.org/ebooks/20480`, `https://archive.org/details/lawsofscientific00benh` (Benham, *The Laws of Scientific Hand Reading*), and `https://chestofbooks.com/new-age/palmistry/Hand-Reading/The-Ring-Of-Solomon.html`. All four returned `EGRESS_BLOCKED` from this environment's network proxy — the identical condition already recorded in this log (around line 871) and in `docs/CHANGELOG.md`'s 2026-08-22 entries. No external primary text was reached; no claim in this pass rests on unverified or unreached external text, and none was guessed from memory or search-engine snippets.
+
+### Disposition
+
+None of the three retained meanings can be independently traced to identifiable approved evidence with what is available to this worker in this environment. Per the task packet's revision-2 required-remediation item 6 and its no-change/stop conditions, this run returns `HUMAN_REQUIRED` instead of publishing the article on unverified claims or reusing the canonical-lesson wording the Director already rejected as proof. No file under `src/content` was changed in this pass.
+
+### Evidence needed to unblock a further revision
+
+A Director- or human-obtained primary-text excerpt (mirroring `.ai-ops/evidence/PP-RELAY-035-cheiro-ring-of-solomon.md`) from Benham's *The Laws of Scientific Hand Reading* (1900) — and, if relevant, Cheiro's *Palmistry for All* (1916) or *Language of the Hand* — covering the Line of Head's **direction/course** (straight vs. sloping toward the Mount of Luna), specifically:
+
+1. Whether Benham attributes practical/concrete/linear-reasoning qualities to a straight-running head line, and the closest verifiable paraphrase or quotation.
+2. Whether Benham and/or Cheiro attributes imaginative/intuitive qualities to a head line sloping toward the Mount of Luna.
+3. Whether either source ties a *strongly*/*steeply* sloping line specifically to creative/artistic inclination, or whether that reading (and `head-line.md`'s existing Cheiro "morbid imagination" framing) is unsupported and should be narrowed or dropped in a future pass on that file.
+
+Until that evidence note exists, this worker cannot write a source-verified straight/sloping companion article without repeating revision 1's rejected evidence method.
