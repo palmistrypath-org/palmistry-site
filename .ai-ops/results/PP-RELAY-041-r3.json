@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Added src/content/blog/beginner/straight-head-line-palmistry.md, the Straight vs Curved Head Line companion article, drafted fresh directly against the Director-verified Benham evidence boundary at .ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md rather than reusing the canonical Head Line lesson's prose as proof. Article covers only: a straight-running head line attributed to Benham as practical mentality, and a head line sloping toward the Mount of Luna attributed to Benham as imagination and a departure from purely material thought, both kept narrow and non-deterministic. Benham's writer/poet examples among sloping lines are mentioned as historical examples only; the article explicitly states this does not establish a monotonic 'steeper = more creative' rule and names that exact overstatement as a corrected myth, per the required revision-3 remediation. No fixed angle/zone/average cutoff, prevalence/consensus language, vague anonymous authority, invented combination reading, or clinical/insanity language was introduced. Updated docs/source-verification-log.md with a full claim-by-claim disposition, docs/CHANGELOG.md, and docs/editorial-backlog.md (item 13 marked published, slug corrected to match the task-packet-specified filename, published count 64 to 65).",
-  "pr_number": null,
+  "pr_number": 64,
   "branch": "claude/relay-PP-RELAY-041-straight-head-line-r3",
   "base_commit": "ec13d4f57dc482ee189e357543e3a24f33d7e09d",
   "changed_paths": [
