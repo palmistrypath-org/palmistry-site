@@ -2,69 +2,72 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-039
+PP-RELAY-040
 
 ## Revision
 1
 
 ## Risk Class
-STANDARD
+SOURCE_SENSITIVE
 
 ## Objective
-Improve the targeted `audit:claim-risk` preflight so SOURCE_SENSITIVE editorial work is more likely to flag unsupported precision/comparison language before Director review, especially the exact patterns that caused avoidable rework in PP-RELAY-037 and PP-RELAY-038.
+Run a bounded source-integrity cleanup of the canonical Head Line lesson, using the newly expanded claim-risk preflight to remove or narrow unsupported precision, prevalence/consensus, and degree-extrapolation wording before additional Head Line companion articles are produced.
 
 ## Why this task
-The v2C pilot has now accepted 15 iterations. Recent Head Line companion tasks exposed a repeatable tooling gap: the current heuristic catches prevalence, anonymous authority, and strong empirical overstatement, but it does not prompt review for unsupported fixed/average cutoffs or stronger-with-degree extrapolations such as `farther than average`, fixed palm-zone thresholds, or `very long ... indicates more` wording. This task improves the preflight aid rather than weakening Director review or changing source policy.
+PP-RELAY-037 and PP-RELAY-038 exposed unsupported fixed-cutoff, average, and stronger-with-degree language in companion drafts. PP-RELAY-039 added targeted heuristic coverage and its repository-wide sanity scan reported remaining findings in the canonical Head Line lesson. Current `main` still contains examples such as `ending before it reaches the central zone`, `Most head lines fall somewhere between the two`, `The further the slope, the more strongly...`, and other prevalence/degree wording. The canonical lesson should be reconciled before it is reused as evidence for more articles.
 
 ## Scope
-Expected primary changes:
-- `scripts/audit-claim-risk.mjs`;
-- deterministic fixtures under `scripts/fixtures/claim-risk/` as needed;
-- directly necessary package/docs comments if the new category needs explanation;
-- `.ai-ops/results/PP-RELAY-039-r1.json`.
+Primary content scope:
+- `src/content/lessons/lines/03-head-line.mdx`
 
-Do not change Relay dispatch/auto-merge workflows, editorial meanings, published palmistry prose, SEO strategy, fast-lane policy, or source policy.
+Supporting scope:
+- existing repository source-verification/evidence records directly relevant to Head Line claims;
+- directly necessary changelog/source-verification bookkeeping;
+- `.ai-ops/results/PP-RELAY-040-r1.json`.
 
-## Required behavior
-Add a narrow heuristic review category for unsupported precision / degree extrapolation in editorial prose. It should prompt review for patterns materially similar to the failures already observed, including where practical:
-- comparative population norms such as `farther than average`, `longer than average`, `shorter than average`, or equivalent average-based cutoffs;
-- fixed geometric/anatomical certainty phrasing when used as a definitional cutoff, such as `ending before the central zone` / `reaches the central zone`, without attempting to understand every legitimate anatomical sentence;
-- stronger-with-degree extrapolation patterns such as `very long ... indicates`, `the longer ... the more`, `the shorter ... the less`, or equivalent monotonic scaling language.
+Do not create the Straight vs Curved Head Line article in this task. Do not rewrite the whole lesson, change curriculum positioning, add new palmistry meanings, or replay the stale 3E/3F branch.
 
-Keep the tool explicitly heuristic: findings are review prompts, not proof a sentence is wrong. A clean scan must not be presented as source validation.
+## Required source-sensitive method
+1. Run the current targeted claim-risk audit against the Head Line lesson and inventory every finding.
+2. Independently inspect the scoped lesson for materially equivalent unsupported claims the heuristic may miss, especially prevalence/ranking, fixed geometric thresholds, and monotonic stronger-with-degree wording.
+3. For every retained palmistry interpretation, ground it in approved repository-held evidence or an already verified source record. Existing unsourced lesson prose is not automatically evidence.
+4. Where support is insufficient, narrow/remove the claim rather than inventing support.
+5. Keep observation separate from historical interpretation and Palmistry Path editorial guidance.
+6. Do not introduce vague authority such as `modern palmists`, `most sources`, `popular palmistry`, `commonly`, `typically`, or similar unless directly supported and attributed.
+7. Do not synthesize new combination readings from separately supported features.
 
-Avoid broad regexes that would flood ordinary prose with obvious false positives. Prefer a small set of high-signal patterns tied to observed Relay failures.
+Pay particular attention to the current lesson's slope, length, endpoint, fork, branch/break, depth/clarity, and frequency/ranking language. This is a claim-boundary cleanup, not permission to expand those sections.
 
 ## Acceptance criteria
-1. Existing claim-risk categories and CLI behavior remain intact.
-2. A new clearly named category flags deterministic risky fixtures for average/fixed-cutoff/degree-scaling language.
-3. Neutral observational wording such as `compare how far the line travels across this palm` is not flagged by the new category.
-4. Existing self-test fixtures continue to pass, and new fixtures exercise both positive and negative cases.
-5. Output still includes file/line/category/context and still explains that findings require evidence review rather than automatic rejection.
-6. No published palmistry content is changed by this task.
-7. No dispatch, merge, fast-lane, billing, or human-gate behavior changes.
+1. Every claim-risk audit finding in the final scoped lesson is explicitly dispositioned in the durable result with evidence or a narrow explanation of why it is non-claim/procedural wording.
+2. Unsupported fixed cutoffs such as the `central zone` short-line definition are removed or softened to comparative observation.
+3. Unsupported prevalence/ranking language is removed/narrowed unless repository evidence directly supports it.
+4. Unsupported monotonic degree extrapolations (`the further...the stronger`, equivalent) are removed/narrowed unless the exact degree relationship is supported.
+5. No new palmistry meanings, prevalence claims, scientific claims, or combination readings are introduced.
+6. Existing lesson structure, figures, learning flow, and source-safe interpretations remain intact where support exists.
+7. `npm run audit:claim-risk -- src/content/lessons/lines/03-head-line.mdx`, build, content audit, and relevant source/content checks pass; any retained heuristic findings are documented and defensible.
 
 ## Validation
 Run at minimum:
-- `npm run audit:claim-risk:selftest`
-- targeted scans against the new risky and neutral fixtures
+- `npm run audit:claim-risk -- src/content/lessons/lines/03-head-line.mdx`
 - `npm run build`
 - `npm run content-audit`
+- `npm run audit:all`
 - `git diff --check`
 
-If the implementation changes package wiring or broader audit integration, run the directly affected audit as well. Do not wire this heuristic into `audit:all` unless that is already current behavior; this task is about improving the targeted preflight, not making it a global blocking gate.
-
 ## No-change / stop conditions
-Return `NO_CHANGE` only if current `main` already contains equivalent high-signal checks plus deterministic tests for average/fixed-cutoff/degree-scaling wording. Document the exact existing coverage in the durable result.
+Return `NO_CHANGE` only if current `main` already has no unsupported precision/prevalence/degree claims in the scoped lesson after evidence review, and document every current claim-risk finding and its verified support.
 
-Return `BLOCKED` if the improvement cannot be made without an unbounded parser/refactor or destabilizing the existing audit behavior. Do not redesign the tooling framework.
+Return `HUMAN_REQUIRED` if a materially important interpretation cannot be safely retained or corrected without source evidence unavailable in the repository and removing/narrowing it would create a consequential curriculum decision. Preserve the exact evidence gap; do not guess.
+
+Return `BLOCKED` for a bounded technical blocker that prevents the required audit/validation and cannot be safely repaired within scope.
 
 ## Durable result contract
-Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-039-r1.json` on a pushed `claude/relay-PP-RELAY-039-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-040-r1.json` on a pushed `claude/relay-PP-RELAY-040-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
-The result must include `risk_class: "STANDARD"` and `source_preflight: null` unless source preflight is explicitly needed by the worker for some bounded reason.
+The result must include `risk_class: "SOURCE_SENSITIVE"` and a completed `source_preflight` object covering unsupported prevalence/consensus, scientific/historical claims, combination readings, vague authority, quotation fidelity, precision/degree extrapolation, and observation-vs-interpretation framing.
 
-For `READY_FOR_REVIEW`, commit implementation/docs plus the result artifact, push one Relay branch, and open exactly one PR targeting `main` with matching Relay footers. Non-change terminal outcomes do not require a dummy PR. Do not merge and do not select the next task.
+For `READY_FOR_REVIEW`, commit content/bookkeeping plus the result artifact, push one Relay branch, and open exactly one PR targeting `main` with matching Relay footers. Non-change terminal outcomes do not require a dummy PR. Do not merge and do not select the next task.
 
 ## Revision history
-- Revision 1: initial bounded v2C claim-risk precision/degree heuristic improvement.
+- Revision 1: initial bounded canonical Head Line source-integrity cleanup after PP-RELAY-039 tooling improvement.
