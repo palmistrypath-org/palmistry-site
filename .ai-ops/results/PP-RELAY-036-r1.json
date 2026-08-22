@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Published src/content/blog/beginner/via-lascivia-palmistry.md, the last remaining unpublished item from docs/editorial-backlog.md's Next 10 list, drafted within a Benham-only evidence boundary. The article covers the line's course near the base of the Mount of Moon/Luna toward the upper Mount of Moon near the percussion, the historical name's link to an older reading about surplus energy/excess on a 'sensual' hand type with Benham's own qualification that a non-sensual hand could express the same energy otherwise, and a cautious direct answer to the 'allergy line' search term: the verified source does not establish that alias or any medical meaning, so the published title poses it as a question rather than the backlog's originally assumed synonym. No medical/diagnostic claim, criminality content, prevalence claim, or invented combination reading was introduced. Backlog status/count and CURRENT_STATE blog-post counts were updated to match.",
-  "pr_number": null,
+  "pr_number": 54,
   "branch": "claude/relay-PP-RELAY-036-via-lascivia",
   "base_commit": "9ca2f738a789ca0e47d89ed09dcf32a63251e55d",
   "changed_paths": [
