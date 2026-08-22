@@ -8,12 +8,12 @@ At the start of a new implementation task, before reading or changing project fi
 2. If the working tree is not clean, stop and report exactly what is modified/untracked. Do not reset, stash, discard, overwrite, or switch branches without explicit approval.
 3. `git fetch origin`.
 4. `git switch main`.
-5. `git pull --ff-only`.
-6. Verify `main` is clean, current with `origin/main`, and that `origin` is the expected Palmistry Path repository.
-7. Create or switch to the designated task branch.
+5. If local `main` can fast-forward normally, `git pull --ff-only`.
+6. Verify `origin` is the expected Palmistry Path repository and `origin/main` is the authoritative remote default-branch tip. If the working tree is clean but local `main` cannot fast-forward because it has diverged from `origin/main` or has no merge base, **do not reset, rebase, force-update, delete, or otherwise rewrite local `main`**. Leave local `main` untouched and create the designated new task branch directly from verified `origin/main`. This clean-divergence recovery is an approved non-destructive startup path and does not by itself require human intervention. Stop only if the remote identity/default branch is ambiguous, the tree is dirty, or using the designated task branch would overwrite existing work.
+7. Create or switch to the designated task branch from the verified current base (`main` after a normal fast-forward, or `origin/main` under the clean-divergence recovery above).
 8. Never begin new work from a stale, previously completed feature branch.
 
-Perform this synchronization automatically. Only ask the user to intervene when Git reports a state that cannot be resolved safely without their decision.
+Perform this synchronization automatically. Only ask the user to intervene when Git reports a state that cannot be resolved safely under the normal fast-forward path or the explicit clean-divergence recovery above.
 
 ## Progressive disclosure
 At the start of meaningful work:
