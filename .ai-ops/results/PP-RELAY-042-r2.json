@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-042",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 1 (PR #66) was closed without merging because Director review found it had removed several risky passages but incorrectly retained multiple unsupported prevalence/consensus and anonymous-authority statements within this task's cleanup categories. Since none of revision 1's edits had reached main, this revision reconstructs the nine sound revision-1 corrections and applies the required revision-2 remediation on top of them in a single pass against current main: it removes or narrows unattributed 'typically'/'usually' prevalence wording on the head line's start location and its origin relative to the life line; removes a 'discusses most specifically'/'the tradition is precise' ranking claim; reworks the writer's-fork naming sentence onto already-verified evidence from the sibling forked-head-line-meaning.md article (a later popular-palmistry label, not from Cheiro or Benham), removing 'among the most discussed' and 'commonly called'; removes an unverifiable quotation anonymously attributed to 'one contemporary practitioner' together with a 'notable frequency'/'which is how the name spread' prevalence and causal-history claim, restating the corrective point in the article's own voice; removes 'generally' from the upward-branches reading and 'uncommon' from the double-head-line description; removes the FAQ's 'typically' on the shared life-line origin and the myth section's 'appears frequently in writers' hands'; and reframes the closing myth's 'not how the contemporary tradition works' as the article's own stated position rather than an anonymous-consensus claim. No new palmistry meaning, prevalence claim, scientific claim, combination reading, or clinical/medical language was introduced; every other interpretation in the article was reviewed and left unchanged. Updated docs/source-verification-log.md with a full disposition of both the reconstructed revision-1 corrections and the new revision-2 corrections, plus the 14 remaining heuristic findings, and docs/CHANGELOG.md with a dated entry.",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-042-head-line-source-cleanup-r2",
+  "base_commit": "cc8194d5568796b9c3fdfd911e9f879639ece19d",
+  "changed_paths": [
+    "src/content/blog/beginner/head-line.md",
+    "docs/source-verification-log.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-042-r2.json"
+  ],
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md — 22 findings before this revision's edits (matching revision 1's post-edit count, since none of revision 1's edits were on main) → 14 findings after, all dispositioned in docs/source-verification-log.md as compliant, quoted, or false positive",
+    "npm run build — pass, 110 pages built",
+    "npm run content-audit — pass, 65 blog posts and 25 lessons valid",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md — Director-verified against William G. Benham, The Laws of Scientific Hand Reading (1900). Controls every retained direction/path claim: straight-running head line -> practical mentality (supported); sloping toward Luna -> imagination (supported); writer/poet examples among sloping-to-Moon lines are Benham's illustrations only, not a monotonic degree rule (explicitly not established); Benham's/Cheiro's clinical/insanity framing is unauthorized for this article and stays removed, matching revision 1.",
+      "src/content/blog/beginner/forked-head-line-meaning.md — already-verified sibling article establishing that 'the writer's fork' is a label from later popular palmistry rather than from the classical texts, and that neither Cheiro nor Benham uses the phrase. Used to replace the removed 'commonly called'/'among the most discussed' prevalence and ranking claims with an already-sourced factual statement instead of inventing new support."
+    ],
+    "external_access": "None attempted or required; this revision narrows/removes existing unsupported wording (carrying forward revision 1's edits and adding the residual fixes Director review required) rather than sourcing new claims.",
+    "canonical_lesson_or_navigation_used_as_proof": "No. The canonical lesson and other Head Line articles were treated as a navigation map only, not as proof."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Ran npm run audit:claim-risk against both the reconstructed revision-1 branch content (22 findings) and the final revision-2 file (14 findings), then manually re-read the complete final article end to end against the task's required categories and the ten explicit residual examples in the task packet, confirming each was dispositioned (nine reconstructed revision-1 corrections plus eleven new revision-2 corrections, since the writer's-fork paragraph required two related fixes). Prevalence/ranking/consensus: removed every instance the task named verbatim ('It typically begins', 'The head line usually starts', 'discusses most specifically'/'the tradition is precise', 'commonly called', 'appears among writers with notable frequency', 'generally read positively', 'is uncommon', FAQ 'typically at or near the same origin', myth 'appears frequently in writers' hands'), plus the reconstructed revision-1 removals (the 'consistent Western formulation', 'generally the most positively read position', 'other writers confirm'/degree-scaling pairs). The 14 remaining heuristic findings were individually reviewed and are either inside directly quoted, previously-verified Cheiro passages (quotation fidelity requires leaving them unaltered), editorial scene-setting/pedagogical framing about this article's own approach (not an external consensus claim, consistent with the precedent retained in the minor-lines-overview log entry), or false-positive uses of 'many' describing an individual mind's own range or a non-exclusivity point rather than a population rate. Anonymous authority: removed the reconstructed revision-1 instances ('classical writers', 'classical texts', 'Contemporary writers have reframed this') and the new revision-2 instance ('the contemporary tradition' in the closing myth, reframed as the article's own stated position) plus the unverifiable quotation attributed to 'one contemporary practitioner' (removed entirely rather than reattributed to an invented source, with the underlying corrective point restated in the article's own editorial voice). Fixed norms/monotonic degree extrapolation: reconfirmed the reconstructed revision-1 removals (the direction/path section's degree-scaling sentences, the joined-line and widely-separated degree-scaling sentences, the FAQ's 'the steeper the slope, the more dominant' sentence) remain out, and found no new instance. Direction/path evidence boundary: every retained direction/path sentence re-checked against .ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md and confirmed within its boundary, unchanged from revision 1. No replacement invention: every edit narrows or removes existing wording, or (for the writer's-fork naming sentence) substitutes an already-verified repository fact from a sibling article rather than an invented one; none adds a new historical attribution, prevalence claim, modern consensus, or combination reading. Combination readings: the pre-existing head-line + heart-line combination in 'The head line in context' was reviewed and left unchanged, matching revision 1's disposition. Quotation fidelity: no quotation marks were added or altered; the unverifiable anonymous quotation was removed rather than kept; the pre-existing Cheiro quotations remain flagged as unverified against the 1916 text per the Pass 1 (2026-08-10) table, a pre-existing gap outside this task's four categories. Safety boundaries: no medical, legal, financial, or deterministic-relationship claim was introduced or remains; Cheiro's clinical framing stays removed as in revision 1. One material concern outside the four categories (line 79's 'more common forks and branches' comparative wording) was logged in docs/source-verification-log.md rather than silently expanded into, since it does not use any of the flagged prevalence/consensus/authority words and is a same-article comparative statement, not an external population claim."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Ran the Relay startup gate: verified state.json/task packet/CURRENT_TASK.md task-id and revision match, risk class, iteration budget, and confirmed no open PR or pushed result artifact existed yet for revision 2 (PR #66 for revision 1 is closed, not open; no claude/relay-PP-RELAY-042-...-r2 branch existed)",
+      "Diffed the closed revision-1 PR's branch against current main to confirm revision 1's nine edits had never merged, then diffed the pre-r1 and r1 file versions to identify exactly which sound corrections needed reconstructing",
+      "Ran npm run audit:claim-risk against the reconstructed revision-1 content to get a 22-finding baseline matching revision 1's own reported post-edit count, confirming the reconstruction was faithful",
+      "Manually re-read the complete article end to end against the task's four required categories and its ten explicit residual examples, cross-checking the writer's-fork naming fix against the already-verified sibling forked-head-line-meaning.md article before rewording",
+      "Applied the reconstructed revision-1 corrections and the revision-2 remediation together in a single edit pass, then re-ran npm run audit:claim-risk (14 findings) and individually dispositioned every remaining finding",
+      "Recorded a full disposition (revision-1 corrections carried forward, new revision-2 corrections, and remaining findings reviewed-and-retained) in docs/source-verification-log.md and a dated docs/CHANGELOG.md entry"
+    ],
+    "validation": [
+      "npm run audit:claim-risk (targeted, before and after)",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "node_modules were not present in the container; ran npm install (this modified package-lock.json, which was reverted with git checkout -- before branching so it would not leak into the task branch). Local main had diverged from origin/main with no fast-forward path at session start (persistent-checkout condition); verified origin and origin/main's tip (cc8194d5568796b9c3fdfd911e9f879639ece19d) matched the routine dispatch payload's state commit exactly, then per AGENTS.md's clean-divergence recovery path left local main untouched and created this revision-2 branch directly from verified origin/main. The existing claude/relay-PP-RELAY-042-head-line-source-cleanup branch (revision 1) was read only to recover its nine sound edits for reconstruction; it was not merged, rebased, or pushed to."
+  }
+}
