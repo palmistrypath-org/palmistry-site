@@ -1,0 +1,62 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-042",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Bounded source-integrity cleanup of the legacy Head Line pillar (src/content/blog/beginner/head-line.md), closing the out-of-scope concern PP-RELAY-041 (revision 3) had recorded. Removed/narrowed nine passages: an unattributed 'consistent Western formulation' consensus claim; a 'generally the most positively read position' ranking claim; an 'other writers confirm' anonymous-authority fragment; an unsupported 'the longer... the longer' degree-scaling sentence and vague 'the classical writers' attribution on the joined-line reading; an unsupported 'the wider... the more' degree-scaling sentence on the widely-separated reading; a 'classical texts' vague-authority attribution on the widely-overlapping reading; a 'Contemporary writers have reframed this' misattribution on the same passage, now stated directly as this article's own editorial framing; the direction/path section's 'the degree of slope matters... more pronounced slope... dominant' body-text degree-scaling sentence; a second direction/path paragraph combining unsupported degree-scaling ('intensifies this... highly developed... strong artistic') with Cheiro's unauthorized clinical framing ('extreme morbid imagination'), rewritten to stay within the Director-verified Benham evidence boundary (illustrative writer/poet examples only, no degree scaling, no clinical language); a 'Classical texts associated it with' vague-authority attribution on the double-head-line passage; and the FAQ's parallel 'the steeper the slope, the more dominant' degree-scaling sentence. No new palmistry meaning, prevalence claim, scientific claim, combination reading, or clinical/medical language was introduced; every other interpretation in the article (length, depth, forks, chains/breaks/islands/branches, double head line beyond the one authority fix, cross-feature synthesis) was reviewed and left unchanged as within the task's explicit out-of-scope carve-outs. Updated docs/source-verification-log.md with a full claim-by-claim disposition table covering all nine edits plus the 22 remaining heuristic findings, and docs/CHANGELOG.md with a dated entry. docs/editorial-backlog.md was reviewed and needed no correction.",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-042-head-line-source-cleanup",
+  "base_commit": "5e3570b29d9cf20444a95114ef2e2739893e5fcb",
+  "changed_paths": [
+    "src/content/blog/beginner/head-line.md",
+    "docs/source-verification-log.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-042-r1.json"
+  ],
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md — 26 findings before edits (25 PREVALENCE_OR_CONSENSUS, 1 PRECISION_OR_DEGREE_EXTRAPOLATION) → 22 findings after (all PREVALENCE_OR_CONSENSUS), all dispositioned in docs/source-verification-log.md as reviewed-and-retained (quoted text, anatomical description, or editorial scene-setting — none matches the task's six required cleanup categories)",
+    "npm run build — pass, 110 pages built",
+    "npm run content-audit — pass, 65 blog posts and 25 lessons valid",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md — Director-verified against William G. Benham, The Laws of Scientific Hand Reading (1900). Controls every retained direction/path claim: straight-running head line -> practical mentality (supported); sloping toward Luna -> imagination (supported); writer/poet examples among sloping-to-Moon lines are Benham's illustrations only, not a monotonic degree rule (explicitly not established); Benham's/Cheiro's clinical/insanity framing is unauthorized for this article and was removed rather than reframed."
+    ],
+    "external_access": "None attempted or required; this task narrows/removes existing unsupported wording rather than sourcing new claims, per its own instruction that removal or neutral observation is preferable to inventing new attribution when a risky sentence lacks approved evidence.",
+    "canonical_lesson_or_navigation_used_as_proof": "No. The canonical lesson and other Head Line articles were treated as a navigation map only, not as proof, consistent with the task's source boundary."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Ran the targeted claim-risk audit before and after edits (26 -> 22 findings) and manually re-read the complete final article end to end for equivalent wording the heuristic misses, per the task's required preflight steps 1-2. Prevalence/ranking/consensus: removed the two phrases the task packet named verbatim ('consistent Western formulation', 'generally the most positively read position'); the 22 remaining heuristic findings were individually reviewed and are either inside direct attributed Cheiro quotations, anatomical/observational description of where the line runs (category 2 explicitly allows 'purely observational comparative wording'), or editorial scene-setting about literature coverage, not palmistry-interpretation prevalence claims — none matches the task's six categories. Fixed norms/averages: none found; 'moderately separated' is a taxonomy label for one of three discrete starting-point categories already established by the article, not a population-average claim. Monotonic degree extrapolation: removed all three instances found ('the longer...the longer' on joined lines, 'the wider...the more' on wide separation, and the direction/path section's two degree-scaling passages plus the parallel FAQ sentence); none was replaced with an equivalent unsupported synonym. Direction/path evidence boundary: every retained direction/path sentence checked against .ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md and confirmed within its boundary (straight->practical, Luna-sloping->imagination, writer/poet examples as illustrations only with an explicit no-degree-scaling statement); the unauthorized Cheiro clinical language ('extreme morbid imagination') was removed rather than reframed, per the evidence note's own instruction that it is unnecessary here. Anonymous authority: removed 'other writers confirm', 'the classical writers', 'in classical texts', 'Contemporary writers have reframed this' (the last restated directly as Palmistry Path's own editorial framing, since that is what was actually intended), and 'Classical texts associated it with' (reworded to the article's existing 'traditionally associated with' house style). No replacement invention: every edit narrows or removes existing wording; none adds a new historical attribution, prevalence claim, modern consensus, or combination reading. Combination readings: the pre-existing head-line + heart-line combination in 'The head line in context' was reviewed and left unchanged — it uses tentative 'suggests' framing, contains none of the six flagged categories, and falls under the task's explicit cross-feature-synthesis out-of-scope carve-out. Quotation fidelity: no quotation marks were added, changed, or relied upon by this revision's edits; the two pre-existing Benham quotations on lines 23 and 45 remain flagged as unverified in the Pass 1 (2026-08-10) source-verification-log table, a pre-existing gap outside this task's six required categories, correctly left for a dedicated quotation-verification task. Safety boundaries: removing Cheiro's clinical framing eliminates the article's one unauthorized medical/clinical-adjacent phrase; no medical, legal, financial, or deterministic-relationship claim was introduced or remains."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read AGENTS.md, .ai-ops/README.md, .ai-ops/state.json, the immutable task packet, and CURRENT_TASK.md to run the startup gate before any project change",
+      "Ran npm run audit:claim-risk against the article before editing to get a heuristic baseline (26 findings), then re-read the complete article manually against the task's six required cleanup categories and the controlling Benham evidence note",
+      "Applied nine targeted edits to src/content/blog/beginner/head-line.md, each traced to a specific required cleanup category or an explicit example phrase from the task packet",
+      "Re-ran npm run audit:claim-risk after edits (22 findings) and individually dispositioned every remaining finding against the six categories before selecting READY_FOR_REVIEW",
+      "Recorded a full claim-by-claim disposition table in docs/source-verification-log.md and a dated docs/CHANGELOG.md entry"
+    ],
+    "validation": [
+      "npm run audit:claim-risk (targeted, before and after)",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "node_modules were not present in the container; ran npm install to enable build/audit commands. Local main had diverged from origin/main with no clean fast-forward at session start (persistent-checkout condition). Per AGENTS.md's clean-divergence recovery path, local main was left untouched and the task branch was created directly from verified origin/main at 5e3570b29d9cf20444a95114ef2e2739893e5fcb, which matches both state.json's dispatched state and the routine dispatch payload's state commit. No open PR or existing result artifact for PP-RELAY-042 was found at startup."
+  }
+}

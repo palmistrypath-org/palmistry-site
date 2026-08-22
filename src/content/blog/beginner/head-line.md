@@ -20,7 +20,7 @@ The head line usually starts at or near the same origin as the life line, and th
 
 ## What it's traditionally associated with
 
-Benham, in *The Laws of Scientific Hand Reading*, frames the head line as indicating "the amount of mentality possessed by the subject, the kind of mentality, the power of mental concentration, and the ability to exert self-control." This is the consistent Western formulation: the head line is about the quality and character of mind, not its measurable quantity.
+Benham, in *The Laws of Scientific Hand Reading*, frames the head line as indicating "the amount of mentality possessed by the subject, the kind of mentality, the power of mental concentration, and the ability to exert self-control." That framing anchors this article: the head line is read for the quality and character of mind, not its measurable quantity.
 
 The distinction matters. The head line is not a measure of intelligence. It is traditionally associated with thinking style — whether the mind tends toward the practical or the imaginative, whether concentration is sustained or scattered, whether decisions are made deliberately or impulsively — and with how mental energy moves and is used. Two people with very different head lines may be equally intelligent in any measurable sense; what the line reflects is how that intelligence tends to operate.
 
@@ -32,13 +32,13 @@ The Indian tradition calls this line the *Mastishka Rekha* or *Buddhi Rekha* —
 
 This is the variation Western palmistry discusses most specifically at the head line, and for good reason: it is one of the clearest features to observe, and the tradition is precise about what it suggests.
 
-**Joined to the life line at their origin** — when the head line and life line share a common starting point, beginning as one before separating — is traditionally associated with caution, close connection to family and home, and a period of dependence on the influence of those around one before full independence of mind develops. The classical writers note that the longer the two lines remain joined before separating, the longer this period of influence tends to extend. This is not read as a deficiency: it describes a temperament that is careful, grounded in its environment, and less inclined to act without established footing.
+**Joined to the life line at their origin** — when the head line and life line share a common starting point, beginning as one before separating — is traditionally associated with caution, close connection to family and home, and a period of dependence on the influence of those around one before full independence of mind develops. This is not read as a deficiency: it describes a temperament that is careful, grounded in its environment, and less inclined to act without established footing.
 
-**Moderately separated** — when a small gap exists between the head line's start and the life line — Cheiro describes as an "excellent mark," giving "independence of thought, quickness of judgment, and a certain mental daring that is invaluable in fighting the battle of life." The moderate separation is generally the most positively read position in the Western tradition: initiative without recklessness.
+**Moderately separated** — when a small gap exists between the head line's start and the life line — Cheiro describes as an "excellent mark," giving "independence of thought, quickness of judgment, and a certain mental daring that is invaluable in fighting the battle of life." That is a clearly positive reading: initiative without recklessness.
 
-**Widely separated** — when the head line begins noticeably higher than the life line, with a clear gap between them — has traditionally been associated with impulsiveness and reduced caution: a mind that acts quickly but may not reflect sufficiently before doing so. Cheiro describes the very wide separation as indicating "excessive impetuosity," and other writers confirm this general reading. The wider the gap, the more strongly this quality is associated.
+**Widely separated** — when the head line begins noticeably higher than the life line, with a clear gap between them — has traditionally been associated with impulsiveness and reduced caution: a mind that acts quickly but may not reflect sufficiently before doing so. Cheiro describes the very wide separation as indicating "excessive impetuosity."
 
-**Starting inside or overlapping the life line** — where the head line's origin is slightly below the life line's, overlapping it at the start — has been associated in classical texts with heightened sensitivity to environment and strong nervous responsiveness. Cheiro read this configuration as indicating extreme nervous sensitivity bordering on instability, with associations that included impulsive behaviour and susceptibility to intemperance. Contemporary writers have reframed this as indicating acute responsiveness to one's surroundings, emotional sensitivity, and a mind that registers the texture of its circumstances readily — and that is the framing this article uses.
+**Starting inside or overlapping the life line** — where the head line's origin is slightly below the life line's, overlapping it at the start — has been associated with heightened sensitivity to environment and strong nervous responsiveness. Cheiro read this configuration as indicating extreme nervous sensitivity bordering on instability, with associations that included impulsive behaviour and susceptibility to intemperance. This article uses a deliberately gentler frame instead: acute responsiveness to one's surroundings, emotional sensitivity, and a mind that registers the texture of its circumstances readily.
 
 ### Length
 
@@ -52,9 +52,9 @@ A clean, well-defined head line is traditionally associated with concentrated me
 
 **A straight line running horizontally across the palm** is traditionally associated with practical, grounded thinking — a mind that deals well with concrete problems, tends toward the systematic, and is more at home with the tangible than the abstract. This is not the same as being uncreative: it describes a natural mental orientation, not a limitation.
 
-**A line that slopes gently downward toward the Mount of Luna** — the lower outer area of the palm, below the percussion and above the wrist — is associated with imaginative and intuitive tendencies. The Mount of Luna is traditionally associated with imagination, the interior life, and the receptive and unconscious dimensions of experience; a head line that inclines toward it is read as a mind that draws readily on those qualities. The degree of slope matters: a gentle downward curve adds an imaginative colouring to otherwise practical thinking; a more pronounced slope indicates that imaginative and intuitive tendencies are dominant in how the mind characteristically works.
+**A line that slopes gently downward toward the Mount of Luna** — the lower outer area of the palm, below the percussion and above the wrist — is associated with imaginative and intuitive tendencies. The Mount of Luna is traditionally associated with imagination, the interior life, and the receptive and unconscious dimensions of experience; a head line that inclines toward it is read as a mind that draws readily on those qualities.
 
-**A line that descends steeply and deeply into Luna**, reaching toward or well into the lower portion of the mount, intensifies this: the tradition associates it with a highly developed inner life, strong artistic or creative tendencies, and a mind that may find the demands of ordinary practical life difficult to sustain. Cheiro associated a sharply sloping head line with extreme morbid imagination and a tendency to withdraw from ordinary life, framing the most extreme cases in clinical terms that have not carried forward into contemporary practice. The underlying observation — that a very steeply sloping head line correlates with exceptional imaginative capacity and a corresponding distance from the practical — remains within the tradition.
+**A line that descends steeply and deeply into Luna**, reaching toward or well into the lower portion of the mount, is read within that same imaginative association. Benham noted writers, speakers, and poets among his examples of head lines that drooped toward Luna — illustrations of the type he was describing, not evidence that a steeper or deeper slope produces a stronger or more artistic result.
 
 ### The writer's fork
 
@@ -76,7 +76,7 @@ The tradition itself provides the necessary corrective to romanticising this: as
 
 ### Double head line
 
-A double head line — a second line running parallel to or closely alongside the main one — is uncommon and treated as a notable feature. Classical texts associated it with unusual mental capacity and the ability to pursue two distinct lines of thought or occupation simultaneously. It is worth distinguishing from the more common forks and branches that originate at or near the head line's endpoints.
+A double head line — a second line running parallel to or closely alongside the main one — is uncommon and treated as a notable feature. This has traditionally been associated with unusual mental capacity and the ability to pursue two distinct lines of thought or occupation simultaneously. It is worth distinguishing from the more common forks and branches that originate at or near the head line's endpoints.
 
 ### The simian line: a brief reference
 
@@ -105,7 +105,7 @@ A fork at the end of the head line, where it divides near its terminus with one 
 A shared origin is traditionally associated with caution, close early connection to family and home, and a period of dependence on others' influence before independence of mind fully develops. It is a temperamental description, not a limitation.
 
 **What does a steeply sloping head line mean?**
-A head line that descends toward the lower Mount of Luna is associated with imaginative and intuitive tendencies. The steeper the slope, the more dominant those tendencies are in how the mind characteristically works.
+A head line that descends toward the lower Mount of Luna is associated with imaginative and intuitive tendencies.
 
 ## Common myths and oversimplifications
 
