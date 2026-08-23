@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Reconstructed the sound revision-8 cumulative cleanup of src/content/blog/beginner/head-line.md against current main (confirmed unchanged since revision 8 branched) and made eight bounded corrections covering the four Director-flagged residual categories: removed the unsupported writer's/lawyer's-fork naming-popularity claim and its unverified naming rationale from the main section, replaced two directly-equivalent unattributed restatements of that rationale in the FAQ and myths sections with the already-verified Cheiro dual-mentality quotation, and recast three anonymous tradition-wide/consensus statements (starting-point 'traditional attention', long/intelligent 'the tradition does not support', and breaks 'classical reading', plus the myths-section 'the tradition distinguishes type of thinking') as Palmistry Path's own editorial framing. Preserved the Benham direction boundary, the verified Cheiro quotation, and the IQ/vocation/mental-health editorial-policy framing unchanged.",
-  "pr_number": null,
+  "pr_number": 73,
   "verification": [
     "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md (5 findings, all pre-existing revision-8 wording outside this revision's authorized scope, dispositioned in docs/source-verification-log.md; none newly introduced)",
     "npm run build (110 pages)",
