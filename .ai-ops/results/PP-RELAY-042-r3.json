@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-042",
+  "revision": 3,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revisions 1 (PR #66) and 2 (PR #67) were both closed without merging, so this task started from origin/main, reconstructed the nine sound revision-1 corrections and eleven sound revision-2 corrections (matching the already-reviewed content of the closed claude/relay-PP-RELAY-042-head-line-source-cleanup-r2 branch), and applied the required revision-3 remediation on top in one pass. Corrected the five Director-identified population/comparative-prevalence passages in src/content/blog/beginner/head-line.md that revision 2 had incorrectly classified as heuristic false positives or out of scope: the writer's-fork paragraph's 'many people have it without any special literary ability, and many capable writers do not have it at all' (restated as a direct, frequency-free statement that the fork tracks writing talent in neither direction); the double-head-line paragraph's 'more common forks and branches' ranking (restated as a structural distinction using only wording already established elsewhere in the article, with no prevalence comparison); the FAQ's 'It appears in many hands, not exclusively in writers'' (narrowed to 'It is not exclusive to writers'); and the closing myth's 'It appears across many kinds of hands, not only writers'' (narrowed to 'It is not limited to writers'). All sound revision-1 and revision-2 corrections were re-verified intact and unchanged. No new palmistry meaning, prevalence statistic, or unsupported synonym substitution was introduced; the Director-verified Benham direction/path evidence boundary is unchanged. Independently re-reviewed all ten remaining claim-risk heuristic findings (down from fourteen) against the four cleanup categories rather than carrying forward the revision-2 dispositions uncritically; all ten are quoted text, this article's own editorial framing, or non-population statements, none within the scoped cleanup categories. Updated docs/source-verification-log.md with a full revision-3 claim-by-claim disposition and docs/CHANGELOG.md with a revision-3 entry.",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-042-head-line-source-cleanup-r3",
+  "base_commit": "fe252e8121865b3a8c3a891dab68d8dba88462c3",
+  "changed_paths": [
+    "src/content/blog/beginner/head-line.md",
+    "docs/source-verification-log.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-042-r3.json"
+  ],
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md — 14 findings before this revision's edits, 10 after, all dispositioned in docs/source-verification-log.md",
+    "npm run build — pass, 110 pages built",
+    "npm run content-audit — pass, 65 blog posts and 25 lessons valid",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md — controlling evidence for direction/path wording; unchanged by this revision, re-verified that all retained direction/path passages stay inside its boundary",
+      "src/content/blog/beginner/forked-head-line-meaning.md — already-verified sibling article, source for the writer's-fork naming correction carried forward from revision 2 (unchanged by this revision)"
+    ],
+    "external_access": "None attempted. This revision's five corrections are removals/narrowings of unsupported population and comparative-prevalence wording, not new source acquisition; no new claim requiring external verification was added.",
+    "canonical_lesson_used_as_proof": "No. The canonical lessons/lines/03-head-line.mdx lesson was not consulted as evidence for this revision."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Ran npm run audit:claim-risk against the final file (10 findings) and manually re-read the complete final article end to end, not only changed lines. Prevalence/consensus: all five revision-3 examples (many people have it..., many capable writers..., more common forks and branches, FAQ 'many hands', myth 'many kinds of hands') were removed or narrowed to state the same editorial point without any frequency/population claim, per the task's explicit instruction that the task packet controls over the heuristic's false-positive classification; no unsupported synonym (several, a good number, plenty of, etc.) was substituted for any of them. The ten remaining heuristic findings were individually re-checked: two are the article's own rhetorical scene-setting (line 9) or an editorial statement of covered features (line 17), two are inside directly-quoted, previously-verified Cheiro passages (lines 11, 49) where quotation fidelity requires the wording stand, one describes an individual mind's own range rather than a population (line 45), one is the site's own statement about its cross-line reading method (line 89), and one is a general statement about creativity, not palmistry population frequency (line 114) — none falls in the four scoped cleanup categories. Scientific/historical: no scientific, medical, or historical-continuity claim was added; the pre-existing Cheiro/Benham quotations are unchanged and remain a previously-logged, out-of-scope quotation-verification gap from Pass 1 (2026-08-10). Combination readings: the article's one illustrative combination ('The head line in context' brief illustration) is unchanged from revision 1, explicitly framed as a non-verdict illustration of cross-line reading method combining only individually-established meanings, and was outside this revision's required remediation. Vague attribution: 'classical texts' in the writer's-fork paragraph is immediately followed by the specific, verified clarification 'neither Cheiro nor Benham uses it,' so it is not a free-floating anonymous-authority claim; no new vague attribution was introduced. Quotation fidelity: no quotation marks were added, removed, or altered. Precision/degree extrapolation: unchanged from the reconstructed revision-1/2 corrections — no fixed angle/zone/average and no monotonic degree-scaling rule remains. Comparative-prevalence wording: the double-head-line paragraph's ranking claim was removed and replaced with a structural (non-prevalence) distinction. Observation-vs-interpretation framing: unchanged structurally throughout the article (anatomical description sections state plain observation; 'traditionally associated with' sections carry attributed historical interpretation; myths/FAQ sections carry Palmistry Path's own editorial corrections, now stated in the article's own voice rather than attributed to an anonymous 'contemporary tradition')."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the task packet, state.json, and CURRENT_TASK.md mirror to confirm revision-3 scope, risk class, and the five required examples before implementation",
+      "Confirmed via GitHub search that PR #66 (revision 1) and PR #67 (revision 2) are both closed/unmerged, and confirmed via git log that head-line.md on origin/main has not been touched since PP-RELAY-038, so neither revision's edits reached main",
+      "Verified the closed claude/relay-PP-RELAY-042-head-line-source-cleanup-r2 branch's head-line.md diff applies cleanly against current origin/main (only Director task-authoring commits sit between the branch's merge base and current main) and used it as the reconstructed revision-1+2 starting point",
+      "Applied only the five authorized revision-3 corrections on top of the reconstructed content, without reopening any other revision-1/2 wording",
+      "Ran npm run audit:claim-risk before and after the edits and independently re-reviewed every remaining finding against the four cleanup categories rather than trusting the prior revision's dispositions",
+      "Manually re-read the complete final article against every source-sensitive preflight category before selecting READY_FOR_REVIEW",
+      "Added a revision-3 CHANGELOG entry and a full revision-3 claim-by-claim disposition section in docs/source-verification-log.md documenting both the reconstructed prior corrections and the new corrections"
+    ],
+    "validation": [
+      "npm run audit:claim-risk (targeted)",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "node_modules were not present in the container; ran npm install to enable build/audit commands. Local main had no merge base with origin/main at session start (persistent-checkout divergence: 84 vs 50 different commits). Per AGENTS.md's clean-divergence recovery path, the working tree was verified clean, origin was verified as the expected palmistrypath/palmistry-site remote, local main was left untouched, and the revision-3 branch was created directly from verified origin/main at fe252e8121865b3a8c3a891dab68d8dba88462c3, matching state.json's current_task_path commit and the routine dispatch payload's stated state commit. Two prior branches exist for this task (revision-1 and revision-2 attempts, both with closed, unmerged PRs); this run created a new revision-3 branch/PR rather than reusing either, consistent with the task's 'claude/relay-PP-RELAY-042-...' branch-per-revision pattern used by PP-RELAY-041."
+  }
+}
