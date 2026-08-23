@@ -4,11 +4,11 @@
   "started_at": "2026-08-19T20:07:40Z",
   "target_accepted_iterations": 50,
   "baseline": {"experiment":"relay-v2b-near-autonomous","accepted":20,"first_pass_accepted":15,"tasks_requiring_rework":5,"rework_revisions":6,"human_gates":0,"usage_limit_events":0,"technical_blockers":2,"autonomous_merges":20,"archive":".ai-ops/archive/relay-v2b-completion.json"},
-  "summary": {"accepted":21,"first_pass_accepted":9,"tasks_requiring_rework":13,"rework_revisions":32,"human_gates":0,"usage_limit_events":0,"technical_blockers":1,"verified_no_change":0,"autonomous_merges":21,"bad_merge_or_rollback_events":0},
+  "summary": {"accepted":22,"first_pass_accepted":9,"tasks_requiring_rework":13,"rework_revisions":32,"human_gates":0,"usage_limit_events":0,"technical_blockers":1,"verified_no_change":0,"autonomous_merges":22,"bad_merge_or_rollback_events":0},
   "risk_classes": {
     "LOW":{"accepted":2,"first_pass_accepted":2,"tasks_requiring_rework":0,"rework_revisions":0},
     "STANDARD":{"accepted":4,"first_pass_accepted":3,"tasks_requiring_rework":1,"rework_revisions":1},
-    "SOURCE_SENSITIVE":{"accepted":15,"first_pass_accepted":4,"tasks_requiring_rework":12,"rework_revisions":31,"source_preflight_missing_or_invalid":0}
+    "SOURCE_SENSITIVE":{"accepted":16,"first_pass_accepted":4,"tasks_requiring_rework":12,"rework_revisions":31,"source_preflight_missing_or_invalid":0}
   },
   "reason_counts": {"SOURCE_INTEGRITY":30,"UNSUPPORTED_PREVALENCE_OR_CONSENSUS":19,"UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM":9,"UNSUPPORTED_COMBINATION_READING":0,"SCOPE_DRIFT":0,"SEO":0,"ACCESSIBILITY":0,"TEST_OR_CI":0,"CONTROL_PLANE":2,"IMPLEMENTATION_CORRECTNESS":1,"DOCUMENTATION_STATE":1,"OTHER":0},
   "tasks": [
@@ -33,6 +33,6 @@
     {"task_id":"PP-RELAY-042","revision":10,"risk_class":"SOURCE_SENSITIVE","status":"ACCEPTED_MERGED","task_path":".ai-ops/tasks/PP-RELAY-042.md","result_path":".ai-ops/results/PP-RELAY-042-r10.json","dispatched_at":null,"result_discovered_at":"2026-08-23T06:14:37Z","reviewed_at":"2026-08-23T08:07:32Z","merge_approved_at":"2026-08-23T08:07:32Z","merged_at":"2026-08-23T08:09:18Z","pr_number":74,"rework_count":9,"reason_categories":["SOURCE_INTEGRITY","UNSUPPORTED_PREVALENCE_OR_CONSENSUS","CONTROL_PLANE","DOCUMENTATION_STATE"],"terminal_result":"READY_FOR_REVIEW"},
     {"task_id":"PP-RELAY-043","revision":2,"risk_class":"SOURCE_SENSITIVE","status":"ACCEPTED_MERGED","task_path":".ai-ops/tasks/PP-RELAY-043.md","result_path":".ai-ops/results/PP-RELAY-043-r2.json","dispatched_at":null,"result_discovered_at":"2026-08-23T09:13:06Z","reviewed_at":"2026-08-23T11:07:00Z","merge_approved_at":"2026-08-23T11:07:00Z","merged_at":"2026-08-23T11:09:07Z","pr_number":76,"rework_count":1,"reason_categories":["SOURCE_INTEGRITY","UNSUPPORTED_PREVALENCE_OR_CONSENSUS"],"terminal_result":"READY_FOR_REVIEW"},
     {"task_id":"PP-RELAY-044","revision":2,"risk_class":"SOURCE_SENSITIVE","status":"ACCEPTED_MERGED","task_path":".ai-ops/tasks/PP-RELAY-044.md","result_path":".ai-ops/results/PP-RELAY-044-r2.json","dispatched_at":null,"result_discovered_at":"2026-08-23T12:15:56Z","reviewed_at":"2026-08-23T15:04:38Z","merge_approved_at":"2026-08-23T15:04:38Z","merged_at":"2026-08-23T15:07:14Z","pr_number":78,"rework_count":1,"reason_categories":["SOURCE_INTEGRITY","UNSUPPORTED_PREVALENCE_OR_CONSENSUS"],"terminal_result":"READY_FOR_REVIEW"},
-    {"task_id":"PP-RELAY-045","revision":3,"risk_class":"SOURCE_SENSITIVE","status":"MERGE_APPROVED","task_path":".ai-ops/tasks/PP-RELAY-045.md","result_path":".ai-ops/results/PP-RELAY-045-r3.json","dispatched_at":null,"result_discovered_at":"2026-08-23T18:16:30Z","reviewed_at":null,"merge_approved_at":null,"merged_at":null,"pr_number":81,"rework_count":2,"reason_categories":["SOURCE_INTEGRITY","UNSUPPORTED_PREVALENCE_OR_CONSENSUS"],"terminal_result":"READY_FOR_REVIEW"}
+    {"task_id":"PP-RELAY-045","revision":3,"risk_class":"SOURCE_SENSITIVE","status":"ACCEPTED_MERGED","task_path":".ai-ops/tasks/PP-RELAY-045.md","result_path":".ai-ops/results/PP-RELAY-045-r3.json","dispatched_at":null,"result_discovered_at":"2026-08-23T18:16:30Z","reviewed_at":null,"merge_approved_at":null,"merged_at":"2026-08-23T19:05:57Z","pr_number":81,"rework_count":2,"reason_categories":["SOURCE_INTEGRITY","UNSUPPORTED_PREVALENCE_OR_CONSENSUS"],"terminal_result":"READY_FOR_REVIEW"}
   ]
 }
