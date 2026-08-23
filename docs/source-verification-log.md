@@ -1303,3 +1303,82 @@ faintness, not as an interpretation of faintness itself.
 **Claim-risk heuristic disposition:** `npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md` returned 1 finding during drafting (`PREVALENCE_OR_CONSENSUS` on "Most lines sit somewhere between the two ends"), addressed by removing the sentence rather than arguing around it; 0 findings on re-run.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md` (0 findings). `npm run build` (113 pages). `npm run content-audit` (68 blog posts, 25 lessons valid). `npm run audit:all` (links — including the no-orphan check — images, schema, indexability, accessibility all pass). `git diff --check` (clean).
+
+---
+
+## Curved vs Straight Life Line companion article, revision 3 — `blog/beginner/curved-life-line-meaning.md` (Relay PP-RELAY-046, revision 3, 2026-08-23)
+
+Scope: Relay PP-RELAY-046 revision 3 (`SOURCE_SENSITIVE`), publishing
+`src/content/blog/beginner/curved-life-line-meaning.md`. Revision 1 returned
+`HUMAN_REQUIRED` after correctly finding no repository-held mount-independent
+curved/straight interpretation; the Director then independently verified the
+available public-domain Benham evidence and recorded a controlling boundary
+in `.ai-ops/evidence/PP-RELAY-046-director-life-line-curvature.md`. Revision
+2 produced a cleanly built article but exceeded that boundary by importing an
+unverified Peter West wide-arc/adventurousness reading and synthesizing
+additional mount-development language (`well-resourced Venus`, amplified
+warmth/vitality, a paired wide-arc/narrow-arc energy system) that the
+controlling evidence note does not support — it verifies only the narrow
+Benham mount-bound claim. Revision 2 was never merged, so revision 3 was
+drafted fresh directly against the controlling evidence note rather than by
+patching revision 2's prose.
+
+### Controlling evidence applied
+
+The only claim treated as verified is William G. Benham's, *The Laws of
+Scientific Hand Reading* (1900): a life line lying close to the thumb
+"reduces the size of the Mount of Venus, thus checking the operation of that
+Mount." This exact quotation is already source-verified elsewhere on the site
+(`life-line.md`, `mount-of-venus.md`, `lessons/mounts/02-mount-of-venus.mdx`);
+no new verification was required for the quotation itself, only for how it is
+used in the new article.
+
+### Required revision-3 corrections — disposition
+
+| Correction required | Disposition |
+|---|---|
+| 1. Remove the Peter West wide-arc/adventurousness interpretation unless independently verified and logged. | Not verified in this revision (no primary-source access to confirm West's exact wording independent of the unmerged revision-2 branch or existing site attribution). Removed entirely; West does not appear anywhere in the article or its sources-consulted footer. |
+| 2. Remove the synthesized `well-resourced Venus` / amplified warmth/vitality/energy/adventurousness claim for a wide arc. | Removed. The article states only the observable fact that a wide arc leaves the mount more room, and explicitly declines to turn that into a vitality/warmth/personality claim ("Turning 'more room' into a claim about amplified warmth, vitality, or an outward-directed personality would be an inference this article doesn't make"). |
+| 3. Remove the synthesized opposite (narrow arc = contained/conserved energy, smaller sphere) beyond Benham's literal "checks the operation of the mount." | Removed. The article quotes Benham's sentence and states directly that what "checking the operation of that Mount" means beyond the territorial description "isn't something Benham's text spells out further," and that the article does not fill that gap with an inferred modern reading. |
+| 4. Keep Benham's historical claim explicitly attributed without translating it into a stronger modern psychological/vitality claim. | Done. Benham is named, dated, and quoted verbatim in "What the verified evidence actually says," with the quotation's scope (mount territory) stated explicitly and not extended. |
+| 5. Review FAQ, common-mistakes, summary, frontmatter/description, and source footer for equivalent extensions, not just the main body paragraph. | Full re-read performed. Frontmatter `description` states only that the article covers identification, what the verified evidence ties the arc to, and why the arc isn't read as an independent trait — no wide/narrow personality claim. FAQ answers restate the mount-territory-only position for both "curved" and "straight" questions and explicitly decline the vitality-scale question. Common-mistakes section warns against exactly the two removed inferences (narrow arc as independent negative trait; wider arc as "more of something"). Sources-consulted footer names Benham only. |
+| 6. Accept that a primarily explanatory/observational article is an acceptable outcome. | Accepted. The article is deliberately declinatory on independent interpretation for both arc directions, consistent with the `faint-life-line-meaning.md` pattern (Pass 13, above) for a similarly evidence-thin companion topic. |
+
+### Preflight disposition
+
+1. **Prevalence/consensus language.** None found; `npm run audit:claim-risk`
+   returns 0 findings (word list: most/many/often/commonly/typically/
+   generally/usual(ly)/rare(ly)/majority — none present).
+2. **Scientific/historical assertions.** Limited to the single verified
+   Benham quotation, attributed by name and edition; no chronology, study, or
+   scientific claim is made.
+3. **No invented combination readings.** The arc is discussed only against
+   length, depth, and breaks as separate, non-combined observations, matching
+   the task's prohibition on combining with those features or with mount
+   development beyond the specifically verified territory relationship.
+4. **No vague anonymous authority.** No "modern palmists," "some writers,"
+   "traditional readers," "experts," or equivalent phrase appears; the claim-
+   risk `ANONYMOUS_AUTHORITY` category returns 0 matches.
+5. **Claim-type separation.** Direct observation (how to identify a wide vs.
+   narrow arc, comparative and unbounded by a fixed angle), Benham's named
+   historical claim (mount territory only), and Palmistry Path's editorial
+   limitation (no independent evidence for a standalone reading in either
+   direction) are kept in distinct, separately headed sections and are not
+   blended.
+6. **Health/vitality/lifespan/danger language.** None appears as a diagnosis
+   or prediction. The vitality question is raised only in a FAQ answer that
+   explicitly declines it ("This site doesn't make that claim").
+7. **Quotation fidelity.** The single quotation ("reduces the size of the
+   Mount of Venus, thus checking the operation of that Mount") is verbatim-
+   identical to the already-verified use of the same sentence in
+   `life-line.md`, `mount-of-venus.md`, and
+   `lessons/mounts/02-mount-of-venus.mdx`.
+8. **Precision/degree extrapolation.** No fixed angle, average curvature,
+   population figure, or monotonic "wider = more" rule appears; the claim-
+   risk `PRECISION_OR_DEGREE_EXTRAPOLATION` category returns 0 matches.
+
+**Claim-risk heuristic disposition:** `npm run audit:claim-risk -- src/content/blog/beginner/curved-life-line-meaning.md` returns 0 findings on first run.
+
+**Reciprocal navigation:** Added one link from `life-line.md`'s existing "Explore further" list to the new article. No other wording in that file, or in `mount-of-venus.md` or the canonical Life Line/Mount of Venus lessons, was reopened — the task scope prohibits rewriting the canonical pillar/lesson prose, which still contains the unverified West/amplification language this revision declined to import into the new companion article.
+
+**Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/curved-life-line-meaning.md` (0 findings). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.

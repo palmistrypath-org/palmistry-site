@@ -1,0 +1,48 @@
+{
+  "schema_version": 3,
+  "task_id": "PP-RELAY-046",
+  "revision": 3,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 1 returned HUMAN_REQUIRED after correctly finding no repository-held mount-independent curved/straight interpretation; the Director then independently verified the available public-domain Benham evidence and recorded a controlling boundary in .ai-ops/evidence/PP-RELAY-046-director-life-line-curvature.md. Revision 2 built cleanly but exceeded that boundary by importing an unverified Peter West wide-arc/adventurousness reading and synthesizing additional mount-development language (a 'well-resourced Venus', amplified warmth/vitality, a paired wide-arc/narrow-arc energy system) the controlling note does not support -- it verifies only the narrow Benham mount-bound claim. Revision 2 was never merged, so revision 3 was drafted fresh directly against the controlling evidence note rather than by patching revision 2's prose. Added src/content/blog/beginner/curved-life-line-meaning.md, item 17 from docs/editorial-backlog.md's Next 25 list (68 -> 69 published blog posts). The article limits interpretation to the single verified Benham claim -- a life line lying close to the thumb 'reduces the size of the Mount of Venus, thus checking the operation of that Mount' (The Laws of Scientific Hand Reading, 1900) -- stated only in terms of the mount's territory, with no West attribution, no positive-opposite wide-arc reading, and no translation of 'checking the operation' into a modern vitality/personality claim. States directly that Palmistry Path currently has no approved evidence for an independent, mount-free reading of either a wide or a narrow arc, and points readers to the existing Mount of Venus guide for how the mount itself is read rather than importing that guide's unverified prose into the new article. Identification stays comparative to the hand being examined, with no fixed angle, universal normal curve, or population figure, and the arc is kept explicitly separate from length, depth, and breaks, with no combination reading introduced. Added one reciprocal link from life-line.md's existing 'Explore further' list; no wording in that file, mount-of-venus.md, or the canonical Life Line/Mount of Venus lessons was reopened, since the task scope prohibits rewriting the canonical pillar/lesson prose (which still carries the unverified West/amplification language this revision declined to import).",
+  "pr_number": 83,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/curved-life-line-meaning.md (0 findings, both before and after a description-length fix)",
+    "npm run build (114 pages)",
+    "npm run content-audit (69 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. no-orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)",
+    "manual grep-equivalent re-read of final article for prevalence/consensus terms, vague anonymous-authority phrases, and West/amplification wording: none present",
+    "manual re-read of final article against the required revision-3 correction list and the controlling evidence note in .ai-ops/evidence/PP-RELAY-046-director-life-line-curvature.md"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full claim-by-claim disposition of the six required revision-3 corrections and the eight-item preflight checklist is recorded in docs/source-verification-log.md under 'Curved vs Straight Life Line companion article, revision 3'. The single retained quotation ('reduces the size of the Mount of Venus, thus checking the operation of that Mount') is verbatim-identical to the already-verified use of the same sentence in life-line.md, mount-of-venus.md, and lessons/mounts/02-mount-of-venus.mdx. Peter West is not named or cited anywhere in the article; his revision-2 wide-arc/adventurousness claim was not independently verifiable in this environment and was removed rather than re-imported. Direct observation (comparative arc identification), Benham's named historical claim (mount territory only), and Palmistry Path's editorial limitation (no independent evidence for either arc direction) are kept in separate, distinctly headed sections throughout."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the controlling evidence note (.ai-ops/evidence/PP-RELAY-046-director-life-line-curvature.md) and the closed revision-2 article (branch origin/claude/relay-PP-RELAY-046-curved-life-line) to identify exactly which passages exceeded the Director's verified boundary before drafting",
+      "Drafted the revision-3 article fresh against the controlling evidence note rather than patching revision 2, since the unsupported extension was structural (present in the main body, FAQ, and common-mistakes sections alike)",
+      "npm run audit:claim-risk as a bounded aid before and after drafting, including after a subsequent SEO description-length fix",
+      "Cross-checked the retained Benham quotation against its three existing verified uses elsewhere in the repository (life-line.md, mount-of-venus.md, lessons/mounts/02-mount-of-venus.mdx) for verbatim consistency"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/blog/beginner/curved-life-line-meaning.md",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Startup gate: origin/main HEAD (c9d8d4272dbccd2cdfc7179a0af52eeb472863f1) matched the dispatch payload's state commit exactly. Local main had diverged from origin/main with no fast-forward path (50 vs 50 differing commits, no common ancestor in the local history); per AGENTS.md's explicit clean-divergence recovery and the routine prompt's persistent-checkout recovery note, local main was left untouched and this task branch was created directly from verified origin/main. Confirmed no open Relay PR existed for PP-RELAY-046 and no revision-3 result artifact existed on any claude/relay-PP-RELAY-046-... branch before proceeding; only revision 1's and revision 2's results exist, on their respective unmerged branches. node_modules was not present in the environment and was installed via npm install before running build/audit validation; the resulting incidental package-lock.json regeneration (optional-dependency 'libc' metadata churn only) was reverted before committing since it was not part of this task's scope."
+  }
+}
