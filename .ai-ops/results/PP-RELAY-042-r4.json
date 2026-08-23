@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-042",
+  "revision": 4,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revisions 1 (PR #66), 2 (PR #67), and 3 (PR #68) were all closed without merging, so this task started from verified origin/main, reconstructed the sound revision-1 through revision-3 corrections (matching the already-reviewed content of the closed claude/relay-PP-RELAY-042-head-line-source-cleanup-r3 branch), and applied the required revision-4 remediation on top in one pass. Corrected the two Director-identified anonymous-authority/consensus overstatements in src/content/blog/beginner/head-line.md: the writer's-fork naming sentence generalized the verified fact that neither Cheiro nor Benham uses the label into an unsupported 'rather than one from the classical texts' chronology/classical-text-wide claim (narrowed to state only that neither Cheiro nor Benham uses the label); and the intelligence/IQ FAQ and myth wording ('The tradition says nothing about cognitive ability' / '...about IQ or cognitive ability') asserted an unsupported exhaustive tradition-wide consensus (restated as Palmistry Path's own bounded editorial interpretation: 'This article does not treat length as a measure of intelligence, IQ, or cognitive ability'). All sound revision-1 through revision-3 corrections were re-verified intact and unchanged, including the Director-verified Benham direction/path evidence boundary. Re-read both revision-4 passages for directly equivalent anonymous-authority/consensus wording; none remained. Independently re-reviewed all ten remaining claim-risk heuristic findings (unchanged count from revision 3) against the source-boundary checklist rather than carrying forward the revision-3 dispositions uncritically; all ten remain quoted text, this article's own editorial framing, or non-population statements, none within the scoped cleanup categories, and neither revision-4 edit location appears among them. Updated docs/source-verification-log.md with a full revision-4 claim-by-claim disposition and docs/CHANGELOG.md with revision-3 (never previously recorded on main) and revision-4 entries.",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-042-head-line-source-cleanup-r4",
+  "base_commit": "1a12cf80a6589a31b909821a651c19386f95b88a",
+  "changed_paths": [
+    "src/content/blog/beginner/head-line.md",
+    "docs/source-verification-log.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-042-r4.json"
+  ],
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md — 10 findings, unchanged from revision 3, all independently re-reviewed and dispositioned in docs/source-verification-log.md",
+    "npm run build — pass, 110 pages built",
+    "npm run content-audit — pass, 65 blog posts and 25 lessons valid",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md — controlling evidence for direction/path wording; unchanged by this revision, re-verified that all retained direction/path passages stay inside its boundary",
+      "No repository evidence establishes a broader classical-text-wide chronology claim for the writer's-fork label, and none was found; the sibling article src/content/blog/beginner/forked-head-line-meaning.md repeats the same unverified 'later popular palmistry... rather than from the classical texts' framing rather than independently sourcing it, so it was not treated as proof and was left untouched (out of this task's scope)."
+    ],
+    "external_access": "None attempted. This revision's two corrections are removals/narrowings of unsupported chronology and consensus wording, not new source acquisition; no new claim requiring external verification was added.",
+    "canonical_lesson_used_as_proof": "No. The canonical lessons/lines/03-head-line.mdx lesson was not consulted as evidence for this revision."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Ran npm run audit:claim-risk against the final file (10 findings, unchanged from revision 3) and manually re-read the complete final article end to end, not only changed lines. Prevalence/consensus and vague/anonymous authority: the writer's-fork naming sentence's 'rather than one from the classical texts' clause generalized two named authors' non-use into a claim about an entire category of texts and a 'later' chronology; neither is established by approved evidence, so it was removed, leaving only the verified 'neither Cheiro nor Benham uses the label' fact. The IQ/cognitive-ability wording in the FAQ and myths section claimed 'the tradition says nothing' — an exhaustive consensus claim about everything the tradition has ever said — and was restated as Palmistry Path's own stated editorial position instead, preserving the safety point (length is not a measure of cognitive ability) without the unsupported consensus framing. Re-read both corrected passages afterward for any remaining or newly introduced equivalent wording: the writer's-fork paragraph's remaining 'traditional interpretation' phrasing follows this log's established, previously-accepted generic-tradition convention and is not a new consensus claim; the IQ/cognitive-ability passages contain no further prevalence, consensus, or authority wording. No risky phrase was replaced by an equivalent unsupported synonym. Scientific/historical: no scientific, medical, or historical-continuity claim was added; the pre-existing Cheiro/Benham quotations are unchanged and remain a previously-logged, out-of-scope quotation-verification gap from Pass 1 (2026-08-10). Combination readings: the article's one illustrative combination ('The head line in context' brief illustration) is unchanged from revision 3, explicitly framed as a non-verdict illustration of cross-line reading method combining only individually-established meanings, and was outside this revision's required remediation. Quotation fidelity: no quotation marks were added, removed, or altered. Observation-vs-interpretation framing: unchanged structurally throughout the article. All ten remaining claim-risk heuristic findings were individually re-checked against the article's sourced content and this task's two cleanup categories rather than assumed compliant from revision 3: lines 9/11/17 are rhetorical scene-setting or a directly-quoted, previously-verified Cheiro attribution; line 45 describes an individual mind's own range rather than a population; line 49 is inside a directly-quoted Cheiro passage; line 89 is the site's own statement about its cross-line reading method; line 114 is a general statement about creativity, not palmistry population frequency. None falls in the two revision-4 scoped categories, and neither revision-4 edit location appears among the findings."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the task packet, state.json, and CURRENT_TASK.md mirror to confirm revision-4 scope, risk class, and the two required corrections before implementation",
+      "Confirmed via GitHub search that PR #66 (revision 1), PR #67 (revision 2), and PR #68 (revision 3) are all closed/unmerged, and confirmed via git diff that head-line.md on origin/main still lacks all revision-1 through revision-3 corrections",
+      "Fetched the closed claude/relay-PP-RELAY-042-head-line-source-cleanup-r3 branch, diffed it against current origin/main to confirm no unrelated drift, and used its head-line.md content as the reconstructed revision-1 through revision-3 starting point",
+      "Applied only the two authorized revision-4 corrections on top of the reconstructed content, without reopening any other revision-1/2/3 wording",
+      "Ran npm run audit:claim-risk before and after the edits and independently re-reviewed every remaining finding against the source-boundary checklist rather than trusting the prior revision's dispositions",
+      "Manually re-read the complete final article against every source-sensitive preflight category, with particular attention to the two revision-4 passages, before selecting READY_FOR_REVIEW",
+      "Reconstructed the revision-3 CHANGELOG entry (never previously recorded on main) and added a full revision-4 claim-by-claim disposition section in docs/source-verification-log.md"
+    ],
+    "validation": [
+      "npm run audit:claim-risk (targeted)",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "node_modules were not present in the container; ran npm install to enable build/audit commands. The designated session branch (claude/amazing-wright-4tt3nl) was already at the exact state commit named in the routine dispatch payload (1a12cf80a6589a31b909821a651c19386f95b88a), matching origin/main, so no clean-divergence recovery was needed; the revision-4 branch was created directly from that verified commit. Three prior branches exist for this task (revision 1, 2, and 3 attempts, all with closed, unmerged PRs); this run created a new revision-4 branch/PR rather than reusing any of them, consistent with this task's established branch-per-revision pattern."
+  }
+}
