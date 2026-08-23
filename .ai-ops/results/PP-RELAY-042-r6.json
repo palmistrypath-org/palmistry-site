@@ -1,0 +1,62 @@
+{
+  "task_id": "PP-RELAY-042",
+  "revision": 6,
+  "result": "READY_FOR_REVIEW",
+  "risk_class": "SOURCE_SENSITIVE",
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Reframed the writer's-fork talent/creative-potential sentence from an empirical population claim ('does not track writing talent in either direction ... neither its presence nor its absence indicates anything about creative potential') to Palmistry Path's own stated editorial caution ('Palmistry Path does not treat the fork, in its presence or its absence, as proof of writing or creative ability.'). Re-read the complete writer's-fork subsection and the revision-4 IQ/cognitive-ability passages for equivalent empirical, population, prevalence, consensus, naming-history, or chronology wording; none found beyond the corrected sentence. All revision-1 through revision-5 corrections (unattributed consensus/ranking, degree-scaling, Cheiro clinical-framing replacement, population/comparative-prevalence, chronology, IQ-consensus, and writer's-fork naming/anonymous-authority) were reconstructed from the unmerged revision-5 branch, diffed against current main to confirm no unrelated drift, and re-verified intact. No risky phrase was replaced by an equivalent unsupported synonym. Claim-risk scan: 10 findings, unchanged from revision 5, none at the revision-6 edit location; all 10 previously dispositioned as rhetorical scene-setting, verified direct quotations, or Palmistry Path's own editorial statements."
+  },
+  "summary": "Reconstructed all sound revision-1 through revision-5 corrections to src/content/blog/beginner/head-line.md (never merged to main; PRs #66-70 all closed unmerged) against current main, then applied the required revision-6 correction: narrowed the writer's-fork subsection's talent/creative-potential wording from an unsupported empirical population claim to Palmistry Path editorial caution.",
+  "scope_files_changed": [
+    "src/content/blog/beginner/head-line.md",
+    "docs/source-verification-log.md",
+    "docs/CHANGELOG.md"
+  ],
+  "acceptance_criteria_check": {
+    "revision_1_through_5_corrections_intact": true,
+    "no_unsupported_population_or_empirical_association_claim_remains": true,
+    "talent_caution_framed_as_editorial_policy": true,
+    "cheiro_benham_label_usage_limited_to_verified_evidence": true,
+    "iq_wording_remains_editorial_framing": true,
+    "no_unsupported_fixed_norm_or_degree_rule": true,
+    "direction_path_wording_within_benham_boundary": true,
+    "no_new_meaning_or_claim_invented": true,
+    "source_preflight_complete_and_truthful": true,
+    "required_validation_passes": true
+  },
+  "validation": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md (10 findings, unchanged from revision 5, all previously dispositioned; revision-6 edit location not flagged)",
+    "npm run build (110 pages)",
+    "npm run content-audit (65 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. no-orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)"
+  ],
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "git diff against unmerged claude/relay-PP-RELAY-042-head-line-source-cleanup-r5 branch to reconstruct sound revision-1 through revision-5 corrections exactly, rather than re-deriving them from PR prose",
+      "npm ci to install dependencies (node_modules was absent in this environment)"
+    ],
+    "validation": [
+      "npm run audit:claim-risk",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Local main in this Claude Code environment was diverged from origin/main with no clean fast-forward (84 vs 50 differing commits). Per AGENTS.md's clean-divergence recovery, verified origin/main's tip (3a09d4f71f0a14f939f394e0aa9d5b24d4f0acc3) matched the dispatch hint's state commit exactly, left local main untouched, and created this task branch directly from verified origin/main. Confirmed the working-tree head-line.md before edits was byte-identical to origin/main's copy (no unrelated drift), and confirmed the reconstructed revision-5 text differed from origin/main only by the previously-documented revision-1 through revision-5 corrections before applying the revision-6 edit."
+  },
+  "git": {
+    "base_commit": "3a09d4f71f0a14f939f394e0aa9d5b24d4f0acc3",
+    "branch": "claude/relay-PP-RELAY-042-head-line-source-cleanup-r6"
+  }
+}
