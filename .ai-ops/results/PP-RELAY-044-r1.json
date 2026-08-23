@@ -1,0 +1,45 @@
+{
+  "schema_version": 3,
+  "task_id": "PP-RELAY-044",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Published src/content/blog/beginner/long-heart-line-meaning.md, item 15 from docs/editorial-backlog.md's Next 25 list (66 -> 67 published blog posts). Drafted directly against the narrow Benham evidence boundary stated in the task packet, not against the canonical Heart Line lesson or the heart-line.md pillar's existing 'broad and sustained emotional engagement' Length prose, which the packet explicitly treats as an unverified map to a candidate claim. The article limits interpretation to Benham's association of his own extreme 'crosses the entire hand' length example with a stronger, more dominant sentimental/affective emphasis substantial enough to weigh on decision-making, framed as Benham's historical interpretation only -- not a tradition-wide view, a graduated degree scale, or a claim about love, relationships, empathy, or emotional maturity. Length is identified observationally/comparatively (no fixed measurement) and kept explicitly separate from endpoint, depth, and forks/chains, with no combination reading introduced. Benham's surrounding medical, mortality, event-timing, moralizing, jealousy, and deterministic relationship material is not repeated, named, or implied anywhere in the article. Added one reciprocal link from heart-line.md's 'Explore further' list; no other pillar wording was reopened. Updated docs/editorial-backlog.md published count/status and docs/CHANGELOG.md.",
+  "pr_number": 77,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/long-heart-line-meaning.md (1 initial finding: PRECISION_OR_DEGREE_EXTRAPOLATION match on a myth heading disclaiming a graduated 'the longer... the more' rule; reworded rather than argued around; 0 findings on re-run)",
+    "npm run build (112 pages)",
+    "npm run content-audit (67 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. no-orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean, both working tree and staged)"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Only Benham (1900), Line of Heart chapter, is used as controlling evidence, per the task packet's boundary; no other source was reviewed or cited. No verbatim Benham text was supplied by the packet, so the length claim is paraphrased throughout with no quotation marks used for it (matching the PP-RELAY-043 precedent for a packet that gives a paraphrase rather than verified verbatim wording). Length is kept explicitly separate from endpoint (dedicated bullet plus FAQ answer), from depth, and from forks/chains, with no new combination reading. Two sentences explicitly disclaim -- rather than assert -- a tradition-wide or population claim ('not... a view shared across palmistry traditions as a whole'; 'does not assert that palmists in general agree'). Observation ('Where to look', 'Confirming the line is actually long'), Benham's named historical interpretation ('What it's traditionally associated with'), and Palmistry Path's own editorial/safety policy ('Length in context', 'What this article does not read into a long heart line') are kept in separate, distinguishable sections. Full claim-by-claim disposition recorded in docs/source-verification-log.md under 'Long Heart Line Meaning companion article'."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Reused the existing broken-head-line-meaning.md (PP-RELAY-043) and long-head-line-meaning.md/short-heart-line-meaning.md structural pattern as a drafting template, while sourcing all interpretive content solely from the PP-RELAY-044 task packet's controlling evidence rather than those files' own prose",
+      "npm run audit:claim-risk as a bounded drafting aid before and after the manual source-claim preflight",
+      "grep-based manual search of the article for prevalence/consensus/anonymous-authority/precision terms beyond the heuristic's word list"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/blog/beginner/long-heart-line-meaning.md",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Startup gate: origin/main HEAD (00de133) matched the dispatch payload's state commit exactly; local main fast-forwarded normally, no persistent-checkout divergence fallback needed. Confirmed no open Relay PR existed for PP-RELAY-044 and no result artifact existed on any claude/relay-PP-RELAY-044-... branch before proceeding. node_modules was not present in the environment and was installed via npm ci before running build/audit validation."
+  }
+}
