@@ -1,0 +1,66 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-042",
+  "revision": 8,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revisions 1-6 of this task were never merged to main; revision 7 correctly discovered this control-plane baseline error and returned HUMAN_REQUIRED. Revision 8 repairs the baseline error by reconstructing the complete bounded cleanup of src/content/blog/beginner/head-line.md in one pass against the actual current-main article, which still carried the full original set of source-integrity issues (main was never touched by any prior revision). Ran the claim-risk audit against the untouched article (26 findings: 25 prevalence/consensus, 1 precision/degree, matching revision 7's count exactly), then manually re-read the complete article for materially equivalent risk the word-list heuristic misses. Removed or narrowed all 26 scanner findings plus five further manually-found categories: monotonic degree-scaling phrased outside the heuristic's word list (joined-duration, slope-degree, gap-width), vague anonymous-authority attributions ('classical writers', 'other writers confirm', 'classical texts', 'contemporary writers', and an invented 'contemporary practitioner' quotation), an unsupported naming-history claim for the writer's/lawyer's fork names, two invented combination readings synthesizing independently-supported single-line meanings into new joint interpretations (a heart-line/head-line 'productive tension' synthesis and a four-feature 'brief illustration'), and IQ/vocation-talent cautions restated as explicit Palmistry Path editorial policy rather than exhaustive claims about what 'the tradition' says. Brought head-line direction/slope wording fully inside the Director-verified Benham evidence boundary (.ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md): removed the monotonic 'steeper slope = more creative' rule and Cheiro's clinical/insanity framing (both explicitly flagged as unsafe/unnecessary in the evidence note), replacing the deep-slope passage with Benham's own historical writer/poet examples, explicitly not a degree rule. The writer's-fork section now uses the repository's own previously-verified Cheiro 'dual mentality' quotation (source-verification-log Pass 5, line 426) in place of the removed unverified anonymous quotation, and states the writing/creative-ability caution as Palmistry Path editorial policy (not a population association/non-association claim) consistently across the main section, FAQ, and myths. Updated docs/source-verification-log.md with a full claim-by-claim disposition table and docs/CHANGELOG.md with a revision-8 entry.",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-042-head-line-source-cleanup-r8",
+  "base_commit": "381d9417270adaf9ae5eacde723c0e75b2d72705",
+  "changed_paths": [
+    "src/content/blog/beginner/head-line.md",
+    "docs/source-verification-log.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-042-r8.json"
+  ],
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md — 26 findings before editing (25 PREVALENCE_OR_CONSENSUS, 1 PRECISION_OR_DEGREE_EXTRAPOLATION), matching revision 7's count; 5 findings after, all dispositioned as verified quotations or non-palmistry false positives",
+    "npm run build — pass, 110 pages built",
+    "npm run content-audit — pass, 65 blog posts and 25 lessons valid",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md — Director-verified against William G. Benham, The Laws of Scientific Hand Reading (1900). Controls the straight/practical and sloping-toward-Luna/imagination boundary and explicitly excludes a monotonic degree rule and Cheiro's clinical/insanity framing from safe use.",
+      "docs/source-verification-log.md Pass 5 (line 426) — verified Cheiro quotation 'gives more of what is called a dual mentality and less power of concentration on any one subject', used to replace the removed unverified anonymous writer's-fork quotation.",
+      "docs/source-verification-log.md Pass 5 (line 409) — verified correction of the Benham length quotation ('the kind to be estimated by...'), confirmed still correctly worded on current main and left unchanged."
+    ],
+    "external_access": "None attempted. No new source research was performed; every retained claim traces to evidence already recorded in the repository (the Benham direction evidence note and the source-verification-log's prior Cheiro/Benham verification passes), per the task packet's instruction not to broaden into new source research.",
+    "canonical_lesson_used_as_proof": "No. lessons/lines/03-head-line.mdx was not consulted as evidentiary basis for this article; only the evidence note and source-verification-log entries listed above were used."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Ran the claim-risk scanner before and after editing (26 -> 5 findings) and manually re-read the complete final article end to end, not only scanner hits, specifically inspecting the starting-point, curvature/endpoint, writer's-fork, double-head-line, FAQ, myths, and cross-feature synthesis passages named in the preflight. Prevalence/consensus: every remaining most/many/often-class word is either inside a verified verbatim quotation (Cheiro 'most important', Cheiro 'usually have thin, fine, clean looking lines') or a false-positive describing an individual mind's own range (considers many angles; creativity takes many forms), not a population/frequency claim. Scientific/historical: every remaining interpretive claim traces to a named Benham or Cheiro attribution within the controlling evidence's boundary; no chronology, classical-text-count, or empirical-study claim was added. Combination readings: the invented heart-line/head-line 'productive tension' synthesis and the four-feature 'brief illustration' were both removed rather than narrowed, since any retained version would still assert the same unestablished combination; the remaining context section states only the general, non-specific methodological point that reading lines together gives a fuller picture. Vague attribution: 'classical writers', 'classical texts', 'contemporary writers', and the invented 'contemporary practitioner' quotation were all removed; the one remaining unattributed-plural phrase pattern ('traditionally associated with') matches the site's AGENTS.md-sanctioned grounded-hedge phrasing, not an anonymous-authority claim. Writer's-fork vocation/talent caution is now stated three times (main section, FAQ, myths) as explicit Palmistry Path editorial policy, never as a population claim. IQ/cognitive-ability caution is now stated twice (FAQ, myths) as explicit Palmistry Path editorial policy, not an exhaustive claim about the tradition. No risky phrase was replaced by an equivalent unsupported synonym: every action either removed wording outright or replaced it with a named attribution (Benham/Cheiro) or an explicit Palmistry Path editorial-policy statement. Quotation fidelity: no existing quotation mark was altered; the one new quotation (Cheiro 'dual mentality') is copied verbatim from the repository's own prior verification record, not newly sourced. Medical/clinical: Cheiro's clinical/insanity framing for extreme slope was removed per the evidence note; the mental-illness myth-correction passage was reworded from an unverified 'contemporary tradition' claim to Palmistry Path's own stated editorial choice not to use that historical framing."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read AGENTS.md, .ai-ops/CLAUDE_ROUTINE_PROMPT.md, .ai-ops/README.md, .ai-ops/state.json, the immutable task packet, and CURRENT_TASK.md before implementation, and verified Task ID/Revision/Risk Class match across all three plus the startup-gate checklist (relay_enabled, credit_guard, status, iteration budget, no existing PR/result for this task/revision) before making any project change",
+      "Read the controlling Benham evidence note and the source-verification-log's existing Cheiro/Benham verification passes for this file to ground every edit in already-approved repository evidence rather than new source research",
+      "Ran the claim-risk scanner against the untouched current-main article first to establish the authoritative 26-finding baseline, then again after editing to confirm remediation",
+      "Edited src/content/blog/beginner/head-line.md section by section against the task's scoped risk categories and controlling evidence boundaries",
+      "Re-read the complete final article end to end against every source-sensitive preflight category, not only the sections with scanner hits",
+      "Ran build, content-audit, audit:all, and git diff --check as the task-required validation for a SOURCE_SENSITIVE content change",
+      "Recorded a full claim-by-claim disposition table in docs/source-verification-log.md and a matching docs/CHANGELOG.md entry"
+    ],
+    "validation": [
+      "npm run audit:claim-risk (targeted, before and after)",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "node_modules were not present in the container; ran npm install to enable build/audit commands. Local main had diverged from origin/main with no fast-forward path at session start (persistent-checkout divergence). Per AGENTS.md's clean-divergence recovery path, local main was left untouched; origin identity and origin/main's tip (381d9417270adaf9ae5eacde723c0e75b2d72705) were verified to match state.json's dispatched state commit and the routine dispatch payload before creating this revision's branch directly from verified origin/main. No open Relay PR exists for PP-RELAY-042 at any revision (all prior revision branches/PRs were closed unmerged); no collision found."
+  }
+}
