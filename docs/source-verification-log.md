@@ -1303,3 +1303,86 @@ faintness, not as an interpretation of faintness itself.
 **Claim-risk heuristic disposition:** `npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md` returned 1 finding during drafting (`PREVALENCE_OR_CONSENSUS` on "Most lines sit somewhere between the two ends"), addressed by removing the sentence rather than arguing around it; 0 findings on re-run.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md` (0 findings). `npm run build` (113 pages). `npm run content-audit` (68 blog posts, 25 lessons valid). `npm run audit:all` (links — including the no-orphan check — images, schema, indexability, accessibility all pass). `git diff --check` (clean).
+
+## Pass 14 — Curved vs Straight Life Line: source check finds no independent evidence, `HUMAN_REQUIRED` (Relay PP-RELAY-046, 2026-08-23)
+
+Scope: Relay PP-RELAY-046 (`SOURCE_SENSITIVE`), evaluating whether
+`curved-life-line-meaning` (backlog item #17, "Curved vs Straight Life
+Line") can be produced within the task's evidence boundary. No article
+file was created; this pass records why.
+
+### The evidence-boundary problem
+
+The task packet's objective is explicit that the article must not "invent
+a traditional meaning from the visible geometry alone," and its evidence
+boundary explicitly prohibits inferring a curved-vs-straight interpretation
+"from ... Mount of Venus material ... or other independently supported
+features."
+
+Repository-held evidence for the life line's path/curvature is exactly one
+thing: the already-published **arc** reading in `04-life-line.mdx` and
+`life-line.md` ("wide arc" vs "narrow arc"), sourced to Benham (1900) —
+"[a narrow arc] reduces the size of the Mount of Venus, thus checking the
+operation of that Mount" — and West (1998), who "associates a wide arc with
+adventurousness and appetite for experience." Both readings are stated,
+and can only be stated, in terms of how much room the arc gives the Mount
+of Venus. There is no repository-held reading of the life line's
+curved/straight path that stands independently of the mount it encloses —
+confirmed by a full-text search of every published life-line file
+(`life-line.md`, `04-life-line.mdx`, `short-life-line-meaning.md`,
+`faint-life-line-meaning.md`, `broken-life-line-meaning.md`,
+`double-life-line-meaning.md`, `forked-life-line-meaning.md`) for `curv`,
+`straight`, `arc`, `swing`, and `bow`: every curvature-relevant passage in
+that set is the mount-bound arc material above, and the word "straight"
+does not appear in any life-line file at all.
+
+A "curved vs straight life line" article built on that arc material would
+therefore be restating the existing Mount-of-Venus reading under new
+vocabulary aimed at a different search query — precisely the inference the
+task packet rules out, not a genuinely separate, independently-supported
+claim. (The site does carry an unrelated precedent for curvature as a
+standalone, non-mount interpretive axis — the **heart line**'s "Curve or
+straight: the line's path" section in `02-heart-line.mdx` and the "Curved
+versus straight" section of `heart-line-ending-meaning.md`, both concerning
+how much the heart line arcs toward the fingers across the upper palm.
+That precedent does not transfer: the heart line's curvature is a path
+independent of any mount, while the life line's arc *is definitionally*
+the boundary of the Mount of Venus — there is no way to observe or discuss
+the life line's curvature without describing the mount's territory. The
+two lines are not analogous on this specific point, and no repository
+evidence establishes a life-line-specific reading that avoids the mount.)
+
+### External verification attempted and blocked
+
+Per this log's standing record (Pass 2, PP-RELAY-031 entry above), primary
+public-domain texts (Project Gutenberg, Internet Archive, chestofbooks.com,
+iapsop.com, Wikisource) are blocked by this environment's network egress
+proxy. This pass re-confirmed the block directly: a `WebFetch` request to
+`https://www.gutenberg.org/files/20480/20480-h/20480-h.htm` (Cheiro,
+*Palmistry for All*, 1916) to check for a life-line-specific curved/straight
+passage returned `EGRESS_BLOCKED`. Fincham (2005) and West (1998) are
+in-copyright and were never searchable even before this proxy restriction
+(see the PP-RELAY-031 entry above). No external text was consulted; no new
+quotation or attribution was introduced or guessed at.
+
+### Disposition
+
+No repository-held evidence establishes a curved-vs-straight life-line
+interpretation independent of the Mount of Venus arc reading already
+published, and the task packet explicitly forbids deriving one from that
+material. Closing this gap requires someone with direct access to the
+cited editions (Cheiro 1916, Benham 1900, Gettings 1965, West 1998,
+Fincham 2005, or another Tier 1–2 source under `editorial-style-guide.md`
+§5) confirming whether any of them treat the life line's path shape as a
+reading distinct from the mount it frames. Absent that, the only content
+this task could produce without inventing a meaning would be a purely
+observational identification section that restates the existing arc
+material's own signposting (see the guide) without adding an
+interpretation of its own — and whether that thin, largely-navigational
+page counts as "useful" companion content, or whether the backlog item
+should instead be retired/reframed, is an editorial-policy call for the
+Director/human owner, not a sourcing question this pass can resolve
+unilaterally. Per the task's stop condition ("do not pad with guesses or
+manufacture a balanced two-sided interpretation"), no article was written.
+Result: `HUMAN_REQUIRED`. Recorded in
+`.ai-ops/results/PP-RELAY-046-r1.json`.
