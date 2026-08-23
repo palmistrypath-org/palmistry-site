@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-042",
+  "revision": 10,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Reconstructed the sound revision-9 cumulative Head Line source-integrity cleanup against actual current main (revision 9's PR was unmerged and main still held the pre-cleanup baseline), then removed the two residual unsupported popularity comparisons flagged by Director review: 'Cheiro's own reading of the fork was narrower than the popular version' (main writer's-fork section) and 'Cheiro's reading of the writer's fork was narrower than the popular idea suggests' (myths section). Both are replaced by stating Cheiro's verified dual-mentality reading directly, with Palmistry Path's editorial policy kept as a separate sentence. No banned unsupported-prevalence synonym was substituted.",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md (5 pre-existing findings, none newly introduced, all dispositioned in docs/source-verification-log.md)",
+    "npm run build (110 pages)",
+    "npm run content-audit (65 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. no-orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Both flagged 'narrower than the popular version/idea' comparisons removed and not replaced with common/usual/modern/widely known/often/typically/popularly or an equivalent synonym. Manually swept every writer's-fork mention (main section, FAQ, myths) and searched the full final article for popular/common/usual/modern/widely/often/typically/sometimes/known as/tradition/classical; remaining instances are pre-existing revision-8/9 'traditionally associated with' framing and named-tradition references (Indian/Chinese line names) outside this revision's authorized scope, not reopened. Writer's-fork vocation caution and IQ/mental-health cautions confirmed still framed as Palmistry Path editorial policy, not tradition-wide consensus. Claim-risk heuristic's 5 findings are the same pre-existing set dispositioned under revision 9 (Cheiro-attributed quotations/paraphrase and generic non-population phrasing); none newly introduced."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "git checkout of revision-9 branch's head-line.md onto a fresh branch from origin/main to reconstruct the cumulative cleanup",
+      "targeted Edit of the two flagged phrases",
+      "grep sweep for prevalence/consensus wording",
+      "npm run audit:claim-risk",
+      "npm run build / content-audit / audit:all",
+      "git diff --check"
+    ],
+    "validation": [
+      "audit:claim-risk",
+      "build",
+      "content-audit",
+      "audit:all",
+      "git diff --check"
+    ],
+    "notes": "Confirmed via git diff that main's head-line.md blob was unchanged since revision 9 branched (same base hash a89ab32), so revision 9's diff could be reapplied cleanly as the cumulative baseline before making the two revision-10 edits."
+  }
+}
