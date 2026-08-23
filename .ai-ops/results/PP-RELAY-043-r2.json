@@ -1,0 +1,45 @@
+{
+  "schema_version": 3,
+  "task_id": "PP-RELAY-043",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 2 remediation of src/content/blog/beginner/broken-head-line-meaning.md (backlog item 14). Revision 1 (PR #75, never merged) was sound in structure but Director review found residual unsupported prevalence/subjective-generalization wording. Reconstructed the full revision-1 diff against current main and made four bounded corrections: removed 'one of the more unsettling things beginners notice' and 'get confused with each other constantly' (unverified population/frequency generalizations, not replaced with equivalent synonyms); reworded the 'What it's traditionally associated with' closing sentence to name Benham's historical system explicitly and disclaim a tradition-wide view rather than restating 'traditionally associated with' as a freestanding claim; and corrected the gap-size FAQ from 'the sources this site draws from' (plural) to name Benham directly as the single controlling source. No other revision-1 wording, structure, links, or safety boundaries were reopened.",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/broken-head-line-meaning.md (1 initial finding: heuristic match on 'generally' inside a sentence disclaiming a tradition-wide consensus claim; reworded to 'as a whole' rather than argued around; 0 findings on re-run)",
+    "npm run build (111 pages)",
+    "npm run content-audit (66 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. no-orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean, both working tree and staged)"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full-article re-check performed against the source-boundary checklist beyond the four remediated passages; no additional residual issue found. Only Benham (1900) is used as controlling evidence; the gap-size FAQ's prior plural 'sources' wording was corrected to name Benham singularly. No Benham medical/psychiatric claim, fixed measurement/gap-size cutoff, monotonic degree rule, or invented combination reading is present. Claim-by-claim disposition of all four remediated passages, plus the preserved revision-1 boundary, recorded in docs/source-verification-log.md under the revision-2 entry."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "git cherry-pick of the sound revision-1 commit (0055ee7) from the unmerged claude/relay-PP-RELAY-043-broken-head-line-meaning branch, onto a fresh branch from current main, to reconstruct the full revision-1 diff before applying revision-2 corrections",
+      "grep-based search of the article for prevalence/consensus/generalization and source-count wording",
+      "npm run audit:claim-risk as a bounded drafting aid before and after the manual source-claim preflight"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/blog/beginner/broken-head-line-meaning.md",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Startup gate: origin/main HEAD (a6eb4e4) matched the dispatch payload's state commit exactly; local main fast-forwarded normally, no persistent-checkout divergence fallback needed. Confirmed no open Relay PR exists for PP-RELAY-043 (PR #75 for revision 1 is closed) and no revision-2 result artifact existed on any existing claude/relay-PP-RELAY-043-... branch (only a revision-1 result was present) before proceeding."
+  }
+}

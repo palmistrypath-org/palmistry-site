@@ -66,7 +66,7 @@ Cheiro read the fork as giving "more of what is called a dual mentality and less
 
 **Chains** along the head line — sections where the line is composed of small linked loops rather than a clean course — are traditionally associated with scattered or inconsistent mental focus: periods where concentration is difficult to sustain or where mental effort lacks clarity.
 
-**Breaks** are associated with disruption or significant change in mental orientation — a point where the quality or direction of thinking shifts substantially. Palmistry Path reads a break here as marking transformation rather than catastrophe.
+**Breaks** are associated with disruption or significant change in mental orientation — a point where the quality or direction of thinking shifts substantially. Palmistry Path reads a break here as marking transformation rather than catastrophe. The dedicated article on [what a broken head line means](/blog/beginner/broken-head-line-meaning/) covers how to tell a break apart from a short line or a fork, and what this site does and doesn't read into it.
 
 **Islands** are associated with periods of mental strain, divided concentration, or difficulty: a time when mental resources are taxed. Their position along the line is used in timing frameworks to situate the period they reflect.
 
