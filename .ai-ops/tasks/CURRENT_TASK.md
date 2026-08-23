@@ -2,94 +2,95 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-043
+PP-RELAY-044
 
 ## Revision
-2
+1
 
 ## Risk Class
 SOURCE_SENSITIVE
 
-## Revision note
-Revision 1 produced a useful, otherwise bounded article, but Director review found residual unsupported prevalence/subjective-generalization wording despite the completed source preflight. Revision 2 is a narrow remediation against the revision-1 result: remove or neutralize equivalent wording such as “one of the more unsettling things beginners notice” and “get confused with each other constantly,” and keep historical interpretation explicitly bounded to Benham rather than implying a broader practitioner/tradition consensus. Also ensure the gap-size FAQ does not imply review of multiple sources when only Benham is the controlling evidence. Preserve all sound revision-1 structure, safety boundaries, links, and bookkeeping. Do not broaden scope.
-
 ## Objective
-Publish the approved Next 25 companion article `Broken Head Line Meaning in Palmistry` as a narrowly source-bounded Head Line variation article, using verified classical evidence without importing medical, psychiatric, predictive, prevalence, or unsupported combination claims.
+Publish the approved Next 25 companion article `Long Heart Line Meaning in Palmistry` as a narrowly source-bounded Heart Line variation article, using verified classical evidence without importing medical, predictive, prevalence, fixed-cutoff, or unsupported combination claims.
 
 ## Why this task now
-- `docs/editorial-backlog.md` lists item 14, Broken Head Line, as the next unshipped Head Line variation after short, long, and straight-vs-curved.
-- `src/content/blog/beginner/broken-head-line-meaning.md` does not currently exist on `main`.
-- The cleaned Head Line pillar and existing short/long/straight companion articles establish the cluster/navigation pattern, but legacy lesson prose is only a map to candidate interpretations, not automatic evidence.
+- PR #76 / PP-RELAY-043 revision 2 is verified merged at the exact Director-approved head SHA, bringing the v2C pilot to 20 accepted iterations.
+- `docs/editorial-backlog.md` lists item 15, Long Heart Line, as the next unshipped line-variation article after Broken Head Line.
+- `src/content/blog/beginner/long-heart-line-meaning.md` does not exist on current `main`.
+- The existing Heart Line lesson and pillar are maps to candidate concepts only; legacy prose is not automatic source proof.
 
 ## Scope
 Primary:
-- create `src/content/blog/beginner/broken-head-line-meaning.md`
+- create `src/content/blog/beginner/long-heart-line-meaning.md`
 
 Supporting only as directly necessary:
-- `src/content/blog/beginner/head-line.md` for one reciprocal internal link if appropriate
+- `src/content/blog/beginner/heart-line.md` for one reciprocal internal link if appropriate
 - `docs/editorial-backlog.md` published count/status after the article is actually added
 - `docs/source-verification-log.md`
 - `docs/CHANGELOG.md`
-- `.ai-ops/results/PP-RELAY-043-r2.json`
+- `.ai-ops/results/PP-RELAY-044-r1.json`
 
-Do not rewrite the canonical Head Line lesson, modify claim-risk tooling, or expand into other Head Line variations.
+Do not rewrite the canonical Heart Line lesson, modify claim-risk tooling, or expand into other Heart Line variations.
 
 ## Controlling evidence and boundaries
-- Treat `src/content/lessons/lines/03-head-line.mdx` and the current Head Line pillar only as maps to candidate claims. Existing prose is not automatic proof.
-- William G. Benham, *The Laws of Scientific Hand Reading* (1900), Head Line material is an approved public-domain historical source. Benham explicitly treats breaks as interruptions in the line and associates them in his system with interruption/unsteadiness and lack of concentration/firmness/self-control; he also discusses repair signs such as overlapping ends, sister lines, connecting bars, and squares.
-- Benham's same section contains period medical/psychiatric claims (including headaches, illness, insanity, nervous disorder, and age/prediction claims). Those are historical source content but are **not authorized article interpretations** for Palmistry Path and must not be repeated, modernized, implied, or converted into health/mental-health advice.
-- A safe article-level historical interpretation is limited to: a visible break is an interruption in the Head Line; in Benham's historical system it was associated with interruption or change in the continuity/stability of thought/concentration. Palmistry Path must frame this as Benham's historical interpretation, not empirical psychology or a tradition-wide consensus.
-- If discussing overlapping/repairing formations, describe them only as Benham's historical distinction and avoid stronger-with-gap-size, fate, illness, prognosis, or timing claims unless separately verified and explicitly safe.
-- Do not assert that breaks are common/rare, that beginners usually react a certain way, that formations are constantly/frequently confused, that most readers agree, that all traditions share the interpretation, or that a break reliably maps to a real-life event.
-- Do not invent combinations with mounts, hand shape, depth, branches, endpoints, the Heart Line, Life Line, or other marks.
+- Treat `src/content/lessons/lines/02-heart-line.mdx` and the current Heart Line pillar only as maps to candidate claims. Existing prose is not automatic proof.
+- Director-verified public-domain evidence from William G. Benham, *The Laws of Scientific Hand Reading* (1900), Line of Heart chapter establishes that Benham treats Heart Line **length** as an interpretive variable. In the length passage, he explicitly associates a Heart Line crossing the entire hand with excessive affective/sentimental emphasis and allowing sentiment to guide decisions. This is historical palmistry evidence, not empirical psychology.
+- A safe article-level interpretation may therefore say, with explicit attribution, that **Benham associated a very extended Heart Line with stronger or more dominant sentimental/affective emphasis**. Keep this historical and qualitative.
+- Benham's surrounding Heart Line material also contains period medical, mortality, event-timing, moralizing, jealousy, and deterministic relationship claims. Those are **not authorized** for this article and must not be repeated, modernized, implied, or converted into advice.
+- Do not turn Benham's extreme "crosses the entire hand" example into a fixed modern measurement rule, population average, or cutoff for what counts as long.
+- Do not infer that a longer line means greater capacity to love, better relationships, superior empathy, emotional maturity, or a stronger personality unless a specifically approved source directly supports that exact claim.
+- Do not use the existing lesson's phrase "broad and sustained emotional engagement" as proof unless independently verified against an approved named source during this task.
+- Do not assert prevalence (`common`, `rare`, `typical`, `most`, `many`), tradition-wide consensus, or anonymous authority.
+- Do not invent combinations with endpoints, depth, chains, forks, branches, mounts, hand shape, the Head Line, or other features.
 - Do not use commercial SEO/palmistry sites as evidence.
 
 ## Article intent and differentiation
-- Primary search intent: `broken head line meaning` / `broken head line palmistry`.
-- Clearly distinguish a **break** (the line stops and resumes after a visible gap) from a **short line** (ends and does not resume) and a **fork** (one line divides into branches without a gap).
-- Keep the article practical and observational first: identify the formation before interpreting it.
-- Link naturally back to the main Head Line guide and structured lesson; reciprocal link from the pillar is allowed if it improves navigation.
-- Avoid fear-based framing. Palmistry Path does not treat a broken Head Line as diagnosis, cognitive impairment, mental illness, danger, or a prediction.
+- Primary search intent: `long heart line meaning` / `long heart line palmistry`.
+- Keep identification comparative and observational: describe a line that travels conspicuously far across the upper palm relative to the hand being observed. Do not define a fixed centimeter, finger-zone, midpoint, or population-average threshold unless separately verified and explicitly authorized.
+- Differentiate **length** from **endpoint**: a line can travel a long course and also terminate in a particular Jupiter/Saturn region, but this article must not collapse those variables or borrow endpoint meanings as if they were meanings of length.
+- Link naturally to the main Heart Line guide and structured lesson; a reciprocal link from the pillar is allowed if useful.
+- Avoid fear-based or relationship-deterministic framing. Palmistry Path presents the interpretation as historical tradition, not diagnosis or predictive science.
 
 ## Required SOURCE_SENSITIVE preflight
 Before `READY_FOR_REVIEW`:
-1. Run `npm run audit:claim-risk -- src/content/blog/beginner/broken-head-line-meaning.md` and truthfully disposition every finding.
-2. Verify every retained historical interpretation against Benham or another explicitly approved named source; do not rely on lesson/pillar repetition as proof.
-3. Search the final article for prevalence/consensus/generalization terms (`most`, `many`, `often`, `commonly`, `typically`, `generally`, `usual`, `rare`, `popular`, `constantly`, `frequently`, `one of the more`, `modern palmists`, `traditional readers`, `experts`, and equivalents) and remove/narrow any unsupported usage.
-4. Search for medical/psychiatric/predictive terms and confirm none are presented as palmistry-based health, mental-health, danger, lifespan, fate, or event predictions.
-5. Confirm no fixed measurement/gap-size cutoff or monotonic `wider break = stronger meaning` rule was introduced.
-6. Confirm no new combination reading was synthesized.
-7. Keep observation, Benham's named historical interpretation, and Palmistry Path editorial/safety policy clearly distinguishable.
-8. Confirm source-count wording is accurate: if Benham is the only approved source used for a statement, do not imply that multiple sources were reviewed.
+1. Run `npm run audit:claim-risk -- src/content/blog/beginner/long-heart-line-meaning.md` and truthfully disposition every finding.
+2. Verify every retained palmistry interpretation against Benham or another explicitly approved named source; do not rely on lesson/pillar repetition as proof.
+3. Search the final article for prevalence/consensus/generalization terms (`most`, `many`, `often`, `commonly`, `typically`, `generally`, `usual`, `rare`, `popular`, `modern palmists`, `traditional readers`, `experts`, and equivalents) and remove/narrow unsupported usage.
+4. Search for fixed-cutoff/precision language (`average`, `normal`, `midpoint`, `central zone`, exact finger boundary, measurement, `the longer...the more`, `very long means stronger`, and equivalents). Retain only what the named source directly establishes and keep Benham's entire-hand example historical rather than normative.
+5. Confirm the article does not convert line length into a claim about intelligence, mental health, medical condition, relationship outcome, moral character, or predictive event.
+6. Confirm length and endpoint are kept conceptually separate; no endpoint meaning is presented as a length meaning.
+7. Confirm no new combination reading was synthesized.
+8. Keep observation, named historical interpretation, and Palmistry Path editorial/safety policy clearly distinguishable.
 9. Record concise evidence/disposition notes in `docs/source-verification-log.md` and the durable result.
 
 ## Acceptance criteria
-1. A useful, beginner-readable `broken-head-line-meaning` companion article exists and serves a distinct variation query without duplicating the Head Line pillar.
-2. A break is identified observationally as a visible interruption where the line stops and resumes; short line and fork distinctions are clear.
-3. Retained interpretation is limited to named, verified historical evidence and is framed as Benham's historical interpretation or other specifically verified named-source material, not empirical fact or anonymous tradition-wide consensus.
-4. No medical, psychiatric, diagnostic, danger, fate, event-timing, lifespan, or deterministic prediction claim is made from the break.
-5. No unsupported prevalence/consensus, subjective population generalization, anonymous authority, fixed cutoff, stronger-with-degree rule, or invented combination reading appears.
-6. Internal links/navigation are useful and non-duplicative.
-7. Editorial backlog/published count is updated only if the article actually ships in the PR.
-8. SOURCE_SENSITIVE preflight is complete and truthful, including the revision-2 residual wording checks.
-9. Required validation passes.
+1. A useful, beginner-readable `long-heart-line-meaning` companion article exists and serves a distinct variation query without duplicating the Heart Line pillar.
+2. Identification is observational/comparative and does not invent a fixed cutoff or population norm.
+3. Every retained interpretation is grounded in a specifically named approved source and framed historically, not as empirical psychology or anonymous consensus.
+4. The article does not equate length with relationship success, capacity to love, empathy, morality, health, danger, or prediction.
+5. Length is clearly distinguished from endpoint, depth/clarity, chains, forks, branches, and other variables; no unsupported combination reading is introduced.
+6. No unsupported prevalence/consensus, vague authority, precision/degree extrapolation, or stronger-with-degree rule appears.
+7. Internal links/navigation are useful and non-duplicative.
+8. Editorial backlog/published count is updated only if the article actually ships in the PR.
+9. SOURCE_SENSITIVE preflight is complete and truthful.
+10. Required validation passes.
 
 ## Validation
 Run at minimum:
-- `npm run audit:claim-risk -- src/content/blog/beginner/broken-head-line-meaning.md`
+- `npm run audit:claim-risk -- src/content/blog/beginner/long-heart-line-meaning.md`
 - `npm run build`
 - `npm run content-audit`
 - `npm run audit:all`
 - `git diff --check`
 
 ## Stop conditions
-Return `HUMAN_REQUIRED` only if the article cannot be written to useful beginner depth without a material interpretation that cannot be verified from approved evidence. Do not pad with guesses.
+Return `HUMAN_REQUIRED` only if a useful article cannot be produced within the verified evidence boundary and additional source acquisition or genuine editorial judgment is required. Do not pad with guesses.
 
 Return `BLOCKED` only for a bounded technical blocker that prevents implementation/validation and cannot safely be repaired within scope.
 
 ## Durable result contract
-Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-043-r2.json` on a pushed `claude/relay-PP-RELAY-043-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-044-r1.json` on a pushed `claude/relay-PP-RELAY-044-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
-The result must include `risk_class: "SOURCE_SENSITIVE"` and a completed `source_preflight` object covering claim-level source verification, prevalence/consensus/generalization wording, scientific/historical claims, vague authority, quotation fidelity, precision/degree extrapolation, medical/psychiatric/predictive framing, combination readings, source-count accuracy, and observation-vs-interpretation-vs-editorial-policy separation.
+The result must include `risk_class: "SOURCE_SENSITIVE"` and a completed `source_preflight` object covering claim-level source verification, prevalence/consensus/generalization wording, scientific/historical claims, vague authority, quotation fidelity, precision/degree extrapolation, medical/predictive framing, combination readings, endpoint-vs-length separation, and observation-vs-interpretation-vs-editorial-policy separation.
 
 For `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with matching task/revision footers. Non-change terminal outcomes do not require a dummy PR. Do not merge and do not select the next task.
