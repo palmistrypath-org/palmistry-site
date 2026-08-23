@@ -5,27 +5,21 @@ Status: AUTHORIZED
 PP-RELAY-042
 
 ## Revision
-3
+4
 
 ## Risk Class
 SOURCE_SENSITIVE
 
 ## Objective
-Complete the bounded source-integrity cleanup of the legacy Head Line pillar. Revision 2 corrected the Director-listed prevalence/consensus language but still retained several unsupported population/comparative-prevalence statements that fall inside the same authorized cleanup category.
+Complete the bounded source-integrity cleanup of the legacy Head Line pillar. Revision 3 correctly removed the Director-identified population/comparative-prevalence statements, but cumulative review found two residual anonymous-authority/consensus overstatements inside the same authorized cleanup category.
 
-## Revision 3 remediation
-Preserve all sound revision-1 and revision-2 corrections. Re-read the complete final `src/content/blog/beginner/head-line.md` and remove or neutralize the remaining unsupported population/comparative-prevalence wording in the scoped cleanup categories.
+## Revision 4 remediation
+Preserve all sound revision-1, revision-2, and revision-3 corrections. Make only the following cumulative source-boundary corrections in `src/content/blog/beginner/head-line.md`, plus directly necessary verification/log/result updates:
 
-At minimum, explicitly disposition these residual examples from revision 2; do not assume the list is exhaustive:
-- `many people have it without any special literary ability`
-- `many capable writers do not have it at all`
-- `more common forks and branches`
-- FAQ wording `It appears in many hands, not exclusively in writers'.`
-- myth wording `It appears across many kinds of hands, not only writers'`
+1. Writer's-fork naming sentence: do not generalize from Cheiro + Benham to all `classical texts`. The current wording says the label is `a later popular-palmistry term rather than one from the classical texts — neither Cheiro nor Benham uses it`. Narrow this to the actually verified evidence, e.g. state only that neither Cheiro nor Benham uses the label, unless approved repository evidence establishes the broader chronology/classical-text claim.
+2. Intelligence/IQ FAQ + myth wording: `The tradition says nothing about cognitive ability` / `The tradition says nothing about IQ or cognitive ability` is an unsupported tradition-wide consensus statement. Preserve the intended safety point without claiming exhaustive historical consensus. State Palmistry Path's bounded interpretation directly (length is not treated here as a measure of intelligence/IQ/cognitive ability), or use a specifically verified named source if available.
 
-These are prevalence/comparative-prevalence claims even though the claim-risk heuristic may treat some uses of `many` as false positives. The task packet, not the heuristic, controls. Do not retain them merely as a rhetorical way to make a non-exclusivity point. State the bounded editorial point directly instead (for example, that the feature does not establish writing talent or vocation) without asserting how frequently it occurs in any population.
-
-Do not broaden into independently re-sourcing every separate Head Line meaning. If another material prevalence/ranking/consensus statement is found in the final article, remove/narrow it or specifically source it if already supported by approved repository evidence. Material source concerns outside these cleanup categories should still be logged rather than silently expanded.
+Also re-read the final article once for directly equivalent anonymous-authority/consensus wording introduced or retained in these same two passages. Do not broaden into re-sourcing every separate Head Line meaning or into unrelated legacy claims.
 
 ## Scope
 Primary:
@@ -34,41 +28,38 @@ Primary:
 Supporting only as directly necessary:
 - `docs/source-verification-log.md`
 - `docs/CHANGELOG.md`
-- `.ai-ops/results/PP-RELAY-042-r3.json`
+- `.ai-ops/results/PP-RELAY-042-r4.json`
 
 Do not create the Broken Head Line article, rewrite the canonical lesson, modify claim-risk tooling, or broaden into unrelated articles.
 
 ## Controlling evidence and boundaries
-- `.ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md` remains the controlling approved evidence for direction/path: straight-running Head Line -> Benham/practical mentality; sloping toward Luna -> Benham/imagination/departure from purely material thought.
+- `.ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md` remains controlling for direction/path wording.
 - Existing article/lesson prose is a navigation map, not automatic proof.
-- Existing source-verification records may support only claims they explicitly verify.
-- Do not convert anonymous authority into a new named attribution unless that exact attribution is verified.
-- Do not invent prevalence, population norms, fixed cutoffs, stronger-with-degree rules, scientific claims, medical/clinical claims, or combination readings.
+- Existing source-verification records support only claims they explicitly verify.
+- Two named authors not using a term does not establish that no classical text used it.
+- Do not invent prevalence, consensus, chronology, population norms, fixed cutoffs, stronger-with-degree rules, scientific claims, medical/clinical claims, or combination readings.
 - Keep observation, named historical interpretation, and Palmistry Path editorial policy distinguishable.
 
 ## Required SOURCE_SENSITIVE preflight
 Before `READY_FOR_REVIEW`:
 1. Run `npm run audit:claim-risk -- src/content/blog/beginner/head-line.md`.
-2. Manually inspect the complete final article, not only changed lines, for prevalence/ranking/consensus, vague authority, fixed norms, comparative population language, and monotonic degree language.
-3. Treat `many`, `more common`, `common`, `frequent`, `typically`, `usually`, `most`, `commonly`, `generally`, `uncommon`, `tradition is precise`, `Western palmistry discusses most`, `contemporary tradition`, and semantic equivalents as requiring evidence or narrowing when they assert population frequency/consensus/authority.
-4. Explicitly disposition every revision-3 example above plus every remaining heuristic finding.
-5. Confirm every retained direction/path interpretation stays inside the Director Benham evidence boundary.
+2. Manually inspect the complete final article, with special attention to the two revision-4 passages and directly equivalent anonymous-authority/consensus wording.
+3. Confirm all revision-1 through revision-3 corrections remain intact.
+4. Confirm the writer's-fork naming statement does not generalize beyond the verified Cheiro/Benham evidence.
+5. Confirm the intelligence/IQ safety statement is framed as Palmistry Path's interpretation/safety boundary rather than a claim about everything `the tradition` says.
 6. Confirm no risky phrase was replaced by an equivalent unsupported synonym.
-7. Record concise claim-by-claim dispositions in `docs/source-verification-log.md` and the durable result.
-
-A clean heuristic scan is not proof of source sufficiency, and a heuristic false-positive classification does not override a Director-identified population claim.
+7. Record concise dispositions in `docs/source-verification-log.md` and the durable result.
 
 ## Acceptance criteria
-1. All sound revision-1 and revision-2 corrections remain intact.
-2. No unsupported population, comparative-prevalence, ranking, consensus, or anonymous-authority statement remains in the scoped cleanup categories.
-3. The writer's-fork corrective point is stated without claiming how common the feature is among writers or the general population.
-4. The double-head-line comparison does not rank forks/branches by prevalence unless approved evidence directly supports that comparison.
-5. No unsupported fixed norm/default/average or monotonic degree rule is introduced or retained in these categories.
+1. All sound revision-1 through revision-3 corrections remain intact.
+2. No unsupported population, comparative-prevalence, ranking, consensus, or anonymous-authority statement remains in the scoped cleanup passages.
+3. Writer's-fork naming is limited to what the verified evidence establishes; no unsupported `classical texts` chronology/generalization remains.
+4. Intelligence/IQ safety wording does not make an exhaustive tradition-wide consensus claim.
+5. No unsupported fixed norm/default/average or monotonic degree rule is introduced or restored.
 6. Direction/path wording remains inside the Director-verified Benham boundary.
 7. No new palmistry meaning, prevalence claim, scientific/medical claim, deterministic relationship claim, or combination reading is invented.
-8. Material source concerns outside these cleanup categories are logged rather than silently expanded.
-9. SOURCE_SENSITIVE preflight is complete and truthful.
-10. Required validation passes.
+8. SOURCE_SENSITIVE preflight is complete and truthful.
+9. Required validation passes.
 
 ## Validation
 Run at minimum:
@@ -84,7 +75,7 @@ Return `HUMAN_REQUIRED` only if a material scoped claim cannot be safely removed
 Return `BLOCKED` only for a bounded technical blocker that prevents implementation/validation and cannot safely be repaired within scope.
 
 ## Durable result contract
-Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-042-r3.json` on a pushed `claude/relay-PP-RELAY-042-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-042-r4.json` on a pushed `claude/relay-PP-RELAY-042-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
 The result must include `risk_class: "SOURCE_SENSITIVE"` and a completed `source_preflight` object covering claim-level source verification, unsupported prevalence/consensus, scientific/historical claims where encountered, combination readings, vague authority, quotation fidelity, precision/degree extrapolation, comparative-prevalence wording, and observation-vs-interpretation framing.
 
@@ -93,4 +84,5 @@ For `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with matching
 ## Revision history
 - Revision 1: bounded cleanup of legacy Head Line pillar prevalence/consensus, fixed-norm, anonymous-authority, and monotonic degree-scaling language before the next Head Line variation article.
 - Revision 2: cumulative Director review found residual unsupported prevalence/consensus and anonymous-authority language; required complete disposition/removal/narrowing while preserving sound revision-1 edits.
-- Revision 3: cumulative Director review found residual unsupported population/comparative-prevalence claims (`many...`, `more common...`) that the worker incorrectly treated as heuristic false positives or outside scope; require their removal/neutralization without changing the established meanings.
+- Revision 3: cumulative Director review found residual unsupported population/comparative-prevalence claims (`many...`, `more common...`) that the worker incorrectly treated as heuristic false positives or outside scope; required removal/neutralization without changing established meanings.
+- Revision 4: cumulative Director review found two residual anonymous-authority/consensus overstatements: generalizing Cheiro/Benham non-use to all `classical texts`, and asserting that `the tradition says nothing` about IQ/cognitive ability. Narrow both to the actually verified evidence/editorial boundary.
