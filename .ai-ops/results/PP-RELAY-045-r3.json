@@ -1,0 +1,47 @@
+{
+  "schema_version": 3,
+  "task_id": "PP-RELAY-045",
+  "revision": 3,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 2 (PR #80, closed without merge) correctly stopped transferring Benham's hardship interpretation from 'thin' to 'faint', but Director review found the explanatory prose still made unsupported semantic equivalences among visual terms: it asserted that a thin line 'describes how narrow a line is' with no source establishing that definition, and repeatedly treated 'faint', 'depth', 'clarity', 'pale/dark', and 'lightly etched' as interchangeable. Revision 2 was never merged, so revision 3 rebuilds the article in full against current main rather than patching it, since the equivalence problem was structural across the whole piece. Added src/content/blog/beginner/faint-life-line-meaning.md, item 16 from docs/editorial-backlog.md's Next 25 list (67 -> 68 published blog posts). The article grounds its target visual feature in this site's own already-published observational vocabulary (src/content/lessons/lines/line-quality-and-markings.mdx's depth continuum, deeply cut through faint) rather than inventing a definition or borrowing one from Benham's 'thin', and explicitly distinguishes depth from clarity (a separate axis per that lesson) and from color (not part of the site's vocabulary at all). The article states directly that nothing available establishes what visual quality Benham's 'thin' refers to (depth, width, clarity, or a combination), so it does not extend his hardship reading to faintness and offers no traditional interpretation for depth alone -- the useful revision-2 conclusion, preserved. Identification remains comparative to the hand being examined with no fixed measurement or population average, and depth is kept explicitly separate from length and from a break, with no combination reading introduced. Added one reciprocal link from life-line.md's existing 'Explore further' list; no other wording in that file's pre-existing 'Faint or thin' prose was reopened, per the task's prohibition on rewriting the canonical pillar.",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md (1 initial finding: PREVALENCE_OR_CONSENSUS on 'Most lines sit somewhere between the two ends'; removed rather than argued around; 0 findings on re-run)",
+    "npm run build (113 pages)",
+    "npm run content-audit (68 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. no-orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)",
+    "manual grep of final article for prevalence/consensus terms (most/many/often/commonly/typically/generally/usual/rare) and vague anonymous-authority phrases: no matches",
+    "manual re-read of final article against the term-by-term disposition table (faint, depth, clarity, shallow, pale/dark, lightly etched, lighter/defined, thin) recorded in docs/source-verification-log.md"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full claim-by-claim and term-by-term disposition (faint, depth, clarity, shallow, pale/dark, lightly etched, lighter/defined, thin) is recorded in docs/source-verification-log.md under 'Pass 13 -- Faint Life Line Meaning companion article, revision 3'. The flagged revision-2 sentence asserting a thin line 'describes how narrow a line is' was removed outright, not reworded, since no source supports any specific definition of Benham's 'thin'. The article now defines its own 'faint' once, as depth alone, grounded in the site's existing line-quality-and-markings.mdx depth-continuum language, and explicitly states it does not use clarity or color as stand-ins for depth. Observation (the canonical depth/clarity vocabulary), historical material (Benham's verified 'thin' quotation, scope explicitly bounded), and Palmistry Path editorial policy (no reading offered; health/vitality/lifespan/personality claims excluded on principle) are kept in distinguishable sections throughout."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the closed revision-2 article (branch claude/relay-PP-RELAY-045-faint-life-line-meaning-r2) to identify exactly which passages produced the flagged equivalence problem, then rebuilt the article from scratch against the canonical line-quality-and-markings.mdx depth/clarity vocabulary rather than patching revision 2's structure",
+      "npm run audit:claim-risk as a bounded aid before and after drafting",
+      "grep-based manual search of the final article for prevalence/consensus and vague-authority wording beyond the heuristic's word list"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Startup gate: origin/main HEAD (85fe7e91ba78012e4fe15c0fea43fc1e981c0d72) matched the dispatch payload's state commit exactly; local main fast-forwarded normally, no persistent-checkout divergence fallback needed. Confirmed no open Relay PR existed for PP-RELAY-045 and no result artifact existed for revision 3 on any claude/relay-PP-RELAY-045-... branch before proceeding; only revision 2's result exists, on the closed PR #80's branch. node_modules was not present in the environment and was installed via npm install before running build/audit validation."
+  }
+}
