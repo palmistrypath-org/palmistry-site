@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Revision 2 remediation of src/content/blog/beginner/broken-head-line-meaning.md (backlog item 14). Revision 1 (PR #75, never merged) was sound in structure but Director review found residual unsupported prevalence/subjective-generalization wording. Reconstructed the full revision-1 diff against current main and made four bounded corrections: removed 'one of the more unsettling things beginners notice' and 'get confused with each other constantly' (unverified population/frequency generalizations, not replaced with equivalent synonyms); reworded the 'What it's traditionally associated with' closing sentence to name Benham's historical system explicitly and disclaim a tradition-wide view rather than restating 'traditionally associated with' as a freestanding claim; and corrected the gap-size FAQ from 'the sources this site draws from' (plural) to name Benham directly as the single controlling source. No other revision-1 wording, structure, links, or safety boundaries were reopened.",
-  "pr_number": null,
+  "pr_number": 76,
   "verification": [
     "npm run audit:claim-risk -- src/content/blog/beginner/broken-head-line-meaning.md (1 initial finding: heuristic match on 'generally' inside a sentence disclaiming a tradition-wide consensus claim; reworded to 'as a whole' rather than argued around; 0 findings on re-run)",
     "npm run build (111 pages)",
