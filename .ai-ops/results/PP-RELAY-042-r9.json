@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-042",
+  "revision": 9,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Reconstructed the sound revision-8 cumulative cleanup of src/content/blog/beginner/head-line.md against current main (confirmed unchanged since revision 8 branched) and made eight bounded corrections covering the four Director-flagged residual categories: removed the unsupported writer's/lawyer's-fork naming-popularity claim and its unverified naming rationale from the main section, replaced two directly-equivalent unattributed restatements of that rationale in the FAQ and myths sections with the already-verified Cheiro dual-mentality quotation, and recast three anonymous tradition-wide/consensus statements (starting-point 'traditional attention', long/intelligent 'the tradition does not support', and breaks 'classical reading', plus the myths-section 'the tradition distinguishes type of thinking') as Palmistry Path's own editorial framing. Preserved the Benham direction boundary, the verified Cheiro quotation, and the IQ/vocation/mental-health editorial-policy framing unchanged.",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md (5 findings, all pre-existing revision-8 wording outside this revision's authorized scope, dispositioned in docs/source-verification-log.md; none newly introduced)",
+    "npm run build (110 pages)",
+    "npm run content-audit (65 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. no-orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Manually inspected every writer's-fork mention (main section, FAQ, myths) and searched the final article for tradition/traditional attention/classical/popular/writers/commonly/sometimes/known-as wording. Remaining instances are pre-existing accepted revision-8 wording outside the four flagged categories: a named Indian-tradition attribution, a named Benham historical-example attribution, the preserved 'narrower than the popular version' contrast tied to the verified Cheiro quotation, and a qualified 'some Victorian-era writers' historical note. No risky phrase was replaced by an equivalent unsupported synonym; the two FAQ/myths writer's-fork edits attribute the reading to Cheiro by name instead of leaving it unattributed."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "git diff against unmerged revision-8 branch to identify the sound cumulative cleanup to carry forward",
+      "grep-based residual scan for tradition/popular/classical/known-as wording after edits",
+      "npm run audit:claim-risk heuristic scan"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Confirmed current origin/main's head-line.md is byte-identical to revision 8's merge-base before reconstructing, so revision 9 was built by taking revision 8's file content directly and applying the six targeted edits, rather than needing the clean-divergence checkout-recovery path."
+  }
+}
