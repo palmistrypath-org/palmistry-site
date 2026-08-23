@@ -1,0 +1,51 @@
+{
+  "schema_version": 3,
+  "task_id": "PP-RELAY-045",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Added src/content/blog/beginner/faint-life-line-meaning.md, item 16 from docs/editorial-backlog.md's Next 25 list (67 -> 68 published blog posts). Revision 1 (PR #79, closed without merge) treated Benham's already-verified 'thin' life line sentence as the meaning of a visually faint/shallow/lightly-etched line and included an unsupported 'the two get confused constantly' prevalence claim; Director review found the thin/faint equivalence was never independently established. Revision 2 does not assume it. Two internal-evidence findings supported (without proving) non-equivalence: the site's own foundational vocabulary lesson (lessons/lines/line-quality-and-markings.mdx) teaches depth and clarity/width as separate axes and treats 'broad and shallow' as distinct from 'deep'/'faint' alone; and both life-line.md and lessons/lines/04-life-line.mdx independently enumerate deep, thin, broad-and-shallow, and chained as four separate Life Line qualities, treating 'thin' and 'shallow' as distinct categories even while life-line.md's own heading pairs 'faint' with 'thin' without citing a source for that pairing. Per the task's evidence boundary ('If that equivalence cannot be independently established, do not use Benham's hardship interpretation as the meaning of a visually faint/shallow line. Narrow the article...') and docs/editorial-style-guide.md section 5.2, the article now states transparently that Benham's verified sentence addresses a thin line, does not treat 'thin' as automatically the same as 'faint', and offers no traditional interpretation for depth/faintness alone as a result -- while still quoting Benham's sentence (unchanged, character-for-character identical to life-line.md's verified instance) to explain that boundary honestly rather than omitting Benham entirely. The 'get confused constantly' wording is removed; the opening paragraph distinguishes faint from short without a frequency claim. Faintness/depth stays observationally comparative (no fixed depth threshold or population average), explicitly distinguished from length (pointer to short-life-line-meaning.md) and from a genuine break, with no stronger-with-degree rule and no combination reading with length/breaks/forks/double lines/endpoints/mounts/hand shape/texture. No medical, vitality, lifespan, danger, or personality claim is made, stated as Palmistry Path's own safety policy independent of the source question. Added one reciprocal link from life-line.md's existing 'Explore further' list; updated docs/editorial-backlog.md's published count/status; recorded full claim-by-claim disposition in docs/source-verification-log.md; added the dated docs/CHANGELOG.md entry.",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md (1 initial finding: structural 'most' describing the depth continuum, reworded rather than argued around; 0 findings on re-run)",
+    "npm run build (113 pages)",
+    "npm run content-audit (68 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. no-orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)",
+    "exact-string comparison confirming the article's Benham quotation is character-for-character identical to the already-verified instance in life-line.md",
+    "one independent WebFetch lookup attempted against Project Gutenberg's catalogue search for a primary Benham scan; returned EGRESS_BLOCKED, consistent with revision 1's record that every primary-text host it tried was blocked the same way",
+    "full re-read of the final article against the SOURCE_SENSITIVE preflight checklist (prevalence/consensus, historical/scientific claims, invented combinations, vague anonymous authority, precision/degree language, health/vitality/lifespan language, claim-type separation, thin/faint/shallow/lightly-etched/depth/clarity term-by-term check)"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full claim-by-claim disposition, including the thin-vs-faint equivalence resolution required by the revision note, is recorded in docs/source-verification-log.md under 'Faint Life Line Meaning companion article'. The equivalence between Benham's 'thin' and the article's 'faint/shallow/depth' subject could not be independently established from any Tier 1-3 source or from repository content, so per the task's evidence boundary and editorial-style-guide.md section 5.2 ('cut it or qualify it explicitly') the interpretive claim was cut rather than invented; the article states this transparently rather than silently interchanging the terms. 'the two get confused constantly' and equivalent prevalence/generalization wording was removed and the full final prose re-scanned for equivalents (none found). No health/vitality/lifespan/danger/personality claim was introduced; faintness is kept separate from length, breaks, forks, double lines, endpoints, and mounts throughout. Observation, Benham's named historical sentence (and the explicit decision not to extend it), and Palmistry Path's own editorial/safety policy are in distinguishable sections. Every use of 'thin', 'faint', 'shallow', 'lightly etched', 'depth', and 'clarity' was checked individually: 'thin' appears only inside the direct Benham quotation and the surrounding discussion of why it is not treated as equivalent to 'faint'; 'faint', 'depth', and 'clarity' are used only as this article's own observational terminology, never presented as source-established synonyms for 'thin'."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the closed PR #79 (revision 1) diff, its PR body, and the revision-1 result artifact (via git show on the still-existing claude/relay-PP-RELAY-045-faint-life-line-meaning branch) to understand exactly what Director review rejected and why",
+      "Grepped repository content for 'thin'/'faint'/'shallow' usage across blog and lesson content to find internal evidence bearing on the thin/faint equivalence question, and read lessons/lines/line-quality-and-markings.mdx in full as the site's canonical depth/clarity vocabulary source",
+      "Cross-checked life-line.md and lessons/lines/04-life-line.mdx's independent four-way (deep/thin/broad-and-shallow/chained) enumeration of Life Line qualities against the 'Faint or thin' heading's unsourced pairing",
+      "npm run audit:claim-risk as a bounded aid before and after wording changes",
+      "One WebFetch attempt against a primary-text host (Project Gutenberg catalogue search) to check whether this session's network egress policy still blocks primary-source lookup, confirming EGRESS_BLOCKED",
+      "grep-based exact-string quotation fidelity check between the new article and life-line.md"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Startup gate: origin/main HEAD (217caa7) matched the dispatch payload's state commit exactly, and local main fast-forwarded normally, so no clean-divergence recovery was needed. No open Relay PR existed for PP-RELAY-045 at startup (PR #79 was closed without merge) and no result artifact existed at .ai-ops/results/PP-RELAY-045-r2.json on any claude/relay-PP-RELAY-045-... branch before this run; the only existing branch (claude/relay-PP-RELAY-045-faint-life-line-meaning) carried only the revision-1 (-r1) artifact, consulted as a resource but not built on, since its docs bookkeeping never merged to main. node_modules was not present and was installed via npm ci before running build/audit validation."
+  }
+}
