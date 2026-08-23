@@ -74,7 +74,7 @@ One refinement is worth knowing, and it carries across both readings: when a bre
 
 **Branches.** Fine lines rising upward from the life line are traditionally associated with periods of upward movement, achievement, or positive development. Lines falling downward from the main course are associated with periods of depleted energy or circumstances that draw on reserves.
 
-**Explore further:** [Short life line meaning](/blog/beginner/short-life-line-meaning/) · [Faint life line meaning](/blog/beginner/faint-life-line-meaning/) · [Broken life line meaning](/blog/beginner/broken-life-line-meaning/) · [Forked life line meaning](/blog/beginner/forked-life-line-meaning/) · [Double life line meaning](/blog/beginner/double-life-line-meaning/)
+**Explore further:** [Short life line meaning](/blog/beginner/short-life-line-meaning/) · [Faint life line meaning](/blog/beginner/faint-life-line-meaning/) · [Broken life line meaning](/blog/beginner/broken-life-line-meaning/) · [Forked life line meaning](/blog/beginner/forked-life-line-meaning/) · [Double life line meaning](/blog/beginner/double-life-line-meaning/) · [Curved vs straight life line meaning](/blog/beginner/curved-life-line-meaning/)
 
 ## Reading the life line in context
 

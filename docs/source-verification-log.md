@@ -1303,3 +1303,37 @@ faintness, not as an interpretation of faintness itself.
 **Claim-risk heuristic disposition:** `npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md` returned 1 finding during drafting (`PREVALENCE_OR_CONSENSUS` on "Most lines sit somewhere between the two ends"), addressed by removing the sentence rather than arguing around it; 0 findings on re-run.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md` (0 findings). `npm run build` (113 pages). `npm run content-audit` (68 blog posts, 25 lessons valid). `npm run audit:all` (links — including the no-orphan check — images, schema, indexability, accessibility all pass). `git diff --check` (clean).
+
+---
+
+## Pass 14 — Curved vs Straight Life Line Meaning companion article (2026-08-23)
+
+Scope: Relay PP-RELAY-046 revision 2 (`SOURCE_SENSITIVE`), publishing `src/content/blog/beginner/curved-life-line-meaning.md` (backlog item 17), against the controlling evidence boundary recorded by the Director in `.ai-ops/evidence/PP-RELAY-046-director-life-line-curvature.md`.
+
+### Controlling boundary
+
+Revision 1 correctly found no repository-held or externally-reachable evidence for an independent, mount-free curved/straight life-line interpretation, and returned `HUMAN_REQUIRED` because primary-source access was blocked. The Director's evidence note verifies that the only established reading is Benham's mount-bound one — a life line running close to the thumb reduces the Mount of Venus's territory and checks its operation — and authorizes an article that teaches comparative arc identification and explains that paired reading, without inventing a standalone curved/straight personality axis. This article does not attempt to fill the gap revision 1 identified; it reframes the backlog slot around the boundary the Director verified.
+
+### Claim-by-claim evidence map
+
+| Claim | Disposition |
+|---|---|
+| Wide arc / narrow arc are observed comparatively, against the same hand, with no fixed angle or population norm | Direct observation; no source needed. Matches the identification pattern already used in `straight-head-line-palmistry.md` and `faint-life-line-meaning.md` for other comparative features. |
+| A narrow arc "reduces the size of the Mount of Venus, thus checking the operation of that Mount" | Verbatim quotation, verified against its existing use in `life-line.md`'s "Narrow arc" section (source-verified in earlier passes of this log). Attributed to William G. Benham, *The Laws of Scientific Hand Reading* (1900), and used the same way here — as a mount-territory claim, not a standalone line-shape claim. |
+| Wide arc traditionally associated with expansive vitality, warmth directed outward, appetite for broad engagement; narrow arc with contained, conserved energy | Paraphrase of the same paired reading already published in `life-line.md`'s "Wide arc" / "Narrow arc" sections and `mount-of-venus.md`'s "The life line's relationship to Venus" section. Not extended into a new claim; explicitly framed here as depending on the mount, not standing alone. |
+| Peter West associates a wide arc with adventurousness and appetite for experience | Verified attribution already published in `life-line.md`'s "Wide arc" section (West, *The Complete Illustrated Guide to Palmistry*, 1998); repeated here with the same attribution and scope, not extended. |
+| Palmistry Path has no approved evidence for an independent mount-free "straight life line" reading | Stated as an explicit limitation, per the task packet's instruction to state this directly rather than imply a fuller answer exists. Not phrased as "no source anywhere has ever" — only as this site's current approved-evidence boundary, per the Director's note. |
+
+### Preflight disposition
+
+1. **Prevalence/consensus language.** Three claim-risk-flagged instances during drafting (`many`, `most`, `often`) were reworded rather than kept; the population-distribution sentence ("Most hands fall somewhere between...") was removed outright rather than reworded, since a distribution claim isn't supported and isn't needed to make the no-fixed-cutoff point. 0 findings on final scan.
+2. **Scientific/historical assertions.** Limited to the single verified Benham quotation and the already-published West attribution, both named by source and edition; no chronology, study, or new evidence claim is introduced.
+3. **No invented combination readings.** The arc is discussed only against length, depth, and breaks as separate, non-combined observations, and the wide-arc/narrow-arc readings are kept exactly as paired with the Mount of Venus as the existing published material states — not detached into a standalone curved/straight personality system, per the task's central prohibition.
+4. **No vague anonymous authority.** No "modern palmists," "some writers," "traditional readers," "experts," or equivalent phrase appears; every retained reading is attributed to Benham or West by name and edition.
+5. **Claim-type separation.** Direct observation ("Identifying the arc"), named historical material ("What the verified evidence actually connects the arc to" and "The traditional reading, as a paired observation"), and Palmistry Path's editorial limitation (the explicit no-independent-evidence statement) are kept in distinct sections and are not blended.
+6. **Quotation fidelity.** The one quotation used is verbatim-verified, matching the existing verified use in `life-line.md`.
+7. **Safety boundaries.** No medical, legal, financial, deterministic relationship, or predictive-science claim appears; "vitality" and related terms are used only as the traditional-association wording already established in `life-line.md` and `mount-of-venus.md`, not as literal health/medical claims, and the article explicitly excludes any sliding-scale ("more curve = more meaning") reading.
+
+**Claim-risk heuristic disposition:** `npm run audit:claim-risk -- src/content/blog/beginner/curved-life-line-meaning.md` returned 3 findings during drafting (`PREVALENCE_OR_CONSENSUS` on "many searches," "most or all of its course," and "Most hands fall somewhere between the two ends"), addressed by rewording the first two and removing the third; 0 findings on re-run.
+
+**Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/curved-life-line-meaning.md` (0 findings). `npm run build` (114 pages). `npm run content-audit` (69 blog posts, 25 lessons valid). `npm run audit:all` (links — including the no-orphan check — images, schema, indexability, accessibility all pass). `git diff --check` (clean).
