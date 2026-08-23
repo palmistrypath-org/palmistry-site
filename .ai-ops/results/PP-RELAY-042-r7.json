@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-042",
+  "revision": 7,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "HUMAN_REQUIRED",
+  "summary": "Revision 7's packet assumed src/content/blog/beginner/head-line.md on main already carried the cumulative revision-1 through revision-6 source-integrity corrections, and authorized only a narrow follow-up: removing/narrowing two specific quoted writer's-fork sentences and preserving the revision-6 main-subsection sentence. Verified main at the dispatch-hint state commit (e2ea524fb6d26ec6c573a59b8732664ed5446d6c) and found neither quoted sentence exists in the file, and the revision-6 sentence the packet requires preserving is also absent. git log --follow shows exactly one commit ever touched this file on main's history, which introduced its present pre-revision-1 text; no revision-1 through revision-6 PR was ever merged, matching revision 6's own result artifact (PRs #66-70 all closed unmerged, revision 6 worked from a from-scratch reconstruction rather than main's real history) and PP-RELAY-041 revision 3's log entry from the prior day, which independently flagged this same file's unremediated wording. npm run audit:claim-risk returns 26 findings article-wide (vs. revision 6's reported 10 unchanged-from-revision-5), confirming main was never at a post-revision-5/6 state. Executing revision 7 as literally authorized is not possible: the two target sentences do not exist, and fixing the article to meet the packet's acceptance criteria would require re-deriving and applying all of revisions 1-6 from scratch, which is a substantial scope expansion the packet explicitly forbids and which a worker should not decide unilaterally. Full disposition recorded in docs/source-verification-log.md under 'Legacy Head Line pillar writer's-fork cleanup ... revision 7'. No src/content file was changed.",
+  "pr_number": null,
+  "verification": [
+    "Read AGENTS.md, .ai-ops/README.md, .ai-ops/state.json, .ai-ops/tasks/PP-RELAY-042.md, .ai-ops/tasks/CURRENT_TASK.md; confirmed startup-gate checks pass (relay_enabled true, credit_guard CONFIRMED_DISABLED, status REWORK_REQUIRED, task/revision/risk-class match across all three files, iterations_completed 18 < budget 50, no open Relay PR for this task, no existing claude/relay-PP-RELAY-042-...-r7 branch or PP-RELAY-042-r7.json result)",
+    "git fetch origin; confirmed local HEAD/origin/main tip (e2ea524fb6d26ec6c573a59b8732664ed5446d6c) matches the dispatch-hint state commit exactly — no staleness",
+    "Read src/content/blog/beginner/head-line.md in full; confirmed neither packet-quoted FAQ/myth sentence nor the required revision-6 main-subsection sentence is present in the actual file",
+    "git log --follow -- src/content/blog/beginner/head-line.md: exactly one commit (c22355d, a bulk .ai-ops/ control-plane introduction commit) ever touched this file on main's history",
+    "Recovered and read .ai-ops/results/PP-RELAY-042-r6.json from origin/claude/relay-PP-RELAY-042-head-line-source-cleanup-r6: confirms revisions 1-6 were reconstructed from an unmerged r5 branch, never merged to main (PRs #66-70 closed unmerged)",
+    "Cross-checked docs/source-verification-log.md's PP-RELAY-041 revision-3 entry (2026-08-22), which independently flagged this same file's unremediated degree-scaling/Cheiro-clinical wording as explicitly out of that task's scope",
+    "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md: 26 findings (25 PREVALENCE_OR_CONSENSUS, 1 PRECISION_OR_DEGREE_EXTRAPOLATION), spanning the writer's-fork passages and the rest of the article",
+    "git diff --check (clean; only docs/source-verification-log.md and this result artifact changed)"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "No article prose was published or changed in this pass, so no new prevalence/consensus, empirical population/non-association, scientific/historical, combination, anonymous-authority, or quotation claim was introduced. The preflight here consists of confirming that revision 7's two authorized target sentences and its required-preserved revision-6 sentence do not exist on main, and that the article's actual current writer's-fork wording (and 25 other article-wide prevalence/consensus findings plus one degree-extrapolation finding) remains exactly as it has always been on main, unaddressed by any prior revision. See docs/source-verification-log.md's revision-7 entry for the full disposition."
+  },
+  "human_action": "Issue a new task (PP-RELAY-042 revision 8, or a fresh task ID) that: (1) explicitly acknowledges no revision-1 through revision-6 correction is present on main's src/content/blog/beginner/head-line.md — the file is at its original, never-remediated text; (2) authorizes reconstructing the full cumulative source-integrity cleanup against main's actual current wording rather than assuming a prior revision's baseline, covering the complete 26-finding article-wide claim-risk scan (separation-gap degree-scaling at line 39; the Cheiro sharply-sloping/clinical passage plus its added empirical-correlation claim at line 57; the writer's-fork main subsection, FAQ, and myth passages at lines 61-65, 102, and 116; and the remaining unattributed prevalence/consensus phrasing throughout), not only the two writer's-fork sentences named in revision 7; and (3) states plainly to the next worker that main is the sole source of truth for the starting text, since three consecutive revisions (5, 6, 7) have each reconstructed or assumed a different unmerged branch's history as if it were main's real state.",
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "git log --follow / git show to trace src/content/blog/beginner/head-line.md's actual commit history on main",
+      "git show <ref>:<path> to recover .ai-ops/results/PP-RELAY-042-r6.json from the unmerged r6 branch for cross-reference",
+      "node scripts/audit-claim-risk.mjs (run directly, without npm ci, since it is a dependency-free script and node_modules was absent in this environment)"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md",
+      "git diff --check"
+    ],
+    "notes": "No build/content-audit/audit:all run: per AGENTS.md's risk-based validation matrix this is a docs-only change (docs/source-verification-log.md plus this result artifact) with no runtime/content file touched, so those checks would add no signal. No persistent-checkout divergence was encountered; local main/HEAD matched verified origin/main exactly at startup, matching the dispatch hint's state commit."
+  }
+}
