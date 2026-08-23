@@ -1218,3 +1218,88 @@ Revision 1 (branch `claude/relay-PP-RELAY-044-long-heart-line-meaning`, PR #77, 
 **Claim-risk heuristic disposition:** `npm run audit:claim-risk -- src/content/blog/beginner/long-heart-line-meaning.md` returns 0 findings after the revision-2 edits (no new heuristic-flagged term was introduced by the three corrections).
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/long-heart-line-meaning.md` (0 findings). `npm run build` (112 pages). `npm run content-audit` (67 blog posts, 25 lessons valid). `npm run audit:all` (links — including the no-orphan check — images, schema, indexability, accessibility all pass). `git diff --check` (clean). This revision's diff is bounded to the three corrected passages in the article, this log entry, the `docs/CHANGELOG.md` revision-2 entry, the `docs/editorial-backlog.md` shipping-revision attribution, and the revision-2 result artifact; the article file, `heart-line.md` reciprocal link, and `docs/editorial-backlog.md` published-count are carried forward from the sound revision-1 diff since this PR is the first to merge the article to `main`.
+
+---
+
+## Pass 13 — Faint Life Line Meaning companion article, revision 3: terminology-equivalence correction (2026-08-23)
+
+Scope: Relay PP-RELAY-045 revision 3 (`SOURCE_SENSITIVE`), publishing
+`src/content/blog/beginner/faint-life-line-meaning.md`. Revision 2 (PR #80,
+closed without merge) correctly stopped transferring Benham's hardship
+interpretation from `thin` to `faint`, but Director review found the
+explanatory prose still made unsupported semantic equivalences among visual
+terms — most concretely, asserting that a thin line "describes how narrow a
+line is" with no source establishing that definition, and repeatedly treating
+`faint`, `depth`, `clarity`, `pale/dark`, and `lightly etched` as
+interchangeable despite the task requiring those terms to be checked
+separately. Revision 3 replaces revision 2's article in full (revision 2 was
+never merged, so there is nothing to build on top of) rather than patching it,
+because the equivalence problem was structural across the whole piece, not
+confined to isolated sentences.
+
+### The terminology decision
+
+The article grounds its target visual feature in this site's own existing,
+already-published observational vocabulary rather than inventing a new one:
+`src/content/lessons/lines/line-quality-and-markings.mdx` teaches **depth**
+as a continuum from "deeply cut" to "faint" and **clarity** (how cleanly a
+line's edges are cut) as a separate observation that "varies independently of
+depth." The new article states plainly, in its own "What 'faint' means in
+this article" section and in a dedicated FAQ entry, that it uses "faint" for
+depth alone — not for clarity, and not for color (paleness/darkness), which
+is not part of the vocabulary this site's lessons teach at all. This is
+Palmistry Path's own descriptive framework, already established elsewhere on
+the site, and is distinguished explicitly from the historical/interpretive
+question of what Benham meant by "thin."
+
+| Term | Disposition |
+|---|---|
+| `faint` (this article's target feature) | Defined once, as depth alone, citing `line-quality-and-markings.mdx`'s existing depth-continuum language ("deeply cut... through to faint"). Used consistently in that sense throughout. |
+| `depth` | Treated as the article's subject and as synonymous with the article's own "faint," per the canonical lesson. Not treated as synonymous with clarity, color, or length. |
+| `clarity` | Named explicitly as a separate axis from depth, per the canonical lesson ("varies independently of depth"), and explicitly excluded from this article's scope. Not used as a stand-in for faintness. |
+| `shallow` | Not used to describe the article's target feature. Where discussed (the terminology FAQ), flagged as sometimes naming a different, specific combination ("broad and shallow") rather than depth alone, per the canonical lesson. |
+| `pale` / `dark` | Not used to describe the article's target feature. Color is not part of the vocabulary the site's lessons teach; the article says so directly rather than silently treating paleness/darkness as a proxy for depth. |
+| `lightly etched` | Removed. Revision 2 used this as an informal synonym for faintness in several places; revision 3 does not use the phrase at all, to avoid re-introducing an undefined term into the depth/clarity/color distinction. |
+| `lighter` / `defined` (as used in revision 2's "does the line look noticeably lighter and less defined") | Removed. That construction bundled color ("lighter") and clarity ("defined") into what revision 2 called a depth check. Revision 3's equivalent passage asks only whether the line "takes more concentration to trace," which is the canonical lesson's own depth-only framing. |
+| `thin` (Benham's term) | Not defined. The article states directly that Benham's text does not say what visual quality "thin" refers to beyond the word itself, and that nothing available establishes whether he meant depth, width, clarity, or a combination. The flagged revision-2 sentence asserting "a thin line describes how narrow a line is" is removed outright rather than reworded, since no source supports any specific definition. |
+
+### Benham quotation
+
+The quoted sentence — "The thin line does not mean that the subject is
+necessarily delicate or sickly, but it shows that he cannot endure as much
+hardship" (*The Laws of Scientific Hand Reading*, 1900) — is the same
+verified-verbatim quotation already in use in `life-line.md`'s "Faint or
+thin" section (source-verified in earlier passes of this log). It is used in
+the new article only to explain why its reading is *not* extended to
+faintness, not as an interpretation of faintness itself.
+
+### Preflight disposition
+
+1. **Prevalence/consensus language.** None found in the final article. One
+   claim-risk-flagged instance during drafting ("Most lines sit somewhere
+   between the two ends," paraphrasing the canonical lesson's own wording)
+   was removed rather than kept, since it added nothing the continuum
+   description didn't already convey and its removal fully clears the scan.
+2. **Scientific/historical assertions.** Limited to the single verified
+   Benham quotation, attributed by name and edition; no chronology, study, or
+   evidence claim is made.
+3. **No invented combination readings.** Depth is discussed only against
+   length and breaks as separate, non-combined observations, matching the
+   task's prohibition on combining with length, breaks, forks, double lines,
+   mounts, hand shape, color, or texture.
+4. **No vague anonymous authority.** No "modern palmists," "some writers,"
+   "traditional readers," "experts," or equivalent phrase appears.
+5. **Claim-type separation.** Observation (the canonical depth/clarity
+   vocabulary), historical material (Benham's verified "thin" sentence, with
+   its scope explicitly bounded), and Palmistry Path editorial position (no
+   reading offered; health/vitality/lifespan/personality claims excluded on
+   principle) are kept in distinct sections and are not blended.
+6. **Quotation fidelity.** The one quotation used is verbatim-verified,
+   matching the existing verified use in `life-line.md`.
+7. **Safety boundaries.** No medical, legal, financial, deterministic
+   relationship, or predictive-science claim appears; health, vitality, and
+   lifespan claims are explicitly and repeatedly excluded.
+
+**Claim-risk heuristic disposition:** `npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md` returned 1 finding during drafting (`PREVALENCE_OR_CONSENSUS` on "Most lines sit somewhere between the two ends"), addressed by removing the sentence rather than arguing around it; 0 findings on re-run.
+
+**Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/faint-life-line-meaning.md` (0 findings). `npm run build` (113 pages). `npm run content-audit` (68 blog posts, 25 lessons valid). `npm run audit:all` (links — including the no-orphan check — images, schema, indexability, accessibility all pass). `git diff --check` (clean).
