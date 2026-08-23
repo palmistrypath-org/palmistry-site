@@ -1,0 +1,64 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-042",
+  "revision": 5,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revisions 1 (PR #66), 2 (PR #67), 3 (PR #68), and 4 (PR #69) were all closed without merging, so this task started from verified origin/main, reconstructed the sound revision-1 through revision-4 corrections (matching the already-reviewed content of the closed claude/relay-PP-RELAY-042-head-line-source-cleanup-r4 branch), and applied the required revision-5 remediation on top in one pass. Corrected the writer's-fork subsection in src/content/blog/beginner/head-line.md: removed the unattributed 'is a specific feature in Western palmistry' categorization claim and the 'it is known instead as the writer's fork, and sometimes the lawyer's fork' anonymous-authority/naming claim (the 'lawyer's fork' label has no supporting evidence anywhere in the repository, including the sibling forked-head-line-meaning.md article, which discusses only 'writer's fork'). Narrowed the sentence to the verified fact plus this article's own stated naming convention: the fork 'is referred to in this article as the writer's fork,' and 'Neither Cheiro nor Benham uses that label.' Removed the following sentence's dependent naming-history clause explaining why writers and lawyers are 'both named,' since its premise relied on the removed, unsupported 'lawyer's fork' claim; retained the Cheiro-grounded 'dual mentality' interpretation itself unchanged. Re-read the complete writer's-fork subsection for any remaining or newly introduced equivalent anonymous-authority, prevalence, consensus, naming-history, or chronology language; none was found. All sound revision-1 through revision-4 corrections, including the Director-verified Benham direction/path evidence boundary and the revision-4 IQ/cognitive-ability editorial framing, were re-verified intact and unchanged. Updated docs/source-verification-log.md with a full revision-5 claim-by-claim disposition and docs/CHANGELOG.md with a revision-5 entry.",
+  "pr_number": null,
+  "branch": "claude/relay-PP-RELAY-042-head-line-source-cleanup-r5",
+  "base_commit": "ad5a24b5550ae317e7c9b6a510eaa91748b97446",
+  "changed_paths": [
+    "src/content/blog/beginner/head-line.md",
+    "docs/source-verification-log.md",
+    "docs/CHANGELOG.md",
+    ".ai-ops/results/PP-RELAY-042-r5.json"
+  ],
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md — 10 findings, unchanged from revision 4, all independently re-reviewed and dispositioned in docs/source-verification-log.md",
+    "npm run build — pass, 110 pages built",
+    "npm run content-audit — pass, 65 blog posts and 25 lessons valid",
+    "npm run audit:all — pass: audit-links (no broken links, no orphaned articles), audit-images, audit-schema, audit-indexability, audit-accessibility",
+    "git diff --check — clean"
+  ],
+  "evidence_basis": {
+    "approved_repository_evidence": [
+      ".ai-ops/evidence/PP-RELAY-041-benham-head-line-direction.md — controlling evidence for direction/path wording; unchanged by this revision, re-verified that all retained direction/path passages stay inside its boundary",
+      "src/content/blog/beginner/forked-head-line-meaning.md — checked for corroboration of 'lawyer's fork'; the sibling article discusses only 'writer's fork' and never mentions 'lawyer's fork,' confirming that label has no repository evidentiary support and should not be retained as an established synonym",
+      "docs/source-verification-log.md's existing writer's-fork disposition (Cheiro's directly quoted terminal-fork reading — 'dual mentality... less power of concentration on any one subject') — the interpretive sentence retained in this revision rests on this already-verified quotation, not on the removed naming claims"
+    ],
+    "external_access": "None attempted. This revision's correction is a removal/narrowing of unsupported categorization and naming-history/anonymous-authority wording, not new source acquisition; no new claim requiring external verification was added.",
+    "canonical_lesson_used_as_proof": "No. The canonical lessons/lines/03-head-line.mdx lesson was not consulted as evidence for this revision."
+  },
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Ran npm run audit:claim-risk against the final file (10 findings, unchanged from revision 4) and manually re-read the complete final article end to end, plus the complete writer's-fork subsection specifically. Prevalence/consensus and vague/anonymous authority: 'is a specific feature in Western palmistry' generalized the fork into an unattributed tradition-wide categorization with no approved evidence; removed. 'It is known instead as...' asserted an anonymous-authority claim about who uses each label; removed. 'Lawyer's fork' specifically was checked against every other repository source discussing this feature (the sibling forked-head-line-meaning.md article and this log's prior writer's-fork disposition) and found nowhere else, so it was dropped rather than retained as an established synonym — per the controlling boundary, Cheiro/Benham's non-use of a label does not establish who else uses a different label. The dependent 'Writers and lawyers are both named because...' sentence was removed for the same reason, since its premise depended on the unsupported 'lawyer's fork' claim. Naming/chronology: the corrected wording ('is referred to in this article as') attributes the label to this article's own editorial convention only, introducing no chronology or prevalence claim about when or how widely the label is used elsewhere. Combination readings: unchanged from revision 4, outside this revision's required remediation. Scientific/historical: no scientific, medical, or historical-continuity claim was added; the retained 'dual mentality' interpretive sentence rests on the already-verified direct Cheiro quotation logged in this file's earlier writer's-fork entry. Quotation fidelity: no quotation marks were added, removed, or altered. Observation-vs-interpretation framing: unchanged structurally. All ten remaining claim-risk heuristic findings were individually re-checked against the article's sourced content and confirmed unrelated to the revision-5 edit locations (lines 9/11/17 rhetorical scene-setting or directly-quoted, previously-verified Cheiro attribution; line 45 an individual mind's own range, not a population; line 49 inside a directly-quoted Cheiro passage; line 89 the site's own statement about its cross-line reading method; line 114 a general statement about creativity, not palmistry population frequency); neither revision-5 edit location appears among them."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the task packet, state.json, and CURRENT_TASK.md mirror to confirm revision-5 scope, risk class, and the required correction before implementation",
+      "Confirmed via GitHub search that PR #66 (revision 1), PR #67 (revision 2), PR #68 (revision 3), and PR #69 (revision 4) are all closed/unmerged, and confirmed via git diff that head-line.md on origin/main still lacks all revision-1 through revision-4 corrections",
+      "Fetched the closed claude/relay-PP-RELAY-042-head-line-source-cleanup-r4 branch and confirmed no unrelated drift on the three scoped files occurred on main between that branch's base commit and current origin/main, then used its content as the reconstructed revision-1 through revision-4 starting point",
+      "Searched the repository (grep) for every other mention of 'lawyer's fork' and 'writer's fork' naming/authority phrasing to establish that 'lawyer's fork' has no supporting evidence anywhere else in the repo before removing it",
+      "Applied the AGENTS.md clean-divergence recovery: local main had diverged from origin/main with no clean fast-forward (an unrelated stale local checkout state), so left local main untouched and created the revision-5 branch directly from verified origin/main"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/blog/beginner/head-line.md",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Persistent-checkout recovery was used: local main (an old, diverged checkout state, 84 vs 50 commits different from origin/main) could not fast-forward, so the revision-5 branch was created directly from verified origin/main per AGENTS.md/CLAUDE_ROUTINE_PROMPT.md, without resetting, rebasing, or force-updating local main."
+  }
+}
