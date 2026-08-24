@@ -1382,3 +1382,69 @@ used in the new article.
 **Reciprocal navigation:** Added one link from `life-line.md`'s existing "Explore further" list to the new article. No other wording in that file, or in `mount-of-venus.md` or the canonical Life Line/Mount of Venus lessons, was reopened — the task scope prohibits rewriting the canonical pillar/lesson prose, which still contains the unverified West/amplification language this revision declined to import into the new companion article.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/curved-life-line-meaning.md` (0 findings). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
+
+## Pass 14 — Forked Fate Line Meaning companion article, revision 2 (2026-08-24)
+
+**Task:** PP-RELAY-047 revision 2. Revision 1 returned `HUMAN_REQUIRED`
+because no fork-specific verified evidence existed in the repository and
+this session's environment could not reach primary-text hosts directly. The
+Director independently verified Cheiro's *Palmistry for All* (1916) against
+two independent public-domain transcriptions and recorded the bounded
+result at `.ai-ops/evidence/PP-RELAY-047-cheiro-fate-line-branch.md`. This
+pass consumed that Director-prepared evidence packet as the controlling
+source; no primary-text access was attempted directly by this worker.
+
+### Controlling evidence applied
+
+Cheiro, *Palmistry for All* (1916), describes a Fate Line configuration
+with one branch on the Mount of Venus and the other on the Mount of Moon
+(Luna), in the lower/origin region of the line, and associates that
+specific configuration with romance/passion strongly influencing career or
+life direction. That is the entire evidentiary boundary; the Director's
+evidence packet explicitly rules out a terminal/top fork meaning and any
+Jupiter/Apollo/Mercury/Saturn mount-directed fork synthesis.
+
+### Disposition of prohibited claims from the task packet
+
+| Prohibition | Disposition |
+|---|---|
+| No terminal/top fork meaning unless independently verified. | Not introduced. The article names the terminal fork explicitly as a formation this site does not have verified evidence for, including the commonly circulated "two careers" claim, which is identified but not endorsed. |
+| No synthesized Jupiter/Apollo/Mercury/Saturn mount-directed fork meaning. | Not introduced. The article states directly that combining a mount's general association with an undocumented fork location is a synthesis it declines to perform. |
+| No generalization of Cheiro's Venus/Moon interpretation to all forks. | Not introduced. The article states the Venus/Moon reading applies only to that specific pair of destinations and is not a variant meaning for other forks. |
+| No prevalence/rarity/population-norm/anonymous-consensus/degree-scaling/good-bad-ranking language. | `npm run audit:claim-risk` returned 0 findings after two rounds of wording correction (see below). |
+| No medical/legal/financial/relationship-outcome/danger/timing predictions. | The Venus/Moon reading is framed as a historical influence, explicitly not a guaranteed outcome, matching the Director evidence packet's own framing. |
+| No vague "the tradition says"/"modern palmists believe" wording. | The single historical claim is attributed to Cheiro by name and edition throughout; no anonymous-authority phrasing remains in the published wording (an earlier draft's "genuine strand of the tradition somewhere" hedge was removed before finalizing). |
+
+### Preflight disposition
+
+1. **Prevalence/consensus language.** First `audit:claim-risk` run flagged
+   three instances (`most`, `commonly`, `usually`) — all describing the
+   prevalence of *other websites' claims*, not palmistry claims themselves,
+   but reworded anyway to remove ambiguity. Second run: 0 findings.
+2. **Scientific/historical assertions.** Limited to the single Venus/Moon
+   claim, attributed to Cheiro by name and edition; no chronology, study, or
+   other historical claim is made.
+3. **No invented combination readings.** Explicitly and directly refused in
+   its own section ("What this doesn't cover"), naming Jupiter/Apollo/
+   Mercury/Saturn combinations specifically as declined syntheses.
+4. **No vague anonymous authority.** No "modern palmists," "some writers,"
+   "traditional readers," "experts," or equivalent phrase appears in the
+   final wording; the claim-risk `ANONYMOUS_AUTHORITY` category returns 0
+   matches.
+5. **Claim-type separation.** Direct observation (locating a fork and which
+   mounts its strands run toward), Cheiro's named historical interpretation,
+   and Palmistry Path's editorial stopping point are separated into their
+   own labeled section ("Observation, history, and site policy — kept
+   separate").
+6. **Quotation fidelity.** No text is presented in quotation marks as
+   Cheiro's verbatim words; the Venus/Moon reading is paraphrased throughout,
+   consistent with the Director evidence packet, which itself provides a
+   paraphrase rather than an exact quotation.
+
+**Claim-risk heuristic disposition:** `npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md` returned 3 `PREVALENCE_OR_CONSENSUS` findings on first run (all describing external-content prevalence, not palmistry claims); reworded to remove the flagged words entirely; second run returned 0 findings.
+
+**Reciprocal navigation:** Added one sentence to `fate-line.md`'s existing branches paragraph distinguishing a fork from a branch and linking to the new article. The sibling `fate-line-branches-meaning.md` (unverified terminal-fork prose) was not read as evidence, not modified, and not linked from the new article, per task scope.
+
+**Backlog bookkeeping:** `docs/editorial-backlog.md` published count updated 69 → 70 and Next-25 row 18 marked published, following the established pattern for prior Relay-shipped articles.
+
+**Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md` (0 findings, second run). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
