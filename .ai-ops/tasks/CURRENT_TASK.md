@@ -2,99 +2,89 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-047
+PP-RELAY-048
 
 ## Revision
-3
+1
 
 ## Risk Class
 SOURCE_SENSITIVE
 
 ## Objective
-Produce the approved Next 25 companion article **Forked Fate Line Meaning in Palmistry** (`forked-fate-line-meaning`) using only the Director-verified Cheiro evidence boundary in `.ai-ops/evidence/PP-RELAY-047-cheiro-fate-line-branch.md` plus any additional independently verified approved evidence. The article must not promote the existing unverified terminal-fork prose from `fate-line-branches-meaning.md` into new content.
+Produce the approved Next 25 companion article **Broken Fate Line Meaning in Palmistry** (`broken-fate-line-meaning`) as a narrowly source-bounded beginner article. The existing Fate Line lesson and pillar are maps to candidate claims, not automatic evidence. Every retained interpretation of a break, overlapping break, resumed line, shifted continuation, or multi-section Fate Line must be independently grounded in named approved evidence or omitted/narrowed.
 
-## Revision 2 note
-Revision 1 correctly returned `HUMAN_REQUIRED` because Claude's environment could not access primary texts and the repository had no fork-specific verified evidence. The Director independently verified Cheiro's *Palmistry for All* (1916) and added `.ai-ops/evidence/PP-RELAY-047-cheiro-fate-line-branch.md`. That evidence resolves the access gate for one specific lower/base divided Fate Line form. Proceed within that narrow boundary; do not infer unsupported top/terminal fork meanings.
-
-## Revision 3 note
-Revision 2 produced a useful article and passed CI, but cumulative Director review found a small set of residual statements that exceed the verified Cheiro boundary. Revise only those statements and directly equivalent wording while preserving the sound article structure and verified Venus/Moon interpretation:
-- Do not characterize Cheiro as having **not treated the configuration as a guarantee** unless the verified source itself supports that historical negative claim. Instead separate Cheiro's attributed historical interpretation from Palmistry Path's own non-deterministic editorial policy.
-- Remove or neutralize population/content-prevalence assertions such as search results offering confident answers, content commonly skipping evidence limits, or claims being repeated elsewhere unless those statements are directly evidenced and necessary.
-- Do not state a universal interpretive rule such as `it depends entirely on where the fork occurs and which two points its strands run toward`, or that fork/branch/break `aren't read the same way`, unless independently verified. It is sufficient to distinguish the observable formations and then state exactly what this site's verified evidence covers.
-- Keep mount associations mentioned only as explanation of why Palmistry Path refuses to synthesize them into fork meanings; do not imply those separate associations are fork-specific evidence.
+## Why this task now
+PP-RELAY-047 shipped the preceding Next 25 item (`forked-fate-line-meaning`). The editorial backlog identifies Broken Fate Line as item 19, explicitly differentiated from `no-fate-line-meaning`: absence is not the same observable feature as interruption. Continue the approved variation-article sequence without duplicating shipped work.
 
 ## Scope
-Primary when the bounded evidence supports a useful article:
-- `src/content/blog/beginner/forked-fate-line-meaning.md`
+Primary when evidence supports a useful article:
+- `src/content/blog/beginner/broken-fate-line-meaning.md`
 
 Supporting only as directly necessary:
-- one or two reciprocal navigation links from existing Fate Line content when useful
+- one or two reciprocal navigation links from existing Fate Line content
 - `docs/editorial-backlog.md` published count/status after the article is actually added
 - `docs/source-verification-log.md`
 - `docs/CHANGELOG.md`
-- `.ai-ops/results/PP-RELAY-047-r3.json`
+- `.ai-ops/results/PP-RELAY-048-r1.json`
 
-Do not rewrite the canonical Fate Line lesson/pillar or clean unrelated legacy claims. The sibling `fate-line-branches-meaning.md` contains an unverified terminal-fork claim; do not copy it as evidence and do not expand this task into a full cleanup of that article.
+Do not rewrite the canonical Fate Line lesson/pillar in this task. If source review exposes separate legacy defects there, record them for a later bounded cleanup rather than expanding scope.
 
-## Controlling evidence boundary
-Read `.ai-ops/evidence/PP-RELAY-047-cheiro-fate-line-branch.md` before editing.
+## Source/evidence rule
+The current Fate Line lesson contains candidate prose about breaks, overlapping transitions, shifted resumptions, and multiple sections. Do **not** treat that prose as verified merely because it is already published. Independently verify each interpretation retained in the new article against approved repository-held sources/source-verification records. If public-domain primary evidence is accessible, prefer named Cheiro/Benham evidence. Copyright-era Gettings/West/Fincham claims may be retained only when already verified under repository policy; do not invent verification.
 
-Verified from Cheiro:
-- Cheiro explicitly describes a Fate Line configuration with one branch on the Mount of Venus and the other on the Mount of Moon.
-- In Cheiro's historical system, he associates that specific Venus/Moon divided configuration with romance/passion strongly influencing career or life direction.
-
-This evidence supports discussing a **specific lower/base branching or fork-like form**. It does not establish a general meaning for every Fate Line fork.
+If evidence supports only a narrower article than the backlog wording suggests, publish the narrower evidence-grounded article. If a useful article genuinely cannot be supported without unavailable evidence, return `HUMAN_REQUIRED` rather than guessing.
 
 ## Article intent and differentiation
-- Primary query: `forked fate line meaning` / `fate line fork palmistry`.
+- Primary query: `broken fate line meaning` / `break in fate line palmistry`.
 - Beginner-readable companion to the main Fate Line pillar.
-- Clearly distinguish a fork/division from a branch/offshoot and a break/gap using repository-approved observation vocabulary, without assigning general meanings to those categories.
-- Explain that Palmistry Path currently has verified classical evidence for one specific lower/base divided Fate Line form, while the evidence packet does not verify a terminal/top-fork meaning.
-- Keep observation, Cheiro's historical interpretation, and Palmistry Path editorial guidance clearly separate.
-- Calm, non-deterministic Palmistry Path framing: no fixed destiny, guaranteed career outcomes, wealth forecasts, or event timing.
+- Open by distinguishing **absence** (no Fate Line) from **interruption** (a visible line stops/gaps and may resume), so it does not cannibalize `no-fate-line-meaning`.
+- Observation first: describe exactly what counts as a gap/interruption before interpretation.
+- Keep named historical interpretation separate from Palmistry Path editorial policy.
+- Calm, non-deterministic framing: no fixed destiny, guaranteed career event, exact age/timing, failure, danger, or relationship/financial prediction.
 
 ## Prohibited claims
-- No terminal/top fork meaning unless independently verified in a named approved source and logged at claim level.
-- No synthesized `fork toward Jupiter = leadership`, `Apollo = creative success`, Mercury/Saturn/wealth/two careers/recognition meanings from separate mount or Fate Line evidence.
-- No generalization of Cheiro's Venus/Moon interpretation to all forks.
-- No prevalence/rarity, population norms, anonymous consensus, content/search-result prevalence, fixed geometry, monotonic stronger-with-width/depth rules, or good/bad rankings without direct evidence.
-- No medical, legal, financial, relationship-outcome, danger, or timing predictions.
-- No vague `the tradition says`, `modern palmists believe`, `classical sources agree`, or equivalent historical negative-consensus claims unless specifically bounded to verified named sources.
+- No generic `break = career change`, `break = life change`, `overlap = smooth transition`, `shifted restart = new field`, or `multiple sections = multiple life chapters` unless that specific claim is independently verified in a named approved source and logged at claim level.
+- No event timing, age mapping, guaranteed job/career change, financial outcome, relationship outcome, danger, illness, death, trauma, or medical claim.
+- No prevalence/rarity/population norms, `many people`, `commonly`, `usually`, `typical`, `rare`, `normal`, or equivalent without direct evidence.
+- No anonymous authority (`the tradition says`, `modern palmists`, `classical sources agree`, `readers generally`, etc.) unless specifically bounded to verified named sources.
+- No fixed geometry/gap-size cutoffs or monotonic rules such as larger gap = larger change.
+- No synthesized combinations with mounts, head/heart/life lines, endpoints, branches, forks, depth, islands, or other features unless that exact combination is independently verified.
+- Do not infer that a source's silence means a claim is false or absent across the tradition.
 
 ## Required SOURCE_SENSITIVE preflight
 Before `READY_FOR_REVIEW`:
-1. Run `npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md` and disposition every finding truthfully.
-2. Map every retained interpretive or historical characterization to `.ai-ops/evidence/PP-RELAY-047-cheiro-fate-line-branch.md` or another independently verified approved source recorded in `docs/source-verification-log.md`.
-3. Search final prose for unsupported prevalence/consensus/generalization language, including claims about what search results, other content, or unnamed readers/sources commonly say or do.
-4. Search for precision/degree and stronger-with-degree extrapolation.
-5. Search every mention of Jupiter, Apollo, Mercury, Saturn, mounts, two careers, success, recognition, wealth, timing, or outcomes and remove anything not fork-specifically verified or clearly presented only as a declined synthesis.
-6. Do not treat legacy `fate-line-branches-meaning.md` terminal-fork prose as evidence.
-7. Verify any direct quotation verbatim; otherwise paraphrase.
-8. Confirm observation, named historical interpretation, and Palmistry Path policy remain distinguishable. Do not attribute Palmistry Path's safety policy back to Cheiro.
+1. Run `npm run audit:claim-risk -- src/content/blog/beginner/broken-fate-line-meaning.md` and disposition every finding truthfully.
+2. Build a claim-level evidence map for every retained historical/interpretive statement. Existing lesson/pillar prose is not evidence by itself.
+3. Search final prose for prevalence/consensus/anonymous-authority language and remove or named-source bound every instance.
+4. Search for precision/degree rules, gap-size scaling, event timing, and stronger-with-degree extrapolation.
+5. Search every statement about overlapping breaks, resumed lines, shifted continuations, and multiple sections; retain only what is specifically verified.
+6. Search for any synthesis with mounts/other lines/features and remove it unless exact combination evidence is verified.
+7. Verify every direct quotation verbatim; otherwise paraphrase.
+8. Confirm observation, named historical interpretation, and Palmistry Path editorial guidance are visibly distinct.
+9. Explicitly compare the final article with `no-fate-line-meaning` and the main Fate Line article to avoid duplication/cannibalization.
 
 ## Acceptance criteria
-1. A useful beginner article remains at `src/content/blog/beginner/forked-fate-line-meaning.md` without exceeding the verified evidence boundary.
-2. The article accurately explains the specific verified lower/base Venus/Moon divided Fate Line configuration and attributes its historical meaning to Cheiro.
-3. The article explicitly avoids assigning an unverified meaning to terminal/top forks or other mount-directed forks.
-4. Fork/branch/break observation is clearly distinguished without unsupported interpretation or universal reading rules.
-5. Every retained interpretation and historical characterization is traceable to named approved evidence at claim level; Palmistry Path safety/editorial guidance is identified as site policy rather than attributed to Cheiro.
-6. No unsupported synthesis, prevalence/consensus, search/content prevalence, cutoff, degree-scaling, guaranteed outcome, or timing language remains.
-7. Internal navigation/backlog bookkeeping remains bounded and accurate.
-8. SOURCE_SENSITIVE preflight and required validation pass.
-9. If the bounded evidence cannot support the article without the removed generalizations, narrow the article rather than inventing support; return `HUMAN_REQUIRED` only if a genuinely necessary material claim still requires unavailable evidence.
+1. A useful beginner article is added at `src/content/blog/beginner/broken-fate-line-meaning.md` only if the retained meanings are source-grounded.
+2. It clearly distinguishes a broken/interrupted Fate Line from an absent Fate Line and from a fork/branch as observation vocabulary.
+3. Every interpretation/historical characterization is traceable to named approved evidence at claim level.
+4. No unsupported transition, career-change, multi-chapter, shifted-resumption, prevalence, consensus, precision, degree-scaling, timing, danger, or outcome claim remains.
+5. Palmistry Path safety/editorial framing is identified as site policy rather than attributed to historical sources.
+6. Internal navigation and backlog bookkeeping are bounded and accurate.
+7. The required SOURCE_SENSITIVE preflight and project validation pass.
+8. If the evidence is insufficient for a useful article, return `HUMAN_REQUIRED` rather than creating speculative filler.
 
 ## Validation
 Run at minimum:
-- `npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md`
+- `npm run audit:claim-risk -- src/content/blog/beginner/broken-fate-line-meaning.md`
 - `npm run build`
 - `npm run content-audit`
 - `npm run audit:all`
 - `git diff --check`
 
 ## Stop conditions
-Return `HUMAN_REQUIRED` only if a useful article still genuinely requires evidence unavailable under repository policy. Return `BLOCKED` only for a technical blocker that cannot safely be repaired within scope. Return `PAUSED_USAGE_LIMIT` immediately if a usage/credit safeguard triggers.
+Return `HUMAN_REQUIRED` only if a useful article genuinely requires material evidence unavailable under repository policy. Return `BLOCKED` only for a technical blocker that cannot safely be repaired within scope. Return `PAUSED_USAGE_LIMIT` immediately if a usage/credit safeguard triggers.
 
 ## Durable result contract
-Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-047-r3.json` on a pushed `claude/relay-PP-RELAY-047-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-048-r1.json` on a pushed `claude/relay-PP-RELAY-048-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
 The result must include `risk_class: "SOURCE_SENSITIVE"` and a truthful completed `source_preflight` object when content has been drafted/reviewed. For `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with matching task/revision footers. Non-change terminal outcomes do not require a dummy PR. Do not merge and do not select the next task.
