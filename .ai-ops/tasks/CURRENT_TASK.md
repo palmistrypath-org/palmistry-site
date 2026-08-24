@@ -2,102 +2,95 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-046
+PP-RELAY-047
 
 ## Revision
-3
+1
 
 ## Risk Class
 SOURCE_SENSITIVE
 
 ## Objective
-Produce the approved companion article `Curved vs Straight Life Line` (`curved-life-line-meaning`) as an evidence-bounded clarification article. Do not manufacture a standalone curved-vs-straight personality interpretation. Explain what the path/arc can be observed to do, what the Director-verified Benham evidence actually supports about its relationship to the Mount of Venus, and what Palmistry Path cannot currently support as an independent interpretation.
+Produce the approved Next 25 companion article **Forked Fate Line Meaning in Palmistry** (`forked-fate-line-meaning`) only if the fork-specific interpretation can be independently grounded in named, approved evidence. The existing Fate Line lesson/article and backlog are a map to the topic, not automatic proof of any fork meaning.
 
-## Revision note
-Revision 1 returned `HUMAN_REQUIRED` because Claude could not access primary sources and correctly found no repository-held mount-independent curved/straight interpretation. The Director independently verified the available public-domain Benham evidence and recorded the controlling boundary in `.ai-ops/evidence/PP-RELAY-046-director-life-line-curvature.md`.
-
-Revision 2 produced a cleanly built article, but cumulative Director review found that it exceeded that boundary by importing a Peter West wide-arc interpretation and synthesizing additional mount-development language such as a `well-resourced Venus`, `amplifying` warmth/vitality, and a paired wide-arc/narrow-arc energy/personality system. The controlling evidence note verifies only the Benham mount-bound relationship: a Life Line close to the thumb reduces the territory/operation of the Mount of Venus. Revision 3 must remove the unsupported extension rather than treating legacy site prose or an unverified West attribution as proof.
+## Why this task now
+- PP-RELAY-046 is accepted and merged, bringing the v2C pilot to 23/50.
+- `docs/editorial-backlog.md` identifies item 18, Forked Fate Line, as the next unshipped variation article.
+- Recent v2C rework shows that legacy lesson prose must not be promoted into a new article without claim-level source verification.
 
 ## Scope
-Primary:
-- `src/content/blog/beginner/curved-life-line-meaning.md`
+Primary when evidence is sufficient:
+- `src/content/blog/beginner/forked-fate-line-meaning.md`
 
 Supporting only as directly necessary:
-- reciprocal navigation from the existing Life Line pillar/lesson and/or Mount of Venus material
+- one or two reciprocal navigation links from the existing Fate Line pillar/lesson when useful
 - `docs/editorial-backlog.md` published count/status after the article is actually added
 - `docs/source-verification-log.md`
 - `docs/CHANGELOG.md`
-- `.ai-ops/results/PP-RELAY-046-r3.json`
+- `.ai-ops/results/PP-RELAY-047-r1.json`
 
-Do not rewrite the canonical Life Line lesson/pillar, alter claim-risk tooling, or expand into other Life Line variations.
+Do not rewrite the canonical Fate Line lesson/pillar, broaden into broken Fate Line, Fate Line origins/endpoints, or clean unrelated legacy claims.
 
-## Controlling evidence boundary
-Read `.ai-ops/evidence/PP-RELAY-046-director-life-line-curvature.md` before editing.
-
-- Benham's Director-verified historical evidence supports one narrow mount-bound claim: a Life Line lying close to the thumb reduces the territory/operation of the Mount of Venus.
-- Current Life Line/Venus material may be used to explain the observable fact that the arc bounds Venus territory, but legacy interpretive prose is not automatic evidence for a new companion article.
-- Do not retain Peter West as an interpretive source in this article unless his exact relevant claim is independently verified under the repository source policy during this revision. Existing copyright-era attribution elsewhere on the site is not sufficient by itself.
-- Do not infer a positive opposite from Benham's narrow-arc claim. In particular, do not turn `more room` into `well-resourced Venus`, amplified warmth/vitality, adventurousness, expansive energy, or any other wide-arc interpretation unless that exact claim is independently verified and recorded.
-- Palmistry Path currently has no approved evidence for an independent mount-free `straight Life Line` interpretation. State that limitation directly if useful.
-- Do not claim that no palmistry source anywhere has ever offered a separate interpretation; the verified conclusion is only that Palmistry Path's approved evidence does not currently establish one.
+## Evidence-first requirement
+Before drafting interpretive prose:
+1. Search approved repository evidence, source-verification records, and named primary/approved sources for **forked Fate Line / Fate Line fork** specifically.
+2. For every interpretation you intend to retain, record a claim-level evidence map in `docs/source-verification-log.md` identifying the named source and what it actually supports.
+3. Existing Fate Line lesson/article language about branches, breaks, direction changes, Jupiter/Apollo deviations, or general synthesis is **not** evidence for a fork meaning unless the source itself specifically addresses a forked Fate Line.
+4. Do not construct a fork reading by combining separately supported Fate Line meanings with Jupiter, Apollo, Saturn, career, success, creativity, ambition, relationships, or other mount/line meanings.
+5. If repository-accessible evidence is insufficient to support a useful fork-specific article, return `HUMAN_REQUIRED` with the exact missing source/evidence need rather than inventing or padding an interpretation. Do not create a thin article that merely disguises missing evidence.
 
 ## Article intent and differentiation
-- Primary query: `curved life line meaning` / `straight life line palmistry`.
-- Beginner-readable and useful even though it declines to invent a symmetrical interpretation.
-- Identification must be comparative/observational only: wider sweep versus path closer to the thumb, without population average, fixed angle, or fixed cutoff.
-- Clearly distinguish: (1) direct visual observation, (2) Benham's named historical mount-bound claim, and (3) Palmistry Path editorial guidance/limits.
-- Differentiate from short/faint/broken Life Line articles: this task concerns path/arc only, not length, depth, breaks, branches, endpoints, or timing.
-- Calm, non-alarmist framing. Palmistry Path does not use Life Line shape to diagnose health or predict lifespan.
-
-## Required revision-3 corrections
-1. Remove the Peter West wide-arc/adventurousness interpretation unless it is independently verified in this revision and logged claim-by-claim.
-2. Remove the synthesized claim that a wider arc/wider Venus territory means a `well-resourced` mount or amplifies warmth, vitality, physical energy, outward engagement, adventurousness, or appetite for experience unless each exact retained interpretation has independent approved evidence.
-3. Remove the synthesized opposite that a narrow arc means contained/conserved energy, a smaller sphere, or equivalent personality/energy language unless independently verified beyond Benham's narrower statement that it checks the operation of the mount.
-4. Keep Benham's historical claim explicitly attributed and do not translate `checks the operation of that Mount` into a stronger modern psychological or vitality claim.
-5. Review the FAQ, common-mistakes, summary, description/frontmatter, source footer, and source-verification log for equivalent extensions; do not fix only the main body paragraph.
-6. If removing those interpretations leaves the article primarily explanatory/observational, that is acceptable and preferred to filling the gap by inference.
+- Primary query: `forked fate line meaning` / `fate line fork palmistry`.
+- Beginner-readable companion to the main Fate Line pillar.
+- Open by distinguishing a **fork** (line dividing at an end) from a **branch** (offshoot along the line) and from a **break** (interruption/gap), using only repository-approved observation vocabulary.
+- Keep observation separate from interpretation.
+- Do not imply that any fork direction is good/bad, stronger/weaker, or more successful unless a named approved source specifically supports that exact claim.
+- Calm, non-deterministic framing: Palmistry Path does not treat Fate Line features as fixed destiny, guaranteed career outcomes, wealth forecasts, or event timing.
 
 ## Prohibited claims
-- No invented curved-vs-straight symmetry or independent straight-line personality meaning.
-- No positive-opposite inference from Benham's narrow-arc statement.
-- No population norm, average curvature, fixed angle/cutoff, prevalence/rarity, anonymous consensus, or `more curve = more meaning` rule.
-- No inference from hand shape, Mount of Venus development beyond the specifically verified boundary relationship, line length, depth, breaks, branches, endpoints, or other features.
-- No medical, health, vitality-as-empirical-fact, lifespan, disease, danger, deterministic personality, relationship, or predictive claim.
-- No broad claims such as `the tradition says`, `modern palmists believe`, or `classical sources agree` unless specifically supported and named.
+- No invented fork-specific meaning inferred from legacy Fate Line prose.
+- No invented combinations such as `fork toward Jupiter = leadership`, `fork toward Apollo = creative success`, or similar unless the **fork-specific** combination is independently verified in a named approved source.
+- No prevalence/rarity claims, population norms, anonymous practitioner consensus, or `common/typical/usual/rare` wording without direct approved evidence.
+- No fixed geometric cutoff for what counts as a fork beyond the repository's observation vocabulary.
+- No monotonic `larger/wider/deeper fork = stronger meaning` rule without direct source evidence.
+- No guaranteed career, success, wealth, relationship, timing, health, danger, or predictive claims.
+- No vague claims such as `the tradition says`, `modern palmists believe`, or `classical sources agree` unless the statement is specifically bounded to named verified sources.
 
 ## Required SOURCE_SENSITIVE preflight
 Before `READY_FOR_REVIEW`:
-1. Run `npm run audit:claim-risk -- src/content/blog/beginner/curved-life-line-meaning.md` and truthfully disposition every finding.
-2. Add/update a concise claim-level evidence map in `docs/source-verification-log.md` for every retained historical interpretation.
-3. Search final prose for prevalence/consensus/generalization terms and remove/narrow unsupported usage.
-4. Search for precision/degree language, including average/normal curvature, fixed zones/angles, and monotonic extrapolation.
-5. Search every statement connecting wide/narrow arc to Venus qualities and verify that it is either direct observation, the narrow Benham claim, or explicitly Palmistry Path editorial limitation—not inferred combination meaning.
-6. Search for health/vitality/lifespan/danger language and ensure such concepts are only excluded/editorially bounded, never diagnosed or predicted.
-7. Keep direct observation, named historical material, and Palmistry Path editorial policy distinguishable.
-8. Verify quotation fidelity for any direct quotation.
+1. Run `npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md` if the article is created and truthfully disposition every finding.
+2. Verify every retained historical/traditional interpretation against the claim-level evidence map; legacy site prose alone does not qualify.
+3. Search final prose for prevalence/consensus/generalization language and remove/narrow unsupported usage.
+4. Search for precision/degree language and stronger-with-degree extrapolation.
+5. Search for all cross-feature synthesis involving Jupiter, Apollo, Saturn, mounts, other lines, career/success/wealth, and remove anything not fork-specifically verified.
+6. Keep direct observation, named historical interpretation, and Palmistry Path editorial guidance clearly distinguishable.
+7. Verify any direct quotation verbatim against the cited edition; otherwise paraphrase.
+8. Confirm no deterministic prediction, event timing, medical/legal/financial advice, or guaranteed outcome language remains.
 
 ## Acceptance criteria
-1. A beginner-readable article exists and answers the query without pretending the evidence supports an independent two-sided interpretation.
-2. Curvature/path identification is comparative with no population norm, average, fixed angle, or cutoff.
-3. Every retained historical interpretation is traceable to independently approved evidence; the Director Benham note is sufficient only for the narrow mount-bound claim recorded there.
-4. The article clearly explains that the verified Benham reading is mount-bound and that Palmistry Path does not currently have approved evidence for a separate straight-Life-Line meaning.
-5. No imported legacy West interpretation, positive-opposite inference, invented combination reading, prevalence/consensus claim, stronger-with-degree rule, medical/lifespan/danger claim, or deterministic personality claim appears unless independently verified within this revision and logged.
-6. Internal links and backlog bookkeeping remain bounded and accurate.
+1. If sufficient approved evidence exists, a useful beginner companion article is added at `src/content/blog/beginner/forked-fate-line-meaning.md` and answers the query without exceeding that evidence.
+2. Fork/branch/break observation is clearly distinguished without importing unsupported interpretations.
+3. Every retained fork-specific interpretation is traceable to a named independently approved source at claim level.
+4. No meaning is synthesized from separately supported Fate Line/mount meanings.
+5. No unsupported prevalence/consensus, fixed-cutoff, stronger-with-degree, outcome-guarantee, or timing claim appears.
+6. Internal navigation and backlog bookkeeping are bounded and accurate.
 7. SOURCE_SENSITIVE preflight is complete and truthful; required validation passes.
+8. If evidence is insufficient for criteria 1–7, `HUMAN_REQUIRED` is the correct result and must name exactly what evidence/source access is missing; no dummy PR is required.
 
 ## Validation
-Run at minimum:
-- `npm run audit:claim-risk -- src/content/blog/beginner/curved-life-line-meaning.md`
+If article/content changes are made, run at minimum:
+- `npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md`
 - `npm run build`
 - `npm run content-audit`
 - `npm run audit:all`
 - `git diff --check`
 
+For a source-insufficient `HUMAN_REQUIRED` result, verify the evidence search and durable result/branch contract rather than creating speculative content solely to satisfy build validation.
+
 ## Stop conditions
-Return `HUMAN_REQUIRED` only if revision 3 encounters a genuinely unresolved source/editorial decision that cannot be resolved from this controlling boundary. Do not return it merely because the article has fewer traditional interpretations after unsupported extensions are removed.
-Return `BLOCKED` only for a bounded technical blocker that cannot safely be repaired within scope.
+Return `HUMAN_REQUIRED` when a useful fork-specific interpretation genuinely requires source evidence/access not available under repository policy. State the exact source or claim that is missing. Return `BLOCKED` only for a bounded technical blocker that cannot safely be repaired within scope. Return `PAUSED_USAGE_LIMIT` immediately if a usage/credit safeguard triggers.
 
 ## Durable result contract
-Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-046-r3.json` on a pushed `claude/relay-PP-RELAY-046-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-047-r1.json` on a pushed `claude/relay-PP-RELAY-047-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
-The result must include `risk_class: "SOURCE_SENSITIVE"` and a completed `source_preflight` object. For `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with matching task/revision footers. Non-change terminal outcomes do not require a dummy PR. Do not merge and do not select the next task.
+The result must include `risk_class: "SOURCE_SENSITIVE"` and a truthful completed `source_preflight` object when content has been drafted/reviewed. For `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with matching task/revision footers. Non-change terminal outcomes do not require a dummy PR. Do not merge and do not select the next task.
