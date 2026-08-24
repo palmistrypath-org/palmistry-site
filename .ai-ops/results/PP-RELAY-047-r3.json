@@ -1,0 +1,48 @@
+{
+  "schema_version": 3,
+  "task_id": "PP-RELAY-047",
+  "revision": 3,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 2 (PR #84, closed without merge) drafted the Forked Fate Line Meaning companion article cleanly within the Director-verified Cheiro evidence boundary, but cumulative Director review found a small set of residual statements exceeding that boundary. Revision 3 revised only those statements and directly equivalent wording, preserving revision 2's sound structure and the verified Venus/Moon interpretation. Added src/content/blog/beginner/forked-fate-line-meaning.md (item 18 from docs/editorial-backlog.md's Next 25 list, 69 -> 70 published blog posts). Fixes: (1) removed the claim that Cheiro 'did not treat the configuration as a guarantee' -- unsupported by the evidence note -- and instead stated Cheiro's attributed historical reading and Palmistry Path's own non-deterministic editorial policy as two separate, explicitly labeled statements, in both the Venus/Moon section and the corresponding common-mistakes entry; (2) removed or reworded population/content-prevalence framing (search results offering confident answers, content commonly skipping evidence limits, a claim 'repeated elsewhere'); (3) removed the FAQ's universal interpretive rule ('it depends entirely on where the fork occurs...') and the 'aren't read the same way' framing, replacing both with direct statements of what this site's evidence does and doesn't cover; (4) reviewed the Jupiter/Apollo/Mercury/Saturn mount-associations paragraph and made explicit that those associations are mentioned only to explain the declined synthesis, not as fork-specific evidence. Added the same single reciprocal-link sentence to fate-line.md as revision 2. Updated docs/editorial-backlog.md (published count + row 18), docs/CHANGELOG.md, and docs/source-verification-log.md (Pass 14, full claim-by-claim disposition against the revision-2 residual-claim list).",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md (0 findings)",
+    "npm run build (115 pages)",
+    "npm run content-audit (70 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. no-orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)",
+    "manual re-read of final article against the task's revision 3 note, prohibited-claims list, and the controlling evidence note in .ai-ops/evidence/PP-RELAY-047-cheiro-fate-line-branch.md"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full claim-by-claim disposition of every revision-2-to-revision-3 change is recorded in docs/source-verification-log.md under 'Pass 14 -- Forked Fate Line Meaning companion article, revision 3'. No text is presented as a verbatim Cheiro quotation; the Venus/Moon reading is paraphrased throughout, consistent with the controlling evidence note. Direct observation, Cheiro's named historical interpretation, and Palmistry Path's own editorial policy are kept in separate, explicitly labeled statements in both the Venus/Moon section and the observation/history/policy section, correcting the revision-2 sentences that had blurred Cheiro's history with site policy. Grepped final prose for most/many/often/commonly/typically/generally/usual/rare/prevalence/modern-palmists/some-writers/traditional-readers/experts/classical-sources/repeated/elsewhere/search language; the only surviving match ('elsewhere on the line') is a spatial reference, not a content-prevalence claim."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the controlling evidence note (.ai-ops/evidence/PP-RELAY-047-cheiro-fate-line-branch.md) and the revision 3 task note before drafting",
+      "Read revision 2's closed-PR article content (from the unmerged claude/relay-PP-RELAY-047-forked-fate-line-meaning-r2 branch) as the structural starting point, per the task's instruction to revise only the flagged statements and directly equivalent wording",
+      "Built a claim-by-claim table mapping every revision-2 flagged statement to its revision-3 disposition, recorded in docs/source-verification-log.md Pass 14",
+      "npm run audit:claim-risk as a bounded aid before finalizing",
+      "Targeted grep of final prose for prevalence/consensus/anonymous-attribution wording as a manual check beyond the heuristic scanner"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Startup gate: local checkout's main had diverged from origin/main with no merge base (a persistent-checkout condition, not new work) after prior Relay/dispatch history advanced; origin/main's tip (3a2b1ff8a7732fcaf65b18dd27707e8c1a0b189b) matched the dispatch payload's stated state commit exactly, so per AGENTS.md's clean-divergence recovery path, local main was left untouched and this revision-3 branch was created directly from verified origin/main. Confirmed PR #84 (revision 2) was closed without merge and no revision-3 branch, result artifact, or open PR existed for this task before proceeding. node_modules was not present in the environment and was installed via npm install before running build/audit validation; the resulting incidental optional-dependency 'libc' metadata churn in package-lock.json was reverted before committing since it was not part of this task's scope."
+  }
+}

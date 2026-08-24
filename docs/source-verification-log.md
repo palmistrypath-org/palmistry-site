@@ -1382,3 +1382,74 @@ used in the new article.
 **Reciprocal navigation:** Added one link from `life-line.md`'s existing "Explore further" list to the new article. No other wording in that file, or in `mount-of-venus.md` or the canonical Life Line/Mount of Venus lessons, was reopened — the task scope prohibits rewriting the canonical pillar/lesson prose, which still contains the unverified West/amplification language this revision declined to import into the new companion article.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/curved-life-line-meaning.md` (0 findings). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
+
+## Pass 14 — Forked Fate Line Meaning companion article, revision 3: separating Cheiro's history from site policy, removing prevalence framing and a universal fork rule (2026-08-24)
+
+Scope: Relay PP-RELAY-047 revision 3 (`SOURCE_SENSITIVE`), publishing
+`src/content/blog/beginner/forked-fate-line-meaning.md`. Revision 2 (PR #84,
+closed without merge) built cleanly on the controlling evidence note
+(`.ai-ops/evidence/PP-RELAY-047-cheiro-fate-line-branch.md`), but Director
+review found a small set of residual statements that exceeded that boundary.
+Revision 2 was never merged, so revision 3 was drafted fresh directly against
+the controlling evidence note, revising only the flagged statements and
+directly equivalent wording while keeping revision 2's sound structure
+(fork/branch/break distinction, the single verified Venus/Moon form, an
+explicit "what this doesn't cover" section, and a dedicated
+observation/history/policy section).
+
+### What changed from revision 2
+
+| Revision 2 statement | Problem | Revision 3 disposition |
+|---|---|---|
+| "He did not treat it as a guarantee of any particular outcome, and this article doesn't either." | Attributed a historical negative claim to Cheiro (that he did *not* treat the reading as a guarantee) that the controlling evidence note does not support — the note records only what Cheiro's reading positively associates, not how he qualified it. | Removed. The Venus/Moon paragraph now states only the historical association attributed to Cheiro, then separately states Palmistry Path's own editorial policy of never presenting a configuration as a guaranteed outcome, explicitly labeled as this site's policy rather than a claim about Cheiro's own framing. |
+| "Search for 'forked fate line meaning' and you'll find confident answers assigning a fixed meaning to almost any split..." | Unsupported claim about what search results contain. | Rewritten to name the unverified claims directly ("A fork in the fate line invites specific claims — two careers, hidden talents...") without asserting anything about search results or their prevalence. |
+| "This is a part a lot of 'forked fate line' content skips..." | Unsupported claim about what other content commonly does. | Rewritten to "It's worth being direct about the boundary here, since it's easy to assume a single reading extends further than it does" — no claim about other content's behavior. |
+| "...including a claim you'll see repeated elsewhere, that it simply signals 'two careers.'" | Unsupported claim that the "two careers" claim is repeated elsewhere. | Rewritten to "including the claim that it simply signals 'two careers'" — names the claim (needed for the FAQ/search-intent match) without asserting its prevalence. |
+| FAQ: "It depends entirely on where the fork occurs and which two points its strands run toward." | Stated a universal interpretive rule (that meaning depends on location/destination pair in general) not established by the evidence, which supports only one specific form. | Rewritten to state directly what is and isn't verified: the one verified form, then that other locations/mounts are "different formations this site doesn't currently have verified evidence for" — no general rule about how fork meaning works. |
+| FAQ: "They're different formations and aren't read the same way." | "Aren't read the same way" implies a general interpretive rule about how forks vs. branches are read, beyond the observable structural difference. | Rewritten to "They're different, separately observable formations" — describes the structural distinction only. |
+| Common mistakes: "Cheiro's reading describes an influence, not a fixed prediction — no specific event, timing, or outcome is implied." | Attributed the influence-not-prediction framing to Cheiro's reading itself, echoing the same guarantee-attribution problem as the first item. | Rewritten to state Cheiro's association plainly, then attribute the "never a fixed prediction" framing explicitly to "Palmistry Path's own policy," not to Cheiro. |
+
+The mount-associations paragraph (Jupiter/Apollo/Mercury/Saturn) was reviewed
+against the task's instruction that those associations must be mentioned only
+to explain the declined synthesis, not implied as fork-specific evidence; the
+existing wording already met this, and one clause was added making the
+"mentioned only to explain why declined" framing explicit rather than
+implicit.
+
+### Preflight disposition
+
+1. **Prevalence/consensus language.** None remains. The three revision-2
+   instances above (search results, "content... skips", "repeated
+   elsewhere") were the only ones found and are all removed or reworded per
+   the table above.
+2. **Scientific/historical assertions.** Limited to the two verified claims
+   in the controlling evidence note (the Venus/Moon branch configuration and
+   Cheiro's romance/career association with it), attributed to Cheiro by
+   name. No claim is made about how Cheiro qualified or didn't qualify that
+   reading beyond what the note supports.
+3. **No invented combination readings.** The article does not combine the
+   verified Venus/Moon reading with any other mount, line, or configuration;
+   Jupiter/Apollo/Mercury/Saturn associations are named only as declined
+   syntheses, not as fork-specific readings.
+4. **No vague anonymous authority.** No "modern palmists," "some writers,"
+   "traditional readers," "experts," or equivalent phrase appears anywhere
+   in the article.
+5. **Claim-type separation.** The "Observation, history, and site policy"
+   section, and the corrected Venus/Moon paragraph and common-mistakes entry
+   above, keep direct observation, Cheiro's named historical interpretation,
+   and Palmistry Path's own non-deterministic editorial policy in distinct,
+   explicitly labeled statements.
+6. **Quotation fidelity.** No text is presented as a verbatim Cheiro
+   quotation; the Venus/Moon reading is paraphrased throughout, consistent
+   with the controlling evidence note, which itself provides a paraphrase
+   rather than an exact quotation.
+7. **Safety boundaries.** No medical, legal, financial, deterministic
+   relationship, or predictive-science claim appears; the guarantee/timing
+   exclusion is stated explicitly in two places (the Venus/Moon paragraph and
+   the corrected common-mistakes entry).
+
+**Claim-risk heuristic disposition:** `npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md` returns 0 findings.
+
+**Reciprocal navigation:** Added one sentence to `fate-line.md`'s existing branches paragraph distinguishing fork from branch and linking to the new article — the same single addition made in revision 2, unchanged in substance. The sibling `fate-line-branches-meaning.md` (unverified terminal-fork prose) was not read as evidence, not modified, and not linked from the new article, per task scope.
+
+**Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md` (0 findings). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
