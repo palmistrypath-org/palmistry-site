@@ -1453,3 +1453,68 @@ implicit.
 **Reciprocal navigation:** Added one sentence to `fate-line.md`'s existing branches paragraph distinguishing fork from branch and linking to the new article — the same single addition made in revision 2, unchanged in substance. The sibling `fate-line-branches-meaning.md` (unverified terminal-fork prose) was not read as evidence, not modified, and not linked from the new article, per task scope.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md` (0 findings). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
+
+## Pass 15 — Broken Fate Line Meaning companion article: evidence gap, no article drafted (Relay PP-RELAY-048, revision 1, 2026-08-24)
+
+Scope: Relay PP-RELAY-048 (`SOURCE_SENSITIVE`), evaluating whether a
+`broken-fate-line-meaning` companion article (backlog item 19) can be
+published with independently verified named-source evidence. No article file
+was created. This entry records the evidence search so a future revision
+does not repeat it from zero.
+
+### What was checked
+
+- `src/content/blog/beginner/fate-line.md` ("Breaks and interruptions"
+  section) and `src/content/lessons/lines/05-fate-line.mdx` ("Breaks and
+  changes of direction" section) both carry Fate-Line-break prose —
+  including a plain gap/overlapping-break/resumed-line/multi-section
+  distinction, and the lesson's explicit "Cheiro describes breaks in the
+  fate line as markers of substantial change" sentence. This log's own
+  coverage table (Pass 1) shows `fate-line.md` was audited only at line 55
+  (the Cheiro absence quote) and `05-fate-line.mdx` only at lines 34 and 44
+  (the Luna-origin quotes); neither file's breaks section has ever been
+  through a source-verification pass. Per the task packet, this prose is a
+  map to candidate claims, not evidence, and was not treated as verified.
+- This log was searched in full for any prior Fate-Line-break-specific
+  finding. None exists. The only verified named-source break reading
+  anywhere in the repository is Benham's Head Line reading ("a change in
+  the continuity/stability of thought," established for PP-RELAY-043) —
+  a different line, and applying it to the Fate Line would be exactly the
+  kind of invented cross-line combination the task packet prohibits.
+  The Life Line break readings verified in Pass 1 (Cheiro "danger of
+  death," Benham illness/accident) are likewise specific to the Life Line.
+- No Director-authored evidence file exists for this task under
+  `.ai-ops/evidence/` (compare `PP-RELAY-047-cheiro-fate-line-branch.md` and
+  `PP-RELAY-046-director-life-line-curvature.md`, both of which supplied the
+  controlling primary-source boundary for their respective articles before
+  drafting began).
+- Independent primary-source verification was attempted directly:
+  `akirarabelais.com/o/thelibraryofbabel/cheiro/palmistry.html` (the exact
+  source PP-RELAY-047's evidence file cites), `classic-literature.net`, and
+  `gutenberg.org` were all fetched and all three returned
+  `EGRESS_BLOCKED` from this environment's network proxy. This reconfirms
+  Pass "Sun/Mercury source fidelity" (PP-RELAY-031)'s finding that Internet
+  Archive, chestofbooks.com, iapsop.com, Wikisource, and Project Gutenberg
+  are blocked from this Claude Code environment — the block extends to the
+  specific mirrors the Director used successfully for PP-RELAY-047. No
+  external text was retrieved, and none was used to establish any wording.
+
+### Conclusion
+
+No repository-held or independently accessible evidence establishes what a
+Fate Line break, overlapping break, resumed line, or multi-section Fate Line
+is traditionally associated with. Unlike `forked-fate-line-meaning.md`
+(Cheiro's Venus/Moon fork) and `curved-life-line-meaning.md` (Benham's
+Mount-of-Venus-territory sentence), there is no genuine named-source anchor
+— however narrow — to build a companion article around without inventing an
+interpretation or importing a different line's verified reading. Returned
+`HUMAN_REQUIRED` rather than publishing observational-only filler or
+guessing at a claim. Recommend the same pattern used for PP-RELAY-046/047:
+Director-side primary-source verification (with access this environment's
+proxy does not have) producing a bounded evidence file before redispatch,
+or a Director decision to drop/defer backlog item 19 if no such evidence
+exists.
+
+No project files changed; no validation commands were run against content
+that does not exist. `git diff --check` covers only this log entry and the
+required result artifact/bookkeeping.
