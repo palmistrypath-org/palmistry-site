@@ -1382,3 +1382,22 @@ used in the new article.
 **Reciprocal navigation:** Added one link from `life-line.md`'s existing "Explore further" list to the new article. No other wording in that file, or in `mount-of-venus.md` or the canonical Life Line/Mount of Venus lessons, was reopened — the task scope prohibits rewriting the canonical pillar/lesson prose, which still contains the unverified West/amplification language this revision declined to import into the new companion article.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/curved-life-line-meaning.md` (0 findings). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
+
+## Pass 20 — Forked Fate Line evidence search, inconclusive (Relay PP-RELAY-047, revision 1, 2026-08-24)
+
+Scope: evidence-first search for a fork-specific Fate Line interpretation, per the PP-RELAY-047 task packet, before drafting `forked-fate-line-meaning.md`.
+
+### What was checked
+
+- `docs/source-verification-log.md` (this file, full text): no prior pass verifies any claim specifically about a **forked** or **divided** Fate Line. The only forked-Fate-Line-adjacent entry (line ~426, Pass covering `head-line.md` rev. 10) concerns the "writer's fork" term on the **Head** Line, not the Fate Line.
+- `src/content/blog/beginner/fate-line-branches-meaning.md`: already contains a "Terminal fork at the top of the fate line" section and an FAQ ("Does a forked fate line at the top mean two careers?"), attributing a parallel-directions reading to Benham and combining fork-branch direction with Jupiter/Apollo/Mercury mount meanings. **This prose has never been claim-verified** — it does not appear anywhere in this log's verification passes, and the task packet explicitly rules out treating unverified legacy Fate Line article language (including Jupiter/Apollo deviations and general branch synthesis) as evidence for a fork meaning.
+- `src/content/blog/beginner/fate-line.md` and `src/content/lessons/lines/05-fate-line.mdx`: mention forks only in passing, as a forward reference to the branches article; no independent fork-specific claim.
+- No digitized excerpt of Cheiro's *Palmistry for All* (1916), Benham's *The Laws of Scientific Hand Reading* (1900), Gettings' *The Book of the Hand* (1965), West's *The Complete Illustrated Guide to Palmistry* (1998), or Fincham's 2005 work exists anywhere in this repository. `.ai-ops/evidence/` holds Director-prepared primary-source excerpts for four prior tasks (PP-RELAY-035, 036, 041, 046) but none for PP-RELAY-047.
+
+### Access blocker
+
+This session's network egress policy returned `403` on the CONNECT tunnel for every public-domain full-text host tried, via both `WebFetch` and direct `curl`: `www.gutenberg.org`, `archive.org`, `chestofbooks.com`, `www.sacred-texts.com`, `books.google.com`, `en.wikipedia.org`, `iapsop.com`. `WebSearch` (a separate, non-proxied tool) returned only snippets from SEO aggregator sites (e.g. `muhuratchoghadiya.com`) asserting a specific "Benham reads a forked-at-the-lower-end Fate Line as fortunate family/outside support" claim — but per the four-tier source policy (`docs/editorial-style-guide.md` §5) and `AGENTS.md`, such sites are discovery aids only and are never citable, and the claim could not be checked against Benham's actual text because primary-source hosts were unreachable.
+
+### Disposition
+
+No new interpretation was drafted. `forked-fate-line-meaning.md` was not created. Result: `HUMAN_REQUIRED`. What is missing: verified access to the named approved primary sources' treatment of a forked/divided Fate Line specifically — either (a) egress allowlisting for one of the primary-source hosts above for a future worker session, or (b) a Director-prepared evidence excerpt in `.ai-ops/evidence/PP-RELAY-047-*`, in the same form as the existing PP-RELAY-035/036/041/046 excerpts. Until one of those is available, the fork-specific claims already sitting in `fate-line-branches-meaning.md` also remain unverified legacy content outside this task's authorized scope to correct.

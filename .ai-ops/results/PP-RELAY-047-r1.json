@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-047",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "HUMAN_REQUIRED",
+  "summary": "No forked-Fate-Line-specific claim could be independently verified against any named approved source, so forked-fate-line-meaning.md was not created. The repository has no digitized primary-source corpus, the sibling fate-line-branches-meaning.md article's existing terminal-fork/Jupiter-Apollo-Mercury prose is unverified legacy content the task packet rules out as evidence, and this session's network egress policy returned 403 on every public-domain full-text host tried (gutenberg.org, archive.org, chestofbooks.com, sacred-texts.com, books.google.com, wikipedia.org, iapsop.com), so primary-source verification of Benham/Cheiro/Gettings/West/Fincham on a forked Fate Line could not be completed. Evidence-first requirement point 5 applies: return HUMAN_REQUIRED rather than draft a thin or unverified article.",
+  "pr_number": null,
+  "verification": [
+    "Searched docs/source-verification-log.md end to end for any prior forked/divided Fate Line verification pass — none found",
+    "Read src/content/blog/beginner/fate-line-branches-meaning.md, src/content/blog/beginner/fate-line.md, src/content/lessons/lines/05-fate-line.mdx for existing fork-related claims and their sourcing",
+    "Searched .ai-ops/evidence/ for a Director-prepared PP-RELAY-047 excerpt — none present (only PP-RELAY-035, 036, 041, 046 exist)",
+    "Attempted WebFetch + direct curl to www.gutenberg.org, archive.org, chestofbooks.com, www.sacred-texts.com, books.google.com, en.wikipedia.org, iapsop.com — all rejected with 403 at the CONNECT tunnel (organization egress policy denial, confirmed via /root/.ccr/README.md and the proxy status endpoint)",
+    "WebSearch snippets surfaced only SEO-aggregator claims (non-citable per editorial-style-guide.md §5 four-tier source policy), which could not be checked against primary text"
+  ],
+  "source_preflight": null,
+  "human_action": "Grant this Relay worker network egress access to at least one public-domain primary-source host for Benham's The Laws of Scientific Hand Reading (1900) and Cheiro's Palmistry for All (1916) — e.g. archive.org, gutenberg.org, chestofbooks.com, or sacred-texts.com — OR have the Director prepare a primary-source evidence excerpt at .ai-ops/evidence/PP-RELAY-047-*, in the same form as the existing PP-RELAY-035/036/041/046 excerpts, establishing what (if anything) the approved sources say specifically about a forked/divided Fate Line. Separately, fate-line-branches-meaning.md already carries an unverified terminal-fork claim (attributed to Benham, combined with Jupiter/Apollo/Mercury mount meanings) that was out of this task's authorized scope to correct; the Director may want to open a dedicated cleanup task for it.",
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["Grep", "Read", "WebSearch", "WebFetch", "curl"],
+    "validation": [],
+    "notes": "Startup gate used the documented clean-divergence recovery: local main had diverged from origin/main with no shared merge base (50 commits each side), so the task branch claude/relay-PP-RELAY-047-forked-fate-line-meaning was created directly from verified origin/main (97b5f7d4497e13cb3fbef9268898f5bdaae64e33) without touching local main, per AGENTS.md and .ai-ops/CLAUDE_ROUTINE_PROMPT.md. No project/article files were changed since no content was drafted; only docs/source-verification-log.md (evidence-search record) and this result artifact were added."
+  }
+}
