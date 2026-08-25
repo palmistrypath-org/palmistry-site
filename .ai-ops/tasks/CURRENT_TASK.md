@@ -5,10 +5,13 @@ Status: AUTHORIZED
 PP-RELAY-049
 
 ## Revision
-1
+2
 
 ## Risk Class
 SOURCE_SENSITIVE
+
+## Revision 1 note
+Revision 1 produced a narrow five-file cleanup, passed CI, and completed the required source preflight, but Director review found one residual source-integrity defect in `fate-line.md`'s revised `Common myths and oversimplifications` entry. The sentence says Cheiro associated a broken or piecemeal Fate Line with career troubles and lack of settled or continuous success “not with failure or ruin, and not with any fixed outcome.” The controlling evidence verifies the positive historical association only; it does not establish those negative claims about what Cheiro did not mean or predict. Revision 2 must preserve the sound revision-1 diff and correct only that sentence, directly equivalent wording in the cumulative diff, and the corresponding source-log/changelog/result bookkeeping.
 
 ## Objective
 Correct the two legacy Fate Line break passages that PP-RELAY-048 documented as exceeding the Director-verified Cheiro evidence boundary. Keep the cleanup narrow: remove unsupported smooth/planned/sharp-transition and multiple-life-chapters readings while preserving an accurate named historical account and the distinction between an absent Fate Line and a broken one.
@@ -24,7 +27,7 @@ Primary:
 Supporting only as directly necessary:
 - `docs/source-verification-log.md`
 - `docs/CHANGELOG.md`
-- `.ai-ops/results/PP-RELAY-049-r1.json`
+- `.ai-ops/results/PP-RELAY-049-r2.json`
 
 Do not rewrite either article beyond the break/fragmentation passages and directly equivalent FAQ wording. Do not modify `broken-fate-line-meaning.md` unless a concrete link defect prevents this cleanup from validating; if so, return `BLOCKED` with the exact cause rather than broadening scope silently.
 
@@ -39,6 +42,7 @@ Verified boundary:
 Keep these as Cheiro's named historical claims, not empirical facts, tradition-wide consensus, or Palmistry Path predictions.
 
 ## Required corrections
+0. Preserve revision 1's sound clean-break/overlapping-break observations, named Cheiro associations, removal of unsupported transition/multiple-chapter readings, reciprocal navigation, and bounded documentation. Do not reopen unrelated prose.
 1. In `fate-line.md`, revise the `Breaks and interruptions` subsection and its matching FAQ answer so they no longer claim or imply that:
    - any break generally means a significant vocational/purposive change;
    - an overlapping break is planned, smooth, gradual, managed, or softened;
@@ -48,6 +52,7 @@ Keep these as Cheiro's named historical claims, not empirical facts, tradition-w
 3. Where the pillar retains historical interpretation, attribute it to Cheiro by name and keep it inside the controlling evidence. The conditional good-and-straight advancement reading may be omitted; if retained, its condition must stay attached.
 4. In `no-fate-line-meaning.md`, revise the `Broken or fragmented fate line` paragraph so it no longer claims unattributed significant changes of direction, varied direction, or “multiple chapters rather than one thread.” Preserve the observational distinction from absence and direct the reader naturally to `broken-fate-line-meaning.md` for the verified treatment.
 5. Keep Palmistry Path policy visibly separate from Cheiro's historical reading. This task does not teach timing and does not predict or guarantee any event or outcome, but it must not claim that Cheiro's own historical system contained no timing, event, or outcome.
+6. In `fate-line.md`'s `Common myths and oversimplifications` entry for a broken Fate Line, remove the unsupported historical negatives “not with failure or ruin” and “not with any fixed outcome.” Do not replace them with synonyms or another claim about outcomes Cheiro did not supply. If reassurance is retained, label it strictly as Palmistry Path policy, separate from the accurate named Cheiro association.
 
 ## Prohibited claims
 - No `overlap = smooth/planned/managed/gradual/beneficial transition` rule.
@@ -59,6 +64,7 @@ Keep these as Cheiro's named historical claims, not empirical facts, tradition-w
 - No combinations with mounts, endpoints, branches, forks, depth, islands, or other lines.
 - Do not infer that source silence means a claim is false or absent across palmistry traditions.
 - Do not sanitize Cheiro's actual predictive/historical wording. Accurately attribute it, then state Palmistry Path policy separately where needed.
+- Do not characterize Cheiro's verified break reading as excluding failure, ruin, crisis, a fixed outcome, or any other outcome absent from the controlling evidence.
 
 ## Required SOURCE_SENSITIVE preflight
 Before `READY_FOR_REVIEW`:
@@ -71,6 +77,7 @@ Before `READY_FOR_REVIEW`:
 7. Verify every direct quotation verbatim; otherwise paraphrase.
 8. Confirm direct observation, Cheiro's historical interpretation, and Palmistry Path editorial policy remain distinguishable.
 9. Compare the corrected passages with `broken-fate-line-meaning.md` so the canonical article, pillar, and absence companion do not contradict one another.
+10. Search the cumulative changed prose and documentation for `not with failure|not with any fixed outcome|failure|ruin|fixed outcome`; remove or narrowly disposition every occurrence so no unsupported negative historical claim remains.
 
 ## Acceptance criteria
 1. Both documented legacy defects are removed without a broad rewrite of either article.
@@ -80,6 +87,7 @@ Before `READY_FOR_REVIEW`:
 5. No unsupported smooth/planned/sharp transition, generic career/life-change, multi-chapter, prevalence, precision, timing, danger, or outcome claim remains in the changed passages.
 6. Internal navigation to `broken-fate-line-meaning.md` is natural, accurate, and non-duplicative.
 7. Required SOURCE_SENSITIVE preflight and project validation pass.
+8. The cumulative diff makes no claim about outcomes Cheiro did not associate with a break; any non-predictive reassurance is explicitly Palmistry Path policy rather than historical source characterization.
 
 ## Validation
 Run at minimum:
@@ -93,6 +101,6 @@ Run at minimum:
 Return `HUMAN_REQUIRED` only if correcting the documented claims genuinely requires material evidence unavailable under repository policy. Return `BLOCKED` only for a technical blocker that cannot safely be repaired within this scope. Return `PAUSED_USAGE_LIMIT` immediately if a usage/credit safeguard triggers.
 
 ## Durable result contract
-Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-049-r1.json` on a pushed `claude/relay-PP-RELAY-049-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-049-r2.json` on a pushed `claude/relay-PP-RELAY-049-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
 The result must include `risk_class: "SOURCE_SENSITIVE"` and a truthful completed `source_preflight` object when content has been reviewed or changed. For `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with matching task/revision footers. Non-change terminal outcomes do not require a dummy PR. Do not merge and do not select the next task.
