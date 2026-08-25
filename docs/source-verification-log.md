@@ -1559,3 +1559,55 @@ No statement in either corrected passage goes beyond this table. The removed wor
 **Reciprocal navigation:** Unchanged from revision 1. `fate-line.md`'s existing link to `broken-fate-line-meaning.md` (added in Pass 15) is preserved unchanged. `no-fate-line-meaning.md`'s "Broken or fragmented fate line" paragraph links to `broken-fate-line-meaning.md`, which it did not link to before revision 1; no other paragraph in that article links there, so this is not duplicative.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/fate-line.md src/content/blog/beginner/no-fate-line-meaning.md` (20 pre-existing, out-of-scope findings; see above). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
+
+## Pass 17 — Intuition Line Meaning in Palmistry, new article within a Director-verified Cheiro/Benham evidence boundary (Relay PP-RELAY-050, revision 1, 2026-08-25)
+
+Added `src/content/blog/beginner/intuition-line-palmistry.md`, item 20 from `docs/editorial-backlog.md`'s Next 25 list. The backlog's original notes proposed naming the feature "Line of Clairvoyance" using Gettings/Fincham source planning; Director preflight found that naming note unusable under the repository's evidence policy and instead authorized a narrower article bounded entirely by public-domain Cheiro and Benham evidence recorded in `.ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md`.
+
+### Controlling evidence boundary
+
+- Cheiro and Benham both name the feature **Line of Intuition**.
+- Both describe a curved or near-semicircular line on the outer/percussion side between the Luna and Mercury regions, with slightly different directional wording (Cheiro: face of Mercury to Luna, or confined to Luna; Benham: rising on Luna, curving across the Plain of Mars, ending on/near Mercury).
+- Both distinguish it from the Mercury/Health line (Hepatica); Cheiro notes the markings can run through or alongside one another while remaining distinct; Benham's distinguishing test is shape (Mercury line straighter, Intuition line curved).
+- Cheiro historically associates the line with sensitivity to impressions/surroundings, presentiments, vivid dreams, inspiration, and intuitive expression.
+- Benham historically associates a well-marked line with intuitive impressions and sensitivity in estimating people, and states a deep-versus-broken degree reading specific to this line.
+- The evidence does **not** establish "Line of Clairvoyance," "Psychic Line," or any equivalent phrase as a verified alternate historical name.
+
+### Claim-level evidence map
+
+| Article statement | Evidence basis |
+|---|---|
+| Feature named the Line of Intuition | Verified evidence boundary, item 1 |
+| Location: curved/near-semicircular path, outer/percussion side, between Mount of Mercury and Mount of Luna, with Cheiro's and Benham's differing directional wording both stated | Verified evidence boundary, item 2 |
+| Distinction from the Mercury/Health line: Benham's straighter-vs-curved test; Cheiro's markings can run through/alongside one another while remaining distinct | Verified evidence boundary, item 3 |
+| Cheiro's historical associations (sensitivity to impressions/surroundings, presentiments, vivid dreams, inspiration, intuitive expression in speech/writing) | Verified evidence boundary, item 4, attributed to Cheiro by name |
+| Benham's historical associations (intuitive impressions, sensitivity in estimating other people) and his named deep-versus-broken degree statement | Verified evidence boundary, item 5, attributed to Benham by name |
+| FAQ: "Line of Clairvoyance" is not a verified alternate name in the sources checked; other unreviewed palmistry writing may use it differently | Evidence file's "Important source disagreement / naming limit" section; the qualifier avoids inferring the phrase is false or absent across all traditions |
+| "Palmistry Path's approach to this line": historical interpretation vs. site policy, no validation of psychic/clairvoyant ability, no accuracy claim for any impression | Palmistry Path editorial policy per `AGENTS.md`, stated separately from and following the named historical claims, not attributed to Cheiro or Benham |
+| Myths/FAQ: presence does not prove psychic ability; absence not addressed by either author so not interpreted; an impression is not claimed accurate/reliable because the line is present; the Intuition and Mercury lines are distinct markings | Direct negations bounded by "What this evidence does not support" in the evidence file; no new claim introduced |
+
+No statement in the article goes beyond this table. No cross-tradition, Gettings, Fincham, West, prevalence/percentage, medical, or combination-with-other-features claim was introduced.
+
+### Preflight disposition
+
+1. **Prevalence/consensus language.** `npm run audit:claim-risk -- src/content/blog/beginner/intuition-line-palmistry.md` initially returned 4 findings: three `PREVALENCE_OR_CONSENSUS` matches ("most" ×2, "generally") and one `SCIENTIFIC_OR_HISTORICAL_OVERSTATEMENT` match ("proves"). The three prevalence matches were reworded away entirely (none were grounded prevalence claims — one was a superlative about which line is easiest to confuse, one was "more generally" inside a scope-limiting negation, one was an unsupported claim about how often readers make a specific mix-up) rather than argued around. The remaining "proves" match is the quoted myth heading `**"A Line of Intuition proves you're psychic."**`, immediately corrected in the same entry — the same pattern already published in `forked-head-line-meaning.md` and other myth sections; left in place. Re-run: 1 finding (the myth heading only).
+2. **Scientific/historical assertions.** Every historical claim traces to the claim-level evidence map above and is attributed to Cheiro or Benham by name; no chronology, study, or scientific claim appears.
+3. **No invented combination readings.** The only cross-feature statement is the authorized Mercury-line distinction (location and shape only); no mount, other major/minor line, hand/finger shape, star, cross, island, branch, fork, or endpoint combination appears.
+4. **No vague anonymous authority.** Searched for `Gettings|Fincham|West|Indian|Chinese|modern palmists|contemporary practitioners|some writers|experts` — zero matches in the new article.
+5. **Claim-type separation.** "Where to find it" (observation), "What it's traditionally associated with" (Cheiro's paragraph, then Benham's paragraph, each named), and "Palmistry Path's approach to this line" (site policy) are distinct sections; the myths and FAQ keep the same separation.
+6. **Quotation fidelity.** No quotation marks are used against Cheiro's or Benham's wording anywhere in the article; both authors' readings are paraphrased throughout, so no verbatim verification was required.
+7. **Safety boundaries.** No medical, legal, financial, deterministic relationship, danger, or predictive-science claim appears; the psychic/clairvoyant-proof and impression-accuracy claims are explicitly declined.
+
+**Restricted-term search (preflight item 4):** `clairvoyance|clairvoyant|psychic|medium|supernatural|prophetic|empath|rare|seldom|most|many|often|commonly|typically|generally|usually|accurate|reliable|predict` against the article returns matches limited to: the opening and FAQ's declined "Line of Clairvoyance" synonym question (required by the task packet); negated psychic/clairvoyant/supernatural/mediumistic-ability and impression-accuracy/reliability statements; and two regex substring false positives (`unusually` contains "usually"; `mediumistic` contains "medium") that are not prevalence or alias claims. No unqualified alias, prevalence, proof, or prediction claim remains.
+
+**Unsupported-attribution search (preflight item 5):** `Gettings|Fincham|West|Indian|Chinese|modern palmists|contemporary practitioners|some writers|experts` — zero matches.
+
+**Combination-reading search (preflight item 6):** No mount, other line, hand/finger shape, star, cross, island, branch, fork, or endpoint combination appears; the only cross-feature material is the authorized Mercury-line location/shape distinction.
+
+**Consistency check (preflight item 9):** Compared against `minor-lines-overview.md` (does not currently name the Intuition Line as one of its four covered minor lines; no contradiction, and no reciprocal link was forced there — see Reciprocal navigation below), `mount-of-luna.md` (describes the mount's general imaginative/intuitive territory but not this specific named line; no contradiction), `mercury-line.md` (describes a diagonal line toward Mercury, consistent with the new article's straighter-vs-curved distinction; no contradiction), and `m-line-palmistry.md` (its existing "small curved line on the percussion side of the hand" description of the intuition line matches the new article's location description exactly; no contradiction).
+
+**Source-note check (preflight item 10):** The article's source note lists only Cheiro (*Palmistry for All*, 1916; *Cheiro's Language of the Hand*) and Benham (*The Laws of Scientific Hand Reading*, 1900) — the two sources actually used. The backlog's original unverified Gettings/Fincham naming note is not presented as evidence anywhere in the article, and the backlog entry itself has been corrected to remove that note (see `docs/editorial-backlog.md` item 20).
+
+**Reciprocal navigation:** Added one reciprocal link in `m-line-palmistry.md`'s existing "The M signals strong intuition" myth entry, turning its existing unlinked mention of "the intuition line" into a link to the new article — a minimal edit to already-present text, not a rewrite. No reciprocal link was added into `minor-lines-overview.md` (it does not currently name the Intuition Line as one of its four covered minor lines; adding one would mean introducing a fifth minor-line section, a broader rewrite outside this task's scope) or `mount-of-luna.md` (it discusses the mount's general intuitive quality but does not name this specific line, and inserting a new named-line reference there risked implying the mount's broad intuitive association is the same thing as the specific Line of Intuition feature, which the evidence does not establish). The new article links out once each to the Mercury line, Mount of Luna, and the minor lines overview.
+
+**Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/intuition-line-palmistry.md` (1 finding, the disclosed myth-heading pattern above). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
