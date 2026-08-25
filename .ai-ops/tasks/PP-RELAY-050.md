@@ -5,7 +5,7 @@ Status: AUTHORIZED
 PP-RELAY-050
 
 ## Revision
-2
+3
 
 ## Risk Class
 SOURCE_SENSITIVE
@@ -21,6 +21,17 @@ Revision 1 produced a useful six-file article package on PR #91, completed the r
 5. Correct `What comes next`: remove the unsupported vague attribution `other classical writers`; do not say `minor-lines-overview.md` covers this specific line, because it currently covers four other named minor lines and does not name the Line of Intuition. The link may be omitted or described accurately as general context for how selected minor lines fit alongside the major lines and mounts. Keep the Mount of Luna link only with a claim supported by the approved Cheiro/Benham boundary.
 6. Update Pass 17 in `docs/source-verification-log.md`, the PP-RELAY-050 changelog entry, and the revision-2 result artifact so none repeats the rejected claims or asserts that revision 1 passed the final Director source review.
 7. Do not broaden the article, add sources, modify the controlling evidence file, or reopen unrelated legacy prose. Preserve revision 1's valid frontmatter, 900–1,200-word target, article structure, one reciprocal link, backlog count/status, and all other verified wording.
+
+## Revision 2 review
+Revision 2 produced PR #92, preserved the sound revision-1 package, corrected the four authorized revision-2 findings, and passed CI plus independent Director reruns of the claim-risk scan, 117-page build, content audit (72 blog posts / 25 lessons), full audit suite, and `git diff --check`. Director review found three residual source-boundary defects in otherwise sound prose. Revision 3 must preserve every valid revision-2 correction and change only the passages below plus directly equivalent source-log/changelog/result bookkeeping.
+
+## Revision 3 corrections
+1. In Benham's historical-association paragraph, replace `reading character and situations through impression rather than deliberate analysis` with wording bounded exactly to the approved evidence: Benham associates the line with intuitive impressions and sensitivity in estimating other people. Do not add `situations`, a cognitive mechanism, or a contrast with deliberate analysis.
+2. In the same paragraph, remove `a claim about degree that Cheiro doesn't` and any equivalent assertion that Cheiro omitted, rejected, or did not make a degree claim. State only that Benham also gives the approved deep-versus-broken degree reading; do not infer from Cheiro source silence.
+3. In the psychic-power myth, remove `a named historical interpretation, not a claim about paranormal ability` and any equivalent negative characterization of what Cheiro's or Benham's historical reading was not. Keep their approved sensitive/impressionable association as the historical statement, then keep Palmistry Path's separately labeled policy that the site does not treat a palm marking as evidence of psychic, clairvoyant, or paranormal power.
+4. In the Mercury-line look-alike myth, remove `Mistaking one for the other is an easy error` and any equivalent ease, likelihood, frequency, or prevalence claim. Retain only the supported facts that the markings occupy nearby territory, can run alongside one another per Cheiro, remain distinct, and can be distinguished observationally by the approved shape test.
+5. Update Pass 17 in `docs/source-verification-log.md`, the PP-RELAY-050 changelog entry, and the revision-3 result artifact so they record this residual revision-2 correction accurately and do not repeat any rejected claim as approved prose.
+6. Do not change the controlling evidence file, frontmatter, article structure, other article passages, navigation, reciprocal link, backlog count/status, or unrelated legacy prose.
 
 ## Objective
 Produce the approved Next 25 article **Intuition Line Meaning in Palmistry** at `src/content/blog/beginner/intuition-line-palmistry.md` as a focused, beginner-readable treatment bounded entirely by the Director-verified Cheiro and Benham evidence. Do not turn historical claims about impressions or clairvoyance into empirical facts, predictions, or proof of psychic ability.
@@ -38,7 +49,7 @@ Supporting only as directly necessary:
 - `docs/source-verification-log.md`
 - `docs/CHANGELOG.md`
 - `docs/CURRENT_STATE.md` only for the minimum article-count/current-state reconciliation required by `AGENTS.md`
-- `.ai-ops/results/PP-RELAY-050-r2.json`
+- `.ai-ops/results/PP-RELAY-050-r3.json`
 
 Do not modify `.ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md`, the task packet, lessons, site code, routing, schemas, or unrelated article prose. If a natural reciprocal link would require a broader rewrite, omit it and document the decision.
 
@@ -94,6 +105,7 @@ Before `READY_FOR_REVIEW`:
 9. Compare the final article with `minor-lines-overview.md`, `mount-of-luna.md`, `mercury-line.md`, and `m-line-palmistry.md` for contradiction and cannibalization; do not silently fix unrelated legacy claims.
 10. Verify the article does not present the backlog's unverified copyright-era source note as evidence and does not list any source it did not actually use.
 11. Search the cumulative article and documentation for `writing decades apart|easiest to confuse|Neither Cheiro nor Benham|Nothing in either author's account|other classical writers|covers how this line|line of clairvoyance`; remove or narrowly disposition every occurrence against the revision-2 corrections above. The unverified alias may remain in the article only in the permitted FAQ and may remain in task-history documentation solely to explain the correction.
+12. Search the cumulative article and documentation for `situations through impression|rather than deliberate analysis|Cheiro doesn't|not a claim about paranormal ability|easy error`; none may remain in the article, and documentation may retain them only as past-tense task history explaining their removal.
 
 ## Acceptance criteria
 1. A useful 900–1,200 word beginner article exists at the authorized slug with valid frontmatter and no predictive/psychic promise.
@@ -106,6 +118,7 @@ Before `READY_FOR_REVIEW`:
 8. Backlog/article-count bookkeeping and source verification are accurate and bounded.
 9. Required SOURCE_SENSITIVE preflight and project validation pass.
 10. The cumulative diff neither sanitizes Cheiro/Benham by attributing modern evidentiary restraint to them nor misdescribes the content of linked existing articles.
+11. Benham's paragraph contains only the approved intuitive-impressions/estimating-people association and his own bounded degree statement; the myths contain no unsupported source-silence or confusion-likelihood claim.
 
 ## Validation
 Run at minimum:
@@ -119,6 +132,6 @@ Run at minimum:
 Return `HUMAN_REQUIRED` only if a useful article still genuinely requires material evidence unavailable under repository policy after using the Director evidence file. Return `BLOCKED` only for a technical blocker that cannot safely be repaired within scope. Return `PAUSED_USAGE_LIMIT` immediately if a usage/credit safeguard triggers.
 
 ## Durable result contract
-Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-050-r2.json` on a pushed `claude/relay-PP-RELAY-050-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-050-r3.json` on a pushed `claude/relay-PP-RELAY-050-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
 The result must include `risk_class: "SOURCE_SENSITIVE"` and a truthful completed `source_preflight` object when content has been drafted/reviewed. For `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with matching task/revision footers. Non-change terminal outcomes do not require a dummy PR. Do not merge and do not select the next task.
