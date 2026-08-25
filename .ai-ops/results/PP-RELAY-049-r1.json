@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-049",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Corrected the two legacy Fate Line break/fragmentation defects that PP-RELAY-048 revision 3 documented as outside its own scope. In src/content/blog/beginner/fate-line.md, rewrote the 'Breaks and interruptions' subsection, its matching FAQ answer, and its 'Common myths' entry so they no longer claim a generic break = career/life-change, an overlapping break = planned/smoother transition, a clean break = sharper shift, or use unattributed 'classical texts'/'contemporary practice' framing. The corrected prose attributes the retained historical readings to Cheiro by name, staying within .ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md, preserves the clean-break/overlapping-break observational distinction (now matching broken-fate-line-meaning.md's vocabulary), and keeps a separately labeled Palmistry Path no-fixed-outcome policy statement. In src/content/blog/beginner/no-fate-line-meaning.md, rewrote the 'Broken or fragmented fate line' paragraph to remove the unattributed 'significant changes of direction' and 'multiple chapters rather than one thread' claims, keeping only the observational distinction from absence and adding a link to broken-fate-line-meaning.md for the verified treatment. broken-fate-line-meaning.md itself was not modified.",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/fate-line.md src/content/blog/beginner/no-fate-line-meaning.md (20 findings, all pre-existing PREVALENCE_OR_CONSENSUS matches outside the corrected break/fragmentation passages)",
+    "npm run build (116 pages, clean)",
+    "npm run content-audit (71 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)",
+    "Manual grep of the diff's added lines for prohibited transition/anonymous-authority/combination wording",
+    "Manual comparison of the corrected passages against broken-fate-line-meaning.md's established clean-break/overlapping-break vocabulary and claim-level evidence map"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full claim-level evidence map and preflight disposition recorded in docs/source-verification-log.md ('Pass 16 — Fate Line pillar and absence companion: legacy break/fragmentation cleanup'). All 20 claim-risk scanner findings are pre-existing PREVALENCE_OR_CONSENSUS matches (e.g. fate line starting positions, cross-tradition framing) located outside the three corrected passages in fate-line.md and the one corrected paragraph in no-fate-line-meaning.md; none overlap the changed lines. No retained or introduced claim in the corrected passages exceeds .ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read/Edit on article and docs files",
+      "npm run audit:claim-risk",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check",
+      "GitHub MCP search_pull_requests for startup-gate duplicate-PR check"
+    ],
+    "validation": [
+      "audit:claim-risk",
+      "build",
+      "content-audit",
+      "audit:all",
+      "git diff --check"
+    ],
+    "notes": "Local checkout's main had diverged from origin/main with no merge base at startup. Followed the documented clean-divergence recovery: verified origin remote identity and that origin/main's tip (f6be4324ff47be294058c928ecb9924bc416f157) matched state.json's dispatch commit, left local main untouched, and branched claude/relay-PP-RELAY-049-fate-line-break-cleanup directly from origin/main. `npm install` was required before build/audit scripts would run (node_modules was absent in this checkout); the resulting incidental package-lock.json diff was reverted before committing since it was not part of the authorized scope."
+  }
+}

@@ -60,9 +60,9 @@ The worry that attaches to an absent or faint fate line — a concern that it in
 
 ### Breaks and interruptions
 
-A break in the fate line — a gap where the line stops and restarts — is traditionally associated with a significant change in direction: a point where the vocational or purposive course alters substantially.
+A break in the fate line can take more than one form. In a **clean break**, the line stops and picks up again further along, with a plain gap along its course. In an **overlapping break**, a new segment begins before the earlier one ends, so the two run side by side briefly before the first stops.
 
-The distinction between break types is worth preserving here. An **overlapping break**, where the new section begins before the old ends and creates a brief parallel, is associated with a planned or smoother transition — one phase beginning before the previous fully closes. A **clean break**, without overlap, suggests a sharper shift: a change that arrives without the softening of gradual overlap. Neither reading implies crisis. Both describe change in the line of direction. For the specific, narrowly verified evidence behind an overlapping break, see [broken fate line meaning](/blog/beginner/broken-fate-line-meaning/).
+Cheiro historically associated a fate line broken or made up of small pieces with troubles or breaks in the career and a lack of settled or continuous success. For the overlapping form specifically, his historical reading was narrower: a complete change in surroundings and position, with an added reading of advancement in position where the new segment is itself good and straight. These are Cheiro's own named historical readings rather than a claim that every break carries the same meaning, or that one form is inherently smoother or sharper than the other. For the full verified evidence and how the two forms are distinguished, see [broken fate line meaning](/blog/beginner/broken-fate-line-meaning/).
 
 ### Double fate line
 
@@ -83,7 +83,7 @@ The tradition does not treat it as a deficiency. An absent fate line has been as
 No. The fate line's territory is broader than employment: vocation, direction, and purposeful effort. A strong fate line on someone without a conventional career may reflect sustained creative, personal, or relational direction. It is not a career forecast.
 
 **What does a broken fate line mean?**
-A break indicates a significant change in direction — a transition marker, not a sign of failure. An overlapping break suggests a smoother shift; a clean break, a sharper one.
+Cheiro historically associated a broken or piecemeal fate line with troubles or breaks in the career and a lack of settled or continuous success. For an overlapping break specifically — where a new segment begins before the earlier one ends — his historical reading was narrower: a complete change in surroundings and position. Palmistry Path doesn't treat either form as predicting a fixed outcome; see [broken fate line meaning](/blog/beginner/broken-fate-line-meaning/) for the full verified evidence.
 
 **What does a late-starting fate line mean?**
 Direction that crystallises later in life. The classical writers did not treat a late start as wasted years — it simply describes a path that takes time to establish.
@@ -94,7 +94,7 @@ Direction that crystallises later in life. The classical writers did not treat a
 
 **"The fate line tells you your career."** The fate line's associations are broader than employment. Vocation, purpose, and directed effort are its territory. A strong fate line on someone who does not think of themselves as having a traditional career may reflect sustained creative, relational, or personal direction. The Chinese "career line" framing is the most narrowly occupational; the Western and Indian framings are wider.
 
-**"A broken fate line means a failed life."** Breaks indicate change and transition. The classical texts associate them with significant turning points where the course alters — not with failure or ruin. The language of ruin comes from Cheiro's more extreme formulations; contemporary practice reads these as transition markers.
+**"A broken fate line means a failed life."** Cheiro historically associated a broken or piecemeal fate line with career troubles and a lack of settled or continuous success — not with failure or ruin, and not with any fixed outcome. For an overlapping break specifically, his historical reading was narrower still: a complete change in surroundings and position, not a verdict on the life as a whole.
 
 **"A late-starting fate line means wasted early years."** Direction that crystallises later is no less genuine for arriving late. The classical writers did not treat late starts as deficiencies.
 
