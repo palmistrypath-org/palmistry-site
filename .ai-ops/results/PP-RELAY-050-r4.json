@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-050",
+  "revision": 4,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 1 (PR #91, closed without merging) added src/content/blog/beginner/intuition-line-palmistry.md, item 20 (the last Next 25 item) from docs/editorial-backlog.md, bounded by the Director-verified Cheiro/Benham evidence in .ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md, but Director review found four bounded source-integrity/correctness defects. Revision 2 (PR #92, closed without merging) corrected those four defects and passed CI plus independent Director revalidation, but Director review found three residual source-boundary defects. Revision 3 (PR #93, closed without merging) corrected those three defects and passed CI plus independent Director revalidation, but Director cumulative review found one remaining Benham source-integrity contradiction and two directly equivalent summary phrases. Revision 4 preserves every valid revision-3 correction and corrects only three locations: (1) the hunch-accuracy myth no longer claims Cheiro's and Benham's historical associations are 'not with the accuracy of any specific dream, warning, or hunch' - the controlling evidence explicitly warns that Benham's period accuracy claims must not become Palmistry Path guidance, so the entry now states only the approved historical association (a sensitive, impressionable temperament and intuitive impressions), followed separately by Palmistry Path's own policy that it does not use the line to validate or guarantee that an impression, hunch, dream, or warning is accurate or reliable; (2) the meta description no longer says the article covers 'what their historical readings do and don't claim', replaced with a plain 148-character description naming location, the Mercury-line distinction, and the named historical associations; (3) the introduction's parallel 'do and don't claim' wording is replaced with neutral wording that the article covers the two authors' named historical associations and how Palmistry Path separates those associations from its own editorial policy. Updated docs/source-verification-log.md Pass 17 and the PP-RELAY-050 changelog entry so neither repeats the rejected negative historical characterization as approved prose or asserts that an earlier revision passed final Director source review. docs/editorial-backlog.md count/status, the reciprocal link in m-line-palmistry.md, frontmatter, article structure, and every other article sentence are unchanged from revision 3.",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/intuition-line-palmistry.md (1 finding: the disclosed myth-heading 'proves' pattern, unchanged from revision 3, left in place per the established myth-heading pattern used elsewhere on the site)",
+    "npm run build (117 pages, clean)",
+    "npm run content-audit (72 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)",
+    "Manual restricted-term regex search (clairvoyance|clairvoyant|psychic|medium|supernatural|prophetic|empath|rare|seldom|most|many|often|commonly|typically|generally|usually|accurate|reliable|predict) with per-occurrence disposition",
+    "Manual regex search for unsupported attributions (Gettings|Fincham|West|Indian|Chinese|modern palmists|contemporary practitioners|some writers|experts) - zero matches",
+    "Manual regex search for revision-2-rejected phrasing (writing decades apart|easiest to confuse|Neither Cheiro nor Benham|Nothing in either author's account|other classical writers|covers how this line|line of clairvoyance) - only the single permitted FAQ mention remains",
+    "Manual regex search for revision-3-rejected phrasing (situations through impression|rather than deliberate analysis|Cheiro doesn't|not a claim about paranormal ability|easy error) - zero occurrences",
+    "Manual regex search for revision-4-rejected phrasing (not with the accuracy|readings do and don't claim) - zero occurrences in the article; retained only as past-tense task history in docs",
+    "Manual character-count check of the revised meta description - 148 characters, inside the required 140-160 range",
+    "Manual comparison against minor-lines-overview.md, mount-of-luna.md, mercury-line.md, and m-line-palmistry.md for contradiction - none found; unchanged from revision 3",
+    "GitHub MCP list_pull_requests for startup-gate duplicate-PR/branch check"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full claim-level evidence map and preflight disposition, including the revision-1-to-2, revision-2-to-3, and revision-3-to-4 corrections, recorded in docs/source-verification-log.md ('Pass 17 - Intuition Line Meaning in Palmistry, revision 4'). No statement in the article exceeds .ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md. No quotation marks are used against Cheiro's or Benham's wording anywhere in the article (both paraphrased throughout), so no verbatim quotation check was required."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read/Edit/Write on article and docs files",
+      "npm run audit:claim-risk",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check",
+      "GitHub MCP list_pull_requests for startup-gate duplicate-PR/branch check"
+    ],
+    "validation": [
+      "audit:claim-risk",
+      "build",
+      "content-audit",
+      "audit:all",
+      "git diff --check"
+    ],
+    "notes": "Local checkout's main had diverged from origin/main with no clean fast-forward at startup. Followed the documented clean-divergence recovery: verified origin remote identity and left local main untouched, branching claude/relay-PP-RELAY-050-intuition-line-r4 directly from verified origin/main (tip 2c0c3fa7a12e3fdd7fc9c2cbf0ec57408b830e21, matching state.json's dispatch commit and the routine dispatch payload's stale/duplicate-detection hint). Neither revision 1's branch/PR (#91), revision 2's branch/PR (#92), nor revision 3's branch/PR (#93) was merged to main, so the article and its supporting doc changes did not yet exist on main; this revision-4 branch was built by taking revision 3's file content from origin/claude/relay-PP-RELAY-050-intuition-line-r3 as the base and applying only the three authorized revision-4 corrections plus bookkeeping."
+  }
+}

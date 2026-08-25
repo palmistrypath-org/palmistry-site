@@ -1559,3 +1559,227 @@ No statement in either corrected passage goes beyond this table. The removed wor
 **Reciprocal navigation:** Unchanged from revision 1. `fate-line.md`'s existing link to `broken-fate-line-meaning.md` (added in Pass 15) is preserved unchanged. `no-fate-line-meaning.md`'s "Broken or fragmented fate line" paragraph links to `broken-fate-line-meaning.md`, which it did not link to before revision 1; no other paragraph in that article links there, so this is not duplicative.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/fate-line.md src/content/blog/beginner/no-fate-line-meaning.md` (20 pre-existing, out-of-scope findings; see above). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
+
+## Pass 17 — Intuition Line Meaning in Palmistry, revision 4: hunch-accuracy myth and "do and don't claim" wording corrections — `blog/beginner/intuition-line-palmistry.md` (Relay PP-RELAY-050, revision 4, 2026-08-25)
+
+Scope: Relay PP-RELAY-050 revision 4 (`SOURCE_SENSITIVE`), publishing
+`src/content/blog/beginner/intuition-line-palmistry.md`. Revision 1 (PR #91,
+closed without merging) built a six-file package bounded by
+`.ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md`, but Director
+review found four bounded source-integrity/correctness defects. Revision 2
+(PR #92, closed without merging) corrected those four defects — removing the
+unqualified "line of clairvoyance" mention outside the FAQ, removing the
+unsupported "writing decades apart" chronology, replacing the "easiest to
+confuse" superlative with neutral "A nearby look-alike is" wording, and
+separating the myths/FAQ historical association from Palmistry Path's own
+policy statement instead of characterizing Cheiro or Benham as denying
+psychic/clairvoyant claims — and passed CI plus independent Director reruns
+of the claim-risk scan, build, content audit, full audit suite, and
+`git diff --check`. Director review of revision 2 found three residual
+source-boundary defects in Benham's historical-association paragraph and two
+of the "Common myths" entries. Revision 3 (PR #93, closed without merging)
+corrected those three defects — bounding Benham's paragraph to the approved
+intuitive-impressions/estimating-people association, removing the unsupported
+"a claim about degree that Cheiro doesn't" inference from source silence, and
+removing the psychic-power myth's "not a claim about paranormal ability"
+negative characterization and the Mercury-line myth's "easy error" likelihood
+claim — and passed CI plus independent Director reruns of the claim-risk
+scan, build, content audit, full audit suite, and `git diff --check`.
+Director cumulative review of revision 3 found one remaining Benham
+source-integrity contradiction and two directly equivalent summary phrases.
+Revision 3 was never merged, so revision 4 was drafted directly from
+revision 3's file content, correcting only the three flagged locations below
+plus this log/changelog/result bookkeeping, and preserving revision 3's
+sound structure, evidence map, navigation, and bookkeeping approach
+otherwise unchanged.
+
+### What changed from revision 3
+
+| Revision 3 statement | Problem | Revision 4 disposition |
+|---|---|---|
+| "Cheiro's and Benham's historical associations are with a sensitive or impressionable temperament, not with the accuracy of any specific dream, warning, or hunch." (hunch-accuracy myth) | Negatively characterized what Cheiro's and Benham's historical accounts did not associate with accuracy — an inference the controlling evidence does not support; the evidence explicitly warns that Benham made period accuracy claims that must not become Palmistry Path guidance, so the article cannot assert the authors' historical readings were unconcerned with accuracy. | Rewritten to state only the approved historical association (a sensitive, impressionable temperament and intuitive impressions), followed by Palmistry Path's own, separately stated policy that it does not use the line to validate or guarantee that an impression, hunch, dream, or warning is accurate or reliable — no claim about what the authors' historical reading was or wasn't about. |
+| "...what their historical readings do and don't claim." (meta description) | Broad, unbounded claim about what the authors' historical readings did not assert — the same negative-characterization pattern flagged in the hunch myth, repeated in the page's own metadata. | Replaced with a plain 148-character description naming the location, the Mercury-line distinction, and the named historical associations, with no claim about what the authors did or didn't claim. |
+| "...what their historical readings do and don't claim." (introduction, parallel to the description) | Same negative-characterization pattern repeated in the article's opening paragraph. | Replaced with neutral wording: the article covers the two authors' named historical associations and how Palmistry Path separates those associations from its own editorial policy — no claim about the historical readings' scope or omissions. |
+
+No other article passage, the frontmatter, the article structure, navigation,
+the reciprocal link, or backlog count/status changed from revision 3.
+
+### What changed from revision 2
+
+| Revision 2 statement | Problem | Revision 3 disposition |
+|---|---|---|
+| "...with sensitivity in estimating other people — reading character and situations through impression rather than deliberate analysis." | Added "situations," an implied cognitive mechanism ("through impression"), and a contrast with "deliberate analysis" that the controlling evidence does not establish — Benham's approved association is intuitive impressions and sensitivity in estimating people, not a description of how that estimation cognitively works or what it excludes. | Removed the added clause. The sentence now stops at the approved association: intuitive impressions and sensitivity in estimating other people. |
+| "Benham also makes a claim about degree that Cheiro doesn't..." | Asserted that Cheiro omitted or declined a degree claim — an inference from Cheiro's source silence that the controlling evidence does not support (the evidence records what Cheiro's texts say, not an exhaustive account of what they don't). | Rewritten to "Benham also gives a deep-versus-broken degree reading specific to this line," stating only Benham's own approved historical scale without any comparison to what Cheiro did or didn't claim. |
+| "...a named historical interpretation, not a claim about paranormal ability." (psychic-power myth) | Negatively characterized what Cheiro's and Benham's historical reading *was not* — an editorializing gloss on the authors' own intent that the controlling evidence does not establish; the evidence supports only their positive historical association, not a claim about what they meant to exclude. | Removed. The entry now states the approved sensitive/impressionable association plainly, followed immediately by Palmistry Path's own separately stated policy that the site does not treat the marking as evidence of psychic or clairvoyant power — no claim about the authors' intent. |
+| "Mistaking one for the other is an easy error, exactly because Cheiro says the two can run together on the same hand." (Mercury-line look-alike myth) | Unsupported ease/likelihood claim — the evidence establishes that the markings can run alongside one another and remain distinct, not that confusing them is easy, common, or likely. | Removed. The entry now closes by restating the approved facts only: the markings sit in the same territory, can run alongside one another per Cheiro, remain distinct, and are told apart by Benham's shape test (Mercury line straighter, Intuition line curved). |
+
+No other article passage, the frontmatter, the article structure, navigation,
+the reciprocal link, or backlog count/status changed from revision 2.
+
+### Controlling evidence boundary
+
+- Cheiro and Benham both name the feature **Line of Intuition**.
+- Both describe a curved or near-semicircular line on the outer/percussion
+  side between the Luna and Mercury regions, with slightly different
+  directional wording (Cheiro: face of Mercury to Luna, or confined to Luna;
+  Benham: rising on Luna, curving across the Plain of Mars, ending on/near
+  Mercury).
+- Both distinguish it from the Mercury/Health line (Hepatica); Cheiro notes
+  the markings can run through or alongside one another while remaining
+  distinct; Benham's distinguishing test is shape (Mercury line straighter,
+  Intuition line curved).
+- Cheiro historically associates the line with sensitivity to
+  impressions/surroundings, presentiments, vivid dreams, inspiration, and
+  intuitive expression.
+- Benham historically associates a well-marked line with intuitive
+  impressions and sensitivity in estimating people, and states a
+  deep-versus-broken degree reading specific to this line.
+- The evidence does **not** establish "Line of Clairvoyance," "Psychic
+  Line," or any equivalent phrase as a verified alternate historical name.
+
+### Claim-level evidence map
+
+| Article statement | Evidence basis |
+|---|---|
+| Feature named the Line of Intuition | Controlling evidence boundary, item 1 |
+| Location: curved/near-semicircular path, outer/percussion side, between Mount of Mercury and Mount of Luna, with Cheiro's and Benham's differing directional wording both stated | Controlling evidence boundary, item 2 |
+| Distinction from the Mercury/Health line: Benham's straighter-vs-curved test; Cheiro's markings can run through/alongside one another while remaining distinct | Controlling evidence boundary, item 3 |
+| Cheiro's historical associations (sensitivity to impressions/surroundings, presentiments, vivid dreams, inspiration, intuitive expression in speech/writing) | Controlling evidence boundary, item 4, attributed to Cheiro by name |
+| Benham's historical associations (intuitive impressions, sensitivity in estimating other people) and his named deep-versus-broken degree statement, stated as his own claim with no comparison to Cheiro | Controlling evidence boundary, item 5, attributed to Benham by name; revision-3 correction removed the added "situations"/cognitive-mechanism wording and the "that Cheiro doesn't" comparison |
+| FAQ: "Line of Clairvoyance" is not a verified alternate name in the sources checked; other unreviewed palmistry writing may use it differently | Evidence file's "Important source disagreement / naming limit" section; the single permitted body location for this phrase |
+| "Palmistry Path's approach to this line" and the corrected myths/FAQ entries: historical interpretation vs. site policy, no validation of psychic/clairvoyant ability, no accuracy claim for any impression, stated separately from and without characterizing what Cheiro or Benham's reading was or wasn't | Palmistry Path editorial policy per `AGENTS.md`, stated as this site's own position; revision-3 correction removed the "not a claim about paranormal ability" negative characterization of the authors' intent; revision-4 correction removed the hunch-accuracy myth's "not with the accuracy of any specific dream, warning, or hunch" negative characterization, keeping only the approved historical association plus the separately stated policy |
+| Introduction and meta description: the article covers the two authors' named historical associations and how Palmistry Path separates those associations from its own editorial policy | Palmistry Path editorial policy per `AGENTS.md`; revision-4 correction removed both instances of the unbounded "what their historical readings do and don't claim" wording, which asserted a scope for the authors' historical readings the evidence does not establish |
+| Mercury-line look-alike myth: markings occupy nearby territory, can run alongside one another per Cheiro, remain distinct, distinguished by Benham's shape test — no claim about ease or likelihood of confusing them | Controlling evidence boundary, item 3; revision-3 correction removed the unsupported "easy error" claim |
+| Myths/FAQ: absence not addressed by either author so not interpreted; the Intuition and Mercury lines are distinct markings | Direct negations bounded by "What this evidence does not support" in the evidence file; no new claim introduced |
+
+No statement in the article goes beyond this table. No cross-tradition,
+Gettings, Fincham, West, prevalence/percentage, medical, source-silence
+inference, or unauthorized combination claim was introduced.
+
+### Preflight disposition
+
+1. **Prevalence/consensus language.** None remains. The removed "easy error"
+   claim was the only likelihood/frequency-adjacent statement in revision 2,
+   and it is gone.
+2. **Scientific/historical assertions.** Every historical claim traces to the
+   claim-level evidence map above and is attributed to Cheiro or Benham by
+   name; no chronology, study, source-silence inference, or scientific claim
+   appears. Revision 4 removed the hunch-accuracy myth's unsupported
+   assertion that the authors' historical accounts were "not with the
+   accuracy" of any impression — the controlling evidence warns that
+   Benham's period accuracy claims must not become Palmistry Path guidance,
+   so the article no longer characterizes what their historical reading did
+   or didn't cover on that point.
+3. **No invented combination readings.** The only cross-feature statement is
+   the authorized Mercury-line distinction (location and shape only); no
+   mount, other major/minor line, hand/finger shape, star, cross, island,
+   branch, fork, or endpoint combination appears.
+4. **No vague anonymous authority.** Searched
+   `Gettings|Fincham|West|Indian|Chinese|modern palmists|contemporary practitioners|some writers|experts`
+   — zero matches in the article.
+5. **Claim-type separation.** "Where to find it" (observation), "What it's
+   traditionally associated with" (Cheiro's paragraph, then Benham's
+   paragraph, each named), and "Palmistry Path's approach to this line"
+   (site policy) are distinct sections; the myths and FAQ keep the same
+   separation, and no entry characterizes what Cheiro's or Benham's reading
+   was or wasn't beyond their positive named association.
+6. **Quotation fidelity.** No quotation marks are used against Cheiro's or
+   Benham's wording anywhere in the article; both authors' readings are
+   paraphrased throughout, so no verbatim verification was required.
+7. **Safety boundaries.** No medical, legal, financial, deterministic
+   relationship, danger, or predictive-science claim appears; the
+   psychic/clairvoyant-proof and impression-accuracy claims are declined as
+   Palmistry Path's own policy, stated separately from the named historical
+   associations and without characterizing the authors' intent.
+
+**Restricted-term search (preflight item 4):**
+`clairvoyance|clairvoyant|psychic|medium|supernatural|prophetic|empath|rare|seldom|most|many|often|commonly|typically|generally|usually|accurate|reliable|predict`
+against the article returns matches limited to: the FAQ's permitted
+"Line of Clairvoyance" synonym question and psychic/clairvoyant question
+(required and permitted by the task packet), the corrected myths/FAQ
+entries' named historical association plus separately stated Palmistry Path
+policy (no proof/accuracy/reliability claim), "Palmistry Path's approach to
+this line"'s policy statements, and one regex substring false positive
+(`unusually` contains "usually"). No unqualified alias, prevalence, proof,
+or prediction claim remains, and no restricted term characterizes what
+Cheiro or Benham did or didn't claim. Revision 4's rewritten hunch-accuracy
+myth still matches on "accurate"/"reliable" only inside Palmistry Path's own
+policy statement, not as a claim about the authors' historical reading.
+
+**Unsupported-attribution search (preflight item 5):**
+`Gettings|Fincham|West|Indian|Chinese|modern palmists|contemporary practitioners|some writers|experts`
+— zero matches.
+
+**Combination-reading search (preflight item 6):** No mount, other line,
+hand/finger shape, star, cross, island, branch, fork, or endpoint combination
+appears; the only cross-feature material is the authorized Mercury-line
+location/shape distinction. Benham's named "Plain of Mars" location wording
+(a location the line's course passes through, per the controlling evidence)
+is retained; it is not an interpretive combination with the Mount of Mars.
+Benham's deep-versus-broken degree statement is retained, named, historical,
+and non-empirical, with no comparison to Cheiro.
+
+**Consistency check (preflight item 9):** Compared against
+`minor-lines-overview.md` (does not currently name the Intuition Line as one
+of its four covered minor lines — no contradiction), `mount-of-luna.md`
+(attributes its broader imaginative/intuitive territory directly to Cheiro
+and Benham by name in its own body text — no contradiction),
+`mercury-line.md` (describes a diagonal line toward Mercury, consistent with
+the article's straighter-vs-curved distinction — no contradiction), and
+`m-line-palmistry.md` (its existing "small curved line on the percussion
+side of the hand" description of the intuition line matches the article's
+location description — no contradiction). This pass's wording changes only
+narrow existing claims and add no new factual assertion, so the comparison
+result is unchanged from revision 3.
+
+**Source-note check (preflight item 10):** The article's source note lists
+only Cheiro (*Palmistry for All*, 1916; *Cheiro's Language of the Hand*) and
+Benham (*The Laws of Scientific Hand Reading*, 1900) — the two sources
+actually used. The backlog's original unverified Gettings/Fincham naming
+note is not presented as evidence anywhere in the article, and the backlog
+entry itself records the correction (`docs/editorial-backlog.md` item 20).
+
+**Rejected-claim search (preflight item 11):** Searched the cumulative
+article and documentation for
+`writing decades apart|easiest to confuse|Neither Cheiro nor Benham|Nothing in either author's account|other classical writers|covers how this line|line of clairvoyance`.
+In the article, "Line of Clairvoyance" occurs only inside the single
+permitted FAQ question and its answer; no other phrase in this list appears.
+`docs/editorial-backlog.md` item 20's published notes and this pass's
+revision-1-through-2 summary above retain these phrases only as past-tense
+task history explaining what revision 1 contained and revision 2 corrected
+— not repeated as approved prose.
+
+**Rejected-claim search (preflight item 12):** Searched the cumulative
+article and documentation for
+`situations through impression|rather than deliberate analysis|Cheiro doesn't|not a claim about paranormal ability|easy error`.
+None remain in the article. This log's "What changed from revision 2" table
+above and the corresponding CHANGELOG entry retain them only as past-tense
+task history explaining their removal.
+
+**Rejected-claim search (preflight item 13):** Searched the cumulative
+article and documentation for
+`not with the accuracy|readings do and don't claim|readings do and don't claim`.
+None remain in the article: the hunch-accuracy myth, the meta description,
+and the introduction were each rewritten to remove them. This log's "What
+changed from revision 3" table above and the corresponding CHANGELOG entry
+retain them only as past-tense task history explaining their removal. The
+revised description is confirmed 148 characters, inside the required
+140–160 range.
+
+**Reciprocal navigation:** Unchanged from revision 1, revision 2, and
+revision 3. Added
+one reciprocal link in `m-line-palmistry.md`'s existing "The M signals strong
+intuition" myth entry, turning its existing unlinked mention of "the
+intuition line" into a link to the new article — a minimal edit to
+already-present text, not a rewrite. No reciprocal link was added into
+`minor-lines-overview.md` (it does not currently name the Intuition Line as
+one of its four covered minor lines; adding one would mean introducing a
+fifth minor-line section, a broader rewrite outside this task's scope) or
+`mount-of-luna.md` (it discusses the mount's general intuitive quality but
+does not name this specific line, and inserting a new named-line reference
+there risked implying the mount's broad intuitive association is the same
+thing as the specific Line of Intuition feature, which the evidence does not
+establish). The new article links out once each to the Mercury line, Mount
+of Luna, and the minor lines overview.
+
+**Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/intuition-line-palmistry.md` (1 finding, the disclosed myth-heading pattern, unchanged from revision 3). `npm run build` (117 pages). `npm run content-audit` (72 blog posts, 25 lessons valid). `npm run audit:all` (links incl. orphan check, images, schema, indexability, accessibility all pass). `git diff --check` (clean).
