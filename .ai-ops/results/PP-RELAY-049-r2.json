@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-049",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 1 (PR #88, superseded) corrected the two legacy Fate Line break/fragmentation defects that PP-RELAY-048's revision-3 preflight flagged as outside its own scope, in src/content/blog/beginner/fate-line.md's 'Breaks and interruptions' section (with its FAQ and 'Common myths' echoes) and src/content/blog/beginner/no-fate-line-meaning.md's 'Broken or fragmented fate line' paragraph. Director review found one residual defect in revision 1's own new prose: fate-line.md's 'Common myths' entry stated Cheiro's verified break reading was 'not with failure or ruin, and not with any fixed outcome' and that the overlapping-break reading was 'not a verdict on the life as a whole' -- negative claims about what Cheiro's reading excluded that the controlling evidence (.ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md) does not establish. Revision 2 preserves the sound revision-1 diff in full and corrects only that sentence: it now states the accurate Cheiro association (career troubles and lack of settled or continuous success; for an overlapping break, a complete change in surroundings and position) followed by a separately labeled Palmistry Path editorial-policy statement that the site does not use either reading to predict or guarantee a fixed outcome, matching the same article's already-correct FAQ wording. Updated docs/CHANGELOG.md and docs/source-verification-log.md (Pass 16, revision 2) with the corrected claim-level evidence map and full SOURCE_SENSITIVE preflight disposition, including a targeted search confirming no unsupported negative historical claim about Cheiro's break reading remains in the changed files.",
+  "pr_number": 89,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/fate-line.md src/content/blog/beginner/no-fate-line-meaning.md (20 findings, identical to revision 1, all pre-existing PREVALENCE_OR_CONSENSUS matches outside the corrected break/fragmentation passages)",
+    "npm run build (116 pages, clean)",
+    "npm run content-audit (71 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)",
+    "Manual grep of the cumulative changed prose for 'not with failure|not with any fixed outcome|failure|ruin|fixed outcome' -- remaining occurrences are pre-existing, out-of-scope passages (fate-line.md's unrelated 'Ending at the head line' section; no-fate-line-meaning.md's unrelated absence-related passages) plus the two now-policy-labeled 'fixed outcome' statements",
+    "Manual comparison of the corrected Common myths sentence against the same article's FAQ answer and against broken-fate-line-meaning.md's established vocabulary and claim-level evidence map -- consistent, no contradiction"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full claim-level evidence map and preflight disposition recorded in docs/source-verification-log.md ('Pass 16 -- Fate Line pillar and absence companion: legacy break/fragmentation cleanup, revision 2'). The revision-2 fix was re-verified against .ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md to confirm the evidence establishes only the positive historical associations, not any claim about what Cheiro's reading did or did not mean regarding failure, ruin, or a fixed outcome. The retained reassurance is labeled strictly as Palmistry Path editorial policy, separate from the Cheiro attribution, matching the article's own already-accepted FAQ wording."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read/Edit on article and docs files",
+      "git checkout of revision-1's content diff from the superseded claude/relay-PP-RELAY-049-fate-line-break-cleanup branch as the base for revision 2, per the task packet's instruction to preserve that diff",
+      "npm run audit:claim-risk",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check",
+      "GitHub MCP search_pull_requests for startup-gate duplicate-PR check and to confirm PR #88 targets revision 1 (not revision 2)"
+    ],
+    "validation": [
+      "audit:claim-risk",
+      "build",
+      "content-audit",
+      "audit:all",
+      "git diff --check"
+    ],
+    "notes": "Local checkout's main had diverged from origin/main with no merge base at startup. Followed the documented clean-divergence recovery: verified origin remote identity and that origin/main's tip (42ad7237948e1508b8b7340358ed11ce6852a861) matched state.json's dispatch commit and the routine dispatch-hint payload, left local main untouched, and branched claude/relay-PP-RELAY-049-fate-line-break-cleanup-r2 directly from origin/main. Revision 1's superseded PR #88 was left untouched (closing it is a Director action, not documented as part of the worker contract). npm install was required before build/audit scripts would run (node_modules was absent in this checkout); the resulting incidental package-lock.json diff was reverted before committing since it was not part of the authorized scope."
+  }
+}
