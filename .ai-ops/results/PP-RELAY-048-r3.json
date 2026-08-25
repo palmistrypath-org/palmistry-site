@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-048",
+  "revision": 3,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revised src/content/blog/beginner/broken-fate-line-meaning.md to fix the two revision-3 correctness issues: (1) the break definition no longer asserts every 'true break' requires a plain gap before resumption, and now consistently distinguishes a clean break (gap along the line's course) from Cheiro's overlapping break (new segment begins before the earlier ends); (2) the article no longer characterizes Cheiro's historical reading as containing no timing/event/outcome, and instead frames timing exclusion as this article's scope plus a separate Palmistry Path editorial-policy statement against predicting/guaranteeing outcomes. Preserved the sound revision-2 evidence map, structure, navigation, and bookkeeping otherwise.",
+  "pr_number": 87,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/broken-fate-line-meaning.md (0 findings)",
+    "npm run build (116 pages, clean)",
+    "npm run content-audit (71 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)",
+    "Manual re-read of final article against the task's prohibited-claims list and controlling evidence note",
+    "Manual grep for prevalence/consensus/anonymous-attribution wording beyond the automated scanner"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full claim-level evidence map and preflight disposition recorded in docs/source-verification-log.md ('Pass 15 — Broken Fate Line Meaning companion article, revision 3'). No claim in the final article exceeds .ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md. The revision-3 timing fix was specifically re-verified against the evidence file to confirm it supports only 'Cheiro's timing/date system is outside this task,' not a historical claim that he supplied none."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read/Edit/Write on article and docs files",
+      "npm run audit:claim-risk",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check",
+      "GitHub MCP search_pull_requests / pull_request_read for startup-gate duplicate-PR check"
+    ],
+    "validation": [
+      "audit:claim-risk",
+      "build",
+      "content-audit",
+      "audit:all",
+      "git diff --check"
+    ],
+    "notes": "Local checkout's main had diverged from origin/main with no clean fast-forward at startup. Followed the documented clean-divergence recovery: verified origin remote identity and that origin/main's tip matched state.json's dispatch commit (4cc3d64...), left local main untouched, and branched claude/relay-PP-RELAY-048-broken-fate-line-meaning-r3 directly from origin/main."
+  }
+}

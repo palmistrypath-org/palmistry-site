@@ -62,7 +62,7 @@ The worry that attaches to an absent or faint fate line — a concern that it in
 
 A break in the fate line — a gap where the line stops and restarts — is traditionally associated with a significant change in direction: a point where the vocational or purposive course alters substantially.
 
-The distinction between break types is worth preserving here. An **overlapping break**, where the new section begins before the old ends and creates a brief parallel, is associated with a planned or smoother transition — one phase beginning before the previous fully closes. A **clean break**, without overlap, suggests a sharper shift: a change that arrives without the softening of gradual overlap. Neither reading implies crisis. Both describe change in the line of direction.
+The distinction between break types is worth preserving here. An **overlapping break**, where the new section begins before the old ends and creates a brief parallel, is associated with a planned or smoother transition — one phase beginning before the previous fully closes. A **clean break**, without overlap, suggests a sharper shift: a change that arrives without the softening of gradual overlap. Neither reading implies crisis. Both describe change in the line of direction. For the specific, narrowly verified evidence behind an overlapping break, see [broken fate line meaning](/blog/beginner/broken-fate-line-meaning/).
 
 ### Double fate line
 
