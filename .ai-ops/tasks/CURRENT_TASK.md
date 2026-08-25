@@ -5,7 +5,7 @@ Status: AUTHORIZED
 PP-RELAY-050
 
 ## Revision
-3
+4
 
 ## Risk Class
 SOURCE_SENSITIVE
@@ -33,6 +33,16 @@ Revision 2 produced PR #92, preserved the sound revision-1 package, corrected th
 5. Update Pass 17 in `docs/source-verification-log.md`, the PP-RELAY-050 changelog entry, and the revision-3 result artifact so they record this residual revision-2 correction accurately and do not repeat any rejected claim as approved prose.
 6. Do not change the controlling evidence file, frontmatter, article structure, other article passages, navigation, reciprocal link, backlog count/status, or unrelated legacy prose.
 
+## Revision 3 review
+Revision 3 produced PR #93, corrected every authorized revision-3 passage, and passed CI plus independent Director reruns of the claim-risk scan, 117-page build, content audit (72 blog posts / 25 lessons), full audit suite, and `git diff --check`. Director cumulative review found one remaining Benham source-integrity contradiction and two directly equivalent summary phrases. Revision 4 must preserve every sound revision-3 correction and change only the three article locations below plus directly equivalent source-log/changelog/result bookkeeping.
+
+## Revision 4 corrections
+1. In the hunch-accuracy myth, remove `Cheiro's and Benham's historical associations are with a sensitive or impressionable temperament, not with the accuracy of any specific dream, warning, or hunch` and any equivalent claim that their historical accounts did not associate impressions, presentiments, dreams, warnings, or hunches with accuracy or reliability. The controlling evidence explicitly warns that Benham made period accuracy claims that must not become Palmistry Path guidance. State only the approved historical association (sensitive/impressionable temperament or intuitive impressions), then state separately that **Palmistry Path** does not use the line to validate or guarantee any impression's accuracy or reliability.
+2. Replace the meta description's broad `what their historical readings do and don't claim` wording with a plain 140–160 character description that accurately promises location, Mercury-line distinction, named historical associations, and/or Palmistry Path's framing without characterizing what the authors did not claim.
+3. Replace the introduction's parallel `what their historical readings do and don't claim` wording with neutral wording that says the article covers their named historical associations and how Palmistry Path separates those associations from its own editorial policy.
+4. Update Pass 17 in `docs/source-verification-log.md`, the PP-RELAY-050 changelog entry, and the revision-4 result artifact so they record this revision accurately and do not repeat the rejected negative historical characterization as approved prose.
+5. Do not change any other frontmatter field, article sentence, navigation, reciprocal link, backlog count/status, controlling evidence, or unrelated prose.
+
 ## Objective
 Produce the approved Next 25 article **Intuition Line Meaning in Palmistry** at `src/content/blog/beginner/intuition-line-palmistry.md` as a focused, beginner-readable treatment bounded entirely by the Director-verified Cheiro and Benham evidence. Do not turn historical claims about impressions or clairvoyance into empirical facts, predictions, or proof of psychic ability.
 
@@ -49,7 +59,7 @@ Supporting only as directly necessary:
 - `docs/source-verification-log.md`
 - `docs/CHANGELOG.md`
 - `docs/CURRENT_STATE.md` only for the minimum article-count/current-state reconciliation required by `AGENTS.md`
-- `.ai-ops/results/PP-RELAY-050-r3.json`
+- `.ai-ops/results/PP-RELAY-050-r4.json`
 
 Do not modify `.ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md`, the task packet, lessons, site code, routing, schemas, or unrelated article prose. If a natural reciprocal link would require a broader rewrite, omit it and document the decision.
 
@@ -106,6 +116,7 @@ Before `READY_FOR_REVIEW`:
 10. Verify the article does not present the backlog's unverified copyright-era source note as evidence and does not list any source it did not actually use.
 11. Search the cumulative article and documentation for `writing decades apart|easiest to confuse|Neither Cheiro nor Benham|Nothing in either author's account|other classical writers|covers how this line|line of clairvoyance`; remove or narrowly disposition every occurrence against the revision-2 corrections above. The unverified alias may remain in the article only in the permitted FAQ and may remain in task-history documentation solely to explain the correction.
 12. Search the cumulative article and documentation for `situations through impression|rather than deliberate analysis|Cheiro doesn't|not a claim about paranormal ability|easy error`; none may remain in the article, and documentation may retain them only as past-tense task history explaining their removal.
+13. Search the cumulative article and documentation for `not with the accuracy|readings do and don't claim|readings do and don’t claim`; none may remain in the article, and documentation may retain them only as past-tense task history explaining their removal. Confirm the revised description remains 140–160 characters.
 
 ## Acceptance criteria
 1. A useful 900–1,200 word beginner article exists at the authorized slug with valid frontmatter and no predictive/psychic promise.
@@ -119,6 +130,7 @@ Before `READY_FOR_REVIEW`:
 9. Required SOURCE_SENSITIVE preflight and project validation pass.
 10. The cumulative diff neither sanitizes Cheiro/Benham by attributing modern evidentiary restraint to them nor misdescribes the content of linked existing articles.
 11. Benham's paragraph contains only the approved intuitive-impressions/estimating-people association and his own bounded degree statement; the myths contain no unsupported source-silence or confusion-likelihood claim.
+12. The hunch myth states historical association and Palmistry Path policy separately without denying or sanitizing Benham's period accuracy claims; the description and intro make no broad claim about what the authors did not claim.
 
 ## Validation
 Run at minimum:
@@ -132,6 +144,6 @@ Run at minimum:
 Return `HUMAN_REQUIRED` only if a useful article still genuinely requires material evidence unavailable under repository policy after using the Director evidence file. Return `BLOCKED` only for a technical blocker that cannot safely be repaired within scope. Return `PAUSED_USAGE_LIMIT` immediately if a usage/credit safeguard triggers.
 
 ## Durable result contract
-Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-050-r3.json` on a pushed `claude/relay-PP-RELAY-050-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-050-r4.json` on a pushed `claude/relay-PP-RELAY-050-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
 The result must include `risk_class: "SOURCE_SENSITIVE"` and a truthful completed `source_preflight` object when content has been drafted/reviewed. For `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with matching task/revision footers. Non-change terminal outcomes do not require a dummy PR. Do not merge and do not select the next task.
