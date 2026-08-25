@@ -5,7 +5,7 @@
   "risk_class": "SOURCE_SENSITIVE",
   "result": "READY_FOR_REVIEW",
   "summary": "Revised src/content/blog/beginner/broken-fate-line-meaning.md to fix the two revision-3 correctness issues: (1) the break definition no longer asserts every 'true break' requires a plain gap before resumption, and now consistently distinguishes a clean break (gap along the line's course) from Cheiro's overlapping break (new segment begins before the earlier ends); (2) the article no longer characterizes Cheiro's historical reading as containing no timing/event/outcome, and instead frames timing exclusion as this article's scope plus a separate Palmistry Path editorial-policy statement against predicting/guaranteeing outcomes. Preserved the sound revision-2 evidence map, structure, navigation, and bookkeeping otherwise.",
-  "pr_number": null,
+  "pr_number": 87,
   "verification": [
     "npm run audit:claim-risk -- src/content/blog/beginner/broken-fate-line-meaning.md (0 findings)",
     "npm run build (116 pages, clean)",
