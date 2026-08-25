@@ -1453,3 +1453,53 @@ implicit.
 **Reciprocal navigation:** Added one sentence to `fate-line.md`'s existing branches paragraph distinguishing fork from branch and linking to the new article — the same single addition made in revision 2, unchanged in substance. The sibling `fate-line-branches-meaning.md` (unverified terminal-fork prose) was not read as evidence, not modified, and not linked from the new article, per task scope.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/forked-fate-line-meaning.md` (0 findings). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
+
+## Pass 15 — Broken Fate Line Meaning companion article, revision 2 — `blog/beginner/broken-fate-line-meaning.md` (Relay PP-RELAY-048, revision 2, 2026-08-25)
+
+Revision 1 (2026-08-24) correctly returned `HUMAN_REQUIRED`: no repository-held or independently accessible evidence established a Fate Line break/overlap reading, and external primary-source lookup was blocked by this environment's network proxy. The Director independently verified a narrow Cheiro evidence boundary from *Palmistry for All* (1916) and recorded it at `.ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md`. Revision 2 drafted the article using that evidence file as the sole controlling source — no new external lookup was attempted or needed.
+
+### Controlling evidence boundary
+
+From `.ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md`:
+- A fate line broken or made up of small pieces throughout its course — Cheiro historically associated this with troubles/breaks in the career and a lack of settled or continuous success.
+- An overlapping break (one segment begins before the other ends) — Cheiro historically associated this narrower configuration with a complete change in surroundings and position.
+- A conditional addition: where the new segment is itself good and straight, Cheiro associated it with advancement in position from the point where the new segment begins.
+
+### Claim-level evidence map
+
+| Article statement | Evidence basis |
+|---|---|
+| General piecemeal/broken line = troubles/breaks, lack of settled or continuous success (intro of "What the verified evidence says", and FAQ) | Verified evidence boundary, item 1 above |
+| Overlapping break = complete change in surroundings and position | Verified evidence boundary, item 2 above |
+| Conditional advancement reading, stated only with the "good and straight" condition attached | Verified evidence boundary, item 3 above — condition kept explicit, not detached into a general rule |
+| Observation vocabulary (absence vs. break vs. fork; clean vs. overlapping break) | Direct observation, not attributed to any source, consistent with `no-fate-line-meaning.md` and `forked-fate-line-meaning.md`'s existing observation sections |
+| "Palmistry Path's own editorial policy" framing (non-deterministic, no timeline/outcome) | Palmistry Path editorial policy per `AGENTS.md`, explicitly labeled as site policy, not attributed to Cheiro |
+
+No statement in the article goes beyond this table. Every "What this doesn't cover" item (no career/life-change generalization, no smooth/planned/managed/gradual/beneficial transition, no shifted-restart-means-new-field or multiple-life-chapters claim, no gap-size scale, no timing/outcome, no mount/line combination) names a claim explicitly in order to decline it, not to assert it.
+
+### Preflight disposition
+
+1. **Prevalence/consensus language.** The claim-risk scanner initially flagged four instances: "often" (twice) and "generally broken or piecemeal" (twice, matching the evidence file's own summary phrasing). All four were reworded — "often" instances removed in favor of neutral phrasing ("may or may not," "easy to confuse with"), and "generally broken or piecemeal" reworded to "broken or made up of small pieces throughout its course" to describe the category of formation (as opposed to the specific overlapping case) without frequency/consensus wording. A follow-up manual grep for `most|many|often|commonly|typically|generally|usual|rare|frequently` found one remaining match, the "Frequently asked questions" heading itself, which is not a claim. Re-running `npm run audit:claim-risk` after the edits returns 0 findings.
+2. **Scientific/historical assertions.** Limited to the three items in the claim-level evidence map above, all traceable to `.ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md` and attributed to Cheiro by name.
+3. **No invented combination readings.** The article does not combine the verified break/overlap readings with any mount, other major line, endpoint, branch, fork, depth, or island; the "No combination with mounts or other lines" item names this only to decline it.
+4. **No vague anonymous authority.** No "modern palmists," "some writers," "traditional readers," "experts," or equivalent phrase appears; "the tradition" is not used as an unattributed authority — every historical claim is attributed to Cheiro by name.
+5. **Claim-type separation.** The "Observation, history, and site policy — kept separate" section, plus the corrected evidence paragraphs and common-mistakes entries, keep direct observation, Cheiro's named historical interpretation, and Palmistry Path's own non-deterministic editorial policy in distinct, explicitly labeled statements.
+6. **Quotation fidelity.** No text is presented as a verbatim Cheiro quotation anywhere in the article; both evidence-based readings are paraphrased, consistent with the controlling evidence note, which is itself a paraphrase rather than an exact transcription.
+7. **Safety boundaries.** No medical, legal, financial, deterministic relationship, danger, illness, death, or predictive-science claim appears. Timing and outcome are explicitly excluded in "What this doesn't cover," the common mistakes section, and two FAQ answers.
+
+**Claim-risk heuristic disposition:** `npm run audit:claim-risk -- src/content/blog/beginner/broken-fate-line-meaning.md` — 4 findings on first pass (all `PREVALENCE_OR_CONSENSUS`, detailed above), 0 findings after revision.
+
+**Duplication/cannibalization check:** Compared against `no-fate-line-meaning.md` (absence, not interruption — the new article opens by naming and linking this distinction and does not restate no-fate-line-meaning's own "broken or fragmented" paragraph, which contains unverified legacy wording — see follow-up note below), `forked-fate-line-meaning.md` (division into two continuing strands, a different formation, cross-linked both directions), and the main `fate-line.md` pillar (broader treatment; the new article narrows specifically into the break/overlap evidence boundary and is linked from the pillar's existing "Breaks and interruptions" section).
+
+**Reciprocal navigation:** Added one sentence to the end of `fate-line.md`'s existing "Breaks and interruptions" paragraph, linking to the new article for the specific verified overlapping-break evidence. The existing paragraph's own broader, unverified "planned/smoother transition" and "sharper shift" wording was left untouched — see follow-up note below.
+
+**Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/broken-fate-line-meaning.md` (0 findings after revision). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
+
+### Follow-up: legacy unverified break/overlap wording outside this task's scope
+
+Source review surfaced two pre-existing legacy defects that this task's scope (`src/content/blog/beginner/broken-fate-line-meaning.md`, one or two reciprocal links, and the bookkeeping files) does not authorize rewriting:
+
+- `blog/beginner/fate-line.md`'s "Breaks and interruptions" section (and its FAQ/"Common myths" echoes) currently states that an overlapping break is "associated with a planned or smoother transition" and a clean break "suggests a sharper shift" — wording not supported by the Director-verified evidence in `.ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md`, which attributes only "a complete change in surroundings and position" to Cheiro's overlapping-break reading, with no claim about smoothness or planning.
+- `blog/beginner/no-fate-line-meaning.md`'s "Broken or fragmented fate line" paragraph states, unattributed, that breaks indicate "significant changes of direction" and that a fragmented line across the whole palm suggests "multiple chapters rather than one thread" — both go beyond the same verified evidence boundary and use unattributed "In the tradition" framing.
+
+Recording these here for a later bounded cleanup task, per this task packet's instruction not to expand scope into the canonical pillar or sibling companion articles.

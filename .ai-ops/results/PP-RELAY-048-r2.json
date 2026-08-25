@@ -1,0 +1,49 @@
+{
+  "schema_version": 3,
+  "task_id": "PP-RELAY-048",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 1 correctly returned HUMAN_REQUIRED because no repository-held or independently accessible evidence established a Fate Line break/overlap reading, and external primary-source lookup was blocked by this environment's network proxy. The Director independently verified a narrow Cheiro evidence boundary from Palmistry for All (1916) and recorded it at .ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md. Revision 2 drafted the approved Next 25 companion article directly against that controlling evidence and added src/content/blog/beginner/broken-fate-line-meaning.md (item 19 from docs/editorial-backlog.md's Next 25 list, 70 -> 71 published blog posts). The article opens by distinguishing absence (no fate line, covered in no-fate-line-meaning.md) from interruption (a break), then observation vocabulary for clean vs. overlapping breaks, before covering the two verified Cheiro readings: a generally broken/piecemeal line associated with troubles/breaks and lack of settled or continuous success, and the narrower overlapping-break configuration associated with a complete change in surroundings and position, with the conditional advancement reading kept attached to its 'good and straight' condition. A dedicated section explicitly declines every unsupported extension the task packet flagged (career/life-change generalization, smooth/planned/managed/gradual/beneficial transition, shifted-restart-means-new-field or multiple-life-chapters claims, gap-size scaling, timing/outcome claims, and synthesis with mounts or other lines), and an observation/history/site-policy section keeps the three claim types explicitly separate. Added one reciprocal-link sentence to fate-line.md's existing 'Breaks and interruptions' paragraph; the pillar's own pre-existing unsupported 'planned/smoother transition' wording was left untouched and logged as a follow-up cleanup item, along with a similar legacy defect in no-fate-line-meaning.md's 'Broken or fragmented fate line' paragraph, per this task's instruction not to expand scope into the canonical pillar or sibling articles. Updated docs/editorial-backlog.md (published count + row 19), docs/CHANGELOG.md, and docs/source-verification-log.md (Pass 15, full claim-level evidence map and preflight disposition).",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/broken-fate-line-meaning.md (4 findings on first draft, all PREVALENCE_OR_CONSENSUS; 0 findings after revision)",
+    "npm run build (116 pages)",
+    "npm run content-audit (71 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. no-orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)",
+    "manual re-read of final article against the task's prohibited-claims list and the controlling evidence note in .ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md",
+    "manual grep of final prose for most/many/often/commonly/typically/generally/usual/rare/frequently/modern-palmists/some-writers/traditional-readers/experts (no unattributed claims found)"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full claim-by-claim disposition is recorded in docs/source-verification-log.md under 'Pass 15 -- Broken Fate Line Meaning companion article, revision 2'. No text is presented as a verbatim Cheiro quotation; both evidence-based readings are paraphrased, consistent with the controlling evidence note itself being a paraphrase. Direct observation, Cheiro's named historical interpretation, and Palmistry Path's own non-deterministic editorial policy are kept in separate, explicitly labeled statements throughout, including a dedicated 'Observation, history, and site policy' section. Two pre-existing legacy defects outside this task's scope (fate-line.md's 'planned/smoother transition' wording and no-fate-line-meaning.md's 'multiple chapters' wording) were identified and logged for a later bounded cleanup rather than fixed here."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read the controlling evidence note (.ai-ops/evidence/PP-RELAY-048-cheiro-fate-line-break.md) and the task packet's prohibited-claims list before drafting",
+      "Read sibling companion articles (no-fate-line-meaning.md, forked-fate-line-meaning.md) and the main fate-line.md pillar for structure, cross-linking, and duplication/cannibalization review",
+      "Built a claim-level evidence map mapping every retained historical/interpretive statement to its source in the controlling evidence note, recorded in docs/source-verification-log.md Pass 15",
+      "npm run audit:claim-risk as a bounded aid before finalizing; reworded all 4 flagged instances",
+      "Targeted manual grep of final prose for prevalence/consensus/anonymous-attribution wording as a check beyond the heuristic scanner"
+    ],
+    "validation": [
+      "npm run audit:claim-risk -- src/content/blog/beginner/broken-fate-line-meaning.md",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Startup gate: an existing claude/relay-PP-RELAY-048-broken-fate-line-meaning branch (revision 1, HUMAN_REQUIRED, no open PR) was found and left untouched; this revision-2 work was pushed on a separate claude/relay-PP-RELAY-048-broken-fate-line-meaning-r2 branch created from verified origin/main. node_modules was not present in the environment and was installed via npm install before running build/audit validation; the resulting incidental optional-dependency 'libc' metadata churn in package-lock.json was reverted before committing since it was not part of this task's scope."
+  }
+}
