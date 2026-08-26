@@ -49,8 +49,9 @@ const trackFillPct = total > 1 ? ((currentOrder - 1) / (total - 1)) * 100 : 0;
 								<span
 									class="pip-dot"
 									aria-current="step"
-									aria-label={`Current lesson: ${step.title}`}
-								></span>
+								>
+									<span class="visually-hidden">Current lesson: {step.title}</span>
+								</span>
 							) : (
 								<a
 									class="pip-dot"

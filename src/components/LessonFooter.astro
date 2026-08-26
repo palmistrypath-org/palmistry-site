@@ -14,7 +14,7 @@ const { prevLesson, nextLesson } = Astro.props;
 ---
 
 <div class="lesson-footer">
-	<div class="complete-row" aria-label="Lesson complete">
+	<div class="complete-row">
 		<span class="complete-pip" aria-hidden="true">✦</span>
 		<span class="complete-label">Lesson complete</span>
 		<span class="complete-pip" aria-hidden="true">✦</span>
@@ -61,7 +61,7 @@ const { prevLesson, nextLesson } = Astro.props;
 			<p class="email-body">
 				A printable quick-reference guide to the major lines, mounts, and hand shapes.
 			</p>
-			<div class="includes" aria-label="Guide contents">
+			<div class="includes">
 				<p class="includes-label">Includes</p>
 				<ul class="includes-list">
 					<li>Major lines quick-reference map</li>
@@ -178,7 +178,7 @@ const { prevLesson, nextLesson } = Astro.props;
 		margin-top: 3.5em;
 		border: 1px solid rgba(201, 169, 110, 0.18);
 		border-radius: 10px;
-		background: rgba(255, 255, 255, 0.02);
+		background: var(--color-surface);
 	}
 	.email-inner {
 		padding: 2em 2em 2.25em;

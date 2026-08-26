@@ -34,10 +34,7 @@ import { SITE_TITLE } from '../consts';
 			.hero h1 {
 				font-size: clamp(1.6rem, 6vw, 3em);
 				letter-spacing: 0.08em;
-				color: var(--accent);
-				text-shadow:
-					0 0 80px rgba(201, 169, 110, 0.18),
-					0 2px 8px rgba(0, 0, 0, 0.7);
+				color: var(--color-heading);
 				margin: 0 0 0.45em;
 			}
 			.hero-sub {
@@ -265,7 +262,7 @@ import { SITE_TITLE } from '../consts';
 				padding: 0.65em 1em;
 				border: 1px solid rgba(201, 169, 110, 0.35);
 				border-radius: 4px;
-				background: rgba(255, 255, 255, 0.05);
+				background: var(--color-surface);
 				color: var(--color-text);
 				font-family: var(--font-lora);
 				font-size: 0.9em;
@@ -276,7 +273,7 @@ import { SITE_TITLE } from '../consts';
 			}
 			#notify-form button {
 				padding: 0.65em 1.25em;
-				background: var(--color-gold, #c9a96e);
+				background: var(--color-gold);
 				color: #1a1208;
 				border: none;
 				border-radius: 4px;
@@ -299,7 +296,7 @@ import { SITE_TITLE } from '../consts';
 				font-size: 0.82em;
 				margin-top: 0.75em;
 			}
-			.notify-success { color: var(--color-gold, #c9a96e); }
+			.notify-success { color: var(--color-gold-ink); }
 			.notify-error { color: #e07070; }
 
 			/* ── Mobile ───────────────────────────────────────────────── */

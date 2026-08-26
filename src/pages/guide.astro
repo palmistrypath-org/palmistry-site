@@ -11,6 +11,7 @@ import { SITE_TITLE } from '../consts';
 		<BaseHead
 			title={`The Palmistry Starter Guide — ${SITE_TITLE}`}
 			description="A structured reference and observation guide for anyone beginning their study of palmistry. Covers the major lines, mounts, and hand shapes. Free to download."
+			image="/images/editorial-mystic/social/og-guide-download-16x9.webp"
 		/>
 		<style>
 			/* ── Hero ─────────────────────────────────────────────────── */
@@ -34,10 +35,7 @@ import { SITE_TITLE } from '../consts';
 			.guide-hero h1 {
 				font-size: clamp(1.6rem, 6vw, 3em);
 				letter-spacing: 0.08em;
-				color: var(--accent);
-				text-shadow:
-					0 0 80px rgba(201, 169, 110, 0.18),
-					0 2px 8px rgba(0, 0, 0, 0.7);
+				color: var(--color-heading);
 				margin: 0 0 0.5em;
 			}
 			.guide-hero .subline {
@@ -86,7 +84,7 @@ import { SITE_TITLE } from '../consts';
 				gap: 1.25em 2em;
 			}
 			.contents-grid li {
-				border-top: 1px solid rgba(201, 169, 110, 0.15);
+				border-top: 1px solid var(--color-border);
 				padding-top: 0.9em;
 			}
 			.item-title {
@@ -140,8 +138,8 @@ import { SITE_TITLE } from '../consts';
 			.signup-form input[type='email'] {
 				width: 100%;
 				box-sizing: border-box;
-				background: rgba(255, 255, 255, 0.04);
-				border: 1px solid rgba(201, 169, 110, 0.28);
+				background: var(--color-surface);
+				border: 1px solid var(--color-border-strong);
 				border-radius: 4px;
 				color: var(--color-text);
 				font-family: var(--font-lora), serif;
@@ -156,14 +154,14 @@ import { SITE_TITLE } from '../consts';
 				opacity: 0.75;
 			}
 			.signup-form input[type='email']:focus {
-				border-color: rgba(201, 169, 110, 0.55);
-				box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.07);
+				border-color: var(--color-teal-dark);
+				box-shadow: 0 0 0 3px rgba(95, 138, 145, 0.14);
 			}
 			.signup-form button {
-				background: var(--accent);
+				background: var(--color-cta-bg);
 				border: none;
 				border-radius: 4px;
-				color: var(--color-bg);
+				color: var(--color-cta-text);
 				font-family: var(--font-cinzel), serif;
 				font-size: 0.68em;
 				letter-spacing: 0.1em;
@@ -176,8 +174,8 @@ import { SITE_TITLE } from '../consts';
 					box-shadow 0.2s ease;
 			}
 			.signup-form button:hover {
-				background: var(--accent-light);
-				box-shadow: 0 2px 14px rgba(201, 169, 110, 0.2);
+				background: var(--color-cta-hover);
+				box-shadow: var(--box-shadow);
 			}
 			.signup-form button:active {
 				background: var(--accent);
@@ -190,7 +188,7 @@ import { SITE_TITLE } from '../consts';
 			.signup-error {
 				display: none;
 				font-size: 0.78em;
-				color: #c07870;
+				color: var(--color-danger);
 				margin: 0.5em 0 0;
 			}
 			.signup-caveat {
@@ -203,23 +201,30 @@ import { SITE_TITLE } from '../consts';
 				color: inherit;
 				text-decoration: underline;
 				text-underline-offset: 2px;
-				text-decoration-color: rgba(201, 169, 110, 0.3);
+				text-decoration-color: var(--color-border-strong);
 				transition: color 0.2s ease, text-decoration-color 0.2s ease;
 			}
 			.caveat-link:hover {
 				color: var(--accent);
-				text-decoration-color: rgba(201, 169, 110, 0.6);
+				text-decoration-color: var(--color-teal);
 			}
 			/* ── Guide mockup ─────────────────────────────────────────── */
 			.guide-mockup-wrap {
 				text-align: center;
 				margin: 0 auto 2.5em;
 			}
+			.guide-cover {
+				display: block;
+				width: min(260px, 72vw);
+				margin: 0 auto;
+				border: 1px solid var(--color-border);
+				box-shadow: var(--box-shadow);
+			}
 			.guide-mockup {
 				display: inline-block;
 				width: 148px;
 				height: 196px;
-				background: linear-gradient(165deg, rgba(201, 169, 110, 0.09) 0%, rgba(13, 10, 26, 0.5) 100%);
+				background: linear-gradient(165deg, var(--color-surface) 0%, var(--color-ivory) 100%);
 				border: 1px solid rgba(201, 169, 110, 0.28);
 				border-radius: 3px;
 				position: relative;
@@ -278,7 +283,7 @@ import { SITE_TITLE } from '../consts';
 			}
 			.mockup-line {
 				height: 1px;
-				background: rgba(226, 217, 197, 0.1);
+				background: var(--color-border);
 				border-radius: 1px;
 			}
 			.mockup-line:nth-child(odd) { width: 88%; }
@@ -293,7 +298,7 @@ import { SITE_TITLE } from '../consts';
 				font-size: 0.85em;
 				color: var(--color-text-muted);
 				text-align: center;
-				border-left: 2px solid rgba(201, 169, 110, 0.22);
+				border-left: 2px solid var(--color-border-strong);
 				padding: 0.7em 1.25em;
 				margin: 0;
 				line-height: 1.8;
@@ -304,7 +309,7 @@ import { SITE_TITLE } from '../consts';
 			.preview-download {
 				text-align: center;
 				padding: 2.25em 0 4.5em;
-				border-top: 1px solid rgba(201, 169, 110, 0.1);
+				border-top: 1px solid var(--color-border);
 				margin-top: 1em;
 			}
 			.preview-download p {
@@ -320,7 +325,7 @@ import { SITE_TITLE } from '../consts';
 				text-transform: uppercase;
 				color: var(--color-text-muted);
 				text-decoration: none;
-				border-bottom: 1px solid rgba(201, 169, 110, 0.22);
+				border-bottom: 1px solid var(--color-border-strong);
 				padding-bottom: 2px;
 				opacity: 0.75;
 				transition:
@@ -330,7 +335,7 @@ import { SITE_TITLE } from '../consts';
 			}
 			.preview-download-link:hover {
 				color: var(--accent);
-				border-color: rgba(201, 169, 110, 0.5);
+				border-color: var(--color-teal);
 				opacity: 1;
 			}
 
@@ -369,12 +374,12 @@ import { SITE_TITLE } from '../consts';
 				color: var(--accent);
 				text-decoration: underline;
 				text-underline-offset: 2px;
-				text-decoration-color: rgba(201, 169, 110, 0.4);
+				text-decoration-color: var(--color-border-strong);
 				transition: color 0.2s ease, text-decoration-color 0.2s ease;
 			}
 			.step-text a:hover {
 				color: var(--accent-light);
-				text-decoration-color: rgba(201, 169, 110, 0.7);
+				text-decoration-color: var(--color-teal);
 			}
 
 			/* ── Mobile ───────────────────────────────────────────────── */
@@ -419,23 +424,8 @@ import { SITE_TITLE } from '../consts';
 			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
 
 			<div class="guide-section">
-				<div class="guide-mockup-wrap" aria-hidden="true">
-					<div class="guide-mockup">
-						<div class="mockup-inner">
-							<span class="mockup-eyebrow">Palmistry Path</span>
-							<span class="mockup-title-text">Palmistry<br />Starter<br />Guide</span>
-							<div class="mockup-rule"></div>
-							<div class="mockup-lines">
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-							</div>
-						</div>
-					</div>
+				<div class="guide-mockup-wrap">
+					<img class="guide-cover" src="/images/editorial-mystic/guide/quick-start-guide-cover-option-a-3x4.webp" alt="Palmistry Path Quick Start Guide cover with a refined illustrated palm" width="900" height="1205" loading="eager" decoding="async" />
 				</div>
 				<h2 class="section-heading">What's inside</h2>
 				<ul class="contents-grid">

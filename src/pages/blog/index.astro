@@ -94,7 +94,7 @@ for (const post of allPosts) {
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`Articles — ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+		<BaseHead title={`Articles — ${SITE_TITLE}`} description={SITE_DESCRIPTION} image="/images/editorial-mystic/social/og-category-16x9.webp" />
 		<style>
 			main {
 				width: calc(100% - 3rem);
@@ -185,7 +185,7 @@ for (const post of allPosts) {
 				padding: 1rem 1.1rem;
 				border: 1px solid rgba(201, 169, 110, 0.2);
 				border-radius: 10px;
-				background: rgba(255, 255, 255, 0.02);
+				background: var(--color-surface);
 				text-decoration: none;
 				transition: 0.2s ease;
 				box-sizing: border-box;
@@ -221,7 +221,7 @@ for (const post of allPosts) {
 			}
 			.cluster-section.is-featured li a {
 				border-color: rgba(201, 169, 110, 0.3);
-				background: rgba(255, 255, 255, 0.03);
+				background: var(--color-surface);
 			}
 
 			@media (max-width: 900px) {

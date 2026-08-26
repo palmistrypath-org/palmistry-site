@@ -1,16 +1,18 @@
 ---
-import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
+import EditorialHero from '../components/EditorialHero.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import RelatedArticles from '../components/RelatedArticles.astro';
 import { SITE_TITLE } from '../consts';
+import { getArticleVisual } from '../data/visuals';
 
 type Props = CollectionEntry<'blog'>['data'] & { postId: string; affiliate?: boolean };
 
 const { title, description, pubDate, updatedDate, heroImage, relatedLesson, cluster, affiliate, postId } = Astro.props;
+const articleVisual = getArticleVisual(postId, cluster);
 
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href;
 
@@ -41,7 +43,7 @@ const breadcrumbSchema = JSON.stringify({
 
 <html lang="en">
 	<head>
-		<BaseHead title={`${title} — ${SITE_TITLE}`} description={description} type="article" />
+		<BaseHead title={`${title} — ${SITE_TITLE}`} description={description} image={heroImage ?? articleVisual.src} type="article" />
 		<script type="application/ld+json" set:html={articleSchema} />
 		<script type="application/ld+json" set:html={breadcrumbSchema} />
 		<style>
@@ -50,14 +52,9 @@ const breadcrumbSchema = JSON.stringify({
 				max-width: 100%;
 				margin: 0 auto;
 			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
+			.article-hero-wrap {
+				width: min(1180px, calc(100% - 3rem));
+				margin: 2.5rem auto 0;
 			}
 			.prose {
 				width: 720px;
@@ -66,18 +63,10 @@ const breadcrumbSchema = JSON.stringify({
 				padding: 1em;
 				color: var(--color-text);
 			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: var(--color-text-muted);
+			.article-date {
+				margin: 1.2rem 0 0;
+				font-size: 0.72em;
+				color: var(--color-text-secondary);
 			}
 			.last-updated-on {
 				font-style: italic;
@@ -85,9 +74,9 @@ const breadcrumbSchema = JSON.stringify({
 			.learn-cta {
 				margin-top: 3em;
 				padding: 1.35em 1.6em;
-				border: 1px solid rgba(201, 169, 110, 0.25);
+				border: 1px solid var(--color-border);
 				border-radius: 8px;
-				background: rgba(255, 255, 255, 0.02);
+				background: var(--color-surface);
 			}
 			.learn-cta-eyebrow {
 				font-family: var(--font-cinzel), serif;
@@ -112,8 +101,8 @@ const breadcrumbSchema = JSON.stringify({
 			.btn-lesson {
 				display: inline-block;
 				padding: 0.55em 1.25em;
-				background: var(--accent);
-				color: var(--color-bg);
+				background: var(--color-cta-bg);
+				color: var(--color-cta-text);
 				font-family: var(--font-cinzel), serif;
 				font-size: 0.66em;
 				letter-spacing: 0.06em;
@@ -123,13 +112,14 @@ const breadcrumbSchema = JSON.stringify({
 				transition: background 0.15s ease;
 			}
 			.btn-lesson:hover {
-				background: var(--accent-light);
+				background: var(--color-cta-hover);
+				color: var(--color-cta-text);
 			}
 			.btn-guide-sm {
 				font-size: 0.76em;
 				color: var(--color-text-muted);
 				text-decoration: none;
-				border-bottom: 1px solid rgba(201, 169, 110, 0.3);
+				border-bottom: 1px solid var(--color-border-strong);
 				transition: color 0.2s ease, border-color 0.2s ease;
 			}
 			.btn-guide-sm:hover {
@@ -154,7 +144,7 @@ const breadcrumbSchema = JSON.stringify({
 			.affiliate-notice {
 				font-size: 0.78em;
 				color: var(--color-text-muted);
-				border-left: 2px solid rgba(201, 169, 110, 0.22);
+				border-left: 2px solid var(--color-border-strong);
 				padding: 0.55em 1em;
 				margin-bottom: 2em;
 				line-height: 1.65;
@@ -163,12 +153,12 @@ const breadcrumbSchema = JSON.stringify({
 				color: var(--color-text-muted);
 				text-decoration: underline;
 				text-underline-offset: 2px;
-				text-decoration-color: rgba(201, 169, 110, 0.3);
+				text-decoration-color: var(--color-border-strong);
 				transition: color 0.2s ease, text-decoration-color 0.2s ease;
 			}
 			.affiliate-notice a:hover {
 				color: var(--accent);
-				text-decoration-color: rgba(201, 169, 110, 0.6);
+				text-decoration-color: var(--color-teal);
 			}
 			/* Affiliate buy links inside article content */
 			:global(.book-buy-link) {
@@ -177,8 +167,8 @@ const breadcrumbSchema = JSON.stringify({
 				font-size: 0.67em;
 				letter-spacing: 0.09em;
 				text-transform: uppercase;
-				color: var(--color-bg);
-				background: var(--accent);
+				color: var(--color-cta-text);
+				background: var(--color-cta-bg);
 				text-decoration: none;
 				padding: 0.42em 1.1em;
 				border-radius: 3px;
@@ -186,7 +176,7 @@ const breadcrumbSchema = JSON.stringify({
 				transition: background 0.2s ease;
 			}
 			:global(.book-buy-link:hover) {
-				background: var(--accent-light);
+				background: var(--color-cta-hover);
 				text-decoration: none;
 			}
 		</style>
@@ -196,12 +186,9 @@ const breadcrumbSchema = JSON.stringify({
 		<Header />
 		<main id="main-content" tabindex="-1">
 			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
-						<div class="date">
+				<div class="article-hero-wrap">
+					<EditorialHero title={title} description={description} visual={articleVisual}>
+						<div class="article-date">
 							<FormattedDate date={pubDate} />
 							{
 								updatedDate && (
@@ -211,9 +198,9 @@ const breadcrumbSchema = JSON.stringify({
 								)
 							}
 						</div>
-						<h1>{title}</h1>
-						<hr />
-					</div>
+					</EditorialHero>
+				</div>
+				<div class="prose">
 					{affiliate && (
 						<p class="affiliate-notice">
 							This article contains affiliate links. If you buy through them, we earn a small commission at no extra cost to you. <a href="/affiliate-disclosure/">Affiliate disclosure.</a>

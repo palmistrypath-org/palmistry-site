@@ -1,0 +1,105 @@
+---
+type LineVariant = 'all-lines' | 'heart-line' | 'head-line' | 'life-line' | 'fate-line';
+type MountName = 'jupiter' | 'saturn' | 'apollo' | 'mercury' | 'venus' | 'luna' | 'lower-mars' | 'upper-mars' | 'plain-of-mars' | 'mars';
+
+interface Props {
+	variant: LineVariant | 'mounts-overview' | 'single-mount' | 'unlabeled' | 'callout-ready' | 'left-hand';
+	mount?: MountName;
+	caption?: string;
+}
+
+const { variant, mount, caption } = Astro.props;
+const ROOT = '/images/editorial-mystic/diagrams';
+
+const lines: Record<LineVariant, { src: string; label: string; alt: string; tone: string }> = {
+	'all-lines': { src: `${ROOT}/diagram-all-lines-visible-4x5.webp`, label: 'Four major lines', alt: 'Palm diagram showing the heart, head, life, and fate lines together', tone: 'mixed' },
+	'heart-line': { src: `${ROOT}/diagram-heart-line-highlighted-4x5.webp`, label: 'Heart line', alt: 'Palm diagram with the heart line highlighted across the upper palm', tone: 'heart' },
+	'head-line': { src: `${ROOT}/diagram-head-line-highlighted-4x5.webp`, label: 'Head line', alt: 'Palm diagram with the head line highlighted across the middle palm', tone: 'head' },
+	'life-line': { src: `${ROOT}/diagram-life-line-highlighted-4x5.webp`, label: 'Life line', alt: 'Palm diagram with the life line highlighted as an arc around the thumb', tone: 'life' },
+	'fate-line': { src: `${ROOT}/diagram-fate-line-highlighted-4x5.webp`, label: 'Fate line', alt: 'Palm diagram with the fate line highlighted vertically through the center', tone: 'fate' },
+};
+
+const mountRegions: Record<Exclude<MountName, 'mars'>, { label: string; left: number; top: number; width: number; height: number }> = {
+	jupiter: { label: 'Jupiter', left: 38, top: 35, width: 13, height: 9 },
+	saturn: { label: 'Saturn', left: 49, top: 34, width: 13, height: 9 },
+	apollo: { label: 'Apollo', left: 60, top: 36, width: 13, height: 9 },
+	mercury: { label: 'Mercury', left: 69, top: 43, width: 12, height: 10 },
+	venus: { label: 'Venus', left: 30, top: 58, width: 22, height: 28 },
+	luna: { label: 'Luna', left: 66, top: 64, width: 14, height: 24 },
+	'lower-mars': { label: 'Lower Mars', left: 32, top: 47, width: 13, height: 11 },
+	'upper-mars': { label: 'Upper Mars', left: 68, top: 52, width: 13, height: 11 },
+	'plain-of-mars': { label: 'Plain of Mars', left: 48, top: 53, width: 20, height: 22 },
+};
+
+const overviewOrder = ['jupiter', 'saturn', 'apollo', 'mercury', 'venus', 'luna', 'lower-mars', 'upper-mars', 'plain-of-mars'] as const;
+const selectedMounts = mount === 'mars' ? ['lower-mars', 'upper-mars', 'plain-of-mars'] : mount ? [mount] : [];
+const overviewMarkers = overviewOrder.map((name, index) => {
+	const region = mountRegions[name];
+	return { number: index + 1, style: `--left:${region.left}%;--top:${region.top}%` };
+});
+const mountHighlights = selectedMounts.map((name) => {
+	const region = mountRegions[name as Exclude<MountName, 'mars'>];
+	return { style: `--left:${region.left}%;--top:${region.top}%;--width:${region.width}%;--height:${region.height}%` };
+});
+
+let src = `${ROOT}/diagram-unlabeled-base-4x5.webp`;
+let alt = 'Unlabeled palm diagram ready for observation or annotation';
+let label = '';
+if (variant in lines) {
+	const config = lines[variant as LineVariant];
+	src = config.src;
+	alt = config.alt;
+	label = config.label;
+} else if (variant === 'mounts-overview') {
+	src = `${ROOT}/diagram-mounts-overview-4x5.webp`;
+	alt = 'Palm diagram showing the nine teaching regions used for the seven named mounts, including the two Mars regions and central Plain of Mars';
+	label = 'Mount regions';
+} else if (variant === 'callout-ready') {
+	src = `${ROOT}/diagram-callout-ready-4x5.webp`;
+	alt = 'Palm diagram with neutral callout points ready for an exercise';
+} else if (variant === 'left-hand') {
+	src = `${ROOT}/diagram-left-hand-mirror-4x5.webp`;
+	alt = 'Mirrored left-hand palm diagram with the four major lines highlighted';
+} else if (variant === 'single-mount' && selectedMounts.length > 0) {
+	label = selectedMounts.map((name) => mountRegions[name as Exclude<MountName, 'mars'>].label).join(', ');
+	alt = `Palm diagram with ${label} highlighted using a real interface overlay`;
+}
+---
+
+<figure class={`palm-diagram variant-${variant}`}>
+	<div class="diagram-canvas">
+		<img src={src} alt={alt} width="960" height="1192" loading="lazy" decoding="async" />
+		{variant === 'mounts-overview' && overviewMarkers.map((marker) => <span class="number-marker" style={marker.style} aria-hidden="true">{marker.number}</span>)}
+		{variant === 'single-mount' && mountHighlights.map((highlight) => <span class="mount-highlight" style={highlight.style} aria-hidden="true"></span>)}
+	</div>
+	{label && <p class="diagram-label">{label}</p>}
+	{variant === 'all-lines' && (
+		<ul class="line-legend" aria-label="Major line color key">
+			<li><span class="swatch heart"></span>Heart line</li><li><span class="swatch head"></span>Head line</li><li><span class="swatch life"></span>Life line</li><li><span class="swatch fate"></span>Fate line</li>
+		</ul>
+	)}
+	{variant === 'mounts-overview' && (
+		<ol class="mount-legend" aria-label="Mount region key">
+			{overviewOrder.map((name) => <li>{mountRegions[name].label}</li>)}
+		</ol>
+	)}
+	{caption && <figcaption>{caption}</figcaption>}
+</figure>
+
+<style>
+	.palm-diagram { width: min(100%, 34rem); margin: 2.5rem auto; padding: 1rem; box-sizing: border-box; background: var(--color-surface); border: 1px solid var(--color-border); box-shadow: 0 8px 28px rgba(63, 51, 35, 0.06); }
+	.diagram-canvas { position: relative; line-height: 0; overflow: hidden; background: var(--color-ivory); }
+	.diagram-canvas img { display: block; width: 100%; height: auto; }
+	.diagram-label { margin: 0.8rem 0 0; text-align: center; color: var(--color-teal-deep); font-family: var(--font-cinzel), serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+	.number-marker { position: absolute; left: var(--left); top: var(--top); display: grid; place-items: center; width: 1.55rem; height: 1.55rem; transform: translate(-50%, -50%); border-radius: 50%; background: var(--color-teal-deep); color: white; font: 700 0.68rem/1 var(--font-lora), serif; box-shadow: 0 0 0 3px rgba(255, 250, 241, 0.86); }
+	.mount-highlight { position: absolute; left: var(--left); top: var(--top); width: var(--width); height: var(--height); transform: translate(-50%, -50%); border: 3px solid var(--color-teal-dark); border-radius: 50%; background: rgba(95, 138, 145, 0.3); box-shadow: 0 0 0 5px rgba(255, 250, 241, 0.72); }
+	.line-legend, .mount-legend { list-style: none; display: flex; justify-content: center; flex-wrap: wrap; gap: 0.5rem 1rem; margin: 1rem 0 0; padding: 0; color: var(--color-text-secondary); font-size: 0.72rem; line-height: 1.4; }
+	.line-legend li { display: flex; align-items: center; gap: 0.35rem; }
+	.swatch { width: 0.85rem; height: 0.2rem; background: var(--color-gold-ink); }
+	.swatch.heart { background: #a45c4a; } .swatch.life { background: var(--color-teal-dark); } .swatch.fate { background: #b2871e; }
+	.mount-legend { counter-reset: mount; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	.mount-legend li { counter-increment: mount; }
+	.mount-legend li::before { content: counter(mount) '. '; color: var(--color-teal-dark); font-weight: 700; }
+	figcaption { margin-top: 0.9rem; color: var(--color-text-muted); font-size: 0.76rem; font-style: italic; line-height: 1.5; text-align: center; }
+	@media (max-width: 480px) { .palm-diagram { padding: 0.6rem; } .mount-legend { grid-template-columns: repeat(2, minmax(0, 1fr)); font-size: 0.68rem; } .number-marker { width: 1.35rem; height: 1.35rem; font-size: 0.6rem; } }
+</style>
