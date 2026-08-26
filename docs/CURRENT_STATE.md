@@ -3,7 +3,7 @@
 Last repo inventory: 2026-08-20. This page summarizes observed implementation; source code remains authoritative.
 
 ## Product/site
-Palmistry Path is a live-oriented static Astro learning site at `palmistrypath.com`, with a dark atmospheric brand, structured learning path, article library, glossary/search, lead magnet flow, and early paid-product/waitlist groundwork.
+Palmistry Path is a live-oriented static Astro learning site at `palmistrypath.com`, with a light Editorial Mystic brand, structured learning path, article library, glossary/search, lead magnet flow, and early paid-product/waitlist groundwork.
 
 ## Learning content
 The `lessons` collection is implemented across four modules, 25 lessons: Foundations 5, Lines 6, Mounts 8, Advanced 6 (verified 2026-08-20). Module titles and difficulty labels are set in `src/consts.ts`; lesson titles come from frontmatter. Route slugs differ from titles and are stable:
@@ -97,7 +97,7 @@ Google AdSense is temporarily disabled by leaving `ADSENSE_PUB_ID` empty in `src
 Specialized email and lead-magnet planning docs remain in `docs/`.
 
 ## Visual assets
-The repo contains homepage path imagery, lesson line imagery, mount SVG diagrams, OG assets, and specialized visual-asset/creative-brief docs. The homepage hero and four module-path images are WebP (converted from PNG in the 2026-08 technical remediation wave), a ~97% byte reduction; the superseded PNGs were removed.
+The site uses the locked Editorial Mystic system documented in `visual-system.md`: warm ivory/parchment surfaces, charcoal text, muted teal, sand, and restrained gold. Thirty-nine optimized WebP derivatives from the 54-file production pack live under `public/images/editorial-mystic/` (about 0.97 MB versus about 192.4 MB of local source PNGs); 31 are surfaced through current templates/pages. The homepage uses paired desktop/mobile hero sources, four path illustrations, and a guide promo. Blog articles and module/category pages use `EditorialHero.astro` with centralized mappings in `src/data/visuals.ts`. `PalmDiagram.astro` makes Diagram A the primary lines/mounts system with real HTML/CSS labels and overlays; older dark line plates remain only for detailed comparisons not represented by the supplied Diagram A set. Both Quick Start Guide covers are retained, with option A live on `/guide/`; the interior/product concepts remain source references for later rebuilds. Full status is in `visual-asset-manifest.md` and `visual-assets-roadmap.md`.
 
 ## Quality tooling
 Available scripts include:

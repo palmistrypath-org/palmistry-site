@@ -9,6 +9,21 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
+**Visual integration branch `codex/palmistry-visual-integration` (2026-08-25):**
+the locked Editorial Mystic system and 54-file production pack are integrated in
+an isolated worktree without modifying live `.ai-ops` Relay state. The site now
+uses centralized light-theme tokens, the rebuilt homepage, mapped reusable
+article/category heroes, and Diagram A with real HTML/CSS labels and dynamic
+mount overlays. Thirty-nine optimized WebPs are committed under
+`public/images/editorial-mystic/`; 31 are currently surfaced. The 192 MB source
+pack remains local/Git-ignored. Both guide covers are retained, option A is live,
+and the PDF/interior rebuild is explicitly deferred. Source of truth:
+`docs/visual-system.md`, `docs/visual-asset-manifest.md`, and
+`docs/visual-assets-roadmap.md`. Known bounded remainder: detailed line-variation
+figures still use legacy dark plates when no supplied Diagram A equivalent exists;
+replace them only with content-equivalent Diagram A commissions. Review the PR,
+do not merge automatically, and keep Relay operational files untouched.
+
 **Relay PP-RELAY-034 revision 2 (2026-08-21) corrected two residual
 evidence-boundary problems Director review found in the revision-1 diff**
 to `src/content/lessons/advanced/01-minor-lines-overview.mdx`'s opening

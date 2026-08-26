@@ -60,6 +60,8 @@ Routing: `src/pages/learn/[module]/[lesson].astro` -> `/learn/<module>/<lesson>/
 - `src/layouts/BlogPost.astro` - blog article layout and structured data
 - `src/components/BaseHead.astro` - shared head/SEO behavior
 - `src/components/Header.astro`, `Footer.astro` - global navigation/footer
+- `src/components/EditorialHero.astro`, `src/data/visuals.ts` - reusable article/category hero layout and centralized visual mapping
+- `src/components/PalmDiagram.astro` - Diagram A renderer with real HTML/CSS labels, numbered mount markers, and dynamic mount overlays
 - `src/components/LessonPath.astro`, `LessonFooter.astro` - learning flow UI
 - `src/pages/index.astro` - homepage
 - `src/pages/learn/` - curriculum routes
@@ -70,7 +72,9 @@ Routing: `src/pages/learn/[module]/[lesson].astro` -> `/learn/<module>/<lesson>/
 - `src/pages/premium-guide.astro` - premium-guide/waitlist page
 - `src/private/print/complete-reference.astro` - preserved Complete Reference PDF source, intentionally outside public routing
 - `src/styles/global.css` - global styling
-- `public/` - static images, downloads, robots/headers, OG assets
+- `public/` - static images, downloads, robots/headers, OG assets; optimized Editorial Mystic production assets live under `public/images/editorial-mystic/`
+
+High-resolution Claude/Higgsfield inputs remain in a local Git-ignored `visual-production/` source pack. Only reviewed, optimized derivatives belong in public site paths; see `docs/visual-system.md` for the asset workflow.
 
 ## Search/indexing
 `npm run build` runs Astro's static build and Pagefind integration, outputting the built site to `dist/` and Pagefind data under the build output.
