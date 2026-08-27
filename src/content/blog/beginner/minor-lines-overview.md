@@ -10,7 +10,7 @@ By this point in the beginner series, you've likely spent time with the [four ma
 
 Keep looking, though, and other lines may come into view: a faint vertical rising toward the ring finger, one or two short horizontal marks near the base of the little finger, a light arc tracing the upper palm just below the fingers. These are the minor lines — a secondary layer of the hand that the classical tradition names and interprets individually, even though no single one of them appears on every hand.
 
-This article is an orientation, not a deep dive. Four minor lines already have their own dedicated articles on this site — the Sun Line, the Mercury Line, the marriage and relationship lines, and the Girdle of Venus — and each covers its line in full: location, traditional associations, variations, and common myths. What follows here is the map that shows how the four fit together, what they have in common, and how much interpretive weight to give them before you go looking for any one of them on your own hand.
+This article is an orientation, not a deep dive. Four minor lines get in-depth treatment below — the Sun Line, the Mercury Line, the marriage and relationship lines, and the Girdle of Venus — each with its own dedicated article covering location, traditional associations, variations, and common myths in full. A few other individually named minor markings also have their own dedicated articles on this site, linked further down. What follows here is the map that shows how the four in-depth lines fit together, what they have in common, and how much interpretive weight to give them before you go looking for any one of them on your own hand.
 
 ## What makes a line "minor"
 
