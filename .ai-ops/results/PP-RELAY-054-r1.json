@@ -1,0 +1,27 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-054",
+  "revision": 1,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Fixed the two stale Group 1 'Next 10' table rows in docs/editorial-backlog.md: Via Lascivia (#8) and Ring of Solomon (#9) were already correctly described as published in the status paragraph and their own article-details sections, but their scored-table rows lacked the strikethrough-plus-published-date marker every other shipped row in the same table uses. Both rows now read '~~title~~ (published <date>)' matching the dates already recorded elsewhere in the file. No score, ordering, title text, slug, or editorial recommendation changed.",
+  "pr_number": null,
+  "verification": [
+    "Confirmed src/content/blog/beginner/via-lascivia-palmistry.md and src/content/blog/beginner/ring-of-solomon-palmistry.md exist in the live blog collection",
+    "Confirmed the 72-post count already stated in the backlog status paragraph matches the current published count",
+    "Confirmed none of Group 2 items 21-35 have a matching live blog file, so their unstruck status is correct and unchanged",
+    "npm run content-audit passed (72 blog posts, 25 lessons valid)",
+    "git diff --check passed (no whitespace/conflict issues)"
+  ],
+  "source_preflight": null,
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": ["grep/find over src/content/blog", "manual table diff review", "npm run content-audit", "git diff --check"],
+    "validation": ["npm run content-audit", "git diff --check"],
+    "notes": "Local checkout's main had diverged from origin/main with no merge base at startup (working tree was clean). Followed the AGENTS.md clean-divergence recovery: left local main untouched, verified origin/main tip (72a9bc7) matched the state-commit hint in the dispatch payload, and branched claude/relay-PP-RELAY-054-backlog-status directly from origin/main."
+  }
+}
