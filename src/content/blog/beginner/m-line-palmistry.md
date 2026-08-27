@@ -68,7 +68,7 @@ Chinese palmistry similarly attends to the quality of the principal lines as exp
 
 **The M indicates leadership ability.** Again, this is not a classical association. Qualities associated with leadership in the tradition — strong Jupiter mount, a clear Sun line, a long and well-formed index finger, a firmly set thumb — are read from those features individually, not from the overall letter shape of the palm's creases.
 
-**The M signals strong intuition.** Intuition in palmistry is traditionally associated with the intuition line (a small curved line on the percussion side of the hand), a well-formed Luna mount, and specific qualities of the head line — particularly a drooping trajectory toward the Luna mount. The M shape is not part of that traditional intuitive reading.
+**The M signals strong intuition.** Intuition in palmistry is traditionally associated with the [intuition line](/blog/beginner/intuition-line-palmistry) (a small curved line on the percussion side of the hand), a well-formed Luna mount, and specific qualities of the head line — particularly a drooping trajectory toward the Luna mount. The M shape is not part of that traditional intuitive reading.
 
 **The M offers protection from deception.** This is a very specific popular claim with no traceable classical source. It does not appear in Cheiro, Benham, Gettings, West, or Fincham.
 

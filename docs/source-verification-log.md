@@ -1559,3 +1559,65 @@ No statement in either corrected passage goes beyond this table. The removed wor
 **Reciprocal navigation:** Unchanged from revision 1. `fate-line.md`'s existing link to `broken-fate-line-meaning.md` (added in Pass 15) is preserved unchanged. `no-fate-line-meaning.md`'s "Broken or fragmented fate line" paragraph links to `broken-fate-line-meaning.md`, which it did not link to before revision 1; no other paragraph in that article links there, so this is not duplicative.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/fate-line.md src/content/blog/beginner/no-fate-line-meaning.md` (20 pre-existing, out-of-scope findings; see above). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`.
+
+## Pass 17 — Intuition Line Meaning in Palmistry, revision 5: reciprocal-link restoration and bookkeeping correction — `blog/beginner/intuition-line-palmistry.md` (Relay PP-RELAY-050, revision 5, 2026-08-27)
+
+Scope: Relay PP-RELAY-050 revision 5 (`SOURCE_SENSITIVE`), publishing
+`src/content/blog/beginner/intuition-line-palmistry.md`. This pass records
+the article's full accepted-into-`main` history and corrects a bookkeeping
+error found in revision 4.
+
+**Revisions 1–4 (PRs #91, #92, #93, #94; none merged).** Revision 1 built a
+six-file package bounded by
+`.ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md` and passed
+CI, but Director review found four bounded source-integrity/correctness
+defects. Revision 2 removed the unqualified "line of clairvoyance" mention
+outside the FAQ, the unsupported "writing decades apart" chronology, the
+"easiest to confuse" superlative, and myths/FAQ wording that characterized
+Cheiro and Benham as denying psychic/clairvoyant claims. Revision 3 bounded
+Benham's paragraph to the approved intuitive-impressions/estimating-people
+association, removed an unsupported "that Cheiro doesn't" source-silence
+inference, and removed an unsupported negative characterization of the
+authors' intent plus an unsupported "easy error" likelihood claim. Revision 4
+removed the hunch-accuracy myth's unsupported claim that the authors'
+historical accounts were "not with the accuracy" of any impression, and
+replaced two "what their historical readings do and don't claim" phrases
+(meta description and introduction) with neutral wording. Each revision
+passed CI plus independent Director reruns of the claim-risk scan, the
+117-page build, the content audit (72 blog posts / 25 lessons), the full
+audit suite, and `git diff --check`. Revision 4's article prose was found
+**source-clean** by Director review. Full per-revision correction tables and
+claim-level evidence maps for revisions 1–4 remain in Git history on the
+closed `claude/relay-PP-RELAY-050-intuition-line{,-r2,-r3,-r4}` branches;
+they are not reproduced here because revision 5 makes no article-prose
+change.
+
+**Why revision 4 was not merged.** Revision 4's cumulative diff, reviewed
+against `main`, had dropped the previously approved reciprocal navigation
+link from `src/content/blog/beginner/m-line-palmistry.md` — even though
+revision 4's own result artifact, changelog entry, editorial-backlog entry,
+and this log's prior Pass 17 text all stated the link was present/preserved.
+PR #94 was closed without merging on that basis. No article-prose defect was
+found; the failure was an implementation/bookkeeping inconsistency, not a
+source-integrity one.
+
+**Revision 5 (this pass).** Bounded implementation/documentation-consistency
+repair only — not a new source-review pass, per the task packet. Two file
+changes:
+
+1. `src/content/blog/beginner/intuition-line-palmistry.md` — restored
+   verbatim from the Director-approved revision-4 content (PR #94 branch),
+   unchanged. No frontmatter or prose edit.
+2. `src/content/blog/beginner/m-line-palmistry.md` — restored the single
+   previously approved reciprocal link: the existing words "the intuition
+   line" in the existing "The M signals strong intuition" myth entry now
+   link to `/blog/beginner/intuition-line-palmistry`. No other text in that
+   file changed.
+
+This log, the CHANGELOG entry, `docs/editorial-backlog.md`, and
+`.ai-ops/results/PP-RELAY-050-r5.json` are corrected to state plainly that
+revision 5 is the version that actually ships, that revisions 1–4 were
+reviewed and closed without merging, and that no earlier revision was
+finally accepted or merged.
+
+**Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/intuition-line-palmistry.md` (article content unchanged from revision 4; same 1 disclosed myth-heading-pattern finding). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`. `git diff` of `m-line-palmistry.md` confirmed link-only on the existing words "intuition line," with no other change to that file.
