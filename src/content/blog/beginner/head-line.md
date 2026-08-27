@@ -50,7 +50,7 @@ A clean, well-defined head line is traditionally associated with concentrated me
 
 ### Curvature and endpoint
 
-**A straight line running horizontally across the palm** is traditionally associated with practical, grounded thinking — a mind that deals well with concrete problems, tends toward the systematic, and is more at home with the tangible than the abstract. This is not the same as being uncreative: it describes a natural mental orientation, not a limitation.
+**A straight line running horizontally across the palm** is traditionally associated with practical, grounded thinking — a mind that deals well with concrete problems, tends toward the systematic, and is more at home with the tangible than the abstract. This is not the same as being uncreative: it describes a natural mental orientation, not a limitation. The dedicated article on [straight vs. curved head lines](/blog/beginner/straight-head-line-palmistry/) compares this variation with the slope toward Luna described below.
 
 **A line that slopes gently downward toward the Mount of Luna** — the lower outer area of the palm, below the percussion and above the wrist — is associated with imaginative and intuitive tendencies. The Mount of Luna is traditionally associated with imagination, the interior life, and the receptive and unconscious dimensions of experience; a head line that inclines toward it is read as a mind that draws readily on those qualities.
 
