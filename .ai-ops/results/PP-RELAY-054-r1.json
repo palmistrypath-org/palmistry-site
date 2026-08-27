@@ -5,7 +5,7 @@
   "risk_class": "STANDARD",
   "result": "READY_FOR_REVIEW",
   "summary": "Fixed the two stale Group 1 'Next 10' table rows in docs/editorial-backlog.md: Via Lascivia (#8) and Ring of Solomon (#9) were already correctly described as published in the status paragraph and their own article-details sections, but their scored-table rows lacked the strikethrough-plus-published-date marker every other shipped row in the same table uses. Both rows now read '~~title~~ (published <date>)' matching the dates already recorded elsewhere in the file. No score, ordering, title text, slug, or editorial recommendation changed.",
-  "pr_number": null,
+  "pr_number": 100,
   "verification": [
     "Confirmed src/content/blog/beginner/via-lascivia-palmistry.md and src/content/blog/beginner/ring-of-solomon-palmistry.md exist in the live blog collection",
     "Confirmed the 72-post count already stated in the backlog status paragraph matches the current published count",
