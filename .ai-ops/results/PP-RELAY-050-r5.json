@@ -1,0 +1,57 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-050",
+  "revision": 5,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revisions 1-4 (PRs #91, #92, #93, #94) each corrected Director-flagged source-integrity/correctness defects in src/content/blog/beginner/intuition-line-palmistry.md across successive rounds of review, bounded by the Director-verified Cheiro/Benham evidence in .ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md, and each passed CI, but none was merged. Revision 4's article prose was found source-clean by Director review; PR #94 was closed without merging solely because its cumulative diff had silently dropped the previously approved reciprocal navigation link from m-line-palmistry.md, while revision 4's own result artifact, changelog, and backlog entry incorrectly stated the link was present. Revision 5 is a bounded implementation/documentation-consistency repair, not a new source-review pass: it restores the revision-4 article verbatim (no frontmatter or prose change) from the closed PR #94 branch, and restores the one dropped reciprocal link in m-line-palmistry.md - the existing words 'the intuition line' in the existing 'The M signals strong intuition' myth entry now link to /blog/beginner/intuition-line-palmistry, with no other change to that file. docs/source-verification-log.md (Pass 17), the PP-RELAY-050 CHANGELOG entry, and docs/editorial-backlog.md were rewritten to state accurately that revision 5 is the version that ships (71 -> 72 published blog posts) and that revisions 1-4 were reviewed and closed without merging; no earlier revision is claimed as finally accepted or merged.",
+  "pr_number": 96,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/intuition-line-palmistry.md (1 finding: the disclosed myth-heading 'proves' pattern, unchanged from revision 4, left in place per the established myth-heading pattern used elsewhere on the site)",
+    "npm run build (117 pages, clean)",
+    "npm run content-audit (72 blog posts, 25 lessons valid)",
+    "npm run audit:all (links incl. orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)",
+    "Manual restricted-term regex search (clairvoyance|clairvoyant|psychic|medium|supernatural|prophetic|empath|rare|seldom|most|many|often|commonly|typically|generally|usually|accurate|reliable|predict) with per-occurrence disposition - clean, matches revision-4 disposition",
+    "Manual regex search for unsupported attributions (Gettings|Fincham|West|Indian|Chinese|modern palmists|contemporary practitioners|some writers|experts) - zero matches",
+    "Manual regex search for revision-2/3/4-rejected phrasing (writing decades apart|easiest to confuse|Neither Cheiro nor Benham|Nothing in either author's account|other classical writers|covers how this line|line of clairvoyance|situations through impression|rather than deliberate analysis|Cheiro doesn't|not a claim about paranormal ability|easy error|not with the accuracy|readings do and don't claim) - only the single permitted FAQ 'Line of Clairvoyance' mention remains; no other match",
+    "Manual character-count check of the meta description - 148 characters, inside the required 140-160 range",
+    "Manual word-count check of article body - approximately 1,148 words, inside the required 900-1,200 range",
+    "git diff of src/content/blog/beginner/m-line-palmistry.md confirmed link-only on the existing words 'intuition line', with no other change to that file",
+    "GitHub MCP list_pull_requests for startup-gate duplicate-PR check (no open Relay PR for this task/revision found)",
+    "git branch/log inspection confirming no existing claude/relay-PP-RELAY-050-...-r5 branch or .ai-ops/results/PP-RELAY-050-r5.json prior to this run"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "This revision made no article-prose change; the article body is byte-for-byte the Director-approved revision-4 content, which Director review already found source-clean. This pass re-verified that content against the controlling evidence and the full restricted-term/rejected-phrase search list rather than re-deriving a new claim-level evidence map. Full revision 1-4 correction history and revision-5 disposition recorded in docs/source-verification-log.md ('Pass 17 - Intuition Line Meaning in Palmistry, revision 5'). No statement in the article exceeds .ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md. No quotation marks are used against Cheiro's or Benham's wording anywhere in the article (both paraphrased throughout), so no verbatim quotation check was required."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read/Edit/Write on article and docs files",
+      "npm run audit:claim-risk",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check",
+      "GitHub MCP list_pull_requests for startup-gate duplicate-PR check"
+    ],
+    "validation": [
+      "audit:claim-risk",
+      "build",
+      "content-audit",
+      "audit:all",
+      "git diff --check"
+    ],
+    "notes": "Mid-run, the local persistent checkout's main branch (stale, last synced at the PP-RELAY-042 revision-9 dispatch point) was briefly checked out and its .ai-ops/state.json/CURRENT_TASK.md content was read as if current before the discrepancy was caught and traced to local main having diverged from origin/main with no clean fast-forward (confirmed via git log/diff: local main topped out at commit e0a8138, 50 commits behind and diverged from origin/main's actual tip 8d7d136453849fed5b14ac24c5a8ca7be81f947d, which matches both state.json's authoritative PP-RELAY-050 revision-5 dispatch and the routine dispatch payload's stale/duplicate-detection state-commit hint). Followed the documented clean-divergence recovery: verified origin remote identity, left local main untouched, and branched claude/relay-PP-RELAY-050-intuition-line-r5 directly from verified origin/main. Revisions 1-4's branches/PRs (#91-#94) were never merged, so the article and its supporting doc changes did not yet exist on origin/main; this revision-5 branch restores the article verbatim from origin/claude/relay-PP-RELAY-050-intuition-line-r4 (the closed PR #94 branch) and applies only the authorized revision-5 link restoration and bookkeeping corrections."
+  }
+}
