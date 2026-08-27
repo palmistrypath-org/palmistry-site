@@ -5,7 +5,7 @@
   "risk_class": "STANDARD",
   "result": "READY_FOR_REVIEW",
   "summary": "Added checkPublishedRowDrift to scripts/audit-content.mjs, run as part of npm run content-audit. It parses each scored docs/editorial-backlog.md table row, reads the row's existing '~~strikethrough~~' published-status marker, and fails when that marker disagrees with whether a matching file exists in src/content/blog/ (matched by filename, independent of subfolder). A row with an unparseable/empty slug fails closed with an explicit error rather than being silently skipped, matching the existing checkPublishedCountDrift convention it sits alongside. Current main had no live drift to correct, so docs/editorial-backlog.md itself is unchanged; only scripts/audit-content.mjs and docs/CHANGELOG.md were touched.",
-  "pr_number": null,
+  "pr_number": 101,
   "verification": [
     "npm run content-audit passes on clean main + this change (72 blog posts, 25 lessons valid)",
     "Controlled mismatch #1: temporarily removed the strikethrough/published-date marker from the currently-published row 'minor-lines-overview' (item 1) -> content-audit failed with a single clear error naming the slug and the missing marker; restored via the backup file and re-verified clean pass",
@@ -36,6 +36,6 @@
       "controlled mismatch fail/restore-pass demonstration (both directions)",
       "existing checkPublishedCountDrift regression check"
     ],
-    "notes": "Local checkout's main had diverged from origin/main with no merge base at startup (working tree was clean). Followed the AGENTS.md clean-divergence recovery: left local main untouched, verified origin/main tip (83bf9eb75829e3b8fd6e4677cc2b915aaf7a9d0a, matching the dispatch payload's state commit) and branched claude/relay-PP-RELAY-055-published-drift-audit directly from origin/main. No fixture/self-test file or package.json script was added — the guard was demonstrated directly against the real backlog table using the same mechanism checkPublishedCountDrift already relies on, per the task packet's 'only as directly necessary' scope guidance; pr_number will be filled in after PR creation."
+    "notes": "Local checkout's main had diverged from origin/main with no merge base at startup (working tree was clean). Followed the AGENTS.md clean-divergence recovery: left local main untouched, verified origin/main tip (83bf9eb75829e3b8fd6e4677cc2b915aaf7a9d0a, matching the dispatch payload's state commit) and branched claude/relay-PP-RELAY-055-published-drift-audit directly from origin/main. No fixture/self-test file or package.json script was added — the guard was demonstrated directly against the real backlog table using the same mechanism checkPublishedCountDrift already relies on, per the task packet's 'only as directly necessary' scope guidance."
   }
 }
