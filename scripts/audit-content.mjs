@@ -8,7 +8,7 @@
  */
 
 import { readFileSync, readdirSync, statSync } from 'fs';
-import { dirname, join, relative, resolve } from 'path';
+import { basename, dirname, join, relative, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -18,6 +18,18 @@ const LESSONS_DIR = resolve(ROOT, 'src', 'content', 'lessons');
 const EDITORIAL_BACKLOG_PATH = resolve(ROOT, 'docs', 'editorial-backlog.md');
 const PUBLISHED_COUNT_RE = /\*\*Published:\*\*\s*(\d+)\s*blog posts/;
 const SITE_ORIGIN = 'https://palmistrypath.com';
+
+// Matches the general shape of a scored backlog table row: "| # | ... |"
+// where the first cell is a bare integer. The scoring-key/cannibalization
+// tables use different column shapes and never start with a bare integer
+// (e.g. "| 11 Short Head Line |"), so this shape alone reliably identifies a
+// scored row even when its later cells (title, slug) are malformed and fail
+// the stricter extraction below.
+const BACKLOG_SCORED_ROW_SHAPE_RE = /^\|\s*\d+\s*\|/;
+
+// Extracts the title and backtick-wrapped slug from a scored row that
+// follows the well-formed "| # | Title | `slug` | ..." syntax.
+const BACKLOG_SCORED_ROW_RE = /^\|\s*\d+\s*\|\s*(.+?)\s*\|\s*`([^`]+)`\s*\|/;
 
 const DESCRIPTION_MAX = 170;
 const VALID_BLOG_SUBFOLDERS = new Set(['beginner', 'intermediate', 'advanced']);
@@ -149,6 +161,65 @@ function checkPublishedCountDrift(actualCount, errors) {
 	}
 }
 
+/**
+ * Guard against scored docs/editorial-backlog.md rows drifting out of sync
+ * with the actual published blog collection (see PP-RELAY-054, which
+ * corrected two stale published-status markers). A row's explicit status
+ * marker is the `~~strikethrough~~` around its title — the same convention
+ * already used consistently for every published row in the scored tables.
+ *
+ * Fails closed in two ways: a row that doesn't match the expected
+ * "| # | Title | `slug` | ..." syntax at all is still recognized as a
+ * scored row (by its bare-integer first cell) and reported as an explicit
+ * error rather than silently skipped, and a row whose slug is empty or
+ * contains whitespace is likewise reported rather than ignored.
+ */
+function checkPublishedRowDrift(blogSlugs, errors) {
+	const source = sourcePath(EDITORIAL_BACKLOG_PATH);
+	let content;
+	try {
+		content = readFileSync(EDITORIAL_BACKLOG_PATH, 'utf8');
+	} catch {
+		errors.push(`[${source}] Could not read file to verify scored-row publication status`);
+		return;
+	}
+
+	let rowsChecked = 0;
+	for (const line of content.split(/\r?\n/)) {
+		if (!BACKLOG_SCORED_ROW_SHAPE_RE.test(line)) continue;
+		rowsChecked++;
+
+		const match = line.match(BACKLOG_SCORED_ROW_RE);
+		const slug = match?.[2]?.trim();
+		if (!match || !slug || /\s/.test(slug)) {
+			errors.push(
+				`[${source}] Scored row does not match the expected "| # | Title | \`slug\` | ..." syntax and cannot be safely checked against src/content/blog/: ${line.trim()}`,
+			);
+			continue;
+		}
+
+		const title = match[1];
+		const markedPublished = /^~~.*~~/.test(title);
+		const articleExists = blogSlugs.has(slug);
+
+		if (markedPublished && !articleExists) {
+			errors.push(
+				`[${source}] Row "${slug}" is marked published (strikethrough title) but no matching file exists in src/content/blog/ — correct the status marker or restore the article`,
+			);
+		} else if (!markedPublished && articleExists) {
+			errors.push(
+				`[${source}] Row "${slug}" is presented as outstanding but a matching article already exists in src/content/blog/ — mark it published (strikethrough the title)`,
+			);
+		}
+	}
+
+	if (rowsChecked === 0) {
+		errors.push(
+			`[${source}] Could not find any scored backlog rows to verify publication status against src/content/blog/`,
+		);
+	}
+}
+
 function checkDuplicateTitle(frontmatter, file, titlesSeen, label, errors) {
 	if (!frontmatter.title) return;
 	const key = frontmatter.title.trim().toLowerCase();
@@ -197,6 +268,9 @@ console.log(`  - ${blogFiles.length} blog post(s) in src/content/blog/`);
 console.log(`  - ${lessonFiles.length} lesson(s) in src/content/lessons/\n`);
 
 checkPublishedCountDrift(blogFiles.length, errors);
+
+const blogSlugs = new Set(blogFiles.map((file) => basename(file).replace(/\.mdx?$/i, '')));
+checkPublishedRowDrift(blogSlugs, errors);
 
 const blogTitles = new Map();
 const lessonTitles = new Map();

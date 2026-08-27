@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-055",
+  "revision": 2,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Main had never merged revision 1's checkPublishedRowDrift (PR #101 was closed without merging), so this revision implements the guard directly with the fail-closed remediation built in from the start. scripts/audit-content.mjs now first recognizes a scored docs/editorial-backlog.md row by its structural shape alone (a table row whose first cell is a bare integer, BACKLOG_SCORED_ROW_SHAPE_RE) before attempting the stricter '| # | Title | `slug` | ...' extraction (BACKLOG_SCORED_ROW_RE). A row that matches the broad shape but fails strict extraction, or whose slug is empty/contains whitespace, now produces an explicit content-audit error naming the offending line instead of being silently skipped. Revision 1's correct published-vs-outstanding comparison (via the row's ~~strikethrough~~ title marker against whether a matching file exists in src/content/blog/, matched by filename independent of subfolder) is preserved unchanged for well-formed rows. Confirmed the broader shape regex cannot false-positive on the Scoring Key or Cannibalization Risk tables, whose rows never start with a bare-integer cell. checkPublishedCountDrift is untouched and verified still intact. Current main had zero live published/outstanding drift and no malformed scored rows, so docs/editorial-backlog.md itself is unchanged; only scripts/audit-content.mjs and docs/CHANGELOG.md were touched.",
+  "pr_number": 102,
+  "verification": [
+    "npm run content-audit passes on clean main + this change (72 blog posts, 25 lessons valid)",
+    "Controlled mismatch #1 (published->outstanding): temporarily removed the strikethrough/published-date marker from the currently-published row 'minor-lines-overview' (item 1) -> content-audit failed with a single clear error naming the slug; restored via python3 round-trip edit and re-verified clean pass",
+    "Controlled mismatch #2 (outstanding->published): temporarily strikethrough-marked the currently-unpublished row 'teachers-square-palmistry' (item 21), which has no matching live file -> content-audit failed with a single clear error naming the slug; restored and re-verified clean pass",
+    "Controlled malformed-row proof (the revision-2 remediation): temporarily removed the backticks around the item-1 slug cell (`minor-lines-overview` -> minor-lines-overview) so the row keeps its bare-integer first cell (still recognized as a scored row) but fails the strict '| # | Title | `slug` | ...' extraction -> content-audit failed with a new explicit error naming the malformed line, instead of silently skipping it as revision 1's implementation would have; restored via git checkout and re-verified clean pass",
+    "Sanity check that checkPublishedCountDrift is unweakened: temporarily changed the documented '**Published:** 72 blog posts' count to 99 -> content-audit still failed with its existing count-mismatch error; restored via git checkout",
+    "Manually inspected docs/editorial-backlog.md's Scoring Key and Cannibalization Risk Summary tables to confirm neither has rows starting with a bare-integer first cell, so the new broad shape regex cannot misclassify them as scored rows",
+    "git diff --check passes",
+    "node --check scripts/audit-content.mjs passes"
+  ],
+  "source_preflight": null,
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "grep/read over docs/editorial-backlog.md, scripts/audit-content.mjs, the closed revision-1 PR #101 diff (fetched from the unmerged claude/relay-PP-RELAY-055-published-drift-audit branch), and its PP-RELAY-055-r1.json result artifact to recover revision 1's exact intended behavior before reimplementing it with the fix",
+      "manual controlled-mismatch and controlled-malformed-row demonstration (temporary edit + restore) covering both drift directions plus the new fail-closed malformed-row case",
+      "npm run content-audit",
+      "git diff --check",
+      "node --check scripts/audit-content.mjs"
+    ],
+    "validation": [
+      "npm run content-audit",
+      "git diff --check",
+      "node --check scripts/audit-content.mjs",
+      "controlled mismatch fail/restore-pass demonstration (both directions)",
+      "controlled malformed-row fail/restore-pass demonstration (revision-2 remediation)",
+      "existing checkPublishedCountDrift regression check"
+    ],
+    "notes": "Revision 1's PR #101 was closed without merging, so main never had checkPublishedRowDrift at all; this revision builds the guard from scratch with the fail-closed shape-then-extract remediation already incorporated, rather than patching a prior implementation present in the tree. No fixture/self-test file or package.json script was added, matching revision 1's precedent and the task packet's 'only as directly necessary' scope guidance; the guard is demonstrated directly against the real backlog table."
+  }
+}
