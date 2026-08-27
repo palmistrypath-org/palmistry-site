@@ -62,8 +62,8 @@ These articles have the highest priority scores and should be written before any
 | 5 | ~~Phalanges in Palmistry: What the Three Finger Sections Reveal~~ (published 2026-08-19) | `phalanges-palmistry` | 3 | 3 | 5 | 3 | 4 | **12** |
 | 6 | ~~Is Palmistry Real? What the Tradition Claims and What It Doesn't~~ (published 2026-08-19) | `is-palmistry-real` | 5 | 3 | 3 | 2 | 3 | **12** |
 | 7 | ~~Short Heart Line Meaning in Palmistry~~ (published 2026-08-19) | `short-heart-line-meaning` | 4 | 2 | 3 | 2 | 3 | **10** |
-| 8 | The Via Lascivia in Palmistry (The Allergy Line) | `via-lascivia-palmistry` | 2 | 2 | 4 | 2 | 4 | **10** |
-| 9 | The Ring of Solomon in Palmistry | `ring-of-solomon-palmistry` | 3 | 2 | 4 | 2 | 3 | **10** |
+| 8 | ~~The Via Lascivia in Palmistry (The Allergy Line)~~ (published 2026-08-22) | `via-lascivia-palmistry` | 2 | 2 | 4 | 2 | 4 | **10** |
+| 9 | ~~The Ring of Solomon in Palmistry~~ (published 2026-08-21) | `ring-of-solomon-palmistry` | 3 | 2 | 4 | 2 | 3 | **10** |
 | 10 | ~~Where Does Your Fate Line Start? What Each Starting Point Means~~ (published 2026-08-19) | `fate-line-starting-points` | 3 | 2 | 4 | 3 | 3 | **9** |
 
 ### Article details — Next 10
