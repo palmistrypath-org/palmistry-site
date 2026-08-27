@@ -2,7 +2,7 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-054
+PP-RELAY-055
 
 ## Revision
 1
@@ -11,50 +11,54 @@ PP-RELAY-054
 STANDARD
 
 ## Objective
-Mechanically reconcile stale published-status markers in `docs/editorial-backlog.md` against the actual published blog collection and recent accepted Relay history, without changing editorial priorities or creating new content.
+Add a bounded mechanical audit that detects when scored editorial-backlog rows drift out of sync with the actual published blog collection, preventing already-published articles from being presented as outstanding or unshipped rows from being marked published.
 
 ## Why this task now
-The accepted PP-RELAY-053 cleanup closed a stale inventory-framing defect in a published article. The canonical editorial backlog itself still contains contradictory status surfaces: its status paragraph records Via Lascivia and Ring of Solomon as shipped, while their Next 10 table rows remain unstruck/unmarked as if still outstanding. Similar drift can cause the Director to duplicate already-shipped work. Before selecting more source-sensitive articles, perform one bounded mechanically verifiable backlog-status reconciliation against current `main`.
+PP-RELAY-054 corrected two objectively stale published-status markers in `docs/editorial-backlog.md`. A similar count-drift defect was previously corrected by PP-RELAY-025 and then prevented with `checkPublishedCountDrift` in `scripts/audit-content.mjs`. Published-row drift can cause duplicate task selection, so the next highest-value bounded follow-up is to guard this newly observed failure mode mechanically rather than rely on repeated manual reconciliation.
 
 ## Scope
-Primary file:
-- `docs/editorial-backlog.md`
+Primary implementation:
+- `scripts/audit-content.mjs`
 
 Supporting only as directly necessary:
+- `scripts/fixtures/` if a small deterministic fixture is the cleanest test mechanism
+- `package.json` only if a dedicated self-test command is genuinely necessary
+- `.ai-ops/results/PP-RELAY-055-r1.json`
 - `docs/CHANGELOG.md`
-- `.ai-ops/results/PP-RELAY-054-r1.json`
 
-## Required method
-1. Inspect the current published blog collection under `src/content/blog/` and the backlog's scored tables/status prose.
-2. Cross-check recent accepted Relay history where a row's shipped status is ambiguous.
-3. Correct only objectively stale published/unpublished markers, slugs, and directly related count/status prose in `docs/editorial-backlog.md`.
-4. Do not change priority scores, reorder candidates, alter strategic recommendations, add/remove candidate ideas, or reinterpret an item's editorial value.
-5. Do not edit any article/lesson prose or source claims.
-6. If a row cannot be resolved mechanically from current repository state/history, leave it unchanged and mention it in the durable result rather than guessing.
+Do not edit `docs/editorial-backlog.md` unless validation exposes a new objectively stale marker on current `main`; if that occurs, correct only the mechanically proven marker/count defect and document it.
+
+## Required behavior
+1. Inspect the scored article tables in `docs/editorial-backlog.md` and the live blog collection under `src/content/blog/`.
+2. Add a narrow audit that can determine, for scored backlog rows with a usable slug, whether publication status is mechanically consistent with the existence/nonexistence of the corresponding live blog article.
+3. Fail clearly when a scored row is presented as outstanding even though its corresponding blog article exists, or is presented as published even though the corresponding live article does not exist.
+4. Preserve the existing published-count drift check and all existing content-audit behavior.
+5. Handle known historical/status wording conventions conservatively. Do not redesign the backlog format or infer publication from prose outside the scored row unless required to parse the row's explicit status marker.
+6. If a row cannot be mechanically mapped to a live blog path because its slug/status syntax is ambiguous, fail or warn explicitly rather than guessing; choose the least disruptive behavior that still prevents silent false confidence and document the decision in the result.
+7. Demonstrate the new guard with a controlled mismatch test proving that the audit fails when a published row is made to look outstanding (or equivalent deterministic fixture), then restore the repository and show the clean audit passes.
 
 ## Acceptance criteria
-- Every corrected published-status marker is corroborated by an actual published blog file and/or accepted merged Relay history.
-- No already-published item remains presented as clearly outstanding where the contradiction is mechanically verifiable.
-- No unshipped item is marked published without a corresponding live blog file.
-- Published-count/status prose remains consistent with the repository's current content audit/inventory evidence.
-- No priority score, ordering, editorial recommendation, SEO strategy, palmistry meaning, source claim, route, canonical, or indexability behavior changes.
-- `npm run content-audit` passes.
+- `npm run content-audit` passes on clean current `main` plus the worker changes.
+- A controlled stale-marker mismatch produces a clear non-zero audit failure identifying the affected slug/row or equivalent actionable context.
+- The existing published-count drift safeguard still works and is not weakened.
+- No palmistry article/lesson prose, source claims, priority scores, candidate ordering, SEO strategy, routes, canonicals, or indexability behavior changes.
+- No broad parser/framework refactor; keep the implementation localized and reviewable.
 - `git diff --check` passes.
-- A full site build is optional because this is documentation-only; run it only if the worker touches runtime/content files, which is outside normal scope.
+- If runtime/content files are touched unexpectedly, run the normal validation required by `AGENTS.md`; otherwise a full site build is optional for this tooling/docs-only task.
 
 ## Explicit no-change condition
-Return `NO_CHANGE` if a mechanical comparison shows the backlog's published/unpublished markers, slugs, and current count/status prose are already internally consistent with the live blog collection and accepted Relay history. Include the verification evidence in the durable result and do not create a dummy PR.
+Return `NO_CHANGE` only if the current content audit already enforces scored-row published/unpublished consistency against the live blog collection with an equivalent fail-closed controlled mismatch proof. Include the exact existing implementation/test evidence in the durable result and do not create a dummy PR.
 
 ## Boundaries
-- Documentation/status reconciliation only.
-- Do not use this task to select or draft the next article.
-- Do not resolve the separate copyright-era quotation issue or vague-attribution editorial issue.
-- Do not modify `docs/ROADMAP.md`, product direction, monetization, SEO strategy, or backlog scoring.
-- Keep the fast lane disabled; this STANDARD task requires normal Director review.
+- This is a tooling/integrity task, not an editorial reprioritization task.
+- Do not add, remove, reorder, or rescore backlog candidates.
+- Do not draft the next backlog article.
+- Do not change Relay dispatch/auto-merge workflows or fast-lane policy.
+- Keep fast lane disabled; this STANDARD task requires normal Director review.
 - Stop with `HUMAN_REQUIRED` only for a genuine consequential decision that cannot be resolved from repository evidence.
 
 ## Durable result contract
-Every worker run that passes startup must write `.ai-ops/results/PP-RELAY-054-r1.json` on a pushed `claude/relay-PP-RELAY-054-...` branch before stopping.
+Every worker run that passes startup must write `.ai-ops/results/PP-RELAY-055-r1.json` on a pushed `claude/relay-PP-RELAY-055-...` branch before stopping.
 
 Allowed terminal results:
 - `READY_FOR_REVIEW`
@@ -63,9 +67,9 @@ Allowed terminal results:
 - `HUMAN_REQUIRED`
 - `PAUSED_USAGE_LIMIT`
 
-For `READY_FOR_REVIEW`, commit the bounded changes plus result artifact, push exactly one matching Relay branch, and open exactly one PR to `main` with the standard Relay footers for PP-RELAY-054 revision 1. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and normally do not create a dummy PR.
+For `READY_FOR_REVIEW`, commit the bounded implementation/docs plus result artifact, push exactly one matching Relay branch, and open exactly one PR to `main` with the standard Relay footers for PP-RELAY-055 revision 1. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and normally do not create a dummy PR.
 
-The result artifact must include `schema_version: 2`, `task_id: "PP-RELAY-054"`, `revision: 1`, `risk_class: "STANDARD"`, terminal `result`, concise summary and verification, `source_preflight: null`, truthful execution telemetry, and `human_action: null` unless a genuine gate exists.
+The result artifact must include `schema_version: 2`, `task_id: "PP-RELAY-055"`, `revision: 1`, `risk_class: "STANDARD"`, terminal `result`, concise summary and verification, `source_preflight: null`, truthful execution telemetry, and `human_action: null` unless a genuine gate exists.
 
 ## Stop condition
 After producing the durable terminal result and PR when applicable, stop. Do not merge, choose another task, or broaden scope.
