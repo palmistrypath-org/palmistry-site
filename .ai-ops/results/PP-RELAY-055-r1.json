@@ -1,0 +1,41 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-055",
+  "revision": 1,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Added checkPublishedRowDrift to scripts/audit-content.mjs, run as part of npm run content-audit. It parses each scored docs/editorial-backlog.md table row, reads the row's existing '~~strikethrough~~' published-status marker, and fails when that marker disagrees with whether a matching file exists in src/content/blog/ (matched by filename, independent of subfolder). A row with an unparseable/empty slug fails closed with an explicit error rather than being silently skipped, matching the existing checkPublishedCountDrift convention it sits alongside. Current main had no live drift to correct, so docs/editorial-backlog.md itself is unchanged; only scripts/audit-content.mjs and docs/CHANGELOG.md were touched.",
+  "pr_number": null,
+  "verification": [
+    "npm run content-audit passes on clean main + this change (72 blog posts, 25 lessons valid)",
+    "Controlled mismatch #1: temporarily removed the strikethrough/published-date marker from the currently-published row 'minor-lines-overview' (item 1) -> content-audit failed with a single clear error naming the slug and the missing marker; restored via the backup file and re-verified clean pass",
+    "Controlled mismatch #2 (opposite direction): temporarily added a strikethrough/published-date marker to the currently-unpublished row 'teachers-square-palmistry' (item 21), which has no matching live file -> content-audit failed with a single clear error naming the slug and the missing article; restored via git checkout and re-verified clean pass",
+    "Sanity check that checkPublishedCountDrift is unweakened: temporarily changed the documented '**Published:** 72 blog posts' count to 99 -> content-audit still failed with its existing count-mismatch error; restored via git checkout",
+    "git diff --check passes",
+    "node --check scripts/audit-content.mjs passes",
+    "Manually cross-referenced all 50 scored backlog rows against src/content/blog/ filenames with a standalone script before implementation to confirm current main has zero published/outstanding drift"
+  ],
+  "source_preflight": null,
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "grep/read over docs/editorial-backlog.md and scripts/audit-content.mjs",
+      "standalone Node script to cross-check all 50 scored rows against src/content/blog/ before implementation",
+      "manual controlled-mismatch demonstration (temporary edit + restore) in both drift directions",
+      "npm run content-audit",
+      "git diff --check"
+    ],
+    "validation": [
+      "npm run content-audit",
+      "git diff --check",
+      "node --check scripts/audit-content.mjs",
+      "controlled mismatch fail/restore-pass demonstration (both directions)",
+      "existing checkPublishedCountDrift regression check"
+    ],
+    "notes": "Local checkout's main had diverged from origin/main with no merge base at startup (working tree was clean). Followed the AGENTS.md clean-divergence recovery: left local main untouched, verified origin/main tip (83bf9eb75829e3b8fd6e4677cc2b915aaf7a9d0a, matching the dispatch payload's state commit) and branched claude/relay-PP-RELAY-055-published-drift-audit directly from origin/main. No fixture/self-test file or package.json script was added — the guard was demonstrated directly against the real backlog table using the same mechanism checkPublishedCountDrift already relies on, per the task packet's 'only as directly necessary' scope guidance; pr_number will be filled in after PR creation."
+  }
+}

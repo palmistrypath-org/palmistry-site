@@ -8,7 +8,7 @@
  */
 
 import { readFileSync, readdirSync, statSync } from 'fs';
-import { dirname, join, relative, resolve } from 'path';
+import { basename, dirname, join, relative, resolve } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -17,6 +17,10 @@ const BLOG_DIR = resolve(ROOT, 'src', 'content', 'blog');
 const LESSONS_DIR = resolve(ROOT, 'src', 'content', 'lessons');
 const EDITORIAL_BACKLOG_PATH = resolve(ROOT, 'docs', 'editorial-backlog.md');
 const PUBLISHED_COUNT_RE = /\*\*Published:\*\*\s*(\d+)\s*blog posts/;
+// Matches a scored backlog table row: "| # | Title | `slug` | ...". The
+// scoring-key/cannibalization tables use different column shapes and do not
+// match this (their first cell is never a bare integer).
+const BACKLOG_SCORED_ROW_RE = /^\|\s*\d+\s*\|\s*(.+?)\s*\|\s*`([^`]+)`\s*\|/;
 const SITE_ORIGIN = 'https://palmistrypath.com';
 
 const DESCRIPTION_MAX = 170;
@@ -149,6 +153,61 @@ function checkPublishedCountDrift(actualCount, errors) {
 	}
 }
 
+/**
+ * Guard against scored docs/editorial-backlog.md rows drifting out of sync
+ * with the actual published blog collection (see PP-RELAY-054, which
+ * corrected two stale published-status markers). A row's explicit status
+ * marker is the `~~strikethrough~~` around its title — the same convention
+ * already used consistently for every published row in the scored tables.
+ * Fails closed: a row whose slug cannot be read at all is treated as an
+ * error rather than silently skipped, matching checkPublishedCountDrift.
+ */
+function checkPublishedRowDrift(blogSlugs, errors) {
+	const source = sourcePath(EDITORIAL_BACKLOG_PATH);
+	let content;
+	try {
+		content = readFileSync(EDITORIAL_BACKLOG_PATH, 'utf8');
+	} catch {
+		errors.push(`[${source}] Could not read file to verify scored-row publication status`);
+		return;
+	}
+
+	let rowsChecked = 0;
+	for (const line of content.split(/\r?\n/)) {
+		const match = line.match(BACKLOG_SCORED_ROW_RE);
+		if (!match) continue;
+
+		const [, title, rawSlug] = match;
+		const slug = rawSlug.trim();
+		if (!slug || /\s/.test(slug)) {
+			errors.push(
+				`[${source}] Scored row has an unparseable slug and cannot be checked against src/content/blog/: "${title}"`,
+			);
+			continue;
+		}
+
+		rowsChecked++;
+		const markedPublished = /^~~.*~~/.test(title);
+		const articleExists = blogSlugs.has(slug);
+
+		if (markedPublished && !articleExists) {
+			errors.push(
+				`[${source}] Row "${slug}" is marked published (strikethrough title) but no matching file exists in src/content/blog/ — correct the status marker or restore the article`,
+			);
+		} else if (!markedPublished && articleExists) {
+			errors.push(
+				`[${source}] Row "${slug}" is presented as outstanding but a matching article already exists in src/content/blog/ — mark it published (strikethrough the title)`,
+			);
+		}
+	}
+
+	if (rowsChecked === 0) {
+		errors.push(
+			`[${source}] Could not find any scored backlog rows to verify publication status against src/content/blog/`,
+		);
+	}
+}
+
 function checkDuplicateTitle(frontmatter, file, titlesSeen, label, errors) {
 	if (!frontmatter.title) return;
 	const key = frontmatter.title.trim().toLowerCase();
@@ -197,6 +256,9 @@ console.log(`  - ${blogFiles.length} blog post(s) in src/content/blog/`);
 console.log(`  - ${lessonFiles.length} lesson(s) in src/content/lessons/\n`);
 
 checkPublishedCountDrift(blogFiles.length, errors);
+
+const blogSlugs = new Set(blogFiles.map((file) => basename(file).replace(/\.mdx?$/i, '')));
+checkPublishedRowDrift(blogSlugs, errors);
 
 const blogTitles = new Map();
 const lessonTitles = new Map();
