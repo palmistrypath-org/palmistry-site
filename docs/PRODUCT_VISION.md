@@ -33,9 +33,9 @@ Primary audience: curious beginners who want a clear path into palmistry without
 - Domain: **palmistrypath.com**
 - Tagline: **“Read the lines. Discover the path.”**
 - Tone: educational, grounded, curious, respectful, atmospheric
-- Visual mood: dark, candlelit, esoteric/ancient-arts feel without sacrificing legibility or accessibility
+- Visual mood: **Editorial Mystic** — 70% clean editorial, 20% warm mystical atmosphere, and 10% premium decorative accent, without sacrificing legibility or accessibility
 - Established typography in the implementation: Cinzel for headings and Lora for body copy
-- Established palette centers on deep midnight/indigo backgrounds, warm cream text, and gold accents; implementation is authoritative for exact tokens.
+- Established palette centers on warm ivory/parchment surfaces, charcoal text, muted teal, warm sand, and restrained gold. `docs/visual-system.md` and the implementation are authoritative for exact semantic tokens and usage rules.
 
 ## Learning/product direction
 Current implementation already supports a structured lesson library. Longer-term ideas may include interactive hand maps, observation/practice exercises, glossary cross-linking, reading journals, progress tracking, and eventually paid products or membership—but these are directions, not automatically approved tasks.

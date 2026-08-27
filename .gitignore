@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Local high-resolution visual-production source pack. Optimized derivatives
+# committed for the site live under public/images/editorial-mystic/.
+visual-production/

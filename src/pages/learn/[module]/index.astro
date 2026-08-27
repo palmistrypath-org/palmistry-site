@@ -1,9 +1,11 @@
 ---
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseHead from '../../../components/BaseHead.astro';
+import EditorialHero from '../../../components/EditorialHero.astro';
 import Footer from '../../../components/Footer.astro';
 import Header from '../../../components/Header.astro';
 import { MODULES, SITE_TITLE, type ModuleConfig } from '../../../consts';
+import { moduleHeaderVisuals } from '../../../data/visuals';
 
 export async function getStaticPaths() {
 	const allLessons = await getCollection('lessons');
@@ -28,6 +30,7 @@ interface Props {
 }
 
 const { mod, lessons, prevModule, nextModule } = Astro.props;
+const moduleVisual = moduleHeaderVisuals[mod.slug];
 
 const breadcrumbSchema = JSON.stringify({
 	'@context': 'https://schema.org',
@@ -56,9 +59,13 @@ const difficultyLabel: Record<string, string> = {
 		<BaseHead
 			title={`${mod.title} — Learn — ${SITE_TITLE}`}
 			description={mod.description}
+			image={moduleVisual.src}
 		/>
 		<script type="application/ld+json" set:html={breadcrumbSchema} />
 		<style>
+			main {
+				width: min(1060px, calc(100% - 2em));
+			}
 			.breadcrumb {
 				font-size: 0.78em;
 				color: var(--color-text-muted);
@@ -83,20 +90,11 @@ const difficultyLabel: Record<string, string> = {
 				color: var(--accent);
 				margin: 0 0 0.4em;
 			}
-			.module-header h1 {
-				margin: 0 0 0.5em;
-			}
-			.module-header .description {
-				color: var(--color-text-muted);
-				font-size: 0.9em;
-				line-height: 1.7;
-				margin: 0;
-			}
 			.lesson-list {
 				list-style: none;
 				margin: 0;
 				padding: 0;
-				border-top: 1px solid rgba(201, 169, 110, 0.15);
+				border-top: 1px solid var(--color-border);
 			}
 			.lesson-list li a {
 				display: flex;
@@ -104,7 +102,7 @@ const difficultyLabel: Record<string, string> = {
 				justify-content: space-between;
 				gap: 1.5rem;
 				padding: 1.2em 0;
-				border-bottom: 1px solid rgba(201, 169, 110, 0.1);
+				border-bottom: 1px solid var(--color-border);
 				text-decoration: none;
 				transition: 0.15s ease;
 			}
@@ -165,7 +163,7 @@ const difficultyLabel: Record<string, string> = {
 				justify-content: space-between;
 				margin-top: 3em;
 				padding-top: 2em;
-				border-top: 1px solid rgba(201, 169, 110, 0.15);
+				border-top: 1px solid var(--color-border);
 				gap: 1rem;
 			}
 			.module-nav a {
@@ -185,7 +183,7 @@ const difficultyLabel: Record<string, string> = {
 			.guide-aside {
 				margin-top: 3em;
 				padding-top: 1.75em;
-				border-top: 1px solid rgba(201, 169, 110, 0.1);
+				border-top: 1px solid var(--color-border);
 				text-align: center;
 			}
 			.guide-aside p {
@@ -200,12 +198,12 @@ const difficultyLabel: Record<string, string> = {
 				color: var(--color-text-muted);
 				text-decoration: underline;
 				text-underline-offset: 2px;
-				text-decoration-color: rgba(201, 169, 110, 0.35);
+				text-decoration-color: var(--color-border-strong);
 				transition: color 0.2s ease, text-decoration-color 0.2s ease;
 			}
 			.guide-aside a:hover {
 				color: var(--accent);
-				text-decoration-color: rgba(201, 169, 110, 0.6);
+				text-decoration-color: var(--color-teal);
 			}
 		</style>
 	</head>
@@ -218,11 +216,11 @@ const difficultyLabel: Record<string, string> = {
 				<span>{mod.title}</span>
 			</nav>
 
-			<header class="module-header">
-				<p class="difficulty">{mod.difficulty}</p>
-				<h1>{mod.title}</h1>
-				<p class="description">{mod.description}</p>
-			</header>
+			<div class="module-header">
+				<EditorialHero title={mod.title} description={mod.description} visual={moduleVisual} compact>
+					<p class="difficulty">{mod.difficulty}</p>
+				</EditorialHero>
+			</div>
 
 			{
 				lessons.length > 0 ? (

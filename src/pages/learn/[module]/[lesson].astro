@@ -136,6 +136,7 @@ const breadcrumbSchema = JSON.stringify({
 		<BaseHead
 			title={`${lesson.data.title} — ${SITE_TITLE}`}
 			description={lesson.data.description}
+			image="/images/editorial-mystic/social/og-lesson-16x9.webp"
 		/>
 		<script type="application/ld+json" set:html={learningResourceSchema} />
 		<script type="application/ld+json" set:html={breadcrumbSchema} />
@@ -217,7 +218,7 @@ const breadcrumbSchema = JSON.stringify({
 				padding: 1.25em 1.5em;
 				border: 1px solid rgba(201, 169, 110, 0.25);
 				border-radius: 8px;
-				background: rgba(255, 255, 255, 0.02);
+				background: var(--color-surface);
 				font-size: 0.88em;
 				color: var(--color-text-muted);
 			}
