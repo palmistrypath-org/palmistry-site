@@ -2,7 +2,7 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-053
+PP-RELAY-054
 
 ## Revision
 1
@@ -11,48 +11,50 @@ PP-RELAY-053
 STANDARD
 
 ## Objective
-Reconcile stale inventory/framing language in the published Minor Lines overview after the companion-link expansion, without changing palmistry meanings or source claims.
+Mechanically reconcile stale published-status markers in `docs/editorial-backlog.md` against the actual published blog collection and recent accepted Relay history, without changing editorial priorities or creating new content.
 
 ## Why this task now
-PP-RELAY-052 added contextual links to Ring of Solomon, Via Lascivia, and Intuition Line and explicitly noted that the overview still contains legacy framing centered on only four dedicated minor-line articles. Current `main` now routes to seven named minor-line/advanced-marking companions, while the opening, FAQ, and closing repeatedly describe the page as a map of only four. This is a bounded documentation/content-consistency repair discovered by the accepted navigation audit.
+The accepted PP-RELAY-053 cleanup closed a stale inventory-framing defect in a published article. The canonical editorial backlog itself still contains contradictory status surfaces: its status paragraph records Via Lascivia and Ring of Solomon as shipped, while their Next 10 table rows remain unstruck/unmarked as if still outstanding. Similar drift can cause the Director to duplicate already-shipped work. Before selecting more source-sensitive articles, perform one bounded mechanically verifiable backlog-status reconciliation against current `main`.
 
 ## Scope
 Primary file:
-- `src/content/blog/beginner/minor-lines-overview.md`
+- `docs/editorial-backlog.md`
 
 Supporting only as directly necessary:
 - `docs/CHANGELOG.md`
-- `.ai-ops/results/PP-RELAY-053-r1.json`
+- `.ai-ops/results/PP-RELAY-054-r1.json`
 
 ## Required method
-1. Inspect current `main` and identify statements whose numeric/inventory framing became stale because the article now links additional named minor markings beyond the original Sun Line, Mercury Line, marriage/relationship lines, and Girdle of Venus.
-2. Reconcile only the stale inventory/navigation framing. Prefer neutral wording such as distinguishing the four lines discussed in depth from additional named markings linked later, rather than inventing a new taxonomy or asserting that exactly seven markings define a canonical set.
-3. Preserve all existing palmistry interpretations, prevalence claims, historical/source attributions, health/relationship statements, and source footer verbatim unless a tiny grammatical adjustment is strictly necessary to make the inventory wording coherent.
-4. Do not expand the article with new meanings or new companion topics.
-5. Keep the existing PP-RELAY-052 links intact.
+1. Inspect the current published blog collection under `src/content/blog/` and the backlog's scored tables/status prose.
+2. Cross-check recent accepted Relay history where a row's shipped status is ambiguous.
+3. Correct only objectively stale published/unpublished markers, slugs, and directly related count/status prose in `docs/editorial-backlog.md`.
+4. Do not change priority scores, reorder candidates, alter strategic recommendations, add/remove candidate ideas, or reinterpret an item's editorial value.
+5. Do not edit any article/lesson prose or source claims.
+6. If a row cannot be resolved mechanically from current repository state/history, leave it unchanged and mention it in the durable result rather than guessing.
 
 ## Acceptance criteria
-- The article no longer misleadingly implies that only four dedicated minor-line/advanced-marking companion articles exist on the site.
-- The four in-depth sections remain accurately described as the four features covered in depth by this overview; additional linked markings are framed as additional named companions, not silently promoted into the same taxonomy.
-- No palmistry interpretation, source attribution, prevalence/consensus claim, scientific/historical claim, health claim, SEO/indexing behavior, title, slug, or page structure is materially changed.
-- Existing contextual links remain intact.
-- `npm run build` passes.
+- Every corrected published-status marker is corroborated by an actual published blog file and/or accepted merged Relay history.
+- No already-published item remains presented as clearly outstanding where the contradiction is mechanically verifiable.
+- No unshipped item is marked published without a corresponding live blog file.
+- Published-count/status prose remains consistent with the repository's current content audit/inventory evidence.
+- No priority score, ordering, editorial recommendation, SEO strategy, palmistry meaning, source claim, route, canonical, or indexability behavior changes.
 - `npm run content-audit` passes.
-- `npm run audit:all` passes.
 - `git diff --check` passes.
+- A full site build is optional because this is documentation-only; run it only if the worker touches runtime/content files, which is outside normal scope.
 
 ## Explicit no-change condition
-Return `NO_CHANGE` only if current `main` already contains internally consistent inventory/framing language after PP-RELAY-052 and no stale four-only wording remains. Include exact inspected passages in the durable result; do not create a dummy PR.
+Return `NO_CHANGE` if a mechanical comparison shows the backlog's published/unpublished markers, slugs, and current count/status prose are already internally consistent with the live blog collection and accepted Relay history. Include the verification evidence in the durable result and do not create a dummy PR.
 
 ## Boundaries
-- This is a wording/inventory consistency task, not a source-sensitive rewrite.
-- Do not fix other legacy source-sensitive wording noticed during inspection; record it as a follow-up candidate instead.
-- Do not edit companion articles, lessons, evidence/source-verification files, editorial priorities, code, schemas, routing, canonicals, or indexability.
+- Documentation/status reconciliation only.
+- Do not use this task to select or draft the next article.
+- Do not resolve the separate copyright-era quotation issue or vague-attribution editorial issue.
+- Do not modify `docs/ROADMAP.md`, product direction, monetization, SEO strategy, or backlog scoring.
 - Keep the fast lane disabled; this STANDARD task requires normal Director review.
-- Stop with `HUMAN_REQUIRED` only for a genuine consequential decision that cannot be resolved from current repository evidence.
+- Stop with `HUMAN_REQUIRED` only for a genuine consequential decision that cannot be resolved from repository evidence.
 
 ## Durable result contract
-Every worker run that passes startup must write `.ai-ops/results/PP-RELAY-053-r1.json` on a pushed `claude/relay-PP-RELAY-053-...` branch before stopping.
+Every worker run that passes startup must write `.ai-ops/results/PP-RELAY-054-r1.json` on a pushed `claude/relay-PP-RELAY-054-...` branch before stopping.
 
 Allowed terminal results:
 - `READY_FOR_REVIEW`
@@ -61,9 +63,9 @@ Allowed terminal results:
 - `HUMAN_REQUIRED`
 - `PAUSED_USAGE_LIMIT`
 
-For `READY_FOR_REVIEW`, commit the bounded changes plus result artifact, push exactly one matching Relay branch, and open exactly one PR to `main` with the standard Relay footers for PP-RELAY-053 revision 1. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and normally do not create a dummy PR.
+For `READY_FOR_REVIEW`, commit the bounded changes plus result artifact, push exactly one matching Relay branch, and open exactly one PR to `main` with the standard Relay footers for PP-RELAY-054 revision 1. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and normally do not create a dummy PR.
 
-The result artifact must include `schema_version: 2`, `task_id: "PP-RELAY-053"`, `revision: 1`, `risk_class: "STANDARD"`, terminal `result`, concise summary and verification, `source_preflight: null`, truthful execution telemetry, and `human_action: null` unless a genuine gate exists.
+The result artifact must include `schema_version: 2`, `task_id: "PP-RELAY-054"`, `revision: 1`, `risk_class: "STANDARD"`, terminal `result`, concise summary and verification, `source_preflight: null`, truthful execution telemetry, and `human_action: null` unless a genuine gate exists.
 
 ## Stop condition
 After producing the durable terminal result and PR when applicable, stop. Do not merge, choose another task, or broaden scope.
