@@ -56,6 +56,8 @@ Arcing across the upper palm, just above the heart line and below the base of th
 
 The full [Girdle of Venus article](/blog/beginner/girdle-of-venus) covers how to distinguish it from similar-looking features, what a complete versus fragmented arc traditionally suggests, and how it interacts with the heart line and Apollo mount.
 
+A few more individually named minor markings also have their own dedicated articles on this site: the [Ring of Solomon](/blog/beginner/ring-of-solomon-palmistry), the [Via Lascivia](/blog/beginner/via-lascivia-palmistry), and the [Intuition Line](/blog/beginner/intuition-line-palmistry).
+
 ## Frequently asked questions
 
 **What are the minor lines in palmistry?**

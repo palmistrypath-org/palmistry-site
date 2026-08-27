@@ -1,0 +1,53 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-052",
+  "revision": 1,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Audited contextual internal-link coverage from minor-lines-overview.md to the currently published Minor Lines / advanced-markings cluster companions. Found three genuine, previously documented gaps: ring-of-solomon-palmistry.md, via-lascivia-palmistry.md, and intuition-line-palmistry.md each had their own publish changelog entry (PP-RELAY-035, PP-RELAY-036, PP-RELAY-050) explicitly noting no reciprocal link was added into minor-lines-overview.md because the article's existing structure had no natural slot without a broader rewrite. Added one short, purely navigational sentence after the existing Girdle of Venus section naming and linking all three, with no traditional-association, location, or source content attached. The four companions already named in the overview's prose (sun-line.md, mercury-line.md, marriage-relationship-lines.md, girdle-of-venus.md) already had meaningful contextual links and were left untouched. Judged simian-line.md and marriage-line-forked-broken-meaning.md out of scope for this specific overview (documented reasoning in companion_link_audit below); no other content in either was changed.",
+  "pr_number": 98,
+  "verification": [
+    "npm run build",
+    "npm run content-audit",
+    "npm run audit (link/orphan check used by audit:all)",
+    "npm run audit:all",
+    "git diff --check"
+  ],
+  "source_preflight": null,
+  "companion_link_audit": {
+    "minor-lines-overview.md": [
+      { "companion": "sun-line.md", "in_scope": true, "status": "already linked" },
+      { "companion": "mercury-line.md", "in_scope": true, "status": "already linked" },
+      { "companion": "marriage-relationship-lines.md", "in_scope": true, "status": "already linked" },
+      { "companion": "girdle-of-venus.md", "in_scope": true, "status": "already linked" },
+      { "companion": "ring-of-solomon-palmistry.md", "in_scope": true, "status": "link added", "reason": "cluster: minor-lines, shares the overview's own relatedLesson (/learn/advanced/01-minor-lines-overview); own publish changelog (PP-RELAY-035 rev 3) explicitly recorded no reciprocal link was added and named it as a deferred gap" },
+      { "companion": "via-lascivia-palmistry.md", "in_scope": true, "status": "link added", "reason": "same cluster/relatedLesson match; own publish changelog (PP-RELAY-036 rev 3) explicitly recorded no reciprocal link was added and named it as a deferred gap" },
+      { "companion": "intuition-line-palmistry.md", "in_scope": true, "status": "link added", "reason": "same cluster/relatedLesson match; published 2026-08-27 (PP-RELAY-050 rev 5) with only a reciprocal link into m-line-palmistry.md, none into minor-lines-overview.md" },
+      { "companion": "simian-line.md", "in_scope": false, "status": "out of scope", "reason": "frontmatter cluster tag is minor-lines, but it is a heart/head-line fusion feature with its own dedicated Advanced-module lesson (/learn/advanced/simian-line), distinct from the shared /learn/advanced/01-minor-lines-overview lesson the six in-scope companions use; not among the four articles minor-lines-overview.md's own text and original publish changelog frame as its companion set, and not in this task's candidate list" },
+      { "companion": "marriage-line-forked-broken-meaning.md", "in_scope": false, "status": "out of scope", "reason": "a variation/depth companion of marriage-relationship-lines.md itself (cluster: relationship-lines, relatedLesson: /learn/advanced/02-marriage-relationship-lines), analogous to e.g. broken-head-line-meaning.md linking from head-line.md rather than from major-lines-overview.md in the PP-RELAY-051 precedent; not a direct companion of the top-level minor-lines overview" },
+      { "companion": "m-line-palmistry.md", "in_scope": false, "status": "out of scope", "reason": "cluster: line-variations, relatedLesson: /learn/lines/01-major-lines-overview; not part of the minor-lines cluster by the repository's own tagging" },
+      { "companion": "crosses-stars-palmistry.md", "in_scope": false, "status": "out of scope", "reason": "cluster: markings (not minor-lines); covers point markings scattered across mounts, a different category from the named individual minor lines this overview curates, despite sharing the overview's relatedLesson" }
+    ]
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "grep-based companion inventory across src/content/blog/ by cluster frontmatter and relatedLesson value",
+      "grep-based inbound-link check for each candidate companion across src/content/, src/pages/, src/components/",
+      "docs/CHANGELOG.md and docs/CURRENT_STATE.md history review to confirm the three gaps were previously identified and deliberately deferred, not newly discovered ambiguity",
+      "manual contextual-fit review of minor-lines-overview.md's existing section structure before choosing a placement and wording for the new sentence"
+    ],
+    "validation": [
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Persistent local main had diverged from origin/main at startup (forced-update history); followed the AGENTS.md/CLAUDE_ROUTINE_PROMPT.md clean-divergence recovery path and created claude/relay-PP-RELAY-052-minor-lines-links directly from verified origin/main (1e7876e2d45b8f710bd2af88686fd5c445fe73cd, matching the dispatch state commit) without touching local main."
+  }
+}
