@@ -5,7 +5,7 @@
   "risk_class": "STANDARD",
   "result": "READY_FOR_REVIEW",
   "summary": "Audited contextual internal-link coverage from the four major-line pillar articles (life-line, head-line, heart-line, fate-line) to their currently published variation/absence companions. Found one genuine gap: head-line.md discussed the straight-line variation in prose without linking to the dedicated straight-head-line-palmistry.md article, unlike its sibling long/short paragraphs in the same section. Added one contextual link sentence in the existing paragraph; no other pillar or companion prose changed. All other companions across all four clusters already had a meaningful contextual inbound link and were left untouched.",
-  "pr_number": null,
+  "pr_number": 97,
   "verification": [
     "npm run build",
     "npm run content-audit",
