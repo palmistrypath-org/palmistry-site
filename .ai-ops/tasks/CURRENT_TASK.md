@@ -2,7 +2,7 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-051
+PP-RELAY-052
 
 ## Revision
 1
@@ -11,60 +11,65 @@ PP-RELAY-051
 STANDARD
 
 ## Objective
-Audit and repair contextual internal-link coverage from the four major-line pillar articles to their currently published variation/absence companion articles. Improve discoverability and cluster navigation without changing palmistry interpretations, source claims, SEO/indexing strategy, or page structure.
+Audit and repair contextual internal-link coverage from the published Minor Lines overview pillar to the site's currently published minor-line and related advanced-marking companion articles. Improve discovery/navigation without changing palmistry meanings, source claims, SEO/indexing strategy, or page structure.
 
 ## Why this task now
-PP-RELAY-050 completed the approved Next 25 article sequence and brought the live blog inventory to 72 posts. The approved roadmap calls for strengthening discovery/navigation around trustworthy content and for routing specific search-intent pages into the underlying concept/lesson. The repository already has an orphan-page audit, but that only proves some indexable inbound link exists; it does not guarantee that major-line pillar pages provide useful contextual routes into their variation companions. This bounded audit improves the completed content library before selecting another source-heavy article.
+PP-RELAY-051 completed the same bounded cluster-navigation audit for the four major-line pillars and found one real discoverability gap. The approved roadmap prioritizes strengthening discovery/navigation around trustworthy content, and Palmistry Path now has a substantially expanded set of minor-line/advanced-marking search-entry articles. Before commissioning more source-heavy content, verify that the existing Minor Lines pillar provides useful contextual routes into the companions that actually belong to that cluster.
 
 ## Scope
-Primary pillar files only unless the no-change condition applies:
-- `src/content/blog/beginner/life-line.md`
-- `src/content/blog/beginner/head-line.md`
-- `src/content/blog/beginner/heart-line.md`
-- `src/content/blog/beginner/fate-line.md`
+Primary hub file:
+- `src/content/blog/beginner/minor-lines-overview.md`
 
-Audit against the currently published companion articles in those four clusters, including the recent Relay additions and already-existing variation/absence pages. Discover the exact current filenames/slugs from repository state; do not assume a stale backlog slug.
+Audit against currently published companion articles that are genuinely part of the Minor Lines / advanced-markings cluster, discovering exact current filenames/slugs from repository state. Candidate topics include, where actually published and contextually appropriate:
+- Sun / Apollo Line
+- Mercury / Health Line
+- Marriage / Relationship Lines
+- Girdle of Venus
+- Ring of Solomon
+- Via Lascivia
+- Intuition Line
+- any other currently published minor-line companion that the repository's own lesson/backlog/current content clearly places in this cluster
 
 Supporting only as directly necessary:
 - `docs/CHANGELOG.md`
 - `docs/CURRENT_STATE.md` only if canonical current-state wording materially changes
-- `.ai-ops/results/PP-RELAY-051-r1.json`
+- `.ai-ops/results/PP-RELAY-052-r1.json`
 
-Do not edit companion article prose, lessons, source-verification records, editorial backlog priorities, site code, routing, schemas, indexability rules, fast-lane policy, or unrelated docs.
+Do not edit companion article prose, lessons, source-verification/evidence files, editorial backlog priorities, site code, routing, schemas, indexability rules, fast-lane policy, or unrelated docs.
 
 ## Required audit method
-1. Enumerate the published companion pages for Life, Head, Heart, and Fate Line from the actual blog collection and current filenames.
-2. For each companion, determine whether the corresponding pillar already contains a meaningful contextual link to it. Existing generic blog-index, footer, related-content widget, self-link, or lesson-only navigation does not substitute for a contextual pillar-to-companion link.
-3. Add only genuinely missing contextual links. Prefer linking existing neutral words/phrases in relevant variation, FAQ, myth, or next-step prose. If no suitable existing phrase exists, add one short navigation sentence that identifies the companion topic without introducing a new interpretation.
-4. Do not duplicate an existing contextual link merely to satisfy the audit.
-5. Preserve all existing palmistry meanings and source framing verbatim except for the minimum punctuation/grammar needed to insert a link.
-6. Keep anchor text descriptive and natural; do not keyword-stuff or create repetitive exact-match blocks.
-7. Record a compact audit table in the durable result listing each companion checked and `already linked` or `link added`.
+1. Enumerate the currently published articles that genuinely belong to the Minor Lines / advanced-markings cluster using actual repository content and existing curriculum/backlog relationships; do not force unrelated markings into the cluster merely because they are advanced topics.
+2. For each in-scope companion, determine whether `minor-lines-overview.md` already contains a meaningful contextual link to it. Generic blog-index/footer/related-widget links do not count.
+3. Add only genuinely missing contextual links. Prefer linking existing neutral words/phrases in the relevant line description. If no suitable phrase exists, add at most one short navigation sentence per genuinely missing topic, without introducing a new interpretation.
+4. Do not duplicate existing contextual links.
+5. Preserve existing palmistry meaning/source framing verbatim except for the minimum punctuation/grammar needed to insert links.
+6. Keep anchors descriptive and natural; do not keyword-stuff.
+7. Record a compact durable-result audit table listing each candidate companion, whether it was considered in-scope or out-of-scope for this cluster, and for in-scope companions whether it was `already linked` or `link added`.
 
 ## Acceptance criteria
-- Every currently published Life/Head/Heart/Fate variation or absence companion that belongs to one of the four pillar clusters has at least one meaningful contextual inbound link from its corresponding pillar, unless a specific documented cannibalization/navigation reason makes that inappropriate.
-- Any changed pillar diff is navigation-only: no new palmistry interpretation, prevalence/consensus statement, source attribution, historical/scientific assertion, medical/relationship prediction, or SEO/indexing change.
-- No duplicate contextual links are added where a suitable one already exists.
+- Every currently published companion that is clearly part of the Minor Lines / advanced-markings cluster has at least one meaningful contextual inbound link from `minor-lines-overview.md`, unless a specific documented cannibalization/navigation reason makes that inappropriate.
+- Any changed article diff is navigation-only: no new palmistry interpretation, prevalence/consensus statement, source attribution, historical/scientific assertion, health/relationship prediction, or SEO/indexing change.
+- No duplicate contextual links are added where a suitable link already exists.
 - No companion article or lesson prose is edited.
 - `npm run build` passes.
 - `npm run content-audit` passes.
-- `npm run audit:links` passes if that script exists; otherwise run the repository's targeted link audit used by `audit:all`.
+- Run the repository's targeted link/orphan audit used by `audit:all`.
 - `npm run audit:all` passes.
 - `git diff --check` passes.
 
 ## Explicit no-change condition
-Return `NO_CHANGE` if independent inspection proves that all currently published companion articles in the four major-line clusters already have meaningful contextual inbound links from their corresponding pillar and no navigation repair is warranted. A `NO_CHANGE` result must include the audited companion inventory/evidence; do not create a dummy PR.
+Return `NO_CHANGE` if independent inspection proves that every currently published in-scope Minor Lines / advanced-markings companion already has meaningful contextual inbound navigation from `minor-lines-overview.md` and no repair is warranted. Include the full candidate/in-scope audit evidence in the durable result; do not create a dummy PR.
 
 ## Boundaries
-- This is a navigation/internal-link task, not a content rewrite.
-- Do not change interpretations merely because legacy prose looks imperfect; source-sensitive cleanup must be a separate task.
-- Do not add new companion topics, create new articles, change titles/slugs, or alter canonicals/indexability.
-- Do not use the stale `feat/curriculum-wave-3e-3f` branch as authoritative state.
+- This is a navigation/internal-link task, not a content rewrite or cluster-rearchitecture task.
+- Do not change legacy interpretations merely because source-sensitive prose looks imperfect; record a separate follow-up candidate if needed.
+- Do not create new articles, rename/reclassify existing articles, change titles/slugs, or alter canonicals/indexability.
+- Do not use stale feature branches as authoritative state.
 - Keep the fast lane disabled; this STANDARD task requires normal Director review.
-- Stop with `HUMAN_REQUIRED` only for a genuine consequential decision that cannot be resolved from current approved repository evidence. Routine anchor/context choices are autonomous.
+- Stop with `HUMAN_REQUIRED` only for a genuine consequential decision that cannot be resolved from current approved repository evidence. Routine cluster-membership and anchor-context decisions that are clear from the current curriculum/backlog are autonomous.
 
 ## Durable result contract
-Every worker run that passes startup must write `.ai-ops/results/PP-RELAY-051-r1.json` on a pushed `claude/relay-PP-RELAY-051-...` branch before stopping.
+Every worker run that passes startup must write `.ai-ops/results/PP-RELAY-052-r1.json` on a pushed `claude/relay-PP-RELAY-052-...` branch before stopping.
 
 Allowed terminal results:
 - `READY_FOR_REVIEW`
@@ -73,18 +78,18 @@ Allowed terminal results:
 - `HUMAN_REQUIRED`
 - `PAUSED_USAGE_LIMIT`
 
-For `READY_FOR_REVIEW`, commit the bounded changes plus result artifact, push exactly one matching Relay branch, and open exactly one PR to `main` with the standard Relay footers for PP-RELAY-051 revision 1. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and normally do not create a dummy PR.
+For `READY_FOR_REVIEW`, commit the bounded changes plus result artifact, push exactly one matching Relay branch, and open exactly one PR to `main` with the standard Relay footers for PP-RELAY-052 revision 1. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the branch containing the result artifact and normally do not create a dummy PR.
 
 The result artifact must include:
 - `schema_version: 2`
-- `task_id: "PP-RELAY-051"`
+- `task_id: "PP-RELAY-052"`
 - `revision: 1`
 - `risk_class: "STANDARD"`
 - the terminal `result`
 - concise summary and verification
 - `source_preflight: null`
 - truthful execution telemetry
-- a compact companion-link audit inventory/evidence
+- a compact candidate/in-scope companion-link audit inventory/evidence
 - `human_action: null` unless a genuine gate exists
 
 ## Stop condition
