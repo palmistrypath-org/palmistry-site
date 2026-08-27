@@ -5,7 +5,7 @@
   "risk_class": "STANDARD",
   "result": "READY_FOR_REVIEW",
   "summary": "Audited contextual internal-link coverage from minor-lines-overview.md to the currently published Minor Lines / advanced-markings cluster companions. Found three genuine, previously documented gaps: ring-of-solomon-palmistry.md, via-lascivia-palmistry.md, and intuition-line-palmistry.md each had their own publish changelog entry (PP-RELAY-035, PP-RELAY-036, PP-RELAY-050) explicitly noting no reciprocal link was added into minor-lines-overview.md because the article's existing structure had no natural slot without a broader rewrite. Added one short, purely navigational sentence after the existing Girdle of Venus section naming and linking all three, with no traditional-association, location, or source content attached. The four companions already named in the overview's prose (sun-line.md, mercury-line.md, marriage-relationship-lines.md, girdle-of-venus.md) already had meaningful contextual links and were left untouched. Judged simian-line.md and marriage-line-forked-broken-meaning.md out of scope for this specific overview (documented reasoning in companion_link_audit below); no other content in either was changed.",
-  "pr_number": null,
+  "pr_number": 98,
   "verification": [
     "npm run build",
     "npm run content-audit",
