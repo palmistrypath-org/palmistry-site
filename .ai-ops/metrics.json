@@ -41,6 +41,6 @@
     {"task_id":"PP-RELAY-049","revision":2,"risk_class":"SOURCE_SENSITIVE","status":"ACCEPTED_MERGED","merged_at":"2026-08-25T07:39:30Z","pr_number":89,"rework_count":1,"reason_categories":["SOURCE_INTEGRITY","UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM"]},
     {"task_id":"PP-RELAY-050","revision":5,"risk_class":"SOURCE_SENSITIVE","status":"ACCEPTED_MERGED","merged_at":"2026-08-27T12:09:01Z","pr_number":96,"rework_count":4,"reason_categories":["CONTROL_PLANE","SOURCE_INTEGRITY","UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM","IMPLEMENTATION_CORRECTNESS","DOCUMENTATION_STATE"]},
     {"task_id":"PP-RELAY-051","revision":1,"risk_class":"STANDARD","status":"ACCEPTED_MERGED","merged_at":"2026-08-27T14:10:09Z","pr_number":97,"rework_count":0,"reason_categories":[]},
-    {"task_id":"PP-RELAY-052","revision":1,"risk_class":"STANDARD","status":"AUTHORIZED","merged_at":null,"pr_number":null,"rework_count":0,"reason_categories":[]}
+    {"task_id":"PP-RELAY-052","revision":1,"risk_class":"STANDARD","status":"MERGE_APPROVED","merged_at":null,"pr_number":98,"rework_count":0,"reason_categories":[],"reviewed_at":"2026-08-27T16:06:09Z","merge_approved_at":"2026-08-27T16:06:09Z"}
   ]
 }
