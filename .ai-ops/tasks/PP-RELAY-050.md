@@ -5,7 +5,7 @@ Status: AUTHORIZED
 PP-RELAY-050
 
 ## Revision
-4
+5
 
 ## Risk Class
 SOURCE_SENSITIVE
@@ -43,6 +43,16 @@ Revision 3 produced PR #93, corrected every authorized revision-3 passage, and p
 4. Update Pass 17 in `docs/source-verification-log.md`, the PP-RELAY-050 changelog entry, and the revision-4 result artifact so they record this revision accurately and do not repeat the rejected negative historical characterization as approved prose.
 5. Do not change any other frontmatter field, article sentence, navigation, reciprocal link, backlog count/status, controlling evidence, or unrelated prose.
 
+## Revision 4 review
+Revision 4 produced PR #94 and passed the required source-sensitive validation plus CI. Independent Director review found the **article prose source-clean**. The PR was not accepted because its cumulative diff dropped the previously approved reciprocal navigation link from `src/content/blog/beginner/m-line-palmistry.md`, while the revision-4 result artifact, changelog, editorial backlog, and source-verification log all stated that the link was present/preserved. PR #94 was closed without merging. Revision 5 is therefore a bounded implementation/documentation-consistency repair only; it is not a new source-review pass.
+
+## Revision 5 corrections
+1. Preserve the entire revision-4 article at `src/content/blog/beginner/intuition-line-palmistry.md` exactly. Do not change any article frontmatter or prose.
+2. Restore only the previously approved navigation-only reciprocal link in `src/content/blog/beginner/m-line-palmistry.md`: link the existing words `intuition line` in the existing `M signals strong intuition` passage to `/blog/beginner/intuition-line-palmistry`. Do not otherwise edit that article or change its meaning.
+3. Update Pass 17 in `docs/source-verification-log.md`, the PP-RELAY-050 entry in `docs/CHANGELOG.md`, and `.ai-ops/results/PP-RELAY-050-r5.json` so the durable record accurately states that revision 5 restores the dropped reciprocal link and that revisions 1–4 were reviewed/closed without merge. Do not claim an earlier revision was finally accepted or merged.
+4. Preserve `docs/editorial-backlog.md` count/status and all other revision-4 bookkeeping unless a direct consistency correction is required solely because the link is now actually restored.
+5. Do not modify the controlling evidence file, lessons, site code, routing, schemas, other article prose, or unrelated documentation.
+
 ## Objective
 Produce the approved Next 25 article **Intuition Line Meaning in Palmistry** at `src/content/blog/beginner/intuition-line-palmistry.md` as a focused, beginner-readable treatment bounded entirely by the Director-verified Cheiro and Benham evidence. Do not turn historical claims about impressions or clairvoyance into empirical facts, predictions, or proof of psychic ability.
 
@@ -54,14 +64,14 @@ Primary:
 - `src/content/blog/beginner/intuition-line-palmistry.md`
 
 Supporting only as directly necessary:
-- at most two natural reciprocal navigation links from existing content that already discusses minor lines, Luna, or the Intuition Line; inspect `minor-lines-overview.md`, `mount-of-luna.md`, and `m-line-palmistry.md`, but do not rewrite them to force a link
+- `src/content/blog/beginner/m-line-palmistry.md` — revision 5 may only restore the approved navigation-only reciprocal link on the existing words `intuition line`
 - `docs/editorial-backlog.md` published count/status after the article is actually added
 - `docs/source-verification-log.md`
 - `docs/CHANGELOG.md`
 - `docs/CURRENT_STATE.md` only for the minimum article-count/current-state reconciliation required by `AGENTS.md`
-- `.ai-ops/results/PP-RELAY-050-r4.json`
+- `.ai-ops/results/PP-RELAY-050-r5.json`
 
-Do not modify `.ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md`, the task packet, lessons, site code, routing, schemas, or unrelated article prose. If a natural reciprocal link would require a broader rewrite, omit it and document the decision.
+Do not modify `.ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md`, the task packet, lessons, site code, routing, schemas, or unrelated article prose. Revision 5 must not add any reciprocal navigation other than the one explicitly authorized above.
 
 ## Controlling evidence
 Read `.ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md` before drafting. It is the complete approved evidence boundary for this task.
@@ -117,6 +127,7 @@ Before `READY_FOR_REVIEW`:
 11. Search the cumulative article and documentation for `writing decades apart|easiest to confuse|Neither Cheiro nor Benham|Nothing in either author's account|other classical writers|covers how this line|line of clairvoyance`; remove or narrowly disposition every occurrence against the revision-2 corrections above. The unverified alias may remain in the article only in the permitted FAQ and may remain in task-history documentation solely to explain the correction.
 12. Search the cumulative article and documentation for `situations through impression|rather than deliberate analysis|Cheiro doesn't|not a claim about paranormal ability|easy error`; none may remain in the article, and documentation may retain them only as past-tense task history explaining their removal.
 13. Search the cumulative article and documentation for `not with the accuracy|readings do and don't claim|readings do and don’t claim`; none may remain in the article, and documentation may retain them only as past-tense task history explaining their removal. Confirm the revised description remains 140–160 characters.
+14. Confirm the existing words `intuition line` in `src/content/blog/beginner/m-line-palmistry.md` are linked to `/blog/beginner/intuition-line-palmistry` and that no other prose in that file changed.
 
 ## Acceptance criteria
 1. A useful 900–1,200 word beginner article exists at the authorized slug with valid frontmatter and no predictive/psychic promise.
@@ -125,12 +136,13 @@ Before `READY_FOR_REVIEW`:
 4. The article does not claim `Line of Clairvoyance` or another phrase is a verified alternate name.
 5. No unsupported prevalence, psychic-proof, accuracy, prediction, absence, cross-tradition, combination, variation, health, danger, or outcome claim remains.
 6. Palmistry Path policy is separate from historical wording and does not sanitize what Cheiro or Benham actually claimed.
-7. Any reciprocal navigation is natural, non-duplicative, and limited to two short edits; omission is acceptable when no natural slot exists.
+7. The reciprocal navigation edit is present exactly as authorized: the existing words `intuition line` in `m-line-palmistry.md` link to `/blog/beginner/intuition-line-palmistry`, with no other change to that article.
 8. Backlog/article-count bookkeeping and source verification are accurate and bounded.
 9. Required SOURCE_SENSITIVE preflight and project validation pass.
 10. The cumulative diff neither sanitizes Cheiro/Benham by attributing modern evidentiary restraint to them nor misdescribes the content of linked existing articles.
 11. Benham's paragraph contains only the approved intuitive-impressions/estimating-people association and his own bounded degree statement; the myths contain no unsupported source-silence or confusion-likelihood claim.
 12. The hunch myth states historical association and Palmistry Path policy separately without denying or sanitizing Benham's period accuracy claims; the description and intro make no broad claim about what the authors did not claim.
+13. Revision-5 durable documentation agrees with implementation about the restored reciprocal link and does not claim an earlier revision was finally accepted or merged.
 
 ## Validation
 Run at minimum:
@@ -139,11 +151,12 @@ Run at minimum:
 - `npm run content-audit`
 - `npm run audit:all`
 - `git diff --check`
+- verify the `m-line-palmistry.md` diff is link-only on the existing words `intuition line`
 
 ## Stop conditions
 Return `HUMAN_REQUIRED` only if a useful article still genuinely requires material evidence unavailable under repository policy after using the Director evidence file. Return `BLOCKED` only for a technical blocker that cannot safely be repaired within scope. Return `PAUSED_USAGE_LIMIT` immediately if a usage/credit safeguard triggers.
 
 ## Durable result contract
-Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-050-r4.json` on a pushed `claude/relay-PP-RELAY-050-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
+Every worker run that passes startup must leave `.ai-ops/results/PP-RELAY-050-r5.json` on a pushed `claude/relay-PP-RELAY-050-...` branch for `READY_FOR_REVIEW`, `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`.
 
 The result must include `risk_class: "SOURCE_SENSITIVE"` and a truthful completed `source_preflight` object when content has been drafted/reviewed. For `READY_FOR_REVIEW`, open exactly one Relay PR targeting `main` with matching task/revision footers. Non-change terminal outcomes do not require a dummy PR. Do not merge and do not select the next task.
