@@ -1,0 +1,20 @@
+{
+  "description": "The core revision-2 fix: after the Director commits MERGE_APPROVED to state.json on main (a push, not a PR event), the refresh plan must flip the matching open Relay PR's status to allowed=true without touching any other open PR.",
+  "state": {
+    "relay_enabled": true,
+    "credit_guard": "CONFIRMED_DISABLED",
+    "autonomous_merge": true,
+    "status": "MERGE_APPROVED",
+    "current_task_id": "PP-RELAY-059",
+    "approved_pr": 108,
+    "approved_head_sha": "51f5db2d0dbca10243da7727e81cd2080d865f7c"
+  },
+  "openPullRequests": [
+    {
+      "number": 108,
+      "head_sha": "51f5db2d0dbca10243da7727e81cd2080d865f7c",
+      "title": "[RELAY PP-RELAY-059] Fix merge-gate publication trigger"
+    }
+  ],
+  "expected": [{ "prNumber": 108, "allowed": true }]
+}

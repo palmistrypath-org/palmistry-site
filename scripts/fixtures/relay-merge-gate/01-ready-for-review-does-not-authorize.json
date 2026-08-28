@@ -1,0 +1,18 @@
+{
+  "description": "READY_FOR_REVIEW alone (the state a worker leaves after opening a PR) must never authorize merge, even when approved_pr/approved_head_sha happen to already be populated from a prior cycle.",
+  "state": {
+    "relay_enabled": true,
+    "credit_guard": "CONFIRMED_DISABLED",
+    "autonomous_merge": true,
+    "status": "READY_FOR_REVIEW",
+    "current_task_id": "PP-RELAY-999",
+    "approved_pr": 104,
+    "approved_head_sha": "927c19bbbfeb85ef6ee35489f50b162446b15b9b"
+  },
+  "check": {
+    "prNumber": 104,
+    "headSha": "927c19bbbfeb85ef6ee35489f50b162446b15b9b",
+    "taskId": "PP-RELAY-999"
+  },
+  "expected": { "allowed": false }
+}

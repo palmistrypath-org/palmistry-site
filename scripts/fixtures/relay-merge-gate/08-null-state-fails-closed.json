@@ -1,0 +1,10 @@
+{
+  "description": "A missing or unparseable state.json must fail closed, not throw or default to authorizing. The I/O layer (publish-relay-merge-gate-status.mjs) converts a read/parse failure to `state: null` before calling evaluateMergeGate; this fixture covers that null-state input directly.",
+  "state": null,
+  "check": {
+    "prNumber": 108,
+    "headSha": "51f5db2d0dbca10243da7727e81cd2080d865f7c",
+    "taskId": "PP-RELAY-059"
+  },
+  "expected": { "allowed": false }
+}
