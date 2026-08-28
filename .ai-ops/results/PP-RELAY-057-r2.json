@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-057",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Revision 1 correctly returned HUMAN_REQUIRED rather than inventing a distinction: docs/editorial-backlog.md item 22 was written on the premise that the Line of Mars is a feature of its own, 'frequently confused with' a double life line, but the repository's own already-published, already source-verified content contradicts that premise, not merely under-evidences it. Director review independently confirmed that src/content/blog/beginner/double-life-line-meaning.md explicitly identifies Benham's Line of Mars with the sister/inner life line, resolving the gate as a bounded backlog/source-integrity correction rather than an owner SEO/product decision. This revision performs that correction. No line-of-mars-palmistry article, palmistry meaning, or route was drafted or published, matching the task's explicit prohibition. docs/editorial-backlog.md item 22 was corrected: the scored-table title now reads '(duplicate — covered by double-life-line-meaning)', and the Article details entry was rewritten from the unqualified 'separate feature' premise to an explicit duplicate/covered status naming the published article (which quotes Benham 1900 directly that the line and the life line 'are sister lines, in fact' and calls it 'the line William Benham called the Line of Mars'), the independently-worded 04-life-line.mdx lesson, and Cheiro's own chapter title 'The Line of Mars or Inner Life Line' already recorded in this repository's source-verification corpus. The prior note and prior cannibalization-risk note were preserved verbatim, labeled superseded, for history. The now-stale Cannibalization Risk Summary row and Internal Link Priorities row that assumed line-of-mars-palmistry would become a separate, cross-linked article were removed, since no such article is being drafted. Score, ordering, slug, and every other backlog entry are unchanged. Added docs/source-verification-log.md Pass 19 with the full claim-level evidence map and SOURCE_SENSITIVE preflight disposition, and a dated docs/CHANGELOG.md entry. No palmistry meaning, published article prose, metadata, route, canonical, SEO/indexing, or Relay-workflow behavior changed.",
+  "verification": [
+    "npm run content-audit passes on this change (72 blog posts, 25 lessons valid)",
+    "git diff --check passes (no whitespace/EOL errors)",
+    "npm run build could not be run: node_modules/astro is not installed in this environment (node_modules is entirely absent). No runtime/site code, route, script, or src/content file was touched, so under AGENTS.md's risk-based testing matrix this is a wiki/agent-doc-only change for which a site build is not required; content-audit and git diff --check were run as the applicable checks",
+    "npm run audit:claim-risk -- docs/editorial-backlog.md docs/source-verification-log.md run as a bounded aid per the task's SOURCE_SENSITIVE preflight instructions; every finding inside the new item-22 text and new Pass 19 entry is a heuristic match on wording quoted verbatim from the already-published double-life-line-meaning.md article or lesson (e.g. 'many modern practitioners', 'most commonly called'), not a new prevalence/consensus claim asserted by this task; all other findings in the two files are pre-existing content in unrelated, untouched sections",
+    "Manual diff review confirming the only files touched are docs/editorial-backlog.md, docs/source-verification-log.md, docs/CHANGELOG.md, and this result artifact; no src/content, route, script, or Relay-workflow file changed; no line-of-mars-palmistry file/route created",
+    "Manual read-through of the corrected backlog wording against src/content/blog/beginner/double-life-line-meaning.md, src/content/lessons/lines/04-life-line.mdx, and the existing corpus-verified Cheiro chapter-title record in docs/source-verification-log.md (Pass 2 line ~405, Pass 3 line ~432) confirming every claim traces to named, already-verified repository evidence",
+    "Confirmed no new palmistry interpretation, combination reading, synonym-chronology inference, prevalence/frequency claim, or anonymous-authority attribution was introduced anywhere in the diff beyond quoting the existing published article/lesson"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "No new palmistry claim was introduced; the change only corrects backlog/status bookkeeping against already-published, already source-verified repository content (double-life-line-meaning.md, 04-life-line.mdx) and the existing Cheiro chapter-title record in the source-verification log. The corrected text explicitly declines to invent the 'separate feature' distinction rather than asserting one, states the evidence boundary using named sources only, and keeps the historical-source claims (what Benham/Cheiro named the line) separate from the editorial disposition (why no separate article is being drafted). No modern commercial/SEO source is cited as authority. Quotation marks used in the correction reproduce only wording already published/quotation-verified elsewhere in the repository, not new unverified quotation."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read of the immutable task packet, state.json, CURRENT_TASK.md, the revision-1 HUMAN_REQUIRED result on the existing claude/relay-PP-RELAY-057-line-of-mars branch, the published double-life-line-meaning.md article and 04-life-line.mdx lesson, and the existing corpus-verified Cheiro chapter-title records in docs/source-verification-log.md",
+      "Read of audit-content.mjs's checkPublishedRowDrift logic to confirm the corrected item-22 row (kept unstruck, no matching src/content/blog file) remains structurally valid and correctly reads as outstanding-but-not-to-be-drafted",
+      "Targeted edits to docs/editorial-backlog.md (scored-table title + Article details entry for item 22; removal of the two now-stale Cannibalization Risk Summary / Internal Link Priorities rows referencing item 22), docs/source-verification-log.md (new Pass 19), and docs/CHANGELOG.md (new dated entry)",
+      "npm run content-audit",
+      "npm run audit:claim-risk -- docs/editorial-backlog.md docs/source-verification-log.md",
+      "git diff --check"
+    ],
+    "validation": [
+      "npm run content-audit",
+      "npm run audit:claim-risk (bounded aid, manual disposition of every finding in changed regions)",
+      "git diff --check",
+      "manual diff scope review (files touched vs. task's authorized scope; confirmed no line-of-mars-palmistry file/route created)",
+      "manual claim-by-claim comparison of corrected wording against the published article/lesson and the existing corpus-verified source-verification-log entries"
+    ],
+    "notes": "Startup gate passed: relay_enabled true, credit_guard CONFIRMED_DISABLED, status REWORK_REQUIRED, iterations_completed 33 < iteration_budget 50, task/revision (PP-RELAY-057 rev 2) matched across state.json/PP-RELAY-057.md/CURRENT_TASK.md, single declared risk_class SOURCE_SENSITIVE, no open GitHub PR referencing PP-RELAY-057 at any revision, and the only existing claude/relay-PP-RELAY-057-... branch (claude/relay-PP-RELAY-057-line-of-mars) carries only a closed revision-1 HUMAN_REQUIRED result (no PP-RELAY-057-r2.json on any branch). Local main (e0a8138) had diverged from origin/main (0e78534, matching the dispatch payload's state commit SHA) with no fast-forward path; the working tree was clean. Per AGENTS.md's clean-divergence recovery path, local main was left untouched and this task's branch (claude/relay-PP-RELAY-057-backlog-dedup) was created directly from verified origin/main, distinct from the pre-existing closed revision-1 branch to avoid rewriting its history."
+  }
+}
