@@ -207,7 +207,7 @@ These build out the content clusters, fill topical gaps, and support monetisatio
 | 19 | ~~Broken Fate Line Meaning~~ (published 2026-08-25) | `broken-fate-line-meaning` | 3 | 2 | 3 | 2 | 3 | **9** |
 | 20 | ~~The Intuition Line in Palmistry~~ (published 2026-08-25) | `intuition-line-palmistry` | 2 | 2 | 4 | 2 | 3 | **9** |
 | 21 | The Teacher's Square in Palmistry (deferred — source-unverified) | `teachers-square-palmistry` | 2 | 2 | 4 | 2 | 3 | **9** |
-| 22 | The Line of Mars in Palmistry | `line-of-mars-palmistry` | 2 | 2 | 4 | 2 | 3 | **9** |
+| 22 | The Line of Mars in Palmistry (duplicate — covered by `double-life-line-meaning`) | `line-of-mars-palmistry` | 2 | 2 | 4 | 2 | 3 | **9** |
 | 23 | Rascettes (Bracelet Lines) in Palmistry | `rascettes-palmistry` | 2 | 2 | 4 | 2 | 3 | **9** |
 | 24 | Index Finger Length in Palmistry (The Jupiter Finger) | `index-finger-length-palmistry` | 3 | 2 | 4 | 2 | 3 | **10** |
 | 25 | Ring Finger vs Index Finger Length: What Palmistry Says | `ring-vs-index-finger-palmistry` | 4 | 2 | 3 | 2 | 3 | **10** |
@@ -264,13 +264,12 @@ These follow the established variation-article pattern (same as the life line cl
 
 ---
 
-#### 22. The Line of Mars
+#### 22. The Line of Mars — DUPLICATE, COVERED BY `double-life-line-meaning` (PP-RELAY-057)
 - **Slug:** `beginner/line-of-mars-palmistry`
 - **Primary keyword:** "line of mars palmistry" / "inner life line palmistry"
 - **relatedLesson:** `/learn/lines/04-life-line`
-- **CTA:** Life line lesson Go Deeper; also links to `double-life-line-meaning` (related phenomenon)
-- **Notes:** The line of Mars runs inside the life line and is frequently confused with a double life line. Important to distinguish the two clearly. Links naturally to the existing `double-life-line-meaning` article.
-- **Cannibalization risk:** Low. `double-life-line-meaning` covers the doubled appearance; this covers the Mars line as its own feature with its own traditional associations. Flag the relationship explicitly in both articles.
+- **Status:** Duplicate topic, do not draft as a separate article. The repository's own already-published, source-verified content already treats "Line of Mars" as Benham's and Cheiro's own name for the sister line / inner life line / double life line feature, not as a materially separate feature. `src/content/blog/beginner/double-life-line-meaning.md` states directly that "This is the line William Benham called the Line of Mars, and what many modern practitioners refer to simply as a sister line or inner life line," quoting Benham (1900) that the line and the life line "are sister lines, in fact." `src/content/lessons/lines/04-life-line.mdx` independently calls the same feature "the sister line, also called the inner life line or Line of Mars." Cheiro's own chapter in *Palmistry for All* (1916), already corpus-verified in this repository, is titled "The Line of Mars or Inner Life Line," treating the two names as one subject (see `docs/source-verification-log.md` Pass 19). Drafting a standalone `line-of-mars-palmistry` article on the premise that it is a feature "frequently confused with" a double life line would require inventing a distinction the approved evidence does not support.
+- **Prior notes (superseded by the status above, kept for history):** "The line of Mars runs inside the life line and is frequently confused with a double life line. Important to distinguish the two clearly. Links naturally to the existing `double-life-line-meaning` article." **Prior cannibalization-risk note (superseded):** "Low. `double-life-line-meaning` covers the doubled appearance; this covers the Mars line as its own feature with its own traditional associations. Flag the relationship explicitly in both articles." This premise — two distinct-but-confusable features — is contradicted by the repository's own published, source-verified content and is not the working disposition.
 
 ---
 
@@ -478,7 +477,6 @@ These articles build long-term topical authority, support the advanced module, o
 | `how-to-practice-palm-reading` (#3) + `how-to-read-a-palm` | Low | Method vs. skill development. Frame opening explicitly as a follow-up |
 | `how-to-give-a-palm-reading` (#29) + `how-to-read-palm-for-someone` (#41) | Low | Technical sequence vs. relational/ethical dimension. Write #29 first, #41 as the ethical companion |
 | `who-was-cheiro` (#31) + `cheiro-palmistry-books` | None | Biography vs. book guide. Cross-link both ways |
-| `line-of-mars-palmistry` (#22) + `double-life-line-meaning` | Low | Distinct features often confused for each other. Address the distinction in both articles |
 | `history-of-palmistry` (#32) + `what-palmistry-is` | Low | Historical deep-dive vs. definition overview. Link from overview to history |
 
 ---
@@ -496,7 +494,6 @@ When Group 1 articles are published, update these existing articles to add links
 | `mercury-line` + `sun-line` + `marriage-relationship-lines` + `girdle-of-venus` | → `minor-lines-overview` (#1) once it's the cluster pillar |
 | `what-palmistry-is` | → `is-palmistry-real` (#6), `history-of-palmistry` (#32) |
 | `finger-shapes-palmistry` | → `phalanges-palmistry` (#5, done 2026-08-19), `index-finger-length-palmistry` (#24), `little-finger-palmistry` (#26) |
-| `double-life-line-meaning` | → `line-of-mars-palmistry` (#22) to clarify the distinction |
 
 ---
 

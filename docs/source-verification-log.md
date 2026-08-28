@@ -1686,3 +1686,74 @@ unchanged; `checkPublishedRowDrift` still passes with item 21 correctly
 read as outstanding). `git diff --check`. Manual review confirming no
 palmistry meaning, Jupiter content, square-marking content, Ring of
 Solomon content, route, canonical, or SEO/indexing behavior changed.
+
+## Pass 19 — The Line of Mars backlog candidate reframed as a duplicate topic, no article drafted (Relay PP-RELAY-057, revision 2, 2026-08-28)
+
+Scope: Relay PP-RELAY-057 revision 2 (`SOURCE_SENSITIVE`). Revision 1
+returned `HUMAN_REQUIRED` because drafting `line-of-mars-palmistry` under
+`docs/editorial-backlog.md` item 22's original premise — that the Line of
+Mars is a feature of its own, "frequently confused with" a double life
+line — was contradicted by the repository's own already-published,
+already source-verified content, not merely under-evidenced. Director
+review independently confirmed that
+`src/content/blog/beginner/double-life-line-meaning.md` explicitly
+identifies Benham's "Line of Mars" with the sister/inner life line. This
+revision resolves the gate as a bounded backlog/source-integrity
+correction, not an article draft or an SEO/indexing decision.
+
+**Controlling evidence.** `src/content/blog/beginner/double-life-line-meaning.md`
+(published, pubDate 2026-05-27) states directly: "This is the line William
+Benham called the Line of Mars, and what many modern practitioners refer to
+simply as a sister line or inner life line," and quotes Benham (1900) that
+the line and the life line "are sister lines, in fact." The same article's
+FAQ section states: "In the Western palmistry tradition it is most
+commonly called the Line of Mars or the inner life line, and sometimes
+simply the sister line." `src/content/lessons/lines/04-life-line.mdx`
+independently calls the same feature "the sister line, also called the
+inner life line or Line of Mars." This repository's own corpus
+verification (Pass 2, line ~405 above) already records that Cheiro's
+*Palmistry for All* (1916) carries a chapter titled "The Line of Mars or
+Inner Life Line" — Cheiro's own chapter title treats the two names as one
+subject — and Pass 3 (line ~432 above) separately distinguishes that
+chapter from Cheiro's unrelated Mount of Mars material, confirming the
+"Line of Mars" name belongs to this line, not to a different feature.
+
+**Claim-level evidence map.**
+
+| Candidate claim | Status |
+|---|---|
+| Benham names this line the "Line of Mars" | Supported — Benham (1900), quoted directly in the published article and in `04-life-line.mdx` |
+| The "Line of Mars," "sister line," "inner life line," and "double life line" all name the same feature | Supported — the published article and lesson state this identity directly; Cheiro's own chapter title ("The Line of Mars or Inner Life Line") treats the names as one subject |
+| The Line of Mars is a materially separate feature from the double life line, "frequently confused" with it | Not supported by any approved evidence reviewed; contradicted by the repository's own published, source-verified content |
+| A standalone `line-of-mars-palmistry` article is warranted as a distinct topic | Not supported; would require inventing the unsupported distinction above |
+
+**Correction made.** No `line-of-mars-palmistry` article, palmistry
+meaning, or route was drafted or published.
+`docs/editorial-backlog.md` item 22's scored-table title and its "Article
+details" entry were corrected from an unqualified premise (a separate
+feature "frequently confused with" a double life line) to an explicit
+duplicate/covered status that states the evidence boundary above, while
+preserving the prior note and prior cannibalization-risk note verbatim,
+labeled superseded, for history. The now-stale Cannibalization Risk
+Summary row and Internal Link Priorities row that assumed
+`line-of-mars-palmistry` would become a separate, cross-linked article
+were removed, since no such article is being drafted. No score, ordering,
+slug, or unrelated backlog entry changed.
+
+**Preflight disposition (SOURCE_SENSITIVE).** Prevalence/consensus
+language: none introduced; the correction states only that the named
+sources use the same term for the same feature, not a frequency or
+consensus claim. Scientific/historical assertions: limited to what the
+published article, lesson, and existing corpus-verified log entries
+already state, with source and edition named. Combination readings: none
+introduced; the correction declines to invent the "separate feature"
+distinction rather than asserting a new one. Anonymous authority: none
+used. Quotation fidelity: quotation marks used here reproduce only
+wording already quotation-verified in the published article, lesson, or
+this log; no new unverified quotation introduced. Safety boundaries: no
+medical, legal, financial, or predictive-science claim introduced.
+
+**Verification:** `npm run content-audit`. `git diff --check`. Manual
+review confirming no `line-of-mars-palmistry` route/article/palmistry
+meaning was created and no published article prose, metadata, redirect,
+canonical, or SEO/indexing behavior changed.
