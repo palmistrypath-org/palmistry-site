@@ -1757,3 +1757,42 @@ medical, legal, financial, or predictive-science claim introduced.
 review confirming no `line-of-mars-palmistry` route/article/palmistry
 meaning was created and no published article prose, metadata, redirect,
 canonical, or SEO/indexing behavior changed.
+
+## Pass 20 — Rascettes (Bracelet Lines) in Palmistry, new article (Relay PP-RELAY-058, revision 1, 2026-08-28)
+
+Scope: Relay PP-RELAY-058 revision 1 (`SOURCE_SENSITIVE`), publishing
+`src/content/blog/beginner/rascettes-palmistry.md`. The task authorized
+drafting only from the Director-verified evidence boundary recorded in
+`.ai-ops/evidence/PP-RELAY-058-benham-rascettes-boundary.md` (William G.
+Benham, *The Laws of Scientific Hand Reading*, 1900, Rascettes/Bracelets
+section, checked against an accessible transcription at
+`https://www.superphysics.org/research/benham/palmistry/part-2/chapter-14c/`).
+The backlog's older West (1998)/Fincham (2005) planning note for this
+item was explicitly out of scope and was not used.
+
+**Claim-level evidence map.**
+
+| Claim in the published article | Status |
+|---|---|
+| Benham names the wrist lines the Rascettes, or Bracelets | Supported — evidence note |
+| A hand may show sometimes three, sometimes only one (presented as Benham's observation, not a norm) | Supported — evidence note; article explicitly frames it as observation, not a count rule, and a myth entry rejects a "should have exactly three" reading |
+| The first bracelet is the one Benham treats as interpretively significant | Supported — evidence note |
+| Benham historically associates a deep, well-formed first bracelet with a strong constitution, and a poorly marked/chained/broad-and-shallow one with the opposite | Supported — evidence note; framed in the article as Benham's period reading, explicitly separated from a health claim in a dedicated "Palmistry Path's approach" section |
+| Older palmists assigned roughly thirty years per bracelet to estimate lifespan; Benham could not confirm this and did not use it | Supported — evidence note; article states both halves (the historical claim and Benham's own non-use) rather than omitting either |
+| Short branches rising from the Rascettes are associated with ambition/upward striving | Supported — evidence note; attributed specifically to Benham, not generalized |
+| Any combination of Rascette meaning with the life line, mounts, travel lines, or hand type | Not asserted — the article's "Rascettes in context" section states plainly that Benham's checked material does not combine the Rascettes with other features and that the article does not invent one |
+| Any West (1998) or Fincham (2005) claim | Not used — article's sources footer names only Benham (1900) |
+
+**Preflight disposition (SOURCE_SENSITIVE), per `.ai-ops/CLAUDE_ROUTINE_PROMPT.md`.**
+
+1. *Prevalence/consensus language.* `npm run audit:claim-risk` initially flagged the opening sentence's "most hands show one or more" wristline lines as an unsupported prevalence claim — the evidence note supports only Benham's own "sometimes three, sometimes one" observation, not a claim about most hands. Corrected to a plain observational instruction ("look for one or more...") before publishing. The scan's five remaining flags (idiomatic "most"/"many" — e.g., "most directly on point," "most defensible approach," "how many lines") were manually reviewed and are not prevalence or consensus claims about palmistry; no further change needed.
+2. *Scientific/historical assertions.* The constitution reading, the thirty-year-per-bracelet method, and the ambition/branch reading are all traceable to the evidence note and attributed to Benham by name and year throughout.
+3. *Combination readings.* None introduced; see the evidence-map row above.
+4. *Vague authority.* None used — every historical claim is attributed to "Benham" by name; no "modern palmists," "some writers," or equivalent phrasing appears.
+5. *Quotation fidelity.* No quotation marks are used around any Benham wording in the article; all of his claims are paraphrased, since the evidence note itself paraphrases rather than supplying verbatim-verified quotations.
+6. *Claim-type separation.* A dedicated "Palmistry Path's approach" section keeps Benham's period historical reading (constitution, lifespan arithmetic) visibly separate from the site's own editorial/safety position, including an explicit "Nothing in this article should be read as medical guidance" note per the style guide's medical-disclaimer rule.
+7. *Safety boundaries.* No medical diagnosis, reproductive/gynecological claim, disease warning, or lifespan prediction is presented as valid; the older lifespan method is named as history only, with Benham's own non-confirmation and the site's own non-use both stated.
+
+**Bookkeeping.** `docs/editorial-backlog.md` item 23's scored-table row and "Article details" section were updated to published status (72 → 73 blog posts), with the prior West/Fincham-based note kept verbatim, labeled superseded, for history. A purely navigational reciprocal link was added to `src/content/blog/beginner/minor-lines-overview.md`'s existing "a few more individually named minor markings" sentence, naming and linking the Rascettes alongside the three markings already listed there — no new interpretive claim was added to that sentence.
+
+**Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/rascettes-palmistry.md` (5 residual idiomatic false-positive flags, manually dispositioned above). `npm run build` (118 pages, including `/blog/beginner/rascettes-palmistry/`). `npm run content-audit` (73 blog posts / 25 lessons, passed). `npm run audit:all` (links/orphan check, images, schema, indexability, accessibility — all passed). `git diff --check`.
