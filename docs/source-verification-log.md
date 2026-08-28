@@ -1621,3 +1621,70 @@ reviewed and closed without merging, and that no earlier revision was
 finally accepted or merged.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/intuition-line-palmistry.md` (article content unchanged from revision 4; same 1 disclosed myth-heading-pattern finding). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`. `git diff` of `m-line-palmistry.md` confirmed link-only on the existing words "intuition line," with no other change to that file.
+
+---
+
+## Pass 18 — PP-RELAY-056, "The Teacher's Square" — no article, evidence access blocked (2026-08-28)
+
+No article was drafted. This pass records why.
+
+### What repository-held evidence establishes
+
+`src/content/blog/beginner/mount-of-jupiter.md` already describes the Mount
+of Jupiter's teaching/wisdom association at the **mount level**, sourced to
+the Indian tradition's Guru Parvat (Guru = teacher/preceptor) and to Benham's
+"religion is one of the strong attributes of Jupiterians." Neither this
+article nor any other repository content names, locates, or interprets a
+specific **square-shaped marking** called a "Teacher's Square." A
+full-text search of this log (Passes 1–17, including the Batch 2B/2C
+quotation corpora and every prior Cheiro/Benham disposition table) found no
+prior verification pass touching the phrase "Teacher's Square" or any
+square-on-Jupiter reading. The one existing repository reference to a
+"square" formation on Jupiter's finger territory is unrelated: PP-RELAY-043's
+disposition table records Benham naming "square" as one of several
+break-repair formations on the **Head Line**, not a mount marking.
+
+### External verification attempted and blocked
+
+Per the task packet's evidence-first requirement 1, attempted to
+independently verify what the feature is called, where it sits, and what a
+named Tier 1–2 source (`editorial-style-guide.md` §5.1) actually says about
+it, before drafting. `WebSearch` located candidate primary-text hosts, but
+every `WebFetch` to a Tier 1/2-relevant primary-text host was blocked by this
+session's network egress proxy (`EGRESS_BLOCKED`), including:
+
+- `archive.org` (multiple Benham scans)
+- `chestofbooks.com/new-age/palmistry/Hand-Reading/...` (the page-by-page
+  Benham transcription used in prior verification passes, e.g. the
+  Line-of-Intuition evidence in `.ai-ops/evidence/PP-RELAY-050-cheiro-benham-intuition-line.md`)
+- `iapsop.com` (Benham PDF)
+- `www.gutenberg.org` (Cheiro, *Palmistry for All*)
+- `upload.wikimedia.org` (the exact Cheiro, *Cheiro's Language of the Hand*
+  scan URL cited as a working source in prior evidence notes)
+- `en.wikipedia.org` (control check, to confirm the block is not
+  domain-specific)
+
+This matches the same environmental block recorded for PP-RELAY-046
+revision 1 (above, Pass — see `.ai-ops/results` history for that task):
+Internet Archive, Project Gutenberg, chestofbooks.com, iapsop.com, and
+Wikimedia/Wikisource hosts are unreachable from this session regardless of
+which specific title or page is requested. This is a live re-confirmation of
+that same standing condition, not a new or task-specific restriction.
+
+`WebSearch` result summaries did surface a "teacher's square" claim, but only
+from Tier 4 commercial palmistry sites (`destinypalmistry.com`,
+`thalira.com`, `indianpalmreading.blogspot.com`). Per `editorial-style-guide.md`
+§5.1, Tier 4 material is discovery-only and is never citation authority; none
+of it was used to source or shape any claim, and none of it establishes that
+Cheiro, Benham, Gettings, West, or Fincham actually name, locate, or interpret
+a "Teacher's Square."
+
+### Conclusion
+
+Neither approved repository-held evidence nor a reachable Tier 1–2 source in
+this environment establishes the feature's name, exact location, or a named
+source's interpretation of it. Per the task packet's evidence-first
+requirement 8, no article was drafted from Tier 4 material or inference; the
+task returned `HUMAN_REQUIRED` with the specific blocked hosts and the exact
+verification still needed, recorded in
+`.ai-ops/results/PP-RELAY-056-r1.json`.
