@@ -1,0 +1,53 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-058",
+  "revision": 1,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Published src/content/blog/beginner/rascettes-palmistry.md, the next outstanding scored backlog article, drafted only from the Director-verified evidence boundary at .ai-ops/evidence/PP-RELAY-058-benham-rascettes-boundary.md (William G. Benham, The Laws of Scientific Hand Reading, 1900). The backlog's older West (1998)/Fincham (2005) planning note was explicitly out of scope and was not used. The article covers where Benham places the Rascettes at the wrist, his first-bracelet constitution reading, his ambition reading for upward branches, and states both halves of the older thirty-year-per-bracelet lifespan method: it is a real historical claim from the tradition Benham describes, and Benham himself says he could not confirm it and did not use it as a longevity measure. A dedicated 'Palmistry Path's approach' section keeps that historical material clearly separate from the site's own editorial position that wrist creases do not diagnose health, vitality, or predict lifespan, including an in-article medical-guidance note per the style guide. No combination reading with the life line, mounts, travel lines, or hand type was introduced; no West/Fincham or other unverified source was cited; no prevalence/consensus, count-norm, or vague-authority claim was introduced. Added one purely navigational reciprocal link into minor-lines-overview.md's existing 'a few more individually named minor markings' sentence. Updated docs/editorial-backlog.md item 23 to published status (72 -> 73 blog posts), keeping the prior superseded West/Fincham-based note for history, and recorded the full claim-level evidence map and required SOURCE_SENSITIVE preflight disposition in docs/source-verification-log.md ('Pass 20').",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/rascettes-palmistry.md (1 genuine finding: opening sentence's 'most hands show one or more' was an unsupported prevalence claim not grounded in the evidence note, which supports only Benham's own 'sometimes three, sometimes one' observation; corrected to a plain observational instruction before publishing. 5 residual flags on idiomatic 'most'/'many' usage -- e.g. 'most directly on point,' 'most defensible approach,' 'how many lines' -- manually reviewed and confirmed to be false positives, not prevalence/consensus claims about palmistry)",
+    "npm run build (118 pages built, including /blog/beginner/rascettes-palmistry/, clean)",
+    "npm run content-audit (73 blog posts, 25 lessons valid; editorial-backlog.md's Published marker matches the actual collection count)",
+    "npm run audit:all (links incl. orphan check, images, schema, indexability, accessibility all pass)",
+    "git diff --check (clean)",
+    "Manual review of the final article against the task packet's prohibited-scope list: no medical diagnosis or health claim presented as fact, no lifespan prediction presented as valid, no prevalence/statistical claim about bracelet count, no automatic bracelet-to-outcome scheme, no West/Fincham/commercial-source citation, no invented combination with other palm features, no vague anonymous authority, no geometry/count norm beyond the evidence note",
+    "Manual verification that every historical claim in the article traces to .ai-ops/evidence/PP-RELAY-058-benham-rascettes-boundary.md and is attributed to Benham by name",
+    "GitHub MCP search_pull_requests for startup-gate duplicate-PR check (no existing open PP-RELAY-058 PR found)",
+    "git ls-remote/branch inspection confirming no existing claude/relay-PP-RELAY-058-... branch or .ai-ops/results/PP-RELAY-058-r1.json prior to this run"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full claim-level evidence map and per-item preflight disposition recorded in docs/source-verification-log.md ('Pass 20 -- Rascettes (Bracelet Lines) in Palmistry, new article'). No quotation marks are used around any Benham wording in the article; all of his claims are paraphrased, since the evidence note itself paraphrases rather than supplying verbatim-verified quotations, so no verbatim-quotation check was required beyond confirming no quotation marks were used."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read/Edit/Write on article and docs files",
+      "npm run audit:claim-risk",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check",
+      "GitHub MCP search_pull_requests for startup-gate duplicate-PR check"
+    ],
+    "validation": [
+      "audit:claim-risk",
+      "build",
+      "content-audit",
+      "audit:all",
+      "git diff --check"
+    ],
+    "notes": "The persistent checkout's local main (topped out at commit e0a8138, the PP-RELAY-042 revision-9 dispatch point) had diverged from origin/main's actual tip (25c2edd, the verified PP-RELAY-058 dispatch commit named in both state.json and the routine dispatch payload) with no fast-forward path and no common merge base after upstream Relay/Director history changes. Working tree was confirmed clean and origin identity (palmistrypath/palmistry-site) was verified before following the documented clean-divergence recovery in AGENTS.md and .ai-ops/CLAUDE_ROUTINE_PROMPT.md: local main was left untouched, and claude/relay-PP-RELAY-058-rascettes-palmistry was branched directly from verified origin/main."
+  }
+}
