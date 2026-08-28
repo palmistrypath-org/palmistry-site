@@ -4,13 +4,13 @@
   "started_at": "2026-08-19T20:07:40Z",
   "target_accepted_iterations": 50,
   "baseline": {"experiment":"relay-v2b-near-autonomous","accepted":20,"first_pass_accepted":15,"tasks_requiring_rework":5,"rework_revisions":6,"human_gates":0,"usage_limit_events":0,"technical_blockers":2,"autonomous_merges":20,"archive":".ai-ops/archive/relay-v2b-completion.json"},
-  "summary": {"accepted":32,"first_pass_accepted":13,"tasks_requiring_rework":19,"rework_revisions":44,"human_gates":0,"usage_limit_events":0,"technical_blockers":3,"verified_no_change":0,"autonomous_merges":32,"bad_merge_or_rollback_events":0},
+  "summary": {"accepted":32,"first_pass_accepted":13,"tasks_requiring_rework":20,"rework_revisions":45,"human_gates":0,"usage_limit_events":0,"technical_blockers":3,"verified_no_change":0,"autonomous_merges":32,"bad_merge_or_rollback_events":0},
   "risk_classes": {
     "LOW":{"accepted":2,"first_pass_accepted":2,"tasks_requiring_rework":0,"rework_revisions":0},
     "STANDARD":{"accepted":9,"first_pass_accepted":7,"tasks_requiring_rework":2,"rework_revisions":2},
-    "SOURCE_SENSITIVE":{"accepted":21,"first_pass_accepted":4,"tasks_requiring_rework":17,"rework_revisions":42,"source_preflight_missing_or_invalid":0}
+    "SOURCE_SENSITIVE":{"accepted":21,"first_pass_accepted":4,"tasks_requiring_rework":18,"rework_revisions":43,"source_preflight_missing_or_invalid":0}
   },
-  "reason_counts": {"SOURCE_INTEGRITY":40,"UNSUPPORTED_PREVALENCE_OR_CONSENSUS":20,"UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM":15,"UNSUPPORTED_COMBINATION_READING":1,"SCOPE_DRIFT":0,"SEO":0,"ACCESSIBILITY":0,"TEST_OR_CI":0,"CONTROL_PLANE":4,"IMPLEMENTATION_CORRECTNESS":7,"DOCUMENTATION_STATE":2,"OTHER":0},
+  "reason_counts": {"SOURCE_INTEGRITY":41,"UNSUPPORTED_PREVALENCE_OR_CONSENSUS":20,"UNSUPPORTED_SCIENTIFIC_OR_HISTORICAL_CLAIM":15,"UNSUPPORTED_COMBINATION_READING":1,"SCOPE_DRIFT":0,"SEO":0,"ACCESSIBILITY":0,"TEST_OR_CI":0,"CONTROL_PLANE":4,"IMPLEMENTATION_CORRECTNESS":7,"DOCUMENTATION_STATE":2,"OTHER":0},
   "record_format_note": "Compacted 2026-08-27 after PP-RELAY-053 acceptance; detailed PP-RELAY-024 through PP-RELAY-049 task records remain durable in Git history. Aggregate/risk/reason counters preserve the full v2C experiment. Recent task records remain inline for active continuation.",
   "history_compacted_through": "PP-RELAY-049",
   "tasks": [
@@ -20,6 +20,6 @@
     {"task_id":"PP-RELAY-053","revision":1,"risk_class":"STANDARD","status":"ACCEPTED_MERGED","merged_at":"2026-08-27T18:08:25Z","pr_number":99,"rework_count":0,"reason_categories":[]},
     {"task_id":"PP-RELAY-054","revision":1,"risk_class":"STANDARD","status":"ACCEPTED_MERGED","merged_at":"2026-08-27T20:05:45Z","pr_number":100,"rework_count":0,"reason_categories":[]},
     {"task_id":"PP-RELAY-055","revision":2,"risk_class":"STANDARD","status":"ACCEPTED_MERGED","merged_at":"2026-08-27T23:07:34Z","pr_number":102,"rework_count":1,"reason_categories":["IMPLEMENTATION_CORRECTNESS"]},
-    {"task_id":"PP-RELAY-056","revision":1,"risk_class":"SOURCE_SENSITIVE","status":"READY_FOR_CLAUDE","merged_at":null,"pr_number":null,"rework_count":0,"reason_categories":[]}
+    {"task_id":"PP-RELAY-056","revision":2,"risk_class":"SOURCE_SENSITIVE","status":"REWORK_REQUIRED","merged_at":null,"pr_number":null,"rework_count":1,"reason_categories":["SOURCE_INTEGRITY"]}
   ]
 }
