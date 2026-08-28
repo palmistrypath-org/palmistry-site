@@ -1,0 +1,47 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-059",
+  "revision": 2,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Fixed the revision-1 relay-merge-gate design defect: the status only re-evaluated on pull_request events, so a Director MERGE_APPROVED commit (a push to main, not a PR event) could never turn it green, deadlocking a legitimate approved merge if made required. Added a gate-refresh job to .github/workflows/relay-merge-gate.yml that runs on push to main touching .ai-ops/state.json and republishes the same relay-merge-gate commit-status context for every open [RELAY ...] PR against the freshly pushed state, via a new pure planRefreshStatuses function and its I/O wrapper scripts/publish-relay-merge-gate-status.mjs. The original PR-triggered job, the shared evaluateMergeGate invariant, and relay-automerge.yml/relay-fastlane.yml are unchanged. Documented that the exact required-check identity is the Statuses API context string 'relay-merge-gate' (exported as MERGE_GATE_STATUS_CONTEXT), not a GitHub Actions check-run name.",
+  "root_cause_evidence": "Revision 1's root-cause finding is preserved and unchanged: PP-RELAY-057 PR #104 and PP-RELAY-058 PRs #105/#106 merged to main while state.json still recorded a pre-approval status; merged_by on all three is the repository owner's own account, not relay-automerge.yml's automation, and none carry relay-automerge.yml's forced '[RELAY <task>] Director-approved squash merge' commit title. relay-automerge.yml and relay-fastlane.yml were re-confirmed as already correctly gated on MERGE_APPROVED with exact PR/head matching; .ai-ops/fastlane.json remains disabled with an empty allowlist. The gap is that GitHub permits any account with merge rights to squash-merge an open, green, non-draft PR directly regardless of state.json; only a required-status-check (or equivalent) branch protection rule can prevent that. Director review of revision 1 (PR #107, closed unmerged) additionally found that its pull_request-only trigger would never re-run once state.json changed via a push to main after the PR was already open, which this revision fixes.",
+  "design_correction": "Added a second job (gate-refresh) triggered by push to main on the .ai-ops/state.json path, which lists currently open PRs targeting main, filters to [RELAY <task-id>]-titled ones, and republishes a relay-merge-gate status for each head using the same evaluateMergeGate invariant (via the new planRefreshStatuses pure function). Neither job mutates any PR head; both only publish a commit status against the exact SHA under evaluation, so an approval never authorizes a head other than the one it was recorded for, and a later push to the same PR branch flips it back to blocking.",
+  "pr_number": null,
+  "verification": [
+    "npm run relay:merge-gate:selftest -- 12/12 fixtures pass (7 original single-PR invariant cases unchanged; 5 new refresh-trigger cases: post-approval success, pre-approval push still blocks, non-Relay PR ignored, stale mismatched-task PR stays blocked alongside the approved one, and a moved head SHA re-blocks after approval)",
+    "node scripts/publish-relay-merge-gate-status.mjs --mode pr --dry-run against the live pre-approval state.json -- correctly emits a failure status payload",
+    "node scripts/publish-relay-merge-gate-status.mjs --mode refresh --prs-file <fixture PR list> --dry-run against a synthetic MERGE_APPROVED state.json -- correctly emits a success status payload for the matching PR head only",
+    "node scripts/publish-relay-merge-gate-status.mjs against a malformed (non-JSON) state file -- fails closed (failure status, no crash)",
+    "npm run build -- 118 pages, clean, unchanged from pre-task baseline",
+    "npm run content-audit -- 73 blog posts / 25 lessons valid, unchanged",
+    "npm run audit:all -- links, images, schema, indexability, accessibility all pass",
+    "git diff --check -- clean",
+    "python3 yaml.safe_load sanity check on the modified relay-merge-gate.yml and ci.yml -- both parse as valid YAML",
+    "Not verified: an actual live GitHub Actions run of gate-refresh reacting to a real push, since that requires either the human owner's branch-protection change already applied or opening/merging a live test PR, both outside this task's authorized scope; the fixture tests and CLI dry runs above are the closest bounded proof available to this worker."
+  ],
+  "source_preflight": null,
+  "human_action": "Add 'relay-merge-gate' as a required status check on the main branch protection rule -- this is a Statuses API context string (appears in the required-checks picker only after this workflow has run once), not the 'Relay Merge Gate / gate-pr' or 'Relay Merge Gate / gate-refresh' GitHub Actions check-run names. Also enable 'Do not allow bypassing the above settings' (including for administrators) on that same rule, since the account that performed the PP-RELAY-057/-058 out-of-band merges has merge rights on main and would otherwise still be able to bypass a required check. No tool available to this Relay worker can read or modify branch protection/ruleset settings. See .ai-ops/README.md's Mechanical auto-merge contract for the full explanation.",
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "git (clean-divergence recovery: branched directly from verified origin/main per AGENTS.md, local main left untouched)",
+      "GitHub MCP tools (read-only: list_branches, list_pull_requests, search_pull_requests, pull_request_read to confirm no open PR/duplicate artifact for this task/revision and to review the closed revision-1 PR #107 diff)",
+      "node CLI dry runs of both new script modes against fixture and synthetic data",
+      "npm run relay:merge-gate:selftest / build / content-audit / audit:all"
+    ],
+    "validation": [
+      "relay-merge-gate fixture self-test (12/12)",
+      "CLI dry-run of publish-relay-merge-gate-status.mjs in both modes plus a malformed-state fail-closed case",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check",
+      "YAML parse check on modified workflow files"
+    ],
+    "notes": "Local checkout's main had diverged from origin/main with no clean fast-forward (working tree clean); followed AGENTS.md's clean-divergence recovery path and created claude/relay-PP-RELAY-059-merge-gate-refresh directly from verified origin/main at the exact state commit named in the dispatch payload (dcef16de8a940a7a916ff79e927133b4836c01e7), leaving local main untouched."
+  }
+}

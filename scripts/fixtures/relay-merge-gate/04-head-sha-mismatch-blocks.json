@@ -1,0 +1,18 @@
+{
+  "description": "A stale/superseded head SHA (e.g. the PR was force-pushed or amended after approval) must block merge even though the PR number matches.",
+  "state": {
+    "relay_enabled": true,
+    "credit_guard": "CONFIRMED_DISABLED",
+    "autonomous_merge": true,
+    "status": "MERGE_APPROVED",
+    "current_task_id": "PP-RELAY-999",
+    "approved_pr": 106,
+    "approved_head_sha": "51f5db2d0dbca10243da7727e81cd2080d865f7c"
+  },
+  "check": {
+    "prNumber": 106,
+    "headSha": "0000000000000000000000000000000000000f",
+    "taskId": "PP-RELAY-999"
+  },
+  "expected": { "allowed": false }
+}

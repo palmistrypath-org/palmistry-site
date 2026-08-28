@@ -39,3 +39,6 @@ jobs:
 
       - name: Run repository audits
         run: npm run audit:all
+
+      - name: Run Relay merge-gate invariant self-test
+        run: npm run relay:merge-gate:selftest

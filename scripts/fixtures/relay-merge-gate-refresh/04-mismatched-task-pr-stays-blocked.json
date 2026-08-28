@@ -1,0 +1,28 @@
+{
+  "description": "An open Relay PR for a different (stale) task than the one just approved must stay blocked, even though the approval push happened and even though the stale PR's own head SHA happens to differ from the approved one.",
+  "state": {
+    "relay_enabled": true,
+    "credit_guard": "CONFIRMED_DISABLED",
+    "autonomous_merge": true,
+    "status": "MERGE_APPROVED",
+    "current_task_id": "PP-RELAY-059",
+    "approved_pr": 108,
+    "approved_head_sha": "51f5db2d0dbca10243da7727e81cd2080d865f7c"
+  },
+  "openPullRequests": [
+    {
+      "number": 108,
+      "head_sha": "51f5db2d0dbca10243da7727e81cd2080d865f7c",
+      "title": "[RELAY PP-RELAY-059] Fix merge-gate publication trigger"
+    },
+    {
+      "number": 101,
+      "head_sha": "1111111111111111111111111111111111111a",
+      "title": "[RELAY PP-RELAY-058] Stale duplicate still open"
+    }
+  ],
+  "expected": [
+    { "prNumber": 108, "allowed": true },
+    { "prNumber": 101, "allowed": false }
+  ]
+}

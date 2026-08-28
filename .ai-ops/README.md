@@ -208,6 +208,26 @@ After GitHub reports an authorized PR merged, the Director verifies that exact m
 
 The workflow does not choose tasks, approve work, bypass checks/human gates, or broaden scope. It fails closed.
 
+### Relay merge-gate status check (PP-RELAY-059)
+
+`.github/workflows/relay-merge-gate.yml` publishes a commit status under the fixed context **`relay-merge-gate`** for every open PR titled `[RELAY ...]` targeting `main`, evaluating the same invariant as the mechanical auto-merge contract above — `status: MERGE_APPROVED` with the exact matching `approved_pr` and `approved_head_sha` — via the shared, unit-tested `scripts/verify-relay-merge-gate.mjs` (self-test: `npm run relay:merge-gate:selftest`, wired into CI).
+
+This exists because PP-RELAY-057 PR #104 and PP-RELAY-058 PRs #105/#106 merged to `main` while `state.json` still showed a pre-approval status — `merged_by` on all three PRs is the repository owner's own account, not this repository's automation, and none of the three carry `relay-automerge.yml`'s "Director-approved squash merge" commit title. `relay-automerge.yml` and `relay-fastlane.yml` were both already correctly gated on `MERGE_APPROVED`; the gap is that GitHub allows any account with merge rights to squash-merge an open, green, non-draft PR directly (UI button or API) regardless of what `state.json` says, and no repository workflow can prevent that click by itself.
+
+The workflow has two jobs so the signal actually functions as a required check instead of deadlocking a legitimate approval:
+
+- **`gate-pr`** runs on `pull_request` events (opened, reopened, synchronize, edited, ready_for_review) and reads `.ai-ops/state.json` from the PR's trusted base commit — never the PR branch, so a PR cannot forge its own approval. It publishes a status for that PR's current head.
+- **`gate-refresh`** runs on every `push` to `main` that touches `.ai-ops/state.json` — the event a Director approval commit actually produces — and republishes the status for every currently open `[RELAY ...]` PR against the freshly pushed state. This is the revision-2 fix: revision 1 published the status only from `gate-pr`'s equivalent, so a PR left open across a later `MERGE_APPROVED` commit on `main` never re-evaluated and would have stayed red forever if `relay-merge-gate` were made a required check. Neither job mutates the PR head; both only publish a commit status against it, so an approval never authorizes a head other than the exact SHA it was recorded for (a later push to the same PR branch flips it back to blocking until re-approved).
+
+**Required-check context, verified:** the status is published via the Statuses API (`POST /repos/{owner}/{repo}/statuses/{sha}`) with `context: "relay-merge-gate"`. This is the exact string to add under GitHub → repository Settings → Branches → branch protection rule for `main` → Require status checks to pass before merging → search for `relay-merge-gate` (it appears in the picker only after the workflow has run at least once). Do **not** require the GitHub Actions check-run entries this workflow also produces (e.g. "Relay Merge Gate / gate-pr" or "Relay Merge Gate / gate-refresh") — those are named after the workflow/job and shift if either is renamed; the Statuses API context is the stable identifier and is what `scripts/verify-relay-merge-gate.mjs` exports as `MERGE_GATE_STATUS_CONTEXT` so the two never drift apart.
+
+**Unresolved external gate — two settings, not one:** this repository-side change cannot close the hole by itself. It has been proven operational (pre-approval blocking and post-approval success both verified against fixtures and a dry run; see `.ai-ops/results/PP-RELAY-059-r2.json`), so the remaining action is the human owner's:
+
+1. Add `relay-merge-gate` as a required status check in the `main` branch protection rule, as described above.
+2. Also enable "Do not allow bypassing the above settings" (including for administrators/the repository owner's own account) on that same rule. Without this, the account that performed the PP-RELAY-057/-058 out-of-band merges — which has merge rights on `main` — can still bypass the required check entirely, since GitHub's default lets repository admins skip required status checks.
+
+No tool available to the Relay worker can read or modify branch protection/ruleset settings, so neither setting can be applied by this repository change.
+
 ## Fast-lane policy
 
 The event-driven fast lane remains an optional acceleration layer for explicitly preauthorized `LOW` tasks only. `.ai-ops/fastlane.json` must identify the exact task/revision and exact allowed paths. During initial v2C rollout the fast lane starts disabled and should be re-enabled only after a Director intentionally allowlists a suitable task or short bounded chain.
