@@ -1,0 +1,53 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-059",
+  "revision": 3,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Fixed the revision-2 trust defect Director review found: gate-pr in .github/workflows/relay-merge-gate.yml now triggers on pull_request_target instead of pull_request, so its workflow definition is always sourced from the trusted base branch (main) rather than from the PR under evaluation. For a same-repo PR (every Relay worker branch), GitHub sources a pull_request-triggered run's workflow YAML from the PR branch itself; a worker PR could therefore have rewritten this gate's own logic and used its statuses: write permission to publish its own passing relay-merge-gate status regardless of what state.json actually said. pull_request_target closes that because the workflow definition is always the base-branch copy, independent of the PR. The job is otherwise unchanged from revisions 1/2 and stays within the authorized boundary: it checks out only the PR's base commit (never the PR head), never executes or imports PR-supplied code, and reads PR number/head SHA/title solely from event metadata passed through env (never interpolated into the script body). gate-refresh (push to main touching .ai-ops/state.json, republishing the same relay-merge-gate status for every open [RELAY ...] PR) is unchanged from revision 2. The shared evaluateMergeGate/planRefreshStatuses invariant, its fixtures, and relay-automerge.yml/relay-fastlane.yml are unchanged. Added a new static self-test (checkWorkflowTrustBoundary) that re-parses the checked-in workflow file to confirm gate-pr still triggers on pull_request_target and its checkout step still pins base.sha rather than the PR head, plus a fixture covering the null/malformed-state fail-closed case, so a future regression fails CI instead of silently reopening the hole.",
+  "root_cause_evidence": "Revision 2's root cause is confirmed unchanged and re-verified in this run: PP-RELAY-057 PR #104 and PP-RELAY-058 PRs #105/#106 merged to main while state.json still recorded a pre-approval status (merged_by on all three is the repository owner's own account, not relay-automerge.yml's automation, and none carry its forced '[RELAY <task>] Director-approved squash merge' commit title) -- GitHub permits any account with merge rights to squash-merge an open, green, non-draft PR directly regardless of state.json, and only a required-status-check branch protection rule can prevent that. This run additionally re-fetched PR #108's commit status directly (GET /repos/palmistrypath/palmistry-site/commits/d11e4ae46d4b8fbfe15062a8544f41221d389c2f/status via the pull_request_read get_status method): total_count is 0, confirming the task packet's claim that gate-pr never actually ran to completion on that PR, so the revision-2 trust defect was never exploited or exercised as a passing/failing required check in production -- it was caught by Director diff review, not by a failed live signal. PR #108's full diff was inspected (55.9 KB) to confirm exactly what revision 2 added (gate-refresh, planRefreshStatuses, five refresh fixtures) versus what revision 1 already had (gate-pr, evaluateMergeGate, seven single-PR fixtures) before making the trigger-only change.",
+  "design_correction": "Changed exactly one property of gate-pr's trigger: `on: pull_request_target` (with the same event types -- opened, reopened, synchronize, edited, ready_for_review -- and the same `branches: [main]` scope) in place of `on: pull_request`, plus `if: github.event_name == 'pull_request_target'` to match. No other job logic, permission, checkout ref, or script call changed. verify-relay-merge-gate.mjs and publish-relay-merge-gate-status.mjs are otherwise identical to revision 2 (only comments/usage text updated to say pull_request_target instead of pull_request); evaluateMergeGate, planRefreshStatuses, and all 12 revision-2 fixtures are byte-for-byte unchanged. Added one new fixture (08-null-state-fails-closed.json, state: null) and one new self-test function, checkWorkflowTrustBoundary, which statically parses .github/workflows/relay-merge-gate.yml's gate-pr job body and fails if: the job's `if:` condition is not exactly `github.event_name == 'pull_request_target'`; the workflow's `on:` block contains a bare `pull_request:` trigger key; the `on:` block lacks `pull_request_target:`; any actions/checkout step in the job references `head.sha`/`head.ref`; or no checkout step pins `base.sha`. Manually verified this check fails (with the exact expected problem messages) when gate-pr's trigger is reverted to pull_request or its checkout ref is pointed at head.sha, and passes on the final committed file.",
+  "pr_number": null,
+  "verification": [
+    "npm run relay:merge-gate:selftest -- 13/13 fixtures pass (7 revision-1 single-PR cases + 1 new null-state fail-closed case + 5 revision-2 refresh cases, all unchanged in logic) plus the new workflow-trust-boundary static self-test, PASS",
+    "Manual regression proof: temporarily reverted gate-pr's `if:` and `on:` to pull_request -- workflow-trust-boundary self-test correctly FAILed with the three expected problem messages; restored the committed file and re-ran -- PASS again",
+    "Manual regression proof: temporarily pointed the gate-pr checkout `ref:` at github.event.pull_request.head.sha -- workflow-trust-boundary self-test correctly FAILed (head-checkout + missing-base.sha problems); restored and re-ran -- PASS again",
+    "node scripts/publish-relay-merge-gate-status.mjs --mode pr --dry-run against the live pre-approval REWORK_REQUIRED state.json -- correctly emits a failure status payload (\"status is not MERGE_APPROVED (REWORK_REQUIRED)\")",
+    "node scripts/publish-relay-merge-gate-status.mjs --mode refresh --prs-file <synthetic open-PR list> --dry-run against a synthetic MERGE_APPROVED state.json with the matching PR/head -- correctly emits a success status payload for that PR head only",
+    "node scripts/publish-relay-merge-gate-status.mjs against a malformed (non-JSON) state file -- fails closed (failure status payload, no crash)",
+    "python3 yaml.safe_load sanity check on the modified relay-merge-gate.yml and ci.yml -- both parse as valid YAML",
+    "npm run build -- 118 pages, clean, unchanged from pre-task baseline",
+    "npm run content-audit -- 73 blog posts / 25 lessons valid, unchanged",
+    "npm run audit:all -- links, images, schema, indexability, accessibility all pass",
+    "git diff --check -- clean",
+    "Not verified: an actual live GitHub Actions run of gate-pr under pull_request_target reacting to a real PR, since that requires either the human owner's branch-protection change already applied or opening a live PR against this task's own branch -- both outside this task's authorized scope. The pull_request_target vs pull_request workflow-sourcing behavior this fix relies on is GitHub's documented, well-established trigger semantics, not a claim requiring a live experiment to establish; the fixture tests, static self-test, and CLI dry runs above are the closest bounded proof available to this worker."
+  ],
+  "source_preflight": null,
+  "human_action": "Add 'relay-merge-gate' as a required status check on the main branch protection rule -- this is a Statuses API context string (appears in the required-checks picker only after this workflow has run once), not the 'Relay Merge Gate / gate-pr' or 'Relay Merge Gate / gate-refresh' GitHub Actions check-run names. Also enable 'Do not allow bypassing the above settings' (including for administrators) on that same rule, since the account that performed the PP-RELAY-057/-058 out-of-band merges has merge rights on main and would otherwise still be able to bypass a required check. This is unchanged from revision 2's unresolved external gate. No tool available to this Relay worker can read or modify branch protection/ruleset settings. See .ai-ops/README.md's Mechanical auto-merge contract for the full explanation.",
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "git (clean-divergence recovery: the persistent checkout's local main was a stale, unrelated history -- 'Dispatch PP-RELAY-042 revision 9' -- with no merge base against the current origin/main; per AGENTS.md, local main was left untouched and claude/relay-PP-RELAY-059-merge-gate-trust was branched directly from verified origin/main at the exact state commit 7df6f99ed723eeff6813e477b59736340d4e97bd named in the dispatch payload)",
+      "GitHub MCP tools (read-only: search_pull_requests/list_pull_requests to confirm no open PR or duplicate artifact for this task/revision; pull_request_read get_diff/get_status on the closed revision-2 PR #108 to inspect its exact implementation and re-confirm its zero-status evidence)",
+      "git show against the closed revision-1/2 branch tips (r1 907... / r2 d11e4ae4...) to reuse the unchanged invariant module, publish script, and all 12 fixtures verbatim rather than re-deriving them",
+      "node CLI dry runs of publish-relay-merge-gate-status.mjs in both modes plus a malformed-state fail-closed case",
+      "Manual sed-based regression proofs that the new static workflow-trust-boundary self-test actually fails on both the reverted-trigger and PR-head-checkout cases before restoring the committed file",
+      "npm run relay:merge-gate:selftest / build / content-audit / audit:all",
+      "python3 yaml.safe_load for workflow YAML syntax validation"
+    ],
+    "validation": [
+      "relay-merge-gate fixture self-test (13/13, including 1 new fixture) plus the new workflow-trust-boundary static self-test",
+      "Manual regression proof that the trust-boundary self-test catches a reverted pull_request trigger and a PR-head checkout",
+      "CLI dry-run of publish-relay-merge-gate-status.mjs in both modes plus a malformed-state fail-closed case",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check",
+      "YAML parse check on modified workflow files"
+    ],
+    "notes": "This revision changes only the trust boundary of the PR-side status publication (pull_request -> pull_request_target); the underlying merge-authorization invariant, its 12 inherited fixtures, the push-triggered refresh path, and relay-automerge.yml/relay-fastlane.yml are all byte-for-byte or logic-for-logic unchanged from the closed revision-2 PR #108. No live GitHub Actions execution of the new trigger was observed by this worker (see the 'Not verified' verification entry); this is disclosed rather than overstated."
+  }
+}

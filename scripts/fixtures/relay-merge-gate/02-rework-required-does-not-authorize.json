@@ -1,0 +1,18 @@
+{
+  "description": "REWORK_REQUIRED must never authorize merge.",
+  "state": {
+    "relay_enabled": true,
+    "credit_guard": "CONFIRMED_DISABLED",
+    "autonomous_merge": true,
+    "status": "REWORK_REQUIRED",
+    "current_task_id": "PP-RELAY-999",
+    "approved_pr": null,
+    "approved_head_sha": null
+  },
+  "check": {
+    "prNumber": 105,
+    "headSha": "ac2b6b59ae5fd4f2f557aea73c93f100965576a1",
+    "taskId": "PP-RELAY-999"
+  },
+  "expected": { "allowed": false }
+}

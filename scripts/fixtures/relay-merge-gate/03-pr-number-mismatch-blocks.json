@@ -1,0 +1,18 @@
+{
+  "description": "MERGE_APPROVED for a different PR number must not authorize this PR, even with every other field satisfied.",
+  "state": {
+    "relay_enabled": true,
+    "credit_guard": "CONFIRMED_DISABLED",
+    "autonomous_merge": true,
+    "status": "MERGE_APPROVED",
+    "current_task_id": "PP-RELAY-999",
+    "approved_pr": 106,
+    "approved_head_sha": "51f5db2d0dbca10243da7727e81cd2080d865f7c"
+  },
+  "check": {
+    "prNumber": 105,
+    "headSha": "51f5db2d0dbca10243da7727e81cd2080d865f7c",
+    "taskId": "PP-RELAY-999"
+  },
+  "expected": { "allowed": false }
+}

@@ -1,0 +1,20 @@
+{
+  "description": "Open PRs whose title does not start with '[RELAY <task-id>]' are not Relay PRs and must not receive a published status at all (not even a blocking one).",
+  "state": {
+    "relay_enabled": true,
+    "credit_guard": "CONFIRMED_DISABLED",
+    "autonomous_merge": true,
+    "status": "MERGE_APPROVED",
+    "current_task_id": "PP-RELAY-059",
+    "approved_pr": 108,
+    "approved_head_sha": "51f5db2d0dbca10243da7727e81cd2080d865f7c"
+  },
+  "openPullRequests": [
+    {
+      "number": 95,
+      "head_sha": "d14a862447b232dd42755e709c3c947bbbcbec66",
+      "title": "Integrate Editorial Mystic visual system and production assets"
+    }
+  ],
+  "expected": []
+}

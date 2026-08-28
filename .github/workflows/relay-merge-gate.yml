@@ -1,0 +1,152 @@
+name: Relay Merge Gate
+
+# PP-RELAY-059: PP-RELAY-057 PR #104 and PP-RELAY-058 PRs #105/#106 merged to
+# `main` without the Director ever writing `status: MERGE_APPROVED` with a
+# matching approved_pr/approved_head_sha first -- `merged_by` on all three is
+# the repository owner's own account, not this repository's automation, and
+# none of them carry the "[RELAY <task>] Director-approved squash merge"
+# commit title that `relay-automerge.yml` always sets. GitHub lets any
+# account with merge rights squash-merge an open, green, non-draft PR
+# regardless of `.ai-ops/state.json`; a repository workflow alone cannot
+# stop that click. This workflow publishes the missing signal as a commit
+# status under the fixed context `relay-merge-gate` (see
+# `scripts/verify-relay-merge-gate.mjs`'s `MERGE_GATE_STATUS_CONTEXT`).
+#
+# Revision 1 ran `gate-pr` only on `pull_request`, so it never re-evaluated
+# once a legitimate Director approval landed as a `push` to `main` -- a
+# required check built that way would deadlock forever. Revision 2 added
+# `gate-refresh` (below) to fix that, but kept `gate-pr` on plain
+# `pull_request`. For a same-repo PR (every Relay worker branch -- this
+# project has no fork PRs), GitHub sources a `pull_request`-triggered run's
+# *workflow definition* from the PR branch itself, not from base alone. A
+# worker PR could therefore rewrite this file (or the script it calls) and
+# have that rewritten version execute with `statuses: write`, publishing its
+# own passing status regardless of what trusted `state.json` said --
+# checking out `state.json` from the base commit does not help if the
+# workflow logic evaluating it is untrusted. (Live evidence this was never
+# exploited in production: PR #108's `gate-pr` run instead failed outright
+# on its own head `d11e4ae46d4b8fbfe15062a8544f41221d389c2f` and published no
+# `relay-merge-gate` status at all -- `GET .../commits/{sha}/status` returned
+# `total_count: 0` -- so the defect was caught in review, not by a failed
+# required check.)
+#
+# Revision 3 fixes this per GitHub's documented security model: `gate-pr`
+# now triggers on `pull_request_target`, whose workflow *definition* is
+# always sourced from the base branch (`main`) regardless of what the PR
+# under evaluation contains -- a worker PR editing this file has no effect
+# on the run evaluating that same PR. The job still does exactly what
+# revision 1/2 already did correctly and nothing more: check out only the
+# PR's base commit (never the PR head), and read PR number/head SHA/title
+# solely from event metadata passed through `env:` (never interpolated
+# directly into a shell/workflow expression, and never checked out or
+# executed as code). `scripts/verify-relay-merge-gate.mjs`'s self-test
+# statically re-verifies both properties against this file so a future
+# regression fails CI instead of silently reopening the hole.
+#
+# `gate-refresh` runs on every `push` to `main` touching `.ai-ops/state.json`
+# -- the event a Director approval commit actually produces -- and
+# republishes the same `relay-merge-gate` status for every currently open
+# `[RELAY ...]` PR against the freshly pushed state, so a legitimate
+# approval (or a later reversion back to REWORK_REQUIRED) is reflected
+# without ever mutating any PR head. Neither job mutates a PR head; both
+# only publish a commit status against the exact SHA under evaluation.
+#
+# This workflow is additive: it does not itself block merges. Closing the
+# hole also requires the human owner to add `relay-merge-gate` as a
+# required status check on `main`'s branch protection rule and to disallow
+# bypassing it (including for administrators) -- see `.ai-ops/README.md`.
+on:
+  pull_request_target:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - edited
+      - ready_for_review
+  push:
+    branches:
+      - main
+    paths:
+      - .ai-ops/state.json
+
+permissions:
+  contents: read
+  statuses: write
+  pull-requests: read
+
+concurrency:
+  group: palmistry-path-relay-merge-gate-${{ github.event.pull_request.number || 'refresh' }}
+  cancel-in-progress: true
+
+jobs:
+  gate-pr:
+    if: github.event_name == 'pull_request_target'
+    runs-on: ubuntu-latest
+    steps:
+      # Trusted-only checkout: the exact commit `main` was at when this PR
+      # was opened/last synced against it. Never the PR head, and never a
+      # floating ref that could later resolve to PR-influenced content.
+      - name: Check out trusted base state (never the PR head)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Publish relay-merge-gate status for this PR head
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          # Event metadata only, passed through env (never interpolated
+          # directly into the script body) -- inert strings, not executed.
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+
+          if [[ "$PR_TITLE" != "[RELAY "* ]]; then
+            echo "Not a Relay PR (title does not start with '[RELAY '); nothing for this gate to publish."
+            exit 0
+          fi
+
+          TASK_ID="$(grep -oE 'PP-RELAY-[0-9]+' <<<"$PR_TITLE" | head -n1 || true)"
+
+          node scripts/publish-relay-merge-gate-status.mjs \
+            --mode pr \
+            --state .ai-ops/state.json \
+            --pr "$PR_NUMBER" \
+            --head "$PR_HEAD_SHA" \
+            ${TASK_ID:+--task "$TASK_ID"}
+
+  gate-refresh:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      # This runs only on `push` to `main`, so the checked-out state.json is
+      # already the trusted, just-committed copy -- the same commit this
+      # workflow run was triggered by.
+      - name: Check out pushed state
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Republish relay-merge-gate status for every open Relay PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: |
+          node scripts/publish-relay-merge-gate-status.mjs \
+            --mode refresh \
+            --state .ai-ops/state.json
