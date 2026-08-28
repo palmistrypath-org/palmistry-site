@@ -1686,3 +1686,119 @@ unchanged; `checkPublishedRowDrift` still passes with item 21 correctly
 read as outstanding). `git diff --check`. Manual review confirming no
 palmistry meaning, Jupiter content, square-marking content, Ring of
 Solomon content, route, canonical, or SEO/indexing behavior changed.
+
+---
+
+## Pass 19 — The Line of Mars backlog candidate: identity conflict with the published double-life-line article, no article drafted (Relay PP-RELAY-057, revision 1, 2026-08-28)
+
+Scope: Relay PP-RELAY-057 revision 1 (`SOURCE_SENSITIVE`). The task packet
+authorized drafting `beginner/line-of-mars-palmistry` only if approved
+evidence independently establishes the Line of Mars's identity, location,
+and interpretation, and only if it can be "distinguish[ed] carefully from
+the existing double-Life-Line topic without inventing a distinction or
+combination reading." Investigating that boundary before drafting found
+that the premise behind `docs/editorial-backlog.md` item 22 — that the Line
+of Mars is a feature of its own "frequently confused with" a double life
+line — is contradicted by the repository's own already-published, already
+source-verified evidence, not merely under-evidenced.
+
+**Controlling evidence, already in repository canon.**
+
+- `src/content/blog/beginner/double-life-line-meaning.md` (published,
+  `pubDate: 2026-05-27`, live on `main`) opens: "This is the line William
+  Benham called the Line of Mars, and what many modern practitioners refer
+  to simply as a sister line or inner life line," and its FAQ states: "In
+  the Western palmistry tradition it is most commonly called the Line of
+  Mars or the inner life line, and sometimes simply the sister line." It
+  quotes Benham (1900) directly: he "calls it the line of Mars, says that
+  it and the life line 'are sister lines, in fact,'" and gives its effect
+  as strengthening "its sister line."
+- `src/content/lessons/lines/04-life-line.mdx` (published) independently
+  states the same identity: "a parallel line running beside the life line
+  on the Venus side. This is the sister line, also called the inner life
+  line or Line of Mars."
+- `docs/source-verification-log.md` itself already records a corpus-verified
+  Cheiro quotation ("great vitality and power of resistance to illness")
+  attributed to "**Cheiro**, *Palmistry for All*, 'The Line of Mars or
+  Inner Life Line'" (line ~405, Pass 6 corpus-match corrections) — Cheiro's
+  own chapter title names "Line of Mars" and "Inner Life Line" as one
+  subject, not two. A separate note in the same pass (line ~430–433)
+  explicitly distinguishes this chapter from Cheiro's unrelated Mount of
+  Mars material in *Cheiro's Language of the Hand*, confirming the "Line of
+  Mars or Inner Life Line" chapter title was read directly, not inferred.
+- Also already recorded in this log (Pass 2, line ~121): "A broken life
+  line with a line of Mars behind it 'may indicate great danger of death
+  where the break appears, but a danger that will be overcome.'" (Cheiro),
+  and (Pass 3, line ~260) a note citing "Cheiro on the line of Mars" for the
+  supporting-lines point shared with Benham — both already folded into
+  `double-life-line-meaning.md` and `04-life-line.mdx` under the "sister
+  line" name.
+
+**External corroboration attempted.** This worker's environment blocks
+`WebFetch` for every external content domain tried (`gutenberg.org`,
+`chestofbooks.com`, `superphysics.org`, `en.wikipedia.org`, `archive.org`,
+`www.google.com` — all `EGRESS_BLOCKED`; only `github.com` is reachable),
+so the Gutenberg primary text could not be re-read directly for this task.
+`WebSearch` (snippet-level, not a substitute for quotation-fidelity
+verification) surfaced a third-party transcription of Cheiro's *Palmistry
+for All* titled "Chapter IV. The Line Of Mars Or Inner Life Line," matching
+the same chapter title already corpus-verified in this log, and describing
+the line as rising on the Mount of Mars, encircling the Mount of Venus
+inside the Life Line, and reinforcing the Life Line's vitality reading —
+consistent with, and not adding a materially new claim beyond, the
+repository's own existing evidence above.
+
+**Conclusion.** "Line of Mars" is not a materially separate feature from
+the phenomenon `double-life-line-meaning.md` and `04-life-line.mdx` already
+cover under the names "sister line" / "inner life line" — it is Benham's
+own name for that same line, and Cheiro titles his chapter on it "The Line
+of Mars or Inner Life Line." The backlog's premise that these are two
+distinct-but-confusable features, each warranting "its own traditional
+associations" in a separate article, is not supported by any approved
+source consulted (Cheiro 1916, Benham 1900) or by the repository's own
+prior corpus verification of that exact material. Drafting a standalone
+`line-of-mars-palmistry` article as authorized would require either
+inventing a distinction between "Line of Mars" and "double life line/sister
+line" that Cheiro and Benham's own naming does not support — forbidden by
+the task's source-safety requirements — or substantially duplicating
+`double-life-line-meaning.md`'s already-published, already-sourced content
+under a new slug, which is a content-strategy/cannibalization decision
+(merge, redirect, retitle or retire the backlog item, or add a narrow SEO
+alias to the existing article) outside a bounded article-drafting task's
+authorized scope, and touches SEO/indexing strategy and other backlog
+priorities — both explicitly excluded from this task's scope.
+
+**Claim-level evidence map.**
+
+| Candidate claim | Status |
+|---|---|
+| "Line of Mars" is a real historical term for a line inside/beside the Life Line | Supported — Benham (1900) and Cheiro (1916), both already quoted in repository canon |
+| "Line of Mars" is Benham's own name for what he calls the "sister line" to the Life Line | Supported — direct quotation already in `double-life-line-meaning.md` |
+| Cheiro's chapter "The Line of Mars or Inner Life Line" treats Line of Mars and Inner Life Line as one subject | Supported — corpus-verified quotation already in this log, chapter title corroborated by external search |
+| "Line of Mars" is a feature materially distinct from a double life line, "frequently confused" with it | Not supported by any approved evidence found; contradicted by Benham's and Cheiro's own naming |
+| A safe, non-invented distinction between "Line of Mars" and "double life line" exists to build a standalone article around | Not established — the only observationally available "distinction" is a difference in the name used by a given author, not a difference in the feature itself |
+
+**No article drafted, no palmistry meaning changed.** `docs/editorial-backlog.md`
+item 22 was left untouched in this revision — correcting its framing is an
+editorial-judgment call for the Director/human owner (see the result
+artifact's `human_action`), not a bounded correction this worker is
+authorized to make unilaterally. No `src/content` file, route, mount, life
+line, or double-life-line interpretation changed.
+
+**Preflight disposition (SOURCE_SENSITIVE).** No article prose was
+produced, so the preflight applies to the investigation itself: no
+prevalence/consensus wording, invented combination reading, or anonymous
+attribution was introduced in reaching the conclusion above; every claim in
+the evidence map traces to a named source or an already corpus-verified
+repository record; quotation marks above reproduce only wording already
+quotation-verified elsewhere in this log or in published site content, not
+new unverified quotation.
+
+**Verification:** Manual review of `double-life-line-meaning.md`,
+`04-life-line.mdx`, and this log's own Pass 2, 3, and 6 entries for the Line
+of Mars / sister line / inner life line naming. Live re-check of `WebFetch`
+egress (`gutenberg.org`, `chestofbooks.com`, `superphysics.org`,
+`en.wikipedia.org`, `archive.org`, `www.google.com` all `EGRESS_BLOCKED`;
+`github.com` reachable). `WebSearch` corroboration of the Cheiro chapter
+title. `git diff --check` on the two files this revision touches
+(this log and the result artifact).
