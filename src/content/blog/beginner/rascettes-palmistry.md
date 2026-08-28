@@ -32,7 +32,7 @@ That distinction matters for how this article handles the topic: the older arith
 
 ## Palmistry Path's approach
 
-Benham's constitution and lifespan material is presented above exactly as what it is: a named historical writer's period reading, from 1900, of a hand feature. Palmistry Path does not treat wrist creases, or any other palm marking, as a way to diagnose health, assess vitality, or predict lifespan. Nothing in this article should be read as medical guidance. Where the historical record includes a predictive claim — like the older thirty-year-per-bracelet method above — this site names it plainly rather than pretending the tradition never made it, and then states, separately, why it doesn't repeat it: no consistent relationship between palm markings and outcomes like lifespan has been established, and a wrist crease is not a diagnostic tool.
+Benham's constitution and lifespan material is presented above exactly as what it is: a named historical writer's period reading, from 1900, of a hand feature. Palmistry Path does not treat wrist creases, or any other palm marking, as a way to diagnose health, assess vitality, or predict lifespan. Nothing in this article should be read as medical guidance. Where the historical record includes a predictive claim — like the older thirty-year-per-bracelet method above — this site names it plainly rather than pretending the tradition never made it, and then states, separately, why it doesn't repeat it: Palmistry Path's editorial position is that a wrist crease is not a diagnostic or predictive tool, and this site does not use palm markings to forecast lifespan or any other life outcome.
 
 ## Rascettes in context
 
