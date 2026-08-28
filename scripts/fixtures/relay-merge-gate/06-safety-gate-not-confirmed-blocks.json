@@ -1,0 +1,18 @@
+{
+  "description": "An unconfirmed credit guard or disabled Relay must block merge even when the rest of the record is fully approved.",
+  "state": {
+    "relay_enabled": true,
+    "credit_guard": "PENDING",
+    "autonomous_merge": true,
+    "status": "MERGE_APPROVED",
+    "current_task_id": "PP-RELAY-999",
+    "approved_pr": 106,
+    "approved_head_sha": "51f5db2d0dbca10243da7727e81cd2080d865f7c"
+  },
+  "check": {
+    "prNumber": 106,
+    "headSha": "51f5db2d0dbca10243da7727e81cd2080d865f7c",
+    "taskId": "PP-RELAY-999"
+  },
+  "expected": { "allowed": false }
+}

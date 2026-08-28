@@ -1,0 +1,74 @@
+name: Relay Merge Gate
+
+# PP-RELAY-059: PP-RELAY-057 PR #104 and PP-RELAY-058 PRs #105/#106 merged to
+# `main` without the Director ever writing `status: MERGE_APPROVED` with a
+# matching approved_pr/approved_head_sha first — `merged_by` on all three is
+# the repository owner's own account, not this repository's automation, and
+# none of them carry the "[RELAY <task>] Director-approved squash merge"
+# commit title that `relay-automerge.yml` always sets. GitHub lets any
+# account with merge rights squash-merge an open, green, non-draft PR
+# regardless of `.ai-ops/state.json`; a repository workflow alone cannot
+# stop that click. This workflow publishes the missing signal: a
+# `relay-merge-gate` check that fails on every `[RELAY ...]` PR until
+# `state.json` records MERGE_APPROVED for that exact PR/head SHA. It is
+# additive and does not itself block merges — closing the hole requires the
+# human owner to mark `relay-merge-gate` as a required status check in the
+# `main` branch protection rule (an external GitHub setting this workflow
+# cannot set for itself; see the Mechanical auto-merge contract in
+# .ai-ops/README.md).
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - edited
+      - ready_for_review
+
+permissions:
+  contents: read
+
+concurrency:
+  group: palmistry-path-relay-merge-gate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      # Read .ai-ops/state.json from the trusted base commit, never from the
+      # PR branch under evaluation — a PR cannot forge its own approval by
+      # editing its own copy of state.json.
+      - name: Check out trusted base state
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Evaluate merge-gate invariant
+        env:
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "$PR_TITLE" != "[RELAY "* ]]; then
+            echo "Not a Relay PR (title does not start with '[RELAY '); nothing for this gate to check."
+            exit 0
+          fi
+
+          TASK_ID="$(grep -oE 'PP-RELAY-[0-9]+' <<<"$PR_TITLE" | head -n1 || true)"
+
+          node scripts/verify-relay-merge-gate.mjs \
+            --state .ai-ops/state.json \
+            --pr "$PR_NUMBER" \
+            --head "$PR_HEAD_SHA" \
+            ${TASK_ID:+--task "$TASK_ID"}

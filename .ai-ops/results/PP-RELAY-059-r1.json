@@ -1,0 +1,49 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-059",
+  "revision": 1,
+  "risk_class": "STANDARD",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Root-caused the PP-RELAY-057/PP-RELAY-058 out-of-band merges: PRs #104/#105/#106 were squash-merged directly (merged_by is the repository owner's own GitHub account on all three, and none carry relay-automerge.yml's forced \"[RELAY <task>] Director-approved squash merge\" commit title) rather than through relay-automerge.yml or relay-fastlane.yml, both of which were already correctly gated on status: MERGE_APPROVED with an exact approved_pr/approved_head_sha match. GitHub itself allows any account with merge rights to squash-merge an open, green, non-draft PR regardless of state.json; no repository workflow can prevent that click by itself. Implemented the smallest additive, reversible repository-side guard: a single tested implementation of the merge-authorization invariant (scripts/verify-relay-merge-gate.mjs) with 7 fixture cases (npm run relay:merge-gate:selftest, now run in CI), and a new .github/workflows/relay-merge-gate.yml check that evaluates it on every [RELAY ...] PR to main using state.json read from the PR's trusted base commit (never the PR branch itself). Left relay-automerge.yml, relay-dispatch.yml, relay-fastlane.yml, dispatch/task-selection, risk classes, and fastlane.json (still disabled) untouched. This makes the invariant mechanically verifiable and visible per-PR, but does not by itself block a manual merge; fully closing the hole requires the human owner to mark relay-merge-gate as a required status check in the main branch protection rule, which no tool available to this worker can read or configure.",
+  "pr_number": null,
+  "root_cause_evidence": [
+    "PR #104 (PP-RELAY-057 r2): merged_by=evilevon00-ai; squash-merge commit b824784's subject is the PR's own title, not relay-automerge.yml's forced 'Director-approved squash merge' title.",
+    "PR #105 (PP-RELAY-058 r1): merged_by=evilevon00-ai; squash-merge commit d4f9678 same pattern. PR #106's own body states outright: 'the single defect Independent Director review rejected after revision 1 was merged out of band as PR #105'.",
+    "PR #106 (PP-RELAY-058 r2): merged_by=evilevon00-ai; squash-merge commit 96e600d same pattern.",
+    "Contrast: properly-gated merges (e.g. PP-RELAY-054/-055/-056, PRs #100-#103) each have a preceding 'relay: authorize ... merge' state.json commit and a squash-merge commit titled '[RELAY <task>] Director-approved squash merge', matching relay-automerge.yml's forced commit_title.",
+    ".ai-ops/fastlane.json has been enabled=false with an empty tasks list since before PP-RELAY-057 was authorized (last changed at commit c252e3a, an ancestor of all three merge commits), ruling out relay-fastlane.yml as the merge path.",
+    "relay-automerge.yml's own gate logic (lines 39-57) was independently re-verified as already correctly requiring relay_enabled, credit_guard, autonomous_merge, status==MERGE_APPROVED, a positive-integer approved_pr, and a full 40-hex approved_head_sha before attempting any merge API call."
+  ],
+  "verification": [
+    "npm run relay:merge-gate:selftest — 7/7 fixture cases pass, including READY_FOR_REVIEW and REWORK_REQUIRED never authorizing merge, PR-number mismatch, head-SHA mismatch, malformed SHA, and unconfirmed credit_guard all blocking, with the one exact-match case authorizing",
+    "node scripts/verify-relay-merge-gate.mjs --state .ai-ops/state.json --pr 999 --head 0000000000000000000000000000000000000f — confirmed exit 1 against the live state.json (status: READY_FOR_CLAUDE)",
+    "python3 yaml.safe_load on .github/workflows/relay-merge-gate.yml and ci.yml — both parse",
+    "npm run build — 118 pages, clean",
+    "npm run content-audit — 73 blog posts / 25 lessons valid, unchanged",
+    "npm run audit:all — links, images, schema, indexability, accessibility all pass",
+    "git diff --check — clean"
+  ],
+  "source_preflight": null,
+  "human_action": "Fully closing the out-of-band merge path requires the human owner to open GitHub repository Settings -> Branches -> the branch protection rule for `main` -> Require status checks to pass before merging, and add `relay-merge-gate` (the check this task's new .github/workflows/relay-merge-gate.yml publishes) as a required check. No tool available to this Relay worker can read or modify branch protection or repository ruleset settings, so this cannot be verified or completed by the worker itself. Until that setting is enabled, relay-merge-gate is informative only: it will show a failing check on any Relay PR merged (or left open) without a matching MERGE_APPROVED record, but does not block the merge button.",
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "git log/show against origin/main to reconstruct merge-commit provenance and ordering",
+      "GitHub API (pull_request_read) to read merged_by, head/base SHAs, and PR bodies for PRs #104-#106",
+      "GitHub API (list_pull_requests, search_pull_requests) to confirm no other open Relay PR exists for PP-RELAY-059 and to establish the properly-gated baseline (PP-RELAY-054/-055/-056)",
+      "new Node module + JSON fixtures implementing and unit-testing the merge-authorization invariant",
+      "new GitHub Actions workflow reading trusted base-branch state.json to evaluate the invariant per PR"
+    ],
+    "validation": [
+      "npm run relay:merge-gate:selftest",
+      "npm run build",
+      "npm run content-audit",
+      "npm run audit:all",
+      "git diff --check"
+    ],
+    "notes": "Persistent-checkout recovery used at startup: local main (last at PP-RELAY-042-era commit e0a8138) had no fast-forward or common-ancestor path to origin/main (f13197e) despite a clean working tree. Left local main untouched and created claude/relay-PP-RELAY-059-merge-gate-audit directly from verified origin/main, per AGENTS.md's clean-divergence recovery path."
+  }
+}

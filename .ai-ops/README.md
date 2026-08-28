@@ -208,6 +208,14 @@ After GitHub reports an authorized PR merged, the Director verifies that exact m
 
 The workflow does not choose tasks, approve work, bypass checks/human gates, or broaden scope. It fails closed.
 
+### Relay merge-gate status check (PP-RELAY-059)
+
+`.github/workflows/relay-merge-gate.yml` runs on every pull request targeting `main` and, for any PR titled `[RELAY ...]`, evaluates the same invariant as the mechanical auto-merge contract above — `status: MERGE_APPROVED` with the exact matching `approved_pr` and `approved_head_sha` — using the shared, unit-tested `scripts/verify-relay-merge-gate.mjs` (self-test: `npm run relay:merge-gate:selftest`, wired into CI). It always reads `.ai-ops/state.json` from the PR's trusted base commit, never from the PR branch itself, so a PR cannot forge its own approval.
+
+This exists because PP-RELAY-057 PR #104 and PP-RELAY-058 PRs #105/#106 merged to `main` while `state.json` still showed a pre-approval status — `merged_by` on all three PRs is the repository owner's own account, not this repository's automation, and none of the three carry the `relay-automerge.yml` "Director-approved squash merge" commit title. `relay-automerge.yml` and `relay-fastlane.yml` were both already correctly gated on `MERGE_APPROVED`; the gap is that GitHub allows any account with merge rights to squash-merge an open, green, non-draft PR directly (UI button or API) regardless of what `state.json` says, and no repository workflow can prevent that click by itself.
+
+**Unresolved external gate:** closing this fully requires the human owner to add `relay-merge-gate` as a required status check in the `main` branch protection rule (GitHub → repository Settings → Branches → branch protection rule for `main` → Require status checks to pass before merging → add `relay-merge-gate`). Until that setting is enabled, this check is informative only — it makes an out-of-band merge visibly red on the PR, but does not block it. No tool available to the Relay worker can read or modify branch protection/ruleset settings, so this repository-side change cannot close the gap on its own.
+
 ## Fast-lane policy
 
 The event-driven fast lane remains an optional acceleration layer for explicitly preauthorized `LOW` tasks only. `.ai-ops/fastlane.json` must identify the exact task/revision and exact allowed paths. During initial v2C rollout the fast lane starts disabled and should be re-enabled only after a Director intentionally allowlists a suitable task or short bounded chain.
