@@ -1,0 +1,52 @@
+{
+  "schema_version": 2,
+  "task_id": "PP-RELAY-058",
+  "revision": 2,
+  "risk_class": "SOURCE_SENSITIVE",
+  "result": "READY_FOR_REVIEW",
+  "summary": "Bounded remediation of the already-published src/content/blog/beginner/rascettes-palmistry.md, addressing the single defect Independent Director review rejected after revision 1 was merged out of band as PR #105: the 'Palmistry Path's approach' section's sentence asserting that 'no consistent relationship between palm markings and outcomes like lifespan has been established' was a broad empirical/scientific claim not supported by .ai-ops/evidence/PP-RELAY-058-benham-rascettes-boundary.md or any other approved source in this task. Replaced that clause with a direct statement of Palmistry Path's own editorial/safety position (that a wrist crease is not a diagnostic or predictive tool, and this site does not use palm markings to forecast lifespan or any other life outcome) rather than a claim about the state of scientific evidence. No other article prose, source, claim, combination reading, slug, title, related lesson, or backlog published status changed. Reinspected the complete final article for equivalent unsupported scientific/historical assertions, unsupported prevalence/consensus language, invented combination readings, and vague anonymous authority; found none beyond the one rejected sentence, so no other wording was removed or narrowed. Recorded the remediation as 'Pass 21' in docs/source-verification-log.md and added a dated docs/CHANGELOG.md entry.",
+  "pr_number": null,
+  "verification": [
+    "npm run audit:claim-risk -- src/content/blog/beginner/rascettes-palmistry.md (5 findings, all idiomatic 'most'/'many' superlative usage identical in kind to the false positives manually dispositioned in revision 1's Pass 20 -- e.g. 'most directly on point,' 'most defensible approach,' 'how many lines,' 'the most interpretive weight' -- manually reviewed and confirmed not to be prevalence/consensus claims about palmistry; the previously-flagged empirical sentence is gone from the file)",
+    "npm run build (118 pages built, including /blog/beginner/rascettes-palmistry/, clean)",
+    "npm run content-audit (73 blog posts, 25 lessons valid; post count unchanged since no article was added or removed)",
+    "git diff --check (clean)",
+    "Manual line-by-line reinspection of the complete final article against the task packet's acceptance criteria and prohibited-scope list: rejected empirical sentence removed and not replaced by an equivalent unsourced claim; Benham historical claims (constitution reading, thirty-year-per-bracelet method with his own non-confirmation, ambition/branch reading) remain exactly as verified in Pass 20 and stay inside the Director evidence boundary; Palmistry Path's non-medical/non-predictive safety position remains clearly stated, now as explicit editorial policy language rather than an empirical conclusion; no new prevalence, consensus, combination, or vague-authority claim introduced; no West (1998), Fincham (2005), or commercial-source citation added; slug/title/positioning/related lesson/backlog published status unchanged",
+    "git diff --stat confirms only the three intended files changed (article, source-verification-log.md, CHANGELOG.md), 26 insertions / 1 deletion total",
+    "GitHub MCP search_pull_requests for startup-gate duplicate-PR check (PR #105, the revision 1 PR, is closed/merged; no open PP-RELAY-058 PR exists)",
+    "git ls-remote inspection confirming the only existing claude/relay-PP-RELAY-058-... branch is the already-merged revision 1 branch (claude/relay-PP-RELAY-058-rascettes-palmistry); no revision 2 branch or .ai-ops/results/PP-RELAY-058-r2.json existed prior to this run"
+  ],
+  "source_preflight": {
+    "completed": true,
+    "prevalence_language_checked": true,
+    "scientific_historical_claims_checked": true,
+    "combination_readings_checked": true,
+    "vague_attribution_checked": true,
+    "quotation_fidelity_checked": true,
+    "notes": "Full disposition recorded in docs/source-verification-log.md ('Pass 21 -- Rascettes (Bracelet Lines) in Palmistry, remediation'). The rewritten sentence states Palmistry Path's own editorial/safety position directly rather than an empirical claim about what science has established, per the task's preferred resolution. No quotation marks are used around any Benham wording anywhere in the article, unchanged from revision 1; no verbatim-quotation check was newly required by this edit."
+  },
+  "human_action": null,
+  "execution": {
+    "primary_role": "implementation-owner",
+    "primary_model": null,
+    "subagents_used": false,
+    "subagents": [],
+    "tools_or_methods": [
+      "Read/Edit on article and docs files",
+      "npm ci",
+      "npm run audit:claim-risk",
+      "npm run build",
+      "npm run content-audit",
+      "git diff --check",
+      "git diff --stat",
+      "GitHub MCP search_pull_requests / list_pull_requests for startup-gate duplicate-PR check"
+    ],
+    "validation": [
+      "audit:claim-risk",
+      "build",
+      "content-audit",
+      "git diff --check"
+    ],
+    "notes": "The persistent checkout's local main had diverged from origin/main's verified tip (91b6474, matching state.json and the routine dispatch payload's state commit) with no fast-forward path and no common merge base. Working tree was confirmed clean and origin identity (palmistrypath/palmistry-site) was verified before following the documented clean-divergence recovery in AGENTS.md and .ai-ops/CLAUDE_ROUTINE_PROMPT.md: local main was left untouched, and claude/relay-PP-RELAY-058-rascettes-r2 was branched directly from verified origin/main. node_modules was absent in this fresh checkout and was installed via npm ci before running build/audit checks; broader audits (audit:all) were not run because this revision's change is a single-sentence text edit plus doc updates with no layout/routing/schema/link/image impact, per the task packet's narrowed testing requirement."
+  }
+}
