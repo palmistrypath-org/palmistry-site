@@ -56,7 +56,7 @@ Allowed terminal results:
 
 For `READY_FOR_REVIEW`, commit the authorized fix/docs/tests plus result artifact, push exactly one matching Relay branch, and open exactly one PR to `main` with standard Relay footers for PP-RELAY-059 revision 2. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the result branch containing the artifact and normally do not create a dummy PR.
 
-The result artifact must include `schema_version: 2`, `task_id: "PP-RELAY-059"`, `revision`: 2, `risk_class: "STANDARD"`, terminal `result`, concise root-cause/design evidence, summary and verification, execution telemetry, and `human_action` only when a genuine unresolved external gate remains.
+The result artifact must include `schema_version: 2`, `task_id: "PP-RELAY-059"`, `revision: 2`, `risk_class: "STANDARD"`, terminal `result`, concise root-cause/design evidence, summary and verification, execution telemetry, and `human_action` only when a genuine unresolved external gate remains.
 
 ## Stop condition
 After producing the durable terminal result and PR when applicable, stop. Do not merge, choose another task, or broaden scope.
