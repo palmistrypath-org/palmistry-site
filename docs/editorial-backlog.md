@@ -206,7 +206,7 @@ These build out the content clusters, fill topical gaps, and support monetisatio
 | 18 | ~~Forked Fate Line Meaning~~ (published 2026-08-24) | `forked-fate-line-meaning` | 3 | 2 | 3 | 2 | 3 | **9** |
 | 19 | ~~Broken Fate Line Meaning~~ (published 2026-08-25) | `broken-fate-line-meaning` | 3 | 2 | 3 | 2 | 3 | **9** |
 | 20 | ~~The Intuition Line in Palmistry~~ (published 2026-08-25) | `intuition-line-palmistry` | 2 | 2 | 4 | 2 | 3 | **9** |
-| 21 | The Teacher's Square in Palmistry | `teachers-square-palmistry` | 2 | 2 | 4 | 2 | 3 | **9** |
+| 21 | The Teacher's Square in Palmistry (deferred — source-unverified) | `teachers-square-palmistry` | 2 | 2 | 4 | 2 | 3 | **9** |
 | 22 | The Line of Mars in Palmistry | `line-of-mars-palmistry` | 2 | 2 | 4 | 2 | 3 | **9** |
 | 23 | Rascettes (Bracelet Lines) in Palmistry | `rascettes-palmistry` | 2 | 2 | 4 | 2 | 3 | **9** |
 | 24 | Index Finger Length in Palmistry (The Jupiter Finger) | `index-finger-length-palmistry` | 3 | 2 | 4 | 2 | 3 | **10** |
@@ -254,12 +254,13 @@ These follow the established variation-article pattern (same as the life line cl
 
 ---
 
-#### 21. The Teacher's Square
+#### 21. The Teacher's Square — DEFERRED, SOURCE-UNVERIFIED (PP-RELAY-056)
 - **Slug:** `beginner/teachers-square-palmistry`
 - **Primary keyword:** "teacher's square palmistry" / "teacher's square on palm"
 - **relatedLesson:** `/learn/advanced/01-minor-lines-overview`
-- **CTA:** Advanced module; links to `mount-of-jupiter` (its typical location)
-- **Notes:** A well-defined minor sign with consistent tradition. Low competition. Benham is primary source.
+- **CTA:** Advanced module; links to `mount-of-jupiter` (its typical location) — applicable only if/when this candidate is source-verified and unblocked.
+- **Status:** Deferred, do not draft. Director-verified evidence (`.ai-ops/evidence/PP-RELAY-056-teachers-square-source-boundary.md`) checked Cheiro's *Palmistry for All* (1916) full text and an accessible Benham *The Laws of Scientific Hand Reading* (1900) Mount of Jupiter transcription. The checked Cheiro text has no occurrence of "teacher" and treats the square generally as the Mark of Preservation; the checked Benham material says a square can strengthen a mount but does not name a Teacher's Square or assign a teaching-specific meaning to a square on Jupiter. A named Teacher's Square and its teaching-specific interpretation are not verified in the approved evidence checked for this task. Modern commercial/SEO pages making that claim are Tier 4 discovery material only, not citation authority.
+- **Prior notes (superseded by the status above, kept for history):** "A well-defined minor sign with consistent tradition. Low competition. Benham is primary source." This characterization predates the source-boundary check and overstated source sufficiency; do not rely on it.
 
 ---
 
