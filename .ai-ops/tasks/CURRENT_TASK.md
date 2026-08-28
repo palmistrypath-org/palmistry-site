@@ -57,7 +57,7 @@ Allowed terminal results:
 
 For `READY_FOR_REVIEW`, commit the authorized documentation reconciliation plus result artifact, push exactly one matching Relay branch, and open exactly one PR to `main` with title prefix `[RELAY PP-RELAY-060]` and standard Relay footers. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the result branch containing the artifact and normally do not create a dummy PR.
 
-The result artifact must include `schema_version: 2`, `task_id: "PP-RELAY-060"`, `revision`: 1, `risk_class: "LOW"`, terminal `result`, concise summary, verification including merge-gate live evidence when observable, `source_preflight: null`, execution telemetry, and `human_action` only for a genuine unresolved owner gate.
+The result artifact must include `schema_version: 2`, `task_id: "PP-RELAY-060"`, `revision: 1`, `risk_class: "LOW"`, terminal `result`, concise summary, verification including merge-gate live evidence when observable, `source_preflight: null`, execution telemetry, and `human_action` only for a genuine unresolved owner gate.
 
 ## Stop condition
 After producing the durable terminal result and PR when applicable, stop. Do not merge, choose another task, modify Relay control files beyond the required result artifact, or broaden scope.
