@@ -1621,3 +1621,68 @@ reviewed and closed without merging, and that no earlier revision was
 finally accepted or merged.
 
 **Verification:** `npm run audit:claim-risk -- src/content/blog/beginner/intuition-line-palmistry.md` (article content unchanged from revision 4; same 1 disclosed myth-heading-pattern finding). `npm run build`. `npm run content-audit`. `npm run audit:all`. `git diff --check`. `git diff` of `m-line-palmistry.md` confirmed link-only on the existing words "intuition line," with no other change to that file.
+
+## Pass 18 — The Teacher's Square backlog candidate deferred as source-unverified, no article drafted (Relay PP-RELAY-056, revision 2, 2026-08-28)
+
+Scope: Relay PP-RELAY-056 revision 2 (`SOURCE_SENSITIVE`). Revision 1
+returned `HUMAN_REQUIRED` only because that worker's environment could not
+reach the relevant public-domain sources. The ChatGPT Director then
+independently checked the sources directly and recorded
+`.ai-ops/evidence/PP-RELAY-056-teachers-square-source-boundary.md`. This is
+therefore a bounded source-integrity/bookkeeping correction against that
+Director evidence, not a new editorial claim and not an article draft.
+
+**Controlling evidence.** Cheiro's *Palmistry for All* (1916), verified
+against the Project Gutenberg full text (ebook 20480): no occurrence of the
+word "teacher" anywhere in the book; the square is discussed generally as
+the **Mark of Preservation**; the Mount of Jupiter chapter does not name or
+interpret a Teacher's Square. Benham's *The Laws of Scientific Hand Reading*
+(1900), verified against an accessible Mount of Jupiter transcription: a
+square is one of several marks said to strengthen a mount generally, but the
+checked passage does not name a Teacher's Square or assign teaching
+aptitude, patience, explanatory ability, or any other teaching-specific
+meaning to a square on Jupiter. Modern commercial/SEO pages attributing a
+named "Teacher's Square" reading to Cheiro or Benham are Tier 4 discovery
+material only under the repository's four-tier source policy and are not
+citation authority.
+
+**Claim-level evidence map.**
+
+| Candidate claim | Status |
+|---|---|
+| Mount of Jupiter is a named palmistry mount | Supported — repository's existing source base |
+| Cheiro treats a square generally as the Mark of Preservation | Supported — Cheiro (1916), verified full text |
+| Benham: a square can strengthen a mount (general rule) | Supported — Benham (1900), verified Jupiter transcription |
+| "Teacher's Square" is a Cheiro or Benham term | Not verified in the approved evidence checked for this task |
+| A square on Jupiter denotes teaching aptitude/a born teacher | Not verified in the approved evidence checked for this task; would require synthesizing Benham's generic square rule with Jupiter's separate qualities into a new combination reading, which the repository's source-integrity policy does not permit without direct support |
+| Prevalence, exact geometry, chronology, or cross-tradition status of a "Teacher's Square" | Not established by any approved evidence reviewed |
+
+**Correction made.** No `teachers-square-palmistry` article was drafted or
+published. `docs/editorial-backlog.md` item 21's scored-table title and its
+"Article details" entry were corrected from an unqualified, source-ready-sounding
+note ("A well-defined minor sign with consistent tradition... Benham is
+primary source") to an explicit deferred/source-unverified status that
+states the evidence boundary above and points to the Director evidence file,
+while preserving the prior note verbatim, labeled superseded, for history.
+No score, ordering, slug, or unrelated backlog entry changed. The
+strikethrough-published convention was not used, since no article exists;
+the row remains structurally an "outstanding" row for
+`checkPublishedRowDrift` purposes, which is correct — nothing was published.
+
+**Preflight disposition (SOURCE_SENSITIVE).** Prevalence/consensus language:
+none introduced; the corrected text uses "not verified in the approved
+evidence checked for this task," not an absolute historical-absence claim.
+Scientific/historical assertions: limited to what the Director evidence
+file states, with source and edition named. Combination readings: the
+correction explicitly names the disallowed synthesis (generic square rule +
+Jupiter qualities → teaching meaning) and declines it rather than making it.
+Anonymous authority: none used; modern commercial pages are named as Tier 4
+discovery material, not cited as authority. Quotation fidelity: no quotation
+marks used for unverified wording. Safety boundaries: no medical, legal,
+financial, or predictive-science claim introduced.
+
+**Verification:** `npm run content-audit` (72 blog posts / 25 lessons
+unchanged; `checkPublishedRowDrift` still passes with item 21 correctly
+read as outstanding). `git diff --check`. Manual review confirming no
+palmistry meaning, Jupiter content, square-marking content, Ring of
+Solomon content, route, canonical, or SEO/indexing behavior changed.
