@@ -2,55 +2,51 @@
 Status: AUTHORIZED
 
 ## Task ID
-PP-RELAY-059
+PP-RELAY-060
 
 ## Revision
-3
+1
 
 ## Risk Class
-STANDARD
+LOW
 
 ## Objective
-Make the new Relay merge-gate status signal trustworthy as well as refreshable. Preserve the useful revision-2 exact-PR/head/state invariant and push-to-main refresh design, but remove any path by which a worker PR can alter the code/workflow that publishes the required status.
-
-## Revision history
-- Revision 1 correctly identified the out-of-band merge path as direct/manual GitHub merge authority, but its pull-request-only status could never refresh after a later Director MERGE_APPROVED state commit.
-- Revision 2 added a push-to-main refresh path and a stable `relay-merge-gate` Statuses API context. Director review found a more serious trust defect: the status-writing workflow is itself introduced/executed from the worker PR under `pull_request` with `statuses: write`. A worker branch can therefore modify the workflow logic that emits the supposedly trusted required status. Live PR #108 also demonstrated that the pre-approval gate job failed and published no `relay-merge-gate` status at all on head `d11e4ae46d4b8fbfe15062a8544f41221d389c2f`; the aggregate commit-status endpoint returned zero statuses. PR #108 was closed unmerged.
+Reconcile stale durable project-state documentation after the completed Relay/curriculum waves, while simultaneously providing the first post-install live exercise of the trusted `relay-merge-gate` signal on an ordinary low-risk Relay PR.
 
 ## Authorized scope
-- Preserve the revision-2 invariant: only `MERGE_APPROVED` with matching current task where applicable, exact PR number, exact current head SHA, `relay_enabled: true`, `credit_guard: CONFIRMED_DISABLED`, and `autonomous_merge: true` can publish success.
-- Move the PR-side status publication onto a trusted execution path whose workflow/code cannot be supplied or modified by the worker PR being evaluated. `pull_request_target` may be used if implemented according to GitHub's security model, provided the job never checks out, imports, executes, sources, or evaluates code/content from the untrusted PR head.
-- The trusted PR-side job may use event metadata for PR number/title/head SHA and may read gate logic/state only from trusted default/base-branch content. Fail closed if trusted gate code is not available yet during bootstrap.
-- Preserve the trusted push-to-main refresh path so a later Director `MERGE_APPROVED` state commit republishes the exact same stable `relay-merge-gate` status context for open Relay PR heads.
-- Keep the Statuses API context stable and explicitly documented as `relay-merge-gate` unless concrete GitHub semantics require a different bounded mechanism.
-- Add/adjust tests that mechanically cover the trust boundary: a PR modifying the gate workflow/script must not gain authority to publish its own success; pre-approval blocks; exact post-approval success; moved head/task/PR mismatch blocks; malformed state fails closed.
-- Inspect the failed PR #108 gate run/status evidence and document the bootstrap limitation accurately. Do not claim live pre/post-approval proof unless an actual GitHub run/status demonstrates it.
-- Preserve `relay-automerge.yml` and the v2B/v2C dispatch/merge engine except for this bounded additive protection.
-- Include `.ai-ops/results/PP-RELAY-059-r3.json`.
+- Update `docs/ACTIVE_TASK.md` so it is genuinely disposable/inactive current-task memory rather than a long historical Batch 3D snapshot. Preserve only a concise completion pointer and direct readers to current canonical docs/Git history.
+- Update only obviously stale inventory/status metadata in `docs/CURRENT_STATE.md` that can be mechanically verified from current `main` (for example the stale `Last repo inventory` date or similarly explicit state labels). Do not rewrite substantive product/editorial history.
+- If needed, make the smallest corresponding `docs/AI_HANDOFF.md` reconciliation so its immediate continuation pointer does not contradict current `main`.
+- Do not touch palmistry article/lesson prose, product UX, SEO strategy, monetization, or visual direction.
+- Run documentation-appropriate verification: inspect the final diff/cross-links and `git diff --check`; a site build is not required unless runtime files are touched.
+- Produce `.ai-ops/results/PP-RELAY-060-r1.json` and one pushed `claude/relay-PP-RELAY-060-...` branch. For READY_FOR_REVIEW, open exactly one PR to `main` with the standard Relay footer.
+
+## Merge-gate live verification requirement
+This task is also the first ordinary Relay PR after PP-RELAY-059 installed `.github/workflows/relay-merge-gate.yml` on `main`.
+
+- Do not modify the merge-gate workflow, publisher, verifier, branch protection, dispatch, or auto-merge engine.
+- After opening the PR, inspect/report whether the fixed commit-status context `relay-merge-gate` is actually published on the exact PR head while `state.json` remains pre-approval.
+- Pre-approval expected outcome is blocking/failure, never success.
+- Record the live status evidence in the durable result when observable. If GitHub does not publish the signal because of permissions/event/bootstrap behavior, report that accurately as evidence; do not fabricate success and do not broaden scope to repair it in this task.
+- Director review will later determine whether a bounded follow-up or owner branch-protection action is warranted.
 
 ## Prohibited scope
-- Do not execute or source worker-PR code in a privileged `pull_request_target` or other trusted-context job.
-- Do not grant a worker-controlled workflow/token a path to forge the stable required status context.
-- Do not redesign dispatch, task selection, risk classes, source review, or the v2C experiment.
-- Do not enable fast lane or broaden autonomous-merge authority.
-- Do not weaken exact-SHA verification, human gates, credit guard, or branch protection.
-- Do not modify site/product/editorial content.
-- Do not request owner branch-protection changes until the repository-side signal is installed and there is bounded evidence that the trusted mechanism can publish the intended blocking/success context. If live post-install proof necessarily requires a later Relay PR, say so explicitly rather than overstating proof.
+- No source-sensitive editorial changes or new palmistry claims.
+- No runtime/site-code changes unless strictly necessary to correct a documentation link, and prefer documentation-only correction.
+- No fast-lane authorization. LOW risk alone does not authorize fast lane.
+- No changes to `.github/workflows/relay-merge-gate.yml`, `scripts/*relay*merge*gate*`, `.ai-ops/state.json`, `.ai-ops/metrics.json`, or Relay engine semantics from the worker branch.
+- Do not merge.
 
 ## Acceptance criteria
-- the status publisher used for branch protection is controlled only by trusted default/base-branch code, not the PR under evaluation;
-- no privileged workflow checks out or executes the PR head;
-- pre-approval state publishes/retains a blocking outcome for a Relay PR head;
-- a trusted push to `main` changing `state.json` to exact `MERGE_APPROVED` can refresh the same head/context to success;
-- READY_FOR_REVIEW/REWORK_REQUIRED and PR/head/task mismatch never authorize merge;
-- malformed/missing trusted state or gate code fails closed;
-- the exact stable required-check/status context is documented;
-- tests cover the trust-boundary and state-transition cases above;
-- relevant CI/self-tests and `git diff --check` pass;
-- no scope drift.
+- `docs/ACTIVE_TASK.md` is concise, INACTIVE, and no longer presents 2026-08-13 Batch 3D as current continuation state;
+- any `CURRENT_STATE.md`/`AI_HANDOFF.md` edits are narrowly factual and mechanically supported by current `main`;
+- no product/editorial/SEO/monetization direction is changed;
+- final documentation diff and cross-links are coherent and `git diff --check` passes;
+- durable result and branch/PR contract is satisfied;
+- the result records live `relay-merge-gate` evidence for the exact PR head when observable, without overstating what was proven.
 
 ## Durable result contract
-Every worker run that passes startup must write `.ai-ops/results/PP-RELAY-059-r3.json` on a pushed `claude/relay-PP-RELAY-059-...` branch before stopping.
+Every worker run that passes startup must write `.ai-ops/results/PP-RELAY-060-r1.json` on a pushed `claude/relay-PP-RELAY-060-...` branch before stopping.
 
 Allowed terminal results:
 - `READY_FOR_REVIEW`
@@ -59,9 +55,9 @@ Allowed terminal results:
 - `HUMAN_REQUIRED`
 - `PAUSED_USAGE_LIMIT`
 
-For `READY_FOR_REVIEW`, commit the authorized fix/docs/tests plus result artifact, push exactly one matching Relay branch, and open exactly one PR to `main` with standard Relay footers for PP-RELAY-059 revision 3. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the result branch containing the artifact and normally do not create a dummy PR.
+For `READY_FOR_REVIEW`, commit the authorized documentation reconciliation plus result artifact, push exactly one matching Relay branch, and open exactly one PR to `main` with title prefix `[RELAY PP-RELAY-060]` and standard Relay footers. For `NO_CHANGE`, `BLOCKED`, `HUMAN_REQUIRED`, or `PAUSED_USAGE_LIMIT`, push the result branch containing the artifact and normally do not create a dummy PR.
 
-The result artifact must include `schema_version: 2`, `task_id: "PP-RELAY-059"`, `revision: 3`, `risk_class: "STANDARD"`, terminal `result`, concise trust-boundary/design evidence, summary and verification, execution telemetry, and `human_action` only when a genuine unresolved external gate remains.
+The result artifact must include `schema_version: 2`, `task_id: "PP-RELAY-060"`, `revision`: 1, `risk_class: "LOW"`, terminal `result`, concise summary, verification including merge-gate live evidence when observable, `source_preflight: null`, execution telemetry, and `human_action` only for a genuine unresolved owner gate.
 
 ## Stop condition
-After producing the durable terminal result and PR when applicable, stop. Do not merge, choose another task, or broaden scope.
+After producing the durable terminal result and PR when applicable, stop. Do not merge, choose another task, modify Relay control files beyond the required result artifact, or broaden scope.
