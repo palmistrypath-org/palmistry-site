@@ -38,6 +38,7 @@ const HUBS = [
 			description="A structured, grounded guide to palm reading across Indian, Chinese, and Western traditions. Learn the lines, mounts, and hand shapes without fortune-telling claims."
 		/>
 		<link rel="preload" as="image" href="/images/home/hero-emergence.webp" media="(min-width: 900px)" />
+		<link rel="preload" as="image" href="/images/home/hero-emergence-mobile.webp" media="(max-width: 899px)" />
 	</head>
 	<body>
 		<Header />
@@ -46,6 +47,7 @@ const HUBS = [
 			<section class="hero veil-bottom">
 				<div class="hero-art" aria-hidden="true">
 					<picture>
+						<source srcset="/images/home/hero-emergence-mobile.webp" media="(max-width: 899px)" />
 						<source srcset="/images/home/hero-emergence.webp" media="(min-width: 900px)" />
 						<img
 							src="/images/home/hero-emergence-md.webp"
@@ -760,9 +762,6 @@ const HUBS = [
 			padding-top: 4em;
 			padding-bottom: 5em;
 		}
-		.hero-art img {
-			object-position: 78% center;
-		}
 		.hero-copy {
 			margin-left: auto;
 			text-align: center;
@@ -790,18 +789,47 @@ const HUBS = [
 			transform: rotateY(12deg);
 		}
 	}
-	@media (max-width: 600px) {
+	/* Below 900px the copy is centred, so the landscape crop would put the
+	   hand behind the words. Instead a portrait crop of the same hand sits
+	   whole at the top and the copy rises out of the dark beneath its wrist.
+	   Lengths are tied to the image width so the shade lands on the hand. */
+	@media (max-width: 899px) {
 		.hero {
-			padding-top: 46vw;
+			--hero-w: min(100vw, 520px);
+			--hero-img-h: calc(var(--hero-w) * 0.953);
+			padding-top: calc(var(--hero-img-h) * 0.84);
+			padding-bottom: 4.5em;
+		}
+		.hero-art img {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			width: var(--hero-w);
+			height: var(--hero-img-h);
+			transform: translateX(-50%);
+			object-fit: fill;
+			object-position: center;
+			animation: none;
+			/* Feather the crop's edges so no rectangle shows on tablets, where
+			   the plate is narrower than the viewport. */
+			mask-image: radial-gradient(ellipse 64% 64% at 50% 48%, #000 55%, transparent 100%);
+			-webkit-mask-image: radial-gradient(ellipse 64% 64% at 50% 48%, #000 55%, transparent 100%);
 		}
 		.hero-shade {
 			background:
-				linear-gradient(180deg, rgba(7, 5, 13, 0.15) 0%, rgba(7, 5, 13, 0.35) 30%, rgba(7, 5, 13, 0.9) 52%, var(--color-bg) 100%),
-				radial-gradient(ellipse 60% 40% at 70% 25%, rgba(122, 72, 201, 0.2), transparent 70%);
+				linear-gradient(
+					180deg,
+					rgba(7, 5, 13, 0.35) 0,
+					transparent calc(var(--hero-img-h) * 0.18),
+					transparent calc(var(--hero-img-h) * 0.6),
+					rgba(7, 5, 13, 0.72) calc(var(--hero-img-h) * 0.82),
+					var(--color-bg) calc(var(--hero-img-h) * 1.02)
+				),
+				radial-gradient(ellipse 70% 45% at 50% calc(var(--hero-img-h) * 0.5), rgba(122, 72, 201, 0.16), transparent 70%);
 		}
-		.hero-art img {
-			object-position: 72% 0%;
-			animation: none;
+		.hero-copy {
+			position: relative;
+			z-index: 1;
 		}
 		.starter-links {
 			grid-template-columns: 1fr;

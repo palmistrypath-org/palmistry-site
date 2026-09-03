@@ -2,6 +2,11 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-09-03 - Polish pass: brand mark redrawn, homepage hero recomposed below 900px (branch `feat/visual-golden-slice`, owner review pending)
+- `BrandMark` is now generated from measured hand geometry by `scripts/generate-brand-mark.mjs` (finger axes and radii with taper, angled thumb, thenar and percussion curves, open wrist, heart/head/life lines, four-point star). Stroke weight is set in px per size band so the header (22px), Practice callout (30px) and footer (56px) share one line quality; the head line is dropped below 28px.
+- Homepage hero below 900px: a new portrait crop `public/images/home/hero-emergence-mobile.webp` (860x820, cut from the 2000px source) sits whole and centred above the copy; padding, shade stops and the violet bloom are tied to the image width, and the plate is feathered so no edge shows on tablets. Desktop is unchanged.
+- Verified with `npm run build`, `npm run audit:all`, `npm run content-audit`, and CDP-driven headless captures at 390, 430, 768 and 1440px against the production preview.
+
 ## 2026-09-03 - Visual refinement pass: brand mark, diagram atlas, in-flow plates, every page opened (branch `feat/visual-golden-slice`, owner review pending)
 - Replaced the abstract circular emblem with a single `BrandMark` component (an open palm with the three major lines and a small star) used by the header, footer, and `Practice` callout.
 - Added a shared diagram library (`scripts/lib/palm.mjs`) and a palm atlas generator (`scripts/generate-palm-diagrams.mjs`) producing 46 plates in `public/images/diagrams/`: hand map, finger names, phalanges, thumb, hand shapes, active/passive hands, reading sequence, every major line with its classical variations (endings, curve, length, forks, breaks, quality, islands, origins), the minor lines, and specimen sheets of line qualities and markings. The mount generator now draws from the same library.

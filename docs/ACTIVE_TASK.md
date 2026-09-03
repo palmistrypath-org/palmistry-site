@@ -2,7 +2,10 @@
 
 Status: INACTIVE
 
-## Last completed (2026-09-03)
+## Last completed (2026-09-03, polish pass)
+Brand mark redrawn from generated geometry (`scripts/generate-brand-mark.mjs`); homepage hero recomposed below 900px with a portrait crop. Not merged; owner review pending. Exact next action if approved: merge `feat/visual-golden-slice`, then Open Graph images and Quick Start Guide 2.0.
+
+## Previously completed (2026-09-03, refinement pass)
 Visual refinement pass on `feat/visual-golden-slice`: `BrandMark` replaces the circular emblem; generated palm atlas (46 plates) plus in-flow plates in every lesson and article; `PageOpening` on all secondary pages. Not merged; owner review pending. See `docs/visual-system.md` and the 2026-09-03 changelog entry. Exact next action if approved: merge, then Open Graph images and Quick Start Guide 2.0 per the checklist.
 
 ## Previously completed (2026-09-02)
