@@ -16,11 +16,15 @@ If you are working through the heart line for the first time, the main [heart li
 
 The heart line runs horizontally across the upper portion of the palm, below the base of the fingers and above the head line. It is typically the highest of the main horizontal creases, clearly visible when the hand is held palm-up. It begins on the percussion edge — the outer edge of the hand on the little-finger side — and travels across toward the index or middle finger area.
 
+![Palm diagram with the heart line lit, its start and end marked.](/images/diagrams/heart-line.svg "The heart line runs from the outer edge of the palm toward the index and middle fingers.")
+
 Chaining can appear anywhere along this course: scattered in one area, concentrated at the middle or end of the line, or running through most of its length.
 
 ## What "chained" means visually
 
 A chained section of the heart line looks like a series of small connected loops or ovals — the line appears to fragment into adjacent enclosed shapes, like links in a very fine chain. When you look at it under good light or use a magnifying glass, the single clean line gives way to a braided or interlocked texture.
+
+![Three palm diagrams compare a clear heart line, a chained heart line made of small linked loops, and a broken heart line with a gap.](/images/diagrams/heart-line-quality.svg "The same heart line as clear, chained, and broken.")
 
 This is distinct from:
 
@@ -44,6 +48,8 @@ Indian palmistry, within the Hasta Samudrika Shastra tradition, reads the *Hrida
 ## What to check before settling on a reading
 
 Chaining on the heart line is not read in isolation. These are the observations that shape how much weight the chaining carries and what it actually suggests.
+
+![Four close-up examples compare a deep clear line, a thin faint line, a broad shallow line, and a chained line.](/images/diagrams/line-quality.svg "Four qualities of line: deep and clear, thin and faint, broad and shallow, chained.")
 
 **Depth of the chained line.** Even when chained, a line that retains some depth to it carries different associations from one that is both chained and faint. A chained but distinctly formed line suggests complex emotional nature. A chained and barely visible line may suggest emotional life that is both complex and difficult to access or sustain.
 

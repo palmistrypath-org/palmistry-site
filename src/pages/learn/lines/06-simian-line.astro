@@ -2,6 +2,7 @@
 import BaseHead from '../../../components/BaseHead.astro';
 import Footer from '../../../components/Footer.astro';
 import Header from '../../../components/Header.astro';
+import PageOpening from '../../../components/PageOpening.astro';
 import { SITE_TITLE } from '../../../consts';
 
 const newPath = '/learn/advanced/simian-line/';
@@ -21,8 +22,8 @@ const newPath = '/learn/advanced/simian-line/';
 	<body>
 		<Header />
 		<main id="main-content" tabindex="-1" data-pagefind-ignore>
-			<section class="moved" aria-labelledby="moved-heading">
-				<h1 id="moved-heading">This lesson has moved</h1>
+			<section class="moved" aria-label="This lesson has moved">
+				<PageOpening eyebrow="Moved" title="This lesson has moved" art="advanced" compact />
 				<p class="intro">
 					The Simian Line lesson is now part of the Minor Lines &amp; Synthesis module.
 				</p>

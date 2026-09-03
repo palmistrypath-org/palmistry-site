@@ -16,6 +16,8 @@ For the full account of the life line itself — its arc, depth, and general rea
 
 The life line begins at the edge of the palm between the thumb and index finger and sweeps downward in an arc around the Mount of Venus — the fleshy pad at the base of the thumb, associated in the tradition with warmth, vitality, and physical life. It curves toward the wrist, framing that mount entirely.
 
+![Two palm diagrams compare a single life line with a life line accompanied by a parallel sister line inside it on the Mount of Venus.](/images/diagrams/life-line-double.svg "A sister line runs parallel to the life line, inside its arc.")
+
 The sister line — the inner life line or Line of Mars — runs inside that arc. It occupies the space between the main life line and the thumb, close to or on the Mount of Venus itself, roughly following the same curved path as the life line but slightly interior to it. It does not run through the centre of the palm; it stays close to the thumb side. This positioning is the first thing to establish, because it is the key to distinguishing the sister line from other lines that can look superficially similar.
 
 Note the [Mount of Venus](/blog/beginner/mount-of-venus/) — the region this inner line crosses. A well-developed, firm mount alongside a clear inner life line is often read as reinforcing the same qualities: a vigorous constitution, strong reserves of physical and emotional energy.
@@ -48,6 +50,8 @@ A sister line that appears only at a break, nowhere else on the arc, is therefor
 
 Not every line that appears near the life line is a true inner life line. Several common features are confused with it.
 
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
+
 **A forked or split life line.** The life line sometimes forks near its end — usually at the wrist — sending one branch toward the Mount of Venus and another toward the base of the palm. The branches of a fork are not a sister line; they are the life line itself dividing. A true sister line runs separately, parallel to and inside the main arc, not as a diverging branch from the same root.
 
 **A thumb-base crease.** The skin fold at the base of the thumb can produce a curved mark that runs roughly inside the life line arc. This is a skin fold, not a palmistry line — it typically runs closer to the thumb, does not have the quality of a formed line, and often does not follow the life line's arc with any precision. Inspect the depth, character, and origin point carefully.
@@ -79,6 +83,8 @@ No single line makes or breaks a reading. The sister line should be read alongsi
 ## Comparing both hands
 
 The comparison between the dominant and non-dominant hand matters here as it does throughout palmistry. The non-dominant hand reflects what a person was born with — constitutional baseline. The dominant hand reflects what has developed through life and experience.
+
+![Two palm diagrams side by side: the passive, non-dominant hand and the active, dominant hand.](/images/diagrams/active-passive-hands.svg "The passive hand is the one you do not write with; the active hand is the one you do. A reading compares the two.")
 
 An inner life line present on both hands suggests that the augmented vitality it reflects is deeply constitutional — part of the baseline the person brought into life. An inner life line present only on the dominant hand suggests a development through experience: resilience built rather than inherited. Either reading is favourable, but the origin differs.
 

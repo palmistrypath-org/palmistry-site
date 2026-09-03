@@ -2,6 +2,14 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-09-03 - Visual refinement pass: brand mark, diagram atlas, in-flow plates, every page opened (branch `feat/visual-golden-slice`, owner review pending)
+- Replaced the abstract circular emblem with a single `BrandMark` component (an open palm with the three major lines and a small star) used by the header, footer, and `Practice` callout.
+- Added a shared diagram library (`scripts/lib/palm.mjs`) and a palm atlas generator (`scripts/generate-palm-diagrams.mjs`) producing 46 plates in `public/images/diagrams/`: hand map, finger names, phalanges, thumb, hand shapes, active/passive hands, reading sequence, every major line with its classical variations (endings, curve, length, forks, breaks, quality, islands, origins), the minor lines, and specimen sheets of line qualities and markings. The mount generator now draws from the same library.
+- Figure plate styles moved to `global.css`; a `rehype-figure` plugin (`src/plugins/`) wraps standalone markdown images in the same plate markup, so `.md` articles carry diagrams without MDX.
+- Inserted 51 in-flow plates across 22 lessons and 172 across 68 articles at the point each concept is introduced. Prose unchanged.
+- New `PageOpening` component (eyebrow, display title, lede, star divider, haze, faint wireframe hand) applied to About, Contact, Glossary, Search, 404, the legal pages, the blog index, and the moved-lesson redirect; Premium Guide and Thank-you heroes received the same art. The blog index shows an atlas plate beside each topic and reveals its cards in sequence; the glossary opens with the hand map.
+- Verified with `npm run build` (116 pages), `npm run audit:all`, `npm run content-audit`, and headless-Chrome captures at 1440px and 500px.
+
 ## 2026-09-02 - Visual golden slice: dark black/gold/purple system on the highest-value surfaces (branch `feat/visual-golden-slice`, owner review pending)
 - Established a shared visual system in `src/styles/global.css` (tokens for black ground, gold, and violet haze; `.eyebrow`, `.display`, `.divider-star`, `.btn-*`, `.card`, `.atmosphere`, `.veil-*`; film grain) and a scroll-reveal engine (`src/scripts/reveal.ts`, loaded from `BaseHead`) that makes content emerge from shadow as it enters the viewport. Reduced-motion and no-JS are respected. Documented in `docs/visual-system.md` with a propagation checklist.
 - Reworked the homepage into six paced acts (hero, the map, the path, principles, where to begin, the guide), the Learn hub, the module index opening, the lesson template (module hand behind the title, drop cap, lit h2 hairlines), `Figure` (every diagram sits in a framed plate), `Practice`, `Checkpoint`, `LessonFooter`, the blog article layout, the guide page, and the sticky blurred header and haze footer.

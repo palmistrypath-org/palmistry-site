@@ -16,6 +16,8 @@ This makes the Mercury Line the line most likely to cause unnecessary concern wh
 
 The Mercury Line runs upward from somewhere in the lower palm — from the base of the hand, from within or near the life line, or from the Mount of Luna on the outer lower palm — toward the Mount of Mercury, which sits below the little finger at the upper edge of the hand. Its course is diagonal rather than strictly vertical, crossing the palm at an angle that distinguishes it visually from the fate line (which runs vertically toward Saturn) and the Sun Line (which runs vertically toward Apollo).
 
+![Palm diagram with the Mercury line lit, running from the base of the palm toward the little finger.](/images/diagrams/mercury-line.svg "The Mercury line runs from the base of the palm toward the little finger.")
+
 In a hand where it appears, you may find it as a clearly defined line running through the middle of the palm, as a faint tracing, or as a series of fragments rather than a continuous stroke. Any of these constitutes a Mercury Line for reading purposes, though the form carries interpretive significance addressed below.
 
 ## Traditional associations
@@ -41,6 +43,8 @@ The practical implication is significant: a person who notices a clear Mercury L
 ## Reading the Mercury Line
 
 ### Starting points
+
+![Four close-up examples compare a deep clear line, a thin faint line, a broad shallow line, and a chained line.](/images/diagrams/line-quality.svg "Four qualities of line: deep and clear, thin and faint, broad and shallow, chained.")
 
 Where the Mercury Line begins inflects the reading.
 

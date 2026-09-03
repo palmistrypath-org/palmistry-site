@@ -16,9 +16,13 @@ If you are working through the life line for the first time, the [life line guid
 
 The life line begins in the space between the thumb and the index finger and sweeps in an arc downward and around the base of the thumb, framing the Mount of Venus — the fleshy pad at the base of the thumb associated with vitality, warmth, and appetite for life. It continues toward the wrist, where it may end cleanly, branch, or curve in various ways. The Mount of Luna sits on the outer lower palm, roughly opposite the Mount of Venus, and is associated with imagination, travel, and restlessness. The relationship between these two mounts matters particularly when reading a terminal fork.
 
+![Palm diagram with the life line lit, its start and end marked.](/images/diagrams/life-line.svg "The life line arcs around the base of the thumb toward the wrist.")
+
 ## What counts as a fork
 
 Not every fine line departing from the life line is a meaningful fork. The classical texts focus on formations that are clearly defined — where each branch has sufficient depth to be distinct, rather than faint surface tracery running alongside the main line. Three distinct types receive consistent attention.
+
+![Two palm diagrams compare a life line with a single ending and a life line that forks near the wrist, one prong toward the Mount of Luna.](/images/diagrams/life-line-forked.svg "A terminal fork sends one prong toward the wrist and another toward the Mount of Luna.")
 
 **The terminal or endpoint fork.** At the wrist end of the life line, the line divides into two branches as it nears its conclusion. One branch continues in the life line's original arc toward or around the Mount of Venus; the other veers outward toward the Mount of Luna. Both branches are clearly formed. This is the most discussed fork type and is the one most commonly mistaken for a warning sign.
 
@@ -39,6 +43,8 @@ The [Mount of Venus](/blog/beginner/mount-of-venus/) is worth assessing as part 
 ## Upward branches from the life line
 
 Fine lines rising from the life line upward toward the mounts above — Jupiter, Saturn, Apollo, or Mercury, or toward the head line — are treated in the Western tradition as generally positive formations. Benham was specific: upward branches indicate periods of renewed energy, ambition, or emerging opportunity. The mount toward which the branch rises points to the area of life where that energy is directed.
+
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
 
 A branch rising toward Jupiter suggests aspirational drive or increasing ambition; one reaching toward Apollo may indicate creative energy, public recognition, or a period of increased confidence; one moving toward the head line area suggests a period of mental engagement or deliberate direction. As with all branch features, clarity matters — a branch that reaches purposefully toward a specific mount carries more weight than one that wanders or fades before arriving anywhere distinct.
 

@@ -16,6 +16,8 @@ Before going further, it helps to have a working familiarity with [what palm lin
 
 An island is formed when a single line divides temporarily — like water parting around a stone — and then rejoins. The result is a small enclosed shape, typically oval or elongated, sitting within the line itself. Think of it as a bubble in the thread.
 
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
+
 Islands vary in size. Some are barely a few millimetres long, easily missed without good light or a magnifying glass. Others are larger — running along a visible stretch of the line — and visible to the naked eye. This difference in scale matters interpretively, as will be discussed below.
 
 To identify an island with confidence, you need to distinguish it from related features. A chain is a series of linked islands running along the line — looser in texture, with multiple small loops rather than one defined oval. A break is a gap in the line with no rejoining; the two strands separate and do not come back together. An island is specifically the case where both strands reconnect, creating a closed shape. The closing of the loop is what makes it an island.
@@ -34,6 +36,8 @@ This matters. An island does not mark the line as damaged or broken. It marks a 
 
 The [heart line](/blog/beginner/heart-line/) runs across the upper palm, typically from the edge near the little finger toward the area of the index or middle finger. Islands on the heart line are traditionally associated with a troubled period in emotional or affective life — a time when the emotional self is, in Benham's framing, not running at full strength.
 
+![Palm diagram with the heart line lit, its start and end marked.](/images/diagrams/heart-line.svg "The heart line runs from the outer edge of the palm toward the index and middle fingers.")
+
 This has been interpreted variously as relating to difficulty in close relationships, a period of emotional withdrawal or confusion, or a time when the quality of emotional connection is strained. Gettings associated islands on the heart line specifically with emotional disappointments or periods when the capacity for feeling is in some way constrained or divided.
 
 These associations are traditional framings, not predictions. The same island may show up in the hands of people who have moved through grief, through significant relational change, or through periods of emotional isolation for entirely different reasons. Context — the rest of the hand, the position of the island, what other markings surround it — shapes any reading considerably.
@@ -51,6 +55,8 @@ No medical interpretation is offered here, and none should be assumed. The tradi
 ## Islands on the life line
 
 The [life line](/blog/beginner/life-line/) sweeps in an arc around the base of the thumb, and is widely — if inaccurately — believed to measure lifespan. It does not. What it traditionally represents is vitality: the quality and flow of physical energy, the body's general robustness, and how a person navigates their embodied life over time.
+
+![Palm diagram with an island on the life line: the line splits into a small lens and rejoins.](/images/diagrams/life-line-island.svg "An island: the line splits into a small lens and rejoins.")
 
 Islands on the life line are traditionally associated with a period of depleted vitality or physical strain. Cheiro, in *Palmistry for All* (1916), held more generally that islands "must be considered as showing a weakness in any line wherever they may be found, and are to be considered unfortunate signs." Benham framed it similarly: a period in which the life force is not running as a unified stream, but divided — less available, less robust.
 

@@ -14,11 +14,15 @@ One distinction to make immediately: endpoint position is a separate feature fro
 
 The heart line runs across the upper palm beneath the base of the fingers, beginning at the percussion edge — the outer edge of the hand on the little-finger side — and travelling across the hand toward the index or middle finger area. It is typically the highest of the three main horizontal lines, sitting clearly above the head line.
 
+![Palm diagram with the heart line lit, its start and end marked.](/images/diagrams/heart-line.svg "The heart line runs from the outer edge of the palm toward the index and middle fingers.")
+
 The terminus, where the line concludes, points in a direction. That direction is what the endpoint traditions are describing. The line may reach clearly toward the index finger and the mount beneath it, toward the middle finger and its mount, or settle somewhere in between. Identifying this clearly, before assigning an interpretation, is the first task.
 
 ## The three main endpoint types
 
 ### Ending toward Jupiter (index finger, Mount of Jupiter)
+
+![Three palm diagrams compare heart lines ending beneath the index finger, between the index and middle fingers, and beneath the middle finger.](/images/diagrams/heart-line-endings.svg "Three common heart-line endings: beneath the index finger, between index and middle, beneath the middle finger.")
 
 The [Mount of Jupiter](/blog/beginner/mount-of-jupiter/) — the fleshy pad below the index finger — is associated in Western palmistry with idealism, ambition, leadership, and high standards. A heart line terminating at or clearly reaching toward this mount is traditionally associated with an aspirational and idealistic quality in emotional life: high expectations in relationships, a desire for connection that reflects something meaningful rather than merely comfortable or convenient.
 
@@ -43,6 +47,8 @@ Benham regarded this as a stable and well-proportioned endpoint, indicating a pe
 ## Curved versus straight: a related feature
 
 The arc of the heart line — how much it curves upward toward the fingers — is frequently read alongside the endpoint position. A steeply curved line rising high toward the finger bases tends to be associated with passionate, expressive emotional energy; a straighter line running more horizontally tends to be associated with greater reserve, even when the endpoint position might otherwise suggest idealism.
+
+![Two palm diagrams compare a curved heart line rising toward the fingers with a straight heart line running across the upper palm.](/images/diagrams/heart-line-curve.svg "A curved heart line rises toward the fingers; a straight one runs level across the upper palm.")
 
 These two features — curvature and endpoint — can reinforce each other or qualify each other. A strongly curved line ending toward Jupiter suggests a very different reading from a flat, straight line ending in the same position. Endpoint alone is not the whole picture; it is one feature within a configuration.
 

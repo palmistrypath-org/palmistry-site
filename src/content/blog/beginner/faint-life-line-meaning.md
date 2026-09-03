@@ -14,15 +14,21 @@ Depth and clarity are two separate observations, and this article is about depth
 
 The life line runs from the web of skin between the thumb and index finger, arcing around the base of the thumb and descending toward the wrist. The [overview of palm lines](/blog/beginner/what-do-palm-lines-mean/) and [How to Read a Palm](/blog/beginner/how-to-read-a-palm/) cover how to locate it if you're still getting oriented.
 
+![Palm diagram with the life line lit, its start and end marked.](/images/diagrams/life-line.svg "The life line arcs around the base of the thumb toward the wrist.")
+
 ## What "faint" means in this article
 
 Depth is a continuum, not two fixed types of line: lines run from deeply cut — a channel your eye follows without effort — through to faint, needing concentration and a change of angle to trace at all. This is the same vocabulary the [Line Quality and Markings lesson](/learn/lines/line-quality-and-markings/) teaches for reading any major line, applied here specifically to the life line's depth.
+
+![Three palm diagrams compare a clear life line, a faint life line, and a chained life line.](/images/diagrams/life-line-quality.svg "The same life line as clear, faint, and chained.")
 
 This article uses "faint" for depth alone. It does not use the word for clarity — how cleanly a line's edges are cut, which the lesson treats as a separate observation that varies independently of depth — and it does not use color, paleness, or darkness as a stand-in for depth, since color isn't part of the vocabulary this site's lessons teach. A line can be deeply cut and still read as soft-edged or diffuse; a shallow line can still be crisp and easy to follow. If your interest is in how cleanly edged a line looks rather than how deeply it's cut, that's a different observation from the one this article addresses.
 
 ## Confirming the line is genuinely faint
 
 **Compare depth within your own palm, not to someone else's hand.** There is no fixed measurement or population average for how deep a life line should be. The relevant comparison is to the other lines on the same hand: does the life line take more concentration to trace than your head line or heart line, or is its depth consistent with them? Depth is read relative to the hand being examined, not against a fixed standard.
+
+![Four close-up examples compare a deep clear line, a thin faint line, a broad shallow line, and a chained line.](/images/diagrams/line-quality.svg "Four qualities of line: deep and clear, thin and faint, broad and shallow, chained.")
 
 **Distinguish depth from length.** A faint line can still run the full descent toward the wrist; a deeply cut line can stop well short of it. Note depth and length as separate observations before combining anything — and for this article, only depth is in view.
 

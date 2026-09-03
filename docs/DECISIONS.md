@@ -2,6 +2,13 @@
 
 Only durable decisions belong here. Newest entries first.
 
+## 2026-09-03 - One brand mark, one diagram atlas, plates in the flow of the prose
+**Decision:** The brand mark is the open-palm `BrandMark` component and nothing else; no page draws its own emblem. All palm diagrams come from `scripts/lib/palm.mjs` (one hand, one set of landmarks, one annotation kit) via the generators in `scripts/`, never hand-drawn SVG or generated raster. Lessons and articles place plates where a concept is introduced — MDX through `<Figure>`, markdown through a standalone image with a title, which `rehype-figure` turns into the same plate. Pages that are neither lesson nor article open with `PageOpening`.
+
+**Why:** Owner review of the golden slice approved the direction and asked for a proper hand mark, far more instructional visuals through lessons and articles, and an immersive presence on every page. Generating the atlas from one library keeps 54 plates consistent and lets a new variation be added in a few lines; routing markdown images through the plugin lets the 71 articles carry plates without converting them to MDX.
+
+**Consequences:** To add a diagram, extend the generator and re-run it; to add one to an article, use `![alt](/images/diagrams/x.svg "Caption")`. New pages start from `PageOpening`. The plates use the site palette only; no other diagram style should be introduced.
+
 ## 2026-09-02 - Visual identity is dark black/gold/purple; the wireframe hands and lesson plates are the anchors
 **Decision:** Palmistry Path is one dark, immersive world. The palette is black ground, gold line and type, and violet used only as haze, glow, and depth. The gold wireframe hand imagery and the black/gold/purple lesson plates are the aesthetic anchors; weaker material is unified around them rather than the anchors being flattened. Section progression uses progressive reveal (`.reveal` + `src/scripts/reveal.ts`), generous spacing, and star dividers rather than parallax or theatrical motion. Mount diagrams are generated from `scripts/generate-mount-diagrams.mjs` so the whole series shares one hand. The system is recorded in `docs/visual-system.md`.
 

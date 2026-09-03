@@ -26,6 +26,8 @@ The [heart line](/blog/beginner/heart-line/) is the primary line associated with
 
 The heart line runs across the upper palm beneath the base of the fingers. In Western palmistry, it has been consistently associated with emotional temperament: not a record of what will happen romantically, but something more like an indicator of emotional style.
 
+![Palm diagram with the heart line lit, its start and end marked.](/images/diagrams/heart-line.svg "The heart line runs from the outer edge of the palm toward the index and middle fingers.")
+
 A long, clearly traced line curving upward toward the fingers is traditionally associated with expressive, warmly given emotional engagement. A straighter line running with less pronounced curvature is often interpreted as a tendency to process feeling internally — not coldness, but a different mode. A line ending under Jupiter (the index finger) is traditionally associated with idealism and depth of affection. One ending under Saturn (the middle finger) is sometimes read in Western palmistry as self-contained reserve — though the Indian Vedic tradition, drawing on *Hasta Samudrika Shastra*, reads the same endpoint as *sthir bhava*: stable, grounded emotional nature. The traditions observe the same feature and arrive at meaningfully different readings.
 
 None of this predicts who you will love or what will happen. What it may offer is a framework for reflecting on how you tend to be in the emotional field — expressive or contained, idealistic or practical, drawn toward intensity or steadiness. That is useful for self-understanding. It is not a romantic forecast.
@@ -37,6 +39,8 @@ The special markings on the heart line — chains, breaks, islands, forks — ca
 ## What relationship lines actually reflect
 
 Below the little finger, on the percussion edge of the hand, sit the small horizontal lines known in Western palmistry as marriage lines, relationship lines, or affection lines. These are distinct from the heart line. They sit in the mount of Mercury, and they are the features people most often want counted.
+
+![Palm diagram with the marriage or relationship lines lit: short horizontal lines on the outer edge of the palm between the heart line and the little finger.](/images/diagrams/marriage-lines.svg "Marriage lines are read on the edge of the hand, between the heart line and the little finger.")
 
 The desire is understandable: if there are three lines, perhaps that means three marriages. If there is only one, perhaps that means one great love. This reading is comfortable precisely because it feels like a concrete answer.
 

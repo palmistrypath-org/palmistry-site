@@ -1,16 +1,13 @@
 ---
+import BrandMark from './BrandMark.astro';
+
 const today = new Date();
 ---
 
 <footer class="site-footer">
 	<div class="footer-haze" aria-hidden="true"></div>
 	<div class="footer-inner">
-		<svg class="footer-mark" width="42" height="52" viewBox="0 0 13 16" aria-hidden="true" fill="none">
-			<ellipse cx="6.5" cy="9" rx="5" ry="6.5" stroke="currentColor" stroke-width="0.5" opacity="0.4"/>
-			<path d="M 10 6 C 7.5 5 4 5 2.5 6.5" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" opacity="0.9"/>
-			<path d="M 2.5 9 C 5 8 8.5 8 10.5 9.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.72"/>
-			<path d="M 7 2.5 C 6.5 4 6 6 6 9 C 6 11.5 6.5 13.5 7 15.5" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
-		</svg>
+		<div class="footer-mark"><BrandMark size={56} /></div>
 		<p class="tagline">Read the lines. Discover the path.</p>
 		<nav class="footer-nav" aria-label="Footer navigation">
 			<a href="/premium-guide/" data-track="nav" data-track-location="footer" data-track-target="premium-guide">Complete Reference</a>
@@ -59,9 +56,11 @@ const today = new Date();
 		margin: 0 auto;
 	}
 	.footer-mark {
+		display: flex;
+		justify-content: center;
 		color: var(--accent);
-		filter: drop-shadow(0 0 12px rgba(201, 169, 110, 0.4));
-		margin-bottom: 0.6em;
+		filter: drop-shadow(0 0 14px rgba(201, 169, 110, 0.4));
+		margin-bottom: 0.8em;
 	}
 	.tagline {
 		font-family: var(--font-cinzel), serif;

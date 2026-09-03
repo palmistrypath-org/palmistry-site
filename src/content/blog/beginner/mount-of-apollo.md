@@ -12,6 +12,8 @@ The Mount of Apollo sits below the ring finger at the palm's upper reaches, flan
 
 The Mount of Apollo occupies the fleshy elevation beneath the ring finger — the fourth finger, counting from the thumb. To locate it, press gently at the base of the ring finger where it meets the palm; the mount is the padded rise in that region. It is bordered on one side by the Saturn mount (below the middle finger) and on the other by the Mercury mount (below the little finger). In a well-marked hand, all four upper mounts form a ridge along the top of the palm; Apollo sits second from the outer edge.
 
+![Palm diagram with the Mount of Apollo highlighted beneath the ring finger.](/images/lessons/mounts/mount-of-apollo.svg "The Mount of Apollo sits directly beneath the ring finger.")
+
 The ring finger itself is called the Apollo finger or Sun finger in the classical Western tradition. It is understood to express many of the same qualities as the mount below it — aesthetic sensibility, warmth, the desire for creative expression and public recognition — and the two are read in relation to each other.
 
 ## What it's traditionally associated with
@@ -23,6 +25,8 @@ Peter West, in *The Complete Illustrated Guide to Palmistry* (1998), added versa
 ## The Sun Line and its relationship to Apollo
 
 The Sun Line — sometimes called the Apollo Line or Line of Apollo — is the vertical line that travels up the palm toward the base of the Apollo mount, where it terminates. Its origin varies considerably from hand to hand: it may rise from the mount of Luna, from the middle of the palm, from the life line, or from just above the wrist. What remains structurally constant is its destination. The Sun Line terminates at the base of the Apollo mount.
+
+![Palm diagram with the sun line lit, rising up the palm toward the ring finger.](/images/diagrams/sun-line.svg "The sun line rises toward the ring finger and the Mount of Apollo.")
 
 This is the most important structural relationship for the mount. In the classical reading, the Sun Line represents the dimension of the individual's life associated with recognition, creative or public success, and the sense of fulfilment that comes from work done in one's proper element. That this line ends at Apollo means Apollo governs the territory it is heading toward: aesthetic expression, creative vitality, and public standing is where the line of fulfilment arrives.
 

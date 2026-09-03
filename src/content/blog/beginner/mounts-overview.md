@@ -16,6 +16,8 @@ If you arrived here directly, [How to Read a Palm](/blog/beginner/how-to-read-a-
 
 A mount is a raised, fleshy pad of the palm. When you look at an open hand, the surface is not flat — it rises and falls, with pronounced elevations beneath the fingers, along the outer edge, and at the base of the thumb. These are the mounts. Their prominence is assessed by feel as much as by sight: a well-developed mount feels full and slightly resilient when pressed; a flat or underdeveloped one yields little.
 
+![Palm diagram locating the seven planetary mounts across eight mount regions, plus the Plain of Mars.](/images/lessons/mounts/mounts-overview.svg "The seven planetary mounts across eight regions, with the Plain of Mars at the centre.")
+
 Western palmistry — and the Indian tradition, in its own framework — reads mount development along a spectrum. A well-developed mount is traditionally associated with the qualities of that mount being present and active in a person's character. A flat or absent mount suggests those qualities are muted or less central. An overdeveloped mount — markedly prominent, hard, or exaggerated — is traditionally associated with those same qualities carried to excess: Jupiter overdeveloped has been read as domineering rather than ambitious; Venus overdeveloped as excess rather than warmth.
 
 As with all features in palmistry, development is a starting observation, not a verdict. A single flat mount does not define a character. What matters is the pattern across all seven, and how that pattern converses with the hand's lines and overall shape.
@@ -23,6 +25,8 @@ As with all features in palmistry, development is a starting observation, not a 
 ## The Mount of Venus
 
 The Mount of Venus occupies the largest distinct area of the palm: the fleshy, rounded pad at the base of the thumb, enclosed on the inner side by the arc of the Life Line. It is one of the most immediately visible mounts on most hands.
+
+![Palm diagram with the Mount of Venus highlighted at the base of the thumb.](/images/lessons/mounts/mount-of-venus.svg "The Mount of Venus: the pad at the base of the thumb, inside the life line.")
 
 Venus is traditionally associated with warmth, affection, vitality, and the capacity for love — and the word "love" here carries a broader meaning than the romantic alone. The Venus mount governs the full domain of embodied engagement: the draw toward music, physical pleasure, sensory richness, and the enjoyment of being alive. Cheiro described the Mount of Venus as denoting "affection, sympathy toward others, benevolence, a desire to please, love and worship of beauty, love of color, and melody in music, and the attraction of the one sex to the other."
 
@@ -32,17 +36,23 @@ A well-developed, firm Mount of Venus is traditionally read as suggesting a stro
 
 The Mount of Jupiter sits at the base of the index finger. Jupiter, in both Western and Indian astrological tradition, governs expansion, authority, and aspiration — and those associations carry directly into the palmistry reading.
 
+![Palm diagram with the Mount of Jupiter highlighted beneath the index finger.](/images/lessons/mounts/mount-of-jupiter.svg "The Mount of Jupiter sits directly beneath the index finger.")
+
 A well-developed Mount of Jupiter is traditionally associated with ambition, a natural orientation toward leadership, self-confidence, and a degree of spiritual or philosophical inclination. Cheiro associated it strongly with the desire for power and the qualities of command. In Hasta Samudrika Shastra, the Jupiter mount is similarly connected to wisdom, authority, and the capacity for learning — understood within the tradition's larger framework of dharmic duty rather than personal ambition.
 
 ## The Mount of Saturn
 
 Saturn sits beneath the middle finger — the most central finger on the hand, and accordingly the mount most associated with gravity, seriousness, and depth. Saturn is the planet of discipline and patience in the astrological tradition, and the mount carries those associations.
 
+![Palm diagram with the Mount of Saturn highlighted beneath the middle finger.](/images/lessons/mounts/mount-of-saturn.svg "The Mount of Saturn sits directly beneath the middle finger.")
+
 The Mount of Saturn is traditionally associated with wisdom, prudence, a sense of duty, and the capacity for sustained effort. Cheiro described its chief characteristics as "love of solitude, prudence, quiet determination, the study of serious sombre things, the belief in fatalism and in the ultimate destiny of all things" — a tendency toward introspection and a degree of solitude that is not isolation but self-sufficiency. A well-developed Saturn mount is read as suggesting a grounded, careful character; overdeveloped, the same qualities can shade into melancholy or fatalism. Saturn is notable for appearing relatively flat on many hands; practitioners treat a moderately developed Saturn as neutral and place weight on it mainly when it is clearly prominent or notably absent.
 
 ## The Mount of Apollo
 
 The Mount of Apollo — also called the Mount of the Sun — sits beneath the ring finger, which in Western tradition is the finger of Apollo and corresponds to the Sun in its planetary association. The Sun's domain governs brilliance, warmth, and recognition.
+
+![Palm diagram with the Mount of Apollo highlighted beneath the ring finger.](/images/lessons/mounts/mount-of-apollo.svg "The Mount of Apollo sits directly beneath the ring finger.")
 
 The Apollo mount is traditionally associated with artistic sensibility, creativity, an appreciation for beauty, and the desire for accomplishment that others can see. A well-developed Mount of Apollo is read as suggesting charisma, optimism, and a natural orientation toward creative or aesthetic endeavour. Cheiro wrote that when large or well developed it "indicates glory, publicity, a desire to shine before one's fellows," and "enthusiasm for the beautiful in all things, whether one follows an artistic calling or not."
 
@@ -52,6 +62,8 @@ The Sun Line, or Line of Apollo, when present, terminates at or near this mount,
 
 Mercury sits beneath the little finger — in both Western and Indian tradition, the finger associated with communication, commerce, and quick intelligence. Mercury's planetary associations span wit, language, and the exchange of information.
 
+![Palm diagram with the Mount of Mercury highlighted beneath the little finger.](/images/lessons/mounts/mount-of-mercury.svg "The Mount of Mercury sits directly beneath the little finger.")
+
 The Mount of Mercury is traditionally associated with communication skill, analytical ability, business acumen, and adaptability. A well-developed Mercury mount is read as suggesting facility with language and numbers, perceptiveness in social situations, and an aptitude for negotiation or commerce. In Hasta Samudrika Shastra, Mercury's mount is closely connected to the gift of speech and the capacities that govern professional and public exchange — a mapping that aligns closely with the Western reading.
 
 Of all the mounts, Mercury's is often among the most telling in hands oriented toward professional or public life.
@@ -60,6 +72,8 @@ Of all the mounts, Mercury's is often among the most telling in hands oriented t
 
 The Mount of Luna — the Moon — sits on the opposite side of the palm from Venus: along the outer edge, toward the heel of the hand, on the little-finger side. Where Venus is typically prominent and immediately visible, Luna is often more subtly developed, and is assessed with particular care for its gradation.
 
+![Palm diagram with the Mount of Luna highlighted on the outer base of the palm.](/images/lessons/mounts/mount-of-luna.svg "The Mount of Luna: the outer base of the palm, opposite Venus.")
+
 Luna is traditionally associated with imagination, intuition, and the interior life. Where Venus governs warmth and physical vitality, Luna governs what is inward — the world of dreams, creative fantasy, and sensitivity to what cannot be directly observed. A well-developed Mount of Luna is read as suggesting strong imaginative capacity, empathic attunement, and a natural inclination toward art, myth, or intuitive perception. Cheiro wrote that this mount "relates to everything that has to do with the imaginative faculties, the emotional artistic temperament, romance, ideality, poetry, change of scenery, travel, and such like."
 
 The Head Line's relationship to Luna is among the more discussed features in Western palmistry: when the Head Line curves noticeably downward toward the Luna mount as it crosses the palm, it is traditionally read as drawing imaginative or creative qualities from this association — a mind that is less linear, more visionary. Overdeveloped, Luna has been associated with excessive fantasy or difficulty anchoring the imagination. Flat, with a more pragmatic cast of mind and less imaginative intensity.
@@ -67,6 +81,8 @@ The Head Line's relationship to Luna is among the more discussed features in Wes
 ## The Mount of Mars
 
 Mars is the one mount that does not follow the single-mount-beneath-a-finger pattern. Traditionally, there are two distinct Mars zones on the palm.
+
+![Palm diagram with Upper Mars, Lower Mars, and the Plain of Mars highlighted.](/images/lessons/mounts/mount-of-mars.svg "Lower Mars above the thumb, Upper Mars on the percussion, and the Plain of Mars between them.")
 
 The first — sometimes called the Inner Mars, or Mars Positive — sits on the inner edge of the hand, above the thumb and below the Mount of Jupiter. It is associated with physical courage: the active, outward expression of energy, assertiveness, and the capacity to meet direct challenge.
 

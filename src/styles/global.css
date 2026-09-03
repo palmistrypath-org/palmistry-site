@@ -430,6 +430,84 @@ hr {
 		radial-gradient(ellipse 35% 30% at 50% 100%, rgba(201, 169, 110, 0.06), transparent 70%);
 }
 
+/* ── Figure plates ────────────────────────────────────────────────
+   Shared by <Figure> (Astro/MDX) and by markdown images, which the
+   rehype-figure plugin wraps in the same markup. Every diagram on the
+   site sits inside this frame so the plates read as one series. */
+.pp-figure {
+	margin: 2.6em 0;
+	padding: 0;
+	line-height: 0;
+}
+.pp-figure--inset {
+	width: min(100%, 520px);
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Frame: a hairline of gold, a violet bloom behind, the image dissolving
+   into black at its edges so every diagram sits inside the same darkness. */
+.pp-figure-frame {
+	position: relative;
+	overflow: hidden;
+	background-color: var(--color-bg);
+	border: 1px solid var(--hairline);
+	border-radius: 4px;
+	box-shadow:
+		0 24px 60px rgba(0, 0, 0, 0.55),
+		0 0 70px rgba(122, 72, 201, 0.14),
+		inset 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.pp-figure-frame::before,
+.pp-figure-frame::after {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	pointer-events: none;
+}
+/* Corner ticks — the plate's registration marks */
+.pp-figure-frame::before {
+	inset: 10px;
+	border: 1px solid rgba(201, 169, 110, 0.22);
+	border-radius: 2px;
+	clip-path: polygon(
+		0 0, 18px 0, 18px 1px, 1px 1px, 1px 18px, 0 18px,
+		0 100%, 18px 100%, 18px calc(100% - 1px), 1px calc(100% - 1px), 1px calc(100% - 18px), 0 calc(100% - 18px),
+		100% 100%, calc(100% - 18px) 100%, calc(100% - 18px) calc(100% - 1px), calc(100% - 1px) calc(100% - 1px), calc(100% - 1px) calc(100% - 18px), 100% calc(100% - 18px),
+		100% 0, calc(100% - 18px) 0, calc(100% - 18px) 1px, calc(100% - 1px) 1px, calc(100% - 1px) 18px, 100% 18px
+	);
+}
+/* Vignette so the plate's edges fall into shadow */
+.pp-figure-frame::after {
+	inset: 0;
+	background: radial-gradient(ellipse 85% 85% at 50% 50%, transparent 60%, rgba(7, 5, 13, 0.55) 100%);
+}
+.pp-figure-frame > img {
+	display: block;
+	width: 100%;
+	max-width: none;
+	height: auto;
+	border-radius: 0 !important;
+}
+.pp-figure > figcaption {
+	display: block;
+	margin: 0.9em auto 0;
+	max-width: 560px;
+	font-size: 0.8em;
+	color: var(--color-text-muted);
+	font-style: italic;
+	line-height: 1.55;
+	text-align: center;
+}
+.pp-figure > figcaption::before {
+	content: '✦';
+	display: block;
+	font-style: normal;
+	font-size: 0.6em;
+	color: var(--accent);
+	opacity: 0.7;
+	margin-bottom: 0.6em;
+}
+
 /* Veils stitch sections together so nothing has a hard edge */
 .veil-top,
 .veil-bottom {

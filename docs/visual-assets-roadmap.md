@@ -1,6 +1,8 @@
 # Visual Assets Roadmap — Palmistry Path
 
-*Last updated: 2026-09-02.*
+Palm atlas (2026-09-03): `scripts/generate-palm-diagrams.mjs` generates 46 plates in `public/images/diagrams/` covering fingers, thumb, hand shapes, active/passive hands, reading sequence, every major line and its variations, minor lines, and marking specimen sheets; they are placed in-flow across all lessons and articles. See `docs/visual-system.md`.
+
+*Last updated: 2026-09-03.*
 
 This document tracks the state of all lesson diagram assets and what designed replacements are needed.
 

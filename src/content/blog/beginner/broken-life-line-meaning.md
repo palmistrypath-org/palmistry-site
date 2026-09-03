@@ -16,11 +16,15 @@ For the complete picture of how the life line is read — its arc, depth, variat
 
 The life line begins between the thumb and index finger and sweeps in a downward arc around the base of the thumb, framing the Mount of Venus — the fleshy pad at the thumb's base associated with warmth, vitality, home, and physical life. It descends toward the wrist, and its arc, depth, clarity, and any interruptions are all part of what a practitioner observes.
 
+![Palm diagram with the life line lit, its start and end marked.](/images/diagrams/life-line.svg "The life line arcs around the base of the thumb toward the wrist.")
+
 If you are new to locating the major lines, [What Do Palm Lines Mean?](/blog/beginner/what-do-palm-lines-mean/) and [How to Read a Palm](/blog/beginner/how-to-read-a-palm/) provide useful orientation before reading individual features in detail.
 
 ## What counts as a break
 
 Not every interruption in the life line reads the same way. Before interpreting anything, identify what type of interruption you are actually seeing.
+
+![Two palm diagrams compare a clean break in the life line with a visible gap and an overlapping break where the segments run side by side.](/images/diagrams/life-line-break.svg "A clean break leaves a visible gap; in an overlapping break the two segments run side by side.")
 
 This section is about telling the forms apart. What a genuine break is taken to *mean* comes later, where the classical and modern readings are set out separately.
 
@@ -67,6 +71,8 @@ A break has been read in three distinct ways, and collapsing them is how the con
 ## What to check before interpreting a broken life line
 
 The break is not the only thing to observe. These are the questions to work through before drawing any conclusion.
+
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
 
 **Does the line resume clearly?** If the life line restarts after the gap — particularly if it resumes with depth and clarity — contemporary practice reads the break as one phase giving way to another. The classical writers read a strong resumption as the interruption being come through. Either way the quality of the resumption matters: a deep, clear continuation is a very different reading from a faint or fragmented one.
 

@@ -14,6 +14,8 @@ Most beginners assume there is one correct answer — left or right — and that
 
 Contemporary palmistry — across Western, Indian, and much of modern Chinese practice — frames the question in terms of **active** and **passive** hands rather than simply left and right.
 
+![Two palm diagrams side by side: the passive, non-dominant hand and the active, dominant hand.](/images/diagrams/active-passive-hands.svg "The passive hand is the one you do not write with; the active hand is the one you do. A reading compares the two.")
+
 Your **active hand** is your dominant hand: the one you write with, reach with, and use for most skilled tasks. Your **passive hand** is the other one.
 
 The active hand is traditionally associated with developed character — the hand that shows what life has shaped. William Benham, in *The Laws of Scientific Hand Reading* (1900), describes it as the hand on which experience has left its mark. The passive hand is traditionally associated with innate tendencies — what you began with, before circumstance and choice began to work on the raw material.

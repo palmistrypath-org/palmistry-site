@@ -14,6 +14,8 @@ This article explains what palmistry traditions actually associate with an absen
 
 The fate line runs vertically up the palm, from the area near the wrist toward the base of the middle finger — which in Western palmistry stands over the Mount of Saturn. Not every hand has one. Among those that do, the line's course varies considerably: it may run from the wrist, emerge from within the life line, begin from the outer lower edge of the palm, or appear only in the middle or upper palm.
 
+![Palm diagram with the fate line lit, its start and end marked.](/images/diagrams/fate-line.svg "The fate line, when present, rises up the centre of the palm toward the middle finger.")
+
 Its variability is greater than any of the three other major lines, and its absence — unlike, say, an absent head line — is not unusual. If you cannot find a fate line on your palm, you are in good company.
 
 ## What the traditions say about an absent fate line
@@ -37,6 +39,8 @@ Chinese palmistry calls this the career line and does not include it among the t
 ## Absent, faint, fragmented, or late-starting
 
 These four configurations look similar at a glance but read differently. Distinguishing them before interpreting matters.
+
+![Three palm diagrams compare a clear fate line, a faint fragmented fate line, and a palm with no fate line at all.](/images/diagrams/fate-line-presence.svg "Clear, faint and fragmented, and absent. All three are normal.")
 
 **No fate line** — no visible line on the palm running vertically toward the Mount of Saturn, on careful inspection under good light. This is the configuration described above: a self-directed course, flexible path, direction generated from within.
 

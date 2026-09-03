@@ -16,11 +16,15 @@ If you have not yet read the main [heart line guide](/blog/beginner/heart-line/)
 
 The heart line runs across the upper palm beneath the base of the fingers, from the percussion edge — the outer edge of the hand on the little-finger side — travelling across toward the index or middle finger. It is typically the highest of the main horizontal lines, sitting clearly above the head line.
 
+![Palm diagram with the heart line lit, its start and end marked.](/images/diagrams/heart-line.svg "The heart line runs from the outer edge of the palm toward the index and middle fingers.")
+
 Any fork or branch on this line will be somewhere along that course: at the line's starting point, at its terminus near the index or middle finger area, or at some point along its length in between. Identifying exactly where the fork sits is the first step in reading it correctly.
 
 ## What counts as a fork
 
 Not every split or deviation reads the same way, and not every fine line branching from the heart line is a fork worth treating as a meaningful marking. The variations that receive consistent attention in the classical literature fall into four broad types.
+
+![Two palm diagrams compare a heart line with a clean single ending and a heart line that forks at its end.](/images/diagrams/heart-line-forked.svg "A fork at the end of the heart line: two prongs where a single ending would be.")
 
 **A clear split at the endpoint.** The most studied fork: at the terminal end of the heart line, where it approaches the index or middle finger area, the line divides cleanly into two distinct branches. Both branches are visible and intentional — not one strong line and a faint stray thread. William Benham and other Western writers gave this specific attention as a feature in its own right, distinct from the ordinary endpoint variations.
 
@@ -45,6 +49,8 @@ The character of this balance depends considerably on where the two branches run
 ## Branches along the line
 
 Upward and downward branches appearing along the body of the heart line — not at the endpoint — are treated in the tradition as distinct from the terminal fork.
+
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
 
 **Upward branches** rising from the heart line toward the mounts above are generally read positively in the Western system. Benham was specific: an upward branch indicates which qualities attract the person's affections most strongly, with the mount toward which it rises pointing to the type of experience or person who most engages the heart. A branch rising toward Jupiter suggests idealism as a primary draw; one reaching toward Saturn suggests seriousness or intellectual gravity; one rising toward the Apollo mount may suggest an attraction to beauty, expressiveness, or creative character.
 

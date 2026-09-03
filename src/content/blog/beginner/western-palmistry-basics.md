@@ -20,6 +20,8 @@ The tradition that most English-speaking practitioners today recognise as Wester
 
 The element of Western palmistry most immediately recognisable to a newcomer is its treatment of the palm's major lines. The tradition identifies four as primary, and their basic character is worth knowing from the outset even before a full study of each.
 
+![Palm diagram with the heart, head, life, and fate lines lit and labelled.](/images/diagrams/major-lines.svg "The four major lines. The fate line is dotted because many palms do not have one.")
+
 The [four major lines](/blog/beginner/major-lines-overview/) — Heart, Head, Life, and Fate — each run a characteristic course across the hand. The Heart Line arcs along the upper palm from the outer edge toward the index-finger side, traditionally associated with emotional life and relational patterns. The Head Line crosses the middle of the palm horizontally, traditionally associated with thinking style, mental orientation, and decision-making patterns. Cheiro considered it the most important line in the system. The Life Line curves around the base of the thumb — not, as popular culture has it, an indicator of longevity, but traditionally associated with the character of physical vitality and the rhythm of major life transitions. The Fate Line rises vertically up the palm toward the mount of Saturn beneath the middle finger, traditionally associated with vocation, directed purpose, and the degree to which a person's path feels chosen rather than circumstantial.
 
 Western practice examines these lines for their length, depth, clarity, and the presence of specific markings — breaks, chains, forks, crosses, and islands — each of which has its own set of traditional associations. The lines are not read in isolation: their meaning within the Western framework emerges from synthesis, as each line's character is understood in relation to the others and to the mounts and hand shape.
@@ -28,6 +30,8 @@ Western practice examines these lines for their length, depth, clarity, and the 
 
 Arranged at the base of each finger and along the outer edge of the palm is a set of raised fleshy pads called mounts. Western palmistry identifies seven principal [mounts](/blog/beginner/mounts-overview/): Jupiter (below the index finger), Saturn (below the middle finger), Apollo (below the ring finger), Mercury (below the little finger), Venus (the broad pad at the base of the thumb), Luna (along the outer lower palm), and Mars (which occupies both an upper and lower position on the palm between Venus and Mercury, with a plain of Mars in the centre).
 
+![Palm diagram locating the seven planetary mounts across eight mount regions, plus the Plain of Mars.](/images/lessons/mounts/mounts-overview.svg "The seven planetary mounts across eight regions, with the Plain of Mars at the centre.")
+
 Each mount is traditionally associated with a domain of qualities. Jupiter is traditionally linked with ambition, leadership, and a sense of honour. Saturn with seriousness, discipline, and a contemplative or solitary quality. Apollo with creativity, expressiveness, and aesthetic sensibility. Mercury with communication, commercial aptitude, and wit. Venus with warmth, physical vitality, and the capacity for affection. Luna with imagination, intuition, and the inner life. Mars with courage, drive, and the management of conflict.
 
 A well-developed mount — prominent and firm — is generally read as amplifying its associated qualities. A flat or underdeveloped mount suggests those qualities are less prominent in the personality. The relative prominence of mounts across the whole hand shapes the interpretive context for everything else that is read: a hand dominated by a strong mount of Luna reads differently than one in which the mount of Jupiter dominates, even if the major lines are similar.
@@ -35,6 +39,8 @@ A well-developed mount — prominent and firm — is generally read as amplifyin
 ## Hand shape classification
 
 Western palmistry did not always classify hand shapes systematically. The elemental system — in which hands are grouped as Earth, Air, Fire, or Water types based on the shape of the palm and the relative length of the fingers — was a later development that became standard across much of twentieth-century Western practice.
+
+![Four schematic hands compare the Earth, Air, Fire, and Water hand shapes by palm proportion and finger length.](/images/diagrams/hand-shapes.svg "Two measurements sort hands into four types: is the palm square or rectangular, and are the fingers short or long against it?")
 
 The four [hand shapes](/blog/beginner/hand-shapes/) map onto temperamental qualities in broad strokes. An Earth hand — characterised by a square palm and relatively short fingers — is traditionally associated with practical, grounded, sensory engagement with the world. An Air hand — square or rectangular palm with long fingers — with intellectual curiosity, communication, and adaptability. A Fire hand — rectangular palm with shorter fingers, often pink or flushed — with energy, impulsiveness, and intuitive action. A Water hand — oblong palm with long fingers — with emotional sensitivity, imagination, and a fluid inner life.
 
@@ -51,6 +57,8 @@ This is a point worth holding clearly. When Cheiro or Benham describe a quality 
 ## Active and passive hands
 
 Western palmistry, like other traditions, recognises that the two hands of the same person are rarely identical, and that their differences are informative. The contemporary approach, and the one preferred on this site, uses the framing of the active hand (the dominant hand — the one used for writing and most tasks) and the passive hand (the non-dominant hand).
+
+![Two palm diagrams side by side: the passive, non-dominant hand and the active, dominant hand.](/images/diagrams/active-passive-hands.svg "The passive hand is the one you do not write with; the active hand is the one you do. A reading compares the two.")
 
 In Western practice, the passive hand is traditionally associated with inherited tendencies, the conditions into which a person was born, and the potential present from the start of life. The active hand is traditionally associated with how that potential has been developed, modified, or departed from through the person's choices and experience. The comparison between the two hands — where the lines differ, where the mounts have changed in prominence, where a mark appears on one and not the other — is part of the reading rather than an afterthought.
 

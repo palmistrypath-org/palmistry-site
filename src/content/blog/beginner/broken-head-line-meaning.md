@@ -14,11 +14,15 @@ If you are working through the head line for the first time, the main [head line
 
 The head line runs horizontally across the middle of the palm, below the heart line, beginning near the thumb side of the hand and travelling toward the outer edge. A break is an interruption along that path: the line stops entirely, leaving a visible gap of bare skin, and then resumes further along its course.
 
+![Palm diagram with the head line lit, its start and end marked.](/images/diagrams/head-line.svg "The head line begins near the life line and crosses the middle of the palm.")
+
 The [overview of palm lines](/blog/beginner/what-do-palm-lines-mean/) and [How to Read a Palm](/blog/beginner/how-to-read-a-palm/) cover how to locate the major lines if you're still getting oriented.
 
 ## Telling a break apart from a short line or a fork
 
 These three formations are easy to mix up, and they are not read the same way.
+
+![Three palm diagrams compare a clear head line, a chained head line, and a broken head line.](/images/diagrams/head-line-quality.svg "The same head line as clear, chained, and broken.")
 
 **A break.** The line stops, leaves a clear gap, and then resumes further along its course. Both a segment before the gap and a segment after it are present.
 
@@ -35,6 +39,8 @@ William G. Benham, writing in *The Laws of Scientific Hand Reading* (1900), trea
 ## Overlaps, sister lines, and other repair formations
 
 Benham does not treat every break the same way. His discussion of the head line names several formations that can appear at or around a gap: the new section overlapping the old one before it fully ends, a fine sister line running alongside the gap, a short connecting bar bridging it, or a small square enclosing part of the interruption.
+
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
 
 This article notes these as Benham's own historical distinction among ways a break can appear — a plain gap is not the only form it takes. It does not go further than that. There is no fixed rule here about gap size, no claim that a wider gap carries a stronger meaning than a narrower one, and no attempt to rank the repair formations against each other or attach a separate fate, timing, or outcome to any one of them.
 

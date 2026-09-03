@@ -34,6 +34,8 @@ Johnny Fincham (*The Spellbinding Power of Palmistry*, 2005) goes further: he no
 
 Not all lines are equally mobile. In broad terms:
 
+![Palm diagram with the heart, head, life, and fate lines lit and labelled.](/images/diagrams/major-lines.svg "The four major lines. The fate line is dotted because many palms do not have one.")
+
 **More changeable:** The fate line is consistently noted across multiple authors as the line most prone to change over a lifetime. Minor lines — the sun line, the Mercury line, small influence lines — also shift more readily, deepening or fading with changes in how a person lives. Fine secondary markings (branches, islands, chains) on any line may appear, resolve, or shift over years.
 
 **Less changeable:** The major configuration of the [life line](/blog/beginner/life-line), [head line](/blog/beginner/head-line), and [heart line](/blog/beginner/heart-line) is generally stable in its broad outline. The deep primary crease running below the fingers — the heart line — is formed early and tends to hold its general path. The head line, crossing the palm horizontally, similarly holds its main course even as smaller markings on it may shift.

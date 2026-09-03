@@ -20,9 +20,13 @@ This is the foundational error. A practitioner who sees a broken heart line and 
 
 The shape of the hand is not decorative background information. It is the interpretive frame for every line on the palm. The same deep, long head line reads differently on a square, practical hand than on a long, narrow one. Western palmistry uses several shape classification systems — the classical four-element types (earth, fire, air, water) and the older square/conic/spatulate/philosophic categories are both in common use, and they do not map perfectly onto each other. Before you look at a single line, look at the overall shape. The [hand shapes guide](/blog/beginner/hand-shapes) covers both major systems and their interpretive implications.
 
+![Four schematic hands compare the Earth, Air, Fire, and Water hand shapes by palm proportion and finger length.](/images/diagrams/hand-shapes.svg "Two measurements sort hands into four types: is the palm square or rectangular, and are the fingers short or long against it?")
+
 ## 3. Reading only the dominant hand
 
 Most introductory sources focus on one hand. In practice, reading both hands together is where the more nuanced interpretations come from. The passive (non-dominant) hand is traditionally associated with inherited tendencies, default patterns, and the baseline a person started with; the active (dominant) hand is often interpreted as showing how those patterns have developed over time. The difference between the two hands — where they diverge — can be more informative than either hand alone. This is covered in detail in [which hand to read](/blog/beginner/which-hand-to-read-palmistry), and it is one of the first things worth making a habit.
+
+![Two palm diagrams side by side: the passive, non-dominant hand and the active, dominant hand.](/images/diagrams/active-passive-hands.svg "The passive hand is the one you do not write with; the active hand is the one you do. A reading compares the two.")
 
 ## 4. Treating line meanings as a lookup table
 
@@ -31,6 +35,8 @@ Traditions disagree with each other — and that disagreement is meaningful, not
 ## 5. Over-reading minor markings before grasping major lines
 
 Islands, chains, stars, crosses, grilles, and tassels are secondary features. They refine and qualify the major lines; they do not replace them as the primary evidence. A beginner who spends twenty minutes examining a faint island on the head line while having barely looked at the hand's shape or the relationship between the life and fate lines has their attention in the wrong place. Get the major lines clearly understood first — [what palm lines mean](/blog/beginner/what-do-palm-lines-mean) provides a solid grounding — and come back to minor markings once the larger picture is clear.
+
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
 
 ## 6. Projecting false certainty
 

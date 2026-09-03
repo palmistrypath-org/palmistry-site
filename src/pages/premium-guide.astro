@@ -15,6 +15,9 @@ import { SITE_TITLE } from '../consts';
 		<style>
 			/* ── Hero ─────────────────────────────────────────────────── */
 			.hero {
+				position: relative;
+				isolation: isolate;
+				overflow: hidden;
 				text-align: center;
 				padding: 4.5em 1em 2.5em;
 				background: radial-gradient(
@@ -22,6 +25,31 @@ import { SITE_TITLE } from '../consts';
 					rgba(201, 169, 110, 0.07) 0%,
 					transparent 70%
 				);
+			}
+			.hero-art {
+				position: absolute;
+				inset: 0;
+				z-index: -1;
+				pointer-events: none;
+			}
+			.hero-art img {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				width: min(560px, 110vw);
+				height: auto;
+				transform: translate(-50%, -46%);
+				opacity: 0.14;
+				mask-image: radial-gradient(ellipse 50% 60% at 50% 50%, #000 25%, transparent 72%);
+				-webkit-mask-image: radial-gradient(ellipse 50% 60% at 50% 50%, #000 25%, transparent 72%);
+			}
+			.hero-art::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background:
+					radial-gradient(ellipse 45% 60% at 50% 30%, rgba(122, 72, 201, 0.16), transparent 70%),
+					linear-gradient(180deg, transparent 55%, var(--color-bg) 100%);
 			}
 			.eyebrow {
 				font-family: var(--font-cinzel), serif;
@@ -316,9 +344,10 @@ import { SITE_TITLE } from '../consts';
 		<Header />
 		<main id="main-content" tabindex="-1">
 			<section class="hero">
-				<p class="eyebrow">Palmistry Path — Complete Reference</p>
-				<h1>The Complete Palmistry Reference</h1>
-				<p class="hero-sub">
+				<div class="hero-art" aria-hidden="true"><img src="/images/home/hero-palm-map.webp" alt="" width="640" height="640" loading="eager" decoding="async" /></div>
+				<p class="eyebrow reveal">Palmistry Path — Complete Reference</p>
+				<h1 class="display reveal" style="--reveal-delay: 120ms">The Complete Palmistry Reference</h1>
+				<p class="hero-sub reveal" style="--reveal-delay: 240ms">
 					Everything in the free Starter Guide, plus the full detail that serious students need —
 					line variations, mount combinations, minor lines, markings, and cross-tradition comparisons,
 					in one printable reference.

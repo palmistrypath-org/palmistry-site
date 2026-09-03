@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
+import PageOpening from '../../components/PageOpening.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 
 const allPosts = (await getCollection('blog')).sort(
@@ -62,6 +63,19 @@ const clusterMeta: Record<ClusterKey, { label: string; intro: string }> = {
 		label: 'Resources',
 		intro: 'Books, charts, and reference materials for further study.',
 	},
+};
+
+const clusterArt: Record<ClusterKey, string> = {
+	'getting-started': '/images/diagrams/hand-map.svg',
+	'major-lines': '/images/diagrams/major-lines.svg',
+	'line-variations': '/images/diagrams/line-quality.svg',
+	'minor-lines': '/images/diagrams/minor-lines.svg',
+	mounts: '/images/lessons/mounts/mounts-overview.svg',
+	'hand-shape': '/images/diagrams/hand-shapes.svg',
+	traditions: '/images/diagrams/lines-tian-di-ren.svg',
+	'relationship-lines': '/images/diagrams/marriage-lines.svg',
+	markings: '/images/diagrams/line-markings.svg',
+	resources: '/images/diagrams/reading-sequence.svg',
 };
 
 const clusterOrder: ClusterKey[] = [
@@ -144,7 +158,25 @@ for (const post of allPosts) {
 
 			/* Cluster sections */
 			.cluster-section {
-				margin-bottom: 3.5rem;
+				position: relative;
+				margin-bottom: 4rem;
+				padding-top: 0.5rem;
+			}
+			/* A plate from the atlas hangs beside each topic, faint, as its sigil */
+			.cluster-art {
+				position: absolute;
+				top: -1.25rem;
+				right: -0.5rem;
+				width: clamp(110px, 12vw, 150px);
+				pointer-events: none;
+				opacity: 0.55;
+				mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 40%, transparent 78%);
+				-webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, #000 40%, transparent 78%);
+			}
+			.cluster-art img {
+				display: block;
+				width: 100%;
+				height: auto;
 			}
 			.cluster-section:last-child {
 				margin-bottom: 0;
@@ -182,18 +214,20 @@ for (const post of allPosts) {
 			.article-grid li a {
 				display: block;
 				height: 100%;
-				padding: 1rem 1.1rem;
-				border: 1px solid rgba(201, 169, 110, 0.2);
-				border-radius: 10px;
-				background: rgba(255, 255, 255, 0.02);
+				padding: 1.1rem 1.2rem;
+				border: 1px solid var(--hairline);
+				border-radius: 4px;
+				background:
+					radial-gradient(ellipse 80% 60% at 0% 0%, rgba(122, 72, 201, 0.1), transparent 70%),
+					var(--color-bg-elev);
 				text-decoration: none;
-				transition: 0.2s ease;
+				transition: border-color 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), transform 0.4s var(--ease-out);
 				box-sizing: border-box;
 			}
 			.article-grid li a:hover {
-				border-color: var(--accent);
-				background: rgba(201, 169, 110, 0.05);
-				box-shadow: var(--box-shadow);
+				border-color: var(--hairline-strong);
+				box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 40px rgba(122, 72, 201, 0.12);
+				transform: translateY(-2px);
 			}
 			.article-title {
 				margin: 0 0 0.35rem;
@@ -233,6 +267,9 @@ for (const post of allPosts) {
 				main {
 					width: calc(100% - 2rem);
 				}
+				.cluster-art {
+					display: none;
+				}
 				.cluster-nav {
 					gap: 0.4rem;
 				}
@@ -257,10 +294,7 @@ for (const post of allPosts) {
 	<body>
 		<Header />
 		<main id="main-content" tabindex="-1">
-			<header class="page-header">
-				<h1>Articles</h1>
-				<p>{allPosts.length} articles across {clusterOrder.length} topics</p>
-			</header>
+			<PageOpening eyebrow="The library" title="Articles" lede={`${allPosts.length} articles across ${clusterOrder.length} topics — every one paired with the diagrams it needs.`} art="lines" />
 
 			<!-- Cluster navigation -->
 			<nav aria-label="Browse by topic">
@@ -290,16 +324,19 @@ for (const post of allPosts) {
 					return (
 						<section
 							id={key}
-							class={`cluster-section${isFeatured ? ' is-featured' : ''}`}
+							class={`cluster-section reveal${isFeatured ? ' is-featured' : ''}`}
 						>
+							<div class="cluster-art" aria-hidden="true">
+								<img src={clusterArt[key]} alt="" width="120" height="130" loading="lazy" decoding="async" />
+							</div>
 							<div class="cluster-heading">
 								<h2>{meta.label}</h2>
 								<span class="cluster-count">{posts.length} articles</span>
 							</div>
 							<p class="cluster-intro">{meta.intro}</p>
 							<ul class="article-grid">
-								{posts.map((post) => (
-									<li>
+								{posts.map((post, i) => (
+									<li class="reveal" style={`--reveal-delay: ${Math.min(i, 8) * 70}ms`}>
 										<a href={`/blog/${post.id}/`}>
 											<h3 class="article-title">{post.data.title}</h3>
 											<p class="article-desc">

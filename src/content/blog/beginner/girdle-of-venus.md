@@ -18,6 +18,8 @@ Not every hand carries one. When it does appear, it ranges from a clean, continu
 
 The Girdle of Venus sits in the upper palm, above the heart line and below the finger bases. Its traditional endpoints are the Jupiter-Saturn gap on one side and the Apollo-Mercury gap on the other, though in practice it rarely runs the full distance cleanly.
 
+![Two palm diagrams compare a complete Girdle of Venus, an unbroken arc above the heart line, with a fragmented girdle made of short pieces.](/images/diagrams/girdle-of-venus.svg "A complete Girdle of Venus is one arc above the heart line; a fragmented one is made of short pieces.")
+
 A few things it can be confused with:
 
 - **Lines rising from the heart line** — Small lines that rise upward from the heart line are a different feature. The Girdle runs across the palm independently; it doesn't originate from the heart line.
@@ -63,6 +65,8 @@ As with other lines, a clearly etched Girdle is traditionally read as a more pro
 ## The Girdle in Relation to Other Features
 
 ### With a Strong Heart Line
+
+![Palm diagram with the heart line lit, its start and end marked.](/images/diagrams/heart-line.svg "The heart line runs from the outer edge of the palm toward the index and middle fingers.")
 
 A hand carrying both a strong, clear heart line and a visible Girdle of Venus is, in the tradition's framing, one where emotional experience operates on two channels: the heart line reflecting the capacity for deep attachment and feeling, the Girdle adding a layer of perceptual and sensory sensitivity. Gettings notes this combination as particularly associated with artistic temperament — not because artists are the only people who carry it, but because the combination of emotional depth and sensory attunement tends toward creative expression.
 

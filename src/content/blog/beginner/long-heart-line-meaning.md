@@ -14,11 +14,15 @@ If you are working through the heart line for the first time, the main [heart li
 
 The heart line runs horizontally across the upper palm, below the base of the fingers and above the head line. It begins on the percussion edge — the outer edge of the hand on the little-finger side — and travels across toward the index or middle finger area. Length is how far that journey goes before the line reaches its terminus.
 
+![Palm diagram with the heart line lit, its start and end marked.](/images/diagrams/heart-line.svg "The heart line runs from the outer edge of the palm toward the index and middle fingers.")
+
 The [overview of palm lines](/blog/beginner/what-do-palm-lines-mean/) and [How to Read a Palm](/blog/beginner/how-to-read-a-palm/) cover how to locate the major lines if you're still getting oriented.
 
 ## Confirming the line is actually long
 
 Before interpreting length, confirm what you're looking at. A line can look longer than it really is, or its length can be hard to separate from other features sitting nearby.
+
+![Two palm diagrams compare a long heart line reaching the far side of the palm with a short heart line stopping beneath the ring finger.](/images/diagrams/heart-line-length.svg "Length is judged by where the line stops: beneath the index finger, or short of it.")
 
 **Compare it to the palm's own width, not to the other lines.** The reference point for "long" is where the heart line ends relative to the palm as a whole: the line travels conspicuously far across the upper palm relative to the hand being observed, rather than stopping partway across it.
 

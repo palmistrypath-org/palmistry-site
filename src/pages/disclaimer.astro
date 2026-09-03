@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import PageOpening from '../components/PageOpening.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -44,8 +45,7 @@ import { SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main id="main-content" tabindex="-1">
-			<h1>Disclaimer</h1>
-			<p class="updated">Last updated: May 2026</p>
+			<PageOpening eyebrow="Last updated · May 2026" title="Disclaimer" art="palm" compact />
 
 			<div class="notice">
 				<em>
@@ -55,7 +55,7 @@ import { SITE_TITLE } from '../consts';
 				</em>
 			</div>
 
-			<section>
+			<section class="reveal">
 				<h2>Palmistry as Education and Reflection</h2>
 				<p>
 					The content on this site presents palmistry as a structured interpretive tradition with
@@ -70,7 +70,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>No Diagnosis or Medical Claims</h2>
 				<p>
 					Nothing on Palmistry Path should be interpreted as medical advice or diagnosis. Certain
@@ -82,7 +82,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>No Predictive Guarantee</h2>
 				<p>
 					Palmistry Path makes no claim that palmistry predicts future events. Content that describes
@@ -92,7 +92,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>No Legal or Financial Advice</h2>
 				<p>
 					Nothing on this site should be taken as legal, financial, or investment advice. For
@@ -100,7 +100,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Accuracy of Traditional Sources</h2>
 				<p>
 					We aim to represent source traditions accurately and to attribute interpretations to their

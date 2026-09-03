@@ -16,6 +16,8 @@ This article works through the most persistent myths, one by one, and sets them 
 
 This is probably the single most widespread misconception about palmistry, and it has been doing damage for a long time — causing genuine anxiety in people who glimpse their own hands.
 
+![Two palm diagrams compare a life line that runs to the wrist with a short life line that ends in the middle of the palm.](/images/diagrams/life-line-length.svg "A short life line ends in the middle of the palm. It is not a measure of lifespan.")
+
 The life line, [discussed in detail here](/blog/beginner/life-line), is not a calendar — but the honest version of this correction is more interesting than the usual one. Cheiro, the palmist most often quoted in support of dramatic life-line claims, genuinely did connect the line to length of life and supplied a seven-year dating scheme for reading events along it. The myth is not a distortion of him; it is a coarsening of him. What has actually undone it is the modern literature and the empirical work, which is why contemporary practice associates the life line with vitality, resilience, and the quality of physical energy instead. A shorter life line in the Western tradition is often interpreted as a different distribution of that energy, not as a countdown.
 
 Benham's *Laws of Scientific Hand Reading* (1900) is explicit that the life line is read in combination with the other major lines and the overall hand. No single feature carries the weight popular myth assigns to it.
@@ -41,6 +43,8 @@ Practitioners who reduce a reading to a single dramatic feature are working agai
 ## Myth 4: A broken line always means something bad
 
 Breaks in palm lines have accumulated an outsized reputation for catastrophe. In practice, the traditional interpretations are considerably more varied.
+
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
 
 A break in the life line can be interpreted in different ways: as a significant life change, a shift in direction, or a period of transition. Some practitioners read overlapping breaks — where the new line begins before the old one ends — as an indication of managed change rather than disruption. The heart line and head line carry their own sets of interpretations for breaks, and these differ across traditions. [Islands, breaks, and their meanings](/blog/beginner/what-do-palm-lines-mean) provides a fuller treatment.
 

@@ -14,6 +14,8 @@ Lines are the most recognisable feature of the palm and the reason most people r
 
 The phrase "four major lines" reflects primarily the Western palmistry framework, developed and codified in the nineteenth and early twentieth centuries — most influentially through Cheiro's work. Western practice identifies the Heart Line, the Head Line, the Life Line, and the Fate Line as the principal subjects of a reading, with additional minor lines receiving attention after these are established.
 
+![Palm diagram with the heart, head, life, and fate lines lit and labelled.](/images/diagrams/major-lines.svg "The four major lines. The fate line is dotted because many palms do not have one.")
+
 Indian palmistry, rooted in Hasta Samudrika Shastra, recognises the same core lines but situates them within a denser interpretive system, deeply integrated with Jyotish (Vedic astrology) and the planetary associations of the mounts. There is no equivalent division between "major" and "minor" that maps cleanly onto the Western four — the tradition is comprehensive rather than tiered, and the relative weight given to any given line is shaped by the whole hand picture in ways that don't reduce neatly to a ranked list.
 
 Chinese palmistry takes a different position altogether. It identifies three major lines, not four: the Life Line, the Head Line, and the Heart Line. In contemporary Chinese practice these are called the Earth Line, the Human Line, and the Heaven Line respectively — a framing that locates them within the classical Chinese concept of Tian Di Ren (Heaven, Earth, Human) rather than treating the hand as an isolated object. The cosmological triad is ancient and well documented; its application to these three lines is the terminology found in the contemporary Chinese palm-reading material we have consulted, and is not a mapping this site has traced to a classical text. The Fate Line does not hold major-line status in this framework. The deep-dive articles in this series will revisit these differences when they become significant.
@@ -24,6 +26,8 @@ For now, the Western four-line framework is a useful organising structure. It is
 
 The Heart Line runs along the upper portion of the palm — the region closest to the fingers. It typically begins beneath the little finger, on the outer edge of the hand, and arcs across toward the index finger side, usually ending somewhere between the mounts of Saturn (below the middle finger) and Jupiter (below the index finger), though its exact endpoint varies considerably from hand to hand.
 
+![Palm diagram with the heart line lit, its start and end marked.](/images/diagrams/heart-line.svg "The heart line runs from the outer edge of the palm toward the index and middle fingers.")
+
 In Western palmistry, the Heart Line is traditionally associated with the emotional life: the capacity for feeling, the style of relating to others, the patterns visible in how a person engages with close relationships. Cheiro called it the indicator of the "Affectionate and Emotional Nature." The line's length, depth, the clarity or chaining of its course, and especially where it terminates are among the features practitioners examine most closely. A Heart Line that ends beneath the mount of Jupiter is often interpreted as suggesting idealism in emotional attachments; one that terminates beneath Saturn is sometimes associated with a more self-contained or pragmatic emotional orientation.
 
 These are tendencies from the tradition — frameworks for observation, not pronouncements. The Heart Line takes on its full meaning in the context of the hand shape (what "depth of feeling" suggests on a hand traditionally associated with emotional expressiveness will read differently than on one associated with practicality), and in dialogue with the mounts, which add weight to or qualify what the line suggests. The deep-dive article on the Heart Line will address its variations in full.
@@ -31,6 +35,8 @@ These are tendencies from the tradition — frameworks for observation, not pron
 ## The Head Line
 
 The Head Line runs horizontally across the middle of the palm, between the Heart Line above it and the Life Line below, typically beginning near the junction of the thumb and index finger and extending across the hand toward its outer edge. It is worth noting, if only because it shapes how the line is weighted, that Cheiro considered this *the* most important line on the hand — the primary indicator of character in the Western system.
+
+![Palm diagram with the head line lit, its start and end marked.](/images/diagrams/head-line.svg "The head line begins near the life line and crosses the middle of the palm.")
 
 The Head Line is traditionally associated with mental qualities: the direction of one's thinking, intellectual style, decision-making patterns, and the character of mind rather than any measurable quantity like intelligence. A Head Line that runs relatively straight across the palm is often interpreted as indicating practical, systematic thinking. One that curves downward toward the lower portion of the palm — in Western terms, toward the Mount of Luna — is traditionally associated with imaginative, intuitive, or creative tendencies. The degree of slope and how far the line descends are both observed.
 
@@ -40,6 +46,8 @@ Where the Head Line and Life Line share a common starting point — joined at th
 
 The Life Line curves around the base of the thumb, arcing from the region between the thumb and index finger down toward the wrist. Of the four lines, it is the most persistently misunderstood in popular culture — and the misunderstanding is worth naming here, before it can take root.
 
+![Palm diagram with the life line lit, its start and end marked.](/images/diagrams/life-line.svg "The life line arcs around the base of the thumb toward the wrist.")
+
 The Life Line does not predict how long you will live. That is a modern position, and worth stating as one: Cheiro and Benham both read the line partly in terms of duration and both supplied methods for dating events along it. The modern practitioner literature — Gettings, West, Fincham — rejects the lifespan mapping, and the empirical work supports them rather than the older writers. The Life Line is traditionally associated with the character of physical energy — constitution, vitality, the rhythm of a person's physical life — and with major transitions and periods of change across a life history. Its length, depth, the presence of chains or breaks, and how it relates to the surrounding mounts of Venus and Mars are what practitioners observe. Longevity is not among its traditional functions.
 
 This is a case where the popular version of palmistry diverges sharply from what the classical texts actually say — and the divergence is significant enough to flag at the outset. The deep-dive article will address it fully.
@@ -47,6 +55,8 @@ This is a case where the popular version of palmistry diverges sharply from what
 ## The Fate Line
 
 The Fate Line runs vertically up the palm, from the wrist area toward the base of the middle finger — in Western terms, toward the Mount of Saturn, which is why the line is also called the Line of Saturn. Cheiro used the term Line of Destiny. Unlike the other three major lines, the Fate Line does not follow a single consistent path: it may rise from the wrist, emerge from within the Life Line partway along its course, begin from the Mount of Luna at the lower outer edge of the palm, or appear late and faintly. Its point of origin is one of the features practitioners consider most significant — traditionally associated with different qualities of direction depending on where it starts.
+
+![Palm diagram with the fate line lit, its start and end marked.](/images/diagrams/fate-line.svg "The fate line, when present, rises up the centre of the palm toward the middle finger.")
 
 The Fate Line is traditionally associated with vocation, a sense of directed purpose, and the degree to which a life feels shaped by intention rather than circumstance. A deep, clear Fate Line running from the wrist upward is often associated with an early and sustained sense of direction. Lines that emerge later, or rise from within the Life Line, are sometimes associated with a path that clarified or was established through effort rather than given at the outset. [Branches on the fate line](/blog/beginner/fate-line-branches-meaning/) — which direction they run and what they point toward — carry their own specific traditional associations.
 

@@ -43,6 +43,8 @@ He uses gendered conventions throughout — assigning different significance to 
 
 The planetary mount framework Cheiro relies on most heavily — seven mounts named for classical planets, arranged across the palm — is not his invention. It derives from a longer Western cheiromantic tradition influenced by Renaissance astrology. But Cheiro did more than anyone in the early twentieth century to fix that vocabulary in English and make it accessible to a general readership. The fact that contemporary palmistry books still use his mount names almost interchangeably with his definitions is a measure of that influence.
 
+![Palm diagram locating the seven planetary mounts across eight mount regions, plus the Plain of Mars.](/images/lessons/mounts/mounts-overview.svg "The seven planetary mounts across eight regions, with the Plain of Mars at the centre.")
+
 For anyone beginning to study the Western system, this is useful context: learning Cheiro's planetary vocabulary is learning the baseline vocabulary of Western palmistry. Indian and Chinese palmistry organise the hand very differently, but most English-language sources build from, refine, or argue against the framework Cheiro helped popularise.
 
 ## How Cheiro compares to other major sources

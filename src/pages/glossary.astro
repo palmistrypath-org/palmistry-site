@@ -2,6 +2,8 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import Figure from '../components/Figure.astro';
+import PageOpening from '../components/PageOpening.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -78,14 +80,15 @@ import { SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main id="main-content" tabindex="-1">
-			<h1>Glossary</h1>
+			<PageOpening eyebrow="Reference" title="Glossary" lede="The vocabulary of palm reading across the Indian, Chinese, and Western traditions, with links to the lessons where each term is taught." art="mounts" />
 			<p class="glossary-intro">
 				A reference guide to the terminology used in palmistry across Indian, Chinese, and Western
 				traditions. Where traditions use different names or meanings for the same feature, that is
 				noted. Terms are arranged alphabetically.
 			</p>
+			<Figure src="/images/diagrams/hand-map.svg" alt="Palm diagram naming the regions a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist." caption="Where the vocabulary lives: most terms below name a region, a line, or a marking on this map." />
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">A</h2>
 				<dl>
 					<dt id="active-hand">Active hand</dt>
@@ -100,7 +103,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">B</h2>
 				<dl>
 					<dt id="branch">Branch</dt>
@@ -156,7 +159,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">C</h2>
 				<dl>
 					<dt id="chained-heart-line">Chained heart line</dt>
@@ -211,7 +214,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">D</h2>
 				<dl>
 					<dt id="dominant-hand">Dominant hand</dt>
@@ -241,7 +244,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">E</h2>
 				<dl>
 					<dt id="earth-line">Earth line</dt>
@@ -258,7 +261,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">F</h2>
 				<dl>
 					<dt id="fate-line">Fate line</dt>
@@ -285,7 +288,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">G</h2>
 				<dl>
 					<dt id="girdle-of-venus">Girdle of Venus</dt>
@@ -300,7 +303,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">H</h2>
 				<dl>
 					<dt id="hasta-samudrika-shastra">Hasta Samudrika Shastra</dt>
@@ -362,7 +365,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">I</h2>
 				<dl>
 					<dt id="island">Island</dt>
@@ -380,7 +383,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">J</h2>
 				<dl>
 					<dt id="jeevan-rekha">Jeevan Rekha</dt>
@@ -398,7 +401,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">L</h2>
 				<dl>
 					<dt id="life-line">Life line</dt>
@@ -426,7 +429,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">M</h2>
 				<dl>
 					<dt id="m-line">M line</dt>
@@ -542,7 +545,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">N</h2>
 				<dl>
 					<dt id="non-dominant-hand">Non-dominant hand</dt>
@@ -558,7 +561,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">P</h2>
 				<dl>
 					<dt id="palmistry-chart">Palmistry chart</dt>
@@ -585,7 +588,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">R</h2>
 				<dl>
 					<dt id="relationship-line">Relationship line</dt>
@@ -601,7 +604,7 @@ import { SITE_TITLE } from '../consts';
 				</dl>
 			</div>
 
-			<div class="letter-group">
+			<div class="letter-group reveal">
 				<h2 class="letter-heading">S</h2>
 				<dl>
 					<dt id="simian-line">Simian line</dt>

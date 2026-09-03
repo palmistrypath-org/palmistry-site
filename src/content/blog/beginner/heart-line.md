@@ -16,6 +16,8 @@ If you arrived here directly — through a search, or through general curiosity 
 
 The heart line runs across the upper portion of the palm, in the zone closest to the fingers. It is typically the highest of the main horizontal lines — running above the head line, above the point where the life line begins its arc around the thumb.
 
+![Palm diagram with the heart line lit, its start and end marked.](/images/diagrams/heart-line.svg "The heart line runs from the outer edge of the palm toward the index and middle fingers.")
+
 Most heart lines begin on the percussion edge of the palm: the outer edge, on the side of the little finger. From there the line arcs across the hand, usually ending somewhere in the area of the index or middle finger. Its starting point is relatively consistent from hand to hand; its ending point varies considerably, and that variation is among the most studied aspects of the line.
 
 On some hands the line curves noticeably upward as it travels. On others it runs relatively straight. These differences, and more, are part of what is read.
@@ -31,6 +33,8 @@ One methodological note before the variations: William Benham, in *The Laws of S
 ## Reading the heart line
 
 ### The endpoint: where the line terminates
+
+![Three palm diagrams compare heart lines ending beneath the index finger, between the index and middle fingers, and beneath the middle finger.](/images/diagrams/heart-line-endings.svg "Three common heart-line endings: beneath the index finger, between index and middle, beneath the middle finger.")
 
 This is the most interpretively significant variation in the Western system, and the one with the richest and most contested traditional analysis.
 
@@ -73,6 +77,8 @@ On some hands, the heart and head lines merge entirely into a single horizontal 
 ## The heart line in context
 
 Nothing in the sections above is a reading. Each variation is a tendency from the tradition — a starting point for observation, not a label to apply and move past.
+
+![Palm diagram with the heart, head, life, and fate lines lit and labelled.](/images/diagrams/major-lines.svg "The four major lines. The fate line is dotted because many palms do not have one.")
 
 The synthesis principle that runs through this series applies here without exception: the heart line's significance emerges in context. A long, clearly traced line ending under Jupiter reads differently on a hand whose shape and mounts suggest emotional volatility than on one that suggests groundedness and self-possession. The mount of Venus — in the Western tradition, associated with warmth, affectionate capacity, and the desire for connection — either amplifies or qualifies what the heart line suggests. A line with notable chains or islands on a hand where other features suggest resilience tells a different story than the same markings on a hand already under strain.
 

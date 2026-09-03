@@ -16,6 +16,8 @@ If you arrived here directly, the [overview of the major lines](/blog/beginner/m
 
 The head line runs horizontally across the middle of the palm — below the heart line, above the region where the life line begins its curve around the thumb. It begins on the radial side of the hand (the thumb side), in the zone between the thumb and index finger, and travels across the palm toward the outer edge. Its path and endpoint are traditionally significant features to observe.
 
+![Palm diagram with the head line lit, its start and end marked.](/images/diagrams/head-line.svg "The head line begins near the life line and crosses the middle of the palm.")
+
 The head line's starting point sits at or near the life line's origin, and the relationship between those two starting points — whether they are joined, touching, or clearly separated — is itself part of what is read.
 
 ## What it's traditionally associated with
@@ -29,6 +31,8 @@ The Indian tradition calls this line the *Mastishka Rekha* or *Buddhi Rekha* —
 ## Reading the head line
 
 ### The starting point: joined, touching, or separated
+
+![Two palm diagrams compare a straight head line crossing the palm with a sloping head line that curves down toward the Mount of Luna.](/images/diagrams/head-line-path.svg "A straight head line crosses toward the percussion; a sloping one curves down toward Luna.")
 
 This is one of the clearest features to observe at the head line's origin.
 
@@ -83,6 +87,8 @@ On hands where the head line and heart line merge into a single crease, the [hea
 ## The head line in context
 
 No variation above is a reading on its own. The head line's slope toward Luna tells you something different on a hand where the Mount of Luna is flat and undeveloped than on one where it is prominent and well-formed — because the mount's qualities amplify or qualify what the line approaches. A straight, practical head line on a hand with a long, curved heart line and a well-developed Mount of Venus reads differently than the same line on a hand that reads consistently for containment and reserve.
+
+![Palm diagram with the heart, head, life, and fate lines lit and labelled.](/images/diagrams/major-lines.svg "The four major lines. The fate line is dotted because many palms do not have one.")
 
 The relationship between head line and heart line is close: the heart line's emotional character sets a context for the head line's mental character, and reading them together, rather than in isolation, gives a fuller picture than either line alone. None of this is a verdict. It is the beginning of an observation.
 

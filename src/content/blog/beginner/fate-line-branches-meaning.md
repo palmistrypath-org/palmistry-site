@@ -16,9 +16,13 @@ Context matters throughout. No branch on the fate line can be meaningfully read 
 
 The fate line — also called the Saturn line or line of destiny in some traditions — typically rises from the lower palm and travels upward toward the middle finger and the Mount of Saturn. It may start from the base of the palm near the wrist, from the life line, from the outer lower palm (Luna), or from somewhere in the mid-palm. The line's starting point is part of its overall reading, not just a detail. Any branch must be located in relation to where the line comes from and where it is headed. The main [fate line article](/blog/beginner/fate-line/) covers the starting positions and their traditional associations in full.
 
+![Palm diagram with the fate line lit, its start and end marked.](/images/diagrams/fate-line.svg "The fate line, when present, rises up the centre of the palm toward the middle finger.")
+
 ## Upward branches from the fate line
 
 Benham described upward branches on the fate line — fine lines rising from it and heading toward the upper mounts — as indicating additional avenues of energy or capacity that complement the main direction. They are not disruptions or competing paths; they are traditionally read as supplementary strengths that arise alongside the central career or life focus.
+
+![Two palm diagrams compare upward branches rising from the fate line and downward branches falling from it.](/images/diagrams/fate-line-branches.svg "Branches leave the fate line upward toward the fingers or downward toward the wrist.")
 
 The mount toward which the branch rises shapes the reading considerably.
 
@@ -42,6 +46,8 @@ A downward branch that ends cleanly while the fate line continues strong above i
 
 When the fate line ends in a fork — dividing into two branches as it approaches the upper palm near Saturn — the Western classical tradition has read this as indicating two distinct directions or vocations that occupy the life simultaneously near its peak. Benham noted that a fork at the terminus of the fate line may be associated with a person who pursues parallel paths rather than a single concentrated focus, holding two significant lines of endeavour at once in the later or more established phase of life.
 
+![Palm diagram showing three fate-line endpoints: at the head line, at the heart line, and at the Mount of Saturn beneath the middle finger.](/images/diagrams/fate-line-endings.svg "Three places a fate line can end: at the head line, at the heart line, or at the Mount of Saturn.")
+
 The direction of each fork branch adds specificity. If one branch reaches toward Jupiter and the other toward Apollo, the reading involves both the ambition and leadership associations of Jupiter and the creative or recognition-related associations of Apollo. A terminal fork toward Apollo and Mercury suggests creative and communicative directions running in parallel.
 
 This formation is not traditionally associated with indecision or an inability to commit. It is generally read as a sign of versatility — a life that accommodates two significant dimensions rather than resolving cleanly to one. Whether that multiplicity reads as an advantage depends on the hand as a whole and on the quality of the fork's branches.
@@ -49,6 +55,8 @@ This formation is not traditionally associated with indecision or an inability t
 ## Branches at the origin — dual starting points
 
 Some fate lines appear to begin from two points simultaneously. The most commonly discussed combination in the classical literature is a fate line starting from both the life line and from Luna — the outer lower palm below the little finger and above the wrist.
+
+![Two palm diagrams compare a single fate line and a fate line that forks at its base, with prongs toward Venus and Luna.](/images/diagrams/fate-line-forked.svg "A fork at the base of the fate line sends prongs toward Venus and Luna.")
 
 Benham described a fate line starting from Luna as indicating a career or life direction influenced by the public, by imagination, or by the support and responses of others — a path shaped in some degree by external reception rather than purely internal drive. See [the Mount of Luna article](/blog/beginner/mount-of-luna/) for the fuller picture of what Luna contributes to a reading.
 

@@ -12,6 +12,8 @@ The Mount of Mercury sits at the base of the little finger on the percussion sid
 
 The Mount of Mercury occupies the fleshy elevation at the base of the little finger — the fourth finger from the thumb, called the Mercury finger in the classical tradition. To locate it, press gently at the junction of the little finger and the palm; the mount is the padded rise in that zone. It is bordered on one side by the Apollo mount (below the ring finger) and on the other by the outer edge of the percussion.
 
+![Palm diagram with the Mount of Mercury highlighted beneath the little finger.](/images/lessons/mounts/mount-of-mercury.svg "The Mount of Mercury sits directly beneath the little finger.")
+
 In a well-marked hand, the upper mounts form a continuous ridge across the top of the palm, with Mercury at the outermost position.
 
 The little finger — the Mercury finger — is read alongside the mount. Its relative length, angle of set, and straightness all contribute to the Mercury reading, and finger and mount are understood to express the same essential qualities from different structural positions.
@@ -29,6 +31,8 @@ The consistent thread is practical intelligence in motion: quick, versatile, con
 ## The Mercury Line
 
 The Mercury Line — also called the Health Line or Hepatica — travels from the lower portion of the palm upward toward the base of the Mercury mount, where it terminates. Its starting point varies considerably from hand to hand: it may rise near the wrist, from the mount of Luna, or from the middle of the palm. What remains structurally constant is its destination.
+
+![Palm diagram with the Mercury line lit, running from the base of the palm toward the little finger.](/images/diagrams/mercury-line.svg "The Mercury line runs from the base of the palm toward the little finger.")
 
 The relationship between the Mercury Line and its mount differs meaningfully from the Sun Line's relationship to Apollo — where a clear Sun Line reinforces the Apollo reading positively, the Mercury Line is more ambiguous. Its absence is the one reading the classical authors treat as unambiguously positive, though it is Cheiro who states this directly: "it is an excellent sign to be without this line altogether," he wrote. "Its absence denotes an extremely robust, strong constitution, and a healthy state of the nervous system." Benham, by contrast, reads the character of a line that is present: a deep, well-marked Mercury Line indicates to him "a good digestion, a healthy action of the liver, good vitality, strong constitution, a clear brain and good memory."
 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1080" width="1000" height="1080" role="img" aria-labelledby="t">
+<title id="t">Palm diagram with the marriage or relationship lines lit: short horizontal lines on the outer edge of the palm between the heart line and the little finger.</title>
+<defs>
+  <radialGradient id="haze" cx="50%" cy="48%" r="60%">
+    <stop offset="0%" stop-color="#3a2470" stop-opacity="0.55"/>
+    <stop offset="55%" stop-color="#1a1030" stop-opacity="0.35"/>
+    <stop offset="100%" stop-color="#07050d" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#17122a"/>
+    <stop offset="100%" stop-color="#0d0a1a"/>
+  </linearGradient>
+  <radialGradient id="mountGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#e0c07e" stop-opacity="0.55"/>
+    <stop offset="60%" stop-color="#c9a96e" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="violetGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#8a5cf0" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#8a5cf0" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  <filter id="lineGlow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="5"/></filter>
+  <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+    <line x1="0" y1="0" x2="0" y2="7" stroke="#c9a96e" stroke-width="0.5" opacity="0.28"/>
+  </pattern>
+  <pattern id="hatch2" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-52)">
+    <line x1="0" y1="0" x2="0" y2="9" stroke="#c9a96e" stroke-width="0.4" opacity="0.16"/>
+  </pattern>
+  <pattern id="grille" width="8" height="8" patternUnits="userSpaceOnUse">
+    <path d="M 0 4 H 8 M 4 0 V 8" stroke="#e0c07e" stroke-width="0.9" opacity="0.8"/>
+  </pattern>
+  <clipPath id="hand"><path d="M 335 1010 C 300 900 290 800 300 690 C 255 655 190 585 162 505 C 146 466 178 432 218 448 C 262 478 315 525 345 562 C 356 545 360 500 365 440 C 360 350 360 250 370 175 C 375 140 445 140 452 175 C 458 260 458 350 462 430 C 466 430 466 430 466 430 C 468 330 470 210 478 125 C 484 90 555 90 560 125 C 566 210 566 330 566 430 C 570 430 570 430 570 430 C 572 340 574 240 580 165 C 585 130 655 130 660 165 C 665 240 665 340 664 435 C 668 445 668 445 668 445 C 672 380 676 320 682 270 C 686 240 742 240 748 275 C 754 340 752 400 740 470 C 720 600 700 750 640 880 C 620 940 610 980 605 1010 C 520 1032 420 1032 335 1010 Z"/></clipPath>
+</defs>
+<rect width="1000" height="1080" fill="#07050d"/>
+<rect width="1000" height="1080" fill="url(#haze)"/>
+<g stroke="#c9a96e" stroke-width="1" opacity="0.45" fill="none">
+  <path d="M 28 46 V 28 H 46"/><path d="M 972 46 V 28 H 954"/>
+  <path d="M 28 1034 V 1052 H 46"/><path d="M 972 1034 V 1052 H 954"/>
+</g>
+<g>
+  <path transform="translate(120 148) scale(1)" d="M 0 -8 l 2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5z" fill="#c9a96e" opacity="0.8"/><path transform="translate(790 208) scale(0.75)" d="M 0 -8 l 2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5z" fill="#c9a96e" opacity="0.6"/><path transform="translate(150 960) scale(0.75)" d="M 0 -8 l 2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5z" fill="#c9a96e" opacity="0.5"/>
+  <g fill="#c9a96e" opacity="0.7"><circle cx="820" cy="1000" r="1.5"/><circle cx="90" cy="320" r="1.2"/><circle cx="840" cy="120" r="1.2"/></g>
+</g>
+<g transform="translate(40 0) scale(1)"><g class="hand">
+<ellipse cx="500" cy="690" rx="330" ry="300" fill="url(#violetGlow)" filter="url(#blur)" opacity="0.9"/>
+<path d="M 335 1010 C 300 900 290 800 300 690 C 255 655 190 585 162 505 C 146 466 178 432 218 448 C 262 478 315 525 345 562 C 356 545 360 500 365 440 C 360 350 360 250 370 175 C 375 140 445 140 452 175 C 458 260 458 350 462 430 C 466 430 466 430 466 430 C 468 330 470 210 478 125 C 484 90 555 90 560 125 C 566 210 566 330 566 430 C 570 430 570 430 570 430 C 572 340 574 240 580 165 C 585 130 655 130 660 165 C 665 240 665 340 664 435 C 668 445 668 445 668 445 C 672 380 676 320 682 270 C 686 240 742 240 748 275 C 754 340 752 400 740 470 C 720 600 700 750 640 880 C 620 940 610 980 605 1010 C 520 1032 420 1032 335 1010 Z" fill="url(#skin)"/>
+<g clip-path="url(#hand)"><rect width="1000" height="1080" fill="url(#hatch)"/><rect width="1000" height="1080" fill="url(#hatch2)"/></g>
+<path d="M 335 1010 C 300 900 290 800 300 690 C 255 655 190 585 162 505 C 146 466 178 432 218 448 C 262 478 315 525 345 562 C 356 545 360 500 365 440 C 360 350 360 250 370 175 C 375 140 445 140 452 175 C 458 260 458 350 462 430 C 466 430 466 430 466 430 C 468 330 470 210 478 125 C 484 90 555 90 560 125 C 566 210 566 330 566 430 C 570 430 570 430 570 430 C 572 340 574 240 580 165 C 585 130 655 130 660 165 C 665 240 665 340 664 435 C 668 445 668 445 668 445 C 672 380 676 320 682 270 C 686 240 742 240 748 275 C 754 340 752 400 740 470 C 720 600 700 750 640 880 C 620 940 610 980 605 1010 C 520 1032 420 1032 335 1010 Z" fill="none" stroke="#c9a96e" stroke-width="2" opacity="0.92"/>
+<path d="M 335 1010 C 300 900 290 800 300 690 C 255 655 190 585 162 505 C 146 466 178 432 218 448 C 262 478 315 525 345 562 C 356 545 360 500 365 440 C 360 350 360 250 370 175 C 375 140 445 140 452 175 C 458 260 458 350 462 430 C 466 430 466 430 466 430 C 468 330 470 210 478 125 C 484 90 555 90 560 125 C 566 210 566 330 566 430 C 570 430 570 430 570 430 C 572 340 574 240 580 165 C 585 130 655 130 660 165 C 665 240 665 340 664 435 C 668 445 668 445 668 445 C 672 380 676 320 682 270 C 686 240 742 240 748 275 C 754 340 752 400 740 470 C 720 600 700 750 640 880 C 620 940 610 980 605 1010 C 520 1032 420 1032 335 1010 Z" fill="none" stroke="#e0c07e" stroke-width="6" opacity="0.12" filter="url(#softBlur)"/>
+<g fill="none" stroke="#c9a96e" stroke-width="1.2" opacity="0.5" stroke-linecap="round">
+  <path d="M 372 300 C 395 292 430 292 455 300"/>
+  <path d="M 368 220 C 392 212 428 212 452 220"/>
+  <path d="M 470 255 C 500 247 540 247 566 255"/>
+  <path d="M 474 170 C 504 162 542 162 562 170"/>
+  <path d="M 574 290 C 600 282 640 282 664 290"/>
+  <path d="M 578 210 C 604 202 642 202 660 210"/>
+  <path d="M 678 380 C 700 372 730 372 748 380"/>
+  <path d="M 684 320 C 704 312 732 312 748 320"/>
+  <path d="M 232 478 C 258 486 290 508 322 538"/>
+  <path d="M 350 1000 C 470 1010 520 1010 595 1000"/>
+</g>
+<g fill="none" stroke="#c9a96e" stroke-width="1.6" stroke-linecap="round" opacity="0.42">
+  <path d="M 352 535 C 330 650 330 800 430 985"/>
+  <path d="M 735 545 C 640 562 520 556 425 500"/>
+  <path d="M 355 560 C 450 600 570 650 665 690"/>
+  <path d="M 520 980 C 525 800 518 620 512 475" stroke-dasharray="1 5" opacity="0.8"/>
+</g>
+</g><g fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 748 500 L 706 503" stroke="#f0cf86" stroke-width="9" opacity="0.35" filter="url(#lineGlow)"/>
+  <path d="M 748 500 L 706 503" stroke="#f0cf86" stroke-width="3" opacity="1"/>
+</g><g fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M 750 522 L 716 524" stroke="#f0cf86" stroke-width="7.199999999999999" opacity="0.35" filter="url(#lineGlow)"/>
+  <path d="M 750 522 L 716 524" stroke="#f0cf86" stroke-width="2.4" opacity="1"/>
+</g><circle cx="736" cy="512" r="60" fill="none" stroke="#e0c07e" stroke-width="1" stroke-dasharray="3 5" opacity="0.7"/></g>
+<g>
+<g opacity="1">
+  <path d="M 758 420 L 718 420 L 790 470" fill="none" stroke="#e0c07e" stroke-width="1" stroke-dasharray="2 4" opacity="0.9"/>
+  <circle cx="790" cy="470" r="2.6" fill="#f0cf86"/>
+</g>
+<text x="772" y="415.6" text-anchor="start" font-family="Cinzel, 'Times New Roman', Georgia, serif" font-size="19" letter-spacing="2.5" fill="#f0cf86" opacity="1"><tspan x="772" dy="0">MARRIAGE</tspan><tspan x="772" dy="22.8">LINES</tspan></text>
+<text x="772" y="458.35" text-anchor="start" font-family="Cinzel, 'Times New Roman', Georgia, serif" font-size="13" letter-spacing="1.5" fill="#8c84a8" opacity="0.9" font-style="italic"><tspan x="772" dy="0">read on the edge</tspan><tspan x="772" dy="15.6">of the hand</tspan></text>
+</g>
+<g>
+<g opacity="0.85">
+  <path d="M 758 600 L 718 600 L 776 545" fill="none" stroke="#8c84a8" stroke-width="1" stroke-dasharray="2 4" opacity="0.9"/>
+  <circle cx="776" cy="545" r="2.6" fill="#8c84a8"/>
+</g>
+<text x="772" y="607" text-anchor="start" font-family="Cinzel, 'Times New Roman', Georgia, serif" font-size="16" letter-spacing="2.5" fill="#8c84a8" opacity="1"><tspan x="772" dy="0">HEART LINE</tspan></text>
+<text x="772" y="623.8" text-anchor="start" font-family="Cinzel, 'Times New Roman', Georgia, serif" font-size="13" letter-spacing="1.5" fill="#8c84a8" opacity="0.9" font-style="italic"><tspan x="772" dy="0">they sit just above it</tspan></text>
+</g>
+<g>
+<g opacity="0.85">
+  <path d="M 758 250 L 718 250 L 760 300" fill="none" stroke="#8c84a8" stroke-width="1" stroke-dasharray="2 4" opacity="0.9"/>
+  <circle cx="760" cy="300" r="2.6" fill="#8c84a8"/>
+</g>
+<text x="772" y="247.4" text-anchor="start" font-family="Cinzel, 'Times New Roman', Georgia, serif" font-size="16" letter-spacing="2.5" fill="#8c84a8" opacity="1"><tspan x="772" dy="0">LITTLE</tspan><tspan x="772" dy="19.2">FINGER</tspan></text>
+
+</g>
+</svg>

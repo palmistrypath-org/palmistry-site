@@ -28,6 +28,8 @@ It is also worth naming briefly what this article does not address: Indian palmi
 
 The four-element classification rests on two comparative observations, assessed by looking rather than measuring.
 
+![Four schematic hands compare the Earth, Air, Fire, and Water hand shapes by palm proportion and finger length.](/images/diagrams/hand-shapes.svg "Two measurements sort hands into four types: is the palm square or rectangular, and are the fingers short or long against it?")
+
 **Palm proportion.** Is the palm roughly square — approximately as wide as it is long — or is it rectangular, meaning noticeably longer than it is wide? Palm length is measured from the wrist crease to the base of the fingers, not to the fingertips. Width is measured at the widest point of the palm.
 
 **Finger length relative to the palm.** Are the fingers short in proportion to the palm, or long? The practical test most writers use: compare the length of the middle finger to the palm length measured above. If the middle finger is roughly equal in length to the palm, the fingers are considered long. If the middle finger is noticeably shorter, they are considered short. It is the proportion that matters, not the absolute measurement.
@@ -84,6 +86,8 @@ The challenges associated with water hands include susceptibility to overwhelm, 
 ## Shape in context
 
 The classification is a starting point, not a complete reading.
+
+![Palm diagram naming the regions a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.](/images/diagrams/hand-map.svg "The territory a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.")
 
 What shape establishes is a baseline. An earth hand sets the context for reading each line as belonging to a temperament grounded in physical reality and practical orientation. A water hand sets the context for lines appearing on a surface already associated with sensitivity and imaginative depth. The same heart line on both hands begins from different premises, and the rest of the hand either confirms or complicates what the shape suggests.
 

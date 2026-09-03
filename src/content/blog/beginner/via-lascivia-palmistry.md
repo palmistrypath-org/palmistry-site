@@ -14,6 +14,8 @@ The **Via Lascivia** is a minor line described by William Benham in *The Laws of
 
 Benham describes the Via Lascivia as running a slanting course across the lower outer palm: it rises from the inside of the base of the Mount of Moon (also called the Mount of Luna) and travels to the lower part of the upper Mount of Moon, near the percussion edge of the hand. That places it in the same general territory as the [Mount of Luna](/blog/beginner/mount-of-luna) and near one of the starting points the [Mercury line](/blog/beginner/mercury-line) article describes, which is part of why Benham groups the two lines together.
 
+![Palm diagram with the Via Lascivia lit, a short line low on the Mount of Luna running roughly parallel to the Mercury line.](/images/diagrams/via-lascivia.svg "The Via Lascivia sits low on the Mount of Luna, roughly parallel to the Mercury line.")
+
 Elsewhere in his book, Benham says he regards the Via Lascivia more as a chance line than as one of the fixed minor lines — a distinction specific to how he classifies the marking, not a modern prevalence claim about hands today.
 
 ## What the historical name meant
@@ -33,6 +35,8 @@ Palmistry Path does not treat any palm marking as medical evidence, and the Via 
 ## The Via Lascivia in context
 
 Because Benham groups the Via Lascivia with the Mercury line, it's worth being precise about what that relationship does and doesn't mean. The two lines share a general region of the palm and, in the older reading Benham describes, were sometimes read together. That is not the same as saying the Via Lascivia carries the Mercury line's own traditional associations — health and vitality on one hand, business acumen on the other, as covered in the [Mercury line article](/blog/beginner/mercury-line). Benham's text on the Via Lascivia doesn't extend those specific readings to this line, and this article doesn't invent a combined reading beyond what he actually states.
+
+![Palm diagram with the Mercury line lit, running from the base of the palm toward the little finger.](/images/diagrams/mercury-line.svg "The Mercury line runs from the base of the palm toward the little finger.")
 
 ## Frequently asked questions
 

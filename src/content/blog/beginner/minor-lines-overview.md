@@ -16,6 +16,8 @@ This article is an orientation, not a deep dive. Four minor lines already have t
 
 The four major lines — life, head, heart, and fate — appear in some recognisable form on nearly every hand, which is why they form the primary structure of a reading. [How to Read a Palm](/blog/beginner/how-to-read-a-palm) covers the sequence: hand shape, then mounts, then the major lines, then everything else.
 
+![Palm diagram locating the sun line, Mercury line, Girdle of Venus, marriage lines, Ring of Solomon, and Via Lascivia against the major lines.](/images/diagrams/minor-lines.svg "The principal minor lines in their classical positions, with the major lines for orientation.")
+
 The minor lines sit in that "everything else." Individually, each has its own traditional location and its own body of interpretation in the classical literature — the Sun Line and Mercury Line receive nearly as much attention as some major lines in authors like Cheiro and Benham. But collectively, they share two traits that set them apart from the major four: they are considerably more variable in whether they appear at all, and they generally refine or add detail to a reading rather than establishing its foundation. A hand's major lines and mounts set the primary structure; the minor lines, where present, add a further layer of nuance to that structure.
 
 ## Why absence is normal
@@ -36,11 +38,15 @@ For a beginner, the practical approach is to observe the minor lines without exp
 
 Running vertically toward the base of the ring finger, the Sun Line — also called the Apollo Line — is the minor line most consistently associated with genuine good fortune in the classical literature. Cheiro and Benham both connect a clear, well-marked Sun Line to recognition, fulfilment, and a kind of outer success — not necessarily fame, but the sense that one's work or contribution is seen and valued.
 
+![Palm diagram with the sun line lit, rising up the palm toward the ring finger.](/images/diagrams/sun-line.svg "The sun line rises toward the ring finger and the Mount of Apollo.")
+
 The full [Sun Line article](/blog/beginner/sun-line) covers where to find it, what its different starting points mean, and — because this is one of the more debated points in the classical sources — what a genuinely absent Sun Line is traditionally read to mean.
 
 ## The Mercury Line (Health Line)
 
 The Mercury Line runs diagonally across the lower and middle palm toward the Mount of Mercury, below the little finger. It carries a dual traditional association — constitutional and nervous health on one side, business acumen and communicative sharpness on the other — and it is the one minor line, in Cheiro's reading, where a clean absence is explicitly treated as a favourable sign rather than a gap in the hand.
+
+![Palm diagram with the Mercury line lit, running from the base of the palm toward the little finger.](/images/diagrams/mercury-line.svg "The Mercury line runs from the base of the palm toward the little finger.")
 
 The full [Mercury Line article](/blog/beginner/mercury-line) covers both traditional associations in depth, what its different starting points and forms — clear, faint, chained, broken — indicate, and why its presence should not be read as a health warning.
 
@@ -48,11 +54,15 @@ The full [Mercury Line article](/blog/beginner/mercury-line) covers both traditi
 
 On the percussion edge of the hand, just below the little finger, one to three short horizontal lines are traditionally associated with the significant emotional bonds in a person's life. The terminology has shifted over the decades: Cheiro used the term marriage line and treated it as a way to estimate the approximate age of marriage, while Benham and Gettings moved toward describing the same lines in terms of affection rather than marriage — a shift that better reflects how the contemporary tradition reads them. They are not a headcount of relationships, and they cannot predict who a person will marry or when.
 
+![Palm diagram with the marriage or relationship lines lit: short horizontal lines on the outer edge of the palm between the heart line and the little finger.](/images/diagrams/marriage-lines.svg "Marriage lines are read on the edge of the hand, between the heart line and the little finger.")
+
 The full [marriage and relationship lines article](/blog/beginner/marriage-relationship-lines) covers position, length, and the specific quality markers — forks, islands, chains, and breaks — that the classical sources attach to this feature.
 
 ## The Girdle of Venus
 
 Arcing across the upper palm, just above the heart line and below the base of the fingers, the Girdle of Venus is a Western-tradition marking traditionally associated with heightened emotional and sensory sensitivity. It appears on some hands as a clean, continuous curve and on others — more commonly — as a fragmented trail of short segments. Earlier writers, including Cheiro, associated it with excess and instability; later sources including Benham, Gettings, and Fincham read the same feature as sensitivity and attunement rather than a flaw.
+
+![Two palm diagrams compare a complete Girdle of Venus, an unbroken arc above the heart line, with a fragmented girdle made of short pieces.](/images/diagrams/girdle-of-venus.svg "A complete Girdle of Venus is one arc above the heart line; a fragmented one is made of short pieces.")
 
 The full [Girdle of Venus article](/blog/beginner/girdle-of-venus) covers how to distinguish it from similar-looking features, what a complete versus fragmented arc traditionally suggests, and how it interacts with the heart line and Apollo mount.
 

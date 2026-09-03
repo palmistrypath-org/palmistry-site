@@ -1,4 +1,5 @@
 ---
+import BrandMark from './BrandMark.astro';
 /**
  * Practice — marks the hands-on exercise a lesson ends with.
  *
@@ -22,12 +23,7 @@ const headingId = `practice-${Math.random().toString(36).slice(2, 9)}`;
 ---
 
 <section class="practice reveal" aria-labelledby={headingId}>
-	<svg class="practice-mark" viewBox="0 0 13 16" aria-hidden="true" fill="none">
-		<ellipse cx="6.5" cy="9" rx="5" ry="6.5" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
-		<path d="M 10 6 C 7.5 5 4 5 2.5 6.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.9"/>
-		<path d="M 2.5 9 C 5 8 8.5 8 10.5 9.5" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.72"/>
-		<path d="M 7 2.5 C 6.5 4 6 6 6 9 C 6 11.5 6.5 13.5 7 15.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
-	</svg>
+	<div class="practice-mark"><BrandMark size={30} star={false} /></div>
 	<h2 id={headingId} class="practice-heading">{title}</h2>
 	<div class="practice-body">
 		<slot />
@@ -59,10 +55,9 @@ const headingId = `practice-${Math.random().toString(36).slice(2, 9)}`;
 	}
 	.practice-mark {
 		position: absolute;
-		top: 1.5em;
+		top: 1.4em;
 		right: 1.5em;
-		width: 22px;
-		height: 28px;
+		line-height: 0;
 		color: var(--accent);
 		filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.5));
 		opacity: 0.85;

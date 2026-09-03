@@ -2,7 +2,10 @@
 
 Status: INACTIVE
 
-## Last completed (2026-09-02)
+## Last completed (2026-09-03)
+Visual refinement pass on `feat/visual-golden-slice`: `BrandMark` replaces the circular emblem; generated palm atlas (46 plates) plus in-flow plates in every lesson and article; `PageOpening` on all secondary pages. Not merged; owner review pending. See `docs/visual-system.md` and the 2026-09-03 changelog entry. Exact next action if approved: merge, then Open Graph images and Quick Start Guide 2.0 per the checklist.
+
+## Previously completed (2026-09-02)
 Visual golden slice on branch `feat/visual-golden-slice` — dark black/gold/purple system across homepage, Learn hub, module index, lesson template, guide page, blog layout, header/footer, plus generated mount diagram plates. Not merged; owner review pending. See `docs/visual-system.md` and the 2026-09-02 changelog entry. Exact next action if approved: propagate per the checklist in `docs/visual-system.md` (about, glossary, blog index, search, 404, legal pages), then Quick Start Guide 2.0.
 
 ## Previously completed

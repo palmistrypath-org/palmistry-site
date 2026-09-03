@@ -12,6 +12,8 @@ The Mount of Luna occupies the lower outer palm — the broad, padded rise on th
 
 The Mount of Luna is the large fleshy elevation on the outer lower palm, on the percussion side — the edge of the hand below the little finger, extending down toward the wrist and the heel of the hand. To locate it, turn the hand palm upward and follow the outer edge inward from the wrist; the mount is the padded rise that fills the lower outer quadrant of the palm.
 
+![Palm diagram with the Mount of Luna highlighted on the outer base of the palm.](/images/lessons/mounts/mount-of-luna.svg "The Mount of Luna: the outer base of the palm, opposite Venus.")
+
 Its upper boundary falls roughly where the head line ends in many hands — and in hands where the head line slopes downward toward it, the line travels directly across the palm toward Luna's upper margin. Below the head line, on the percussion side, lies Luna's full extent. The mount of Neptune, a smaller elevation at the very base of the palm just above the wrist, is sometimes distinguished from Luna in more detailed systems, but most Western classical sources treat this whole lower outer zone as Lunar territory.
 
 ## Traditional associations
@@ -27,6 +29,8 @@ The consistent thread across these sources is the interior life in its most expa
 ## The head line and Luna
 
 One of the most widely discussed formations in Western palmistry is a head line that curves or slopes downward across the palm toward the Mount of Luna. When it does, the degree of that slope is traditionally read as indicating how far the imagination shapes the person's thinking.
+
+![Two palm diagrams compare a straight head line crossing the palm with a sloping head line that curves down toward the Mount of Luna.](/images/diagrams/head-line-path.svg "A straight head line crosses toward the percussion; a sloping one curves down toward Luna.")
 
 Cheiro, Benham, and Gettings all treat this configuration as structurally important. A gently sloping head line — one that ends in Luna's upper zone — is traditionally associated with imaginative and creative intelligence: a mind that draws on intuition and imagery, that thinks in narratives and associations as much as in logical sequences. The steeper the slope, the more Luna's influence colours the head line reading. When the line descends sharply into Luna's lower territory, the tradition reads this as imagination that significantly shapes — and sometimes outpaces — the practical and analytical faculties.
 

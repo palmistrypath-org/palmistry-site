@@ -14,6 +14,8 @@ This article assumes you have already located a fate line on your palm and want 
 
 Hold your active hand palm-up and find the fate line: a roughly vertical line running up the centre of the palm toward the base of the middle finger, where it points at the Mount of Saturn. Rather than tracing the line upward, look instead at its lowest visible point — the place where it first appears. That point is the starting point, and it can fall in several different regions of the lower palm.
 
+![Palm diagram with the fate line lit, its start and end marked.](/images/diagrams/fate-line.svg "The fate line, when present, rises up the centre of the palm toward the middle finger.")
+
 Not every hand has a fate line, and a significant number of people have none at all. That is its own reading and is covered in the article linked above — this piece is only for hands where a fate line, or a section of one, is visible.
 
 ## Why the starting point matters
@@ -23,6 +25,8 @@ The starting point is read as an indication of when and how a sense of direction
 ## The four starting points
 
 ### From the wrist or the base of the palm
+
+![Palm diagram showing four fate-line starting points: the wrist, the Mount of Luna, the life line, and the middle of the palm.](/images/diagrams/fate-line-origins.svg "Four places a fate line can begin: the wrist, the Mount of Luna, the life line, or the middle of the palm.")
 
 When the fate line rises from low on the palm, at or near the wrist, it is traditionally associated with a sense of direction or vocation that established itself early in life. Cheiro read a wrist-originating fate line as belonging to someone whose path is long and continuous — a consistent thread that runs from youth onward rather than one that is picked up partway through life.
 

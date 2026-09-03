@@ -16,11 +16,15 @@ This article is specifically about breaks — gaps and interruptions in the hear
 
 The heart line is the topmost of the three major lines crossing the palm. It runs horizontally across the upper palm, typically beginning under the little finger and travelling toward the index or middle finger side of the hand — though starting position, length, and curve vary considerably between individuals and are themselves significant in a full reading.
 
+![Palm diagram with the heart line lit, its start and end marked.](/images/diagrams/heart-line.svg "The heart line runs from the outer edge of the palm toward the index and middle fingers.")
+
 If you are new to locating the lines at all, [How to Read a Palm](/blog/beginner/how-to-read-a-palm/) and the [overview of major lines](/blog/beginner/major-lines-overview/) are useful starting points before working with any individual feature in detail.
 
 ## What counts as a break
 
 Before any interpretation is possible, you need to identify what kind of interruption you are actually looking at.
+
+![Three palm diagrams compare a clear heart line, a chained heart line made of small linked loops, and a broken heart line with a gap.](/images/diagrams/heart-line-quality.svg "The same heart line as clear, chained, and broken.")
 
 **A true gap.** The line stops — there is a clear space where no line is present — and then restarts. This is the break the tradition specifically addresses when discussing emotional disruption. Its size, its location along the line, whether the line resumes clearly, and what accompanies it all shape the reading.
 
@@ -59,6 +63,8 @@ The break is never the only thing to observe. Work through these questions befor
 ## A repaired break
 
 One reading that is worth drawing out specifically: a break where the line clearly restarts and strengthens after the gap. In the tradition, this is often read positively — the disruption has passed, a new phase of emotional life has begun, and the quality of the line after the break is the more informative reading. Benham and West both indicate that the resumption of a line matters: a clear, deep continuation after a break shifts the emphasis from the disruption to what follows it.
+
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
 
 A repaired break — where a fine sister line bridges the gap or runs alongside it — softens the reading further. The presence of a support line suggests the transition was not without resource. The break is still noted, but it is not the whole story.
 
