@@ -1,10 +1,7 @@
-# Mounts lesson images — TEMPORARY
+# Mounts lesson diagrams
 
-The `.svg` files in this directory are **temporary schematic placeholders**, not final designed artwork.
+These `.svg` files are **generated**. Do not edit them by hand.
 
-They were generated programmatically in May 2026 to give the mounts lessons a minimal visual while designed diagrams are being produced. They use the correct color palette but are not illustrated hand diagrams — only labeled ellipses.
+Source: `scripts/generate-mount-diagrams.mjs` (run `node scripts/generate-mount-diagrams.mjs`). One shared wireframe hand in the site's black/gold/purple language; the highlighted mount gets topographic gold rings and a violet bloom, the other regions stay as dotted outlines, and labels use leader lines. Each file is referenced by the matching lesson in `src/content/lessons/mounts/` through `<Figure>`.
 
-**Do not use these as reference for visual style.**  
-**Replace each `.svg` with a designed `.webp` image before the mounts module is considered complete.**
-
-See `docs/visual-assets-roadmap.md` for the full replacement plan and asset requirements.
+See `docs/visual-system.md` for the visual language and `docs/mount-diagram-creative-briefs.md` for the original per-diagram content requirements.

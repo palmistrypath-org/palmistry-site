@@ -1,6 +1,6 @@
 # Visual Assets Roadmap — Palmistry Path
 
-*Last updated: 2026-05-27.*
+*Last updated: 2026-09-02.*
 
 This document tracks the state of all lesson diagram assets and what designed replacements are needed.
 
@@ -11,7 +11,7 @@ This document tracks the state of all lesson diagram assets and what designed re
 | Module | Asset state | Notes |
 |---|---|---|
 | Lines | ✅ Final designed `.webp` | Committed under `public/images/lessons/lines/` |
-| Mounts | ⚠️ Temporary schematic SVGs | See below |
+| Mounts | ✅ Generated plate series (SVG) | `scripts/generate-mount-diagrams.mjs`; wired into all eight lessons via `<Figure>` on 2026-09-02 (branch `feat/visual-golden-slice`). The section below describes the superseded placeholder state. |
 | Foundations | — No images | Figure blocks removed; no placeholders |
 | Advanced | — No images | Figure blocks removed; no placeholders |
 

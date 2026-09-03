@@ -24,7 +24,7 @@ const {
 const headingId = `checkpoint-${Math.random().toString(36).slice(2, 9)}`;
 ---
 
-<section class="checkpoint" aria-labelledby={headingId}>
+<section class="checkpoint reveal" aria-labelledby={headingId}>
 	<h2 id={headingId} class="checkpoint-heading">{title}</h2>
 	<p class="checkpoint-intro">{intro}</p>
 	<ol class="checkpoint-list">
@@ -34,36 +34,56 @@ const headingId = `checkpoint-${Math.random().toString(36).slice(2, 9)}`;
 
 <style>
 	.checkpoint {
+		position: relative;
 		margin: 3em 0 2em;
-		padding: 1.75em;
-		border: 1px solid rgba(178, 170, 203, 0.3);
-		background-color: rgba(178, 170, 203, 0.05);
+		padding: 1.9em 1.9em 1.6em;
+		border: 1px solid rgba(122, 72, 201, 0.4);
+		border-radius: 4px;
+		background:
+			radial-gradient(ellipse 70% 80% at 100% 0%, rgba(122, 72, 201, 0.16), transparent 70%),
+			var(--color-bg-elev);
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 60px rgba(122, 72, 201, 0.1);
 	}
-
+	.checkpoint::before {
+		content: '';
+		position: absolute;
+		top: -1px;
+		left: 12%;
+		right: 12%;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, rgba(160, 120, 230, 0.9), transparent);
+	}
 	.checkpoint-heading {
-		font-size: 1em;
-		letter-spacing: 0.12em;
+		font-size: 0.8em;
+		letter-spacing: 0.26em;
 		text-transform: uppercase;
 		color: var(--color-heading);
 		margin: 0 0 0.6em 0;
+		padding-top: 0;
+		text-shadow: 0 0 20px rgba(122, 72, 201, 0.5);
 	}
-
+	.checkpoint-heading::before {
+		display: none;
+	}
 	.checkpoint-intro {
-		font-size: 0.9em;
+		font-size: 0.88em;
 		color: var(--color-text-muted);
 		font-style: italic;
 		margin: 0 0 1.25em 0;
+		line-height: 1.7;
 	}
-
 	.checkpoint-list {
 		margin: 0;
 		padding-left: 1.4em;
 	}
-
 	.checkpoint-list :global(> li) {
 		margin-bottom: 1.25em;
 	}
-
+	.checkpoint-list :global(> li::marker) {
+		color: var(--accent);
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.85em;
+	}
 	.checkpoint-list :global(> li:last-child) {
 		margin-bottom: 0;
 	}

@@ -10,6 +10,24 @@ const MODULE_ART: Record<string, string> = {
 	mounts: '/images/home/path-mounts.webp',
 	advanced: '/images/home/path-advanced.webp',
 };
+
+const STARTERS = [
+	{ href: '/blog/beginner/what-do-palm-lines-mean', label: 'What do palm lines mean?' },
+	{ href: '/blog/beginner/which-hand-to-read-palmistry', label: 'Which hand to read' },
+	{ href: '/blog/beginner/how-to-read-a-palm', label: 'How to read a palm' },
+	{ href: '/blog/beginner/palmistry-chart-for-beginners', label: 'Palmistry chart for beginners' },
+	{ href: '/blog/beginner/hand-shapes', label: 'Hand shapes in palmistry' },
+	{ href: '/blog/beginner/palmistry-vs-astrology', label: 'Palmistry vs. astrology' },
+];
+
+const HUBS = [
+	{ href: '/blog/beginner/major-lines-overview/', label: 'Lines' },
+	{ href: '/blog/beginner/hand-shapes/', label: 'Hand Shape' },
+	{ href: '/blog/beginner/mounts-overview/', label: 'Mounts' },
+	{ href: '/blog/beginner/western-palmistry-basics/', label: 'Traditions' },
+	{ href: '/blog/beginner/crosses-stars-palmistry/', label: 'Markings' },
+	{ href: '/blog/beginner/marriage-relationship-lines/', label: 'Relationships' },
+];
 ---
 
 <!doctype html>
@@ -19,86 +37,106 @@ const MODULE_ART: Record<string, string> = {
 			title={`Learn Palmistry — ${SITE_TITLE}`}
 			description="A structured, grounded guide to palm reading across Indian, Chinese, and Western traditions. Learn the lines, mounts, and hand shapes without fortune-telling claims."
 		/>
+		<link rel="preload" as="image" href="/images/home/hero-emergence.webp" media="(min-width: 900px)" />
 	</head>
 	<body>
 		<Header />
 		<main id="main-content" tabindex="-1">
-			<!-- ── Hero ──────────────────────────────────────────────── -->
-			<section class="hero">
-				<div class="hero-image-wrap">
-					<img
-						src="/images/home/hero-palm-map.webp"
-						alt="Illustrated palm map with highlighted palmistry lines and mount regions"
-						class="hero-image"
-						width="1672"
-						height="941"
-						loading="eager"
-						decoding="async"
-						fetchpriority="high"
-					/>
+			<!-- ── Act I · The hand emerges from darkness ─────────────── -->
+			<section class="hero veil-bottom">
+				<div class="hero-art" aria-hidden="true">
+					<picture>
+						<source srcset="/images/home/hero-emergence.webp" media="(min-width: 900px)" />
+						<img
+							src="/images/home/hero-emergence-md.webp"
+							alt=""
+							width="1100"
+							height="467"
+							loading="eager"
+							decoding="async"
+							fetchpriority="high"
+						/>
+					</picture>
+					<div class="hero-shade"></div>
 				</div>
-				<h1>Learn palmistry as a structured practice</h1>
-				<p class="hero-sub">
-					A grounded guide to the lines, mounts, hand shapes, and traditions of palm reading —
-					without fortune-telling claims.
-				</p>
-				<div class="hero-ctas">
-					<a href="/learn/foundations/01-what-palmistry-is" class="btn-primary"
-						data-track="cta" data-track-location="homepage-hero" data-track-target="learn"
-						>Start the Beginner Path</a
-					>
-					<a href="/guide" class="btn-secondary"
-						data-track="cta" data-track-location="homepage-hero" data-track-target="guide"
-						>Get the Free Starter Guide</a>
+
+				<div class="hero-copy">
+					<p class="eyebrow reveal reveal--slow" style="--reveal-delay: 120ms">An educational path through palmistry</p>
+					<h1 class="display reveal reveal--slow" style="--reveal-delay: 320ms">Learn palmistry as a structured practice</h1>
+					<p class="hero-sub reveal reveal--slow" style="--reveal-delay: 620ms">
+						A grounded guide to the lines, mounts, hand shapes, and traditions of palm reading —
+						without fortune-telling claims.
+					</p>
+					<div class="hero-ctas reveal reveal--slow" style="--reveal-delay: 880ms">
+						<a href="/learn/foundations/01-what-palmistry-is" class="btn-primary"
+							data-track="cta" data-track-location="homepage-hero" data-track-target="learn"
+							>Start the Beginner Path</a
+						>
+						<a href="/guide" class="btn-secondary"
+							data-track="cta" data-track-location="homepage-hero" data-track-target="guide"
+							>Get the Free Starter Guide</a>
+					</div>
+				</div>
+
+				<a href="#the-map" class="scroll-cue reveal" style="--reveal-delay: 1500ms" aria-label="Scroll to read more">
+					<span class="scroll-cue-line" aria-hidden="true"></span>
+					<span class="scroll-cue-text">Begin</span>
+				</a>
+			</section>
+
+			<!-- ── Act II · The map ────────────────────────────────────── -->
+			<section class="intro atmosphere atmosphere--centre" id="the-map" aria-labelledby="intro-heading">
+				<div class="intro-inner">
+					<p class="eyebrow reveal">The map in your hand</p>
+					<h2 id="intro-heading" class="intro-heading reveal" style="--reveal-delay: 120ms">
+						The human hand carries a map — a record of structure, temperament, and tendency etched into the palm and fingers.
+					</h2>
+					<p class="intro-body reveal" style="--reveal-delay: 260ms">
+						Palmistry is the study of that map: its lines, mounts, and shapes, and what they have meant
+						to practitioners across centuries and cultures.
+					</p>
+					<p class="intro-body reveal" style="--reveal-delay: 380ms">
+						Content here draws from three major traditions: Indian (Hasta Samudrika Shastra), Chinese
+						palmistry, and Western palmistry as systematised by Cheiro. Where traditions agree, the
+						consensus is noted. Where they diverge, both views are presented honestly rather than one
+						being quietly discarded. No prior knowledge is assumed, and no claims are made about
+						predicting the future.
+					</p>
 				</div>
 			</section>
 
-			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
+			<div class="divider-star reveal reveal--line" aria-hidden="true"></div>
 
-			<!-- ── Intro ──────────────────────────────────────────────── -->
-			<section class="intro">
-				<p>
-					The human hand carries a map — a record of structure, temperament, and tendency etched
-					into the palm and fingers. Palmistry is the study of that map: its lines, mounts, and
-					shapes, and what they have meant to practitioners across centuries and cultures.
-				</p>
-				<p>
-					Content here draws from three major traditions: Indian (Hasta Samudrika Shastra), Chinese
-					palmistry, and Western palmistry as systematised by Cheiro. Where traditions agree, the
-					consensus is noted. Where they diverge, both views are presented honestly rather than one
-					being quietly discarded. No prior knowledge is assumed, and no claims are made about
-					predicting the future.
-				</p>
-			</section>
-
-			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
-
-			<!-- ── How the path works ─────────────────────────────────── -->
-			<section class="path-section">
-				<h2 class="section-eyebrow">How the path works</h2>
+			<!-- ── Act III · The path ──────────────────────────────────── -->
+			<section class="path-section" aria-labelledby="path-heading">
+				<div class="section-head">
+					<p class="eyebrow reveal">How the path works</p>
+					<h2 id="path-heading" class="reveal" style="--reveal-delay: 120ms">Four modules, one hand at a time</h2>
+				</div>
 				<ol class="path-steps" role="list">
 					{
 						MODULES.map((mod, i) => (
-							<li>
-								<a href={`/learn/${mod.slug}`} class="path-step"
+							<li class="reveal" style={`--reveal-delay: ${160 + i * 140}ms`}>
+								<a href={`/learn/${mod.slug}`} class="path-step card"
 									data-track="nav" data-track-location="homepage-path" data-track-target={mod.slug}>
-									{MODULE_ART[mod.slug] && (
-										<img
-											src={MODULE_ART[mod.slug]}
-											alt=""
-											aria-hidden="true"
-											class="path-card-art"
-											width="640"
-											height="640"
-											loading="lazy"
-											decoding="async"
-										/>
-									)}
+									<span class="path-art" aria-hidden="true">
+										{MODULE_ART[mod.slug] && (
+											<img
+												src={MODULE_ART[mod.slug]}
+												alt=""
+												width="640"
+												height="640"
+												loading="lazy"
+												decoding="async"
+											/>
+										)}
+									</span>
 									<span class="step-content">
-										<span class="step-num">{i + 1}</span>
+										<span class="step-num">{String(i + 1).padStart(2, '0')}</span>
 										<span class="step-title">{mod.title}</span>
 										<span class="step-difficulty">{mod.difficulty}</span>
 										<span class="step-desc">{mod.description}</span>
+										<span class="step-go">Enter the module <span aria-hidden="true">→</span></span>
 									</span>
 								</a>
 							</li>
@@ -107,238 +145,267 @@ const MODULE_ART: Record<string, string> = {
 				</ol>
 			</section>
 
-			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
-
-			<!-- ── Trust pillars ──────────────────────────────────────── -->
+			<!-- ── Act IV · What this place is ─────────────────────────── -->
 			<section class="trust-section" aria-label="Site principles">
 				<ul class="trust-pillars" role="list">
-					<li>
-						<span class="pillar-mark" aria-hidden="true">✦</span>
-						<span>No prediction claims</span>
+					<li class="reveal" style="--reveal-delay: 0ms">
+						<svg class="pillar-icon" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="12" /><path d="M8 16h16M16 8v16" /><path d="M11 11l10 10M21 11L11 21" opacity=".45" /></svg>
+						<span class="pillar-title">No prediction claims</span>
+						<span class="pillar-desc">Meanings are traditional associations, never forecasts.</span>
 					</li>
-					<li>
-						<span class="pillar-mark" aria-hidden="true">✦</span>
-						<span>Tradition-aware</span>
+					<li class="reveal" style="--reveal-delay: 120ms">
+						<svg class="pillar-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 5v22M6 11h20" /><path d="M6 11l-3 8a4 4 0 0 0 8 0l-3-8M26 11l-3 8a4 4 0 0 0 8 0l-3-8" /></svg>
+						<span class="pillar-title">Tradition-aware</span>
+						<span class="pillar-desc">Indian, Chinese, and Western sources, compared honestly.</span>
 					</li>
-					<li>
-						<span class="pillar-mark" aria-hidden="true">✦</span>
-						<span>Beginner-friendly</span>
+					<li class="reveal" style="--reveal-delay: 240ms">
+						<svg class="pillar-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 8c4-1 8 0 11 2 3-2 7-3 11-2v17c-4-1-8 0-11 2-3-2-7-3-11-2z" /><path d="M16 10v17" /></svg>
+						<span class="pillar-title">Beginner-friendly</span>
+						<span class="pillar-desc">No prior knowledge assumed. One idea at a time.</span>
 					</li>
-					<li>
-						<span class="pillar-mark" aria-hidden="true">✦</span>
-						<span>Built for careful observation</span>
+					<li class="reveal" style="--reveal-delay: 360ms">
+						<svg class="pillar-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 16s5-8 13-8 13 8 13 8-5 8-13 8S3 16 3 16z" /><circle cx="16" cy="16" r="4" /></svg>
+						<span class="pillar-title">Built for observation</span>
+						<span class="pillar-desc">Look first, interpret second. Your own hand is the textbook.</span>
 					</li>
 				</ul>
 			</section>
 
-			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
+			<div class="divider-star reveal reveal--line" aria-hidden="true"></div>
 
-			<!-- ── Starter articles ───────────────────────────────────── -->
+			<!-- ── Act V · Where to begin ──────────────────────────────── -->
 			<section class="starter-section" aria-labelledby="starter-heading">
-				<h2 class="section-eyebrow" id="starter-heading">A place to start</h2>
+				<div class="section-head">
+					<p class="eyebrow reveal">A place to start</p>
+					<h2 id="starter-heading" class="reveal" style="--reveal-delay: 120ms">Six questions every beginner asks</h2>
+				</div>
 				<ul class="starter-links" role="list">
-					<li><a href="/blog/beginner/what-do-palm-lines-mean" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">What do palm lines mean?</a></li>
-					<li><a href="/blog/beginner/which-hand-to-read-palmistry" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">Which hand to read</a></li>
-					<li><a href="/blog/beginner/how-to-read-a-palm" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">How to read a palm</a></li>
-					<li><a href="/blog/beginner/palmistry-chart-for-beginners" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">Palmistry chart for beginners</a></li>
-					<li><a href="/blog/beginner/hand-shapes" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">Hand shapes in palmistry</a></li>
-					<li><a href="/blog/beginner/palmistry-vs-astrology" class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">Palmistry vs. astrology</a></li>
+					{
+						STARTERS.map((s, i) => (
+							<li class="reveal" style={`--reveal-delay: ${140 + i * 80}ms`}>
+								<a href={s.href} class="starter-link" data-track="link" data-track-location="homepage-starter" data-track-target="blog">
+									<span class="starter-index" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+									<span class="starter-label">{s.label}</span>
+									<span class="starter-arrow" aria-hidden="true">→</span>
+								</a>
+							</li>
+						))
+					}
 				</ul>
+
+				<div class="hubs reveal" style="--reveal-delay: 200ms" aria-labelledby="hubs-heading">
+					<p class="eyebrow hubs-eyebrow" id="hubs-heading">Browse by topic</p>
+					<ul class="hub-list" role="list">
+						{HUBS.map((h) => (
+							<li><a href={h.href} class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">{h.label}</a></li>
+						))}
+					</ul>
+				</div>
 			</section>
 
-			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
-
-			<!-- ── Topic hubs ─────────────────────────────────────────── -->
-			<section class="hubs-section" aria-labelledby="hubs-heading">
-				<h2 class="section-eyebrow" id="hubs-heading">Browse by topic</h2>
-				<ul class="hub-list" role="list">
-					<li><a href="/blog/beginner/major-lines-overview/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Lines</a></li>
-					<li><a href="/blog/beginner/hand-shapes/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Hand Shape</a></li>
-					<li><a href="/blog/beginner/mounts-overview/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Mounts</a></li>
-					<li><a href="/blog/beginner/western-palmistry-basics/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Traditions</a></li>
-					<li><a href="/blog/beginner/crosses-stars-palmistry/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Markings</a></li>
-					<li><a href="/blog/beginner/marriage-relationship-lines/" class="hub-link" data-track="link" data-track-location="homepage-hubs" data-track-target="blog">Relationships</a></li>
-				</ul>
-			</section>
-
-			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
-
-			<!-- ── Guide CTA ───────────────────────────────────────────── -->
-			<section class="guide-cta">
-				<h2 class="guide-cta-heading">Start with the free guide</h2>
-				<p class="guide-cta-sub">
-					The Palmistry Starter Guide covers the major lines, mounts, hand shapes, and includes a
-					printable observation sheet. A useful reference from your first lesson.
-				</p>
-				<a href="/guide" class="btn-primary" data-track="cta" data-track-location="homepage-guide-cta" data-track-target="guide">Get the Starter Guide</a>
+			<!-- ── Act VI · The guide ──────────────────────────────────── -->
+			<section class="guide-cta veil-top" aria-labelledby="guide-heading">
+				<div class="guide-haze" aria-hidden="true"></div>
+				<div class="guide-inner">
+					<div class="guide-book reveal reveal--scale" style="--reveal-delay: 100ms" aria-hidden="true">
+						<div class="book">
+							<img
+								src="/images/guide/quick-start-cover.webp"
+								alt=""
+								width="900"
+								height="1336"
+								loading="lazy"
+								decoding="async"
+							/>
+						</div>
+					</div>
+					<div class="guide-copy">
+						<p class="eyebrow reveal">Free starter guide</p>
+						<h2 id="guide-heading" class="display reveal" style="--reveal-delay: 120ms">Start with the free guide</h2>
+						<p class="guide-cta-sub reveal" style="--reveal-delay: 240ms">
+							The Palmistry Starter Guide covers the major lines, mounts, hand shapes, and includes a
+							printable observation sheet. A useful reference from your first lesson.
+						</p>
+						<div class="reveal" style="--reveal-delay: 360ms">
+							<a href="/guide" class="btn-primary" data-track="cta" data-track-location="homepage-guide-cta" data-track-target="guide">Get the Starter Guide</a>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
 <style>
 	main {
 		width: 100%;
 		max-width: 100%;
 		padding: 0;
 		margin: 0;
+		overflow-x: clip;
+	}
+	.section-head {
+		text-align: center;
+		margin-bottom: 2.6em;
+	}
+	.section-head h2 {
+		font-size: clamp(1.3rem, 3.6vw, 2em);
+		color: var(--color-heading);
 	}
 
-	/* ── Hero ─────────────────────────────────────────────────── */
+	/* ═══ Act I · Hero ═══════════════════════════════════════════════ */
 	.hero {
 		position: relative;
+		min-height: min(88vh, 860px);
+		display: grid;
+		grid-template-columns: minmax(0, 1fr);
+		align-items: center;
+		padding: clamp(3em, 8vh, 6em) 1.5em clamp(4em, 10vh, 7em);
 		overflow: hidden;
-		text-align: center;
-		padding: 3.5em 1.5em 3em;
-		min-height: 340px;
-		background: radial-gradient(
-			ellipse 70% 60% at 50% 38%,
-			rgba(201, 169, 110, 0.09) 0%,
-			transparent 70%
-		);
+		isolation: isolate;
+		background: #0a0818;
 	}
-	.hero-image-wrap {
+	.hero-art {
 		position: absolute;
 		inset: 0;
-		z-index: 0;
+		z-index: -1;
 		pointer-events: none;
 	}
-	/* Gradient overlay: solid bg on left for text legibility, fades to semi-transparent on right */
-	.hero-image-wrap::after {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(
-			to right,
-			var(--color-bg) 0%,
-			rgba(13, 10, 26, 0.88) 22%,
-			rgba(13, 10, 26, 0.62) 55%,
-			rgba(13, 10, 26, 0.72) 100%
-		);
-	}
-	.hero-image {
+	.hero-art img {
 		display: block;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		/* Hand is on the right side of the image — keep it visible */
-		object-position: 65% center;
-		filter: brightness(0.55) saturate(0.78);
+		object-position: 72% center;
+		transform-origin: 70% 50%;
+		animation: heroDrift 26s ease-in-out infinite alternate;
 	}
-	/* Text floats above the image layer */
-	.hero h1,
-	.hero-sub,
-	.hero-ctas {
+	@keyframes heroDrift {
+		from {
+			transform: scale(1.02) translate3d(0, 0, 0);
+		}
+		to {
+			transform: scale(1.08) translate3d(-1%, -1.5%, 0);
+		}
+	}
+	/* Shade: black sweeps in from the left so the copy sits in darkness,
+	   and a violet bloom hangs behind the hand. */
+	.hero-shade {
+		position: absolute;
+		inset: 0;
+		background:
+			linear-gradient(90deg, var(--color-bg) 0%, rgba(7, 5, 13, 0.92) 28%, rgba(7, 5, 13, 0.45) 55%, rgba(7, 5, 13, 0.15) 100%),
+			linear-gradient(180deg, rgba(7, 5, 13, 0.55) 0%, transparent 30%, transparent 70%, var(--color-bg) 100%),
+			radial-gradient(ellipse 30% 45% at 76% 55%, rgba(122, 72, 201, 0.18), transparent 70%);
+	}
+	.hero-copy {
 		position: relative;
-		z-index: 1;
+		min-width: 0;
+		max-width: 620px;
+		margin: 0 auto;
+		margin-left: max(0px, calc((100% - var(--wide)) / 2));
 	}
 	.hero h1 {
-		font-size: clamp(1.5rem, 5vw, 3em);
-		letter-spacing: 0.06em;
-		color: var(--accent);
-		text-shadow:
-			0 0 80px rgba(201, 169, 110, 0.2),
-			0 2px 8px rgba(0, 0, 0, 0.7);
-		margin: 0 auto 0.5em;
-		max-width: 760px;
+		font-size: clamp(1.9rem, 5.2vw, 3.4em);
+		letter-spacing: 0.05em;
+		line-height: 1.12;
+		margin: 0 0 0.55em;
 	}
 	.hero-sub {
-		font-size: 0.9em;
+		font-size: clamp(0.95rem, 1.6vw, 1.05em);
 		color: var(--color-text-muted);
-		max-width: 540px;
-		margin: 0 auto 2em;
-		line-height: 1.75;
+		max-width: 520px;
+		margin: 0 0 2.2em;
+		line-height: 1.8;
 	}
 	.hero-ctas {
 		display: flex;
 		gap: 1em;
-		justify-content: center;
 		flex-wrap: wrap;
 	}
-
-	/* ── Buttons ──────────────────────────────────────────────── */
-	.btn-primary {
-		display: inline-block;
-		background: var(--accent);
-		color: var(--color-bg);
-		font-family: var(--font-cinzel), serif;
-		font-size: 0.68em;
-		letter-spacing: 0.1em;
-		text-transform: uppercase;
+	.scroll-cue {
+		position: absolute;
+		left: 50%;
+		bottom: 1.4em;
+		transform: translateX(-50%);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.5em;
 		text-decoration: none;
-		padding: 0.9em 1.8em;
-		border-radius: 4px;
-		transition:
-			background 0.2s ease,
-			box-shadow 0.2s ease;
-	}
-	.btn-primary:hover {
-		background: var(--accent-light);
-		color: var(--color-bg);
-		box-shadow: 0 2px 14px rgba(201, 169, 110, 0.2);
-		text-decoration: none;
-	}
-	.btn-secondary {
-		display: inline-block;
-		background: transparent;
 		color: var(--accent);
+		opacity: 0.7;
+		z-index: 3;
+	}
+	.scroll-cue:hover {
+		opacity: 1;
+	}
+	.scroll-cue-line {
+		width: 1px;
+		height: 44px;
+		background: linear-gradient(180deg, transparent, var(--accent));
+		animation: cueBreathe 2.8s ease-in-out infinite;
+	}
+	@keyframes cueBreathe {
+		0%, 100% { transform: scaleY(0.6); transform-origin: top; opacity: 0.4; }
+		50% { transform: scaleY(1); opacity: 1; }
+	}
+	.scroll-cue-text {
 		font-family: var(--font-cinzel), serif;
-		font-size: 0.68em;
-		letter-spacing: 0.1em;
+		font-size: 0.55em;
+		letter-spacing: 0.3em;
 		text-transform: uppercase;
-		text-decoration: none;
-		padding: 0.9em 1.8em;
-		border-radius: 4px;
-		border: 1px solid rgba(201, 169, 110, 0.4);
-		transition:
-			border-color 0.2s ease,
-			background 0.2s ease,
-			color 0.2s ease;
-	}
-	.btn-secondary:hover {
-		border-color: var(--accent);
-		background: rgba(201, 169, 110, 0.06);
-		color: var(--accent-light);
-		text-decoration: none;
 	}
 
-	/* ── Divider ──────────────────────────────────────────────── */
-	.divider {
-		text-align: center;
-		color: var(--accent);
-		letter-spacing: 0.5em;
-		font-size: 0.6em;
-		opacity: 0.5;
-		padding: 2.5em 0;
-	}
-
-	/* ── Intro ────────────────────────────────────────────────── */
+	/* ═══ Act II · Intro ═════════════════════════════════════════════ */
 	.intro {
-		width: 720px;
-		max-width: calc(100% - 3em);
-		margin: 0 auto;
-		padding: 0 1em;
+		padding: clamp(4em, 10vh, 7em) 1.5em clamp(3em, 8vh, 5em);
+		text-align: center;
+		background-image: url('/images/home/haze-nebula.webp');
+		background-size: cover;
+		background-position: center;
+		background-blend-mode: screen;
 	}
-	.intro p {
-		line-height: 1.9;
+	.intro::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background: linear-gradient(180deg, var(--color-bg) 0%, rgba(7, 5, 13, 0.55) 40%, rgba(7, 5, 13, 0.55) 60%, var(--color-bg) 100%);
+	}
+	.intro-inner {
+		width: var(--measure);
+		max-width: 100%;
+		margin: 0 auto;
+	}
+	.intro-heading {
+		font-family: var(--font-cinzel), serif;
+		font-size: clamp(1.15rem, 2.6vw, 1.55em);
+		line-height: 1.5;
+		color: var(--color-heading);
+		letter-spacing: 0.02em;
+		margin: 0 auto 1.4em;
+		max-width: 640px;
+	}
+	.intro-body {
+		font-size: 0.95em;
+		line-height: 1.95;
+		color: var(--color-text-muted);
+		max-width: 620px;
+		margin: 0 auto 1.4em;
 	}
 
-	/* ── Path section ─────────────────────────────────────────── */
+	.divider-star {
+		margin: clamp(2.5em, 6vh, 4em) auto;
+	}
+
+	/* ═══ Act III · Path ═════════════════════════════════════════════ */
 	.path-section {
-		width: 960px;
+		width: var(--wide);
 		max-width: calc(100% - 3em);
 		margin: 0 auto;
 		padding: 0 1em;
-	}
-	.section-eyebrow {
-		font-family: var(--font-cinzel), serif;
-		font-size: 0.62em;
-		letter-spacing: 0.22em;
-		text-transform: uppercase;
-		color: var(--color-text-muted);
-		opacity: 0.6;
-		text-align: center;
-		margin: 0 0 2em;
 	}
 	.path-steps {
 		list-style: none;
@@ -346,134 +413,154 @@ const MODULE_ART: Record<string, string> = {
 		padding: 0;
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 1.25rem;
+		gap: 1.1rem;
+		counter-reset: step;
 	}
-	.path-step {
-		position: relative;
-		overflow: hidden;
-		display: flex;
-		flex-direction: column;
-		padding: 1.5rem;
-		border: 1px solid rgba(201, 169, 110, 0.2);
-		border-radius: 8px;
-		background: rgba(255, 255, 255, 0.02);
-		text-decoration: none;
-		transition:
-			border-color 0.2s ease,
-			background 0.2s ease;
-		box-sizing: border-box;
+	.path-steps li {
 		height: 100%;
 	}
-	.path-step:hover {
-		border-color: rgba(201, 169, 110, 0.5);
-		background: rgba(201, 169, 110, 0.04);
-		text-decoration: none;
+	.path-step {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		overflow: hidden;
+		box-sizing: border-box;
+		background:
+			linear-gradient(180deg, rgba(122, 72, 201, 0.08) 0%, rgba(7, 5, 13, 0) 50%),
+			var(--color-bg-elev);
 	}
-	.path-step:hover .path-card-art {
-		opacity: 0.44;
+	.path-art {
+		position: relative;
+		display: block;
+		aspect-ratio: 1 / 0.92;
+		overflow: hidden;
+		background: radial-gradient(ellipse 60% 55% at 50% 50%, rgba(122, 72, 201, 0.16), transparent 70%);
 	}
-	/* Dark gradient overlay — sits above the artwork, below the text */
-	.path-step::after {
+	.path-art img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		transform: scale(1.02);
+		transition: transform 1.2s var(--ease-out), filter 1.2s var(--ease-out);
+		filter: brightness(0.92);
+	}
+	/* The art dissolves into the card's dark body — no hard edge */
+	.path-art::after {
 		content: '';
 		position: absolute;
 		inset: 0;
-		background: linear-gradient(
-			to right,
-			rgba(13, 10, 26, 0.78) 0%,
-			rgba(13, 10, 26, 0.48) 52%,
-			rgba(13, 10, 26, 0.12) 100%
-		);
-		z-index: 1;
-		pointer-events: none;
+		background: linear-gradient(180deg, transparent 55%, var(--color-bg-elev) 100%);
 	}
-	.path-card-art {
-		position: absolute;
-		right: -10%;
-		top: 50%;
-		transform: translateY(-50%);
-		height: 115%;
-		width: auto;
-		max-width: none; /* prevent browser clamping width and squishing aspect ratio */
-		opacity: 0.34;
-		filter: saturate(0.95) brightness(0.95);
-		pointer-events: none;
-		z-index: 0;
-		transition: opacity 0.2s ease;
+	.path-step:hover .path-art img {
+		transform: scale(1.07);
+		filter: brightness(1.08);
 	}
 	.step-content {
 		position: relative;
-		z-index: 2;
 		display: flex;
 		flex-direction: column;
+		flex: 1;
+		padding: 0 1.4rem 1.5rem;
+		margin-top: -1.4rem;
 	}
 	.step-num {
-		display: block;
 		font-family: var(--font-cinzel), serif;
-		font-size: 0.62em;
-		letter-spacing: 0.18em;
+		font-size: 0.6em;
+		letter-spacing: 0.3em;
 		color: var(--accent);
-		opacity: 0.65;
-		margin-bottom: 0.5em;
+		margin-bottom: 0.6em;
 	}
 	.step-title {
-		display: block;
 		font-family: var(--font-cinzel), serif;
-		font-size: 0.9em;
-		color: var(--color-heading);
+		font-size: 0.98em;
+		color: var(--accent-light);
 		margin-bottom: 0.3em;
 		line-height: 1.3;
+		text-shadow: 0 0 24px rgba(201, 169, 110, 0.2);
 	}
 	.step-difficulty {
-		display: block;
 		font-family: var(--font-cinzel), serif;
-		font-size: 0.58em;
-		letter-spacing: 0.12em;
+		font-size: 0.56em;
+		letter-spacing: 0.18em;
 		text-transform: uppercase;
-		color: var(--accent);
-		opacity: 0.55;
-		margin-bottom: 0.8em;
+		color: var(--color-text-muted);
+		margin-bottom: 0.9em;
 	}
 	.step-desc {
-		display: block;
-		font-size: 0.75em;
+		font-size: 0.74em;
 		color: var(--color-text-muted);
 		line-height: 1.65;
-		opacity: 0.85;
+		flex: 1;
+	}
+	.step-go {
+		margin-top: 1.2em;
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.58em;
+		letter-spacing: 0.16em;
+		text-transform: uppercase;
+		color: var(--accent);
+		opacity: 0.7;
+		transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
+	}
+	.path-step:hover .step-go {
+		opacity: 1;
+		transform: translateX(3px);
 	}
 
-	/* ── Trust pillars ────────────────────────────────────────── */
+	/* ═══ Act IV · Pillars ═══════════════════════════════════════════ */
 	.trust-section {
-		width: 720px;
+		width: var(--wide);
 		max-width: calc(100% - 3em);
-		margin: 0 auto;
+		margin: clamp(3.5em, 8vh, 6em) auto 0;
 		padding: 0 1em;
 	}
 	.trust-pillars {
 		list-style: none;
 		margin: 0;
 		padding: 0;
-		display: flex;
-		gap: 0.75em 2.5em;
-		flex-wrap: wrap;
-		justify-content: center;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1.5em;
 	}
 	.trust-pillars li {
+		position: relative;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
-		gap: 0.6em;
-		font-size: 0.82em;
-		color: var(--color-text-muted);
-		letter-spacing: 0.03em;
+		text-align: center;
+		gap: 0.5em;
+		padding: 1.6em 1em 1.2em;
+		border-top: 1px solid var(--hairline);
+		background: radial-gradient(ellipse 70% 60% at 50% 0%, rgba(122, 72, 201, 0.14), transparent 70%);
 	}
-	.pillar-mark {
-		color: var(--accent);
-		font-size: 0.6em;
-		opacity: 0.65;
+	.pillar-icon {
+		width: 34px;
+		height: 34px;
+		fill: none;
+		stroke: var(--accent);
+		stroke-width: 1.1;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.4));
+		margin-bottom: 0.3em;
+	}
+	.pillar-title {
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.78em;
+		letter-spacing: 0.08em;
+		color: var(--color-heading);
+	}
+	.pillar-desc {
+		font-size: 0.74em;
+		color: var(--color-text-muted);
+		line-height: 1.6;
 	}
 
-	/* ── Starter articles ─────────────────────────────────────── */
+	/* ═══ Act V · Starters + hubs ════════════════════════════════════ */
 	.starter-section {
-		width: 720px;
+		width: var(--measure);
 		max-width: calc(100% - 3em);
 		margin: 0 auto;
 		padding: 0 1em;
@@ -483,37 +570,54 @@ const MODULE_ART: Record<string, string> = {
 		margin: 0;
 		padding: 0;
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 0.6rem 2rem;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 0 2.5rem;
 	}
 	.starter-link {
-		display: block;
+		display: flex;
+		align-items: baseline;
+		gap: 0.9em;
 		font-family: var(--font-lora), serif;
-		font-size: 0.85em;
-		color: var(--accent);
+		font-size: 0.9em;
+		color: var(--color-text);
 		text-decoration: none;
-		padding: 0.45em 0;
-		border-bottom: 1px solid rgba(201, 169, 110, 0.15);
-		transition: color 0.2s ease, border-color 0.2s ease;
+		padding: 0.85em 0;
+		border-bottom: 1px solid var(--hairline);
+		transition: color 0.3s var(--ease-out), border-color 0.3s var(--ease-out), padding-left 0.3s var(--ease-out);
 		line-height: 1.45;
 	}
-	.starter-link::before {
-		content: '→ ';
-		opacity: 0.55;
-		font-size: 0.9em;
+	.starter-index {
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.6em;
+		letter-spacing: 0.2em;
+		color: var(--accent);
+		opacity: 0.7;
+	}
+	.starter-label {
+		flex: 1;
+	}
+	.starter-arrow {
+		color: var(--accent);
+		opacity: 0;
+		transform: translateX(-6px);
+		transition: opacity 0.3s var(--ease-out), transform 0.3s var(--ease-out);
 	}
 	.starter-link:hover {
 		color: var(--accent-light);
-		border-color: rgba(201, 169, 110, 0.4);
-		text-decoration: none;
+		border-color: var(--hairline-strong);
+		padding-left: 0.3em;
 	}
-
-	/* ── Topic hubs ──────────────────────────────────────────── */
-	.hubs-section {
-		width: 720px;
-		max-width: calc(100% - 3em);
-		margin: 0 auto;
-		padding: 0 1em;
+	.starter-link:hover .starter-arrow {
+		opacity: 1;
+		transform: none;
+	}
+	.hubs {
+		text-align: center;
+		margin-top: 3em;
+	}
+	.hubs-eyebrow {
+		margin-bottom: 1em;
+		opacity: 0.6;
 	}
 	.hub-list {
 		list-style: none;
@@ -527,109 +631,193 @@ const MODULE_ART: Record<string, string> = {
 	.hub-link {
 		display: inline-block;
 		font-family: var(--font-cinzel), serif;
-		font-size: 0.65em;
-		letter-spacing: 0.14em;
+		font-size: 0.62em;
+		letter-spacing: 0.16em;
 		text-transform: uppercase;
 		color: var(--color-text-muted);
 		text-decoration: none;
-		padding: 0.55em 1.1em;
-		border: 1px solid rgba(201, 169, 110, 0.2);
-		border-radius: 4px;
-		transition:
-			color 0.2s ease,
-			border-color 0.2s ease,
-			background 0.2s ease;
+		padding: 0.65em 1.2em;
+		border: 1px solid var(--hairline);
+		border-radius: 999px;
+		background: rgba(122, 72, 201, 0.05);
+		transition: color 0.3s var(--ease-out), border-color 0.3s var(--ease-out), background 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
 	}
 	.hub-link:hover {
-		color: var(--accent);
-		border-color: rgba(201, 169, 110, 0.5);
-		background: rgba(201, 169, 110, 0.04);
+		color: var(--accent-light);
+		border-color: var(--hairline-strong);
+		background: rgba(201, 169, 110, 0.06);
+		box-shadow: 0 0 24px rgba(122, 72, 201, 0.2);
 		text-decoration: none;
 	}
 
-	/* ── Guide CTA ────────────────────────────────────────────── */
+	/* ═══ Act VI · Guide ═════════════════════════════════════════════ */
 	.guide-cta {
-		width: 720px;
-		max-width: calc(100% - 3em);
-		margin: 0 auto;
-		padding: 0 1em 5em;
-		text-align: center;
+		position: relative;
+		margin-top: clamp(4em, 10vh, 7em);
+		padding: clamp(4em, 10vh, 7em) 1.5em clamp(5em, 10vh, 7em);
+		isolation: isolate;
+		overflow: hidden;
 	}
-	.guide-cta-heading {
-		font-size: clamp(1.2rem, 3.5vw, 1.8em);
-		color: var(--color-heading);
-		letter-spacing: 0.06em;
+	.guide-haze {
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background:
+			radial-gradient(ellipse 45% 60% at 30% 55%, rgba(122, 72, 201, 0.2), transparent 70%),
+			radial-gradient(ellipse 40% 40% at 70% 40%, rgba(201, 169, 110, 0.06), transparent 70%),
+			url('/images/home/haze-nebula.webp') center / cover;
+		opacity: 0.9;
+	}
+	.guide-haze::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, var(--color-bg) 0%, rgba(7, 5, 13, 0.4) 35%, rgba(7, 5, 13, 0.5) 70%, var(--color-bg) 100%);
+	}
+	.guide-inner {
+		width: var(--wide);
+		max-width: 100%;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: minmax(240px, 380px) 1fr;
+		gap: clamp(2em, 6vw, 5em);
+		align-items: center;
+	}
+	.guide-book {
+		perspective: 1400px;
+		display: flex;
+		justify-content: center;
+	}
+	.book {
+		position: relative;
+		width: min(300px, 70vw);
+		transform: rotateY(18deg) rotateX(2deg);
+		transform-style: preserve-3d;
+		transition: transform 1.2s var(--ease-out);
+		border-radius: 4px 10px 10px 4px;
+		box-shadow:
+			-30px 40px 70px rgba(0, 0, 0, 0.7),
+			0 0 0 1px rgba(201, 169, 110, 0.25),
+			0 0 80px rgba(122, 72, 201, 0.25);
+	}
+	.guide-book:hover .book {
+		transform: rotateY(8deg) rotateX(0deg);
+	}
+	.book img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 4px 10px 10px 4px;
+	}
+	/* Spine and page block for depth */
+	.book::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -14px;
+		width: 14px;
+		background: linear-gradient(90deg, #060409, #1a1329 70%, #0a0814);
+		transform: rotateY(-90deg);
+		transform-origin: right;
+		border-radius: 3px 0 0 3px;
+	}
+	.book::after {
+		content: '';
+		position: absolute;
+		inset: 3% 0 3% auto;
+		width: 10px;
+		right: -10px;
+		background: repeating-linear-gradient(180deg, #e8dfc9 0 1px, #b9ae94 1px 2px);
+		transform: rotateY(90deg);
+		transform-origin: left;
+		opacity: 0.8;
+	}
+	.guide-copy h2 {
+		font-size: clamp(1.4rem, 3.4vw, 2.1em);
 		margin-bottom: 0.5em;
 	}
 	.guide-cta-sub {
-		font-size: 0.87em;
+		font-size: 0.92em;
 		color: var(--color-text-muted);
 		max-width: 480px;
-		margin: 0 auto 1.75em;
-		line-height: 1.75;
+		margin: 0 0 1.75em;
+		line-height: 1.8;
 	}
 
-	@media (max-width: 600px) {
-		.starter-links {
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
-	@media (max-width: 380px) {
-		.starter-links {
-			grid-template-columns: 1fr;
-		}
-	}
-
-	/* ── Responsive ──────────────────────────────────────────── */
-	@media (max-width: 720px) {
-		.hero {
-			padding: 3em 1.25em 2.5em;
-		}
+	/* ═══ Responsive ═════════════════════════════════════════════════ */
+	@media (max-width: 1000px) {
 		.path-steps {
 			grid-template-columns: repeat(2, 1fr);
-		}
-		.path-card-art {
-			right: -5%;
-			top: 50%;
-			bottom: auto;
-			transform: translateY(-50%);
-			height: 90%;
-			max-width: none;
-			opacity: 0.38;
-		}
-		/* On mobile the gradient overlay stays the same — text is left-anchored */
-	}
-	@media (max-width: 600px) {
-		/* Portrait mobile: match desktop crop position so the palm stays in frame,
-		   then use a left-heavy gradient so text reads on the left and the hand
-		   shows through on the right */
-		.hero-image {
-			object-position: 65% center;
-			filter: brightness(0.65) saturate(0.85);
-		}
-		.hero-image-wrap::after {
-			background: linear-gradient(
-				to right,
-				rgba(13, 10, 26, 0.92) 0%,
-				rgba(13, 10, 26, 0.68) 40%,
-				rgba(13, 10, 26, 0.22) 100%
-			);
-		}
-	}
-	@media (max-width: 500px) {
-		.hero {
-			padding: 2.5em 1em 2em;
-		}
-		.hero h1 {
-			letter-spacing: 0.04em;
-		}
-		.path-steps {
-			grid-template-columns: 1fr;
 		}
 		.trust-pillars {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 0.9em;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	@media (max-width: 900px) {
+		.hero {
+			min-height: 0;
+			padding-top: 4em;
+			padding-bottom: 5em;
+		}
+		.hero-art img {
+			object-position: 78% center;
+		}
+		.hero-copy {
+			margin-left: auto;
+			text-align: center;
+			max-width: 560px;
+		}
+		.hero-sub {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.hero-ctas {
+			justify-content: center;
+		}
+		.guide-inner {
+			grid-template-columns: 1fr;
+			text-align: center;
+		}
+		.guide-copy .eyebrow {
+			margin-top: 1em;
+		}
+		.guide-cta-sub {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.book {
+			transform: rotateY(12deg);
+		}
+	}
+	@media (max-width: 600px) {
+		.hero {
+			padding-top: 46vw;
+		}
+		.hero-shade {
+			background:
+				linear-gradient(180deg, rgba(7, 5, 13, 0.15) 0%, rgba(7, 5, 13, 0.35) 30%, rgba(7, 5, 13, 0.9) 52%, var(--color-bg) 100%),
+				radial-gradient(ellipse 60% 40% at 70% 25%, rgba(122, 72, 201, 0.2), transparent 70%);
+		}
+		.hero-art img {
+			object-position: 72% 0%;
+			animation: none;
+		}
+		.starter-links {
+			grid-template-columns: 1fr;
+		}
+	}
+	@media (max-width: 520px) {
+		.path-steps,
+		.trust-pillars {
+			grid-template-columns: 1fr;
+		}
+		.hero h1 {
+			letter-spacing: 0.03em;
+		}
+		.hero-ctas .btn-primary,
+		.hero-ctas .btn-secondary {
+			width: 100%;
 		}
 	}
 </style>

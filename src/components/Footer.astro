@@ -2,75 +2,103 @@
 const today = new Date();
 ---
 
-<footer>
-	<p class="tagline">✦ · ✦ · ✦</p>
-	<p>&copy; {today.getFullYear()} Palmistry Path. All rights reserved.</p>
-	<nav class="footer-nav" aria-label="Footer navigation">
-		<a href="/premium-guide/" data-track="nav" data-track-location="footer" data-track-target="premium-guide">Complete Reference</a>
-		<span aria-hidden="true">·</span>
-		<a href="/guide/" data-track="nav" data-track-location="footer" data-track-target="free-guide">Free Starter Guide</a>
-		<span aria-hidden="true">·</span>
-		<a href="/privacy/" data-track="nav" data-track-location="footer" data-track-target="privacy">Privacy</a>
-		<span aria-hidden="true">·</span>
-		<a href="/terms/" data-track="nav" data-track-location="footer" data-track-target="terms">Terms</a>
-		<span aria-hidden="true">·</span>
-		<a href="/disclaimer/" data-track="nav" data-track-location="footer" data-track-target="disclaimer">Disclaimer</a>
-		<span aria-hidden="true">·</span>
-		<a href="/affiliate-disclosure/" data-track="nav" data-track-location="footer" data-track-target="affiliate-disclosure">Affiliate Disclosure</a>
-		<span aria-hidden="true">·</span>
-		<a href="/contact/" data-track="nav" data-track-location="footer" data-track-target="contact">Contact</a>
-	</nav>
-	<p class="sub">Read the lines. Discover the path.</p>
+<footer class="site-footer">
+	<div class="footer-haze" aria-hidden="true"></div>
+	<div class="footer-inner">
+		<svg class="footer-mark" width="42" height="52" viewBox="0 0 13 16" aria-hidden="true" fill="none">
+			<ellipse cx="6.5" cy="9" rx="5" ry="6.5" stroke="currentColor" stroke-width="0.5" opacity="0.4"/>
+			<path d="M 10 6 C 7.5 5 4 5 2.5 6.5" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" opacity="0.9"/>
+			<path d="M 2.5 9 C 5 8 8.5 8 10.5 9.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.72"/>
+			<path d="M 7 2.5 C 6.5 4 6 6 6 9 C 6 11.5 6.5 13.5 7 15.5" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" opacity="0.6"/>
+		</svg>
+		<p class="tagline">Read the lines. Discover the path.</p>
+		<nav class="footer-nav" aria-label="Footer navigation">
+			<a href="/premium-guide/" data-track="nav" data-track-location="footer" data-track-target="premium-guide">Complete Reference</a>
+			<a href="/guide/" data-track="nav" data-track-location="footer" data-track-target="free-guide">Free Starter Guide</a>
+			<a href="/privacy/" data-track="nav" data-track-location="footer" data-track-target="privacy">Privacy</a>
+			<a href="/terms/" data-track="nav" data-track-location="footer" data-track-target="terms">Terms</a>
+			<a href="/disclaimer/" data-track="nav" data-track-location="footer" data-track-target="disclaimer">Disclaimer</a>
+			<a href="/affiliate-disclosure/" data-track="nav" data-track-location="footer" data-track-target="affiliate-disclosure">Affiliate Disclosure</a>
+			<a href="/contact/" data-track="nav" data-track-location="footer" data-track-target="contact">Contact</a>
+		</nav>
+		<p class="copyright">&copy; {today.getFullYear()} Palmistry Path. An educational resource — not a fortune-telling service.</p>
+	</div>
 </footer>
 <style>
-	footer {
-		padding: 3em 1em 3.5em;
-		background: var(--color-header-bg);
+	.site-footer {
+		position: relative;
+		overflow: hidden;
+		padding: 5em 1em 3.5em;
+		background: var(--color-bg);
 		border-top: 1px solid rgba(201, 169, 110, 0.12);
 		color: var(--color-nav-text);
 		text-align: center;
+		isolation: isolate;
 	}
-	footer p {
-		margin: 0.3em 0;
-		font-size: 0.85em;
-		color: var(--color-nav-text);
+	.site-footer::before {
+		content: '';
+		position: absolute;
+		top: -1px;
+		left: 50%;
+		width: min(640px, 80%);
+		height: 1px;
+		transform: translateX(-50%);
+		background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.6), transparent);
+	}
+	.footer-haze {
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background:
+			radial-gradient(ellipse 50% 60% at 50% 100%, rgba(122, 72, 201, 0.16), transparent 70%),
+			radial-gradient(ellipse 30% 30% at 50% 0%, rgba(201, 169, 110, 0.07), transparent 70%);
+		pointer-events: none;
+	}
+	.footer-inner {
+		max-width: var(--wide);
+		margin: 0 auto;
+	}
+	.footer-mark {
+		color: var(--accent);
+		filter: drop-shadow(0 0 12px rgba(201, 169, 110, 0.4));
+		margin-bottom: 0.6em;
 	}
 	.tagline {
-		color: var(--accent);
-		letter-spacing: 0.4em;
-		font-size: 0.65em !important;
-		opacity: 0.45 !important;
-		margin-bottom: 1em !important;
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.78em;
+		letter-spacing: 0.28em;
+		text-transform: uppercase;
+		color: var(--accent-light);
+		opacity: 0.85;
+		margin: 0 0 1.6em;
+		text-shadow: 0 0 30px rgba(201, 169, 110, 0.25);
 	}
 	.footer-nav {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: 0.6em;
-		margin: 0.75em 0 0.5em;
+		gap: 0.25em 1.6em;
+		margin: 0 auto 1.8em;
 		flex-wrap: wrap;
+		max-width: 720px;
 	}
 	.footer-nav a {
-		font-size: 0.75em;
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.64em;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
 		color: var(--color-text-muted);
 		text-decoration: none;
-		transition: color 0.2s ease, opacity 0.2s ease;
+		padding: 0.5em 0;
+		transition: color 0.3s var(--ease-out);
 	}
 	.footer-nav a:hover {
-		color: var(--accent);
-		opacity: 1;
+		color: var(--accent-light);
 	}
-	.footer-nav span {
-		font-size: 0.65em;
+	.copyright {
+		margin: 0;
+		font-size: 0.72em;
 		color: var(--color-text-muted);
-		opacity: 0.35;
-	}
-	.sub {
-		font-family: var(--font-cinzel), serif;
-		font-size: 0.7em !important;
-		letter-spacing: 0.15em;
-		color: var(--color-text-muted);
-		opacity: 0.72 !important;
-		margin-top: 0.5em !important;
+		opacity: 0.65;
 	}
 </style>

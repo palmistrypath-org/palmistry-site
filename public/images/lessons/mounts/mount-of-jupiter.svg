@@ -1,26 +1,130 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 500">
-<rect width="420" height="500" fill="#0d0a1a"/>
-<rect x="60" y="63" width="300" height="415" rx="42" fill="#16122a" stroke="#3d3957" stroke-width="1.5"/>
-<path d="M 152 108 Q 78 263 106 463" fill="none" stroke="#2e2a46" stroke-width="1.5"/>
-<ellipse cx="104" cy="118" rx="44" ry="36" fill="#c9a96e" stroke="#e0c07e" stroke-width="1.5"/>
-<text x="104" y="118" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="13" font-weight="bold" fill="#0d0a1a">Jupiter</text>
-<ellipse cx="171" cy="103" rx="38" ry="32" fill="#1f1b35" stroke="#3d3957" stroke-width="1.5"/>
-<text x="171" y="103" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="13" font-weight="normal" fill="#8c84a8">Saturn</text>
-<ellipse cx="241" cy="107" rx="38" ry="32" fill="#1f1b35" stroke="#3d3957" stroke-width="1.5"/>
-<text x="241" y="107" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="13" font-weight="normal" fill="#8c84a8">Apollo</text>
-<ellipse cx="308" cy="121" rx="36" ry="30" fill="#1f1b35" stroke="#3d3957" stroke-width="1.5"/>
-<text x="308" y="121" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="13" font-weight="normal" fill="#8c84a8">Mercury</text>
-<ellipse cx="80" cy="246" rx="22" ry="44" fill="#1f1b35" stroke="#3d3957" stroke-width="1.5"/>
-<text x="80" y="238" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="11" font-weight="normal" fill="#8c84a8">Lower</text>
-<text x="80" y="254" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="11" font-weight="normal" fill="#8c84a8">Mars</text>
-<ellipse cx="338" cy="258" rx="22" ry="44" fill="#1f1b35" stroke="#3d3957" stroke-width="1.5"/>
-<text x="338" y="250" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="11" font-weight="normal" fill="#8c84a8">Upper</text>
-<text x="338" y="266" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="11" font-weight="normal" fill="#8c84a8">Mars</text>
-<ellipse cx="209" cy="263" rx="76" ry="54" fill="#1f1b35" stroke="#3d3957" stroke-width="1.5"/>
-<text x="209" y="255" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="11" font-weight="normal" fill="#8c84a8">Plain</text>
-<text x="209" y="271" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="11" font-weight="normal" fill="#8c84a8">of Mars</text>
-<ellipse cx="108" cy="383" rx="58" ry="68" fill="#1f1b35" stroke="#3d3957" stroke-width="1.5"/>
-<text x="108" y="383" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="13" font-weight="normal" fill="#8c84a8">Venus</text>
-<ellipse cx="310" cy="388" rx="52" ry="62" fill="#1f1b35" stroke="#3d3957" stroke-width="1.5"/>
-<text x="310" y="388" text-anchor="middle" dominant-baseline="middle" font-family="Georgia,serif" font-size="13" font-weight="normal" fill="#8c84a8">Luna</text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1080" width="1000" height="1080" role="img" aria-labelledby="t">
+<title id="t">Palm diagram with the Mount of Jupiter highlighted beneath the index finger.</title>
+<defs>
+  <radialGradient id="haze" cx="50%" cy="48%" r="60%">
+    <stop offset="0%" stop-color="#3a2470" stop-opacity="0.55"/>
+    <stop offset="55%" stop-color="#1a1030" stop-opacity="0.35"/>
+    <stop offset="100%" stop-color="#07050d" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="skin" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#17122a"/>
+    <stop offset="100%" stop-color="#0d0a1a"/>
+  </linearGradient>
+  <radialGradient id="mountGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#e0c07e" stop-opacity="0.55"/>
+    <stop offset="60%" stop-color="#c9a96e" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#c9a96e" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="violetGlow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#8a5cf0" stop-opacity="0.5"/>
+    <stop offset="100%" stop-color="#8a5cf0" stop-opacity="0"/>
+  </radialGradient>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="22"/></filter>
+  <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
+  <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(28)">
+    <line x1="0" y1="0" x2="0" y2="7" stroke="#c9a96e" stroke-width="0.5" opacity="0.28"/>
+  </pattern>
+  <pattern id="hatch2" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-52)">
+    <line x1="0" y1="0" x2="0" y2="9" stroke="#c9a96e" stroke-width="0.4" opacity="0.16"/>
+  </pattern>
+  <clipPath id="hand"><path d="M 335 1010 C 300 900 290 800 300 690 C 255 655 190 585 162 505 C 146 466 178 432 218 448 C 262 478 315 525 345 562 C 356 545 360 500 365 440 C 360 350 360 250 370 175 C 375 140 445 140 452 175 C 458 260 458 350 462 430 C 466 430 466 430 466 430 C 468 330 470 210 478 125 C 484 90 555 90 560 125 C 566 210 566 330 566 430 C 570 430 570 430 570 430 C 572 340 574 240 580 165 C 585 130 655 130 660 165 C 665 240 665 340 664 435 C 668 445 668 445 668 445 C 672 380 676 320 682 270 C 686 240 742 240 748 275 C 754 340 752 400 740 470 C 720 600 700 750 640 880 C 620 940 610 980 605 1010 C 520 1032 420 1032 335 1010 Z"/></clipPath>
+</defs>
+
+<!-- ground -->
+<rect width="1000" height="1080" fill="#07050d"/>
+<rect width="1000" height="1080" fill="url(#haze)"/>
+
+<!-- registration marks -->
+<g stroke="#c9a96e" stroke-width="1" opacity="0.45" fill="none">
+  <path d="M 28 46 V 28 H 46"/><path d="M 972 46 V 28 H 954"/>
+  <path d="M 28 1034 V 1052 H 46"/><path d="M 972 1034 V 1052 H 954"/>
+</g>
+<g fill="#c9a96e" opacity="0.7">
+  <path d="M 120 140 l 2.5 6 6 2.5 -6 2.5 -2.5 6 -2.5 -6 -6 -2.5 6 -2.5z" opacity="0.8"/>
+  <path d="M 790 200 l 2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" opacity="0.6"/>
+  <path d="M 150 960 l 2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2z" opacity="0.5"/>
+  <circle cx="820" cy="1000" r="1.5"/><circle cx="90" cy="320" r="1.2"/><circle cx="840" cy="120" r="1.2"/>
+</g>
+
+<g transform="translate(40 0)">
+<!-- violet bloom behind the palm -->
+<ellipse cx="500" cy="690" rx="330" ry="300" fill="url(#violetGlow)" filter="url(#blur)" opacity="0.9"/>
+
+<!-- the hand -->
+<path d="M 335 1010 C 300 900 290 800 300 690 C 255 655 190 585 162 505 C 146 466 178 432 218 448 C 262 478 315 525 345 562 C 356 545 360 500 365 440 C 360 350 360 250 370 175 C 375 140 445 140 452 175 C 458 260 458 350 462 430 C 466 430 466 430 466 430 C 468 330 470 210 478 125 C 484 90 555 90 560 125 C 566 210 566 330 566 430 C 570 430 570 430 570 430 C 572 340 574 240 580 165 C 585 130 655 130 660 165 C 665 240 665 340 664 435 C 668 445 668 445 668 445 C 672 380 676 320 682 270 C 686 240 742 240 748 275 C 754 340 752 400 740 470 C 720 600 700 750 640 880 C 620 940 610 980 605 1010 C 520 1032 420 1032 335 1010 Z" fill="url(#skin)"/>
+<g clip-path="url(#hand)">
+  <rect width="1000" height="1080" fill="url(#hatch)"/>
+  <rect width="1000" height="1080" fill="url(#hatch2)"/>
+</g>
+<path d="M 335 1010 C 300 900 290 800 300 690 C 255 655 190 585 162 505 C 146 466 178 432 218 448 C 262 478 315 525 345 562 C 356 545 360 500 365 440 C 360 350 360 250 370 175 C 375 140 445 140 452 175 C 458 260 458 350 462 430 C 466 430 466 430 466 430 C 468 330 470 210 478 125 C 484 90 555 90 560 125 C 566 210 566 330 566 430 C 570 430 570 430 570 430 C 572 340 574 240 580 165 C 585 130 655 130 660 165 C 665 240 665 340 664 435 C 668 445 668 445 668 445 C 672 380 676 320 682 270 C 686 240 742 240 748 275 C 754 340 752 400 740 470 C 720 600 700 750 640 880 C 620 940 610 980 605 1010 C 520 1032 420 1032 335 1010 Z" fill="none" stroke="#c9a96e" stroke-width="2" opacity="0.92"/>
+<path d="M 335 1010 C 300 900 290 800 300 690 C 255 655 190 585 162 505 C 146 466 178 432 218 448 C 262 478 315 525 345 562 C 356 545 360 500 365 440 C 360 350 360 250 370 175 C 375 140 445 140 452 175 C 458 260 458 350 462 430 C 466 430 466 430 466 430 C 468 330 470 210 478 125 C 484 90 555 90 560 125 C 566 210 566 330 566 430 C 570 430 570 430 570 430 C 572 340 574 240 580 165 C 585 130 655 130 660 165 C 665 240 665 340 664 435 C 668 445 668 445 668 445 C 672 380 676 320 682 270 C 686 240 742 240 748 275 C 754 340 752 400 740 470 C 720 600 700 750 640 880 C 620 940 610 980 605 1010 C 520 1032 420 1032 335 1010 Z" fill="none" stroke="#e0c07e" stroke-width="6" opacity="0.12" filter="url(#softBlur)"/>
+<g fill="none" stroke="#c9a96e" stroke-width="1.2" opacity="0.5" stroke-linecap="round">
+  <path d="M 372 300 C 395 292 430 292 455 300"/>
+  <path d="M 368 220 C 392 212 428 212 452 220"/>
+  <path d="M 470 255 C 500 247 540 247 566 255"/>
+  <path d="M 474 170 C 504 162 542 162 562 170"/>
+  <path d="M 574 290 C 600 282 640 282 664 290"/>
+  <path d="M 578 210 C 604 202 642 202 660 210"/>
+  <path d="M 678 380 C 700 372 730 372 748 380"/>
+  <path d="M 684 320 C 704 312 732 312 748 320"/>
+  <path d="M 232 478 C 258 486 290 508 322 538"/>
+  <path d="M 350 1000 C 470 1010 520 1010 595 1000"/>
+</g>
+
+<!-- major lines: landmarks only -->
+<g fill="none" stroke="#c9a96e" stroke-width="1.6" stroke-linecap="round" opacity="0.42">
+  <path d="M 352 535 C 330 650 330 800 430 985"/>
+  <path d="M 735 545 C 640 562 520 556 425 500"/>
+  <path d="M 355 560 C 450 600 570 650 665 690"/>
+  <path d="M 520 980 C 525 800 518 620 512 475" stroke-dasharray="1 5" opacity="0.8"/>
+</g>
+
+<!-- quiet regions -->
+<g>
+<ellipse cx="512" cy="480" rx="46" ry="38" transform="rotate(0 512 480)" fill="rgba(122,72,201,0.06)" stroke="#c9a96e" stroke-width="0.9" stroke-dasharray="2 5" opacity="0.55"/>
+<ellipse cx="616" cy="495" rx="44" ry="38" transform="rotate(0 616 495)" fill="rgba(122,72,201,0.06)" stroke="#c9a96e" stroke-width="0.9" stroke-dasharray="2 5" opacity="0.55"/>
+<ellipse cx="702" cy="533" rx="38" ry="38" transform="rotate(0 702 533)" fill="rgba(122,72,201,0.06)" stroke="#c9a96e" stroke-width="0.9" stroke-dasharray="2 5" opacity="0.55"/>
+<ellipse cx="690" cy="650" rx="40" ry="58" transform="rotate(-8 690 650)" fill="rgba(122,72,201,0.06)" stroke="#c9a96e" stroke-width="0.9" stroke-dasharray="2 5" opacity="0.55"/>
+<ellipse cx="372" cy="600" rx="38" ry="42" transform="rotate(0 372 600)" fill="rgba(122,72,201,0.06)" stroke="#c9a96e" stroke-width="0.9" stroke-dasharray="2 5" opacity="0.55"/>
+<ellipse cx="522" cy="705" rx="84" ry="74" transform="rotate(0 522 705)" fill="rgba(122,72,201,0.06)" stroke="#c9a96e" stroke-width="0.9" stroke-dasharray="2 5" opacity="0.55"/>
+<ellipse cx="392" cy="770" rx="88" ry="128" transform="rotate(-18 392 770)" fill="rgba(122,72,201,0.06)" stroke="#c9a96e" stroke-width="0.9" stroke-dasharray="2 5" opacity="0.55"/>
+<ellipse cx="655" cy="815" rx="74" ry="112" transform="rotate(10 655 815)" fill="rgba(122,72,201,0.06)" stroke="#c9a96e" stroke-width="0.9" stroke-dasharray="2 5" opacity="0.55"/>
+</g>
+
+<!-- highlighted regions -->
+<g>
+
+  <ellipse cx="405" cy="495" rx="78.2" ry="68" transform="rotate(0 405 495)" fill="url(#violetGlow)" filter="url(#blur)" opacity="0.9"/>
+  <ellipse cx="405" cy="495" rx="57.5" ry="50" transform="rotate(0 405 495)" fill="url(#mountGlow)" filter="url(#softBlur)"/>
+  <ellipse cx="405" cy="495" rx="46" ry="40" transform="rotate(0 405 495)" fill="url(#mountGlow)" opacity="0.9"/>
+  <ellipse cx="405" cy="495" rx="46" ry="40" transform="rotate(0 405 495)" fill="none" stroke="#e0c07e" stroke-width="0.70" opacity="0.35" stroke-dasharray="3 4"/>
+<ellipse cx="405" cy="495" rx="34.5" ry="30" transform="rotate(0 405 495)" fill="none" stroke="#e0c07e" stroke-width="0.80" opacity="0.49" stroke-dasharray=""/>
+<ellipse cx="405" cy="495" rx="23" ry="20" transform="rotate(0 405 495)" fill="none" stroke="#e0c07e" stroke-width="0.90" opacity="0.63" stroke-dasharray="3 4"/>
+<ellipse cx="405" cy="495" rx="11.5" ry="10" transform="rotate(0 405 495)" fill="none" stroke="#e0c07e" stroke-width="1.00" opacity="0.76" stroke-dasharray=""/>
+  <ellipse cx="405" cy="495" rx="46" ry="40" transform="rotate(0 405 495)" fill="none" stroke="#f0cf86" stroke-width="1.6" opacity="0.95"/>
+</g>
+
+</g>
+<!-- labels -->
+<g transform="translate(40 0)">
+
+<g opacity="1">
+  <path d="M 219 470 L 259 470 L 351 495" fill="none" stroke="#e0c07e" stroke-width="1" stroke-dasharray="2 4" opacity="0.9"/>
+  <circle cx="351" cy="495" r="2.6" fill="#f0cf86"/>
+  <text x="205" y="477" text-anchor="end" font-family="Cinzel, 'Times New Roman', Georgia, serif" font-size="21" letter-spacing="2.5" fill="#f0cf86" style="text-transform:uppercase"><tspan x="205" dy="0">JUPITER</tspan></text>
+</g>
+
+<g opacity="0.85">
+  <path d="M 512 76 L 512 432" fill="none" stroke="#8c84a8" stroke-width="1" stroke-dasharray="2 4" opacity="0.9"/>
+  <circle cx="512" cy="432" r="2.6" fill="#8c84a8"/>
+  <text x="512" y="62" text-anchor="middle" font-family="Cinzel, 'Times New Roman', Georgia, serif" font-size="18" letter-spacing="2.5" fill="#8c84a8" style="text-transform:uppercase"><tspan x="512" dy="0">SATURN</tspan></text>
+</g>
+
+<g opacity="0.85">
+  <path d="M 219 585 L 259 585 L 326 600" fill="none" stroke="#8c84a8" stroke-width="1" stroke-dasharray="2 4" opacity="0.9"/>
+  <circle cx="326" cy="600" r="2.6" fill="#8c84a8"/>
+  <text x="205" y="592" text-anchor="end" font-family="Cinzel, 'Times New Roman', Georgia, serif" font-size="18" letter-spacing="2.5" fill="#8c84a8" style="text-transform:uppercase"><tspan x="205" dy="0">LOWER MARS</tspan></text>
+</g>
+</g>
 </svg>

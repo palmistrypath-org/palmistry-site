@@ -2,6 +2,13 @@
 
 Only durable decisions belong here. Newest entries first.
 
+## 2026-09-02 - Visual identity is dark black/gold/purple; the wireframe hands and lesson plates are the anchors
+**Decision:** Palmistry Path is one dark, immersive world. The palette is black ground, gold line and type, and violet used only as haze, glow, and depth. The gold wireframe hand imagery and the black/gold/purple lesson plates are the aesthetic anchors; weaker material is unified around them rather than the anchors being flattened. Section progression uses progressive reveal (`.reveal` + `src/scripts/reveal.ts`), generous spacing, and star dividers rather than parallax or theatrical motion. Mount diagrams are generated from `scripts/generate-mount-diagrams.mjs` so the whole series shares one hand. The system is recorded in `docs/visual-system.md`.
+
+**Why:** The owner set a non-negotiable direction: dark theme, black/gold/purple, no drift toward light or washed-out aesthetics, and section pacing inspired by an immersive reference site translated into an educational, non-cheesy register. A light ivory/teal "Editorial Mystic" asset set produced earlier conflicted with that mandate and was set aside.
+
+**Consequences:** New pages and products (including Quick Start Guide 2.0) should follow the propagation checklist in `docs/visual-system.md` and introduce no new colours. Generated imagery is used only under art direction and is rejected when it contradicts the brief or misleads educationally. The golden slice lives on `feat/visual-golden-slice` and merging to `main` requires explicit owner approval.
+
 ## 2026-08-20 - Orphan-article detection lives in `audit-links.mjs`; the blog index page is excluded as a link source
 **Decision:** Detecting blog articles with no meaningful inbound internal link is a check inside `scripts/audit-links.mjs` (`npm run audit`), reusing the link scan it already performs rather than a new standalone script. An article's own page and the `/blog/` listing page do not count as sources of a "meaningful" inbound link: self-links are excluded because they prove nothing about discoverability, and `/blog/` is excluded because it mechanically enumerates every published post regardless of an article's real connectedness — counting it would make the check pass unconditionally and provide false confidence. A page must also be indexable (per `src/indexability.mjs`) to count as a qualifying source or target.
 

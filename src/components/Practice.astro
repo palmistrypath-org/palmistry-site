@@ -21,7 +21,13 @@ const { title = 'Practice' } = Astro.props;
 const headingId = `practice-${Math.random().toString(36).slice(2, 9)}`;
 ---
 
-<section class="practice" aria-labelledby={headingId}>
+<section class="practice reveal" aria-labelledby={headingId}>
+	<svg class="practice-mark" viewBox="0 0 13 16" aria-hidden="true" fill="none">
+		<ellipse cx="6.5" cy="9" rx="5" ry="6.5" stroke="currentColor" stroke-width="0.6" opacity="0.4"/>
+		<path d="M 10 6 C 7.5 5 4 5 2.5 6.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.9"/>
+		<path d="M 2.5 9 C 5 8 8.5 8 10.5 9.5" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity="0.72"/>
+		<path d="M 7 2.5 C 6.5 4 6 6 6 9 C 6 11.5 6.5 13.5 7 15.5" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" opacity="0.6"/>
+	</svg>
 	<h2 id={headingId} class="practice-heading">{title}</h2>
 	<div class="practice-body">
 		<slot />
@@ -30,26 +36,68 @@ const headingId = `practice-${Math.random().toString(36).slice(2, 9)}`;
 
 <style>
 	.practice {
-		margin: 2.5em 0;
-		padding: 1.5em 1.75em;
-		border: 1px solid rgba(201, 169, 110, 0.35);
-		border-left: 3px solid var(--accent);
-		background-color: rgba(201, 169, 110, 0.05);
+		position: relative;
+		margin: 3em 0;
+		padding: 1.8em 1.9em 1.7em;
+		border: 1px solid var(--hairline-strong);
+		border-radius: 4px;
+		background:
+			radial-gradient(ellipse 60% 80% at 0% 0%, rgba(201, 169, 110, 0.1), transparent 70%),
+			linear-gradient(180deg, rgba(122, 72, 201, 0.06), transparent 60%),
+			var(--color-bg-elev);
+		box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+		isolation: isolate;
 	}
-
+	.practice::before {
+		content: '';
+		position: absolute;
+		top: -1px;
+		left: 12%;
+		right: 12%;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, var(--accent-light), transparent);
+	}
+	.practice-mark {
+		position: absolute;
+		top: 1.5em;
+		right: 1.5em;
+		width: 22px;
+		height: 28px;
+		color: var(--accent);
+		filter: drop-shadow(0 0 8px rgba(201, 169, 110, 0.5));
+		opacity: 0.85;
+	}
 	.practice-heading {
-		font-size: 0.95em;
-		letter-spacing: 0.12em;
+		font-size: 0.8em;
+		letter-spacing: 0.26em;
 		text-transform: uppercase;
 		color: var(--accent-light);
-		margin: 0 0 0.75em 0;
+		margin: 0 0 0.9em 0;
+		padding-top: 0;
+		text-shadow: 0 0 20px rgba(201, 169, 110, 0.3);
 	}
-
+	.practice-heading::before {
+		display: none;
+	}
 	.practice-body :global(> :first-child) {
 		margin-top: 0;
 	}
-
 	.practice-body :global(> :last-child) {
 		margin-bottom: 0;
+	}
+	.practice-body :global(p) {
+		margin-bottom: 1.2em;
+	}
+	.practice-body :global(ol),
+	.practice-body :global(ul) {
+		padding-left: 1.3em;
+	}
+	.practice-body :global(li) {
+		margin-bottom: 0.5em;
+	}
+	.practice-body :global(li::marker) {
+		color: var(--accent);
+		font-family: var(--font-cinzel), serif;
+		font-size: 0.85em;
 	}
 </style>

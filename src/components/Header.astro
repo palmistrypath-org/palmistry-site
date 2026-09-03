@@ -8,7 +8,7 @@ import HeaderLink from './HeaderLink.astro';
 	<nav aria-label="Site navigation">
 		<p class="site-title">
 		<a href="/">
-			<svg class="brand-mark" width="13" height="16" viewBox="0 0 13 16" aria-hidden="true" fill="none">
+			<svg class="brand-mark" width="16" height="20" viewBox="0 0 13 16" aria-hidden="true" fill="none">
 				<ellipse cx="6.5" cy="9" rx="5" ry="6.5" stroke="currentColor" stroke-width="0.7" opacity="0.38"/>
 				<path d="M 10 6 C 7.5 5 4 5 2.5 6.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.9"/>
 				<path d="M 2.5 9 C 5 8 8.5 8 10.5 9.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity="0.72"/>
@@ -31,10 +31,26 @@ import HeaderLink from './HeaderLink.astro';
 </header>
 <style>
 	header {
+		position: sticky;
+		top: 0;
+		z-index: 100;
 		margin: 0;
 		padding: 0 1.5em;
 		background: var(--color-header-bg);
-		border-bottom: 1px solid rgba(201, 169, 110, 0.12);
+		-webkit-backdrop-filter: blur(14px) saturate(1.2);
+		backdrop-filter: blur(14px) saturate(1.2);
+		border-bottom: 1px solid rgba(201, 169, 110, 0.14);
+	}
+	/* A hairline of light beneath the header, brighter at the centre */
+	header::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: -1px;
+		height: 1px;
+		background: linear-gradient(90deg, transparent 0%, rgba(201, 169, 110, 0.55) 50%, transparent 100%);
+		pointer-events: none;
 	}
 	.site-title {
 		margin: 0;
@@ -43,22 +59,30 @@ import HeaderLink from './HeaderLink.astro';
 	.site-title a,
 	.site-title a.active {
 		text-decoration: none;
-		color: var(--color-nav-text);
+		color: var(--accent-light);
 		font-family: var(--font-cinzel), serif;
-		letter-spacing: 0.08em;
+		letter-spacing: 0.12em;
 		display: inline-flex;
 		align-items: center;
-		gap: 0.38em;
+		gap: 0.45em;
+		text-shadow: 0 0 24px rgba(201, 169, 110, 0.25);
+		transition: text-shadow 0.4s var(--ease-out);
+	}
+	.site-title a:hover {
+		text-shadow: 0 0 32px rgba(201, 169, 110, 0.5);
 	}
 	.brand-mark {
 		flex-shrink: 0;
-		color: var(--color-nav-text);
+		color: var(--accent);
+		filter: drop-shadow(0 0 6px rgba(201, 169, 110, 0.45));
 	}
 	nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 0.5em 0;
+		padding: 0.4em 0;
+		max-width: var(--wide);
+		margin: 0 auto;
 	}
 	nav a {
 		display: inline-flex;
@@ -67,14 +91,15 @@ import HeaderLink from './HeaderLink.astro';
 		min-width: 44px;
 		min-height: 44px;
 		box-sizing: border-box;
-		padding: 0.9em 0.5em;
+		padding: 0.9em 0.6em;
 		color: var(--color-nav-text);
-		border-bottom: 2px solid transparent;
+		border-bottom: 1px solid transparent;
 		text-decoration: none;
-		font-size: 0.82em;
-		letter-spacing: 0.07em;
+		font-size: 0.78em;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
 		font-family: var(--font-cinzel), serif;
-		transition: color 0.2s ease;
+		transition: color 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
 	}
 	nav a.active {
 		border-bottom-color: var(--color-nav-hover);
@@ -84,17 +109,16 @@ import HeaderLink from './HeaderLink.astro';
 		color: var(--color-nav-hover);
 	}
 
-	/* Tablet: tighten horizontal padding */
 	@media (max-width: 720px) {
 		header {
 			padding: 0 1em;
 		}
 	}
 
-	/* Phone: compact brand row + three-column link grid */
 	@media (max-width: 600px) {
 		header {
 			padding: 0;
+			position: static;
 		}
 		nav {
 			flex-direction: column;
@@ -111,8 +135,6 @@ import HeaderLink from './HeaderLink.astro';
 			align-items: center;
 			justify-content: center;
 		}
-		/* 3-column grid: Home/Blog/Learn row 1, About/Glossary/Search row 2.
-		   No orphaned icon; every cell has an equal share of the row width. */
 		.internal-links {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
@@ -121,8 +143,8 @@ import HeaderLink from './HeaderLink.astro';
 		}
 		.internal-links a {
 			padding: 0.9em 0.4em;
-			font-size: 0.76em;
-			letter-spacing: 0.04em;
+			font-size: 0.72em;
+			letter-spacing: 0.06em;
 		}
 	}
 </style>

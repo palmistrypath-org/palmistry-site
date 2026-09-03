@@ -2,7 +2,10 @@
 
 Status: INACTIVE
 
-## Last completed
+## Last completed (2026-09-02)
+Visual golden slice on branch `feat/visual-golden-slice` — dark black/gold/purple system across homepage, Learn hub, module index, lesson template, guide page, blog layout, header/footer, plus generated mount diagram plates. Not merged; owner review pending. See `docs/visual-system.md` and the 2026-09-02 changelog entry. Exact next action if approved: propagate per the checklist in `docs/visual-system.md` (about, glossary, blog index, search, 404, legal pages), then Quick Start Guide 2.0.
+
+## Previously completed
 Remediation Batch 3D — The Thumb and the Fingers, plus the hand-shape lesson's
 retitle and texture/flexibility fold-in (2026-08-13), on branch
 `feat/curriculum-batch-3d-hand-structure`. Implemented under the new

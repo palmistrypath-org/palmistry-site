@@ -14,7 +14,8 @@ const { prevLesson, nextLesson } = Astro.props;
 ---
 
 <div class="lesson-footer">
-	<div class="complete-row" aria-label="Lesson complete">
+	<div class="footer-haze" aria-hidden="true"></div>
+	<div class="complete-row reveal" aria-label="Lesson complete">
 		<span class="complete-pip" aria-hidden="true">✦</span>
 		<span class="complete-label">Lesson complete</span>
 		<span class="complete-pip" aria-hidden="true">✦</span>
@@ -22,7 +23,7 @@ const { prevLesson, nextLesson } = Astro.props;
 
 	{
 		nextLesson ? (
-			<div class="next-block">
+			<div class="next-block reveal" style="--reveal-delay: 120ms">
 				<p class="next-eyebrow">Next</p>
 				<p class="next-title">{nextLesson.title}</p>
 				{nextLesson.description && <p class="next-desc">{nextLesson.description}</p>}
@@ -32,7 +33,7 @@ const { prevLesson, nextLesson } = Astro.props;
 				</a>
 			</div>
 		) : (
-			<div class="next-block">
+			<div class="next-block reveal" style="--reveal-delay: 120ms">
 				<p class="next-eyebrow">Module complete</p>
 				<p class="next-title">You've finished this module.</p>
 				<a href="/learn" class="btn-continue"
@@ -54,7 +55,8 @@ const { prevLesson, nextLesson } = Astro.props;
 		)
 	}
 
-	<aside class="email-card" aria-label="Free starter guide">
+	<aside class="email-card reveal" aria-label="Free starter guide">
+		<div class="email-art" aria-hidden="true"><img src="/images/guide/quick-start-cover.webp" alt="" width="900" height="1336" loading="lazy" decoding="async" /></div>
 		<div class="email-inner">
 			<p class="email-eyebrow" aria-hidden="true">✦</p>
 			<h2 class="email-title">Get the Palmistry Starter Guide</h2>
@@ -78,11 +80,28 @@ const { prevLesson, nextLesson } = Astro.props;
 
 <style>
 	.lesson-footer {
-		width: 720px;
+		position: relative;
+		isolation: isolate;
+		width: var(--measure);
 		max-width: calc(100% - 2em);
 		margin: 0 auto;
-		padding: 2.5em 1em 4em;
-		border-top: 1px solid rgba(201, 169, 110, 0.15);
+		padding: 3em 1em 5em;
+	}
+	.lesson-footer::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 15%;
+		right: 15%;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.55), transparent);
+	}
+	.footer-haze {
+		position: absolute;
+		inset: -10% -40% 0;
+		z-index: -1;
+		pointer-events: none;
+		background: radial-gradient(ellipse 50% 50% at 50% 30%, rgba(122, 72, 201, 0.14), transparent 70%);
 	}
 
 	/* ── Lesson complete marker ── */
@@ -101,8 +120,10 @@ const { prevLesson, nextLesson } = Astro.props;
 	.complete-label {
 		font-family: var(--font-cinzel), serif;
 		font-size: 0.68em;
-		letter-spacing: 0.2em;
+		letter-spacing: 0.28em;
 		text-transform: uppercase;
+		color: var(--accent-light);
+		text-shadow: 0 0 20px rgba(201, 169, 110, 0.35);
 	}
 
 	/* ── Next lesson block ── */
@@ -140,19 +161,23 @@ const { prevLesson, nextLesson } = Astro.props;
 		min-height: 44px;
 		box-sizing: border-box;
 		padding: 0.7em 1.9em;
-		background: var(--accent);
+		background: linear-gradient(180deg, var(--accent-light), var(--accent));
 		color: var(--color-bg);
 		font-family: var(--font-cinzel), serif;
 		font-size: 0.7em;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.14em;
 		text-transform: uppercase;
 		text-decoration: none;
-		border-radius: 4px;
-		transition: background 0.15s ease;
+		border-radius: 3px;
+		border: 1px solid rgba(201, 169, 110, 0.6);
+		box-shadow: 0 6px 24px rgba(201, 169, 110, 0.18);
+		transition: background 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out), transform 0.3s var(--ease-out);
 	}
 	.btn-continue:hover {
-		background: var(--accent-light);
+		background: linear-gradient(180deg, var(--accent-bright), var(--accent-light));
 		color: var(--color-bg);
+		box-shadow: 0 8px 36px rgba(201, 169, 110, 0.32);
+		transform: translateY(-1px);
 	}
 
 	/* ── Previous link ── */
@@ -175,14 +200,50 @@ const { prevLesson, nextLesson } = Astro.props;
 
 	/* ── Email capture card ── */
 	.email-card {
+		position: relative;
 		margin-top: 3.5em;
-		border: 1px solid rgba(201, 169, 110, 0.18);
-		border-radius: 10px;
-		background: rgba(255, 255, 255, 0.02);
+		border: 1px solid var(--hairline);
+		border-radius: 6px;
+		background:
+			radial-gradient(ellipse 60% 80% at 100% 50%, rgba(122, 72, 201, 0.16), transparent 70%),
+			var(--color-bg-elev);
+		display: grid;
+		grid-template-columns: 1fr 190px;
+		overflow: hidden;
+		box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+	}
+	.email-art {
+		position: relative;
+		order: 2;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		padding: 2em 1.2em 0;
+		perspective: 900px;
+	}
+	.email-art img {
+		width: 140px;
+		height: auto;
+		transform: rotateY(-14deg) rotateX(3deg) translateY(10px);
+		border-radius: 3px 6px 6px 3px;
+		box-shadow: -14px 20px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(201, 169, 110, 0.3), 0 0 50px rgba(122, 72, 201, 0.3);
 	}
 	.email-inner {
 		padding: 2em 2em 2.25em;
 		text-align: center;
+	}
+	@media (max-width: 600px) {
+		.email-card {
+			grid-template-columns: 1fr;
+		}
+		.email-art {
+			order: 0;
+			padding: 1.5em 0 0;
+		}
+		.email-art img {
+			transform: none;
+			width: 120px;
+		}
 	}
 	.email-eyebrow {
 		font-size: 0.65em;

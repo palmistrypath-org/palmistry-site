@@ -72,6 +72,24 @@ const difficultyLabel: Record<string, string> = {
 			.breadcrumb a:hover {
 				color: var(--accent);
 			}
+			main {
+				position: relative;
+				isolation: isolate;
+			}
+			main::before {
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 0;
+				width: min(1200px, 140vw);
+				height: 520px;
+				transform: translateX(-50%);
+				z-index: -1;
+				pointer-events: none;
+				background:
+					radial-gradient(ellipse 45% 60% at 50% 0%, rgba(122, 72, 201, 0.2), transparent 70%),
+					radial-gradient(ellipse 30% 40% at 50% 60%, rgba(201, 169, 110, 0.05), transparent 70%);
+			}
 			.module-header {
 				margin-bottom: 2.5em;
 			}
@@ -212,7 +230,7 @@ const difficultyLabel: Record<string, string> = {
 	<body>
 		<Header />
 		<main id="main-content" tabindex="-1">
-			<nav class="breadcrumb" aria-label="Breadcrumb">
+			<nav class="breadcrumb reveal" aria-label="Breadcrumb">
 				<a href="/learn">Learn</a>
 				{' › '}
 				<span>{mod.title}</span>
@@ -220,8 +238,8 @@ const difficultyLabel: Record<string, string> = {
 
 			<header class="module-header">
 				<p class="difficulty">{mod.difficulty}</p>
-				<h1>{mod.title}</h1>
-				<p class="description">{mod.description}</p>
+				<h1 class="display reveal" style="--reveal-delay: 120ms">{mod.title}</h1>
+				<p class="description reveal" style="--reveal-delay: 240ms">{mod.description}</p>
 			</header>
 
 			{
