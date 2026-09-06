@@ -1,0 +1,60 @@
+name: Non-Relay Merge Gate Adapter
+
+# The main ruleset requires the commit-status context `relay-merge-gate` for
+# every PR targeting main, while the existing trusted Relay Merge Gate only
+# publishes that context for `[RELAY ...]` PRs. This trusted base-branch
+# adapter makes the required check total without weakening Relay approval:
+#
+# - non-Relay PRs receive `relay-merge-gate: success` because the Relay
+#   exact-SHA approval invariant is not applicable to them;
+# - `[RELAY ...]` PRs are ignored here and continue to be evaluated only by
+#   `.github/workflows/relay-merge-gate.yml` against trusted main state.
+#
+# Security boundary: this uses `pull_request_target`, never checks out or
+# executes the PR head, and treats event metadata only as inert values.
+
+on:
+  pull_request_target:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - edited
+      - ready_for_review
+
+permissions:
+  contents: read
+  pull-requests: read
+  statuses: write
+
+concurrency:
+  group: palmistry-path-non-relay-merge-gate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  publish-not-applicable:
+    if: >-
+      github.event_name == 'pull_request_target' &&
+      !startsWith(github.event.pull_request.title, '[RELAY ')
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Publish relay-merge-gate success for non-Relay PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api \
+            --method POST \
+            -H 'Accept: application/vnd.github+json' \
+            "repos/$GH_REPO/statuses/$PR_HEAD_SHA" \
+            -f state='success' \
+            -f context='relay-merge-gate' \
+            -f description='Not a Relay PR; Relay exact-SHA approval gate is not applicable' \
+            -f target_url="$RUN_URL"
