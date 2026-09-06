@@ -2,6 +2,10 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-09-06 — Digital product suite (branch `feat/product-suite`)
+- Added the three-product download family: Quick Start Guide (free), Palm Reading Practice Journal (paid, screen + print editions), Palmistry Foundations Handbook (premium). Sources under `products/`, spec in `docs/product-suite.md`, build via `npm run build:products` (headless Chrome + PyMuPDF). No legacy guide assets reused.
+
+
 ## 2026-08-25 - Fate Line pillar and absence companion: legacy break/fragmentation cleanup, revision 2: removed an unsupported negative-outcome claim (Relay PP-RELAY-049, revision 2)
 - Revision 1 (PR #88, superseded) corrected the two pre-existing legacy defects that PP-RELAY-048's revision-3 source preflight flagged as outside its own scope: `fate-line.md`'s "Breaks and interruptions" section (with its FAQ and "Common myths" echoes) and `no-fate-line-meaning.md`'s "Broken or fragmented fate line" paragraph. Director review found one residual defect in revision 1's own new prose: the "Common myths" entry stated that Cheiro's historically verified break reading was "not with failure or ruin, and not with any fixed outcome" and that the overlapping-break reading was "not a verdict on the life as a whole" — negative claims about what Cheiro's reading excluded that the controlling evidence does not establish. Revision 2 preserves the sound revision-1 diff and corrects only that sentence.
 - `fate-line.md`'s "Common myths and oversimplifications" entry for a broken fate line no longer characterizes Cheiro's verified reading as excluding failure, ruin, or any fixed outcome. It states the accurate Cheiro association (career troubles and a lack of settled or continuous success; for an overlapping break, a complete change in surroundings and position) and separately states, as Palmistry Path's own editorial policy, that the site does not use either reading to predict or guarantee a fixed outcome — matching the FAQ answer's already-correct policy framing.

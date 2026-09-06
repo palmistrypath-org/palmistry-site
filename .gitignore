@@ -22,3 +22,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# Digital product suite build output (regenerate with npm run build:products)
+products/dist/
+products/*/build/
