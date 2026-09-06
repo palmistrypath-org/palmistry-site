@@ -1,0 +1,145 @@
+name: Palmistry Codex Director Pilot
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, ready_for_review, edited]
+    branches:
+      - main
+  push:
+    branches:
+      - main
+    paths:
+      - .ai-ops/state.json
+      - .ai-ops/tasks/CURRENT_TASK.md
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+  pull-requests: read
+  statuses: read
+
+concurrency:
+  group: palmistry-path-codex-director-phase1
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'push' ||
+      (github.event_name == 'pull_request_target' && startsWith(github.event.pull_request.title, '[RELAY '))
+    runs-on: [self-hosted, Windows, X64, codex-director]
+
+    steps:
+      - name: Check out trusted canonical main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Verify Codex runner and auth
+        shell: powershell -NoProfile -ExecutionPolicy Bypass -Command ". '{0}'"
+        run: |
+          $ErrorActionPreference = 'Stop'
+          git --version
+          gh --version
+          $codex = Join-Path $env:APPDATA 'npm\codex.cmd'
+          if (!(Test-Path $codex)) { throw "Codex CLI not found at $codex" }
+          & $codex --version
+          & $codex login status
+
+      - name: Build trusted Director event context
+        shell: powershell -NoProfile -ExecutionPolicy Bypass -Command ". '{0}'"
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BASE: ${{ github.event.pull_request.base.ref }}
+          PR_HEAD: ${{ github.event.pull_request.head.ref }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PUSH_SHA: ${{ github.sha }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          New-Item -ItemType Directory -Force -Path .ai-ops/director-runs | Out-Null
+          $lines = @(
+            '# Palmistry Codex Director Event Context',
+            '',
+            "EVENT_NAME: $env:EVENT_NAME",
+            "PUSH_SHA: $env:PUSH_SHA",
+            "PR_NUMBER: $env:PR_NUMBER",
+            "PR_TITLE: $env:PR_TITLE",
+            "PR_BASE: $env:PR_BASE",
+            "PR_HEAD: $env:PR_HEAD",
+            "PR_HEAD_SHA: $env:PR_HEAD_SHA",
+            '',
+            'The event payload is a wake-up hint only. Re-read canonical main, exact task/result identity, and live PR evidence before deciding.',
+            'Phase 1 is observation-only. Do not mutate repository or GitHub state.'
+          )
+          $lines | Set-Content -Encoding utf8 .ai-ops/director-runs/event-context.md
+
+      - name: Run Codex Director Phase 1 observation
+        shell: powershell -NoProfile -ExecutionPolicy Bypass -Command ". '{0}'"
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $basePrompt = Get-Content -Raw .ai-ops/CODEX_DIRECTOR_PROMPT.md
+          $eventContext = Get-Content -Raw .ai-ops/director-runs/event-context.md
+          $phaseRules = @(
+            '',
+            '## PHASE 1 EXECUTION RULES — OBSERVATION ONLY',
+            '',
+            'Perform the independent review now. Do not merely describe how a Director could review it.',
+            'The GitHub token is intentionally read-only. Any attempted merge, state update, rework dispatch, branch push, settings change, or worker dispatch is a Phase 1 failure.',
+            'Use `gh` only for read operations needed to inspect the live PR, files, commits, checks/statuses, and prior durable evidence.',
+            'For SOURCE_SENSITIVE work, inspect the actual changed prose and relevant approved repository sources; do not accept the worker source_preflight at face value.',
+            'For HUMAN_REQUIRED, BLOCKED, and PAUSED_USAGE_LIMIT evidence, prove the gate is preserved and state exactly why no autonomous action is permitted.',
+            'If repository/control-plane evidence is internally inconsistent, fail closed with BLOCKED or NO_ACTION rather than guessing.',
+            'Do not create synthetic worker activity merely to obtain a test case.'
+          ) -join "`n"
+          $prompt = $basePrompt + "`n`n" + $eventContext + "`n" + $phaseRules
+          $promptPath = '.ai-ops/director-runs/director-prompt.txt'
+          [System.IO.File]::WriteAllText((Join-Path $PWD $promptPath), $prompt, (New-Object System.Text.UTF8Encoding($false)))
+
+          $codex = Join-Path $env:APPDATA 'npm\codex.cmd'
+          if (!(Test-Path $codex)) { throw "Codex CLI not found at $codex" }
+          Get-Content -Raw $promptPath | & $codex exec --sandbox workspace-write -o .ai-ops/director-runs/director-result.md -
+
+      - name: Validate observation contract
+        shell: powershell -NoProfile -ExecutionPolicy Bypass -Command ". '{0}'"
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $path = '.ai-ops/director-runs/director-result.md'
+          if (!(Test-Path $path)) { throw 'Codex Director produced no observation artifact.' }
+          $text = Get-Content -Raw $path
+          $required = @(
+            'TASK:', 'REVISION:', 'RISK_CLASS:', 'TERMINAL_RESULT:', 'DECISION:',
+            'CONFIDENCE:', 'SOURCE_SENSITIVE_REVIEW:', 'EXISTING_DIRECTOR_DECISION:',
+            'AGREEMENT:', 'EVIDENCE:', 'WOULD_ACTION:', 'CONTROL_GATES:',
+            'HUMAN_ACTION_REQUIRED:', 'RATIONALE:'
+          )
+          foreach ($heading in $required) {
+            if ($text -notmatch [regex]::Escape($heading)) { throw "Observation result missing required heading: $heading" }
+          }
+
+      - name: Publish observation to job summary
+        if: always()
+        shell: powershell -NoProfile -ExecutionPolicy Bypass -Command ". '{0}'"
+        run: |
+          if (Test-Path .ai-ops/director-runs/director-result.md) {
+            Get-Content -Raw .ai-ops/director-runs/director-result.md | Add-Content -Encoding utf8 $env:GITHUB_STEP_SUMMARY
+          } else {
+            'Codex Director produced no observation artifact.' | Add-Content -Encoding utf8 $env:GITHUB_STEP_SUMMARY
+          }
+
+      - name: Upload durable Phase 1 comparison evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: palmistry-codex-director-phase1-${{ github.run_id }}
+          path: .ai-ops/director-runs/
+          if-no-files-found: warn
+          retention-days: 30
