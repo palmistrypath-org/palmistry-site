@@ -60,13 +60,16 @@ scripts/
   generate-product-emblems.mjs   cover emblems + family mark from the atlas
   generate-product-diagrams.mjs  the 46 diagram plates + 8 mount plates on the engraved hand
   build-products.mjs             assemble → Chrome print-to-pdf → paint page ground → anchor scan → contents numbers → previews
-  lib/pdf-anchors.py · pdf-paint.py · pdf-previews.py   (PyMuPDF helpers)
+  lib/pdf-anchors.py · pdf-paint.py · pdf-finish.py (outline + metadata) · pdf-previews.py   (PyMuPDF helpers)
 ```
 
 Build requirements: Google Chrome at the default Windows path (or `CHROME=` env), Python 3 with `pymupdf` and `pillow`.
 
 Build notes learned the hard way:
 - Chrome's print-to-pdf does not paint `@page` margins, so `pdf-paint.py` lays the ground colour beneath every page afterwards.
+- Fonts must be static instances (`shared/fonts/static/`, cut from the variable masters with `fontTools.varLib.instancer`): Chrome embeds a variable TTF as Type3 glyph programs, which breaks search, copy and accessibility. Every `text-shadow` must be paired with `font-variant-ligatures: none`, because Chrome prints each shadow layer as a text run and viewers cannot de-duplicate ligature glyphs (`fififive`). Check with pdfium (`pypdfium2`), not only PyMuPDF.
+- Plates are `<img>`s, so their label fonts are embedded inside each SVG as subsetted WOFF2 data URIs by `palm.mjs` (`fonts/static/plate-*.woff2`); without that they fall back to Times New Roman.
+- Anchors (`<span class="anchor" id="…">§id§</span>`) double as link targets: the build makes contents rows `<a href="#id">` overlays, Chrome writes named destinations, and `pdf-finish.py` builds the outline from the same ids.
 - Anything positioned outside the content box (even a pseudo-element haze) makes Chrome shrink the whole document to fit. Keep absolutely positioned decoration inside the column.
 - Contents page numbers come from hidden `§anchor§` markers scanned out of the first render; the build re-renders once with the numbers filled in.
 - Scene pages have no top margin, so anything after the banner must fit the page; when one spills, shrink the banner (`figure.scene { height }`) rather than the text.

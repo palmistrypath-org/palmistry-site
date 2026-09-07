@@ -109,7 +109,7 @@ out(
 					.join(''),
 		)}
 ${callout({ at: [772, 150], to: R([600, 175]), label: 'Fingers', sub: 'length, shape, set, lean', side: 'right', emph: true })}
-${callout({ at: [150, 440], to: [176, 520], label: 'Thumb', sub: 'read on its own terms', side: 'left', emph: true })}
+${callout({ at: [196, 438], to: [180, 520], label: 'Thumb', sub: 'read on its own terms', side: 'left', emph: true })}
 ${callout({ at: [772, 470], to: R([744, 533]), label: 'Mounts', sub: 'the pads beneath the fingers', side: 'right', emph: true })}
 ${callout({ at: [772, 650], to: R([700, 690]), label: 'Major lines', sub: 'heart, head, life, fate', side: 'right', emph: true })}
 ${callout({ at: [228, 820], to: R([330, 800]), label: 'Mount of Venus', sub: 'inside the life line', side: 'left', emph: true })}

@@ -24,6 +24,15 @@ export const BG = '#07050d';
 export const INK = '#8c84a8';
 export const VIOLET = '#8a5cf0';
 export const FONT = "Cinzel, 'Times New Roman', Georgia, serif";
+export const FONT_ITALIC = "Lora, Georgia, 'Times New Roman', serif";
+
+// Plates are placed with <img>, which cannot reach the page's web fonts, so the two
+// label faces travel inside every plate as subsetted data URIs (products/shared/fonts/static/plate-*).
+const fontData = (file) => 'data:font/woff2;base64,' + readFileSync(new URL(`./fonts/static/${file}`, import.meta.url)).toString('base64');
+const PLATE_FONTS = `<style>
+@font-face { font-family: 'Cinzel'; src: url(${fontData('plate-Cinzel-400.woff2')}) format('woff2'); }
+@font-face { font-family: 'Lora'; font-style: italic; src: url(${fontData('plate-Lora-Italic-400.woff2')}) format('woff2'); }
+</style>`;
 
 // Engraved shading for the hand body, embedded once per plate.
 const TEXTURE = 'data:image/jpeg;base64,' + readFileSync(new URL('./hand-texture.jpg', import.meta.url)).toString('base64');
@@ -163,6 +172,7 @@ export function remap(d) {
 
 export function defs() {
 	return `<defs>
+  ${PLATE_FONTS}
   <radialGradient id="haze" cx="50%" cy="48%" r="60%">
     <stop offset="0%" stop-color="#3a2470" stop-opacity="0.55"/>
     <stop offset="55%" stop-color="#1a1030" stop-opacity="0.35"/>
@@ -279,7 +289,7 @@ export function text(x, y, str, { anchor = 'start', size = 18, color = INK, lett
 	const tspans = parts
 		.map((t, i) => `<tspan x="${x}" dy="${i === 0 ? 0 : size * 1.2}">${escape(upper ? t.toUpperCase() : t)}</tspan>`)
 		.join('');
-	return `<text x="${x}" y="${y}" text-anchor="${anchor}" font-family="${FONT}" font-size="${size}" letter-spacing="${letter}" fill="${color}" opacity="${opacity}"${italic ? ' font-style="italic"' : ''}>${tspans}</text>`;
+	return `<text x="${x}" y="${y}" text-anchor="${anchor}" font-family="${italic ? FONT_ITALIC : FONT}" font-size="${size}" letter-spacing="${letter}" fill="${color}" opacity="${opacity}"${italic ? ' font-style="italic"' : ''}>${tspans}</text>`;
 }
 
 /** Small-caps body caption under a compare hand (not uppercase, gentler). */
@@ -325,7 +335,7 @@ export function callout({ at, to, label: rawLabel, side = 'right', emph = false,
 	const anchor = side === 'right' ? 'start' : side === 'left' ? 'end' : 'middle';
 	const sz = size ?? (emph ? 19 : 16);
 	const label = side === 'top' || side === 'bottom' ? String(rawLabel) : wrap(rawLabel, 12);
-	const sub = rawSub ? wrap(rawSub, 26) : rawSub;
+	const sub = rawSub ? wrap(rawSub, 22) : rawSub; // Lora Italic runs wider than the old fallback face
 	const lines = String(label).split('|').length;
 	let ty;
 	if (side === 'top') ty = ly - (lines - 1) * sz * 1.2;

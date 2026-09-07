@@ -2,6 +2,13 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-09-07 — Product suite: pre-release production QA
+
+- **Text layer.** Two defects made extracted/searched text wrong while the page looked right. (1) Cinzel and Lora were variable-weight TTFs, which Chrome embeds as Type3 glyph programs (no real font, poor search/accessibility); the build now uses static instances cut with fontTools (`products/shared/fonts/static/`). (2) Every `text-shadow` is printed by Chrome as extra text runs; viewers de-duplicate overlapping letters but not ligature glyphs, so shadowed words extracted as `fififive`. Shadowed elements now set `font-variant-ligatures: none`. Verified with pdfium (Chrome's viewer), PyMuPDF and pypdf: zero duplicated ligatures in all four PDFs.
+- **Plate typography.** SVG plates are placed with `<img>`, which cannot reach the page's web fonts, so every plate label had silently fallen back to Times New Roman. The two label faces now travel inside each plate as subsetted WOFF2 data URIs; italic sub-labels use Lora Italic. Sub-labels wrap at 22 characters and the hand-map thumb callout moved inward so nothing clips at the plate edge.
+- **Navigation.** Contents entries are live links (Chrome fragment links → named destinations), every product carries a PDF outline (parts → chapters / sheets) and proper metadata (title, author, subject) via `scripts/lib/pdf-finish.py`; `palmistrypath.com` mentions are clickable.
+- **Handbook chapter 8.** Two half-empty pages (46–47) came from plates that could not follow their paragraph onto the page; in the two affected sections the plate now precedes its paragraph, the chapter runs 45–50 and the book is 142 pages.
+
 ## 2026-09-06 — Product suite: engraved instructional hand
 
 - The instructional diagrams across all three products now draw on one anatomically believable engraved hand instead of the schematic wireframe: a Higgsfield reference hand traced into the atlas space, shaded by its own engraving inside the outline, with all line/mount/finger geometry refit and every variation plate carried across by thin-plate-spline remap. New generator `scripts/generate-product-diagrams.mjs` (products only; site plates untouched). Hand-shapes plate rebuilt from warped master hands.
