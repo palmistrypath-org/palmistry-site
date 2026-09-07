@@ -17,7 +17,8 @@ Pricing is not set in this document. The email roadmap (`docs/email-and-lead-mag
 ## What is fresh and what is reused
 
 - **Nothing from the legacy Quick Start Guide or `public/images/guide/` is used.** All three products were designed from the current visual system (`docs/visual-system.md` on `feat/visual-golden-slice`).
-- **Reused deliberately:** the palm atlas (`scripts/lib/palm.mjs`, copied to `products/shared/palm.mjs`), its 46 generated diagram plates and 8 mount plates, the wireframe module hands (`path-*.webp`) and the haze texture. These are the site's own generated brand assets, so the books and the site share one hand.
+- **Reused deliberately:** the palm atlas vocabulary (`products/shared/palm.mjs`, a fork of the site's `scripts/lib/palm.mjs`) and the haze texture. The atlas's line, mount and finger geometry is the same teaching content as the site's plates.
+- **Engraved instructional hand (2026-09-06 finishing pass):** the schematic wireframe hand was replaced by a traced, anatomically believable hand. One reference hand was generated with Higgsfield (`gpt_image_2`, flat orthographic left hand, palm up, no palm lines, gold engraving on black); its silhouette was traced into the atlas coordinate space as the new `HAND` path and the same image, tinted, is clipped inside the outline as shading (`products/shared/hand-texture.jpg`, embedded once per plate). Lines, mounts, minor lines and finger landmarks were refit to the new anatomy by hand; every variation path in the generator (`scripts/generate-product-diagrams.mjs`) was authored against the old hand and is warped onto the new one through a thin-plate spline (`remap()` / `remapPoint()` in `palm.mjs`), so the teaching geometry stays consistent across all 46 diagram plates and 8 mount plates. The hand-shapes plate warps the master hand by palm proportion and finger length instead of drawing rectangles. Regenerate with `node scripts/generate-product-diagrams.mjs`; the site's own plates on other branches are unaffected.
 - **New:** three cover emblems and a family mark generated from the atlas by `scripts/generate-product-emblems.mjs`; the product design system `products/shared/suite.css`; all product copy.
 - **Generated editorial art (2026-09-06 refinement):** 43 images in `products/shared/art/gen/`, made with Higgsfield (`gpt_image_2`) against the site hero as a style reference and documented in `products/shared/art/gen/PROMPTS.md`. They carry the atmosphere; the atlas plates are kept only where they teach. This trades reproducibility-from-repo for visual quality, deliberately.
 
@@ -50,13 +51,14 @@ Handbook-only: title page with an engraved frontispiece plate; every chapter ope
 
 ```
 products/
-  shared/        suite.css · palm.mjs · fonts/ · diagrams/ (46) · mounts/ (8) · art/ (emblems, family mark, haze) · art/gen/ (43 generated scenes + PROMPTS.md)
+  shared/        suite.css · palm.mjs · hand-texture.jpg · fonts/ · diagrams/ (46) · mounts/ (8) · art/ (emblems, family mark, haze) · art/gen/ (43 generated scenes + PROMPTS.md)
   quickstart/    src.html
   journal/       src.html                     (?edition=print switches to the print edition)
   handbook/      src.html · chapters/part1-4  (fragments pulled in by <!-- @include -->)
   dist/          built PDFs + previews/       (gitignored; regenerate with npm run build:products)
 scripts/
   generate-product-emblems.mjs   cover emblems + family mark from the atlas
+  generate-product-diagrams.mjs  the 46 diagram plates + 8 mount plates on the engraved hand
   build-products.mjs             assemble → Chrome print-to-pdf → paint page ground → anchor scan → contents numbers → previews
   lib/pdf-anchors.py · pdf-paint.py · pdf-previews.py   (PyMuPDF helpers)
 ```

@@ -2,6 +2,11 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-09-06 — Product suite: engraved instructional hand
+
+- The instructional diagrams across all three products now draw on one anatomically believable engraved hand instead of the schematic wireframe: a Higgsfield reference hand traced into the atlas space, shaded by its own engraving inside the outline, with all line/mount/finger geometry refit and every variation plate carried across by thin-plate-spline remap. New generator `scripts/generate-product-diagrams.mjs` (products only; site plates untouched). Hand-shapes plate rebuilt from warped master hands.
+- Journal: reference strips no longer clip their fourth plate (grid `minmax(0, 1fr)`), plates enlarged to 1.5in; the line-quality table's last column no longer wraps its heading.
+
 ## 2026-09-06 — Product suite visual refinement
 
 - Replaced the atlas-as-decoration language across the three products with 43 generated editorial scenes (Higgsfield, style-matched to the site hero): full-bleed cover art per tier, a frontispiece, part-opener scenes, a 21:9 band at the head of every Handbook chapter, scene pages in the Guide and Journal, and a constellation back cover with miniature-cover ladder. Atlas plates remain where they teach.

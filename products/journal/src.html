@@ -15,7 +15,9 @@
 	.field .lines { background-size: 100% 0.29in; background-image: repeating-linear-gradient(180deg, transparent 0, transparent calc(0.29in - 1px), var(--field-rule) calc(0.29in - 1px), var(--field-rule) 0.29in); }
 	.field .lines.l2 { height: 0.58in; } .field .lines.l3 { height: 0.87in; } .field .lines.l4 { height: 1.16in; } .field .lines.l5 { height: 1.45in; } .field .lines.l6 { height: 1.74in; }
 	.ref-strip { margin: 0.3em 0 0.6em; }
-	.ref-strip img { height: 1.3in; width: auto; max-width: 100%; margin: 0 auto; }
+	.ref-strip figure { min-width: 0; }
+	th.wide { min-width: 1.35in; }
+	.ref-strip img { width: 100%; height: 1.5in; object-fit: contain; margin: 0 auto; }
 	.observe-table td { height: 0.3in; padding: 0.45em 0.5em 0.45em 0; }
 	.session-bar { margin: 0.3em 0 0.6em; }
 	aside.panel { margin: 0.9em 0; padding: 0.16in 0.2in 0.15in; }
@@ -243,12 +245,12 @@
 	<span class="anchor">§s03§</span>
 	<div class="sheet-head"><h1>Line quality and markings</h1><div class="meta">Sheet 03<br>Before the lines</div></div>
 	<p class="intro">Every line is read first for its quality and only then for its course. Use this sheet to assess all four major lines at once, before the individual line sheets.</p>
-	<div class="ref-strip c2" style="grid-template-columns: 1fr 1fr;">
+	<div class="ref-strip c2" style="grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);">
 		<figure><img src="../../shared/diagrams/line-quality.svg" alt="Specimens of line quality: deep and clear, faint, chained, broken, feathered."><figcaption>Quality: deep · faint · chained · broken · feathered</figcaption></figure>
 		<figure><img src="../../shared/diagrams/line-markings.svg" alt="Specimens of markings on a line: island, cross bar, branch, fork, star, square."><figcaption>Markings: island · bar · branch · fork · star · square</figcaption></figure>
 	</div>
 	<table class="observe-table">
-		<thead><tr><th>Line</th><th>Depth and clarity</th><th>Continuity</th><th>Markings noticed</th></tr></thead>
+		<thead><tr><th>Line</th><th>Depth and clarity</th><th>Continuity</th><th class="wide">Markings noticed</th></tr></thead>
 		<tbody>
 			<tr><td>Heart</td><td class="opts"><span>Deep</span><span>Medium</span><span>Faint</span></td><td class="opts"><span>Whole</span><span>Chained</span><span>Broken</span></td><td></td></tr>
 			<tr><td>Head</td><td class="opts"><span>Deep</span><span>Medium</span><span>Faint</span></td><td class="opts"><span>Whole</span><span>Chained</span><span>Broken</span></td><td></td></tr>
