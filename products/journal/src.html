@@ -615,7 +615,7 @@
 		let out = '';
 		for (let i = 1; i <= n; i++) {
 			let copy = original.replace(/<span class="copy-label" data-copy><\/span>/g, `<span class="copy-label">Copy ${i} of ${n}</span>`);
-			if (i > 1) copy = copy.replace(/<span class="anchor">§[^§]+§<\/span>/g, '');
+			if (i > 1) copy = copy.replace(/<span class="anchor"[^>]*>§[^§]+§<\/span>/g, ''); // anchors carry an id after assembly; only the first copy keeps one
 			out += copy;
 		}
 		wrap.innerHTML = out;

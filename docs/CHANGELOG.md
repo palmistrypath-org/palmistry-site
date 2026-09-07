@@ -2,6 +2,13 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-09-07 — Product suite: release-candidate corrections
+
+- **Handbook Part IV opener.** `hb-part-4.jpg` had been generated landscape (2000×1131) unlike the three portrait openers, so it printed at ~103 dpi, hard-cropped, with the title over the busiest engraving. Replaced with a portrait generation (Higgsfield, same style reference and prompt prefix; quiet upper third for the title), saved in the house format (1493×2000, progressive JPEG q86).
+- **Journal contents.** Repeated templates kept their `§anchor§` in every copy (the copy script's strip regex predated the `id` the build now adds), and `pdf-anchors.py` took the last page, so three rows showed the last copy's page (27/35/38) while their links went to the first (21/30/37). Anchors are stripped from copies again and the first page an anchor appears on wins; all 16 rows agree with their links in both editions.
+- **Plate label extraction.** Tiny tracked labels extracted as `percus s ion` / `wr i s t` in pdfium because each glyph carried a kerning adjustment. The base tracking is now baked into the embedded plate fonts' advance widths (`scripts/lib/plate-fonts.py`) and `palm.mjs` emits only the remainder as `letter-spacing`; plates render pixel-identically (verified by diffing old and new renders) and labels extract whole.
+- Note: `npm run build:products` regenerates emblems from the current atlas; the approved emblems are the committed ones, so the release PDFs are built with `node scripts/build-products.mjs`.
+
 ## 2026-09-07 — Product suite: pre-release production QA
 
 - **Text layer.** Two defects made extracted/searched text wrong while the page looked right. (1) Cinzel and Lora were variable-weight TTFs, which Chrome embeds as Type3 glyph programs (no real font, poor search/accessibility); the build now uses static instances cut with fontTools (`products/shared/fonts/static/`). (2) Every `text-shadow` is printed by Chrome as extra text runs; viewers de-duplicate overlapping letters but not ligature glyphs, so shadowed words extracted as `fififive`. Shadowed elements now set `font-variant-ligatures: none`. Verified with pdfium (Chrome's viewer), PyMuPDF and pypdf: zero duplicated ligatures in all four PDFs.

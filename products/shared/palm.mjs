@@ -278,14 +278,21 @@ export function numberDisc(x, y, n, { r = 17 } = {}) {
 	return `<g>
   <circle cx="${x}" cy="${y}" r="${r + 6}" fill="${GOLD_LIGHT}" opacity="0.18" filter="url(#softBlur)"/>
   <circle cx="${x}" cy="${y}" r="${r}" fill="${BG}" stroke="${GOLD_BRIGHT}" stroke-width="1.4"/>
-  <text x="${x}" y="${y + r * 0.38}" text-anchor="middle" font-family="${FONT}" font-size="${r * 1.1}" fill="${GOLD_BRIGHT}">${n}</text>
+  <text x="${x}" y="${y + r * 0.38}" text-anchor="middle" font-family="${FONT}" font-size="${r * 1.1}" letter-spacing="${-(r * 1.1 * PLATE_TRACK.cinzel).toFixed(3)}" fill="${GOLD_BRIGHT}">${n}</text>
 </g>`;
 }
 
 /* ── Labels and leaders ───────────────────────────────────────────── */
 
+// Base tracking baked into the plate fonts' advance widths by scripts/lib/plate-fonts.py (em).
+// Labels ask for their tracking in px as before; only the remainder is emitted as letter-spacing,
+// so glyphs land exactly where they always did while PDF text extractors no longer read the
+// per-glyph kerning of tiny labels as word breaks ("percus s ion").
+const PLATE_TRACK = { cinzel: 0.11, lora: 0.09 };
+
 export function text(x, y, str, { anchor = 'start', size = 18, color = INK, letter = 2.5, italic = false, upper = true, opacity = 1 } = {}) {
 	const parts = String(str).split('|');
+	letter = +(letter - size * (italic ? PLATE_TRACK.lora : PLATE_TRACK.cinzel)).toFixed(3);
 	const tspans = parts
 		.map((t, i) => `<tspan x="${x}" dy="${i === 0 ? 0 : size * 1.2}">${escape(upper ? t.toUpperCase() : t)}</tspan>`)
 		.join('');
