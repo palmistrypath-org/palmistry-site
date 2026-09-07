@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Palmistry Path — Palm Reading Practice Journal</title>
+<link rel="stylesheet" href="../../shared/suite.css">
+<style>
+	body { font-size: 9.6pt; }
+	.sheet-head { padding-bottom: 0.4em; margin-bottom: 0.6em; }
+	.sheet-head h1 { font-size: 18pt; }
+	.sheet .intro { font-size: 9.4pt; margin-bottom: 0.7em; }
+	figure.plate { padding: 0.16in; margin: 0.7em auto 0.9em; }
+	figure.plate img { max-height: 2.5in; }
+	.field { margin: 0.3em 0 0.5em; }
+	.field .lines { background-size: 100% 0.29in; background-image: repeating-linear-gradient(180deg, transparent 0, transparent calc(0.29in - 1px), var(--field-rule) calc(0.29in - 1px), var(--field-rule) 0.29in); }
+	.field .lines.l2 { height: 0.58in; } .field .lines.l3 { height: 0.87in; } .field .lines.l4 { height: 1.16in; } .field .lines.l5 { height: 1.45in; } .field .lines.l6 { height: 1.74in; }
+	.ref-strip { margin: 0.3em 0 0.6em; }
+	.ref-strip figure { min-width: 0; }
+	th.wide { min-width: 1.35in; }
+	.ref-strip img { width: 100%; height: 1.5in; object-fit: contain; margin: 0 auto; }
+	.observe-table td { height: 0.3in; padding: 0.45em 0.5em 0.45em 0; }
+	.session-bar { margin: 0.3em 0 0.6em; }
+	aside.panel { margin: 0.9em 0; padding: 0.16in 0.2in 0.15in; }
+	.sketch.h-tall { height: 5.3in; }
+	.legend { display: grid; grid-template-columns: 1fr 1fr; gap: 0.1in 0.3in; font-size: 9pt; color: var(--ink-soft); margin: 0.5em 0 0.9em; }
+	.legend b { color: var(--gold-light); font-family: var(--font-display); font-size: 7.8pt; letter-spacing: 0.14em; text-transform: uppercase; }
+	.compare { display: grid; grid-template-columns: 1.1in 1fr 1fr; gap: 0 0.18in; align-items: stretch; }
+	.compare .h { font-family: var(--font-display); font-size: 7.6pt; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); padding-bottom: 0.3em; border-bottom: 1px solid var(--hairline-strong); margin-bottom: 0.2em; }
+	.compare .k { font-family: var(--font-display); font-size: 8pt; letter-spacing: 0.08em; color: var(--gold-light); padding: 0.55em 0; border-bottom: 1px solid var(--field-rule); }
+	.compare .c { border-bottom: 1px solid var(--field-rule); min-height: 0.62in; }
+	.compare .c.tall { min-height: 0.95in; }
+	.contents-note { font-size: 9pt; color: var(--ink-muted); margin-top: 1.2em; }
+	.copy-label { position: absolute; right: 0; top: -0.05in; font-family: var(--font-display); font-size: 7.4pt; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-muted); }
+	.sheet-head { position: relative; }
+	.session-bar { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 0.2in; margin: 0.4em 0 0.8em; }
+	.session-bar .field { margin: 0; }
+	.session-bar .lines { height: 0.32in; }
+	.week { display: grid; grid-template-columns: 0.55in 1fr 1fr 1fr; border-bottom: 1px solid var(--field-rule); }
+	.week > div { padding: 0.32em 0.3em 0.32em 0; min-height: 0.5in; }
+	.week .w { font-family: var(--font-display); font-size: 8.2pt; color: var(--gold-light); letter-spacing: 0.08em; }
+	.week.head { border-bottom: 1px solid var(--hairline-strong); }
+	.week.head > div { min-height: 0; font-family: var(--font-display); font-size: 7.4pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); padding-bottom: 0.4em; }
+	.index-row { display: grid; grid-template-columns: 0.9in 1.5fr 1fr 0.7in 0.5in; gap: 0.15in; border-bottom: 1px solid var(--field-rule); min-height: 0.36in; align-items: end; padding-bottom: 0.15em; }
+	.index-row.head { border-bottom: 1px solid var(--hairline-strong); font-family: var(--font-display); font-size: 7.4pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); min-height: 0; padding-bottom: 0.4em; }
+	.scene-page figure.scene { height: 2.45in; margin-bottom: 0.32in; }
+</style>
+</head>
+<body>
+<script>
+	if (new URLSearchParams(location.search).get('edition') === 'print') {
+		document.documentElement.classList.add('print-edition');
+		document.addEventListener('DOMContentLoaded', () => document.body.classList.add('print-edition'));
+	}
+</script>
+<span class="product-name">Practice Journal</span>
+<span class="running">Palmistry Path</span>
+
+<!-- ===================== COVER ===================== -->
+<section class="bleed cover cover--journal">
+	<div class="art"><img src="../../shared/art/gen/cover-journal.jpg" alt=""></div>
+	<div class="haze"></div>
+	<div class="frame"><i class="tick tl"></i><i class="tick tr"></i><i class="tick bl"></i><i class="tick br"></i></div>
+	<div class="volume">II &nbsp;·&nbsp; Practice Journal</div>
+	<div class="inner">
+		<div class="brand">Palmistry Path</div>
+		<div class="brand-rule"></div>
+		<div class="tier"><b>Palm Reading Practice Journal</b></div>
+		<h1 class="title">Look. Describe. Hold It Lightly.</h1>
+		<p class="subtitle">Guided observation sheets, reading templates, and reflection pages for learning palmistry by doing it.</p>
+		<div class="foot">
+			<div class="seal"><img src="../../shared/art/emblem-journal.svg" alt=""></div>
+			<div class="tagline">Read the lines. Discover the path.</div>
+			<div class="site"><a class="u" href="https://palmistrypath.com/">palmistrypath.com</a></div>
+		</div>
+	</div>
+</section>
+
+<!-- ===================== WELCOME ===================== -->
+<section class="scene-page">
+	<figure class="scene"><img src="../../shared/art/gen/journal-welcome.jpg" alt=""></figure>
+	<div class="col">
+	<span class="anchor">§welcome§</span>
+	<p class="eyebrow">Before you begin</p>
+	<h1 class="display">A journal for looking</h1>
+	<p class="lede">Reading about a palm line is not the same as finding it on a living hand. This journal exists to close that gap, one sheet at a time.</p>
+	<hr class="divider-star">
+	<p class="dropcap">Everything in these pages asks you to do the same three things in the same order. Look, carefully and in good light. Describe what you see in plain words, before you reach for any meaning. Then, and only then, offer an interpretation, phrased so that it can be wrong. The sheets are structured to make the first two steps unavoidable, because they are the steps beginners skip.</p>
+	<p>The journal has three parts. <strong>Part one</strong> is a set of guided observation sheets, one for each region of the hand, from the whole hand down to the minor lines. Work through them once on your own hands, slowly. <strong>Part two</strong> is the reading templates: a full reading template, with three copies, and a quick reading log with six. <strong>Part three</strong> is for reflection: what you are learning about your own looking, a twelve-week practice tracker, and an index of every reading you make.</p>
+	<div class="two-col">
+		<aside class="panel panel--gold">
+			<h3>How to use it</h3>
+			<ul>
+				<li>Print the sheets you need, or write on a tablet. The print edition of this journal uses light paper to save ink.</li>
+				<li>Do the observation sheets on your own hands first, then on a willing friend's.</li>
+				<li>Use pencil. You will want to revise.</li>
+				<li>Fill the reading templates only after the observation sheets for that hand are done.</li>
+			</ul>
+		</aside>
+		<aside class="panel panel--violet">
+			<h3>What this journal is not</h3>
+			<p>It is not a reference of meanings, and it will not tell you what a hand "says". Where a sheet offers traditional associations, they are prompts for your own careful sentence, not answers. Nothing here predicts the future or bears on health, money, law, or love.</p>
+		</aside>
+	</div>
+	<p class="small">The Quick Start Guide gives the orientation this journal assumes: the map of the hand and the first three lines. The Foundations Handbook gives the full course behind every sheet. Both are at <a class="u" href="https://palmistrypath.com/">palmistrypath.com</a>.</p>
+	</div>
+</section>
+
+<!-- ===================== THE METHOD ===================== -->
+<section class="page-break">
+	<span class="anchor">§method§</span>
+	<p class="eyebrow">The method</p>
+	<h1>Look · Describe · Hold it lightly</h1>
+	<p class="lede">Three moves, in order, on every sheet.</p>
+	<div class="method">
+		<div class="step"><div class="k">I · Look</div><p>Angled light. Both hands. The whole hand before any part. Find the feature on the actual hand before you write a word about it.</p></div>
+		<div class="step"><div class="k">II · Describe</div><p>Plain language only: where it begins, where it ends, its course, its depth, its clarity. "A deep curve ending between the first two fingers." No meanings yet.</p></div>
+		<div class="step"><div class="k">III · Hold it lightly</div><p>Now the traditional reading, in its own words: <em>traditionally associated with</em>, <em>often interpreted as</em>, <em>may suggest</em>. Then ask what the rest of the hand says.</p></div>
+	</div>
+	<figure class="plate plate--inset">
+		<img src="../../shared/diagrams/reading-sequence.svg" alt="A palm annotated with the order a reading moves through: the whole hand first, then shape, fingers and thumb, the major lines, the mounts, and finally the minor lines.">
+		<figcaption>The reading sequence. The observation sheets in part one follow this order.</figcaption>
+	</figure>
+	<h2>Three habits worth keeping</h2>
+	<ul>
+		<li><strong>Write the boring sentence first.</strong> Every interpretive leap in this journal is preceded by a description field. Fill it. The description is the reading; the interpretation is commentary on it.</li>
+		<li><strong>Name what stands out.</strong> Each sheet asks for the single most striking feature before anything systematic. A reading that ignores the obvious has gone wrong before it started.</li>
+		<li><strong>Let features disagree.</strong> A warm heart line on a reserved hand is not a contradiction to resolve. It is an observation to record. The full reading template gives you a place to hold both.</li>
+	</ul>
+</section>
+
+<!-- ===================== CONTENTS ===================== -->
+<section class="page-break toc">
+	<span class="anchor">§contents§</span>
+	<p class="eyebrow">Contents</p>
+	<h1>What is in this journal</h1>
+	<div class="part">Part one · Observation sheets</div>
+	<ol>
+		<li><span class="n">01</span><span class="t">Hand observation</span><span class="dots"></span><span class="p" data-for="s01"></span></li>
+		<li><span class="n">02</span><span class="t">Hand shape, fingers, and thumb</span><span class="dots"></span><span class="p" data-for="s02"></span></li>
+		<li><span class="n">03</span><span class="t">Line quality and markings</span><span class="dots"></span><span class="p" data-for="s03"></span></li>
+		<li><span class="n">04</span><span class="t">The heart line</span><span class="dots"></span><span class="p" data-for="s04"></span></li>
+		<li><span class="n">05</span><span class="t">The head line</span><span class="dots"></span><span class="p" data-for="s05"></span></li>
+		<li><span class="n">06</span><span class="t">The life line</span><span class="dots"></span><span class="p" data-for="s06"></span></li>
+		<li><span class="n">07</span><span class="t">The fate line</span><span class="dots"></span><span class="p" data-for="s07"></span></li>
+		<li><span class="n">08</span><span class="t">The mounts</span><span class="dots"></span><span class="p" data-for="s08"></span></li>
+		<li><span class="n">09</span><span class="t">Minor lines survey</span><span class="dots"></span><span class="p" data-for="s09"></span></li>
+		<li><span class="n">10</span><span class="t">Two-hand comparison</span><span class="dots"></span><span class="p" data-for="s10"></span></li>
+	</ol>
+	<div class="part">Part two · Reading templates</div>
+	<ol>
+		<li><span class="n">11</span><span class="t">Full reading template (three copies)</span><span class="dots"></span><span class="p" data-for="s11"></span></li>
+		<li><span class="n">12</span><span class="t">Quick reading log (six copies)</span><span class="dots"></span><span class="p" data-for="s12"></span></li>
+	</ol>
+	<div class="part">Part three · Reflection and progress</div>
+	<ol>
+		<li><span class="n">13</span><span class="t">Reflection pages</span><span class="dots"></span><span class="p" data-for="s13"></span></li>
+		<li><span class="n">14</span><span class="t">Twelve-week practice tracker</span><span class="dots"></span><span class="p" data-for="s14"></span></li>
+		<li><span class="n">15</span><span class="t">Reading index</span><span class="dots"></span><span class="p" data-for="s15"></span></li>
+		<li><span class="n">16</span><span class="t">Phrasing guide and quick glossary</span><span class="dots"></span><span class="p" data-for="s16"></span></li>
+	</ol>
+	<p class="contents-note">Sheets are designed to be printed individually. Every sheet carries its own number and title so loose pages stay findable.</p>
+</section>
+
+<!-- ===================== PART I OPENER ===================== -->
+<section class="bleed part-open">
+	<img class="part-art" src="../../shared/art/gen/journal-part-1.jpg" alt="">
+	<div class="part-veil"></div>
+	<div class="part-head">
+		<div class="numeral">I</div>
+		<h1>Observation Sheets</h1>
+		<p class="lede">Ten guided sheets that take a hand in the order a reading does: the whole, the shape, the lines, the mounts, the details. Work through them once on your own hands before you use them on anyone else's.</p>
+	</div>
+	<div></div>
+</section>
+
+<!-- ===================== SHEET 01: HAND OBSERVATION ===================== -->
+<section class="sheet">
+	<span class="anchor">§s01§</span>
+	<div class="sheet-head"><h1>Hand observation</h1><div class="meta">Sheet 01<br>The whole hand</div></div>
+	<p class="intro">Before a single line: the hand as an object. Trace or sketch it, then record what you can see and feel. Description only on this sheet.</p>
+	<div class="session-bar">
+		<div class="field"><label>Whose hand</label><div class="lines"></div></div>
+		<div class="field"><label>Date</label><div class="lines"></div></div>
+		<div class="field"><label>Hand</label><div class="choices"><span>Active</span><span>Passive</span></div></div>
+		<div class="field"><label>Light</label><div class="choices"><span>Lamp</span><span>Day</span></div></div>
+	</div>
+	<div class="sketch h-tall"><span class="corner">Trace or sketch · palm up</span><img src="../../shared/diagrams/hand-map.svg" alt=""></div>
+	<div class="field-row c2">
+		<div class="field"><label>Size and proportion</label><div class="hint">Palm square or long? Fingers long or short against it? Broad or narrow?</div><div class="lines l3"></div></div>
+		<div class="field"><label>Colour and temperature</label><div class="hint">Pale, pink, ruddy? Cool, warm? Dry, moist?</div><div class="lines l3"></div></div>
+	</div>
+</section>
+<section class="sheet">
+	<div class="sheet-head"><h1>Hand observation</h1><div class="meta">Sheet 01 · continued<br>The whole hand</div></div>
+	<div class="field"><label>Texture</label><div class="choices"><span>Fine</span><span>Medium</span><span>Coarse</span></div><div class="hint">Skin fine and silky, or coarse and grained? Describe rather than judge.</div><div class="lines l2"></div></div>
+	<div class="field"><label>Consistency</label><div class="choices"><span>Soft</span><span>Elastic</span><span>Firm</span><span>Hard</span></div><div class="hint">Press the palm gently. Does it give and spring back, or resist?</div><div class="lines l2"></div></div>
+	<div class="field"><label>Flexibility</label><div class="choices"><span>Bends back easily</span><span>Bends a little</span><span>Stiff</span></div><div class="hint">Press the fingers gently backward. Note the thumb separately on sheet 02.</div><div class="lines l2"></div></div>
+	<div class="field"><label>How the hand is held</label><div class="hint">At rest, are the fingers close together or spread? Is the thumb held near the palm or angled away? Does the hand open fully?</div><div class="lines l3"></div></div>
+	<div class="field"><label>Before looking at lines: what stands out most about this hand?</label><div class="lines l4"></div></div>
+	<aside class="panel panel--gold"><h3>Hold it lightly</h3><p>Nothing on this sheet needs interpreting yet. When you reach the reading templates, these observations will be the ground every line is read against. A line means something different on a broad, firm hand than on a narrow, soft one.</p></aside>
+</section>
+
+<!-- ===================== SHEET 02: SHAPE, FINGERS, THUMB ===================== -->
+<section class="sheet">
+	<span class="anchor">§s02§</span>
+	<div class="sheet-head"><h1>Hand shape, fingers, and thumb</h1><div class="meta">Sheet 02<br>Shape and structure</div></div>
+	<p class="intro">The four elemental shapes of modern Western practice, then the fingers by name and the thumb on its own terms.</p>
+	<div class="ref-strip c3">
+		<figure><img src="../../shared/diagrams/hand-shapes.svg" alt="Four hand outlines: earth, air, fire, and water shapes."><figcaption>Earth · Air · Fire · Water</figcaption></figure>
+		<figure><img src="../../shared/diagrams/finger-names.svg" alt="A palm with the fingers labelled Jupiter, Saturn, Apollo, and Mercury."><figcaption>Finger names</figcaption></figure>
+		<figure><img src="../../shared/diagrams/thumb-phalanges.svg" alt="A thumb with its two visible sections labelled."><figcaption>Thumb sections</figcaption></figure>
+	</div>
+	<div class="field"><label>Palm</label><div class="choices"><span>Square (about as long as wide)</span><span>Long (clearly longer than wide)</span></div></div>
+	<div class="field"><label>Fingers against the palm</label><div class="choices"><span>Short (middle finger clearly shorter than palm)</span><span>Long (about as long as palm)</span></div></div>
+	<div class="field"><label>Shape</label><div class="choices circles"><span>Earth · square, short</span><span>Air · square, long</span><span>Fire · long, short</span><span>Water · long, long</span><span>Mixed</span></div><div class="hint">What led you to this classification? If mixed, which two, and which leads?</div><div class="lines l3"></div></div>
+	<table class="observe-table">
+		<thead><tr><th>Finger</th><th>Length against its neighbours</th><th>Set, lean, and notes</th></tr></thead>
+		<tbody>
+			<tr><td>Jupiter · index</td><td class="opts"><span>Short</span><span>Average</span><span>Long</span></td><td></td></tr>
+			<tr><td>Saturn · middle</td><td class="opts"><span>Short</span><span>Average</span><span>Long</span></td><td></td></tr>
+			<tr><td>Apollo · ring</td><td class="opts"><span>Short</span><span>Average</span><span>Long</span></td><td></td></tr>
+			<tr><td>Mercury · little</td><td class="opts"><span>Short</span><span>Average</span><span>Long</span></td><td></td></tr>
+		</tbody>
+	</table>
+</section>
+<section class="sheet">
+	<div class="sheet-head"><h1>Hand shape, fingers, and thumb</h1><div class="meta">Sheet 02 · continued<br>The thumb</div></div>
+	<p class="intro">Traditions agree the thumb deserves its own reading. Record its size, its sections, its angle, and how it moves.</p>
+	<div class="field-row c2">
+		<div class="field"><label>Thumb length</label><div class="hint">Held against the palm, where does the tip reach on the index finger?</div><div class="choices"><span>Below the base joint</span><span>To the base joint</span><span>Toward the middle joint</span></div></div>
+		<div class="field"><label>Angle of opening</label><div class="hint">Relaxed, how far does the thumb sit from the palm?</div><div class="choices"><span>Close</span><span>Moderate</span><span>Wide</span></div></div>
+	</div>
+	<div class="field-row c2">
+		<div class="field"><label>Tip section (traditionally, will)</label><div class="choices"><span>Shorter</span><span>Equal</span><span>Longer</span></div><div class="lines l2"></div></div>
+		<div class="field"><label>Second section (traditionally, reasoning)</label><div class="choices"><span>Shorter</span><span>Equal</span><span>Longer</span></div><div class="lines l2"></div></div>
+	</div>
+	<div class="field"><label>Flexibility of the thumb</label><div class="choices"><span>Tip bends back easily</span><span>Bends a little</span><span>Stiff</span></div><div class="lines l2"></div></div>
+	<div class="field"><label>Fingertips and nails</label><div class="hint">Tips rounded, square, pointed, spatulate? Nails long or short, broad or narrow? Describe; do not diagnose.</div><div class="lines l3"></div></div>
+	<div class="field"><label>Description in one paragraph</label><div class="hint">Shape, fingers, thumb. Plain words only.</div><div class="lines l4"></div></div>
+	<div class="field"><label>Traditional associations, held lightly</label><div class="hint">"The square palm with short fingers is traditionally associated with…". One or two sentences.</div><div class="lines l3"></div></div>
+</section>
+
+<!-- ===================== SHEET 03: LINE QUALITY ===================== -->
+<section class="sheet">
+	<span class="anchor">§s03§</span>
+	<div class="sheet-head"><h1>Line quality and markings</h1><div class="meta">Sheet 03<br>Before the lines</div></div>
+	<p class="intro">Every line is read first for its quality and only then for its course. Use this sheet to assess all four major lines at once, before the individual line sheets.</p>
+	<div class="ref-strip c2" style="grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);">
+		<figure><img src="../../shared/diagrams/line-quality.svg" alt="Specimens of line quality: deep and clear, faint, chained, broken, feathered."><figcaption>Quality: deep · faint · chained · broken · feathered</figcaption></figure>
+		<figure><img src="../../shared/diagrams/line-markings.svg" alt="Specimens of markings on a line: island, cross bar, branch, fork, star, square."><figcaption>Markings: island · bar · branch · fork · star · square</figcaption></figure>
+	</div>
+	<table class="observe-table">
+		<thead><tr><th>Line</th><th>Depth and clarity</th><th>Continuity</th><th class="wide">Markings noticed</th></tr></thead>
+		<tbody>
+			<tr><td>Heart</td><td class="opts"><span>Deep</span><span>Medium</span><span>Faint</span></td><td class="opts"><span>Whole</span><span>Chained</span><span>Broken</span></td><td></td></tr>
+			<tr><td>Head</td><td class="opts"><span>Deep</span><span>Medium</span><span>Faint</span></td><td class="opts"><span>Whole</span><span>Chained</span><span>Broken</span></td><td></td></tr>
+			<tr><td>Life</td><td class="opts"><span>Deep</span><span>Medium</span><span>Faint</span></td><td class="opts"><span>Whole</span><span>Chained</span><span>Broken</span></td><td></td></tr>
+			<tr><td>Fate</td><td class="opts"><span>Deep</span><span>Medium</span><span>Faint</span><span>Absent</span></td><td class="opts"><span>Whole</span><span>Chained</span><span>Broken</span></td><td></td></tr>
+		</tbody>
+	</table>
+	<div class="field"><label>Which line is the clearest on this hand, and which the faintest?</label><div class="lines l2"></div></div>
+	<div class="field"><label>Overall impression of the lines</label><div class="hint">Few and deep? Many and fine? A palm crowded with small lines, or a quiet one?</div><div class="lines l3"></div></div>
+	<aside class="panel panel--violet"><h3>Hold it lightly</h3><p>A less clear line is read in every tradition as a matter of quality, not fate. Chaining, islands, and breaks describe how a line is drawn, and are traditionally interpreted as variation or unsettledness in what the line is associated with, never as an event or a warning.</p></aside>
+</section>
+
+<!-- ===================== SHEET 04: HEART ===================== -->
+<section class="sheet">
+	<span class="anchor">§s04§</span>
+	<div class="sheet-head"><h1>The heart line</h1><div class="meta">Sheet 04<br>Major lines</div></div>
+	<p class="intro">Beneath the fingers, from the outer edge toward the index finger. Find it on the hand first.</p>
+	<div class="ref-strip">
+		<figure><img src="../../shared/diagrams/heart-line.svg" alt="The heart line lit on a palm."><figcaption>The line</figcaption></figure>
+		<figure><img src="../../shared/diagrams/heart-line-endings.svg" alt="Three heart line endings compared."><figcaption>Endings</figcaption></figure>
+		<figure><img src="../../shared/diagrams/heart-line-curve.svg" alt="Curved and straight heart lines compared."><figcaption>Curve</figcaption></figure>
+		<figure><img src="../../shared/diagrams/heart-line-forked.svg" alt="A heart line ending in a fork."><figcaption>Forked ending</figcaption></figure>
+	</div>
+	<div class="field"><label>Ending</label><div class="choices"><span>Under the index finger</span><span>Between index and middle</span><span>Under the middle finger</span><span>Elsewhere</span></div></div>
+	<div class="field"><label>Course</label><div class="choices"><span>Curves up toward the fingers</span><span>Runs fairly straight</span><span>Rises steeply</span></div></div>
+	<div class="field"><label>Ending form</label><div class="choices"><span>Single</span><span>Forked</span><span>Frayed or feathered</span><span>Touches the head line</span></div></div>
+	<div class="field"><label>Describe it</label><div class="hint">Origin, ending, curve, depth, clarity, any markings. No meanings.</div><div class="lines l4"></div></div>
+	<div class="field"><label>Traditionally associated with</label><div class="hint">Write the traditional reading in the traditional words. "A heart line ending between the first two fingers is often interpreted as…"</div><div class="lines l3"></div></div>
+	<div class="field"><label>Does the rest of the hand agree?</label><div class="lines l2"></div></div>
+</section>
+
+<!-- ===================== SHEET 05: HEAD ===================== -->
+<section class="sheet">
+	<span class="anchor">§s05§</span>
+	<div class="sheet-head"><h1>The head line</h1><div class="meta">Sheet 05<br>Major lines</div></div>
+	<p class="intro">Across the middle of the palm, beginning on the thumb side. Note first whether it starts joined to the life line.</p>
+	<div class="ref-strip">
+		<figure><img src="../../shared/diagrams/head-line.svg" alt="The head line lit on a palm."><figcaption>The line</figcaption></figure>
+		<figure><img src="../../shared/diagrams/head-line-origin.svg" alt="Head lines joined to and separate from the life line."><figcaption>Origin</figcaption></figure>
+		<figure><img src="../../shared/diagrams/head-line-path.svg" alt="Straight and sloping head lines compared."><figcaption>Course</figcaption></figure>
+		<figure><img src="../../shared/diagrams/head-line-length.svg" alt="Short and long head lines compared."><figcaption>Length</figcaption></figure>
+	</div>
+	<div class="field"><label>Origin</label><div class="choices"><span>Joined to the life line</span><span>Touching, then separating</span><span>Separate, with a gap</span></div></div>
+	<div class="field"><label>Course</label><div class="choices"><span>Straight across</span><span>Gently sloping</span><span>Slopes steeply toward Luna</span><span>Rises</span></div></div>
+	<div class="field"><label>Length and ending</label><div class="choices"><span>Stops mid-palm</span><span>Reaches toward the percussion</span><span>Forked</span></div></div>
+	<div class="field"><label>Describe it</label><div class="hint">Origin, course, length, depth, clarity, markings. No meanings.</div><div class="lines l4"></div></div>
+	<div class="field"><label>Traditionally associated with</label><div class="lines l3"></div></div>
+	<div class="field"><label>Does the rest of the hand agree?</label><div class="lines l2"></div></div>
+</section>
+
+<!-- ===================== SHEET 06: LIFE ===================== -->
+<section class="sheet">
+	<span class="anchor">§s06§</span>
+	<div class="sheet-head"><h1>The life line</h1><div class="meta">Sheet 06<br>Major lines</div></div>
+	<p class="intro">The arc around the ball of the thumb. Read for the quality of vitality. It is not, and has never been, a measure of lifespan.</p>
+	<div class="ref-strip">
+		<figure><img src="../../shared/diagrams/life-line.svg" alt="The life line lit on a palm."><figcaption>The line</figcaption></figure>
+		<figure><img src="../../shared/diagrams/life-line-arc.svg" alt="Wide and narrow life line arcs compared."><figcaption>Sweep</figcaption></figure>
+		<figure><img src="../../shared/diagrams/life-line-break.svg" alt="A life line with a break and an overlapping segment."><figcaption>Break</figcaption></figure>
+		<figure><img src="../../shared/diagrams/life-line-double.svg" alt="A life line with a second inner line beside it."><figcaption>Inner line</figcaption></figure>
+	</div>
+	<div class="field"><label>Sweep</label><div class="choices"><span>Wide, well out into the palm</span><span>Moderate</span><span>Tight, hugging the thumb</span></div></div>
+	<div class="field"><label>Origin and ending</label><div class="choices"><span>Begins joined to head line</span><span>Begins separate</span><span>Ends toward the wrist</span><span>Ends curving into the palm</span></div></div>
+	<div class="field"><label>Features</label><div class="choices"><span>Break with overlap</span><span>Island</span><span>Inner parallel line</span><span>Branches</span><span>None</span></div></div>
+	<div class="field"><label>Describe it</label><div class="hint">Sweep, depth, continuity, ending, the fullness of the Mount of Venus it encloses. No meanings.</div><div class="lines l4"></div></div>
+	<div class="field"><label>Traditionally associated with</label><div class="lines l3"></div></div>
+	<div class="field"><label>Does the rest of the hand agree?</label><div class="lines l2"></div></div>
+</section>
+
+<!-- ===================== SHEET 07: FATE ===================== -->
+<section class="sheet">
+	<span class="anchor">§s07§</span>
+	<div class="sheet-head"><h1>The fate line</h1><div class="meta">Sheet 07<br>Major lines</div></div>
+	<p class="intro">Up the centre of the palm toward the middle finger. Fully present on some hands, fragmentary on others, absent on many. Absence is not read as lack.</p>
+	<div class="ref-strip">
+		<figure><img src="../../shared/diagrams/fate-line-presence.svg" alt="Palms with a full, partial, and absent fate line."><figcaption>Presence</figcaption></figure>
+		<figure><img src="../../shared/diagrams/fate-line-origins.svg" alt="Fate lines rising from the wrist, from the life line, and from the Mount of Luna."><figcaption>Origins</figcaption></figure>
+		<figure><img src="../../shared/diagrams/fate-line-endings.svg" alt="Fate lines ending at the head line, the heart line, and under the middle finger."><figcaption>Endings</figcaption></figure>
+		<figure><img src="../../shared/diagrams/fate-line-broken.svg" alt="A fate line broken into segments."><figcaption>Broken</figcaption></figure>
+	</div>
+	<div class="field"><label>Presence</label><div class="choices"><span>Full length</span><span>Partial</span><span>Fragments</span><span>Absent</span></div></div>
+	<div class="field"><label>Origin</label><div class="choices"><span>From the wrist</span><span>From inside the life line</span><span>From the Mount of Luna</span><span>Mid-palm</span></div></div>
+	<div class="field"><label>Ending</label><div class="choices"><span>At the head line</span><span>At the heart line</span><span>Under the middle finger</span><span>Toward the index finger</span></div></div>
+	<div class="field"><label>Describe it</label><div class="hint">If absent, say so and move on. Otherwise: origin, course, ending, depth, breaks.</div><div class="lines l4"></div></div>
+	<div class="field"><label>Traditionally associated with</label><div class="hint">The fate line needs more context than any other. Read it after the head and life lines, and say which of them it relates to.</div><div class="lines l3"></div></div>
+	<div class="field"><label>Does the rest of the hand agree?</label><div class="lines l2"></div></div>
+</section>
+
+<!-- ===================== SHEET 08: MOUNTS ===================== -->
+<section class="sheet">
+	<span class="anchor">§s08§</span>
+	<div class="sheet-head"><h1>The mounts</h1><div class="meta">Sheet 08<br>The landscape</div></div>
+	<p class="intro">The fleshy pads beneath the fingers and around the palm. Read them by touch as much as by sight: fullness, firmness, and where the pad actually sits.</p>
+	<figure class="plate plate--inset">
+		<img src="../../shared/mounts/mounts-overview.svg" alt="A palm with the mounts labelled: Jupiter, Saturn, Apollo, and Mercury beneath the fingers, Venus at the thumb, Luna opposite, Upper and Lower Mars at the sides, and the Plain of Mars in the centre.">
+		<figcaption>The eight regions of the mount system.</figcaption>
+	</figure>
+	<table class="observe-table">
+		<thead><tr><th>Mount</th><th>Fullness</th><th>Firmness</th><th>Notes: centred, displaced, marked</th></tr></thead>
+		<tbody>
+			<tr><td>Jupiter · under index</td><td class="opts"><span>Flat</span><span>Moderate</span><span>Full</span></td><td class="opts"><span>Soft</span><span>Firm</span></td><td></td></tr>
+			<tr><td>Saturn · under middle</td><td class="opts"><span>Flat</span><span>Moderate</span><span>Full</span></td><td class="opts"><span>Soft</span><span>Firm</span></td><td></td></tr>
+			<tr><td>Apollo · under ring</td><td class="opts"><span>Flat</span><span>Moderate</span><span>Full</span></td><td class="opts"><span>Soft</span><span>Firm</span></td><td></td></tr>
+			<tr><td>Mercury · under little</td><td class="opts"><span>Flat</span><span>Moderate</span><span>Full</span></td><td class="opts"><span>Soft</span><span>Firm</span></td><td></td></tr>
+			<tr><td>Venus · ball of thumb</td><td class="opts"><span>Flat</span><span>Moderate</span><span>Full</span></td><td class="opts"><span>Soft</span><span>Firm</span></td><td></td></tr>
+			<tr><td>Luna · outer heel</td><td class="opts"><span>Flat</span><span>Moderate</span><span>Full</span></td><td class="opts"><span>Soft</span><span>Firm</span></td><td></td></tr>
+			<tr><td>Upper Mars · outer side</td><td class="opts"><span>Flat</span><span>Moderate</span><span>Full</span></td><td class="opts"><span>Soft</span><span>Firm</span></td><td></td></tr>
+			<tr><td>Lower Mars · inside thumb</td><td class="opts"><span>Flat</span><span>Moderate</span><span>Full</span></td><td class="opts"><span>Soft</span><span>Firm</span></td><td></td></tr>
+		</tbody>
+	</table>
+</section>
+<section class="sheet">
+	<div class="sheet-head"><h1>The mounts</h1><div class="meta">Sheet 08 · continued<br>The landscape</div></div>
+	<div class="field"><label>Which mount is most developed on this hand?</label><div class="hint">Look and press. Then say why you chose it.</div><div class="lines l3"></div></div>
+	<div class="field"><label>Which is least developed?</label><div class="lines l2"></div></div>
+	<div class="field"><label>The plain of Mars</label><div class="hint">The hollow of the palm. Deep, shallow, or level with the mounts around it?</div><div class="lines l2"></div></div>
+	<div class="field"><label>Describe the landscape in a paragraph</label><div class="hint">Where the hand rises and where it falls, as if describing terrain.</div><div class="lines l5"></div></div>
+	<div class="field"><label>Traditionally associated with</label><div class="hint">For the one or two mounts that stand out only. "A full Mount of Venus is traditionally associated with…"</div><div class="lines l4"></div></div>
+	<aside class="panel panel--gold"><h3>Hold it lightly</h3><p>A full mount is traditionally read as strength in whatever the mount is associated with, and a flat one as its quieter expression. Neither is better. The mounts are context for the lines that cross them, and are read together with them in the full reading template.</p></aside>
+</section>
+
+<!-- ===================== SHEET 09: MINOR LINES ===================== -->
+<section class="sheet">
+	<span class="anchor">§s09§</span>
+	<div class="sheet-head"><h1>Minor lines survey</h1><div class="meta">Sheet 09<br>The details</div></div>
+	<p class="intro">A presence-and-absence survey. Minor lines vary far more from hand to hand than the major lines; many hands have few or none. Record what is there, and resist reading what is not.</p>
+	<figure class="plate plate--inset" style="width:50%">
+		<img style="max-height:2in" src="../../shared/diagrams/minor-lines.svg" alt="A palm with the minor lines lit and labelled: sun line, Mercury line, girdle of Venus, marriage lines, ring of Solomon, and via lascivia.">
+		<figcaption>The minor lines in their classical positions.</figcaption>
+	</figure>
+	<table class="observe-table">
+		<thead><tr><th>Line</th><th>Presence</th><th>Where it runs, and its quality</th></tr></thead>
+		<tbody>
+			<tr><td>Sun line</td><td class="opts"><span>Present</span><span>Faint</span><span>Absent</span></td><td></td></tr>
+			<tr><td>Mercury line</td><td class="opts"><span>Present</span><span>Faint</span><span>Absent</span></td><td></td></tr>
+			<tr><td>Girdle of Venus</td><td class="opts"><span>Present</span><span>Faint</span><span>Absent</span></td><td></td></tr>
+			<tr><td>Marriage lines</td><td class="opts"><span>Present</span><span>Faint</span><span>Absent</span></td><td></td></tr>
+			<tr><td>Ring of Solomon</td><td class="opts"><span>Present</span><span>Faint</span><span>Absent</span></td><td></td></tr>
+			<tr><td>Via lascivia</td><td class="opts"><span>Present</span><span>Faint</span><span>Absent</span></td><td></td></tr>
+			<tr><td>Simian line</td><td class="opts"><span>Present</span><span>Partial</span><span>Absent</span></td><td></td></tr>
+		</tbody>
+	</table>
+	<div class="field"><label>Other markings, and traditional associations for what is present</label><div class="lines l3"></div></div>
+</section>
+
+<!-- ===================== SHEET 10: TWO-HAND COMPARISON ===================== -->
+<section class="sheet">
+	<span class="anchor">§s10§</span>
+	<div class="sheet-head"><h1>Two-hand comparison</h1><div class="meta">Sheet 10<br>Passive and active</div></div>
+	<p class="intro">The passive hand is traditionally read as disposition, the active hand as what practice has made of it. Where they agree, the reading is settled. Where they differ is the most interesting thing on the palm.</p>
+	<div class="session-bar"><div class="field"><label>Whose hands</label><div class="lines"></div></div><div class="field"><label>Date</label><div class="lines"></div></div><div class="field"><label>Active hand</label><div class="choices"><span>Right</span><span>Left</span></div></div><div class="field"></div></div>
+	<div class="compare">
+		<div class="h"></div><div class="h">Passive hand</div><div class="h">Active hand</div>
+		<div class="k">Shape</div><div class="c"></div><div class="c"></div>
+		<div class="k">Consistency</div><div class="c"></div><div class="c"></div>
+		<div class="k">Thumb</div><div class="c"></div><div class="c"></div>
+		<div class="k">Heart line</div><div class="c tall"></div><div class="c tall"></div>
+		<div class="k">Head line</div><div class="c tall"></div><div class="c tall"></div>
+		<div class="k">Life line</div><div class="c tall"></div><div class="c tall"></div>
+		<div class="k">Fate line</div><div class="c"></div><div class="c"></div>
+	</div>
+</section>
+<section class="sheet">
+	<div class="sheet-head"><h1>Two-hand comparison</h1><div class="meta">Sheet 10 · continued<br>Passive and active</div></div>
+	<div class="compare">
+		<div class="h"></div><div class="h">Passive hand</div><div class="h">Active hand</div>
+		<div class="k">Mounts</div><div class="c tall"></div><div class="c tall"></div>
+		<div class="k">Minor lines</div><div class="c tall"></div><div class="c tall"></div>
+		<div class="k">Most striking</div><div class="c"></div><div class="c"></div>
+	</div>
+	<div class="field"><label>Where the hands agree</label><div class="lines l3"></div></div>
+	<div class="field"><label>Where they differ</label><div class="hint">Name the feature and the direction of the difference. "The head line slopes more on the passive hand."</div><div class="lines l4"></div></div>
+	<div class="field"><label>Held lightly: what the differences may suggest</label><div class="hint">The traditional frame: disposition on the passive hand, development on the active. Offer it as a possibility.</div><div class="lines l4"></div></div>
+</section>
+
+<!-- ===================== PART II OPENER ===================== -->
+<section class="bleed part-open">
+	<img class="part-art" src="../../shared/art/gen/journal-part-2.jpg" alt="">
+	<div class="part-veil"></div>
+	<div class="part-head">
+		<div class="numeral">II</div>
+		<h1>Reading Templates</h1>
+		<p class="lede">Where the sheets become a reading. The full template walks through the whole hand and asks you to say how its features fit together. The quick log is for the readings you do in ten minutes at a kitchen table.</p>
+	</div>
+	<div></div>
+</section>
+
+<!-- ===================== SHEET 11: FULL READING TEMPLATE (x3) ===================== -->
+<div data-repeat="3">
+<section class="sheet">
+	<span class="anchor">§s11§</span>
+	<div class="sheet-head"><h1>Full reading</h1><div class="meta">Template 11<br>Page one of three</div><span class="copy-label" data-copy></span></div>
+	<div class="session-bar"><div class="field"><label>Whose hand</label><div class="lines"></div></div><div class="field"><label>Date</label><div class="lines"></div></div><div class="field"><label>Hand read</label><div class="choices"><span>Active</span><span>Passive</span><span>Both</span></div></div><div class="field"><label>Consent</label><div class="choices"><span>Asked</span></div></div></div>
+	<p class="intro">Fill this only after the observation sheets. Part one is description, part two interpretation held lightly, part three synthesis.</p>
+	<h2>Part one · What is there</h2>
+	<div class="field"><label>The whole hand</label><div class="hint">Shape, size, texture, consistency, flexibility, how it is held.</div><div class="lines l3"></div></div>
+	<div class="field"><label>The most striking feature</label><div class="lines l2"></div></div>
+	<div class="field"><label>Fingers and thumb</label><div class="lines l3"></div></div>
+	<div class="field"><label>Heart line</label><div class="lines l2"></div></div>
+	<div class="field"><label>Head line</label><div class="lines l2"></div></div>
+	<div class="field"><label>Life line</label><div class="lines l2"></div></div>
+</section>
+<section class="sheet">
+	<div class="sheet-head"><h1>Full reading</h1><div class="meta">Template 11<br>Page two of three</div><span class="copy-label" data-copy></span></div>
+	<div class="field"><label>Fate line</label><div class="lines l2"></div></div>
+	<div class="field"><label>Mounts</label><div class="hint">Which rise, which are flat, and the plain of Mars.</div><div class="lines l3"></div></div>
+	<div class="field"><label>Minor lines present</label><div class="lines l2"></div></div>
+	<div class="field"><label>Differences between the two hands</label><div class="lines l3"></div></div>
+	<h2>Part two · Traditionally associated with</h2>
+	<div class="field"><label>Hand shape and structure</label><div class="lines l2"></div></div>
+	<div class="field"><label>The lines, one at a time</label><div class="hint">"Often interpreted as", "may suggest". One sentence per line.</div><div class="lines l4"></div></div>
+</section>
+<section class="sheet">
+	<div class="sheet-head"><h1>Full reading</h1><div class="meta">Template 11<br>Page three of three</div><span class="copy-label" data-copy></span></div>
+	<div class="field"><label>The mounts that stand out</label><div class="lines l3"></div></div>
+	<h2>Part three · Bringing it together</h2>
+	<div class="field"><label>Where the features agree</label><div class="hint">A theme that two or more independent features support.</div><div class="lines l4"></div></div>
+	<div class="field"><label>Where they disagree, or stand alone</label><div class="hint">A striking feature no other feature corroborates is reported and set aside, not promoted to the centre of the reading.</div><div class="lines l4"></div></div>
+	<div class="field"><label>The reading, in five sentences or fewer</label><div class="hint">What you saw, the traditional readings in their own words, and how they fit. No predictions. Nothing about health, money, law, or love.</div><div class="lines l5"></div></div>
+	<div class="field"><label>What I am least sure of</label><div class="lines l2"></div></div>
+</section>
+</div>
+
+<!-- ===================== SHEET 12: QUICK READING LOG (x6) ===================== -->
+<div data-repeat="6">
+<section class="sheet">
+	<span class="anchor">§s12§</span>
+	<div class="sheet-head"><h1>Quick reading log</h1><div class="meta">Template 12<br>Ten minutes</div><span class="copy-label" data-copy></span></div>
+	<div class="session-bar"><div class="field"><label>Whose hand</label><div class="lines"></div></div><div class="field"><label>Date</label><div class="lines"></div></div><div class="field"><label>Hand</label><div class="choices"><span>Active</span><span>Passive</span></div></div><div class="field"><label>Shape</label><div class="choices circles"><span>E</span><span>A</span><span>F</span><span>W</span></div></div></div>
+	<div class="field"><label>Most striking feature</label><div class="lines l2"></div></div>
+	<div class="field-row c3">
+		<div class="field"><label>Heart line</label><div class="hint">Ending · curve · quality</div><div class="lines l4"></div></div>
+		<div class="field"><label>Head line</label><div class="hint">Origin · course · length</div><div class="lines l4"></div></div>
+		<div class="field"><label>Life line</label><div class="hint">Sweep · quality · ending</div><div class="lines l4"></div></div>
+	</div>
+	<div class="field"><label>One traditional association for each line, held lightly</label><div class="lines l4"></div></div>
+	<div class="field"><label>How the three fit together, or don't</label><div class="lines l3"></div></div>
+	<div class="field"><label>Three-sentence reading</label><div class="lines l4"></div></div>
+	<div class="scale"><span>Confidence</span><div class="dots"><i></i><i></i><i></i><i></i><i></i></div><span>low · high</span></div>
+</section>
+</div>
+
+<!-- ===================== PART III OPENER ===================== -->
+<section class="bleed part-open">
+	<img class="part-art" src="../../shared/art/gen/journal-part-3.jpg" alt="">
+	<div class="part-veil"></div>
+	<div class="part-head">
+		<div class="numeral">III</div>
+		<h1>Reflection and Progress</h1>
+		<p class="lede">Palmistry is learned in the looking. These pages are for noticing how your looking changes: what you see now that you did not, what you are still guessing at, and how many hands you have actually read.</p>
+	</div>
+	<div></div>
+</section>
+
+<!-- ===================== SHEET 13: REFLECTION ===================== -->
+<div data-repeat="2">
+<section class="sheet">
+	<span class="anchor">§s13§</span>
+	<div class="sheet-head"><h1>Reflection</h1><div class="meta">Sheet 13<br>On my own looking</div><span class="copy-label" data-copy></span></div>
+	<div class="session-bar"><div class="field"><label>Date</label><div class="lines"></div></div><div class="field"><label>Readings so far</label><div class="lines"></div></div><div class="field"></div><div class="field"></div></div>
+	<div class="field"><label>Something I can see now that I could not before</label><div class="lines l4"></div></div>
+	<div class="field"><label>A feature I keep misjudging, and what I think is going wrong</label><div class="lines l4"></div></div>
+	<div class="field"><label>A reading where I interpreted before I described</label><div class="hint">Everyone does it. Notice when.</div><div class="lines l4"></div></div>
+	<div class="field"><label>Where the traditions disagree with each other, in my own words</label><div class="lines l3"></div></div>
+	<div class="field"><label>What I want to look at more carefully next</label><div class="lines l3"></div></div>
+</section>
+</div>
+
+<!-- ===================== SHEET 14: TRACKER ===================== -->
+<section class="sheet">
+	<span class="anchor">§s14§</span>
+	<div class="sheet-head"><h1>Twelve-week practice tracker</h1><div class="meta">Sheet 14<br>Progress</div></div>
+	<p class="intro">One line a week. A focus, a hand you read, and one thing you noticed. Twelve weeks of this is more than most people ever do.</p>
+	<div class="week head"><div>Week</div><div>This week's focus</div><div>Hands read</div><div>One thing I noticed</div></div>
+	<div class="week"><div class="w">01</div><div></div><div></div><div></div></div>
+	<div class="week"><div class="w">02</div><div></div><div></div><div></div></div>
+	<div class="week"><div class="w">03</div><div></div><div></div><div></div></div>
+	<div class="week"><div class="w">04</div><div></div><div></div><div></div></div>
+	<div class="week"><div class="w">05</div><div></div><div></div><div></div></div>
+	<div class="week"><div class="w">06</div><div></div><div></div><div></div></div>
+	<div class="week"><div class="w">07</div><div></div><div></div><div></div></div>
+	<div class="week"><div class="w">08</div><div></div><div></div><div></div></div>
+	<div class="week"><div class="w">09</div><div></div><div></div><div></div></div>
+	<div class="week"><div class="w">10</div><div></div><div></div><div></div></div>
+	<div class="week"><div class="w">11</div><div></div><div></div><div></div></div>
+	<div class="week"><div class="w">12</div><div></div><div></div><div></div></div>
+	<p class="small" style="margin-top:0.8em">Suggested focus by week: 1 the whole hand · 2 shape and thumb · 3 line quality · 4 heart · 5 head · 6 life · 7 fate · 8 mounts · 9 minor lines · 10 two hands · 11 a full reading · 12 a full reading for someone else.</p>
+</section>
+
+<!-- ===================== SHEET 15: INDEX ===================== -->
+<section class="sheet">
+	<span class="anchor">§s15§</span>
+	<div class="sheet-head"><h1>Reading index</h1><div class="meta">Sheet 15<br>Every hand read</div></div>
+	<p class="intro">A running record. Fill a line for every hand you read, including your own, so you can find the sheets again and see how far you have come.</p>
+	<div class="index-row head"><div>Date</div><div>Whose hand</div><div>Sheets used</div><div>Hand</div><div>Full?</div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+	<div class="index-row"><div></div><div></div><div></div><div></div><div></div></div>
+</section>
+
+<!-- ===================== SHEET 16: PHRASING + GLOSSARY ===================== -->
+<section class="sheet">
+	<span class="anchor">§s16§</span>
+	<div class="sheet-head"><h1>Phrasing guide and quick glossary</h1><div class="meta">Sheet 16<br>Reference</div></div>
+	<p class="intro">Keep this page beside you when you write the interpretive fields.</p>
+	<div class="card-grid">
+		<div class="card"><h4>Traditionally associated with</h4><p>Reports what an inherited tradition says. A fact about the tradition, not about the person.</p></div>
+		<div class="card"><h4>Often interpreted as</h4><p>Offers a common reading while leaving room for others. Most sentences belong here.</p></div>
+		<div class="card"><h4>May suggest</h4><p>A feature points somewhere but the rest of the hand has not confirmed it. The weakest claim, and often the truest.</p></div>
+	</div>
+	<p class="small">Leave out entirely: <em>will</em>, <em>always</em>, <em>never</em>, <em>means that you</em>, and anything about health, money, legal matters, relationships as advice, or the length of a life.</p>
+	<hr class="divider-star">
+	<div class="legend">
+		<div><b>Active hand</b><br>The hand you write with; traditionally, what practice has made of disposition.</div>
+		<div><b>Passive hand</b><br>The other hand; traditionally, disposition and inheritance.</div>
+		<div><b>Percussion</b><br>The outer edge of the palm, below the little finger.</div>
+		<div><b>Plain of Mars</b><br>The hollow at the centre of the palm.</div>
+		<div><b>Mount</b><br>A fleshy pad, named for a planet in the Western tradition; read for fullness and firmness.</div>
+		<div><b>Luna</b><br>The outer heel of the palm, toward which a sloping head line travels.</div>
+		<div><b>Quality</b><br>Depth, clarity, and continuity of a line: deep, faint, chained, broken, feathered.</div>
+		<div><b>Island</b><br>A small loop within a line where it splits and rejoins.</div>
+		<div><b>Fork</b><br>A line dividing into two at its end.</div>
+		<div><b>Branch</b><br>A smaller line leaving a main line and continuing on its own.</div>
+		<div><b>Sister line</b><br>A second line running parallel and close to a major line.</div>
+		<div><b>Rascettes</b><br>The creases across the wrist.</div>
+	</div>
+</section>
+
+<!-- ===================== BACK COVER ===================== -->
+<section class="bleed back">
+	<img class="back-art" src="../../shared/art/gen/back-constellation.jpg" alt="">
+	<h2>Palmistry Path</h2>
+	<p>A grounded, source-aware way into an old practice. Read the lines. Discover the path.</p>
+	<div class="ladder">
+		<div class="step"><img src="../../shared/art/gen/cover-guide-hand.jpg" alt=""><div class="t">I · Quick Start Guide</div><div class="s">Free. The map, the first three lines, your first reading.</div></div>
+		<div class="step is-current"><img src="../../shared/art/gen/cover-journal.jpg" alt=""><div class="t">II · Practice Journal</div><div class="s">Observation sheets, reading templates, reflection.</div></div>
+		<div class="step"><img src="../../shared/art/gen/cover-handbook.jpg" alt=""><div class="t">III · Foundations Handbook</div><div class="s">The complete twenty-five chapter course.</div></div>
+	</div>
+	<p class="fine">Palmistry Path presents palmistry as a cultural and observational practice. Nothing in this journal predicts the future or offers medical, legal, financial, or relationship advice. © Palmistry Path · palmistrypath.com</p>
+</section>
+
+<script>
+	// Duplicate repeatable templates and label the copies.
+	document.querySelectorAll('[data-repeat]').forEach((wrap) => {
+		const n = Number(wrap.dataset.repeat);
+		const original = wrap.innerHTML;
+		let out = '';
+		for (let i = 1; i <= n; i++) {
+			let copy = original.replace(/<span class="copy-label" data-copy><\/span>/g, `<span class="copy-label">Copy ${i} of ${n}</span>`);
+			if (i > 1) copy = copy.replace(/<span class="anchor"[^>]*>§[^§]+§<\/span>/g, ''); // anchors carry an id after assembly; only the first copy keeps one
+			out += copy;
+		}
+		wrap.innerHTML = out;
+	});
+</script>
+</body>
+</html>
