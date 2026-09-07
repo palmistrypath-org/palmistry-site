@@ -36,6 +36,19 @@ Do not recursively read `docs/` or reread unchanged context “just in case.” 
 - Do not silently redesign established systems during a narrow task.
 - Inspect the actual implementation before documenting or changing it.
 
+## Corporate execution-integrity and instruction-propagation contract
+This persistent instruction surface implements Corporate Brain operating model `2026-09-06.p0.1` for execution-state truth and instruction propagation.
+
+- **State is a claim; evidence is truth.** Issue creation, assignment, `Next Owner`, Director intake, dispatch request, or equivalent routing intent does not prove execution.
+- `TASK_ACCEPTED` / CLAIMED requires a concrete receiver identity and durable run/process identity. CLAIMED is not Working.
+- `Working` / RUNNING requires durable acceptance plus explicit start evidence, a current lease, and durable progress evidence. If those facts are absent or expire, project state must remain or return non-Working.
+- If an authorized work item has no currently executable consumer, report `WAITING_FOR_WORKER`, `DISPATCH_FAILURE`, or `NO_EXECUTABLE_ROUTE` as appropriate. Never use clipboard instructions, assignment, or a wake request as evidence that work started.
+- Preserve exact work-item, branch/commit, source/evidence, approval, and cross-harness identity across handoffs. Palmistry's protected-write/authentication incident and exact-SHA merge-control path remain fail-closed until independently repaired and verified; this file grants no bypass.
+- Architecture or policy changes do not automatically propagate to persistent agents, bots, automations, repository instructions, or routines. Long-lived surfaces must be reconciled against the current operating-model version/policy identity. A materially stale persistent surface is `INSTRUCTION_PROPAGATION_DRIFT`; machine-updatable surfaces should be updated through an authorized path, while genuinely manual/UI-only surfaces receive one exact human action only when no authorized update path exists.
+- A stale or mismatched instruction surface may preserve in-flight evidence but must not silently claim current-policy eligibility for new work.
+
+These corporate control-plane rules supplement, and do not weaken, Palmistry Path's source-sensitive editorial rules, feature-branch review gate, Git safety rules, or human/reserved authority boundaries below.
+
 ## Palmistry editorial guardrails
 - Palmistry Path is educational, not a fortune-telling or predictive-science service.
 - Never invent palmistry meanings or source attributions. Citations follow the four-tier source policy in `docs/editorial-style-guide.md` §5; commercial astrology sites, SEO content farms, and unsourced blogs are discovery aids only and are never cited.
