@@ -21,9 +21,18 @@
 	.howto { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25in; margin: 0.8em 0 1em; }
 	.howto aside.panel { margin: 0; }
 	.ladder-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 0.2in; margin: 0.8em 0; }
-	.ladder-cards .card img { width: 1.1in; height: 1.1in; display: block; margin-bottom: 0.1in; }
+	.ladder-cards .card img { width: 1.1in; height: 1.42in; object-fit: cover; display: block; margin-bottom: 0.12in; border: 1px solid var(--hairline-strong); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6); }
 	.ladder-cards .card .tierlabel { font-family: var(--font-display); font-size: 7pt; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4em; }
 	.chapter { --running-chapter: ''; }
+	.frontmatter .title-page { padding-top: 0.55in; }
+	.frontmatter .title-page h1 { font-size: 22pt; }
+	.frontis { margin: 0.3in auto 0; width: 3in; border: 1px solid var(--hairline); padding: 0.06in; background: var(--bg-elev); }
+	.frontis img { display: block; width: 100%; height: auto; }
+	.colophon { margin-top: 0.45in; }
+	.scene-page figure.scene { height: 2.3in; margin-bottom: 0.28in; }
+	.ladder-cards .card img { height: 1.1in; }
+	.ladder-cards { margin: 0.6em 0; }
+	.howto aside.panel { padding: 0.17in 0.22in 0.16in; font-size: 9.7pt; }
 </style>
 </head>
 <body>
@@ -32,7 +41,7 @@
 
 <!-- ===================== COVER ===================== -->
 <section class="bleed cover cover--handbook">
-	<div class="nebula"></div>
+	<div class="art"><img src="../../shared/art/gen/cover-handbook.jpg" alt=""></div>
 	<div class="haze"></div>
 	<div class="frame"><i class="tick tl"></i><i class="tick tr"></i><i class="tick bl"></i><i class="tick br"></i></div>
 	<div class="volume">III &nbsp;·&nbsp; Foundations Handbook</div>
@@ -42,8 +51,8 @@
 		<div class="tier"><b>Foundations Handbook</b></div>
 		<h1 class="title">The Complete Beginner's Course in Reading the Hand</h1>
 		<p class="subtitle">Twenty-five chapters across the foundations, the major lines, the mounts, the minor lines, and the art of bringing a reading together.</p>
-		<div class="emblem"><img src="../../shared/art/emblem-handbook.svg" alt=""></div>
 		<div class="foot">
+			<div class="seal"><img src="../../shared/art/emblem-handbook.svg" alt=""></div>
 			<div class="tagline">Read the lines. Discover the path.</div>
 			<div class="site">palmistrypath.com</div>
 		</div>
@@ -56,7 +65,7 @@
 		<div class="brand">Palmistry Path</div>
 		<h1>Palmistry Foundations Handbook</h1>
 		<p class="subtitle">The complete beginner's course in reading the hand</p>
-		<img class="mark" src="../../shared/art/family-mark.svg" alt="">
+		<figure class="frontis"><img src="../../shared/art/gen/frontispiece.jpg" alt=""></figure>
 	</div>
 	<div class="colophon">
 		<p>Volume III of the Palmistry Path product family, following the Quick Start Guide and the Palm Reading Practice Journal.</p>
@@ -146,10 +155,13 @@
 
 <!-- ===================== PART I ===================== -->
 <section class="bleed part-open">
-	<div class="numeral">I</div>
-	<h1>Foundations</h1>
-	<p class="lede">How to look at a hand before you read anything on it: what palmistry is and is not, the sequence of a reading, the shape and feel of the hand, the thumb and fingers, and the two hands compared.</p>
-	<img class="part-hand" src="../../shared/art/path-foundations.webp" alt="">
+	<img class="part-art" src="../../shared/art/gen/hb-part-1.jpg" alt="">
+	<div class="part-veil"></div>
+	<div class="part-head">
+		<div class="numeral">I</div>
+		<h1>Foundations</h1>
+		<p class="lede">How to look at a hand before you read anything on it: what palmistry is and is not, the sequence of a reading, the shape and feel of the hand, the thumb and fingers, and the two hands compared.</p>
+	</div>
 	<ul class="chapters">
 		<li><span class="n">1</span>What Palmistry Is (and Isn't)</li>
 		<li><span class="n">2</span>How to Read a Palm</li>
@@ -162,10 +174,13 @@
 
 <!-- ===================== PART II ===================== -->
 <section class="bleed part-open">
-	<div class="numeral">II</div>
-	<h1>The Major Lines</h1>
-	<p class="lede">The four lines that anchor every reading, taken one at a time: how to judge a line's quality, and then the heart, head, life, and fate lines with their variations drawn and explained.</p>
-	<img class="part-hand" src="../../shared/art/path-lines.webp" alt="">
+	<img class="part-art" src="../../shared/art/gen/hb-part-2.jpg" alt="">
+	<div class="part-veil"></div>
+	<div class="part-head">
+		<div class="numeral">II</div>
+		<h1>The Major Lines</h1>
+		<p class="lede">The four lines that anchor every reading, taken one at a time: how to judge a line's quality, and then the heart, head, life, and fate lines with their variations drawn and explained.</p>
+	</div>
 	<ul class="chapters">
 		<li><span class="n">6</span>The Major Lines: An Overview</li>
 		<li><span class="n">7</span>Line Quality and Markings</li>
@@ -179,10 +194,13 @@
 
 <!-- ===================== PART III ===================== -->
 <section class="bleed part-open">
-	<div class="numeral">III</div>
-	<h1>The Mounts</h1>
-	<p class="lede">The landscape of the palm. The fleshy pads beneath the fingers and around the edges, read for fullness, firmness, and position, and for what they lend to the lines that cross them.</p>
-	<img class="part-hand" src="../../shared/art/path-mounts.webp" alt="">
+	<img class="part-art" src="../../shared/art/gen/hb-part-3.jpg" alt="">
+	<div class="part-veil"></div>
+	<div class="part-head">
+		<div class="numeral">III</div>
+		<h1>The Mounts</h1>
+		<p class="lede">The landscape of the palm. The fleshy pads beneath the fingers and around the edges, read for fullness, firmness, and position, and for what they lend to the lines that cross them.</p>
+	</div>
 	<ul class="chapters">
 		<li><span class="n">12</span>The Mounts: Reading the Landscape</li>
 		<li><span class="n">13</span>The Mount of Venus</li>
@@ -198,10 +216,13 @@
 
 <!-- ===================== PART IV ===================== -->
 <section class="bleed part-open">
-	<div class="numeral">IV</div>
-	<h1>Minor Lines and Synthesis</h1>
-	<p class="lede">The lines that vary most from hand to hand, and then the two chapters that make this a course: how to combine what you see into a reading, and how to give one to another person with care.</p>
-	<img class="part-hand" src="../../shared/art/path-advanced.webp" alt="">
+	<img class="part-art" src="../../shared/art/gen/hb-part-4.jpg" alt="">
+	<div class="part-veil"></div>
+	<div class="part-head">
+		<div class="numeral">IV</div>
+		<h1>Minor Lines and Synthesis</h1>
+		<p class="lede">The lines that vary most from hand to hand, and then the two chapters that make this a course: how to combine what you see into a reading, and how to give one to another person with care.</p>
+	</div>
 	<ul class="chapters">
 		<li><span class="n">20</span>The Minor Lines</li>
 		<li><span class="n">21</span>The Marriage and Relationship Lines</li>
@@ -282,20 +303,22 @@
 </section>
 
 <!-- ===================== APPENDIX C: THE PATH CONTINUES ===================== -->
-<section class="page-break">
+<section class="scene-page">
+	<figure class="scene"><img src="../../shared/art/gen/scene-candle-desk.jpg" alt=""></figure>
+	<div class="col">
 	<span class="anchor">§next§</span>
 	<p class="eyebrow">Appendix C</p>
 	<h1>The path continues</h1>
 	<p class="lede">This handbook is the third of three. The other two are built to be used alongside it.</p>
 	<div class="ladder-cards">
 		<div class="card">
-			<img src="../../shared/art/emblem-quickstart.svg" alt="">
+			<img src="../../shared/art/gen/cover-guide-hand.jpg" alt="">
 			<div class="tierlabel">I · Quick Start Guide · Free</div>
 			<h4>Read Your First Palm Tonight</h4>
 			<p>The map of the hand, the first three lines, and a ten-minute reading. The orientation this book assumes, in fourteen pages.</p>
 		</div>
 		<div class="card">
-			<img src="../../shared/art/emblem-journal.svg" alt="">
+			<img src="../../shared/art/gen/cover-journal.jpg" alt="">
 			<div class="tierlabel">II · Practice Journal</div>
 			<h4>Look. Describe. Hold It Lightly.</h4>
 			<p>Guided observation sheets for every region of the hand, full and quick reading templates, reflection pages, and a practice tracker. The place to record every Try it exercise in this book.</p>
@@ -305,17 +328,18 @@
 	<p>The twenty-five chapters of this book correspond to the twenty-five lessons of the learning path at <strong>palmistrypath.com/learn</strong>, where each carries its plates, its sources, and its checkpoint. The site is the living version of this course; the book is the one you can read by lamplight.</p>
 	<h2>Reading for others</h2>
 	<p>If you have worked through this book and its exercises, you are ready to read for a friend who has asked you to. Reread chapter 25 first. Ask before you begin, describe before you interpret, use the tradition's own words, and stop short of anything that sounds like a prediction. A reading given that way leaves the other person more curious about themselves, which is the best thing palmistry can do.</p>
+	</div>
 </section>
 
 <!-- ===================== BACK COVER ===================== -->
 <section class="bleed back">
-	<img class="mark" src="../../shared/art/family-mark.svg" alt="">
+	<img class="back-art" src="../../shared/art/gen/back-constellation.jpg" alt="">
 	<h2>Palmistry Path</h2>
 	<p>A grounded, source-aware way into an old practice. Read the lines. Discover the path.</p>
 	<div class="ladder">
-		<div class="step"><img src="../../shared/art/emblem-quickstart.svg" alt=""><div class="t">I · Quick Start Guide</div><div class="s">Free. The map, the first three lines, your first reading.</div></div>
-		<div class="step"><img src="../../shared/art/emblem-journal.svg" alt=""><div class="t">II · Practice Journal</div><div class="s">Observation sheets, reading templates, reflection.</div></div>
-		<div class="step is-current"><img src="../../shared/art/emblem-handbook.svg" alt=""><div class="t">III · Foundations Handbook</div><div class="s">The complete twenty-five chapter course.</div></div>
+		<div class="step"><img src="../../shared/art/gen/cover-guide-hand.jpg" alt=""><div class="t">I · Quick Start Guide</div><div class="s">Free. The map, the first three lines, your first reading.</div></div>
+		<div class="step"><img src="../../shared/art/gen/cover-journal.jpg" alt=""><div class="t">II · Practice Journal</div><div class="s">Observation sheets, reading templates, reflection.</div></div>
+		<div class="step is-current"><img src="../../shared/art/gen/cover-handbook.jpg" alt=""><div class="t">III · Foundations Handbook</div><div class="s">The complete twenty-five chapter course.</div></div>
 	</div>
 	<p class="fine">Palmistry Path presents palmistry as a cultural and observational practice. Nothing in this book predicts the future or offers medical, legal, financial, or relationship advice. © Palmistry Path · palmistrypath.com</p>
 </section>

@@ -22,14 +22,23 @@
 	.region-grid .r { border-left: 1px solid var(--hairline-strong); padding: 0.04in 0 0.06in 0.16in; }
 	.region-grid .r b { display: block; font-family: var(--font-display); font-size: 8.4pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-light); margin-bottom: 0.12em; }
 	.region-grid .r p { font-size: 9.3pt; color: var(--ink-soft); margin: 0; line-height: 1.5; }
-	.notice { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25in; margin: 0.6em 0 0.9em; }
+	.notice { display: grid; grid-template-columns: 1fr 1fr; gap: 0.25in; margin: 0.5em 0 0.7em; }
+	.scene-page figure.scene { height: 2.3in; margin-bottom: 0.3in; }
+	.scene-page.tight figure.scene { height: 1.85in; margin-bottom: 0.24in; }
+	.scene-page.tight .next .card p { font-size: 8.8pt; }
+	.scene-page.tight .path-list li { padding: 0.28em 0; }
+	.path-list li { padding: 0.35em 0; }
+	.scene-page figure.scene.scene--tall { height: 3.7in; }
+	.next { margin: 0.6em 0; }
+	.next .card { padding: 0.16in 0.2in; }
+	.sample { font-size: 10.6pt; line-height: 1.62; }
 	.notice h3 { margin-top: 0; }
 	.gloss { columns: 2; column-gap: 0.32in; font-size: 9.4pt; }
 	.gloss dt { font-family: var(--font-display); font-size: 8.4pt; letter-spacing: 0.12em; color: var(--gold-light); margin-top: 0.55em; break-after: avoid; }
 	.gloss dd { margin: 0.12em 0 0; color: var(--ink-soft); line-height: 1.5; }
 	.next { display: grid; grid-template-columns: 1fr 1fr; gap: 0.2in; margin: 0.8em 0; }
 	.next .card { padding: 0.2in 0.22in; }
-	.next .card img { width: 1.15in; height: 1.15in; display: block; margin: 0 0 0.1in; }
+	.next .card img { width: 1.05in; height: 1.3in; display: block; margin: 0 0 0.1in; }
 	.next .card h4 { font-size: 9.4pt; }
 	.next .card .tierlabel { font-family: var(--font-display); font-size: 7pt; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4em; }
 	.path-list { list-style: none; padding: 0; margin: 0.4em 0 0; }
@@ -45,7 +54,7 @@
 
 <!-- ===================== COVER ===================== -->
 <section class="bleed cover cover--free">
-	<div class="nebula"></div>
+	<div class="art"><img src="../../shared/art/gen/cover-guide-hand.jpg" alt=""></div>
 	<div class="haze"></div>
 	<div class="frame"><i class="tick tl"></i><i class="tick tr"></i><i class="tick bl"></i><i class="tick br"></i></div>
 	<div class="volume">I &nbsp;·&nbsp; Free Guide</div>
@@ -55,8 +64,8 @@
 		<div class="tier"><b>Quick Start Guide</b></div>
 		<h1 class="title">Read Your First Palm Tonight</h1>
 		<p class="subtitle">The map of the hand, the three lines to find first, and a ten-minute reading you can do by lamplight.</p>
-		<div class="emblem"><img src="../../shared/art/emblem-quickstart.svg" alt=""></div>
 		<div class="foot">
+			<div class="seal"><img src="../../shared/art/emblem-quickstart.svg" alt=""></div>
 			<div class="tagline">Read the lines. Discover the path.</div>
 			<div class="site">palmistrypath.com</div>
 		</div>
@@ -64,7 +73,9 @@
 </section>
 
 <!-- ===================== WELCOME ===================== -->
-<section class="page-break quiet">
+<section class="scene-page">
+	<figure class="scene"><img src="../../shared/art/gen/guide-welcome.jpg" alt=""></figure>
+	<div class="col">
 	<span class="anchor">§welcome§</span>
 	<p class="eyebrow">Before you begin</p>
 	<h1 class="display">A short walk in, not a lecture</h1>
@@ -89,6 +100,7 @@
 		</aside>
 	</div>
 	<p class="small">Throughout, you will see phrases like <em>traditionally associated with</em> and <em>often interpreted as</em>. They are not hedging for its own sake. They are the accurate way to describe an inherited practice whose meanings were assigned by people, and which vary between the people who assigned them.</p>
+	</div>
 </section>
 
 <!-- ===================== THE MAP ===================== -->
@@ -292,7 +304,9 @@
 </section>
 
 <!-- ===================== TEN-MINUTE READING ===================== -->
-<section class="page-break">
+<section class="scene-page">
+	<figure class="scene"><img src="../../shared/art/gen/guide-first-reading.jpg" alt=""></figure>
+	<div class="col">
 	<span class="anchor">§reading§</span>
 	<p class="eyebrow">Part three · Practice</p>
 	<h1>Your first ten-minute reading</h1>
@@ -327,9 +341,20 @@
 			</aside>
 		</div>
 	</div>
-	<h2>What a first reading sounds like</h2>
-	<p><em>"The palm is square with fingers a little shorter than the palm, so mostly an earth hand. The heart line is deep and curves up to end between the first two fingers, which is often interpreted as a warm but balanced emotional nature. The head line begins joined to the life line and runs nearly straight, traditionally associated with practical, careful thinking, and it sits well with the earth shape. The life line makes a wide, clean sweep, often read as steady vitality. The picture is consistent: a grounded, warm, careful hand. The passive hand's head line slopes more, which may suggest a more imaginative disposition than daily life shows."</em></p>
+	</div>
+</section>
+
+<!-- ===================== WHAT A FIRST READING SOUNDS LIKE ===================== -->
+<section class="scene-page">
+	<figure class="scene scene--tall"><img src="../../shared/art/gen/guide-sample.jpg" alt=""></figure>
+	<div class="col">
+	<p class="eyebrow">Part three · Practice</p>
+	<h1>What a first reading sounds like</h1>
+	<p class="lede">Three lines, one hand shape, and nothing the reader did not actually see.</p>
+	<hr class="divider-star">
+	<p class="sample"><em>"The palm is square with fingers a little shorter than the palm, so mostly an earth hand. The heart line is deep and curves up to end between the first two fingers, which is often interpreted as a warm but balanced emotional nature. The head line begins joined to the life line and runs nearly straight, traditionally associated with practical, careful thinking, and it sits well with the earth shape. The life line makes a wide, clean sweep, often read as steady vitality. The picture is consistent: a grounded, warm, careful hand. The passive hand's head line slopes more, which may suggest a more imaginative disposition than daily life shows."</em></p>
 	<p class="small">Notice what that reading does not do. It does not predict. It does not diagnose. It does not tell anyone who they are. It describes what is there, offers the traditional reading in the traditional words, and notes where the features agree with each other. That is the whole craft, in miniature.</p>
+	</div>
 </section>
 
 <!-- ===================== WORDS TO HOLD LIGHTLY ===================== -->
@@ -363,20 +388,22 @@
 </section>
 
 <!-- ===================== WHERE NEXT ===================== -->
-<section class="page-break">
+<section class="scene-page tight">
+	<figure class="scene"><img src="../../shared/art/gen/guide-next.jpg" alt=""></figure>
+	<div class="col">
 	<span class="anchor">§next§</span>
 	<p class="eyebrow">The path continues</p>
 	<h1>Where the path goes next</h1>
 	<p class="lede">This guide is the first of three. Each one is built for a different stage of the same practice.</p>
 	<div class="next">
 		<div class="card">
-			<img src="../../shared/art/emblem-journal.svg" alt="">
+			<img class="cover-thumb" src="../../shared/art/gen/cover-journal.jpg" alt="">
 			<div class="tierlabel">II · Practice Journal</div>
 			<h4>Palm Reading Practice Journal</h4>
 			<p>Guided observation sheets for every region of the hand, full and quick reading templates, a two-hand comparison sheet, reflection pages, and a progress tracker. The place your three sentences grow into readings.</p>
 		</div>
 		<div class="card">
-			<img src="../../shared/art/emblem-handbook.svg" alt="">
+			<img class="cover-thumb" src="../../shared/art/gen/cover-handbook.jpg" alt="">
 			<div class="tierlabel">III · Foundations Handbook</div>
 			<h4>Palmistry Foundations Handbook</h4>
 			<p>The complete beginner's course in one volume: twenty-five chapters across the foundations, the four major lines and their variations, all the mounts, the minor lines, and how to bring a reading together. Every chapter with its plates, exercises, and sources.</p>
@@ -390,17 +417,18 @@
 		<li><b>The Mounts</b><span>The landscape of the palm: Venus, Jupiter, Saturn, Apollo, Mercury, Luna, and the two Mounts of Mars.</span></li>
 		<li><b>Minor Lines &amp; Synthesis</b><span>The minor lines, the simian line, combining what you see, and how to give a reading.</span></li>
 	</ul>
+	</div>
 </section>
 
 <!-- ===================== BACK COVER ===================== -->
 <section class="bleed back">
-	<img class="mark" src="../../shared/art/family-mark.svg" alt="">
+	<img class="back-art" src="../../shared/art/gen/back-constellation.jpg" alt="">
 	<h2>Palmistry Path</h2>
 	<p>A grounded, source-aware way into an old practice. Read the lines. Discover the path.</p>
 	<div class="ladder">
-		<div class="step is-current"><img src="../../shared/art/emblem-quickstart.svg" alt=""><div class="t">I · Quick Start Guide</div><div class="s">Free. The map, the first three lines, your first reading.</div></div>
-		<div class="step"><img src="../../shared/art/emblem-journal.svg" alt=""><div class="t">II · Practice Journal</div><div class="s">Observation sheets, reading templates, reflection.</div></div>
-		<div class="step"><img src="../../shared/art/emblem-handbook.svg" alt=""><div class="t">III · Foundations Handbook</div><div class="s">The complete twenty-five chapter course.</div></div>
+		<div class="step is-current"><img src="../../shared/art/gen/cover-guide-hand.jpg" alt=""><div class="t">I · Quick Start Guide</div><div class="s">Free. The map, the first three lines, your first reading.</div></div>
+		<div class="step"><img src="../../shared/art/gen/cover-journal.jpg" alt=""><div class="t">II · Practice Journal</div><div class="s">Observation sheets, reading templates, reflection.</div></div>
+		<div class="step"><img src="../../shared/art/gen/cover-handbook.jpg" alt=""><div class="t">III · Foundations Handbook</div><div class="s">The complete twenty-five chapter course.</div></div>
 	</div>
 	<p class="fine">Palmistry Path presents palmistry as a cultural and observational practice. Nothing in this guide predicts the future or offers medical, legal, financial, or relationship advice. © Palmistry Path · palmistrypath.com</p>
 </section>

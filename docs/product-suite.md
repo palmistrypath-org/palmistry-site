@@ -8,7 +8,7 @@
 |---|---|---|---|---|
 | I · Free | **Quick Start Guide** — *Read Your First Palm Tonight* | Lead magnet. Orientation, the first three lines, a ten-minute reading. Intentionally light. | 14 | PDF, US Letter |
 | II · Paid | **Palm Reading Practice Journal** — *Look. Describe. Hold It Lightly.* | First purchase. Ten guided observation sheets, full and quick reading templates, reflection, tracker, index. Hands-on. | 42 | PDF, two editions: screen (dark) and print (ivory, ink-conscious) |
-| III · Premium | **Palmistry Foundations Handbook** — *The Complete Beginner's Course in Reading the Hand* | Premium. Twenty-five chapters mirroring the 25 site lessons, with every atlas plate, Try it exercises, Key ideas, Across traditions panels, glossary, sources. | ~115 | PDF, US Letter |
+| III · Premium | **Palmistry Foundations Handbook** — *The Complete Beginner's Course in Reading the Hand* | Premium. Twenty-five chapters mirroring the 25 site lessons, with every atlas plate, Try it exercises, Key ideas, Across traditions panels, glossary, sources. | 143 | PDF, US Letter |
 
 The three are numbered I / II / III on their covers, back covers, and in each other's "where next" pages, so any one product sells the other two.
 
@@ -19,23 +19,25 @@ Pricing is not set in this document. The email roadmap (`docs/email-and-lead-mag
 - **Nothing from the legacy Quick Start Guide or `public/images/guide/` is used.** All three products were designed from the current visual system (`docs/visual-system.md` on `feat/visual-golden-slice`).
 - **Reused deliberately:** the palm atlas (`scripts/lib/palm.mjs`, copied to `products/shared/palm.mjs`), its 46 generated diagram plates and 8 mount plates, the wireframe module hands (`path-*.webp`) and the haze texture. These are the site's own generated brand assets, so the books and the site share one hand.
 - **New:** three cover emblems and a family mark generated from the atlas by `scripts/generate-product-emblems.mjs`; the product design system `products/shared/suite.css`; all product copy.
+- **Generated editorial art (2026-09-06 refinement):** 43 images in `products/shared/art/gen/`, made with Higgsfield (`gpt_image_2`) against the site hero as a style reference and documented in `products/shared/art/gen/PROMPTS.md`. They carry the atmosphere; the atlas plates are kept only where they teach. This trades reproducibility-from-repo for visual quality, deliberately.
 
 ## Visual system for print
 
 `products/shared/suite.css` is the single stylesheet. It mirrors the site tokens (black `#07050d`, gold `#c9a96e` / `#e0c07e` / `#f0cf86`, violet `#7a48c9` as haze only), Cinzel for display and Lora for text (bundled in `products/shared/fonts/`).
 
 Shared vocabulary, all three products:
-- **Cover**: full-bleed nebula, double-rule frame with corner ticks, `PALMISTRY PATH` brand line, tier line, display title, subtitle, emblem, tagline, site. Tier differentiation is structural, not chromatic: Free uses a single frame rule and the single-ring emblem; Journal a dashed inner rule and the ruled-dial emblem; Handbook a heavier double rule, richest nebula, and the double-ring-with-stars emblem.
+- **Cover**: full-bleed generated art per tier, dark veil top and bottom for type, double-rule frame with corner ticks, `PALMISTRY PATH` brand line, tier line, display title, subtitle, the tier emblem reduced to a small seal above the tagline. Tier differentiation is in the art and the frame: I a single hand and single rule; II the field journal with instruments and a dashed inner rule; III the hand inside an armillary sphere, heavier double rule, larger corner ornaments.
 - **Running heads and folios** via `@page` margin boxes: product name top-left, "Palmistry Path" top-right, `✦ n ✦` bottom-centre.
+- **Scene pages** (`.scene-page`, `@page scene`): single-page sections whose banner art bleeds off the top edge with the text padded back into the column. Used for the Guide's welcome, ten-minute reading, sample reading and where-next pages, the Journal's welcome, and the Handbook's appendix C. Must fit on one page.
 - **Eyebrow / display h1 / italic lede / star divider** opening on every content page, matching the site's `PageOpening`.
-- **Plates**: every diagram sits in a hairline frame with corner registration ticks, violet bloom, italic caption with a star.
+- **Plates**: every atlas diagram sits in a hairline frame with corner registration ticks, violet bloom, italic caption with a star.
 - **Panels**: gold-lit (Try it / On your hand / How to use) and violet-lit (Across traditions / The one rule / Hold it lightly).
-- **Part openers** (Journal, Handbook): full-bleed nebula, Roman numeral, the module's wireframe hand, chapter list.
-- **Back cover**: family mark, tagline, the three-step ladder with the current product highlighted, disclaimer.
+- **Part openers** (Journal, Handbook): full-bleed generated scene, veil gradient, Roman numeral and title at the top, chapter list at the foot.
+- **Back cover**: hand-shaped constellation art in the upper half, then the three-step ladder shown as miniature covers with the current product highlighted, and the disclaimer.
 
 Journal-only: writing fields (ruled lines at 0.29in), choice boxes, observation tables, sketch boxes with the faint atlas hand, reference strips of variation plates, compare grid, tracker, index. The print edition swaps the paper variables to ivory and keeps the plates dark.
 
-Handbook-only: chapter openers with haze, `Key ideas` boxes, `worked` reading blocks, reference tables, contents with page numbers, glossary, sources appendix.
+Handbook-only: title page with an engraved frontispiece plate; every chapter opens with a framed 21:9 art band (`.chapter-art`) above the eyebrow, title and lede; `Key ideas` boxes, `worked` reading blocks, reference tables, contents with page numbers, glossary, sources appendix.
 
 ## Content rules that were applied
 
@@ -48,7 +50,7 @@ Handbook-only: chapter openers with haze, `Key ideas` boxes, `worked` reading bl
 
 ```
 products/
-  shared/        suite.css · palm.mjs · fonts/ · diagrams/ (46) · mounts/ (8) · art/ (emblems, family mark, hands, haze)
+  shared/        suite.css · palm.mjs · fonts/ · diagrams/ (46) · mounts/ (8) · art/ (emblems, family mark, haze) · art/gen/ (43 generated scenes + PROMPTS.md)
   quickstart/    src.html
   journal/       src.html                     (?edition=print switches to the print edition)
   handbook/      src.html · chapters/part1-4  (fragments pulled in by <!-- @include -->)
@@ -65,8 +67,12 @@ Build notes learned the hard way:
 - Chrome's print-to-pdf does not paint `@page` margins, so `pdf-paint.py` lays the ground colour beneath every page afterwards.
 - Anything positioned outside the content box (even a pseudo-element haze) makes Chrome shrink the whole document to fit. Keep absolutely positioned decoration inside the column.
 - Contents page numbers come from hidden `§anchor§` markers scanned out of the first render; the build re-renders once with the numbers filled in.
+- Scene pages have no top margin, so anything after the banner must fit the page; when one spills, shrink the banner (`figure.scene { height }`) rather than the text.
+- Pagination QA: a page-fill scan (text and image extents per page via PyMuPDF) is the fast way to find spill pages in the Handbook; pages under half full are acceptable only where the next page opens a chapter or part.
 
 ## Open items
+
+- The Handbook's part-opener chapter lists and the appendix ladder cards reference page counts in prose ("fourteen pages"); keep them in step if page counts change.
 
 - Pricing and store listing copy (cover PNGs are emitted to `products/dist/previews/*-cover.png` at 150 dpi for listings).
 - Optional: an A4 build (change `@page size`); the Letter layouts have generous margins and print "fit to page" on A4 cleanly.

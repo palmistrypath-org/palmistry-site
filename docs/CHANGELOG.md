@@ -2,6 +2,13 @@
 
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
+## 2026-09-06 — Product suite visual refinement
+
+- Replaced the atlas-as-decoration language across the three products with 43 generated editorial scenes (Higgsfield, style-matched to the site hero): full-bleed cover art per tier, a frontispiece, part-opener scenes, a 21:9 band at the head of every Handbook chapter, scene pages in the Guide and Journal, and a constellation back cover with miniature-cover ladder. Atlas plates remain where they teach.
+- Tier differentiation now sits in the art and frame treatment; emblems reduced to seals. Journal sheet heads gain a ruled tick strip.
+- Pagination pass: fixed the Guide's and Journal's welcome and where-next spills, the Handbook's appendix C spill, and the near-empty trailing page. Page counts: Guide 14, Journal 42 (both editions), Handbook 143.
+- Docs: `docs/product-suite.md` visual system section rewritten; prompts recorded in `products/shared/art/gen/PROMPTS.md`.
+
 ## 2026-09-06 — Digital product suite (branch `feat/product-suite`)
 - Added the three-product download family: Quick Start Guide (free), Palm Reading Practice Journal (paid, screen + print editions), Palmistry Foundations Handbook (premium). Sources under `products/`, spec in `docs/product-suite.md`, build via `npm run build:products` (headless Chrome + PyMuPDF). No legacy guide assets reused.
 
