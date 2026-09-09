@@ -1,6 +1,10 @@
 # Issue #122 — visual reconciliation review
 
-Status: review candidate; remote PR/CI verification pending.
+Status: **REVIEW_READY** — implementation and QA complete; awaiting Chairman visual approval.
+
+Review: [PR #123](https://github.com/palmistrypath-org/palmistry-site/pull/123). Implementation commit: `9f9911f5634470228512fa126c1d838122be30d1`. [Implementation CI run](https://github.com/palmistrypath-org/palmistry-site/actions/runs/34300470374) passed all build/audit/self-test checks. The PR is the current review head, including documentation closeout.
+
+Review build: local production preview at `http://127.0.0.1:4321/`, plus the downloadable `palmistry-review-build.zip` in this Codex task's outputs. No automatic hosted-preview deployment was reported by GitHub's checks/deployments for the implementation SHA. Hosting configuration was not changed.
 
 Governing brief: [Astra Macro Build Brief — Palmistry Visual Reconciliation](https://app.notion.com/p/3d59ad1d18c38163ba17d42056e7aaee).
 
