@@ -14,11 +14,15 @@ Both formations attract attention because their shapes are visually distinct and
 
 The [major lines overview](/blog/beginner/major-lines-overview/) covers the primary creases — the Heart Line, Head Line, Life Line, and Fate Line — that form the structural frame of most Western readings. Markings are distinct from these. They are shorter formations found on or between the main lines, on the mounts, or in the plain of Mars — the flat centre of the palm. In the classical texts, markings are modifying features: they alter or complicate what the broader hand already suggests, and are not read in isolation.
 
+![Palm diagram naming the regions a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.](/images/diagrams/hand-map.svg "The territory a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.")
+
 William Benham (*The Laws of Scientific Hand Reading*, 1900) was careful to establish hand type, major lines, and mount development before turning to smaller markings. Fred Gettings (*The Book of the Hand*, 1965) placed them in the same hierarchy: useful, sometimes striking, but dependent on context.
 
 ## Crosses: what they are and how to identify them
 
 A cross is formed by two short lines crossing at approximately right angles — a distinct marking, not part of the major lines. If two lines naturally intersect as part of their ordinary courses, that does not qualify. A cross sits on, near, or between lines and mounts without being a continuation of either. Look for two short strokes of roughly equal length meeting near their centres; fainter or incomplete formations warrant caution.
+
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
 
 ### Crosses by location
 

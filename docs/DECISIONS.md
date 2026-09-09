@@ -1,5 +1,9 @@
 # Decisions - Palmistry Path
 
+## 2026-09-08 — Reconcile Fable visuals forward from current main
+
+Under [issue #122](https://github.com/palmistrypath-org/palmistry-site/issues/122) and the [governing brief](https://app.notion.com/p/3d59ad1d18c38163ba17d42056e7aaee), treat Fable `de76f9b` as visual-source evidence only. Apply its visual delta to protected main `706b098c750d7ac85520dcd59675b540cb36f63a`; preserve current content, products and controls. Dark-only black/gold/violet, immersive pacing, and the whole-hand mobile hero remain the approved intent. PR #120 supersedes old future-product plans. Stop at REVIEW_READY for Chairman visual approval; issue #121 remains held until approval.
+
 Only durable decisions belong here. Newest entries first.
 
 ## 2026-08-28 - Relay merge-gate status is sourced from the trusted base branch via `pull_request_target`, not the PR under evaluation (Relay PP-RELAY-059, revision 3)

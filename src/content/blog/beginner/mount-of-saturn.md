@@ -14,6 +14,8 @@ That constellation of qualities explains why Saturn is the mount most classical 
 
 The Mount of Saturn sits at the base of the middle finger — the fleshy elevation directly beneath where the longest finger meets the palm. To locate it, place a finger at the lowest joint of the middle finger and press gently into the palm just below it. The mount occupies the upper centre of the palm, flanked on one side by the Mount of Jupiter (below the index finger) and on the other by the Mount of Apollo or Sun (below the ring finger).
 
+![Palm diagram with the Mount of Saturn highlighted beneath the middle finger.](/images/lessons/mounts/mount-of-saturn.svg "The Mount of Saturn sits directly beneath the middle finger.")
+
 The middle finger's position at the hand's apex is not incidental. Classically, the mount inherits the finger's central, anchoring role — neither leaning toward the social world as Jupiter does, nor toward creative expression as Apollo does, but standing at the centre, oriented inward.
 
 ## What it's traditionally associated with
@@ -37,6 +39,8 @@ Benham also associated Saturn with occult study and research into hidden causes 
 ## The fate line's terminus
 
 The fate line — sometimes called the line of Saturn or the line of destiny — travels up the centre of the palm and, in its classical trajectory, terminates at the base of the Saturn mount. This is one of the more structurally significant facts in classical palmistry, and it is rarely given the attention it deserves.
+
+![Palm diagram showing three fate-line endpoints: at the head line, at the heart line, and at the Mount of Saturn beneath the middle finger.](/images/diagrams/fate-line-endings.svg "Three places a fate line can end: at the head line, at the heart line, or at the Mount of Saturn.")
 
 The fate line represents the individual's engagement with the forces shaping the direction of their life: what classical authors variously called vocation, circumstance, and the sense of purpose that organises a life's movement. That this line ends at Saturn's base means Saturn governs the territory toward which all that directional force is ultimately heading. The mount of discipline, introspection, and earned wisdom is, in the tradition's structural logic, where the line of destiny arrives.
 

@@ -20,11 +20,15 @@ Resist the pull to look up meanings during these early passes. The goal is a wor
 
 Your own hands are the most convenient practice subject you have. They're available in any light, at any time, and you can turn them however you need to see a feature clearly. Work through the sequence on your active hand, then your passive hand, and hold both in view together.
 
+![Two palm diagrams side by side: the passive, non-dominant hand and the active, dominant hand.](/images/diagrams/active-passive-hands.svg "The passive hand is the one you do not write with; the active hand is the one you do. A reading compares the two.")
+
 Comparing your active and passive hand is itself a skill with its own method — where to align them, what to check feature by feature, and what the differences are worth noting. [Reading both hands](/blog/beginner/reading-both-hands-palmistry) covers that comparison in depth; use it once you've run the basic sequence on each hand a few times and are ready to look at them side by side.
 
 ## Work one feature family at a time
 
 Once the full sequence feels familiar rather than effortful, narrow your focus. Pick a single feature family — the mounts, say, or just the life line — and spend several practice sessions on that one thing before moving to the next. Trying to develop a trained eye for every feature simultaneously tends to produce a shallow, general impression of all of them rather than real familiarity with any one.
+
+![Palm diagram naming the regions a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.](/images/diagrams/hand-map.svg "The territory a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.")
 
 This is ordinary skill-building, not a palmistry-specific technique: narrowing attention to one thing at a time, repeatedly, builds more durable competence than spreading the same practice time across everything at once.
 

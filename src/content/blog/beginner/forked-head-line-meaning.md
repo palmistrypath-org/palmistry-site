@@ -16,6 +16,8 @@ If you are new to reading the hand, the [overview of palm lines](/blog/beginner/
 
 The head line begins near the top of the life line — in the web of skin between the index finger and thumb — and runs across the middle of the palm in a broadly horizontal path, typically with some slope. It sits below the heart line and above (or sometimes merging with) the life line at its starting point. It terminates somewhere between the center of the palm and the percussion edge, the outer edge of the hand on the little-finger side.
 
+![Palm diagram with the head line lit, its start and end marked.](/images/diagrams/head-line.svg "The head line begins near the life line and crosses the middle of the palm.")
+
 Its length, depth, slope, and any variations along its course are all part of what is read. The main [head line guide](/blog/beginner/head-line/) covers the full range of associations — slope, depth, length, and special markings — and provides the context that makes individual variations meaningful. The notes here assume that foundation and focus on forks specifically.
 
 The head line begins close to where the [life line](/blog/beginner/life-line/) originates, and the two may share a common starting point, run close together for a short distance, or be clearly separate from the outset. That relationship shapes interpretation of the head line as a whole.
@@ -23,6 +25,8 @@ The head line begins close to where the [life line](/blog/beginner/life-line/) o
 ## What counts as a fork
 
 Not every deviation at the head line's end or along its course carries the same significance, and not every fine line branching from it is a meaningful formation. The variations that receive consistent attention in the classical literature fall into three types.
+
+![Two palm diagrams compare a head line with a single ending and a head line ending in the two-pronged writer’s fork.](/images/diagrams/head-line-forked.svg "The writer’s fork: the head line ends in two prongs, one level and one sloping.")
 
 **A terminal fork at the endpoint.** The most discussed variation: at the end of the head line, rather than terminating in a single point, the line divides into two distinct branches. Both branches must be clearly defined — not one strong terminus and a faint stray thread alongside it. This is the formation popular accounts call the "writer's fork."
 
@@ -49,6 +53,8 @@ The character of the fork shifts depending on which branch is more strongly form
 ## Mid-line upward branches
 
 Fine lines rising from the head line toward the upper palm or the mounts above are generally associated in the Western tradition with periods of heightened mental energy, focus, or heightened intellectual engagement. Unlike the terminal fork, they do not carry the same consistent and specific associations across classical sources. What mount or zone the branch rises toward shapes interpretation, but the tradition is less settled here than on the endpoint fork.
+
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
 
 ## Mid-line downward branches
 

@@ -1,5 +1,9 @@
 # Current State — Palmistry Path
 
+## Visual reconciliation review branch — 2026-09-08
+
+Issue #122 forward-ports the approved Fable black/gold/violet system onto protected main `706b098c750d7ac85520dcd59675b540cb36f63a`. Includes the six-act homepage, whole-hand mobile hero, generated hand mark, shared page/lesson/blog/guide treatments, reveal behavior, and 46 atlas + 8 mount plates. The 73 blog posts, 25 lessons, newer source/link fixes, product suite, indexing/search rules, and Relay/Corp Ops controls are preserved. This is a review branch, not a production release. See [reconciliation evidence](audits/visual-reconciliation-122/README.md) and [visual system](visual-system.md).
+
 Last repo inventory: 2026-08-20. This page summarizes observed implementation; source code remains authoritative.
 
 ## Product/site

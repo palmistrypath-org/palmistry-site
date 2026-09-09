@@ -22,6 +22,8 @@ Gettings, in *The Book of the Hand* (1965), observed that the hand must be read 
 
 A worksheet should have two columns from the start: one for the active (dominant) hand, one for the passive (non-dominant) hand. Recording only one hand is one of the more consequential beginner mistakes, and it is worth addressing directly: the comparison between dominant and non-dominant hand is fundamental to how palmistry generates meaning. West describes the contrast between the hands as revealing "the distance between potential and expression" (*The Complete Illustrated Guide to Palmistry*, 1998). A worksheet that records only one hand loses precisely this dimension — the most informative dimension the practice has. On questions of [which hand to read in palmistry](/blog/beginner/which-hand-to-read-palmistry/), the short answer is always: both, side by side.
 
+![Palm diagram naming the regions a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.](/images/diagrams/hand-map.svg "The territory a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.")
+
 The sections should follow this general order, moving from largest feature to smallest:
 
 **Hand shape and skin.** Record the overall shape — roughly square palm with short fingers, rectangular palm with long fingers, and so on. The [hand shapes in palmistry](/blog/beginner/hand-shapes/) article covers the classical typologies in detail. Note skin texture briefly: fine and smooth, coarse, or somewhere between. Note colour where it is notable. These observations take thirty seconds and are usually skipped entirely.
@@ -49,6 +51,8 @@ The [how to read a palm](/blog/beginner/how-to-read-a-palm/) article covers the 
 ## Using worksheets to compare two hands
 
 The comparison between a person's active and passive hands is where much of the texture in a palmistry reading comes from. The passive hand is traditionally associated with innate tendencies and inherited characteristics; the active hand is associated with the life as it has developed — what the person has made of what they started with. Where the two hands look similar, there is a correspondence between tendency and expression. Where they diverge significantly, something has shifted, and the nature of that divergence is worth examining.
+
+![Two palm diagrams side by side: the passive, non-dominant hand and the active, dominant hand.](/images/diagrams/active-passive-hands.svg "The passive hand is the one you do not write with; the active hand is the one you do. A reading compares the two.")
 
 A worksheet with two columns handles this naturally. When you have recorded both hands, scan across the columns looking for differences: Is the fate line stronger on one hand than the other? Does the head line take a different course? Are the mounts more developed on the active side? These contrasts are often more informative than the features themselves in isolation.
 

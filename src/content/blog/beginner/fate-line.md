@@ -16,6 +16,8 @@ If you arrived here directly, the [major lines overview](/blog/beginner/major-li
 
 The fate line runs vertically up the palm — from the wrist area upward toward the base of the middle finger, which in Western palmistry stands over the Mount of Saturn. It is also called the Line of Saturn, and in Cheiro's usage the Line of Destiny. Where the three other major lines are primarily horizontal, the fate line is vertical, and its course is considerably more variable: it may rise from the wrist, emerge from within the life line partway along its course, begin from the outer lower edge of the palm, or appear only in the middle or upper hand. It may also be entirely absent — common enough to require direct treatment, not a footnote.
 
+![Palm diagram with the fate line lit, its start and end marked.](/images/diagrams/fate-line.svg "The fate line, when present, rises up the centre of the palm toward the middle finger.")
+
 ## What it's traditionally associated with
 
 In the Western tradition, the fate line is associated with vocation, a sense of purposeful direction, and the degree to which a life feels shaped by intention rather than external circumstance. Cheiro's term "destiny" and the mount name "Saturn" both carry overtones of structure and weight — Saturn in the Western symbolic framework governs discipline and the demands of material existence. The fate line's interpretive territory sits within that register: not emotional feeling or physical vitality, but the quality of directed effort and its material outcomes.
@@ -27,6 +29,8 @@ Chinese palmistry calls this the career line and does not include it among the t
 ## Reading the fate line
 
 ### The starting point
+
+![Palm diagram showing four fate-line starting points: the wrist, the Mount of Luna, the life line, and the middle of the palm.](/images/diagrams/fate-line-origins.svg "Four places a fate line can begin: the wrist, the Mount of Luna, the life line, or the middle of the palm.")
 
 Where the fate line begins is among its most interpretively significant features. For a closer look at each starting position on its own, see the dedicated article on [what each fate line starting point means](/blog/beginner/fate-line-starting-points/).
 
@@ -71,6 +75,8 @@ A double fate line — two parallel lines running closely alongside each other �
 ## The fate line in context
 
 The fate line does not read independently of the hand it appears on. A line that starts late but runs clearly tells a different story on a hand that reads consistently for determination and sustained effort than on one suggesting scattered or inconsistent engagement. The head line — which the fate line crosses — is particularly relevant: the interaction between vocational direction and mental character is one of the more informative areas of synthesis on the hand.
+
+![Palm diagram showing three fate-line endpoints: at the head line, at the heart line, and at the Mount of Saturn beneath the middle finger.](/images/diagrams/fate-line-endings.svg "Three places a fate line can end: at the head line, at the heart line, or at the Mount of Saturn.")
 
 The relationship between the fate line and the life line is also worth attention at the point where they travel close to or intersect each other. The life line's character provides the physical substrate for what the fate line's direction suggests: a strong sense of purposeful direction reads differently alongside robust vitality than alongside energy that is more qualified or variable.
 

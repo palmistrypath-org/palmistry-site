@@ -14,6 +14,8 @@ What the classical tradition actually says about this is a good deal more nuance
 
 The M shape is formed by four lines converging in the right configuration: the [heart line](/blog/beginner/heart-line/), the [head line](/blog/beginner/head-line/), the [life line](/blog/beginner/life-line/), and the [fate line](/blog/beginner/fate-line/). When all four are clearly present and well-defined, they can together create an outline that resembles the capital letter M across the central palm.
 
+![Palm diagram with the heart, head, life, and fate lines lit and labelled.](/images/diagrams/major-lines.svg "The four major lines. The fate line is dotted because many palms do not have one.")
+
 Specifically: the heart line forms the top horizontal bar. The head line forms the middle horizontal bar. The life line curves down from between the thumb and index finger to create the leftmost diagonal stroke. The fate line — rising from the base of the palm toward the middle finger — creates the right-side diagonal that closes the shape.
 
 This means the M is not a single line, a marking, or a feature you find in isolation. It is a composite shape — a reading of four distinct lines in relation to one another. Whether that composite resembles an M at all depends on where each line begins, how it curves, and how clearly the fate line is present.
@@ -49,6 +51,8 @@ A hand where all four of these conditions are met does represent — in the trad
 ## Presence and the fate line problem
 
 One practical implication of what forms the M is that a large number of palms cannot produce it even when the other three lines are clear and strong.
+
+![Three palm diagrams compare a clear fate line, a faint fragmented fate line, and a palm with no fate line at all.](/images/diagrams/fate-line-presence.svg "Clear, faint and fragmented, and absent. All three are normal.")
 
 The fate line is the rarest of the four principal lines. Many people have no fate line, or have only a fragmentary one that begins late, fades early, or carries significant gaps. When the fate line is absent or unclear, no M shape can form — not because anything is wrong with the hand, but simply because one of the four components of the shape is missing.
 

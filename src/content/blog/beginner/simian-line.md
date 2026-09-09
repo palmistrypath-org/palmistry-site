@@ -16,6 +16,8 @@ It is identified primarily by what it lacks: the clear separation between two di
 
 The interpretive significance of the simian line begins with what has been merged. The heart line, in every tradition this site draws on, is traditionally associated with emotional nature — the quality of feeling, the capacity for connection, how depth of engagement registers in a person's character. The head line is traditionally associated with the thinking function — the quality of mind, the character of reasoning, how mental energy moves and is used.
 
+![Two palm diagrams compare separate heart and head lines with a single simian line that crosses the whole palm in their place.](/images/diagrams/simian-line.svg "A simian line is a single crease where the heart and head lines would normally be separate.")
+
 When these two features share one channel, neither operates independently of the other. The tradition does not read this as a blending of the two qualities but as a fusion — a state in which what the person feels, they also think, and what they think, they also feel, without the separation that ordinarily allows one to be processed without full activation of the other.
 
 The resulting quality, across the major sources, is described consistently in terms of intensity, focus, and what could be called an all-or-nothing quality to both thinking and feeling. When something engages a simian-line person's attention, it tends to engage the full range of their processing — emotional investment and mental focus arrive together rather than being deployed separately. The tradition reads this neither as a deficiency nor as a special gift, but as a particular mode of operating that shapes the character distinctively.
@@ -31,6 +33,8 @@ Gettings, in *The Book of the Hand*, noted the ambivalence the tradition carries
 ## Variations
 
 **Full versus partial.** A full simian line runs the complete width of the palm as a single unbroken crease. On some hands the configuration is partial — the lines appear fused in the central palm but show separation near one edge. A partial configuration may suggest the fusion is less complete: some capacity for independent operation of the emotional or intellectual function remains. A separation toward the radial edge (thumb side) may indicate some independence in the mental register; one toward the percussion edge (little finger side) may indicate some independence in the emotional.
+
+![Four close-up examples compare a deep clear line, a thin faint line, a broad shallow line, and a chained line.](/images/diagrams/line-quality.svg "Four qualities of line: deep and clear, thin and faint, broad and shallow, chained.")
 
 **Placement.** The single crease may sit high — closer to where the heart line would ordinarily run — or low, closer to the head line's usual position. High placement is often interpreted as the emotional register being more prominent in the fusion: the single channel carries more of the heart line's quality. Low placement suggests the intellectual register is more prominent in the blend. Neither has a simple positive or negative valence; they describe the character of the fusion rather than its worth.
 

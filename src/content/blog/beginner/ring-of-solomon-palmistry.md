@@ -14,6 +14,8 @@ This article covers what two verified classical sources — Cheiro and William B
 
 Cheiro, in *Palmistry for All* (1916), places the Ring of Solomon on the Mount of Jupiter — the fleshy rise at the base of the index finger — and illustrates it there as a distinct, named marking in his plates. His text situates the marking on the mount without describing its exact path in detail.
 
+![Palm diagram with the Ring of Solomon lit, a small arc curving beneath the index finger around the Mount of Jupiter.](/images/diagrams/ring-of-solomon.svg "The Ring of Solomon curves beneath the index finger, enclosing the Mount of Jupiter.")
+
 Benham, in *The Laws of Scientific Hand Reading* (1900), gives the more specific geometry. He describes the Ring of Solomon as a minor line that begins in the web between the index (Jupiter) and middle (Saturn) fingers, curves downward around the Mount of Jupiter, and ends near where the life line begins. Where this article describes the marking's path, that description follows Benham's account specifically, since Cheiro's text does not provide a comparable level of detail.
 
 ## How cautiously to identify it
@@ -31,6 +33,8 @@ Cheiro and Benham wrote separately, but their accounts overlap on this one narro
 ## The Ring of Solomon in context
 
 Benham's own reading already builds in a condition: he linked the marking to potential proficiency in occult studies only when other chirognomic indications in the hand support that reading, without naming which ones. Because that detail isn't part of the verified text, this article doesn't attempt to supply it. In practice, that means reading the Ring of Solomon alongside the rest of the hand rather than in isolation — the same general principle that applies to every feature covered on this site, and one Benham's own qualification makes explicit here.
+
+![Palm diagram with the Mount of Jupiter highlighted beneath the index finger.](/images/lessons/mounts/mount-of-jupiter.svg "The Mount of Jupiter sits directly beneath the index finger.")
 
 The marking sits directly on the Mount of Jupiter, whose broader traditional associations — ambition, ideals, and, again, an interest in mysticism and philosophy — are covered in the [Mount of Jupiter article](/blog/beginner/mount-of-jupiter). That the mount and the ring share some interpretive territory in Cheiro and Benham's writing is worth noting; this article does not go further and claim a specific combined reading between the two beyond what each source states on its own.
 

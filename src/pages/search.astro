@@ -3,6 +3,7 @@ import Search from 'astro-pagefind/components/Search';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import PageOpening from '../components/PageOpening.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -14,7 +15,7 @@ import { SITE_TITLE } from '../consts';
 			.search-wrap {
 				max-width: 680px;
 				margin: 0 auto;
-				padding: 3em 1em;
+				padding: 0 1em 3em;
 			}
 			h1 {
 				text-align: center;
@@ -70,8 +71,7 @@ import { SITE_TITLE } from '../consts';
 		<Header />
 		<main id="main-content" tabindex="-1" data-pagefind-ignore>
 			<div class="search-wrap">
-				<h1>Search</h1>
-				<p class="search-intro">Search the lesson and article library, or browse a starting point below.</p>
+				<PageOpening eyebrow="The library" title="Search" lede="Search the lessons and articles, or browse a starting point below." art="lines" compact />
 				<Search />
 				<noscript>
 					<p class="search-fallback">Search requires JavaScript. You can still browse by lesson module or article topic below.</p>

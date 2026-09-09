@@ -5,10 +5,15 @@ import sitemap from '@astrojs/sitemap';
 import pagefind from 'astro-pagefind';
 import { defineConfig, fontProviders } from 'astro/config';
 import { shouldIncludeInSitemap } from './src/indexability.mjs';
+import rehypeFigure from './src/plugins/rehype-figure.mjs';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://palmistrypath.com',
+	markdown: {
+		// Wrap standalone markdown images in the site figure plate (src/plugins/rehype-figure.mjs)
+		rehypePlugins: [rehypeFigure],
+	},
 	integrations: [
 		mdx(),
 		sitemap({

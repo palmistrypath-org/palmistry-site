@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import PageOpening from '../components/PageOpening.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -44,8 +45,7 @@ import { SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main id="main-content" tabindex="-1">
-			<h1>Affiliate Disclosure</h1>
-			<p class="updated">Last updated: June 2026</p>
+			<PageOpening eyebrow="Last updated · June 2026" title="Affiliate Disclosure" art="palm" compact />
 
 			<div class="notice">
 				<em>
@@ -55,7 +55,7 @@ import { SITE_TITLE } from '../consts';
 				</em>
 			</div>
 
-			<section>
+			<section class="reveal">
 				<h2>How Affiliate Links Work</h2>
 				<p>
 					Some links on this site — primarily in articles that recommend books — are affiliate links.
@@ -69,7 +69,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Editorial Independence</h2>
 				<p>
 					Affiliate relationships do not influence which books or resources are recommended here.
@@ -85,7 +85,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Amazon Associates Disclaimer</h2>
 				<p>
 					As an Amazon Associate, Palmistry Path earns from qualifying purchases made through links
@@ -94,7 +94,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Questions</h2>
 				<p>
 					If you have questions about this disclosure or about any specific link on the site, please

@@ -1,5 +1,12 @@
 # Changelog - Palmistry Path
 
+## 2026-09-08 — Issue #122 visual reconciliation (review branch)
+
+- Forward-ported the approved Fable homepage, whole-hand mobile composition, brand mark, shared visual components, guide presentation, and instructional atlas onto current main.
+- Preserved current prose, newer articles, product suite, SEO/indexability, dependencies, workflows, and operational instructions. Excluded stale Fable task/status docs and superseded product plans.
+- Repaired reveal failure/focus handling, lesson/module decorative overflow, and blog-list box sizing.
+- Review and validation evidence: [issue #122](audits/visual-reconciliation-122/README.md). No main merge or production publication.
+
 Meaningful project-state changes only; Git history remains the detailed implementation record.
 
 ## 2026-08-28 - Relay merge-gate status check made trust-boundary-safe (Relay PP-RELAY-059, revision 3)

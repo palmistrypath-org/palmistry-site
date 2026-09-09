@@ -14,11 +14,15 @@ This article introduces the principal vocabulary for reading fingers in the West
 
 The fingers sit above the palm, which is itself above the wrist. In Western palmistry, the hand is understood as an integrated system: [hand shape](/blog/beginner/hand-shapes/) determines the baseline context, the mounts qualify the character of each region, and the lines record the patterns through which energy moves. The fingers occupy the upper register of this system and are traditionally associated with the conscious, outward-facing dimensions of character — how a person projects themselves, acts in the world, and engages with others.
 
+![Palm diagram labelling the thumb and the index, middle, ring, and little fingers with their planetary names Jupiter, Saturn, Apollo, and Mercury.](/images/diagrams/finger-names.svg "Each finger carries two names: an anatomical one and the planet it is traditionally assigned.")
+
 Before reading individual fingers, it is worth assessing them as a group. Do they curve slightly inward toward the palm, or do they splay outward? Are they close together or naturally spaced apart? Do they carry prominent knotted joints, or do they run smoothly from base to tip? These overall qualities provide context for the individual readings that follow. The [hand shapes lesson](/learn/foundations/03-hand-shapes/) covers the relationship between finger length and palm proportion in full; this article builds on that foundation.
 
 ## Finger length relative to the palm
 
 The most important single measurement in reading fingers is their length relative to the palm. The practical test most writers use is to compare the length of the middle finger — the longest of the four — with the palm length measured from wrist crease to the base of the fingers.
+
+![Four schematic hands compare the Earth, Air, Fire, and Water hand shapes by palm proportion and finger length.](/images/diagrams/hand-shapes.svg "Two measurements sort hands into four types: is the palm square or rectangular, and are the fingers short or long against it?")
 
 Where the middle finger is roughly equal in length to the palm, the fingers are generally considered long. Where the middle finger falls noticeably short of that parity, they are considered short. The boundary is not a fixed measurement and should be assessed by eye — the contrast in proportion is what matters, not an absolute millimetre count.
 
@@ -39,6 +43,8 @@ The practical note is that most hands show a mix: one knuckle may be more develo
 ## The three phalange zones
 
 Each finger divides into three segments, called phalanges, separated by the two knuckle joints. In the Western tradition, these three zones correspond to three registers of experience, typically described as mental, practical, and material — or, in some older formulations, spiritual, middle, and base. The [phalanges in palmistry article](/blog/beginner/phalanges-palmistry/) covers this framework in full, including how to compare the three segments within a single finger and where sources agree and disagree on weighting.
+
+![Palm diagram with the middle finger divided into its three phalanges: the first at the tip, the second in the middle, and the third at the base.](/images/diagrams/finger-phalanges.svg "The three phalanges of a finger, read from the tip down: mental, practical, material.")
 
 **The first phalange** — the tip segment, from the top of the finger to the first knuckle — is traditionally associated with the mental and spiritual register: idealism, sensitivity, intuition, and abstract or creative thought. A long first phalange relative to the others may suggest an orientation toward ideas and impressions. A markedly short first phalange is sometimes associated with less developed imaginative or intuitive capacity in the finger's domain — though this must be read in the context of the whole hand.
 

@@ -1,5 +1,9 @@
 # Architecture - Palmistry Path
 
+## Review visual system — issue #122
+
+`BrandMark` and `PageOpening` provide shared identity/openings. `BaseHead` loads the fail-visible reveal controller; `global.css` owns visual tokens, figure plates, reduced motion and focus handling. `src/plugins/rehype-figure.mjs` wraps standalone Markdown images in the same figure treatment as MDX. Site atlas generators share `scripts/lib/palm.mjs`; product generators remain separate and unchanged. See [visual system](visual-system.md).
+
 ## Runtime/stack
 - Astro 6, static output
 - Node `>=22.12.0`

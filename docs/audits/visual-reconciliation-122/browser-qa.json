@@ -1,0 +1,302 @@
+[
+  {
+    "route": "/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/learn/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/learn/foundations/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/learn/foundations/02-how-to-read-a-palm/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/learn/lines/02-heart-line/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/learn/mounts/02-mount-of-venus/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/blog/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/blog/beginner/minor-lines-overview/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/blog/beginner/intuition-line-palmistry/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/guide/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/guide/thank-you/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/premium-guide/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/search/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/glossary/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/404/",
+    "viewport": 390,
+    "brokenImages": [],
+    "clientWidth": 375,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 375,
+    "width": 390
+  },
+  {
+    "route": "/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/learn/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/learn/foundations/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/learn/foundations/02-how-to-read-a-palm/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/learn/lines/02-heart-line/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/learn/mounts/02-mount-of-venus/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/blog/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/blog/beginner/minor-lines-overview/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/blog/beginner/intuition-line-palmistry/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/guide/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/guide/thank-you/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/premium-guide/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/search/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/glossary/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  },
+  {
+    "route": "/404/",
+    "viewport": 1440,
+    "brokenImages": [],
+    "clientWidth": 1425,
+    "h1": 1,
+    "main": true,
+    "scrollWidth": 1425,
+    "width": 1440
+  }
+]

@@ -16,6 +16,8 @@ If you've read the [Mount of Apollo article](/blog/beginner/mount-of-apollo), th
 
 The Sun Line runs vertically up the palm from somewhere in the lower or middle hand toward the base of the ring finger — the Apollo finger, fourth from the thumb. Unlike the fate line, which typically originates near the wrist and travels toward the base of the middle finger, the Sun Line's course is shorter, more variable in its point of origin, and more variable in whether it appears at all.
 
+![Palm diagram with the sun line lit, rising up the palm toward the ring finger.](/images/diagrams/sun-line.svg "The sun line rises toward the ring finger and the Mount of Apollo.")
+
 In a hand with a well-marked Sun Line, the line runs upward through the middle or upper palm, often visible as a clear vertical stroke that terminates just below the base of the ring finger. In practice, you are as likely to find a partial Sun Line — a fragment in the upper palm, a faint tracing — as a full one running clearly from the lower hand. The variation is part of what this line requires direct treatment for.
 
 ## What it's traditionally associated with
@@ -41,6 +43,8 @@ In practice: a life of deep personal achievement or meaningful work that never r
 ## Reading the Sun Line
 
 ### Starting points
+
+![Four close-up examples compare a deep clear line, a thin faint line, a broad shallow line, and a chained line.](/images/diagrams/line-quality.svg "Four qualities of line: deep and clear, thin and faint, broad and shallow, chained.")
 
 Where the Sun Line begins is among its most interpretively significant features.
 

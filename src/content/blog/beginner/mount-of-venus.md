@@ -14,6 +14,8 @@ It is also the largest single mount on the palm. More territory than any of the 
 
 The Mount of Venus sits at the base of the thumb, enclosed on the inner side by the arc of the life line. If you follow the life line's arc — from its starting point between thumb and index finger, curving around and descending toward the wrist — the territory inside that arc, the padded flesh between the line and the thumb's base, is Venus. The mount is bounded below by the wrist's upper crease, above by the thumb's lowest joint, and on the outer side by the life line itself.
 
+![Palm diagram with the Mount of Venus highlighted at the base of the thumb.](/images/lessons/mounts/mount-of-venus.svg "The Mount of Venus: the pad at the base of the thumb, inside the life line.")
+
 This location matters. It means the life line does not merely pass near Venus — it encloses it. The mount exists within the life line's territory, and the two are read together.
 
 ## What it's traditionally associated with
@@ -43,6 +45,8 @@ Mount development is assessed by both sight and touch. A well-developed mount is
 ## The life line's relationship to Venus
 
 The arc of the life line is interpretively significant for Venus in a way no other mount's boundaries create. When the life line sweeps wide — curving well away from the thumb to give Venus generous territory — the mount's qualities are amplified by space. A wide arc is traditionally associated with expansive vitality, warmth directed outward, and an appetite for engagement with life. Benham makes the same point from the opposite direction: a life line that runs close to the thumb crowds the mount and restricts its operation, which by implication means a generous arc leaves it fuller room to express itself.
+
+![Two palm diagrams compare a wide life-line arc enclosing a large Mount of Venus with a narrow arc that hugs the thumb.](/images/diagrams/life-line-arc.svg "A wide arc encloses a large Mount of Venus; a narrow arc hugs the base of the thumb.")
 
 A narrow arc, running close to the thumb, reduces Venus's territory regardless of how padded the flesh itself is. The warmth is more contained, the energy more conserved. Benham described this as "checking the operation of that Mount" — not eliminating its qualities, but restricting their scope and outward reach.
 

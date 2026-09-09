@@ -1,7 +1,7 @@
 # Roadmap - Palmistry Path
 
 ## Status
-No single active product-development priority is recorded in the canonical operating docs yet. `docs/ACTIVE_TASK.md` carries immediate execution state.
+Issue #122 is the current macro: reconcile the approved Fable visual system onto current main and stop at REVIEW_READY for Chairman visual approval. Storefront/fulfillment issue #121 waits for that approval. `docs/ACTIVE_TASK.md` carries immediate execution state; the linked Notion macro brief governs scope.
 
 ## Product direction
 The durable sequence remains:

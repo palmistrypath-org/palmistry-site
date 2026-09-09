@@ -22,6 +22,8 @@ Most serious palmistry writing is explicit about this. Cheiro, whose *Palmistry 
 
 Western palmistry identifies four lines as primary — the Heart Line, the Head Line, the Life Line, and the Fate Line. The [major lines overview](/blog/beginner/major-lines-overview/) covers these in more depth; what follows is a working introduction to each.
 
+![Palm diagram with the heart, head, life, and fate lines lit and labelled.](/images/diagrams/major-lines.svg "The four major lines. The fate line is dotted because many palms do not have one.")
+
 ### The Heart Line
 
 The Heart Line runs across the upper palm, below the fingers. It typically begins beneath the little finger and arcs toward the index finger side of the hand, though its exact path and endpoint vary considerably.
@@ -60,6 +62,8 @@ Its absence is common and not a negative sign. Cheiro acknowledged it plainly: "
 
 Palmistry does not just note which lines are present. It observes their qualities. Six features recur across most serious palmistry writing as the basic vocabulary for describing any line:
 
+![Four close-up examples compare a deep clear line, a thin faint line, a broad shallow line, and a chained line.](/images/diagrams/line-quality.svg "Four qualities of line: deep and clear, thin and faint, broad and shallow, chained.")
+
 **Length.** How far does the line extend across the palm? A longer line has traditionally been associated with more sustained expression of that line's quality. A shorter line suggests a more contained or specific expression. Length is context-dependent — a Head Line that extends two-thirds of the way across the palm reads differently on different hand types.
 
 **Depth and clarity.** A deep, clearly defined line is traditionally interpreted as suggesting strong expression of that quality. A faint, poorly formed line is often read as suggesting that quality is less developed or expressed with less consistency. Clarity — the absence of breaks, chains, or fine crossings — tends to reinforce a line's strength in this framework.
@@ -89,6 +93,8 @@ Certain errors appear so consistently in beginner palmistry that naming them her
 ## A suggested reading sequence for beginners
 
 If you are approaching palm lines for the first time, this is the sequence that makes the most sense:
+
+![Palm diagram with seven numbered callouts showing the order of a reading: overall impression, hand shape, texture, thumb and fingers, mounts, major lines, minor lines and markings.](/images/diagrams/reading-sequence.svg "The order of a reading, from the whole hand inward: impression, shape, texture, thumb and fingers, mounts, major lines, then minor lines and markings.")
 
 1. **Start with hand shape.** Before examining any line, identify the hand's basic proportions — the relationship between palm length and finger length. [How to Read a Palm](/learn/foundations/02-how-to-read-a-palm/) explains why this matters: hand shape is the context within which lines are read. Skipping it means reading lines without their interpretive baseline.
 
