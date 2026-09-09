@@ -37,7 +37,7 @@ Do not recursively read `docs/` or reread unchanged context “just in case.” 
 - Inspect the actual implementation before documenting or changing it.
 
 ## Corporate execution-integrity and instruction-propagation contract
-This persistent instruction surface implements Corporate Brain operating model `2026-09-06.p0.1` for execution-state truth and instruction propagation.
+This persistent instruction surface implements Corporate Brain operating model `2026-09-07.p0.2` (policy hash `a80b24c4fe536a1825aef93ba522ca09af571c13e53075d3e0b37e7fe099da09`) for execution-state truth, instruction propagation, and macro-execution policy.
 
 - **State is a claim; evidence is truth.** Issue creation, assignment, `Next Owner`, Director intake, dispatch request, or equivalent routing intent does not prove execution.
 - `TASK_ACCEPTED` / CLAIMED requires a concrete receiver identity and durable run/process identity. CLAIMED is not Working.
@@ -46,6 +46,15 @@ This persistent instruction surface implements Corporate Brain operating model `
 - Preserve exact work-item, branch/commit, source/evidence, approval, and cross-harness identity across handoffs. Palmistry's protected-write/authentication incident and exact-SHA merge-control path remain fail-closed until independently repaired and verified; this file grants no bypass.
 - Architecture or policy changes do not automatically propagate to persistent agents, bots, automations, repository instructions, or routines. Long-lived surfaces must be reconciled against the current operating-model version/policy identity. A materially stale persistent surface is `INSTRUCTION_PROPAGATION_DRIFT`; machine-updatable surfaces should be updated through an authorized path, while genuinely manual/UI-only surfaces receive one exact human action only when no authorized update path exists.
 - A stale or mismatched instruction surface may preserve in-flight evidence but must not silently claim current-policy eligibility for new work.
+
+### High-capability macro-execution
+For substantial coherent product, website, content, software, or systems-development work, prefer a large outcome-oriented execution pass through the best-fit capable harness when it can safely own implementation through internal verification.
+
+- Bundle related implementation, QA, and self-repair work aggressively when continuous context improves throughput or quality; do not split coherent work into micro-tasks merely for management convenience.
+- Keep deterministic automation, Corp Ops, event-driven Directors, and lower-cost mechanisms focused on state, routing, monitoring, reconciliation, routine coordination, and other management work.
+- Preserve repository ownership, credential/security boundaries, publication/release gates, destructive-action controls, legal/compliance limits, spending controls, and genuine human/device/subjective gates. Macro scope never authorizes crossing them.
+- Require durable branch/commit/PR or other resolvable evidence, validation performed, residual blockers/risks, and exact handoff identity from a macro pass before it can be treated as completed execution evidence.
+- Route by demonstrated capability, context needs, tool access, cost/ROI, and task type rather than treating any model or vendor as permanent corporate authority.
 
 These corporate control-plane rules supplement, and do not weaken, Palmistry Path's source-sensitive editorial rules, feature-branch review gate, Git safety rules, or human/reserved authority boundaries below.
 
