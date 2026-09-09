@@ -16,6 +16,8 @@ If you arrived here directly, the [overview of the major lines](/blog/beginner/m
 
 The idea that the life line predicts lifespan has its roots in the medieval period, when the dominant mode of public palmistry was explicitly predictive. Fortune tellers at fairs and markets were expected to tell clients when they would marry, when they would prosper, and — with a suitably dramatic pause — how long they would live. The life line, as the most recognisable and emotionally resonant feature of the palm, became the natural vehicle for this. A long line was good news; a short one was not.
 
+![Palm diagram with the life line lit, its start and end marked.](/images/diagrams/life-line.svg "The life line arcs around the base of the thumb toward the wrist.")
+
 It would be convenient to say the serious literature never went along with this. It did.
 
 Cheiro, in *Palmistry for All* (1916), states that the life line's connection to the vital organs "enables it to foretell the length of life from *natural causes*," and that a long, clear, unbroken line "would indicate length of life, vitality, freedom from illness, and strength of constitution." He devotes a chapter to dating events along the hand, dividing the life line into seven-year periods, and identifies the point where the life and health lines meet as "the date of death." Benham, in *The Laws of Scientific Hand Reading* (1900), gives his own six-year dating scheme on the line, reads a tasselled ending as showing "death of the subject at the age at which the tassel is seen," and treats islands as periods of delicacy and breaks as illness or accident. He does urge restraint — length of life, he writes, "is a field that should seldom be approached at all, certainly not unless you are absolutely proficient, careful, and tactful" — but that is a caution about handling the subject, not a denial that he read it.
@@ -36,6 +38,8 @@ This is the main argument, and it is worth being clear that it has to be. The ol
 
 The life line runs from between the thumb and index finger, sweeping in an arc around the base of the thumb and descending toward the wrist. In doing so, it frames the Mount of Venus — the raised pad of flesh at the base of the thumb that the Western tradition associates with physical warmth, affectionate capacity, the bonds of home and family, and the pleasure of physical life. The relationship between line and mount is not incidental: the arc of the life line defines the mount's territory, and both are read together.
 
+![Two palm diagrams compare a life line that runs to the wrist with a short life line that ends in the middle of the palm.](/images/diagrams/life-line-length.svg "A short life line ends in the middle of the palm. It is not a measure of lifespan.")
+
 In the Western tradition, the life line is associated with four interconnected qualities: physical constitution, the quality and rhythm of a person's vitality, the character of major life transitions, and the relationship to home, roots, and groundedness. Cheiro's own formulation runs to vitality, freedom from illness, and strength of constitution. Benham frames it as indicating "the health of the subject during the various periods of life, his physical strength in general." Contemporary Indian practice calls it the *Jeevan Rekha* and often frames it in terms of *prana*, the body's animating force. That is modern Hindi terminology and a modern framing rather than a classical designation — the older Sanskrit marks literature describes palm lines by shape and omen and names no life line — but it is genuinely used, and it points at a structurally similar idea.
 
 What this article does not ask the life line to do is count out years. Cheiro and Benham did exactly that, each with his own dating scheme; those methods are part of the historical record and are not used here.
@@ -43,6 +47,8 @@ What this article does not ask the life line to do is count out years. Cheiro an
 ## Reading the life line: variations
 
 **Long.** A life line that runs the full descent of the palm, reaching toward the wrist, is traditionally associated with sustained and abundant vitality — physical energy that persists across life's demands. This is the most straightforward variation, and the one that causes the least worry.
+
+![Two palm diagrams compare a wide life-line arc enclosing a large Mount of Venus with a narrow arc that hugs the thumb.](/images/diagrams/life-line-arc.svg "A wide arc encloses a large Mount of Venus; a narrow arc hugs the base of the thumb.")
 
 **Short.** A line that ends before reaching the lower palm is the variation that most often prompts searches for answers, and it is where the historical and modern readings diverge most sharply.
 

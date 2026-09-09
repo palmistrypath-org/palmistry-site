@@ -20,6 +20,8 @@ The thumb has no planet. William G. Benham, whose *The Laws of Scientific Hand R
 
 The thumb sits on the radial side of the hand — the side closer to the radius bone of the forearm — and is set apart from the four fingers by both anatomy and function. In anatomical terms the thumb has two phalanges (bones), not three as the fingers do, which is part of what makes the palmistic reading of the thumb distinct: the two-segment structure maps cleanly onto the two qualities the tradition assigns it.
 
+![Palm diagram with the thumb divided into its two phalanges, the first at the tip and the second below the joint, with the angle of opening marked.](/images/diagrams/thumb-phalanges.svg "The thumb’s two phalanges — will at the tip, logic below the joint — and the angle at which it opens from the hand.")
+
 When examining the thumb, hold the hand naturally relaxed. Note how the thumb is held: close to the palm, or extended outward at a noticeable angle. Note also its length in relation to the fingers, the relative length of its two sections, and whether the tip bends back when gently pressed or remains firm. All of these features carry meaning in classical and contemporary palmistry.
 
 ## The two phalanges: will and logic
@@ -51,6 +53,8 @@ What the tradition genuinely says, and what popular palmistry sometimes glosses 
 ## The Mount of Venus
 
 At the base of the thumb, bounded by the life line, sits the Mount of Venus — the broad, fleshy pad that is one of the most anatomically prominent mounts on most hands. Though a full treatment of the Mount of Venus deserves its own article, it is worth noting here because it is structurally part of the thumb's domain: the mount's development provides context for the thumb reading. A well-developed Mount of Venus is traditionally associated with warmth, sensuality, vitality, and a capacity for human connection; a flat or absent mount with emotional reserve or lower physical vitality. When reading the thumb, the mount's condition gives texture to the willpower-and-reason reading — a forceful thumb paired with a full Mount of Venus suggests energy directed toward people; the same thumb with a flat mount may suggest that force is directed elsewhere.
+
+![Palm diagram with the Mount of Venus highlighted at the base of the thumb.](/images/lessons/mounts/mount-of-venus.svg "The Mount of Venus: the pad at the base of the thumb, inside the life line.")
 
 ## Cross-tradition note
 

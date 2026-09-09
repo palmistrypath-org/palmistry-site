@@ -1,40 +1,24 @@
 ---
+/**
+ * Figure — a diagram plate. Markup only; the plate styles live in
+ * global.css ("Figure plates") so that markdown images, which the
+ * rehype-figure plugin wraps in the same markup, look identical.
+ */
 interface Props {
 	src: string;
 	alt: string;
 	caption?: string;
+	/** `inset` = a narrower plate for close-ups; default fills the measure. */
+	size?: 'inset';
 }
 
-const { src, alt, caption } = Astro.props;
+const { src, alt, caption, size } = Astro.props;
+const cls = `pp-figure reveal reveal--scale${size ? ` pp-figure--${size}` : ''}`;
 ---
 
-<figure>
-	<img src={src} alt={alt} />
+<figure class={cls}>
+	<div class="pp-figure-frame">
+		<img src={src} alt={alt} loading="lazy" decoding="async" />
+	</div>
 	{caption && <figcaption>{caption}</figcaption>}
 </figure>
-<style>
-	figure {
-		margin: 2em 0;
-		padding: 0;
-		overflow: hidden;
-		background-color: #0d0a1a;
-		line-height: 0;
-	}
-	figure > img {
-		display: block;
-		width: calc(100% + 2px);
-		max-width: none;
-		height: auto;
-		margin: -1px;
-		border-radius: 0 !important;
-	}
-	figure > figcaption {
-		display: block;
-		margin-top: 0.75em;
-		font-size: 0.8em;
-		color: var(--color-text-muted);
-		font-style: italic;
-		line-height: 1.5;
-		text-align: center;
-	}
-</style>

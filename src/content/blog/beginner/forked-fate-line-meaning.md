@@ -14,6 +14,8 @@ Before any of that, it helps to be precise about what "forked" even describes, b
 
 **A fork** is where the line itself divides into two continuing strands — the single line becomes two, and both strands carry the line's course forward from that point.
 
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
+
 **A branch** is a secondary line departing from the main fate line while the main line continues on its own course uninterrupted. The branch is an offshoot, not a division of the line itself.
 
 **A break** is a gap — the line stops and a new segment starts again, with no continuous strand connecting the two. That's a different formation from either a fork or a branch, and it's covered on its own in [the main fate line guide](/blog/beginner/fate-line/).
@@ -23,6 +25,8 @@ A fork can occur near the line's origin, in the lower palm, or at its terminus, 
 ## The one verified form: a lower fork toward Venus and Luna
 
 Cheiro, in *Palmistry for All* (1916), describes a fate line configuration in the lower part of the hand where the line divides into two branches — one running toward the Mount of Venus, the fleshy pad at the base of the thumb, and the other toward the Mount of Moon (Luna), on the opposite, outer edge of the lower palm. That's the specific configuration this article addresses: a fork or division low on the fate line, with one strand reaching toward each of those two mounts.
+
+![Two palm diagrams compare a single fate line and a fate line that forks at its base, with prongs toward Venus and Luna.](/images/diagrams/fate-line-forked.svg "A fork at the base of the fate line sends prongs toward Venus and Luna.")
 
 Cheiro's historical reading of this particular split was that it points to romance or passion playing a strong role in shaping the person's career or life direction — the pull of the heart, in his framing, visibly entangled with the pull of purpose. That reading is presented here as a documented historical interpretation, attributed to Cheiro by name, not as a prediction this site is making. Separately, and regardless of how Cheiro himself framed it, Palmistry Path's own editorial policy is to never present a palmistry configuration — this one included — as a guaranteed outcome; that's a statement of this site's policy, not a claim about Cheiro's own framing.
 

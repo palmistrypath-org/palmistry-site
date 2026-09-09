@@ -16,6 +16,8 @@ What these variations do offer is a more nuanced picture of how significant emot
 
 The relationship lines sit on the percussion edge of the hand — the little-finger side — just below the base of the little finger, on the Mount of Mercury. They run horizontally inward from the outer edge of the palm. If you are new to locating the lines at all, the [beginner's guide](/guide/) and the [major lines overview](/blog/beginner/major-lines-overview/) are useful starting points.
 
+![Palm diagram with the marriage or relationship lines lit: short horizontal lines on the outer edge of the palm between the heart line and the little finger.](/images/diagrams/marriage-lines.svg "Marriage lines are read on the edge of the hand, between the heart line and the little finger.")
+
 For most readings these lines are considered alongside the [heart line](/blog/beginner/heart-line/), which runs across the full width of the upper palm and is the major line most closely associated with the emotional register of relationships. Neither the heart line nor the Mercury mount lines exist in isolation; they form part of the same picture.
 
 ---
@@ -31,6 +33,8 @@ The naming shift matters for this article because it shapes how variations are r
 ## Forks
 
 ### Fork at the inner end
+
+![Ten close-up examples of line markings: island, clean break, overlapping break, fork, rising branch, falling branch, cross, star, square, and grille.](/images/diagrams/line-markings.svg "The markings a line can carry: island, break, overlap, fork, branches, cross, star, square, grille.")
 
 A fork that appears at the inner end of the relationship line — where the line splits as it travels toward the centre of the palm — is one of the most frequently noted markers in the established literature. Benham and West both address it directly. It is traditionally associated with diverging paths: a relationship that pulls in two directions, an estrangement, or a partnership that does not resolve into a unified direction.
 
@@ -65,6 +69,8 @@ The same caution that applies to a [broken heart line](/blog/beginner/broken-hea
 ## Faint and absent lines
 
 Depth and clarity are consistently emphasised across the established palmistry sources as more meaningful than presence or absence alone. A faint relationship line is not the same as no line, and no visible line is not the same as no significant emotional bond.
+
+![Four close-up examples compare a deep clear line, a thin faint line, a broad shallow line, and a chained line.](/images/diagrams/line-quality.svg "Four qualities of line: deep and clear, thin and faint, broad and shallow, chained.")
 
 Gettings, Fincham, and West all address line quality as a primary factor in reading the relationship lines. A very faint line may be traditionally associated with a bond that was felt but did not leave a deep impression on the relational landscape — a relationship that was real but not formative. This is a different reading from a clear, deeply etched line.
 

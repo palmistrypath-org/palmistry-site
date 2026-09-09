@@ -13,89 +13,173 @@ import { SITE_TITLE } from '../consts';
 			description="A structured reference and observation guide for anyone beginning their study of palmistry. Covers the major lines, mounts, and hand shapes. Free to download."
 		/>
 		<style>
-			/* ── Hero ─────────────────────────────────────────────────── */
-			.guide-hero {
-				text-align: center;
-				padding: 4.5em 1em 2.5em;
-				background: radial-gradient(
-					ellipse 65% 50% at 50% 40%,
-					rgba(201, 169, 110, 0.07) 0%,
-					transparent 70%
-				);
+			main {
+				width: 100%;
+				max-width: 100%;
+				margin: 0;
+				padding: 0;
 			}
-			.guide-eyebrow {
-				font-family: var(--font-cinzel), serif;
-				font-size: 0.58em;
-				letter-spacing: 0.22em;
-				text-transform: uppercase;
-				color: var(--color-text-muted);
-				margin: 0 0 1.1em;
+
+			/* ── Hero: the guide as an object in the dark ─────────────── */
+			.guide-hero {
+				position: relative;
+				isolation: isolate;
+				overflow: hidden;
+				padding: clamp(3em, 8vh, 6em) 1.5em clamp(3em, 8vh, 5em);
+			}
+			.guide-hero::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				z-index: -1;
+				background:
+					radial-gradient(ellipse 40% 60% at 32% 55%, rgba(122, 72, 201, 0.24), transparent 70%),
+					radial-gradient(ellipse 35% 35% at 70% 30%, rgba(201, 169, 110, 0.07), transparent 70%),
+					url('/images/home/haze-nebula.webp') center / cover;
+			}
+			.guide-hero::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				z-index: -1;
+				background: linear-gradient(180deg, rgba(7, 5, 13, 0.35), rgba(7, 5, 13, 0.5) 60%, var(--color-bg));
+			}
+			.hero-inner {
+				width: var(--wide);
+				max-width: 100%;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: minmax(240px, 400px) 1fr;
+				gap: clamp(2em, 6vw, 5em);
+				align-items: center;
+			}
+			.guide-book {
+				perspective: 1400px;
+				display: flex;
+				justify-content: center;
+			}
+			.book {
+				position: relative;
+				width: min(320px, 72vw);
+				transform: rotateY(18deg) rotateX(2deg);
+				transform-style: preserve-3d;
+				transition: transform 1.2s var(--ease-out);
+				border-radius: 4px 10px 10px 4px;
+				box-shadow:
+					-30px 40px 70px rgba(0, 0, 0, 0.7),
+					0 0 0 1px rgba(201, 169, 110, 0.25),
+					0 0 90px rgba(122, 72, 201, 0.28);
+			}
+			.guide-book:hover .book {
+				transform: rotateY(8deg) rotateX(0deg);
+			}
+			.book img {
+				display: block;
+				width: 100%;
+				height: auto;
+				border-radius: 4px 10px 10px 4px;
+			}
+			.book::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: -14px;
+				width: 14px;
+				background: linear-gradient(90deg, #060409, #1a1329 70%, #0a0814);
+				transform: rotateY(-90deg);
+				transform-origin: right;
+				border-radius: 3px 0 0 3px;
+			}
+			.book::after {
+				content: '';
+				position: absolute;
+				inset: 3% 0 3% auto;
+				width: 10px;
+				right: -10px;
+				background: repeating-linear-gradient(180deg, #e8dfc9 0 1px, #b9ae94 1px 2px);
+				transform: rotateY(90deg);
+				transform-origin: left;
+				opacity: 0.8;
 			}
 			.guide-hero h1 {
-				font-size: clamp(1.6rem, 6vw, 3em);
-				letter-spacing: 0.08em;
-				color: var(--accent);
-				text-shadow:
-					0 0 80px rgba(201, 169, 110, 0.18),
-					0 2px 8px rgba(0, 0, 0, 0.7);
+				font-size: clamp(1.6rem, 4.6vw, 3em);
+				letter-spacing: 0.06em;
 				margin: 0 0 0.5em;
 			}
 			.guide-hero .subline {
-				font-size: 0.9em;
+				font-size: 0.95em;
 				color: var(--color-text-muted);
-				max-width: 480px;
-				margin: 0 auto;
-				line-height: 1.75;
+				max-width: 520px;
+				margin: 0 0 1.8em;
+				line-height: 1.8;
+			}
+			.hero-ctas {
+				display: flex;
+				gap: 1em;
+				flex-wrap: wrap;
+				align-items: center;
+			}
+			.hero-note {
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.58em;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: var(--color-text-muted);
+				opacity: 0.75;
 			}
 
-			/* ── Divider ──────────────────────────────────────────────── */
-			.divider {
-				text-align: center;
-				color: var(--accent);
-				letter-spacing: 0.5em;
-				font-size: 0.6em;
-				opacity: 0.45;
-				padding: 2.5em 0 0;
-				margin-bottom: 2.5em;
+			.divider-star {
+				margin: clamp(2em, 5vh, 3.5em) auto;
 			}
 
 			/* ── Shared section wrapper ───────────────────────────────── */
 			.guide-section {
-				width: 640px;
+				width: var(--measure);
 				max-width: calc(100% - 2em);
 				margin: 0 auto;
 				padding: 0 1em;
 			}
+			.section-heading {
+				text-align: center;
+				margin-bottom: 1.6em;
+			}
 
 			/* ── What's inside ────────────────────────────────────────── */
-			.section-heading {
-				font-family: var(--font-cinzel), serif;
-				font-size: 0.62em;
-				letter-spacing: 0.2em;
-				text-transform: uppercase;
-				color: var(--color-text-muted);
-				text-align: center;
-				margin: 0 0 1.75em;
-			}
 			.contents-grid {
 				list-style: none;
-				margin: 0 0 3.5em;
+				margin: 0 0 3em;
 				padding: 0;
 				display: grid;
 				grid-template-columns: 1fr 1fr;
-				gap: 1.25em 2em;
+				gap: 1.1em;
 			}
 			.contents-grid li {
-				border-top: 1px solid rgba(201, 169, 110, 0.15);
-				padding-top: 0.9em;
+				padding: 1.2em 1.3em;
+				background:
+					linear-gradient(180deg, rgba(122, 72, 201, 0.07), transparent 70%),
+					var(--surface);
+				border: 1px solid var(--hairline);
+				border-radius: 4px;
+			}
+			.contents-grid li.wide {
+				grid-column: 1 / -1;
+			}
+			.item-index {
+				display: block;
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.56em;
+				letter-spacing: 0.3em;
+				color: var(--accent);
+				margin-bottom: 0.6em;
 			}
 			.item-title {
 				display: block;
 				font-family: var(--font-cinzel), serif;
-				font-size: 0.78em;
-				letter-spacing: 0.06em;
-				color: var(--color-heading);
-				margin-bottom: 0.35em;
+				font-size: 0.82em;
+				letter-spacing: 0.04em;
+				color: var(--accent-light);
+				margin-bottom: 0.4em;
 				line-height: 1.3;
 			}
 			.item-desc {
@@ -105,23 +189,105 @@ import { SITE_TITLE } from '../consts';
 				line-height: 1.65;
 			}
 
+			/* ── Made for ──────────────────────────────────────────────── */
+			.made-for-block {
+				margin-bottom: 3em;
+			}
+			.made-for-text {
+				font-size: 0.95em;
+				color: var(--color-text);
+				text-align: center;
+				margin: 0 auto;
+				max-width: 560px;
+				line-height: 1.85;
+				font-style: italic;
+			}
+
+			/* ── How it works ─────────────────────────────────────────── */
+			.how-it-works {
+				margin-bottom: 3em;
+			}
+			.steps-list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 1.2em;
+				position: relative;
+			}
+			.steps-list li {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				gap: 0.7em;
+				padding: 0 0.5em;
+			}
+			.step-num {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 44px;
+				height: 44px;
+				border-radius: 50%;
+				border: 1px solid var(--hairline-strong);
+				font-family: var(--font-cinzel), serif;
+				font-size: 0.8em;
+				color: var(--accent-light);
+				background: radial-gradient(circle at 50% 50%, rgba(122, 72, 201, 0.25), transparent 70%);
+				box-shadow: 0 0 24px rgba(201, 169, 110, 0.15);
+			}
+			.step-text {
+				font-size: 0.82em;
+				color: var(--color-text-muted);
+				line-height: 1.7;
+			}
+
 			/* ── Signup block ─────────────────────────────────────────── */
 			.signup-block {
 				text-align: center;
-				padding: 0 0 5em;
+				padding: clamp(2.5em, 6vh, 4em) 1.5em;
+				border: 1px solid var(--hairline);
+				border-radius: 6px;
+				position: relative;
+				isolation: isolate;
+				overflow: hidden;
+			}
+			.signup-block::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				z-index: -1;
+				background:
+					radial-gradient(ellipse 60% 70% at 50% 100%, rgba(122, 72, 201, 0.2), transparent 70%),
+					var(--color-bg-elev);
+			}
+			.signup-block::after {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 20%;
+				right: 20%;
+				height: 1px;
+				background: linear-gradient(90deg, transparent, rgba(201, 169, 110, 0.7), transparent);
+			}
+			.signup-heading {
+				font-size: clamp(1.2rem, 3vw, 1.7em);
+				margin-bottom: 0.5em;
 			}
 			.signup-note {
-				font-size: 0.87em;
+				font-size: 0.88em;
 				color: var(--color-text-muted);
-				max-width: 440px;
-				margin: 0 auto 1.5em;
+				max-width: 460px;
+				margin: 0 auto 1.6em;
 				line-height: 1.75;
 			}
 			.signup-form {
 				display: flex;
 				gap: 0.7em;
-				max-width: 460px;
-				margin: 0 auto 0.85em;
+				max-width: 480px;
+				margin: 0 auto 0.9em;
 			}
 			.form-field {
 				flex: 1;
@@ -133,54 +299,56 @@ import { SITE_TITLE } from '../consts';
 				margin: 0 0 0.35em;
 				color: var(--color-text);
 				font-family: var(--font-cinzel), serif;
-				font-size: 0.62em;
-				letter-spacing: 0.11em;
+				font-size: 0.6em;
+				letter-spacing: 0.14em;
 				text-transform: uppercase;
 			}
 			.signup-form input[type='email'] {
 				width: 100%;
 				box-sizing: border-box;
-				background: rgba(255, 255, 255, 0.04);
-				border: 1px solid rgba(201, 169, 110, 0.28);
-				border-radius: 4px;
+				background: rgba(7, 5, 13, 0.6);
+				border: 1px solid var(--hairline-strong);
+				border-radius: 3px;
 				color: var(--color-text);
 				font-family: var(--font-lora), serif;
 				font-size: 0.82em;
-				padding: 0.75em 1em;
+				padding: 0.8em 1em;
 				transition:
-					border-color 0.2s ease,
-					box-shadow 0.2s ease;
+					border-color 0.3s var(--ease-out),
+					box-shadow 0.3s var(--ease-out);
 			}
 			.signup-form input[type='email']::placeholder {
 				color: var(--color-text-muted);
-				opacity: 0.75;
+				opacity: 0.7;
 			}
 			.signup-form input[type='email']:focus {
-				border-color: rgba(201, 169, 110, 0.55);
-				box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.07);
+				border-color: var(--accent);
+				box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1), 0 0 24px rgba(201, 169, 110, 0.15);
 			}
 			.signup-form button {
-				background: var(--accent);
-				border: none;
-				border-radius: 4px;
+				align-self: flex-end;
+				background: linear-gradient(180deg, var(--accent-light), var(--accent));
+				border: 1px solid rgba(201, 169, 110, 0.6);
+				border-radius: 3px;
 				color: var(--color-bg);
 				font-family: var(--font-cinzel), serif;
-				font-size: 0.68em;
-				letter-spacing: 0.1em;
+				font-size: 0.66em;
+				letter-spacing: 0.14em;
 				text-transform: uppercase;
-				padding: 0.8em 1.5em;
+				padding: 0 1.5em;
+				min-height: 44px;
 				cursor: pointer;
 				white-space: nowrap;
+				box-shadow: 0 6px 24px rgba(201, 169, 110, 0.18);
 				transition:
-					background 0.2s ease,
-					box-shadow 0.2s ease;
+					background 0.3s var(--ease-out),
+					box-shadow 0.3s var(--ease-out);
 			}
 			.signup-form button:hover {
-				background: var(--accent-light);
-				box-shadow: 0 2px 14px rgba(201, 169, 110, 0.2);
+				background: linear-gradient(180deg, var(--accent-bright), var(--accent-light));
+				box-shadow: 0 8px 36px rgba(201, 169, 110, 0.32);
 			}
 			.signup-form button:active {
-				background: var(--accent);
 				box-shadow: none;
 			}
 			.signup-form button:disabled {
@@ -190,7 +358,7 @@ import { SITE_TITLE } from '../consts';
 			.signup-error {
 				display: none;
 				font-size: 0.78em;
-				color: #c07870;
+				color: #d08a80;
 				margin: 0.5em 0 0;
 			}
 			.signup-caveat {
@@ -210,102 +378,11 @@ import { SITE_TITLE } from '../consts';
 				color: var(--accent);
 				text-decoration-color: rgba(201, 169, 110, 0.6);
 			}
-			/* ── Guide mockup ─────────────────────────────────────────── */
-			.guide-mockup-wrap {
-				text-align: center;
-				margin: 0 auto 2.5em;
-			}
-			.guide-mockup {
-				display: inline-block;
-				width: 148px;
-				height: 196px;
-				background: linear-gradient(165deg, rgba(201, 169, 110, 0.09) 0%, rgba(13, 10, 26, 0.5) 100%);
-				border: 1px solid rgba(201, 169, 110, 0.28);
-				border-radius: 3px;
-				position: relative;
-				overflow: hidden;
-				box-shadow:
-					4px 8px 28px rgba(0, 0, 0, 0.55),
-					0 0 0 1px rgba(0, 0, 0, 0.25);
-				vertical-align: top;
-			}
-			.guide-mockup::before {
-				content: '';
-				position: absolute;
-				inset: 0 0 auto;
-				height: 2px;
-				background: linear-gradient(
-					90deg,
-					transparent 0%,
-					rgba(201, 169, 110, 0.65) 30%,
-					rgba(201, 169, 110, 0.65) 70%,
-					transparent 100%
-				);
-			}
-			.mockup-inner {
-				padding: 1.6em 1.1em 1em;
-				height: 100%;
-				box-sizing: border-box;
-				display: flex;
-				flex-direction: column;
-				gap: 0.45em;
-			}
-			.mockup-eyebrow {
-				font-family: var(--font-cinzel), serif;
-				font-size: 0.36em;
-				letter-spacing: 0.22em;
-				text-transform: uppercase;
-				color: var(--accent);
-				opacity: 0.65;
-			}
-			.mockup-title-text {
-				font-family: var(--font-cinzel), serif;
-				font-size: 0.52em;
-				color: var(--color-heading);
-				line-height: 1.4;
-				letter-spacing: 0.04em;
-			}
-			.mockup-rule {
-				height: 1px;
-				background: rgba(201, 169, 110, 0.18);
-				margin: 0.2em 0;
-			}
-			.mockup-lines {
-				display: flex;
-				flex-direction: column;
-				gap: 0.4em;
-				margin-top: 0.2em;
-			}
-			.mockup-line {
-				height: 1px;
-				background: rgba(226, 217, 197, 0.1);
-				border-radius: 1px;
-			}
-			.mockup-line:nth-child(odd) { width: 88%; }
-			.mockup-line:nth-child(even) { width: 72%; }
-			.mockup-line:last-child { width: 48%; }
-
-			/* ── Made for section ─────────────────────────────────────── */
-			.made-for-block {
-				margin-bottom: 2.5em;
-			}
-			.made-for-text {
-				font-size: 0.85em;
-				color: var(--color-text-muted);
-				text-align: center;
-				border-left: 2px solid rgba(201, 169, 110, 0.22);
-				padding: 0.7em 1.25em;
-				margin: 0;
-				line-height: 1.8;
-				font-style: italic;
-			}
 
 			/* ── Preview download fallback ───────────────────────────── */
 			.preview-download {
 				text-align: center;
-				padding: 2.25em 0 4.5em;
-				border-top: 1px solid rgba(201, 169, 110, 0.1);
-				margin-top: 1em;
+				padding: 2.25em 0 5em;
 			}
 			.preview-download p {
 				font-size: 0.78em;
@@ -334,62 +411,37 @@ import { SITE_TITLE } from '../consts';
 				opacity: 1;
 			}
 
-			/* ── How it works ─────────────────────────────────────────── */
-			.how-it-works {
-				margin-bottom: 2.5em;
-			}
-			.steps-list {
-				list-style: none;
-				margin: 0;
-				padding: 0;
-				display: flex;
-				flex-direction: column;
-				gap: 1em;
-			}
-			.steps-list li {
-				display: flex;
-				align-items: flex-start;
-				gap: 1em;
-			}
-			.step-num {
-				font-family: var(--font-cinzel), serif;
-				font-size: 0.72em;
-				color: var(--accent);
-				opacity: 0.75;
-				min-width: 1.4em;
-				padding-top: 0.1em;
-				letter-spacing: 0.05em;
-			}
-			.step-text {
-				font-size: 0.87em;
-				color: var(--color-text-muted);
-				line-height: 1.7;
-			}
-			.step-text a {
-				color: var(--accent);
-				text-decoration: underline;
-				text-underline-offset: 2px;
-				text-decoration-color: rgba(201, 169, 110, 0.4);
-				transition: color 0.2s ease, text-decoration-color 0.2s ease;
-			}
-			.step-text a:hover {
-				color: var(--accent-light);
-				text-decoration-color: rgba(201, 169, 110, 0.7);
-			}
-
 			/* ── Mobile ───────────────────────────────────────────────── */
+			@media (max-width: 860px) {
+				.hero-inner {
+					grid-template-columns: 1fr;
+					text-align: center;
+				}
+				.guide-hero .subline {
+					margin-left: auto;
+					margin-right: auto;
+				}
+				.hero-ctas {
+					justify-content: center;
+				}
+				.book {
+					transform: rotateY(12deg);
+				}
+				.steps-list {
+					grid-template-columns: 1fr;
+				}
+				.steps-list li {
+					flex-direction: row;
+					text-align: left;
+					align-items: flex-start;
+				}
+				.step-num {
+					flex-shrink: 0;
+				}
+			}
 			@media (max-width: 600px) {
-				.guide-hero {
-					padding: 3em 1em 2em;
-				}
-				.divider {
-					padding-top: 1.75em;
-					margin-bottom: 1.75em;
-				}
 				.contents-grid {
 					grid-template-columns: 1fr;
-					gap: 1.1em;
-					margin-bottom: 2.5em;
 				}
 				.signup-form {
 					flex-direction: column;
@@ -408,66 +460,76 @@ import { SITE_TITLE } from '../consts';
 		<Header />
 		<main id="main-content" tabindex="-1">
 			<section class="guide-hero">
-				<p class="guide-eyebrow">Free Download</p>
-				<h1>The Palmistry Starter Guide</h1>
-				<p class="subline">
-					Your printable companion to the Palmistry Path lessons — a structured overview of the major
-					lines, mounts, and hand shapes to keep beside you while you study.
-				</p>
-			</section>
-
-			<div class="divider" aria-hidden="true">✦ · ✦ · ✦</div>
-
-			<div class="guide-section">
-				<div class="guide-mockup-wrap" aria-hidden="true">
-					<div class="guide-mockup">
-						<div class="mockup-inner">
-							<span class="mockup-eyebrow">Palmistry Path</span>
-							<span class="mockup-title-text">Palmistry<br />Starter<br />Guide</span>
-							<div class="mockup-rule"></div>
-							<div class="mockup-lines">
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-								<div class="mockup-line"></div>
-							</div>
+				<div class="hero-inner">
+					<div class="guide-book reveal reveal--scale" style="--reveal-delay: 100ms" aria-hidden="true">
+						<div class="book">
+							<img
+								src="/images/guide/quick-start-cover.webp"
+								alt=""
+								width="900"
+								height="1336"
+								loading="eager"
+								decoding="async"
+								fetchpriority="high"
+							/>
+						</div>
+					</div>
+					<div class="hero-copy">
+						<p class="eyebrow reveal">Free download</p>
+						<h1 class="display reveal" style="--reveal-delay: 140ms">The Palmistry Starter Guide</h1>
+						<p class="subline reveal" style="--reveal-delay: 280ms">
+							Your printable companion to the Palmistry Path lessons — a structured overview of the major
+							lines, mounts, and hand shapes to keep beside you while you study.
+						</p>
+						<div class="hero-ctas reveal" style="--reveal-delay: 420ms">
+							<a href="#signup" class="btn-primary" data-track="cta" data-track-location="guide-hero" data-track-target="signup">Send me the guide</a>
+							<span class="hero-note">Free · Printable PDF</span>
 						</div>
 					</div>
 				</div>
-				<h2 class="section-heading">What's inside</h2>
+			</section>
+
+			<div class="divider-star reveal reveal--line" aria-hidden="true"></div>
+
+			<div class="guide-section">
+				<div class="section-heading">
+					<p class="eyebrow reveal">What's inside</p>
+				</div>
 				<ul class="contents-grid">
-					<li>
+					<li class="reveal" style="--reveal-delay: 60ms">
+						<span class="item-index" aria-hidden="true">01</span>
 						<span class="item-title">Major Lines Map</span>
 						<span class="item-desc"
 							>A reference diagram of the four major lines with their traditional names and
 							locations.</span
 						>
 					</li>
-					<li>
+					<li class="reveal" style="--reveal-delay: 140ms">
+						<span class="item-index" aria-hidden="true">02</span>
 						<span class="item-title">Mount Meanings Overview</span>
 						<span class="item-desc"
 							>An overview of all seven mounts, their associated qualities, and how to assess
 							prominence.</span
 						>
 					</li>
-					<li>
+					<li class="reveal" style="--reveal-delay: 220ms">
+						<span class="item-index" aria-hidden="true">03</span>
 						<span class="item-title">Hand Shape Guide</span>
 						<span class="item-desc"
 							>A visual key to the elemental hand types — Earth, Air, Fire, and Water — and their
 							characteristic forms.</span
 						>
 					</li>
-					<li>
+					<li class="reveal" style="--reveal-delay: 300ms">
+						<span class="item-index" aria-hidden="true">04</span>
 						<span class="item-title">Printable Observation Sheet</span>
 						<span class="item-desc"
 							>A simple page for recording your own hand's features as you work through the
 							lessons.</span
 						>
 					</li>
-					<li style="grid-column: 1 / -1;">
+					<li class="wide reveal" style="--reveal-delay: 380ms">
+						<span class="item-index" aria-hidden="true">05</span>
 						<span class="item-title">Beginner Reading Order</span>
 						<span class="item-desc"
 							>A suggested sequence for working through the major features — so you know where to
@@ -478,61 +540,68 @@ import { SITE_TITLE } from '../consts';
 			</div>
 
 			<div class="guide-section made-for-block">
-				<p class="made-for-text">
+				<p class="made-for-text reveal">
 					Best for beginners who want a calm, structured reference while working through the lessons
 					— or anyone returning to palmistry who wants a clear overview in one place.
 				</p>
 			</div>
 
+			<div class="divider-star reveal reveal--line" aria-hidden="true"></div>
+
 			<div class="guide-section how-it-works">
-				<h2 class="section-heading">What happens next</h2>
+				<div class="section-heading">
+					<p class="eyebrow reveal">What happens next</p>
+				</div>
 				<ol class="steps-list">
-					<li>
+					<li class="reveal" style="--reveal-delay: 60ms">
 						<span class="step-num">1</span>
 						<span class="step-text">Enter your email address below.</span>
 					</li>
-					<li>
+					<li class="reveal" style="--reveal-delay: 180ms">
 						<span class="step-num">2</span>
 						<span class="step-text">Receive the Starter Guide in your inbox — a printable PDF you can use alongside the lessons.</span>
 					</li>
-					<li>
+					<li class="reveal" style="--reveal-delay: 300ms">
 						<span class="step-num">3</span>
 						<span class="step-text">Open <a href="/learn/foundations/01-what-palmistry-is" data-track="link" data-track-location="guide-steps" data-track-target="lesson">Lesson 1</a> — the guide is designed to sit beside it.</span>
 					</li>
 				</ol>
 			</div>
 
-			<div class="guide-section signup-block">
-				<p class="signup-note" id="signup-note">
-					Enter your email and we'll send the Palmistry Starter Guide straight to your inbox — free,
-					printable, and yours to keep.
-				</p>
+			<div class="guide-section">
+				<div class="signup-block reveal" id="signup">
+					<h2 class="signup-heading display">Get the Starter Guide</h2>
+					<p class="signup-note" id="signup-note">
+						Enter your email and we'll send the Palmistry Starter Guide straight to your inbox — free,
+						printable, and yours to keep.
+					</p>
 
-				<form
-					class="signup-form"
-					id="signup-form"
-					action="https://app.kit.com/forms/9489555/subscriptions"
-					method="post"
-					aria-label="Guide download sign-up"
-				>
-					<div class="form-field">
-						<label for="guide-email" class="form-label">Email address</label>
-						<input
-							type="email"
-							id="guide-email"
-							name="email_address"
-							placeholder="you@example.com"
-							autocomplete="email"
-							aria-describedby="signup-note signup-caveat signup-error"
-							required
-						/>
-					</div>
-					<button type="submit" id="signup-btn" data-track="cta" data-track-location="guide-form" data-track-target="guide-submit">Send Me the Guide</button>
-				</form>
-				<p class="signup-error" id="signup-error" role="alert">Something went wrong — please try again.</p>
-				<p class="signup-caveat" id="signup-caveat">
-					You'll receive the guide and occasional Palmistry Path learning notes. <a href="/privacy/" class="caveat-link" data-track="nav" data-track-location="guide-caveat" data-track-target="privacy">Privacy policy.</a>
-				</p>
+					<form
+						class="signup-form"
+						id="signup-form"
+						action="https://app.kit.com/forms/9489555/subscriptions"
+						method="post"
+						aria-label="Guide download sign-up"
+					>
+						<div class="form-field">
+							<label for="guide-email" class="form-label">Email address</label>
+							<input
+								type="email"
+								id="guide-email"
+								name="email_address"
+								placeholder="you@example.com"
+								autocomplete="email"
+								aria-describedby="signup-note signup-caveat signup-error"
+								required
+							/>
+						</div>
+						<button type="submit" id="signup-btn" data-track="cta" data-track-location="guide-form" data-track-target="guide-submit">Send Me the Guide</button>
+					</form>
+					<p class="signup-error" id="signup-error" role="alert">Something went wrong — please try again.</p>
+					<p class="signup-caveat" id="signup-caveat">
+						You'll receive the guide and occasional Palmistry Path learning notes. <a href="/privacy/" class="caveat-link" data-track="nav" data-track-location="guide-caveat" data-track-target="privacy">Privacy policy.</a>
+					</p>
+				</div>
 			</div>
 
 			<div class="guide-section preview-download">

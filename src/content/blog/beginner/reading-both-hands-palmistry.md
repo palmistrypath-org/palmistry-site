@@ -14,11 +14,15 @@ The comparison itself is a skill, not a single glance. It has a method, a small 
 
 Start with both palms facing up, side by side, resting at roughly the same angle and under the same light. A hand held flat reads differently from one that's curled or stretched, so let both relax into a natural, open position before you look at anything.
 
+![Two palm diagrams side by side: the passive, non-dominant hand and the active, dominant hand.](/images/diagrams/active-passive-hands.svg "The passive hand is the one you do not write with; the active hand is the one you do. A reading compares the two.")
+
 Work one feature at a time rather than scanning both hands generally. Pick a single line, find it on the active hand, then find the same line in the same position on the passive hand, and hold the two in view together. Trying to compare everything at once tends to produce a vague impression rather than a specific observation.
 
 ## What to compare, feature by feature
 
 The [Active and Passive Hand lesson](/learn/foundations/04-active-and-passive-hand) sets out the comparison framework this site teaches. Applied line by line, it comes down to four things.
+
+![Palm diagram naming the regions a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.](/images/diagrams/hand-map.svg "The territory a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.")
 
 ### Depth and clarity
 

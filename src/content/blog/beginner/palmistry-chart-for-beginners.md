@@ -26,6 +26,8 @@ But a chart is a diagram of a standardised hand, which no actual hand is. Real h
 
 Most serious introductory writing on palmistry — including Gettings in *The Book of the Hand* (1965) and West in *The Complete Illustrated Guide to Palmistry* (1998) — organises the hand's readable features into a rough hierarchy. A chart that serves a learner well reflects that hierarchy. The three layers are: the lines, the mounts, and the hand shape. Each modifies the others, and they are read in sequence precisely because the outer layers provide context for the inner ones.
 
+![Palm diagram naming the regions a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.](/images/diagrams/hand-map.svg "The territory a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.")
+
 **Lines** are the most visible features of the hand's surface — the creases, traversing lines, and fainter markings that vary considerably between individuals. They are typically what draws someone to palmistry first, and they are what charts most commonly label in detail.
 
 **Mounts** are the raised pads of flesh distributed across the palm — at the base of each finger, along the outer edge of the palm, and at the base of the thumb. They are named after classical planets and are traditionally understood as reservoirs of energy associated with those planetary qualities. The mounts give the lines context — the same line reads differently when it runs toward a well-developed mount versus a flat or absent one.
@@ -35,6 +37,8 @@ Most serious introductory writing on palmistry — including Gettings in *The Bo
 ## The main lines
 
 A clear account of the major lines is at the core of the [major lines overview](/blog/beginner/major-lines-overview/), and the [lesson on major lines](/learn/lines/01-major-lines-overview/) covers them in sequence with observation guidance. What follows here is enough to orient you on a chart.
+
+![Palm diagram with the heart, head, life, and fate lines lit and labelled.](/images/diagrams/major-lines.svg "The four major lines. The fate line is dotted because many palms do not have one.")
 
 **The heart line** runs horizontally across the upper portion of the palm — the line closest to the base of the fingers, beginning from the percussion edge (the outer side of the hand, below the little finger) and running inward toward the index or middle finger. It is traditionally associated with emotional life and the capacity for feeling — what Benham described as "the strength and character of the affections." Its course, depth, and endpoint are all significant — a line that ends near the index finger reads differently from one that curves up between the index and middle fingers, and differently again from one that terminates below the middle finger.
 
@@ -50,6 +54,8 @@ A clear account of the major lines is at the core of the [major lines overview](
 
 The mounts are the raised pads of flesh that give the palm its landscape of hills and valleys. A beginner chart will typically label eight regions covering the seven planetary mounts — Mars is the one that appears twice: Jupiter (base of the index finger), Saturn (base of the middle finger), Apollo or Sun (base of the ring finger), Mercury (base of the little finger), upper and lower Mars (the firm areas on either side of the palm's centre), the Moon or Luna (the lower outer edge of the palm), and Venus (the large pad at the base of the thumb, encircled by the life line).
 
+![Palm diagram locating the seven planetary mounts across eight mount regions, plus the Plain of Mars.](/images/lessons/mounts/mounts-overview.svg "The seven planetary mounts across eight regions, with the Plain of Mars at the centre.")
+
 In the Western tradition, each mount carries associations derived from the planet it is named for. Jupiter is associated with ambition, leadership, and spiritual aspiration. Saturn with discipline, solitude, and a pull toward deeper or more serious questions. Apollo with creative expression, the desire for recognition, and aesthetic sensibility. Mercury with communication, adaptability, and commercial acuity. The Moon with imagination, the unconscious, and receptivity to mood and feeling. Venus with warmth, physical vitality, affective generosity, and sensual life. The Mars areas, upper and lower, are associated with active and resistive courage respectively.
 
 The development of a mount — whether it is well-raised, flat, or barely perceptible — modifies the line readings. A life line running through a prominent, well-developed Venus reads as associated with strong physical drive and affective richness. The same line on a hand where Venus is flat reads with less of that quality. The [mounts overview](/blog/beginner/mounts-overview/) covers each mount in more detail. The [lesson on mounts](/learn/mounts/01-mounts-overview/) provides observation guidance for identifying development and reading the mounts in context.
@@ -57,6 +63,8 @@ The development of a mount — whether it is well-raised, flat, or barely percep
 ## Hand shape as the outer frame
 
 The outermost layer of context — the one that chart-users most commonly skip — is hand shape. The four-element system used in contemporary Western palmistry classifies hands by two proportional measurements: whether the palm is approximately square or rectangular, and whether the fingers are short or long relative to the palm.
+
+![Four schematic hands compare the Earth, Air, Fire, and Water hand shapes by palm proportion and finger length.](/images/diagrams/hand-shapes.svg "Two measurements sort hands into four types: is the palm square or rectangular, and are the fingers short or long against it?")
 
 Earth hands (square palm, short fingers) are traditionally associated with practicality and a grounded orientation. Air hands (square palm, long fingers) with intellectual temperament and communicative facility. Fire hands (rectangular palm, short fingers) with energy, instinct, and expressive drive. Water hands (rectangular palm, long fingers) with emotional sensitivity and imaginative depth.
 

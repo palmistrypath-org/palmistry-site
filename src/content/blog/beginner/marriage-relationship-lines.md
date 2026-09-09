@@ -18,6 +18,8 @@ Before going further: if you came here hoping to count your marriages, the hones
 
 Hold your hand with fingers extended and palm facing you. Look at the outer edge — the percussion side — just beneath the base of the little finger (Mercury finger). The lines you're looking for run horizontally, pointing inward from the edge of the hand.
 
+![Palm diagram with the marriage or relationship lines lit: short horizontal lines on the outer edge of the palm between the heart line and the little finger.](/images/diagrams/marriage-lines.svg "Marriage lines are read on the edge of the hand, between the heart line and the little finger.")
+
 They are distinct from the heart line, which runs fully across the palm. Relationship lines are shorter and sit above the heart line, in the cushioned space of the Mercury mount. On some hands they appear clearly; on others they require good light and a slight angle.
 
 **Position within the zone matters.** Lines closer to the heart line are traditionally associated with relationships that occurred — or were felt most deeply — earlier in life. Lines positioned higher, nearer the base of the little finger, are associated with later partnerships. This is a traditional interpretive framework, not a precise clock.
@@ -57,6 +59,8 @@ As noted above, lower in the zone (closer to the heart line) traditionally point
 ## Quality Markers
 
 ### The Fork
+
+![Four close-up examples compare a deep clear line, a thin faint line, a broad shallow line, and a chained line.](/images/diagrams/line-quality.svg "Four qualities of line: deep and clear, thin and faint, broad and shallow, chained.")
 
 A line that splits at its inner end — opening into a fork as it moves toward the center of the palm — is one of the more consistently noted markers across the established sources. Benham and West both address it. The fork is traditionally associated with diverging paths in a relationship: separation, estrangement, or a partnership that pulls in two directions rather than resolving into a unified direction.
 

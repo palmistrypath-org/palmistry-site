@@ -14,6 +14,8 @@ That fact alone is worth sitting with. Whatever palmistry ultimately is or isn't
 
 At its most basic, palmistry is the practice of observing the human hand — its overall shape, the lines crossing the palm, the relative lengths of the fingers, the firmness of the raised pads of flesh below each finger (called mounts) — and drawing interpretations from those observations according to a framework learned from tradition.
 
+![Palm diagram naming the regions a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.](/images/diagrams/hand-map.svg "The territory a reading works through: fingers, thumb, mounts, major lines, percussion, and wrist.")
+
 It is, in this sense, a structured observational practice. The hand is treated as something that can be read: with greater or lesser skill, differently by different practitioners, and according to systems that took centuries to develop. The practice requires learning a vocabulary of features and a set of interpretive principles, then applying both with care and attention to an actual hand.
 
 What palmistry is not — and this matters — is a mechanical lookup table. There is no single universally agreed-upon list of what any given line "means," and the major traditions differ significantly in both their methods and their interpretations. Learning palmistry honestly requires treating its frameworks as frameworks — structured ways of looking and thinking — rather than as established facts about the world.
@@ -85,6 +87,8 @@ No article on this site will claim that a line on your hand determines your futu
 ## Where to begin
 
 The lines on your hand have been there since before you could read. People have been noticing them, arguing about them, and building interpretive systems around them for thousands of years. Whether you approach that history with scepticism, with curiosity, or — most usefully — with both, there is a great deal worth understanding.
+
+![Palm diagram with seven numbered callouts showing the order of a reading: overall impression, hand shape, texture, thumb and fingers, mounts, major lines, minor lines and markings.](/images/diagrams/reading-sequence.svg "The order of a reading, from the whole hand inward: impression, shape, texture, thumb and fingers, mounts, major lines, then minor lines and markings.")
 
 The next step is learning to look. [How to Read a Palm](/blog/beginner/how-to-read-a-palm) covers the method: which hand to examine, the correct sequence of observation, and the principle of synthesis that makes any individual feature meaningful. After that, the [major lines overview](/blog/beginner/major-lines-overview/) introduces the heart line, head line, life line, and fate line in context.
 

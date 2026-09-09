@@ -14,6 +14,8 @@ It is not a footnote. Benham gave the phalanges a full, dedicated treatment in *
 
 Look at any one of the four fingers — index, middle, ring, or little — with the palm facing you. Two knuckle joints cross it, dividing it into three segments. The segment from the fingertip to the first joint is the first phalange. The middle segment, between the two joints, is the second phalange. The segment nearest the palm, running from the second joint down to where the finger meets the hand, is the third phalange.
 
+![Palm diagram with the middle finger divided into its three phalanges: the first at the tip, the second in the middle, and the third at the base.](/images/diagrams/finger-phalanges.svg "The three phalanges of a finger, read from the tip down: mental, practical, material.")
+
 The thumb is built differently. It has only two segments and two phalanges rather than three, and Western palmistry reads it through its own dedicated framework — covered in the [thumb meaning article](/blog/beginner/thumb-meaning-palmistry/) — rather than through the three-phalange system described here.
 
 ## What the three phalanges are traditionally associated with
@@ -45,6 +47,8 @@ Where sources genuinely diverge is on weighting: Benham's treatment leans toward
 ## Phalanges in context
 
 Phalange development is read as a modifier on the finger it belongs to, not as an isolated fact. A well-developed first phalange on the Jupiter (index) finger — already associated with ambition and authority — is traditionally read as idealistic or principled ambition, leadership oriented around a vision rather than raw appetite for control. The same first-phalange development on the Mercury (little) finger, associated with communication, reads instead as an intuitive or imaginative communicative style rather than a technical one.
+
+![Palm diagram with the thumb divided into its two phalanges, the first at the tip and the second below the joint, with the angle of opening marked.](/images/diagrams/thumb-phalanges.svg "The thumb’s two phalanges — will at the tip, logic below the joint — and the angle at which it opens from the hand.")
 
 Phalange balance is also read alongside the joint texture covered in the finger shapes article. A well-developed second phalange paired with knotted, prominent joints is traditionally read as a strongly methodical temperament — the practical register reinforced by a joint structure already associated with deliberate, analytical thinking. The same second-phalange development on a hand with smooth, untextured joints reads as competence that is more intuitive than systematic. Neither the phalange reading nor the joint reading alone tells the full story; the two are meant to be read together.
 

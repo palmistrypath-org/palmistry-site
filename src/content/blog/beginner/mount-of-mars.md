@@ -14,6 +14,8 @@ Inner Mars occupies the radial side of the palm: the zone between the base of th
 
 **Inner Mars** — sometimes called Mars Positive or Active Mars — sits in the narrow zone on the thumb side of the palm, between the fleshy base of the thumb and the life line. Its upper boundary is the region just below the Mount of Jupiter; its lower boundary follows the life line toward the wrist. To locate it, trace the life line from its origin near the thumb down toward the wrist; the strip of palm between the line and the thumb's base is Inner Mars territory.
 
+![Palm diagram with Upper Mars, Lower Mars, and the Plain of Mars highlighted.](/images/lessons/mounts/mount-of-mars.svg "Lower Mars above the thumb, Upper Mars on the percussion, and the Plain of Mars between them.")
+
 **Outer Mars** — sometimes called Mars Negative or Passive Mars — sits on the outer edge of the palm at mid-height, between the heart line above and the Mount of Luna below. Where Inner Mars is a narrow zone on the radial side, Outer Mars is a firmer, slightly elevated area running along the percussion edge, distinct both from the heart line above and from Luna's larger, lower elevation below.
 
 **The Plain of Mars** is the somewhat depressed or flat central area of the palm — the hollow when the hand is lightly cupped — lying between the two Mars zones. Some hands carry a notably hollow centre; others fill more evenly. The Plain is not a mount in the conventional sense but the connective region where the two Mars energies meet and modulate one another.
@@ -59,6 +61,8 @@ Where the Indian framing adds a specific texture is in its treatment of Mangal's
 ## Mars in context
 
 Mars reads most usefully alongside the life line, the head line, and the overall hand shape.
+
+![Palm diagram locating the seven planetary mounts across eight mount regions, plus the Plain of Mars.](/images/lessons/mounts/mounts-overview.svg "The seven planetary mounts across eight regions, with the Plain of Mars at the centre.")
 
 **Life line.** The life line runs directly along the boundary of Inner Mars, and the relationship is structurally significant. A strong, clear life line alongside a well-developed Inner Mars is traditionally associated with physical energy that is well-channelled — vitality with direction and containment. When the life line appears thin or poorly marked while Inner Mars is prominent, the tradition reads a tension: drive and combativeness present, but perhaps without the constitutional stamina to sustain them over time.
 

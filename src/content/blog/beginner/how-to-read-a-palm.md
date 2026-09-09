@@ -16,6 +16,8 @@ The sequence matters more than most beginners expect.
 
 Before you examine anything, the question of which hand to look at needs settling — and the answer, across every major tradition, is the same: both. But not equally, and not in the same way.
 
+![Two palm diagrams side by side: the passive, non-dominant hand and the active, dominant hand.](/images/diagrams/active-passive-hands.svg "The passive hand is the one you do not write with; the active hand is the one you do. A reading compares the two.")
+
 Palmistry distinguishes between the **active hand** (usually the dominant hand, the one you write with) and the **passive hand** (the non-dominant hand). What each represents depends on the tradition.
 
 In Western palmistry, Cheiro set the convention out in *Palmistry for All* (1916): both hands are examined together, and because the nerves cross, the right is "this hand which denotes the developed or active brain, the left only giving the natural tendencies or inclinations." The passive hand, on this reading, traditionally represents inherited tendencies — what you were born with. The active hand represents developed character: what you have done with those tendencies over the course of a life. Where the two hands diverge significantly, something has shifted — the person has moved, deliberately or through circumstance, away from the baseline they started with.
@@ -29,6 +31,8 @@ The practical implication for a beginner is straightforward: look at both hands.
 ## The order of observation
 
 One of the most consistent points in serious palmistry writing is that beginners rush to the lines. The lines are the most recognisable feature — everyone has heard of the "life line" — so they become the first thing examined and often the only thing examined carefully. This is a mistake that experienced practitioners across traditions consistently identify.
+
+![Palm diagram with seven numbered callouts showing the order of a reading: overall impression, hand shape, texture, thumb and fingers, mounts, major lines, minor lines and markings.](/images/diagrams/reading-sequence.svg "The order of a reading, from the whole hand inward: impression, shape, texture, thumb and fingers, mounts, major lines, then minor lines and markings.")
 
 Comte de Saint-Germain, in his 1897 *Practice of Palmistry*, separates what he calls "chirognomic" observations — the hand's physical qualities — from "chiromantic" ones, the lines. The physical examination comes first. The sequence that emerges from classical writing, and from contemporary practitioners who take that tradition seriously, runs from the general to the specific:
 
@@ -73,6 +77,8 @@ A handful of mistakes appear so frequently in palmistry writing that they are wo
 ## How to actually examine a hand
 
 The physical conditions for examining a hand matter more than most introductory writing acknowledges.
+
+![Palm diagram with the heart, head, life, and fate lines lit and labelled.](/images/diagrams/major-lines.svg "The four major lines. The fate line is dotted because many palms do not have one.")
 
 Good, even light is essential — natural daylight is preferable to warm artificial light, which can obscure finer lines and alter the apparent colour of the skin. The hand should be relaxed, not clenched into a curve or artificially flattened by pressing it against a hard surface. A naturally opened palm held comfortably shows its lines more accurately than one strained into position.
 

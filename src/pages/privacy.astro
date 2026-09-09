@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import PageOpening from '../components/PageOpening.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -34,10 +35,9 @@ import { SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main id="main-content" tabindex="-1">
-			<h1>Privacy Policy</h1>
-			<p class="updated">Last updated: May 2026</p>
+			<PageOpening eyebrow="Last updated · May 2026" title="Privacy Policy" art="palm" compact />
 
-			<section>
+			<section class="reveal">
 				<h2>What We Collect</h2>
 				<p>
 					The only personal information Palmistry Path collects is your <strong>email address</strong>,
@@ -50,7 +50,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>How We Use Your Email</h2>
 				<p>
 					When you sign up for the free Palmistry Starter Guide, your email address is used to:
@@ -62,7 +62,7 @@ import { SITE_TITLE } from '../consts';
 				<p>We will not sell, rent, or share your email address with third parties for their own marketing.</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Email Service Provider</h2>
 				<p>
 					Email delivery is handled by <strong>Kit</strong> (formerly ConvertKit), a third-party
@@ -72,7 +72,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Cookies</h2>
 				<p>
 					Palmistry Path does not set tracking or analytics cookies. When you interact with the
@@ -81,7 +81,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Your Rights</h2>
 				<p>You can unsubscribe from Palmistry Path emails at any time:</p>
 				<ul>
@@ -94,7 +94,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Changes to This Policy</h2>
 				<p>
 					If we make material changes to how we handle personal information, this page will be
@@ -102,7 +102,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Contact</h2>
 				<p>
 					Questions or requests relating to this privacy policy can be sent via the

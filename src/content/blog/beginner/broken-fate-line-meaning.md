@@ -14,6 +14,8 @@ Before any interpretation, it helps to be precise about what "broken" is actuall
 
 **Absence** means no fate line is visible anywhere on the palm — nothing to trace, not a faint trace, not a short segment. That's covered in the [no fate line article](/blog/beginner/no-fate-line-meaning/), not here.
 
+![Three palm diagrams compare a clear fate line, a faint fragmented fate line, and a palm with no fate line at all.](/images/diagrams/fate-line-presence.svg "Clear, faint and fragmented, and absent. All three are normal.")
+
 **A break** (or interruption) means a fate line is present but not continuous — it separates into more than one segment rather than tracing as a single unbroken stroke, whether or not it resumes elsewhere. How exactly that separation shows up varies, and is covered below.
 
 **A fork** is different again: the line itself divides into two continuing strands rather than stopping. That's a separate formation, covered with its own verified evidence in [forked fate line meaning](/blog/beginner/forked-fate-line-meaning/).
@@ -23,6 +25,8 @@ This article is about the middle case: a fate line that's genuinely there, then 
 ## What a break actually looks like
 
 Before interpreting anything, look at the discontinuity itself. A break means the line separates into distinct segments rather than tracing as one continuous stroke — not every break shows a plain gap before the next segment resumes, as the two arrangements below make clear. That's different from a line that simply grows faint and hard to trace (which is a depth or clarity question, not a break) and different from a line that curves or shifts direction without actually stopping (which is a change of course, not an interruption).
+
+![Two palm diagrams compare an unbroken fate line and a fate line with a break and a shifted upper segment.](/images/diagrams/fate-line-broken.svg "A broken fate line: the upper segment resumes a little to one side.")
 
 Two segments of a broken fate line can relate to each other in different ways. In a **clean break**, the first segment ends and the second begins further along, with a plain gap along the line's course and no overlap between them. In an **overlapping break**, a separate new segment begins before the earlier segment ends — for a short stretch, both segments run side by side before the earlier one stops. That distinction matters here, because the verified evidence below treats the overlapping form specifically, and doesn't extend the same reading to a plain clean break.
 

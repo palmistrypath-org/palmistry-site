@@ -1,5 +1,9 @@
 # AI Handoff - Palmistry Path
 
+## Issue #122 handoff — 2026-09-08
+
+Current work lives on `astra/visual-golden-slice-reconciliation`, from protected main `706b098c750d7ac85520dcd59675b540cb36f63a`. Read [review evidence](audits/visual-reconciliation-122/README.md) and [file inventory](audits/visual-reconciliation-122/inventory.md) for disposition and QA. This task stops at REVIEW_READY; Chairman visual approval is required before any merge/publication. Issue #121 remains held until approval. The stale Fable branch and older continuation entries below are historical evidence, not the current work queue. Products and Relay/Corp Ops controls were preserved.
+
 ## Before working
 1. Read `../AGENTS.md`.
 2. If `ACTIVE_TASK.md` is active, read it next.

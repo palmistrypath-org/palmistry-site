@@ -14,11 +14,15 @@ If you are working through the head line for the first time, the main [head line
 
 The head line runs horizontally across the middle of the palm, below the heart line. It begins near the thumb side of the hand — at or very close to the same point where the life line starts — and travels across toward the outer edge of the palm, the percussion edge on the little-finger side. Length is how far that journey goes before the line reaches its terminus.
 
+![Palm diagram with the head line lit, its start and end marked.](/images/diagrams/head-line.svg "The head line begins near the life line and crosses the middle of the palm.")
+
 The [overview of palm lines](/blog/beginner/what-do-palm-lines-mean/) and [How to Read a Palm](/blog/beginner/how-to-read-a-palm/) cover how to locate the major lines if you're still getting oriented.
 
 ## Confirming the line is actually long
 
 Before interpreting length, confirm what you're looking at. A line can look longer than it really is, or its length can be hard to separate from other features sitting nearby.
+
+![Two palm diagrams compare a long head line reaching the outer palm with a short head line ending beneath the middle finger.](/images/diagrams/head-line-length.svg "A long head line reaches toward the outer edge; a short one stops beneath the middle finger.")
 
 **Compare it to the palm's own width, not to the other lines.** The reference point for "long" is where the head line ends relative to the palm as a whole — whether it travels noticeably farther across the palm than a short line's more limited reach, continuing well toward or into the outer half rather than stopping well short of it.
 

@@ -14,11 +14,15 @@ If you are working through the head line for the first time, the main [head line
 
 The head line runs horizontally across the middle of the palm, below the heart line, beginning near the thumb side of the hand and travelling toward the outer edge. Path is about the course that journey takes: does the line hold a level, roughly horizontal direction as it crosses the palm, or does it angle downward, descending toward the base of the palm near the Mount of Luna?
 
+![Palm diagram with the head line lit, its start and end marked.](/images/diagrams/head-line.svg "The head line begins near the life line and crosses the middle of the palm.")
+
 The [overview of palm lines](/blog/beginner/what-do-palm-lines-mean/) and [How to Read a Palm](/blog/beginner/how-to-read-a-palm/) cover how to locate the major lines if you're still getting oriented.
 
 ## Telling the two apart
 
 Path is read comparatively, against the palm itself, rather than against a fixed angle or measurement.
+
+![Two palm diagrams compare a straight head line crossing the palm with a sloping head line that curves down toward the Mount of Luna.](/images/diagrams/head-line-path.svg "A straight head line crosses toward the percussion; a sloping one curves down toward Luna.")
 
 **Follow the line's general direction, not small waverings.** A head line's course is not a perfectly straight ruled line. Look at its overall course from start to terminus rather than any single short segment.
 

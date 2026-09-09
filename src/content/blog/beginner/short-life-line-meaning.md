@@ -16,11 +16,15 @@ For the full picture of how the life line is read — all its variations, its re
 
 The life line runs from the web of skin between the thumb and index finger, sweeping in an arc around the base of the thumb. It descends toward the wrist, framing the Mount of Venus — the raised pad of flesh at the thumb's base. The arc's reach, the line's depth and clarity, and where it ends are all part of what practitioners observe.
 
+![Palm diagram with the life line lit, its start and end marked.](/images/diagrams/life-line.svg "The life line arcs around the base of the thumb toward the wrist.")
+
 A fuller introduction to locating the major lines is in [What Do Palm Lines Mean?](/blog/beginner/what-do-palm-lines-mean/) and [How to Read a Palm](/blog/beginner/how-to-read-a-palm/).
 
 ## What "short" actually means in practice
 
 There is no fixed measurement that defines a short life line. Length is assessed relative to the palm itself — specifically, how far down the line travels from its starting point between the thumb and index finger toward the wrist.
+
+![Two palm diagrams compare a life line that runs to the wrist with a short life line that ends in the middle of the palm.](/images/diagrams/life-line-length.svg "A short life line ends in the middle of the palm. It is not a measure of lifespan.")
 
 A line that curves well down toward the lower portion of the palm, reaching close to the wrist, is read as long. A line that ends midway down the palm — before it completes its descent — is read as shorter. Many hands have a life line that sits somewhere between these two, and the boundary between "medium" and "short" is a matter of observation and judgement rather than a fixed rule.
 

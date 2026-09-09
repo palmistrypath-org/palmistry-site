@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import PageOpening from '../components/PageOpening.astro';
 import { SITE_TITLE } from '../consts';
 ---
 
@@ -46,9 +47,14 @@ import { SITE_TITLE } from '../consts';
 	<body>
 		<Header />
 		<main id="main-content" tabindex="-1">
-			<h1>About</h1>
+			<PageOpening
+				eyebrow="The site"
+				title="About Palmistry Path"
+				lede="An independent educational resource on palm reading across the Indian, Chinese, and Western traditions — built to be honest about what the tradition claims and what it can support."
+				art="palm"
+			/>
 
-			<section>
+			<section class="reveal">
 				<h2>What Palmistry Path Is</h2>
 				<p>
 					Palmistry Path is an independent educational resource dedicated to palmistry as a structured
@@ -62,7 +68,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Editorial Philosophy</h2>
 				<p>Every article on this site aims to:</p>
 				<ul>
@@ -81,7 +87,7 @@ import { SITE_TITLE } from '../consts';
 				</ul>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Sources</h2>
 				<p>
 					Interpretive material on this site rests mainly on five works, which recur across the
@@ -132,7 +138,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>What This Site Does Not Claim</h2>
 				<p>
 					Palmistry Path is not a fortune-telling service. No content here claims to predict future
@@ -145,7 +151,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<section>
+			<section class="reveal">
 				<h2>Corrections</h2>
 				<p>
 					If you find an error, a misattribution, or a claim that doesn't hold up to scrutiny,
@@ -157,7 +163,7 @@ import { SITE_TITLE } from '../consts';
 				</p>
 			</section>
 
-			<aside class="disclaimer">
+			<aside class="disclaimer reveal">
 				<em>Palmistry Path is for education, personal reflection, and exploration of a
 				centuries-old interpretive tradition. It is not a substitute for professional medical,
 				legal, or financial advice.</em>

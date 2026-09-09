@@ -14,9 +14,13 @@ If you're looking for a standalone answer — what a curved life line means, wha
 
 The life line begins in the web of skin between the thumb and index finger, arcs around the base of the thumb, then descends toward the wrist. The arc in question is that curve around the thumb: does it swing out into the palm before turning down, or does it stay close to the thumb's edge for its length? The [overview of palm lines](/blog/beginner/what-do-palm-lines-mean/) and [How to Read a Palm](/blog/beginner/how-to-read-a-palm/) cover how to locate the life line if you're still getting oriented.
 
+![Palm diagram with the life line lit, its start and end marked.](/images/diagrams/life-line.svg "The life line arcs around the base of the thumb toward the wrist.")
+
 ## Identifying the arc
 
 **Compare the arc to the rest of the same hand, not to a fixed shape.** There's no universal normal curve or standard angle for how wide a life line's arc should run, and no population figure to measure against. The useful comparison is how much room the arc leaves the Mount of Venus — the pad at the thumb's base — relative to the rest of that hand, not a measurement against anyone else's palm.
+
+![Two palm diagrams compare a wide life-line arc enclosing a large Mount of Venus with a narrow arc that hugs the thumb.](/images/diagrams/life-line-arc.svg "A wide arc encloses a large Mount of Venus; a narrow arc hugs the base of the thumb.")
 
 **A wide arc** swings out into the palm before curving back down, leaving the Mount of Venus more room.
 

@@ -14,6 +14,8 @@ That breadth of reference is part of why the mount is so consistently present in
 
 The Mount of Jupiter sits at the base of the index finger — the fleshy elevation immediately below where the first finger meets the palm. To find it, look at the area just beneath the index finger's lowest joint. In a well-developed hand it rises visibly from the upper palm, more prominent than the flat expanse between the fingers. It is bounded on its inner side by the upper section of the Mount of Saturn (below the middle finger) and below by the area through which the heart line typically passes.
 
+![Palm diagram with the Mount of Jupiter highlighted beneath the index finger.](/images/lessons/mounts/mount-of-jupiter.svg "The Mount of Jupiter sits directly beneath the index finger.")
+
 The index finger sits directly above the mount. In many palmistry traditions the mount and the finger above it are read as a pair — the mount naming the underlying quality, the finger indicating how it is expressed and directed. This article concerns the mount itself; the Jupiter finger is a separate subject that will be addressed when individual fingers are covered.
 
 ## What it's traditionally associated with
@@ -37,6 +39,8 @@ This dual nature — the ambition and the aspiration — is what makes Jupiter d
 ## The index finger relationship
 
 The Mount of Jupiter and the index finger above it are read together in many traditions, with the mount setting the underlying quality and the finger indicating how it is expressed. A well-developed mount under a long, straight index finger is traditionally associated with leadership that is both internally resourced and outwardly directed; the same mount under a shorter or more curved finger may suggest the aspiration is present but finds less ready outward expression. Classical sources treat these as related observations — two aspects of the same planetary principle, not separate items on a checklist.
+
+![Palm diagram labelling the thumb and the index, middle, ring, and little fingers with their planetary names Jupiter, Saturn, Apollo, and Mercury.](/images/diagrams/finger-names.svg "Each finger carries two names: an anatomical one and the planet it is traditionally assigned.")
 
 ## Cross-tradition note: Indian palmistry
 
