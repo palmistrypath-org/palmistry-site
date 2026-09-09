@@ -9,6 +9,20 @@
 6. Inspect the actual relevant implementation/content and current Git state.
 
 ## Current continuation context
+**Reconciliation note (2026-08-28, Relay PP-RELAY-060):** substantial Relay
+work has shipped after the entries below — through Relay PP-RELAY-059
+(2026-08-28); see `CHANGELOG.md` (newest-first) and `CURRENT_STATE.md` for
+current, authoritative detail rather than reconstructing it from the older
+entries in this file. One specific stale claim below is corrected here: the
+2026-08-22 entry states Relay PP-RELAY-036 revision 3
+(`beginner/via-lascivia-palmistry.md`) was "unmerged, awaiting Director/human
+review" on PR #56. That article is confirmed live on `main` as of this date
+(later Relay tasks, including PP-RELAY-052, reference and link to it as
+published) — the PR has since merged. Do not treat that entry's merge status
+as current. No other historical entry below was re-verified against `main`
+by this reconciliation; verify against `CURRENT_STATE.md`/`CHANGELOG.md`/Git
+before relying on any of them for current state.
+
 **Relay PP-RELAY-034 revision 2 (2026-08-21) corrected two residual
 evidence-boundary problems Director review found in the revision-1 diff**
 to `src/content/lessons/advanced/01-minor-lines-overview.mdx`'s opening
